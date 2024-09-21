@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ahmed Ibrahim Asl - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header id="hero">
+    <nav id="navbar">
+      <div class="logo">Who am I?</div>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#" id="hire-me-btn">Hire Me</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <img id="profile-picture" src="images/profile1.jpg" alt="Ahmed Ibrahim Asl">
+      <h1>Ahmed Ibrahim Asl</h1>
+      <p>Full-Stack IoT & Embedded Systems Engineer</p>
+      <!-- Social Media Icons -->
+      <div class="social-icons">
+        <a href="https://github.com/ahmed-ibrahim-asl" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.hackerrank.com/mr_h0n3y" target="_blank"><i class="fab fa-hackerrank"></i></a>
+        <a href="https://tryhackme.com/p/MRH0N3Y" target="_blank"><i class="fas fa-user-secret"></i></a>
+        <a href="https://www.behance.net/ahmedassal3" target="_blank"><i class="fab fa-behance"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="projects/project1.jpeg" alt="ESP32 Wireless ROV Control System">
+        </div>
+        <div class="project-info">
+          <h3>ESP32 Wireless ROV Control System</h3>
+          <p>
+            In this project, I developed an ESP32-based system to control a remotely operated vehicle (ROV).
+            The system consists of two ESP32 modules: one on the ROV and another in a handheld mobile station.
+            Using NRF24L01+ radio modules, the mobile station establishes a wireless link to an external base,
+            enabling remote control of the ROV. This setup allows real-time transmission of commands and telemetry,
+            ensuring precise and effective surface-level operation.
+          </p>
+          <a href="https://github.com/ahmed-ibrahim-asl/ROV" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="projects/project2.jpg" alt="Door Lock System">
+        </div>
+        <div class="project-info">
+          <h3>Door Lock System</h3>
+          <p>
+            The system consists of two microcontrollers: HMI (Human-Machine Interface) and ECU
+            (Electronic Control Unit). The HMI is connected to an LCD, keypad, and reset push
+            button, while the ECU is connected to an EEPROM, motor driver, and buzzer.
+            Users can set and save a password in the EEPROM, with a maximum length of 5
+            characters. The system allows password changes when logged in, ensuring secure
+            access management.
+          </p>
+          <a href="https://github.com/ahmed-ibrahim-asl/Door-Lock-System-Avr32" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="projects/project5.jpg" alt="MegaSumo-Nafisa">
+        </div>
+        <div class="project-info">
+          <h3>MegaSumo-Nafisa</h3>
+          <p>
+            Team Dead Code engineered a fleet of robust Mega Sumo Cars to compete in high-intensity sumo bot battles,
+            both at university-level contests and the prestigious Robo challenge. 
+            The cars are designed to autonomously detect and push opponents out of the arena, demonstrating
+            a blend of strength, strategy, and precision. Our innovative approach and relentless testing culminated
+            in securing the second place in the adult division in Egypt, showcasing our technical prowess
+            and collaborative spirit.
+        
+            Key Components:
+            1. Arduino Uno
+            2. Four ultrasonic sensors
+            3. Four IR sensors 
+            4. Motor Driver
+          </p>
+          <a href="https://github.com/ahmed-ibrahim-asl/MegaSumo-Nafisa" target="_blank">View on GitHub</a>
+        </div>
+        </div>
+        
+        <!-- Project Card 4 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="projects/project3.jpg" alt="WhatsAutoX">
+          </div>
+          <div class="project-info">
+            <h3>WhatsAutoX</h3>
+            <p>
+            WhatsAutoX automates sending WhatsApp messages via the command line using WhatsApp Web.
+            The tool utilizes image recognition for status checks, ensuring the correct login state
+            and handling invalid numbers. It supports automated messaging for multiple recipients,
+            flexible input methods (text files or direct command-line input), and is compatible
+            with both Windows and Linux.
+          </p>
+          <a href="https://github.com/ahmed-ibrahim-asl/WhatsAutoX" target="_blank">View on GitHub</a>
+        </div>
+        </div>
+
+
+      <!-- Project Card 5 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="projects/project4.jpg" alt="Human Follower Car">
+        </div>
+        <div class="project-info">
+          <h3>Human Follower Car</h3>
+          <p>
+            A project was built for fun, Human Follower car which is autonomous robotic vehicle designed
+            to follow a person around. This project integrated core components such as an Arduino Uno 
+            for control logic, a servo motor for navigation, an ultrasonic sensor for object detection,
+            and a motor driver to manage the wheel movements. It was a fun and rewarding experience that
+            combined our knowledge of electronics with a bit of creative engineering to create something
+            both functional and entertaining.
+          </p>
+          <a href="https://github.com/ahmed-ibrahim-asl/Arduino-Projects/tree/main/Human%20Follower%20Car" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <!-- Project Card 6 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="projects/project6.jpg" alt="Rocket League Car">
+        </div>
+        <div class="project-info">
+          <h3>Rocket League Car</h3>
+          <p>
+            
+            Excited to share my cool project where I developed two versions for controlling a Rocket League car using either a mobile application or a PS4 controller!
+            
+            <br><br>
+            🔹 Mobile Version: Control the car through a mobile app via Bluetooth. You can even fork the project and extend its functionality with cool features like flashlights!<br>
+            
+            <br>
+            🔹 PS4 Control Version: Use a PS4 controller to drive the car with the help of the PS4-esp32 library and SixaxisPairTool for pairing the controller.<br>
+
+            </p>
+        <a href="https://github.com/ahmed-ibrahim-asl/Rocket-League-Car" target="_blank">View on GitHub</a>
+      </div>
+      </div>
+
+      <!-- Project Card 7 -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="projects/project7.jpg" alt="CrypticLink ITI Graduation Project">
+        </div>
+        <div class="project-info">
+          <h3>CrypticLink ITI Graduation Project</h3>
+          
+          <p>
+            <strong>Overview:</strong><br>
+            CrypticLink is an innovative system designed to demonstrate the principles of encrypted data exchange and direct interception using three interconnected microcontrollers (MCs). This project provides a hands-on exploration of data security, encryption, and the challenges of secure communication in a networked environment.
+          </p>
+          
+          <p>
+            <strong>Key Components:</strong><br>
+            1. <strong>MC:</strong> Three Atmel 32 microcontrollers<br>
+            2. <strong>Keypads and LCDs</strong>
+          </p>
+        
+          
+        <a href="https://github.com/ahmed-ibrahim-asl/CrypticLink-ITI-Graduation-Project" target="_blank">View on GitHub</a>
+      </div>
+      </div>      
+
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2024 Ahmed Ibrahim Asl. All rights reserved.</p>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contact-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Contact Me</h2>
+      <div class="contact-options">
+        <a href="mailto:aassal950@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://t.me/aa7608327" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        <a href="https://www.linkedin.com/in/ahmed-ibrahim-asl/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
