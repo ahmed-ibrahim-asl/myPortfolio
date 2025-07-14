@@ -1,216 +1,2050 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ahmed Ibrahim Asl - Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Asl</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: "#00FFFF",
+                        darkbg: "#080d1a",
+                        darkcard: "#1c2842",
+                        darknav: "#1a243b",
+                        accent: "#FF2A6D",
+                        accent2: "#05D9E8"
+                    },
+                    fontFamily: {
+                        'orbitron': ['Orbitron', 'sans-serif'],
+                        'roboto-mono': ['Roboto Mono', 'monospace']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'orbit': 'orbit 12s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        orbit: {
+                            '0%': { transform: 'rotate(0deg) translateX(100px) rotate(0deg)' },
+                            '100%': { transform: 'rotate(360deg) translateX(100px) rotate(-360deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Root variables for consistent theming */
+        :root {
+            --cyber: #00FFFF;
+            --accent: #FF2A6D;
+            --accent2: #05D9E8;
+        }
+        
+        /* Base body styling */
+        body {
+            background-color: #080d1a;
+            color: white;
+            font-family: 'Roboto Mono', monospace;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 20%);
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        
+        /* Cyberpunk text glow effect */
+        .cyber-text {
+            text-shadow: 0 0 10px var(--cyber), 0 0 20px var(--cyber);
+        }
+        
+        /* Accent color for text */
+        .accent-text {
+            color: var(--accent);
+        }
+        
+        /* General glow effect */
+        .glow {
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+        
+        /* Background grid pattern */
+        .tech-grid {
+            background-image: 
+                linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        
+        /* Particle animation styling */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--cyber);
+            opacity: 0.7;
+            z-index: -1;
+        }
+        
+        /* Circuit line background elements */
+        .circuit-line {
+            position: absolute;
+            background: rgba(0, 255, 255, 0.1);
+            z-index: -1;
+        }
+        
+        /* Dark themed card styling with hover effects */
+        .dark-card {
+            background: rgba(28, 40, 66, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .dark-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+            border-color: var(--cyber);
+        }
+        
+        /* Skill bar styling */
+        .skill-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shine 2s infinite;
+        }
+        
+        /* Keyframe for skill bar shine effect */
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        /* Tech icon styling with hover effects */
+        .tech-icon {
+            font-size: 2rem;
+            color: var(--cyber);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: scale(1.2);
+            color: var(--accent2);
+            text-shadow: 0 0 10px var(--accent2);
+        }
+        
+        /* Circuit node elements for background */
+        .circuit-node {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--cyber);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--cyber);
+            z-index: 2;
+        }
+        
+        /* Floating chip icons with animation */
+        .floating-chip {
+            position: absolute;
+            animation: float 8s ease-in-out infinite;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        /* Terminal effect styling for text containers */
+        .terminal-effect {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--cyber);
+            border-radius: 8px;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Terminal scan line animation */
+        .terminal-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--cyber);
+            box-shadow: 0 0 10px var(--cyber);
+            animation: scan 4s linear infinite;
+        }
+        
+        @keyframes scan {
+            0% { top: 0; }
+            50% { top: 100%; }
+            100% { top: 0; }
+        }
+        
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(10, 20, 40, 0.8);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--cyber);
+            border-radius: 5px;
+        }
+        
+        /* Profile image container and border animation */
+        .profile-container {
+            position: relative;
+            /* Use min() for fluid responsiveness: takes 80% of viewport width, but maxes out at 300px */
+            width: min(80vw, 300px); 
+            height: min(80vw, 300px); /* Keep height equal to width for perfect circle */
+            margin: 0 auto; /* Center on smaller screens */
+            margin-bottom: 40px;
+        }
+        
+        .profile-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 2;
+            border: 3px solid transparent;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .circuit-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 1;
+            background: conic-gradient(
+                from 0deg at 50% 50%,
+                rgba(0, 255, 255, 0) 0%,
+                rgba(0, 255, 255, 0.8) 25%,
+                rgba(0, 255, 255, 0) 50%,
+                rgba(0, 255, 255, 0.8) 75%,
+                rgba(0, 255, 255, 0) 100%
+            );
+            animation: rotateBorder 4s linear infinite;
+        }
+
+        .circuit-border::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: inherit;
+            border-radius: 50%;
+            filter: blur(15px);
+            z-index: -1;
+            opacity: 0.5;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes rotateBorder {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.95); opacity: 0.5; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+        
+        /* Tech nodes orbiting around the profile picture */
+        .tech-node {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: var(--accent2);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--accent2);
+            animation: orbit 15s linear infinite;
+            z-index: 0;
+        }
+        
+        .tech-node:nth-child(2) {
+            animation-duration: 18s;
+            animation-delay: -4s;
+            background: var(--accent);
+            box-shadow: 0 0 15px var(--accent);
+        }
+        
+        .tech-node:nth-child(3) {
+            animation-duration: 22s;
+            animation-delay: -8s;
+            background: var(--cyber);
+            box-shadow: 0 0 15px var(--cyber);
+        }
+        
+        /* Section title underline effect */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            border-radius: 3px;
+        }
+        
+        /* Project card styling for filtering */
+        .project-card {
+            transition: all 0.4s ease;
+            perspective: 1000px;
+            display: none; /* Hidden by default */
+        }
+        
+        .project-card.active {
+            display: block; /* Shown when active */
+        }
+
+        .project-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .project-card:hover .project-inner {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+
+        /* Service item card styling */
+        .service-item {
+            background: rgba(28, 40, 66, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+            border-color: var(--cyber);
+        }
+
+        /* About Me section text container styling */
+        .about-me-text-container {
+            background: rgba(28, 40, 66, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 2.5rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Re-apply terminal scan effect to about me container */
+        .about-me-text-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--cyber);
+            box-shadow: 0 0 10px var(--cyber);
+            animation: scan 4s linear infinite;
+        }
+        
+        .about-me-text-container p {
+            line-height: 1.8;
+            font-size: 1.125rem;
+        }
+
+        /* Tutorial card styling */
+        .tutorial-card {
+            background: rgba(28, 40, 66, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+            border-color: var(--cyber);
+        }
+
+        .tutorial-card img {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            /* Removed explicit profile-container width/height here as min() handles it */
+            .about-me-text-container {
+                padding: 1.5rem; /* Reduce padding on smaller screens */
+            }
+
+            .about-me-text-container p {
+                font-size: 1rem; /* Adjust font size for readability */
+            }
+
+            .section-title {
+                font-size: 2.5rem; /* Adjust section title size */
+            }
+
+            .service-item, .tutorial-card, .project-card {
+                margin-bottom: 1rem; /* Add space between cards on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Removed explicit profile-container width/height here as min() handles it */
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .category-btn {
+                padding: 0.5rem 1rem; /* Smaller buttons */
+                font-size: 0.875rem;
+            }
+        }
+
+        /* Mobile navigation overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(8, 13, 26, 0.95); /* Dark background with transparency */
+            backdrop-filter: blur(8px);
+            z-index: 60; /* Higher than header */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .mobile-menu-content a {
+            color: #e2e8f0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .mobile-menu-content a:hover {
+            color: var(--cyber);
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            color: #e2e8f0;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .mobile-menu-close:hover {
+            color: var(--accent);
+        }
+    </style>
 </head>
-<body>
-
-
-
-  <!-- Her5o Section -->
-  <header id="hero">
-    <nav id="navbar">
-      <div class="logo">Who am I?</div>
-      <ul class="nav-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#" id="hire-me-btn">Hire Me</a></li>
-      </ul>
-    </nav>
-    <div class="hero-content">
-      <img id="profile-picture" src="images/profile1.jpg" alt="Ahmed Ibrahim Asl">
-      <h1>Ahmed Ibrahim Asl</h1>
-      <p>Full-Stack IoT & Embedded Systems Engineer</p>
-      <!-- Social Media Icons -->
-      <div class="social-icons">
-        <a href="https://github.com/ahmed-ibrahim-asl" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.hackerrank.com/mr_h0n3y" target="_blank"><i class="fab fa-hackerrank"></i></a>
-        <a href="https://tryhackme.com/p/MRH0N3Y" target="_blank"><i class="fas fa-user-secret"></i></a>
-        <a href="https://www.behance.net/ahmedassal3" target="_blank"><i class="fab fa-behance"></i></a>
-      </div>
+<body class="tech-grid min-h-screen relative overflow-x-hidden">
+    <div id="particles"></div>
+    <div id="circuit-lines"></div>
+    
+    <div class="floating-chip text-cyber text-4xl" style="top: 10%; left: 5%; animation-delay: 0s;">
+        <i class="fas fa-microchip"></i>
     </div>
-  </header>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects-container">
-      <!-- Project Card 1 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="projects/project1.jpeg" alt="ESP32 Wireless ROV Control System">
-        </div>
-        <div class="project-info">
-          <h3>ESP32 Wireless ROV Control System</h3>
-          <p>
-            In this project, I developed an ESP32-based system to control a remotely operated vehicle (ROV).
-            The system consists of two ESP32 modules: one on the ROV and another in a handheld mobile station.
-            Using NRF24L01+ radio modules, the mobile station establishes a wireless link to an external base,
-            enabling remote control of the ROV. This setup allows real-time transmission of commands and telemetry,
-            ensuring precise and effective surface-level operation.
-          </p>
-          <a href="https://github.com/ahmed-ibrahim-asl/ROV" target="_blank">View on GitHub</a>
-        </div>
-      </div>
-
-      <!-- Project Card 2 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="projects/project2.jpg" alt="Door Lock System">
-        </div>
-        <div class="project-info">
-          <h3>Door Lock System</h3>
-          <p>
-            The system consists of two microcontrollers: HMI (Human-Machine Interface) and ECU
-            (Electronic Control Unit). The HMI is connected to an LCD, keypad, and reset push
-            button, while the ECU is connected to an EEPROM, motor driver, and buzzer.
-            Users can set and save a password in the EEPROM, with a maximum length of 5
-            characters. The system allows password changes when logged in, ensuring secure
-            access management.
-          </p>
-          <a href="https://github.com/ahmed-ibrahim-asl/Door-Lock-System-Avr32" target="_blank">View on GitHub</a>
-        </div>
-      </div>
-
-      <!-- Project Card 3 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="projects/project5.jpg" alt="MegaSumo-Nafisa">
-        </div>
-        <div class="project-info">
-          <h3>MegaSumo-Nafisa</h3>
-          <p>
-            Team Dead Code engineered a fleet of robust Mega Sumo Cars to compete in high-intensity sumo bot battles,
-            both at university-level contests and the prestigious Robo challenge. 
-            The cars are designed to autonomously detect and push opponents out of the arena, demonstrating
-            a blend of strength, strategy, and precision. Our innovative approach and relentless testing culminated
-            in securing the second place in the adult division in Egypt, showcasing our technical prowess
-            and collaborative spirit.
-        
-            Key Components:
-            1. Arduino Uno
-            2. Four ultrasonic sensors
-            3. Four IR sensors 
-            4. Motor Driver
-          </p>
-          <a href="https://github.com/ahmed-ibrahim-asl/MegaSumo-Nafisa" target="_blank">View on GitHub</a>
-        </div>
-        </div>
-        
-        <!-- Project Card 4 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="projects/project3.jpg" alt="WhatsAutoX">
-          </div>
-          <div class="project-info">
-            <h3>WhatsAutoX</h3>
-            <p>
-            WhatsAutoX automates sending WhatsApp messages via the command line using WhatsApp Web.
-            The tool utilizes image recognition for status checks, ensuring the correct login state
-            and handling invalid numbers. It supports automated messaging for multiple recipients,
-            flexible input methods (text files or direct command-line input), and is compatible
-            with both Windows and Linux.
-          </p>
-          <a href="https://github.com/ahmed-ibrahim-asl/WhatsAutoX" target="_blank">View on GitHub</a>
-        </div>
-        </div>
-
-
-      <!-- Project Card 5 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="projects/project4.jpg" alt="Human Follower Car">
-        </div>
-        <div class="project-info">
-          <h3>Human Follower Car</h3>
-          <p>
-            A project was built for fun, Human Follower car which is autonomous robotic vehicle designed
-            to follow a person around. This project integrated core components such as an Arduino Uno 
-            for control logic, a servo motor for navigation, an ultrasonic sensor for object detection,
-            and a motor driver to manage the wheel movements. It was a fun and rewarding experience that
-            combined our knowledge of electronics with a bit of creative engineering to create something
-            both functional and entertaining.
-          </p>
-          <a href="https://github.com/ahmed-ibrahim-asl/Arduino-Projects/tree/main/Human%20Follower%20Car" target="_blank">View on GitHub</a>
-        </div>
-      </div>
-      <!-- Project Card 6 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="projects/project6.jpg" alt="Rocket League Car">
-        </div>
-        <div class="project-info">
-          <h3>Rocket League Car</h3>
-          <p>
-            
-            Excited to share my cool project where I developed two versions for controlling a Rocket League car using either a mobile application or a PS4 controller!
-            
-            <br><br>
-            🔹 Mobile Version: Control the car through a mobile app via Bluetooth. You can even fork the project and extend its functionality with cool features like flashlights!<br>
-            
-            <br>
-            🔹 PS4 Control Version: Use a PS4 controller to drive the car with the help of the PS4-esp32 library and SixaxisPairTool for pairing the controller.<br>
-
-            </p>
-        <a href="https://github.com/ahmed-ibrahim-asl/Rocket-League-Car" target="_blank">View on GitHub</a>
-      </div>
-      </div>
-
-      <!-- Project Card 7 -->
-      <div class="project-card">
-        <div class="project-image">
-          <img src="projects/project7.jpg" alt="CrypticLink ITI Graduation Project">
-        </div>
-        <div class="project-info">
-          <h3>CrypticLink ITI Graduation Project</h3>
-          
-          <p>
-            <strong>Overview:</strong><br>
-            CrypticLink is an innovative system designed to demonstrate the principles of encrypted data exchange and direct interception using three interconnected microcontrollers (MCs). This project provides a hands-on exploration of data security, encryption, and the challenges of secure communication in a networked environment.
-          </p>
-          
-          <p>
-            <strong>Key Components:</strong><br>
-            1. <strong>MC:</strong> Three Atmel 32 microcontrollers<br>
-            2. <strong>Keypads and LCDs</strong>
-          </p>
-        
-          
-        <a href="https://github.com/ahmed-ibrahim-asl/CrypticLink-ITI-Graduation-Project" target="_blank">View on GitHub</a>
-      </div>
-      </div>      
-
-      <!-- Add more project cards as needed -->
+    <div class="floating-chip text-accent2 text-3xl" style="top: 20%; right: 8%; animation-delay: 1s;">
+        <i class="fas fa-cog"></i>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="footer">
-    <p>&copy; 2024 Ahmed Ibrahim Asl. All rights reserved.</p>
-  </footer>
-
-  <!-- Contact Modal -->
-  <div id="contact-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>Contact Me</h2>
-      <div class="contact-options">
-        <a href="mailto:aassal950@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://t.me/aa7608327" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
-        <a href="https://www.linkedin.com/in/ahmed-ibrahim-asl/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
+    <div class="floating-chip text-accent text-5xl" style="top: 40%; left: 7%; animation-delay: 2s;">
+        <i class="fas fa-server"></i>
     </div>
-  </div>
+    <div class="floating-chip text-cyber text-2xl" style="bottom: 20%; right: 10%; animation-delay: 3s;">
+        <i class="fas fa-code"></i>
+    </div>
+    
+    <header class="dark-nav backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-700 py-4">
+        <nav class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <span class="cyber-text text-cyber font-orbitron">AHMED ASL</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-cyber transition font-semibold">Home</a>
+                <a href="#about" class="hover:text-cyber transition font-semibold">About</a>
+                <a href="#services" class="hover:text-cyber transition font-semibold">Services</a>
+                <a href="#skills" class="hover:text-cyber transition font-semibold">Skills</a>
+                <a href="#tutorials" class="hover:text-cyber transition font-semibold">Tutorials</a>
+                <a href="#projects" class="hover:text-cyber transition font-semibold">Projects</a>
+                <a href="#contact" class="hover:text-cyber transition font-semibold">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="bg-cyber text-darkbg px-4 py-2 rounded-lg font-bold hover:bg-accent2 transition">
+                    Hire Me
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden focus:outline-none text-gray-300">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Scripts -->
-  <!-- Custom JavaScript -->
-  <script src="script.js"></script>
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+        <button id="mobile-menu-close" class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#tutorials" class="mobile-nav-link">Tutorials</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <button class="bg-cyber text-darkbg px-6 py-3 rounded-lg font-bold hover:bg-accent2 transition w-full max-w-xs mt-4">
+                Hire Me
+            </button>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center relative py-16 md:py-0">
+            <div class="absolute inset-0 z-0">
+                <div class="circuit-node" style="top: 20%; left: 15%;"></div>
+                <div class="circuit-node" style="top: 40%; right: 20%;"></div>
+                <div class="circuit-node" style="bottom: 30%; left: 25%;"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center z-10 relative text-center md:text-left">
+                <div class="md:w-1/2 flex justify-center mt-10 md:mt-0 order-1 md:order-none">
+                    <div class="profile-container">
+                        <div class="circuit-border"></div>
+                        <div class="tech-node"></div>
+                        <div class="tech-node"></div>
+                        <div class="tech-node"></div>
+                        <div class="profile-image">
+                            <!-- Profile picture will be dynamically updated by JavaScript -->
+                            <img id="profile-picture" src="images/profilePicture/profile2.jpg" alt="Embedded Systems Engineer">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mb-10 md:mb-0 order-2 md:order-none">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 font-orbitron">
+                        <span class="text-cyber">HI, I'M</span> <span class="accent-text">AHMED ASL</span>
+                    </h1>
+                    <div class="text-2xl md:text-3xl font-semibold mb-6 h-16 overflow-hidden">
+                        <span id="typing-text" class="inline-block border-r-2 border-cyber"></span>
+                    </div>
+                    <p class="text-lg mb-8 text-white-300 max-w-2xl mx-auto md:mx-0">
+Bringing your ideas to life with full-stack innovation—from precision circuit engineering to intuitive apps, dynamic video content, engaging social posts, and expressive voice experiences, guiding every step from concept to launch.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <a href="#projects" class="bg-accent hover:bg-accent2 text-white px-6 py-3 rounded-lg font-bold transition duration-300 transform hover:scale-105">
+                            View Projects
+                        </a>
+                        <a href="#contact" class="bg-transparent border-2 border-cyber text-cyber hover:bg-cyber hover:text-darkbg px-6 py-3 rounded-lg font-bold transition duration-300">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Arrow hidden on small screens, visible on medium and larger screens -->
+            <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+                <a href="#about" class="text-cyber text-3xl">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 relative">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
+                    <span class="text-cyber">ABOUT</span> <span class="accent-text">ME</span>
+                </h2>
+                
+            <div class="about-me-text-container">
+                <p class="mb-4 text-lg leading-relaxed">
+                    I like to <strong>teach wires to talk</strong>. Hand me a sketchy idea, a fistful of sensors, and a deadline,
+                    and I’ll turn the whole mess into a circuit that chats with your phone before lunch.
+                    Eight years of poking at electrons have shown me that if you can’t explain a blinking LED to a curious teenager,
+                    you don’t understand it yet.
+                </p>
+
+                <p class="mb-4 text-lg leading-relaxed">
+                    I roam from <strong>PCB traces to app screens</strong>—one minute routing copper so a microcontroller stays cool,
+                    the next crafting a clean mobile UI so a user can press a button and hear a relay click across the room.
+                </p>
+
+                <p class="mb-4 text-lg leading-relaxed">
+                    My playground is the <strong>Internet&nbsp;of&nbsp;Things</strong>, where tiny gadgets gossip over Wi-Fi.
+                    I build these ecosystems to be secure, power-savvy, and courteous on the network.
+                </p>
+
+                <p class="text-lg leading-relaxed">
+                    When the soldering iron cools, I’m <strong>turning complex ideas into plain talk</strong>—tutorials, demos,
+                    and lively explanations that leave “complicated” at the door.
+                </p>
+    
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-darkcard">
+        <div class="container mx-auto px-6">
+
+            <!-- Section title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
+            <span class="text-cyber">MY</span> <span class="accent-text">SERVICES</span>
+            </h2>
+
+            <!-- Service cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Embedded Firmware -->
+            <div class="service-item p-6 flex items-start space-x-4">
+                <div class="text-3xl text-cyber pt-1">
+                <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-bold mb-2">Embedded Firmware</h3>
+                <p class="text-gray-400">Fast, stable C/C++ or Python code for any microcontroller.</p>
+                </div>
+            </div>
+
+            <!-- PCB & Circuit Design -->
+            <div class="service-item p-6 flex items-start space-x-4">
+                <div class="text-3xl text-accent pt-1">
+                <i class="fa-solid fa-plug"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-bold mb-2">PCB & Circuit Design</h3>
+                <p class="text-gray-400">Schematics, layouts, and ready-to-build boards.</p>
+                </div>
+            </div>
+
+            <!-- Flutter Apps -->
+            <div class="service-item p-6 flex items-start space-x-4">
+                <div class="text-3xl text-accent2 pt-1">
+                <!-- Fallback to a mobile-app icon so it always renders -->
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-bold mb-2">Flutter Apps</h3>
+                <p class="text-gray-400">Mobile apps that talk to your hardware in real time.</p>
+                </div>
+            </div>
+
+            <!-- IoT Architecture -->
+            <div class="service-item p-6 flex items-start space-x-4">
+                <div class="text-3xl text-cyber pt-1">
+                <i class="fa-solid fa-cloud"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-bold mb-2">IoT Architecture</h3>
+                <p class="text-gray-400">Secure data flows from sensor to cloud dashboard.</p>
+                </div>
+            </div>
+
+            <!-- Video & Audio Editing -->
+            <div class="service-item p-6 flex items-start space-x-4">
+                <div class="text-3xl text-accent pt-1">
+                <i class="fa-solid fa-film"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-bold mb-2">Video & Audio Editing</h3>
+                <p class="text-gray-400">Sharp cuts, clean sound, eye-catching motion.</p>
+                </div>
+            </div>
+
+            <!-- Social Graphics -->
+            <div class="service-item p-6 flex items-start space-x-4">
+                <div class="text-3xl text-accent2 pt-1">
+                <i class="fa-solid fa-paint-brush"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-bold mb-2">Social Graphics</h3>
+                <p class="text-gray-400">Scroll-stopping posts, banners, and slides.</p>
+                </div>
+            </div>
+
+            <!-- System Testing -->
+            <div class="service-item p-6 flex items-start space-x-4">
+                <div class="text-3xl text-cyber pt-1">
+                <i class="fa-solid fa-vial"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-bold mb-2">System Testing</h3>
+                <p class="text-gray-400">Full checks so every device ships bug-free.</p>
+                </div>
+            </div>
+
+            <!-- Robotics Projects -->
+            <div class="service-item p-6 flex items-start space-x-4">
+                <div class="text-3xl text-accent pt-1">
+                <!-- Fallback to a microcontroller icon for guaranteed support -->
+                <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-bold mb-2">Robotics</h3>
+                <p class="text-gray-400">Quick prototypes and custom builds.</p>
+                </div>
+            </div>
+
+            <!-- Tkinter GUIs -->
+            <div class="service-item p-6 flex items-start space-x-4">
+                <div class="text-3xl text-accent2 pt-1">
+                <i class="fa-solid fa-desktop"></i>
+                </div>
+                <div>
+                <h3 class="text-xl font-bold mb-2">Tkinter GUIs</h3>
+                <p class="text-gray-400">Simple desktop apps in pure Python.</p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-darkcard">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
+                    <span class="text-cyber">TECHNICAL</span> <span class="accent-text">SKILLS</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">C/C++ Embedded</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">PCB Design</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">IoT Systems</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">Arduino Framework</span>
+                                <span>99%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 99%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">MATLAB</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">Python</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">Flutter</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">Circuit Design</span>
+                                <span>93%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 93%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">DaVinci Resolve</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold">Adobe Premiere</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold text-center mb-8">Tools & Technologies</h3>
+                    <div class="flex flex-wrap justify-center gap-8">
+                        <div class="tech-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-raspberry-pi"></i>
+                        </div>
+                        <div class="tech-icon">
+                        <i class="fas fa-video"></i>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-satellite"></i>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-terminal"></i> </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-code-branch"></i> </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-behance"></i> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tutorials" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
+                    <span class="text-cyber">MY</span> <span class="accent-text">ONLINE TUTORIALS</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="tutorial-card">
+                        <img src="images/Ros Requirements_thubnail.jpg" alt="Ros Requirements">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Ros Requirements</h3>
+                            
+                            <p class="text-gray-400 mb-4 text-sm">
+                            Bite-sized crash courses that stack the skills you need to hit the ground running with ROS.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">ros</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Virtual box</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">VsCode</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">linux</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">git</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Tkinter</span>
+                            </div>
+                            <a href="https://www.youtube.com/playlist?list=PLMSkmiBu0cz6m-LOsum_j4yto_h9PMG70" class="text-cyber font-medium hover:underline block mt-auto">Watch Tutorial</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tutorial-card">
+                        <img src="images/intro_embeddedSystem.jpg" alt="intro to embedded systems world">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Introduction to Embedded Systems world</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Essential tips and tricks for efficient and error-free PCB design using KiCad.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Arduino</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AVR</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded software</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">IoT</span>
+                            </div>
+                            <a href="https://web.facebook.com/watch/live/?ref=watch_permalink&v=1456207331975013" class="text-cyber font-medium hover:underline block mt-auto">Watch Tutorial</a>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="tutorial-card">
+                        <img src="images/embedded system worksop level1.jpg" alt="embedded_system_workshop_level_1">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold mb-2">Embedded System workshop Level 1</h3>
+                            <p class="text-gray-400 mb-4 text-sm">Designed to be friendly workshop to take students a taste of how embeeded systems feel.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">CMD-Basics</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Digital and Logic</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">C/C++</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Arduino uno</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AVR</span>
+                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Computer architecture</span>
+                            </div>
+                            <a href="https://youtube.com/playlist?list=PLzFyd8nPA2MyZav2MILCrSjpu92iy4PC4&si=twUFB8WvJpBhWeN2" class="text-cyber font-medium hover:underline block mt-auto">Watch Tutorial</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                 <div class="text-center mt-12">
+                    <button id="view-all-tutorials-btn" class="inline-block bg-transparent border-2 border-cyber text-cyber hover:bg-cyber hover:text-darkbg px-6 py-3 rounded-lg font-bold transition duration-300">
+                        View All Tutorials
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
+                    <span class="text-cyber">FEATURED</span> <span class="accent-text">PROJECTS</span>
+                </h2>
+                
+                <div class="flex justify-center space-x-2 md:space-x-4 mb-12 flex-wrap gap-4">
+                    <button class="category-btn bg-cyber text-darkbg px-4 py-2 md:px-6 md:py-2 rounded-lg font-bold hover:bg-accent2 transition text-sm md:text-base" data-category="all">
+                        All Projects
+                    </button>
+                    <button class="category-btn bg-gray-700 text-white px-4 py-2 md:px-6 md:py-2 rounded-lg font-bold hover:bg-accent2 hover:text-darkbg transition text-sm md:text-base" data-category="engineering">
+                        Engineering
+                    </button>
+                    <button class="category-btn bg-gray-700 text-white px-4 py-2 md:px-6 md:py-2 rounded-lg font-bold hover:bg-accent2 hover:text-darkbg transition text-sm md:text-base" data-category="video-editing">
+                        Video Editing
+                    </button>
+                    <button class="category-btn bg-gray-700 text-white px-4 py-2 md:px-6 md:py-2 rounded-lg font-bold hover:bg-accent2 hover:text-darkbg transition text-sm md:text-base" data-category="graphic-design">
+                        Graphic Design & UI/UX </button>
+                </div>
+
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="project-card" data-category="engineering">
+                    <div class="project-inner">
+                        <div class="dark-card overflow-hidden h-full">
+                            <div class="h-64 relative overflow-hidden">
+                                <!-- Optional: Remove the icon overlay below if not needed -->
+                                <!-- <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-6xl text-white opacity-30"></i>
+                                </div> -->
+                                <img src="/images/agribot_image.jpg" alt="AgriBot" class="w-full h-full object-cover absolute">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">AgriBot</h3>
+                                <p class="text-gray-400 mb-4">An agricultural robot that selects crops, recommends fertilizers, detects leaf diseases, and is managed remotely via my OTA platform, Firewire.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">jetson nano</span>
+                                    <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AI/ML</span>
+                                    <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">IoT</span>
+                                </div>
+                                <a href="#" class="text-cyber font-medium hover:underline">Classified</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    
+                    <div class="project-card" data-category="engineering">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 relative overflow-hidden">
+                                    <img src="/images/ROV.jpeg" alt="ESP32_Wireless_ROV_Control_System" class="w-full h-full object-cover absolute">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">ESP32 Wireless ROV Control System</h3>
+                                    <p class="text-gray-400 mb-4">I developed an ESP32-based system with NRF24L01+ modules for real-time wireless control and telemetry of an ROV using a handheld station.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">ROV</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">ESP32</span>
+                                    </div>
+                                    <a href="https://github.com/ahmed-ibrahim-asl/ROV" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="project-card" data-category="engineering">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 relative overflow-hidden">
+                                    <img src="/images/Mega-Sumo.jpg" alt="MegaSumo-Nafisa" class="w-full h-full object-cover absolute">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">MegaSumo-Nafisa</h3>
+                                    <p class="text-gray-400 mb-4">Team Dead Code built autonomous Mega Sumo Cars with Arduino, sensors, and motor drivers, winning second place in Egypt adult division.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Arduino UNO</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Robotics</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">RoboChallenge</span>
+                                    </div>
+                                    <a href="https://github.com/ahmed-ibrahim-asl/MegaSumo-Nafisa" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="engineering">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 relative overflow-hidden">
+                                    <img src="images/Rocket_league.jpg" alt="Rocket League" class="w-full h-full object-cover absolute">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Rocket League Car</h3>
+                                    <p class="text-gray-400 mb-4">I developed two ways to control a Rocket League car: via a Bluetooth mobile app or a PS4 controller using the PS4-esp32 library and SixaxisPairTool.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Robotics</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Competition</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">esp32</span>
+                                    </div>
+                                    <a href="https://github.com/ahmed-ibrahim-asl/Rocket-League-Car" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card" data-category="engineering">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 relative overflow-hidden">
+                                    <!-- Optional: Remove the icon overlay below if not needed -->
+                                    <!-- <div class="absolute inset-0 flex items-center justify-center">
+                                        <i class="fas fa-lightbulb text-6xl text-white opacity-30"></i>
+                                    </div> -->
+                                    <img src="images/Human Follower.jpg" alt="Human Follower Car" class="w-full h-full object-cover absolute">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Human Follower Car</h3>
+                                    <p class="text-gray-400 mb-4">I built an autonomous Human Follower car using Arduino Uno, servo, ultrasonic sensor, and motor driver to follow a person around.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Robotics</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Arduino Uno</span>
+                                    </div>
+                                    <a href="https://github.com/ahmed-ibrahim-asl/Arduino-Projects/tree/main/Human%20Follower%20Car" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="project-card" data-category="engineering">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 relative overflow-hidden">
+                                    <img src="images/Lock_system (2).png" alt="Door Lock System" class="w-full h-full object-cover absolute">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Door Lock System</h3>
+                                    <p class="text-gray-400 mb-4">The system uses two microcontrollers: Human-Machine Interface and Electronic Control Unit. Users can set and change 5-character passwords for secure access.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AVR32</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">STSmart</span>
+                                    </div>
+                                    <a href="https://github.com/ahmed-ibrahim-asl/Door-Lock-System-Avr32" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="project-card" data-category="engineering">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-blue-500 to-indigo-500 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Cryptic+Link" alt="Cryptic Link" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Cryptic Link ITI Graduation Project</h3>
+                                    <p class="text-gray-400 mb-4">CrypticLink is a hands-on project using three Atmel 32 microcontrollers, keypads, and LCDs to demonstrate encrypted data exchange and interception in networked communication.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AVR32</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">iti</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
+                                    </div>
+                                    <a href="https://github.com/ahmed-ibrahim-asl/CrypticLink-ITI-Graduation-Project" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="engineering">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-blue-500 to-indigo-500 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Walkie+Talkie" alt="walkie Talkie" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Walkie talkie</h3>
+                                    <p class="text-gray-400 mb-4">My goal was to apply what I learned in communication electronics by enabling communication between two points without microcontrollers, gaining practical experience with core concepts.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">communication</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">electronics</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
+                                    </div>
+                                    <a href="#" class="text-cyber font-medium hover:underline">Under Development</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="engineering">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-blue-500 to-indigo-500 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Firewire" alt="Firewire" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Firewire</h3>
+                                    <p class="text-gray-400 mb-4"><br />The goal of the platform is to provide a cost-effective solution for updating IoT devices without relying on AWS, using only a standard Raspberry Pi for hosting.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">communication</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">IoT</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">OTA</span>
+                                    </div>
+                                    <a href="#" class="text-cyber font-medium hover:underline">Still Classified</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="engineering">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-blue-500 to-indigo-500 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=WhatsAutoX" alt="Firewire" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">WhatsAutoX</h3>
+                                    <p class="text-gray-400 mb-4">WhatsAutoX automates WhatsApp messaging via the command line using WhatsApp Web and image recognition for login checks. It supports bulk messaging, flexible input methods, and works on Windows and Linux.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Automation</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
+                                    </div>
+                                    <a href="https://github.com/ahmed-ibrahim-asl/WhatsAutoX" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card" data-category="video-editing">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-blue-600 to-purple-700 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/3B82F6/080d1a?text=DU+JobFair+Video" alt="DU JobFair Expert Interview" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">DU JobFair - Expert Interview Video</h3>
+                                    <p class="text-gray-400 mb-4">Created a highlight video for the DU JobFair featuring expert opinions including Dr. Ahmed Abdel Aleem on professionalism and career insights.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Video Editing</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Social Media</span>
+                                    </div>
+                                    <a href="https://web.facebook.com/61555154574308/videos/a-professional-is-someone-who-can-do-his-best-work-when-he-doesnt-feel-like-it-a/434092145931488/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card" data-category="video-editing">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/6366F1/080d1a?text=Follow+Us+Guide" alt="Follow Page Updates Guide" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Stay Updated - Follow Guide Promo</h3>
+                                    <p class="text-gray-400 mb-4">Designed and edited a social media video that guides followers on how to stay updated with the page and access the full session with Eng. Karim Nour on Web Development.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Social Video</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Engagement Boost</span>
+                                    </div>
+                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D8%A5%D8%B2%D8%A7%D9%8A-%D8%AA%D8%AA%D8%A7%D8%A8%D8%B9-%D8%A7%D9%84%D9%80-updates-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9-%D8%A7%D9%88%D9%84-%D8%A8%D8%A3%D9%88%D9%84-%D9%85%D8%AA%D9%86%D8%B3%D9%88%D8%B4-%D8%AA%D8%AA%D8%A7%D8%A8%D8%B9%D9%88%D8%A7-%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D9%87-%D8%B9%D8%B4%D8%A7%D9%86-%D8%AA%D8%A7%D8%AE%D8%AF-acces/1004025417324059/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="project-card" data-category="video-editing">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-yellow-500 to-orange-600 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/F59E0B/080d1a?text=Web+Dev+Trends+Session" alt="Web Dev Trends Video" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Web Development Trends - Eng. Karim Nour</h3>
+                                    <p class="text-gray-400 mb-4">Edited and published a session teaser with Eng. Karim Nour, highlighting key trends every developer should follow to stay competitive in the evolving web development field.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Session Edit</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Tech Insights</span>
+                                    </div>
+                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D8%A7%D9%84%D9%80-web-development-%D8%A8%D8%AA%D8%B7%D9%88%D8%B1-%D9%83%D9%84-%D9%8A%D9%88%D9%85-%EF%B8%8F-%D8%A8%D8%B4%D9%85%D9%87%D9%86%D8%AF%D8%B3-%D9%83%D8%B1%D9%8A%D9%85-%D9%86%D9%88%D8%B1-%D8%A8%D9%8A%D9%88%D8%B6%D8%AD-%D9%81%D9%8A-%D8%A7%D9%84%D8%B3%D9%8A%D8%B4%D9%86-%D9%83%D9%84-%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D8%B1%D8%A7%D8%AA-/712009987465702/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card" data-category="video-editing">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-cyan-600 to-blue-700 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/06B6D4/080d1a?text=What+is+Web+Development?" alt="What is Web Development? - Eng. Karim Nour" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">What is Web Development? - Intro Video</h3>
+                                    <p class="text-gray-400 mb-4">A short educational video with Eng. Karim Nour introducing the concept of web development and why it's one of the most competitive and fast-evolving fields in tech today.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Intro Video</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Educational Content</span>
+                                    </div>
+                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D8%A7%D9%84%D9%80-web-development-%D9%85%D8%AC%D8%A7%D9%84-%D8%AA%D9%86%D8%A7%D9%81%D8%B3%D9%8A-%D9%88%D9%85%D8%AA%D8%AC%D8%AF%D8%AF-%D8%AF%D8%A7%D9%8A%D9%85%D8%A7-%D9%84%D9%88-%D9%85%D8%B4-%D8%B9%D8%A7%D8%B1%D9%81-%D9%8A%D8%B9%D9%86%D9%8A-%D8%A7%D9%8A%D9%87-web-development/663874645855218/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="video-editing">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-purple-600 to-fuchsia-700 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/A855F7/080d1a?text=Front+vs+Back+End" alt="Front-End vs Back-End" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Front-End vs Back-End - Career Track Video</h3>
+                                    <p class="text-gray-400 mb-4">A focused video edit explaining the key differences between front-end and back-end development. Helps beginners choose the right track in web development, featuring Eng. Karim Nour.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Career Guidance</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Explainer Video</span>
+                                    </div>
+                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D9%87%D8%AA%D8%AA%D8%AE%D8%B5%D8%B5-web-development-%D8%A8%D8%B3-%D9%84%D8%B3%D8%A7-%D9%85%D8%B4-%D8%B9%D8%A7%D8%B1%D9%81-%D8%A7%D9%84%D9%81%D8%B1%D9%82-%D8%A8%D9%8A%D9%86-front-end-%D9%88-%D8%A7%D9%84%D9%80-back-end-%D8%B4%D9%88%D9%81-%D8%A7%D9%84%D9%81/871668597802346/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="video-editing">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-rose-600 to-red-700 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/F43F5E/080d1a?text=Dragons+Battle+Promo" alt="Dragons Battle Registration Video" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Dragons Battle - Final Registration Call</h3>
+                                    <p class="text-gray-400 mb-4">Created a fast-paced promotional video to boost last-minute registration for the Dragons Battle competition. Video designed for urgency, clarity, and call-to-action impact.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Event Promo</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Urgency Marketing</span>
+                                    </div>
+                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D8%A7%D9%84%D8%AA%D9%8A%D9%85%D8%A7%D8%AA-%D9%82%D8%B1%D8%A8%D8%AA-%D8%AA%D9%83%D8%AA%D9%85%D9%84-%D9%88%D9%86%D9%82%D9%81%D9%84-%D8%A3%D8%A8%D9%88%D8%A7%D8%A8-%D8%A7%D9%84%D8%A5%D8%B4%D8%AA%D8%B1%D8%A7%D9%83-%D8%B9%D8%B4%D8%A7%D9%86-%D8%A7%D9%84%D9%80-dragons-battle-%D8%AA%D8%A8%D8%AF%D8%A3-%D9%84%D8%B3%D8%A7-%D9%85%D8%B9%D8%A7%D9%83-%D9%81%D8%B1/191771537308645/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="video-editing">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-sky-600 to-indigo-700 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/0EA5E9/080d1a?text=Delta+Bootcamp+Recap" alt="Delta Bootcamp Sumo Video" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Delta Bootcamp – Sumo Competition Recap</h3>
+                                    <p class="text-gray-400 mb-4">Co-edited a highlight video summarizing our journey through Delta University’s Sumo Bootcamp. As an instructor and video editor, I had the honor of guiding and showcasing the work of brilliant engineering teams.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Event Recap</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Co-Editing</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Mentorship</span>
+                                    </div>
+                                    <a href="https://www.linkedin.com/posts/ahmed-ibrahim-asl_deltabootcamp-sumocompetition-engineeringjourney-activity-7080749465703170048-4TFP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD4fJ_4BeA3Apl3cbCvDodYP4VH2tcQOHPo" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-emerald-600 to-emerald-500 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=AgriBot UI" alt="AgriBot_Mobile_App_UI" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">AgriBot Mobile App UI</h3>
+                                    <p class="text-gray-400 mb-4">UI design for the mobile app of my university graduation project, Agribot.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">figma</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Agriculture</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Robotics</span>
+                                    </div>
+                                    <a href="#" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-sky-600 to-cyan-500 relative overflow-hidden">
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Firewire UI" alt="Firewire UI" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Firewire UI</h3>
+                                    <p class="text-gray-400 mb-4">Created eye-catching graphics for various social media marketing campaigns.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Graduation Project</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">figma</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">OTA</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AgriBot</span>
+                                    </div>
+                                    <a href="#" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-rose-600 to-pink-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Dad4Hire UI" alt="Dad4Hire Mobile App UI" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Dad4Hire Mobile App UI</h3>
+                                    <p class="text-gray-400 mb-4">This was my UI/UX graduation project for Google DSC at EELU.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Mobile App</span>
+                                    </div>
+                                    <a href="https://www.behance.net/gallery/199626593/Dad4Hire" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-lime-600 to-green-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                    <img src="https://placehold.co/400x256/05D9E8/080d1a?text=TechTalk Series" alt="E-book Cover Design" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Tech talk series</h3>
+                                    <p class="text-gray-400 mb-4">Design for series tech series published in Dead code page.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">IT</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Canva</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">PhotoShop</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Educational-content</span>
+                                    </div>
+                                    <a href="https://www.behance.net/gallery/199630873/Template-tech-talk-series" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-violet-600 to-purple-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=TensorFlow" alt="Dad4Hire Mobile App UI" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Introduction to TensorFlow</h3>
+                                    <p class="text-gray-400 mb-4">This is a design for educational post about TensorFlow.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Educational-content</span>
+                                    </div>
+                                    <a href="https://www.behance.net/gallery/199630337/TensorFlow-Quick-Introduction" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-amber-300 to-orange-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Promo design" alt="Promo design" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Fund Your Grad Project Design</h3>
+                                    <p class="text-gray-400 mb-4">College Ad Session Promo | Eng. Abdelrahman Ibrahim</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Promotional Design</span>
+                                    </div>
+                                    <a href="https://web.facebook.com/Engineering.DeltaUniv/posts/%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%AD-%D9%84%D8%A7-%D9%8A%D8%A3%D8%AA%D9%8A-%D8%A8%D8%B3%D9%87%D9%88%D9%84%D8%A9-%D9%81%D9%87%D9%88-%D9%86%D8%AA%D8%A7%D8%AC-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D8%AC%D8%A7%D8%AF-%D9%88%D8%A7%D9%84%D9%85%D8%AB%D8%A7%D8%A8%D8%B1%D8%A9-%D8%B9%D9%86%D8%AF-%D8%A7%D9%82%D8%AA%D8%B1%D8%A7%D8%A8-%D9%86%D9%87%D8%A7%D9%8A%D8%A9-%D9%85%D8%B3%D9%8A%D8%B1%D8%AA%D9%83-%D8%A7%D9%84%D8%AC/122191064198208146/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-teal-600 to-emerald-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Training+Employment" alt="Delta University 4th Engineering Expo" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Delta 4th Eng. & Employment</h3>
+                                    <p class="text-gray-400 mb-4">This my attempt of enhancing the designs my university used in event.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Promotional Design</span>
+                                    </div>
+                                    <a href="https://www.behance.net/gallery/230070085/Delta-University-4th-Engineering-Expo" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-purple-300 to-indigo-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Delta JobFair" alt="Delta University 4th Engineering Expo" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Delta Job fair 2024</h3>
+                                    <p class="text-gray-400 mb-4">This my attempt of enhancing the designs my university used in event.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Promotional Design</span>
+                                    </div>
+                                    <a href="https://www.behance.net/gallery/230072417/Delta-Job-Fair-2024" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-fuchsia-300 to-pink-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Eid al-Fitr" alt="Delta University 4th Engineering Expo" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Greetings design</h3>
+                                    <p class="text-gray-400 mb-4">A digital illustration created for Eid al-Fitr.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
+                                    </div>
+                                    <a href="https://www.behance.net/gallery/230074039/Eid-Saeed-Astronaut-Greeting" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-slate-300 to-gray-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=PartnerShips" alt="PartnerShips" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">PartnerShip Designs of Dead Code</h3>
+                                    <p class="text-gray-400 mb-4">Partnerships designs for my team Dead Code.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Canva</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Dead Code</span>
+                                    </div>
+                                    <a href="https://www.behance.net/gallery/230082703/PartnerShip-Designs-of-Dead-Code" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="graphic-design">
+                        <div class="project-inner">
+                            <div class="dark-card overflow-hidden h-full">
+                                <div class="h-64 bg-gradient-to-r from-slate-300 to-gray-500 relative overflow-hidden">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Graduation+Book" alt="GraduationBook" class="w-full h-full object-cover absolute mix-blend-overlay">
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-2">Design for Graduation Book AgriBot</h3>
+                                    <p class="text-gray-400 mb-4">Design for my university graduation book.</p>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Canva</span>
+                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AgriBot</span>
+                                    </div>
+                                    <a href="#" class="text-cyber font-medium hover:underline">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                </div>
+                
+                
+
+
+                <div class="text-center mt-12">
+                    <button id="view-all-btn" class="inline-block bg-transparent border-2 border-cyber text-cyber hover:bg-cyber hover:text-darkbg px-6 py-3 rounded-lg font-bold transition duration-300">
+                        View All Projects
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-darkcard">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
+                    <span class="text-cyber">GET IN</span> <span class="accent-text">TOUCH</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <p class="text-xl mb-8 text-center lg:text-left">
+                            Have a project in mind? Let's collaborate and bring your ideas to life!
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <div class="text-cyber text-2xl mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Email</h4>
+                                    <p class="text-gray-400">aassal950@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <div class="text-cyber text-2xl mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Phone</h4>
+                                    <p class="text-gray-400">+201068163322</p>
+                                
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center justify-center lg:justify-start">
+                                <div class="text-cyber text-2xl mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Location</h4>
+                                    <p class="text-gray-400">Egypt, Al Mahala Al Kobra</p>
+                                    <p class="text-gray-400">Egypt, Alexanderia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 text-center lg:text-left">
+                            <h4 class="font-bold text-xl mb-4">Follow Me</h4>
+                            <div class="flex space-x-6 justify-center lg:justify-start">
+                                <a href="https://github.com/ahmed-ibrahim-asl" class="text-2xl text-gray-400 hover:text-cyber transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ahmed-ibrahim-asl/" class="text-2xl text-gray-400 hover:text-cyber transition">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@ahmedassal8710" class="text-2xl text-gray-400 hover:text-cyber transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://tryhackme.com/p/MRH0N3Y" class="text-2xl text-gray-400 hover:text-cyber transition">
+                                    <i class="fas fa-user-secret"></i> </a>
+                                <a href="https://www.behance.net/ahmedassal3" class="text-2xl text-gray-400 hover:text-cyber transition">
+                                    <i class="fab fa-behance"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="dark-card p-8 rounded-xl">
+                            <form>
+                                <div class="mb-6">
+                                    <label for="name" class="block text-gray-300 font-medium mb-2">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 bg-darkbg border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyber text-white" placeholder="Your name">
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="email" class="block text-gray-300 font-medium mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 bg-darkbg border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyber text-white" placeholder="Your email">
+                                </div>
+                                
+                                <div class="mb-6">
+                                    <label for="project-details" class="block text-gray-300 font-medium mb-2">Project Details</label>
+                                    <textarea id="project-details" rows="5" class="w-full px-4 py-3 bg-darkbg border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyber text-white" placeholder="Tell me about your project"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white py-4 rounded-lg font-bold transition duration-300">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold mb-2">
+                        <span class="cyber-text text-cyber">AHMED ASL</span>
+                    </div>
+                    <p class="text-sm text-gray-500">Embedded Systems & IoT Engineering Services</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="https://github.com/ahmed-ibrahim-asl" class="text-2xl text-gray-400 hover:text-cyber transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ahmed-ibrahim-asl/" class="text-2xl text-gray-400 hover:text-cyber transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@ahmedassal8710" class="text-2xl text-gray-400 hover:text-cyber transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://tryhackme.com/p/MRH0N3Y" class="text-2xl text-gray-400 hover:text-cyber transition">
+                            <i class="fas fa-user-secret"></i> </a>
+                        <a href="https://www.behance.net/ahmedassal3" class="text-2xl text-gray-400 hover:text-cyber transition">
+                            <i class="fab fa-behance"></i> </a>
+                    </div>
+                    <p class="text-sm text-gray-500">© 2025 Ahmed Asl. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typing animation for the hero section
+        const phrases = [
+            "Embedded Systems Engineer",
+            "IoT Solutions Developer",
+            "PCB Design Specialist",
+            "Technical Instructor"
+        ];
+        
+        let currentPhrase = 0;
+        let currentChar = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+        
+        function typeWriter() {
+            const element = document.getElementById('typing-text');
+            const fullPhrase = phrases[currentPhrase];
+            
+            if (isDeleting) {
+                element.textContent = fullPhrase.substring(0, currentChar - 1);
+                currentChar--;
+                typingSpeed = 50; // Faster deletion
+            } else {
+                element.textContent = fullPhrase.substring(0, currentChar + 1);
+                currentChar++;
+                typingSpeed = 100; // Normal typing speed
+            }
+            
+            if (!isDeleting && currentChar === fullPhrase.length) {
+                typingSpeed = 1500; // Pause at end of phrase
+                isDeleting = true;
+            } else if (isDeleting && currentChar === 0) {
+                isDeleting = false;
+                currentPhrase = (currentPhrase + 1) % phrases.length; // Cycle through phrases
+                typingSpeed = 500; // Pause before typing next phrase
+            }
+            
+            setTimeout(typeWriter, typingSpeed);
+        }
+        
+        // Function to create background particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 50; // Number of particles
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size for variety
+                const size = Math.random() * 5 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position within the viewport
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random animation duration and delay for staggered effect
+                particle.style.animation = `float ${Math.random() * 10 + 5}s ease-in-out infinite`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+        
+        // Function to create background circuit lines
+        function createCircuitLines() {
+            const container = document.getElementById('circuit-lines');
+            const lineCount = 15; // Number of circuit lines
+            
+            for (let i = 0; i < lineCount; i++) {
+                const line = document.createElement('div');
+                line.classList.add('circuit-line');
+                
+                // Random position, width, height, and rotation for diverse lines
+                const top = Math.random() * 100;
+                const left = Math.random() * 100;
+                const width = Math.random() * 200 + 50;
+                const height = Math.random() * 4 + 1;
+                const rotate = Math.random() * 180;
+                
+                line.style.top = `${top}%`;
+                line.style.left = `${left}%`;
+                line.style.width = `${width}px`;
+                line.style.height = `${height}px`;
+                line.style.transform = `rotate(${rotate}deg)`;
+                
+                container.appendChild(line);
+            }
+        }
+
+        // --- Dynamic Profile Picture Logic ---
+        const profilePictures = [
+            "images/profilePicture/profile2.jpg",
+            // Add more image paths as needed
+        ];
+
+        let lastProfilePictureIndex = -1; // To ensure a different image on refresh if possible
+
+        function updateProfilePicture() {
+            const profileImg = document.getElementById('profile-picture');
+            if (profileImg) {
+                let randomIndex;
+                do {
+                    randomIndex = Math.floor(Math.random() * profilePictures.length);
+                } while (randomIndex === lastProfilePictureIndex && profilePictures.length > 1); // Ensure different image if more than one
+                
+                profileImg.src = profilePictures[randomIndex];
+                lastProfilePictureIndex = randomIndex;
+            }
+        }
+
+        // Call on page load/refresh
+        updateProfilePicture();
+
+        // Update every hour (3600000 milliseconds = 1 hour)
+        setInterval(updateProfilePicture, 3600000); 
+        // For testing, you can set a shorter interval, e.g., 5000 for 5 seconds:
+        // setInterval(updateProfilePicture, 5000);
+
+
+        // Tutorial Filtering and "View All" functionality
+        const tutorialCards = document.querySelectorAll('#tutorials .tutorial-card');
+        const viewAllTutorialsBtn = document.getElementById('view-all-tutorials-btn');
+        const tutorialsPerLoad = 3; 
+        let showingAllTutorials = false;
+
+        // Filters and displays tutorials based on the `tutorialsPerLoad` count
+        function filterTutorials() {
+            showingAllTutorials = false;
+            viewAllTutorialsBtn.textContent = 'View All Tutorials';
+            viewAllTutorialsBtn.classList.remove('hidden'); // Ensure button is visible initially
+
+            let visibleCount = 0;
+            tutorialCards.forEach(card => {
+                if (visibleCount < tutorialsPerLoad) {
+                    card.style.display = 'flex'; // Use flex for visibility
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none'; // Hide excess cards
+                }
+            });
+
+            // Hide "View All" button if there are fewer tutorials than the display limit
+            if (tutorialCards.length <= tutorialsPerLoad) {
+                viewAllTutorialsBtn.classList.add('hidden');
+            }
+        }
+
+        // Toggles between showing all tutorials and showing only the initial set
+        function toggleViewAllTutorials() {
+            showingAllTutorials = !showingAllTutorials;
+            viewAllTutorialsBtn.textContent = showingAllTutorials ? 'Show Less' : 'View All Tutorials';
+
+            let visibleCount = 0;
+            tutorialCards.forEach(card => {
+                if (showingAllTutorials) {
+                    card.style.display = 'flex'; // Show all tutorials
+                } else {
+                    if (visibleCount < tutorialsPerLoad) {
+                        card.style.display = 'flex'; // Show only the initial set
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none'; // Hide excess cards
+                    }
+                }
+            });
+        }
+        viewAllTutorialsBtn.addEventListener('click', toggleViewAllTutorials);
+
+        // Project Filtering and "View All" functionality
+        const projectsGrid = document.getElementById('projects-grid');
+        const projectCards = document.querySelectorAll('.project-card');
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const viewAllBtn = document.getElementById('view-all-btn');
+        const projectsPerLoad = 3; 
+        let currentCategory = 'all';
+        let showingAllProjects = false;
+
+        // Filters and displays projects based on category and `projectsPerLoad` count
+        function filterProjects(category) {
+            currentCategory = category;
+            showingAllProjects = false; // Reset when category changes
+            viewAllBtn.textContent = 'View All Projects';
+            viewAllBtn.classList.remove('hidden'); // Ensure button is visible initially
+
+            let visibleCount = 0;
+            projectCards.forEach(card => {
+                const cardCategory = card.dataset.category;
+                if (category === 'all' || cardCategory === category) {
+                    if (visibleCount < projectsPerLoad) {
+                        card.classList.add('active'); // Show active cards
+                        visibleCount++;
+                    } else {
+                        card.classList.remove('active'); // Hide excess cards
+                    }
+                } else {
+                    card.classList.remove('active'); // Hide cards not in the current category
+                }
+            });
+
+            // If all projects in the category are less than or equal to projectsPerLoad, hide the "View All" button
+            const totalInCategory = Array.from(projectCards).filter(card => 
+                category === 'all' || card.dataset.category === category
+            ).length;
+
+            if (totalInCategory <= projectsPerLoad) {
+                viewAllBtn.classList.add('hidden');
+            }
+        }
+
+        // Toggles between showing all projects and showing only the initial set for the current category
+        function toggleViewAllProjects() {
+            showingAllProjects = !showingAllProjects;
+            viewAllBtn.textContent = showingAllProjects ? 'Show Less' : 'View All Projects';
+
+            let visibleCount = 0;
+            projectCards.forEach(card => {
+                const cardCategory = card.dataset.category;
+                if (currentCategory === 'all' || cardCategory === currentCategory) {
+                    if (showingAllProjects) {
+                        card.classList.add('active'); // Show all projects in the category
+                    } else {
+                        if (visibleCount < projectsPerLoad) {
+                            card.classList.add('active'); // Show only the initial set
+                            visibleCount++;
+                        } else {
+                            card.classList.remove('active'); // Hide excess cards
+                        }
+                    }
+                }
+            });
+        }
+
+        // Event listeners for category buttons
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button styling
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('bg-cyber', 'text-darkbg');
+                    btn.classList.add('bg-gray-700', 'text-white');
+                });
+                button.classList.add('bg-cyber', 'text-darkbg');
+                button.classList.remove('bg-gray-700', 'text-white');
+                filterProjects(button.dataset.category); // Filter projects based on selected category
+            });
+        });
+
+        // Event listener for "View All Projects" button
+        viewAllBtn.addEventListener('click', toggleViewAllProjects);
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('active');
+        });
+
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('active');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('active'); // Close menu on link click
+            });
+        });
+
+        // Initialize animations and sections on load
+        document.addEventListener('DOMContentLoaded', () => {
+            typeWriter(); // Start typing animation
+            createParticles(); // Create background particles
+            createCircuitLines(); // Create background circuit lines
+            filterProjects('all'); // Display initial projects (all category)
+            filterTutorials(); // Display initial tutorials
+
+            // Add scroll event listener for animations (e.g., parallax effects)
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                document.documentElement.style.setProperty('--scroll', scrollPosition * 0.5 + 'px');
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default anchor click behavior
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return; // Ignore empty href
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth' // Smooth scroll to target section
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
