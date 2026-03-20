@@ -1,2050 +1,967 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Asl</title>
+    <title>Ahmed Asl | IoT & Embedded Systems Engineer</title>
+    <meta name="description" content="Ahmed Asl is an IoT & Embedded Systems Engineer specializing in custom firmware, PCB design, and scalable hardware architectures. Available for consulting worldwide.">
+    
+    <!-- Tailwind CSS (via CDN for stability) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        cyber: "#00FFFF",
-                        darkbg: "#080d1a",
-                        darkcard: "#1c2842",
-                        darknav: "#1a243b",
-                        accent: "#FF2A6D",
-                        accent2: "#05D9E8"
+                        darkbg: "#0B0710",
+                        darknav: "rgba(11, 7, 16, 0.85)",
+                        darkcard: "#190F26",
+                        darkcardborder: "rgba(124, 58, 237, 0.2)",
+                        accent: "#FACC15",
+                        accent2: "#EAB308",
+                        textmain: "#F3F4F6",
+                        textmuted: "#A78BFA"
                     },
                     fontFamily: {
-                        'orbitron': ['Orbitron', 'sans-serif'],
-                        'roboto-mono': ['Roboto Mono', 'monospace']
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'orbit': 'orbit 12s linear infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        orbit: {
-                            '0%': { transform: 'rotate(0deg) translateX(100px) rotate(0deg)' },
-                            '100%': { transform: 'rotate(360deg) translateX(100px) rotate(-360deg)' },
-                        }
+                        sans: ['Inter', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    <style>
-        /* Root variables for consistent theming */
-        :root {
-            --cyber: #00FFFF;
-            --accent: #FF2A6D;
-            --accent2: #05D9E8;
+    
+    <!-- Core CSS overrides -->
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-darkbg text-textmain font-sans antialiased;
+                background-image: radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
+                                  radial-gradient(circle at 85% 30%, rgba(250, 204, 21, 0.03) 0%, transparent 50%);
+                background-attachment: fixed;
+            }
+        }
+
+        @layer components {
+            .nav-link {
+                @apply text-sm font-medium text-textmuted hover:text-accent transition-colors duration-200;
+            }
+            .premium-card {
+                @apply bg-darkcard/80 backdrop-blur-sm border border-darkcardborder transition-all duration-300;
+                border-radius: 1.5rem;
+                box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+            }
+            .premium-card:hover {
+                @apply shadow-lg shadow-accent/5 -translate-y-1;
+                border-color: rgba(250, 204, 21, 0.4);
+                box-shadow: 0 20px 40px -10px rgba(0,0,0,0.7), inset 0 0 15px rgba(250, 204, 21, 0.05);
+            }
+            .premium-card h3 {
+                font-family: 'Space Grotesk', sans-serif;
+                letter-spacing: -0.02em;
+                color: #ffffff;
+            }
+            .btn-primary {
+                @apply bg-accent text-[#0B0710] px-8 py-3.5 font-space font-bold tracking-wide transition-all duration-300 shadow-lg shadow-accent/20 hover:bg-accent2 hover:shadow-accent/40 hover:-translate-y-0.5 inline-block text-center cursor-pointer;
+                border-radius: 9999px;
+            }
+            .btn-secondary {
+                @apply bg-transparent text-accent border-2 border-accent/80 px-8 py-3 font-space font-bold tracking-wide transition-all duration-300 hover:bg-accent hover:text-[#0B0710] inline-block text-center cursor-pointer;
+                border-radius: 9999px;
+            }
+            .filter-btn {
+                @apply bg-darkcard border border-darkcardborder text-textmuted px-6 py-2.5 font-medium transition-colors hover:text-accent hover:border-accent/40 cursor-pointer;
+                border-radius: 9999px;
+            }
+            .filter-btn.active {
+                @apply bg-accent/10 border-accent text-accent;
+            }
+            .section-title {
+                @apply font-space text-4xl md:text-5xl font-bold mb-4 relative inline-block pb-4 tracking-tight text-white;
+            }
+            .section-title::after {
+                @apply content-[''] absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1.5 bg-accent;
+                border-radius: 9999px;
+            }
+            .section-subtitle {
+                @apply text-textmuted text-lg max-w-2xl mx-auto mb-16;
+            }
+            .tag {
+                @apply bg-accent/10 border border-accent/30 text-accent px-4 py-1.5 text-xs font-bold tracking-widest uppercase;
+                border-radius: 9999px;
+            }
+            .project-item {
+                display: none; /* hidden by default, shown by JS */
+            }
+            .project-item.active {
+                display: flex; /* Tailwind flex col */
+                animation: fadeIn 0.4s ease-out forwards;
+            }
         }
         
-        /* Base body styling */
-        body {
-            background-color: #080d1a;
-            color: white;
-            font-family: 'Roboto Mono', monospace;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 20%);
-            overflow-x: hidden; /* Prevent horizontal scroll */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, visibility;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            visibility: visible;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         
-        /* Cyberpunk text glow effect */
-        .cyber-text {
-            text-shadow: 0 0 10px var(--cyber), 0 0 20px var(--cyber);
-        }
-        
-        /* Accent color for text */
-        .accent-text {
-            color: var(--accent);
-        }
-        
-        /* General glow effect */
-        .glow {
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-        }
-        
-        /* Background grid pattern */
-        .tech-grid {
-            background-image: 
-                linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-        
-        /* Particle animation styling */
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: var(--cyber);
-            opacity: 0.7;
-            z-index: -1;
-        }
-        
-        /* Circuit line background elements */
-        .circuit-line {
-            position: absolute;
-            background: rgba(0, 255, 255, 0.1);
-            z-index: -1;
-        }
-        
-        /* Dark themed card styling with hover effects */
-        .dark-card {
-            background: rgba(28, 40, 66, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-        
-        .dark-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
-            border-color: var(--cyber);
-        }
-        
-        /* Skill bar styling */
-        .skill-bar {
-            height: 8px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent), var(--accent2));
-            border-radius: 4px;
-            position: relative;
-        }
-        
-        .skill-progress::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            animation: shine 2s infinite;
-        }
-        
-        /* Keyframe for skill bar shine effect */
-        @keyframes shine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        
-        /* Tech icon styling with hover effects */
-        .tech-icon {
-            font-size: 2rem;
-            color: var(--cyber);
-            transition: all 0.3s ease;
-        }
-        
-        .tech-icon:hover {
-            transform: scale(1.2);
-            color: var(--accent2);
-            text-shadow: 0 0 10px var(--accent2);
-        }
-        
-        /* Circuit node elements for background */
-        .circuit-node {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: var(--cyber);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--cyber);
-            z-index: 2;
-        }
-        
-        /* Floating chip icons with animation */
-        .floating-chip {
-            position: absolute;
-            animation: float 8s ease-in-out infinite;
-            z-index: -1;
-            opacity: 0.3;
-        }
-        
-        /* Terminal effect styling for text containers */
-        .terminal-effect {
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid var(--cyber);
-            border-radius: 8px;
-            padding: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        /* Terminal scan line animation */
-        .terminal-effect::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--cyber);
-            box-shadow: 0 0 10px var(--cyber);
-            animation: scan 4s linear infinite;
-        }
-        
-        @keyframes scan {
-            0% { top: 0; }
-            50% { top: 100%; }
-            100% { top: 0; }
-        }
-        
-        /* Custom scrollbar styling */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+
+        /* Cythuliu Purple/Yellow Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
-        
         ::-webkit-scrollbar-track {
-            background: rgba(10, 20, 40, 0.8);
+            background-color: #0B0710;
         }
-        
         ::-webkit-scrollbar-thumb {
-            background: var(--cyber);
-            border-radius: 5px;
+            background-color: #3c2858;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #facc15;
         }
         
-        /* Profile image container and border animation */
-        .profile-container {
-            position: relative;
-            /* Use min() for fluid responsiveness: takes 80% of viewport width, but maxes out at 300px */
-            width: min(80vw, 300px); 
-            height: min(80vw, 300px); /* Keep height equal to width for perfect circle */
-            margin: 0 auto; /* Center on smaller screens */
-            margin-bottom: 40px;
+        #mobile-menu {
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
-        
-        .profile-image {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            overflow: hidden;
-            z-index: 2;
-            border: 3px solid transparent;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        
-        .circuit-border {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            z-index: 1;
-            background: conic-gradient(
-                from 0deg at 50% 50%,
-                rgba(0, 255, 255, 0) 0%,
-                rgba(0, 255, 255, 0.8) 25%,
-                rgba(0, 255, 255, 0) 50%,
-                rgba(0, 255, 255, 0.8) 75%,
-                rgba(0, 255, 255, 0) 100%
-            );
-            animation: rotateBorder 4s linear infinite;
-        }
-
-        .circuit-border::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: inherit;
-            border-radius: 50%;
-            filter: blur(15px);
-            z-index: -1;
-            opacity: 0.5;
-            animation: pulse 3s ease-in-out infinite;
-        }
-        
-        @keyframes rotateBorder {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(0.95); opacity: 0.5; }
-            50% { transform: scale(1.05); opacity: 0.8; }
-        }
-        
-        /* Tech nodes orbiting around the profile picture */
-        .tech-node {
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background: var(--accent2);
-            border-radius: 50%;
-            box-shadow: 0 0 15px var(--accent2);
-            animation: orbit 15s linear infinite;
-            z-index: 0;
-        }
-        
-        .tech-node:nth-child(2) {
-            animation-duration: 18s;
-            animation-delay: -4s;
-            background: var(--accent);
-            box-shadow: 0 0 15px var(--accent);
-        }
-        
-        .tech-node:nth-child(3) {
-            animation-duration: 22s;
-            animation-delay: -8s;
-            background: var(--cyber);
-            box-shadow: 0 0 15px var(--cyber);
-        }
-        
-        /* Section title underline effect */
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--accent2));
-            border-radius: 3px;
-        }
-        
-        /* Project card styling for filtering */
-        .project-card {
-            transition: all 0.4s ease;
-            perspective: 1000px;
-            display: none; /* Hidden by default */
-        }
-        
-        .project-card.active {
-            display: block; /* Shown when active */
-        }
-
-        .project-inner {
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-        
-        .project-card:hover .project-inner {
-            transform: rotateY(10deg) rotateX(5deg);
-        }
-
-        /* Service item card styling */
-        .service-item {
-            background: rgba(28, 40, 66, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
-            border-color: var(--cyber);
-        }
-
-        /* About Me section text container styling */
-        .about-me-text-container {
-            background: rgba(28, 40, 66, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            border-radius: 8px;
-            padding: 2.5rem;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Re-apply terminal scan effect to about me container */
-        .about-me-text-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: var(--cyber);
-            box-shadow: 0 0 10px var(--cyber);
-            animation: scan 4s linear infinite;
-        }
-        
-        .about-me-text-container p {
-            line-height: 1.8;
-            font-size: 1.125rem;
-        }
-
-        /* Tutorial card styling */
-        .tutorial-card {
-            background: rgba(28, 40, 66, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .tutorial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
-            border-color: var(--cyber);
-        }
-
-        .tutorial-card img {
-            border-radius: 10px 10px 0 0;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            /* Removed explicit profile-container width/height here as min() handles it */
-            .about-me-text-container {
-                padding: 1.5rem; /* Reduce padding on smaller screens */
-            }
-
-            .about-me-text-container p {
-                font-size: 1rem; /* Adjust font size for readability */
-            }
-
-            .section-title {
-                font-size: 2.5rem; /* Adjust section title size */
-            }
-
-            .service-item, .tutorial-card, .project-card {
-                margin-bottom: 1rem; /* Add space between cards on mobile */
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* Removed explicit profile-container width/height here as min() handles it */
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .category-btn {
-                padding: 0.5rem 1rem; /* Smaller buttons */
-                font-size: 0.875rem;
-            }
-        }
-
-        /* Mobile navigation overlay */
-        .mobile-menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(8, 13, 26, 0.95); /* Dark background with transparency */
-            backdrop-filter: blur(8px);
-            z-index: 60; /* Higher than header */
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .menu-hidden {
             opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            pointer-events: none;
+            transform: translateY(-10px);
         }
-
-        .mobile-menu-overlay.active {
+        .menu-visible {
             opacity: 1;
-            visibility: visible;
-        }
-
-        .mobile-menu-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .mobile-menu-content a {
-            color: #e2e8f0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        .mobile-menu-content a:hover {
-            color: var(--cyber);
-        }
-
-        .mobile-menu-close {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            color: #e2e8f0;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: color 0.2s ease;
-        }
-
-        .mobile-menu-close:hover {
-            color: var(--accent);
+            pointer-events: auto;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="tech-grid min-h-screen relative overflow-x-hidden">
-    <div id="particles"></div>
-    <div id="circuit-lines"></div>
-    
-    <div class="floating-chip text-cyber text-4xl" style="top: 10%; left: 5%; animation-delay: 0s;">
-        <i class="fas fa-microchip"></i>
-    </div>
-    <div class="floating-chip text-accent2 text-3xl" style="top: 20%; right: 8%; animation-delay: 1s;">
-        <i class="fas fa-cog"></i>
-    </div>
-    <div class="floating-chip text-accent text-5xl" style="top: 40%; left: 7%; animation-delay: 2s;">
-        <i class="fas fa-server"></i>
-    </div>
-    <div class="floating-chip text-cyber text-2xl" style="bottom: 20%; right: 10%; animation-delay: 3s;">
-        <i class="fas fa-code"></i>
-    </div>
-    
-    <header class="dark-nav backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-700 py-4">
-        <nav class="container mx-auto px-6 flex justify-between items-center">
-            <div class="text-2xl font-bold">
-                <span class="cyber-text text-cyber font-orbitron">AHMED ASL</span>
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="hover:text-cyber transition font-semibold">Home</a>
-                <a href="#about" class="hover:text-cyber transition font-semibold">About</a>
-                <a href="#services" class="hover:text-cyber transition font-semibold">Services</a>
-                <a href="#skills" class="hover:text-cyber transition font-semibold">Skills</a>
-                <a href="#tutorials" class="hover:text-cyber transition font-semibold">Tutorials</a>
-                <a href="#projects" class="hover:text-cyber transition font-semibold">Projects</a>
-                <a href="#contact" class="hover:text-cyber transition font-semibold">Contact</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="bg-cyber text-darkbg px-4 py-2 rounded-lg font-bold hover:bg-accent2 transition">
-                    Hire Me
-                </button>
-                <button id="mobile-menu-btn" class="md:hidden focus:outline-none text-gray-300">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
+<body class="relative overflow-x-hidden selection:bg-accent/30 selection:text-white">
 
-    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
-        <button id="mobile-menu-close" class="mobile-menu-close">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="mobile-menu-content">
-            <a href="#home" class="mobile-nav-link">Home</a>
-            <a href="#about" class="mobile-nav-link">About</a>
-            <a href="#services" class="mobile-nav-link">Services</a>
-            <a href="#skills" class="mobile-nav-link">Skills</a>
-            <a href="#tutorials" class="mobile-nav-link">Tutorials</a>
-            <a href="#projects" class="mobile-nav-link">Projects</a>
-            <a href="#contact" class="mobile-nav-link">Contact</a>
-            <button class="bg-cyber text-darkbg px-6 py-3 rounded-lg font-bold hover:bg-accent2 transition w-full max-w-xs mt-4">
-                Hire Me
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-darkcardborder bg-darknav backdrop-blur-md">
+        <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-space font-bold tracking-tight text-white flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-accent flex items-center justify-center font-space text-[#0f0a18] font-bold text-lg leading-none shadow-[0_0_15px_rgba(250,204,21,0.3)]">A</div>
+                AHMED ASL
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#services" class="nav-link">Expertise</a>
+                <a href="#tutorials" class="nav-link">Tutorials</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="btn-primary py-2.5 px-5 text-sm">Book Strategy Call</a>
+            </nav>
+            
+            <button id="menu-toggle" class="md:hidden text-textmuted hover:text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
-    </div>
+        
+        <div id="mobile-menu" class="menu-hidden absolute top-20 left-0 w-full bg-darknav border-b border-darkcardborder backdrop-blur-md md:hidden flex flex-col items-center py-6 gap-6 shadow-2xl">
+            <a href="#services" class="nav-link mobile-link text-lg">Expertise</a>
+            <a href="#tutorials" class="nav-link mobile-link text-lg">Tutorials</a>
+            <a href="#projects" class="nav-link mobile-link text-lg">Projects</a>
+            <a href="#about" class="nav-link mobile-link text-lg">About</a>
+            <a href="#contact" class="btn-primary w-11/12 max-w-sm mobile-link">Book Strategy Call</a>
+        </div>
+    </header>
 
-    <main>
-        <section id="home" class="min-h-screen flex items-center justify-center relative py-16 md:py-0">
-            <div class="absolute inset-0 z-0">
-                <div class="circuit-node" style="top: 20%; left: 15%;"></div>
-                <div class="circuit-node" style="top: 40%; right: 20%;"></div>
-                <div class="circuit-node" style="bottom: 30%; left: 25%;"></div>
+    <!-- Hero Section -->
+    <section class="pt-40 pb-20 md:pt-48 md:pb-32 px-6 min-h-[90vh] flex flex-col justify-center relative overflow-hidden">
+        <!-- Cythuliu Background Ambient Glow -->
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[150px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#3c2858]/20 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/4"></div>
+
+        <div class="container mx-auto max-w-7xl relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16 text-left">
+            <!-- Left Side Data -->
+            <div class="flex flex-col items-start w-full lg:w-[55%]">
+                <div class="inline-block mb-8 px-6 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-sm tracking-widest uppercase hero-reveal delay-100 shadow-[0_0_15px_rgba(250,204,21,0.1)]">
+                    IoT & Embedded Systems Engineer
+                </div>
+                <h1 class="font-space text-6xl md:text-[5.2rem] xl:text-[6rem] font-bold tracking-tighter mb-8 leading-[1.05] text-white hero-reveal delay-200">
+                    Engineering <br class="hidden xl:block" /> Secure, Scalable <br/>
+                    <span class="text-accent drop-shadow-[0_0_35px_rgba(250,204,21,0.2)]">Hardware Architectures</span>.
+                </h1>
+                <p class="text-lg md:text-xl text-textmuted mb-12 leading-relaxed max-w-2xl font-light hero-reveal delay-300">
+                    Bridging the gap between complex hardware, secure networks, and intuitive software layers—from custom PCB layout and IoT infrastructure to Penetration Testing and UI/UX Design.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center gap-6 hero-reveal delay-300 w-full sm:w-auto">
+                    <a href="#contact" class="btn-primary w-full sm:w-auto text-lg px-10 py-4">Schedule a Strategy Call</a>
+                    <a href="#projects" class="btn-secondary w-full sm:w-auto text-lg px-10 py-4 group">View My Work <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                </div>
             </div>
-            
-            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center z-10 relative text-center md:text-left">
-                <div class="md:w-1/2 flex justify-center mt-10 md:mt-0 order-1 md:order-none">
-                    <div class="profile-container">
-                        <div class="circuit-border"></div>
-                        <div class="tech-node"></div>
-                        <div class="tech-node"></div>
-                        <div class="tech-node"></div>
-                        <div class="profile-image">
-                            <!-- Profile picture will be dynamically updated by JavaScript -->
-                            <img id="profile-picture" src="images/profilePicture/profile2.jpg" alt="Embedded Systems Engineer">
-                        </div>
+
+            <!-- Right Side Profile Picture -->
+            <div class="w-full lg:w-[45%] flex justify-center lg:justify-end hero-reveal delay-400 mt-16 lg:mt-0 relative">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-[22rem] lg:h-[22rem] xl:w-96 xl:h-96 rounded-full p-2 bg-gradient-to-tr from-[#3c2858] to-accent/60 group hover:scale-[1.03] transition-transform duration-500 shadow-[0_0_50px_rgba(250,204,21,0.2)]">
+                    <!-- Real Avatar Image Location -->
+                    <img src="images/profilePicture/profile3.png" alt="Ahmed Asl Profile Picture" class="w-full h-full object-cover rounded-full border-[6px] border-[#0f0a18] relative z-10 shadow-inner">
+                    
+                    <!-- Ambient Cythuliu Tech Badge -->
+                    <div class="absolute bottom-4 -left-4 md:-left-6 w-20 h-20 md:w-24 md:h-24 bg-[#0f0a18] rounded-full border border-[#3c2858] flex items-center justify-center text-accent text-3xl shadow-[0_0_20px_rgba(250,204,21,0.15)] z-20 group-hover:-rotate-12 transition-transform duration-500">
+                         <i class="fa-solid fa-microchip"></i>
                     </div>
                 </div>
-                <div class="md:w-1/2 mb-10 md:mb-0 order-2 md:order-none">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 font-orbitron">
-                        <span class="text-cyber">HI, I'M</span> <span class="accent-text">AHMED ASL</span>
-                    </h1>
-                    <div class="text-2xl md:text-3xl font-semibold mb-6 h-16 overflow-hidden">
-                        <span id="typing-text" class="inline-block border-r-2 border-cyber"></span>
-                    </div>
-                    <p class="text-lg mb-8 text-white-300 max-w-2xl mx-auto md:mx-0">
-Bringing your ideas to life with full-stack innovation—from precision circuit engineering to intuitive apps, dynamic video content, engaging social posts, and expressive voice experiences, guiding every step from concept to launch.
-                    </p>
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
-                        <a href="#projects" class="bg-accent hover:bg-accent2 text-white px-6 py-3 rounded-lg font-bold transition duration-300 transform hover:scale-105">
-                            View Projects
-                        </a>
-                        <a href="#contact" class="bg-transparent border-2 border-cyber text-cyber hover:bg-cyber hover:text-darkbg px-6 py-3 rounded-lg font-bold transition duration-300">
-                            Contact Me
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Arrow hidden on small screens, visible on medium and larger screens -->
-            <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-                <a href="#about" class="text-cyber text-3xl">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-            </div>
-        </section>
-
-        <section id="about" class="py-20 relative">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
-                    <span class="text-cyber">ABOUT</span> <span class="accent-text">ME</span>
-                </h2>
-                
-            <div class="about-me-text-container">
-                <p class="mb-4 text-lg leading-relaxed">
-                    I like to <strong>teach wires to talk</strong>. Hand me a sketchy idea, a fistful of sensors, and a deadline,
-                    and I’ll turn the whole mess into a circuit that chats with your phone before lunch.
-                    Eight years of poking at electrons have shown me that if you can’t explain a blinking LED to a curious teenager,
-                    you don’t understand it yet.
-                </p>
-
-                <p class="mb-4 text-lg leading-relaxed">
-                    I roam from <strong>PCB traces to app screens</strong>—one minute routing copper so a microcontroller stays cool,
-                    the next crafting a clean mobile UI so a user can press a button and hear a relay click across the room.
-                </p>
-
-                <p class="mb-4 text-lg leading-relaxed">
-                    My playground is the <strong>Internet&nbsp;of&nbsp;Things</strong>, where tiny gadgets gossip over Wi-Fi.
-                    I build these ecosystems to be secure, power-savvy, and courteous on the network.
-                </p>
-
-                <p class="text-lg leading-relaxed">
-                    When the soldering iron cools, I’m <strong>turning complex ideas into plain talk</strong>—tutorials, demos,
-                    and lively explanations that leave “complicated” at the door.
-                </p>
-    
-            </div>
-        </section>
-
-        <section id="services" class="py-20 bg-darkcard">
-        <div class="container mx-auto px-6">
-
-            <!-- Section title -->
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
-            <span class="text-cyber">MY</span> <span class="accent-text">SERVICES</span>
-            </h2>
-
-            <!-- Service cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- Embedded Firmware -->
-            <div class="service-item p-6 flex items-start space-x-4">
-                <div class="text-3xl text-cyber pt-1">
-                <i class="fa-solid fa-microchip"></i>
-                </div>
-                <div>
-                <h3 class="text-xl font-bold mb-2">Embedded Firmware</h3>
-                <p class="text-gray-400">Fast, stable C/C++ or Python code for any microcontroller.</p>
-                </div>
-            </div>
-
-            <!-- PCB & Circuit Design -->
-            <div class="service-item p-6 flex items-start space-x-4">
-                <div class="text-3xl text-accent pt-1">
-                <i class="fa-solid fa-plug"></i>
-                </div>
-                <div>
-                <h3 class="text-xl font-bold mb-2">PCB & Circuit Design</h3>
-                <p class="text-gray-400">Schematics, layouts, and ready-to-build boards.</p>
-                </div>
-            </div>
-
-            <!-- Flutter Apps -->
-            <div class="service-item p-6 flex items-start space-x-4">
-                <div class="text-3xl text-accent2 pt-1">
-                <!-- Fallback to a mobile-app icon so it always renders -->
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                </div>
-                <div>
-                <h3 class="text-xl font-bold mb-2">Flutter Apps</h3>
-                <p class="text-gray-400">Mobile apps that talk to your hardware in real time.</p>
-                </div>
-            </div>
-
-            <!-- IoT Architecture -->
-            <div class="service-item p-6 flex items-start space-x-4">
-                <div class="text-3xl text-cyber pt-1">
-                <i class="fa-solid fa-cloud"></i>
-                </div>
-                <div>
-                <h3 class="text-xl font-bold mb-2">IoT Architecture</h3>
-                <p class="text-gray-400">Secure data flows from sensor to cloud dashboard.</p>
-                </div>
-            </div>
-
-            <!-- Video & Audio Editing -->
-            <div class="service-item p-6 flex items-start space-x-4">
-                <div class="text-3xl text-accent pt-1">
-                <i class="fa-solid fa-film"></i>
-                </div>
-                <div>
-                <h3 class="text-xl font-bold mb-2">Video & Audio Editing</h3>
-                <p class="text-gray-400">Sharp cuts, clean sound, eye-catching motion.</p>
-                </div>
-            </div>
-
-            <!-- Social Graphics -->
-            <div class="service-item p-6 flex items-start space-x-4">
-                <div class="text-3xl text-accent2 pt-1">
-                <i class="fa-solid fa-paint-brush"></i>
-                </div>
-                <div>
-                <h3 class="text-xl font-bold mb-2">Social Graphics</h3>
-                <p class="text-gray-400">Scroll-stopping posts, banners, and slides.</p>
-                </div>
-            </div>
-
-            <!-- System Testing -->
-            <div class="service-item p-6 flex items-start space-x-4">
-                <div class="text-3xl text-cyber pt-1">
-                <i class="fa-solid fa-vial"></i>
-                </div>
-                <div>
-                <h3 class="text-xl font-bold mb-2">System Testing</h3>
-                <p class="text-gray-400">Full checks so every device ships bug-free.</p>
-                </div>
-            </div>
-
-            <!-- Robotics Projects -->
-            <div class="service-item p-6 flex items-start space-x-4">
-                <div class="text-3xl text-accent pt-1">
-                <!-- Fallback to a microcontroller icon for guaranteed support -->
-                <i class="fa-solid fa-robot"></i>
-                </div>
-                <div>
-                <h3 class="text-xl font-bold mb-2">Robotics</h3>
-                <p class="text-gray-400">Quick prototypes and custom builds.</p>
-                </div>
-            </div>
-
-            <!-- Tkinter GUIs -->
-            <div class="service-item p-6 flex items-start space-x-4">
-                <div class="text-3xl text-accent2 pt-1">
-                <i class="fa-solid fa-desktop"></i>
-                </div>
-                <div>
-                <h3 class="text-xl font-bold mb-2">Tkinter GUIs</h3>
-                <p class="text-gray-400">Simple desktop apps in pure Python.</p>
-                </div>
-            </div>
-
             </div>
         </div>
-        </section>
+    </section>
 
-        <section id="skills" class="py-20 bg-darkcard">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
-                    <span class="text-cyber">TECHNICAL</span> <span class="accent-text">SKILLS</span>
-                </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">C/C++ Embedded</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">PCB Design</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">IoT Systems</span>
-                                <span>92%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">Arduino Framework</span>
-                                <span>99%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 99%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">MATLAB</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">Python</span>
-                                <span>88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">Flutter</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">Circuit Design</span>
-                                <span>93%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 93%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">DaVinci Resolve</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-8">
-                            <div class="flex justify-between mb-2">
-                                <span class="font-bold">Adobe Premiere</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-16">
-                    <h3 class="text-2xl font-bold text-center mb-8">Tools & Technologies</h3>
-                    <div class="flex flex-wrap justify-center gap-8">
-                        <div class="tech-icon">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                        <div class="tech-icon">
-                            <i class="fab fa-raspberry-pi"></i>
-                        </div>
-                        <div class="tech-icon">
-                        <i class="fas fa-video"></i>
-                        </div>
-                        <div class="tech-icon">
-                            <i class="fas fa-wifi"></i>
-                        </div>
-                        <div class="tech-icon">
-                            <i class="fas fa-satellite"></i>
-                        </div>
-                        <div class="tech-icon">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <div class="tech-icon">
-                            <i class="fab fa-android"></i>
-                        </div>
-                        <div class="tech-icon">
-                            <i class="fas fa-terminal"></i> </div>
-                        <div class="tech-icon">
-                            <i class="fas fa-code-branch"></i> </div>
-                        <div class="tech-icon">
-                            <i class="fab fa-behance"></i> </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="tutorials" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
-                    <span class="text-cyber">MY</span> <span class="accent-text">ONLINE TUTORIALS</span>
-                </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="tutorial-card">
-                        <img src="images/Ros Requirements_thubnail.jpg" alt="Ros Requirements">
-                        <div class="p-6 flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Ros Requirements</h3>
-                            
-                            <p class="text-gray-400 mb-4 text-sm">
-                            Bite-sized crash courses that stack the skills you need to hit the ground running with ROS.
-                            </p>
-
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">ros</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Virtual box</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">VsCode</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">linux</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">git</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Tkinter</span>
-                            </div>
-                            <a href="https://www.youtube.com/playlist?list=PLMSkmiBu0cz6m-LOsum_j4yto_h9PMG70" class="text-cyber font-medium hover:underline block mt-auto">Watch Tutorial</a>
-                        </div>
-                    </div>
-                    
-                    <div class="tutorial-card">
-                        <img src="images/intro_embeddedSystem.jpg" alt="intro to embedded systems world">
-                        <div class="p-6 flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Introduction to Embedded Systems world</h3>
-                            <p class="text-gray-400 mb-4 text-sm">Essential tips and tricks for efficient and error-free PCB design using KiCad.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Arduino</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AVR</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded software</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">IoT</span>
-                            </div>
-                            <a href="https://web.facebook.com/watch/live/?ref=watch_permalink&v=1456207331975013" class="text-cyber font-medium hover:underline block mt-auto">Watch Tutorial</a>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="tutorial-card">
-                        <img src="images/embedded system worksop level1.jpg" alt="embedded_system_workshop_level_1">
-                        <div class="p-6 flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Embedded System workshop Level 1</h3>
-                            <p class="text-gray-400 mb-4 text-sm">Designed to be friendly workshop to take students a taste of how embeeded systems feel.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">CMD-Basics</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Digital and Logic</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">C/C++</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Arduino uno</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AVR</span>
-                                <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Computer architecture</span>
-                            </div>
-                            <a href="https://youtube.com/playlist?list=PLzFyd8nPA2MyZav2MILCrSjpu92iy4PC4&si=twUFB8WvJpBhWeN2" class="text-cyber font-medium hover:underline block mt-auto">Watch Tutorial</a>
-                        </div>
-                    </div>
-                    
-                </div>
-                 <div class="text-center mt-12">
-                    <button id="view-all-tutorials-btn" class="inline-block bg-transparent border-2 border-cyber text-cyber hover:bg-cyber hover:text-darkbg px-6 py-3 rounded-lg font-bold transition duration-300">
-                        View All Tutorials
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
-                    <span class="text-cyber">FEATURED</span> <span class="accent-text">PROJECTS</span>
-                </h2>
-                
-                <div class="flex justify-center space-x-2 md:space-x-4 mb-12 flex-wrap gap-4">
-                    <button class="category-btn bg-cyber text-darkbg px-4 py-2 md:px-6 md:py-2 rounded-lg font-bold hover:bg-accent2 transition text-sm md:text-base" data-category="all">
-                        All Projects
-                    </button>
-                    <button class="category-btn bg-gray-700 text-white px-4 py-2 md:px-6 md:py-2 rounded-lg font-bold hover:bg-accent2 hover:text-darkbg transition text-sm md:text-base" data-category="engineering">
-                        Engineering
-                    </button>
-                    <button class="category-btn bg-gray-700 text-white px-4 py-2 md:px-6 md:py-2 rounded-lg font-bold hover:bg-accent2 hover:text-darkbg transition text-sm md:text-base" data-category="video-editing">
-                        Video Editing
-                    </button>
-                    <button class="category-btn bg-gray-700 text-white px-4 py-2 md:px-6 md:py-2 rounded-lg font-bold hover:bg-accent2 hover:text-darkbg transition text-sm md:text-base" data-category="graphic-design">
-                        Graphic Design & UI/UX </button>
-                </div>
-
-                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div class="project-card" data-category="engineering">
-                    <div class="project-inner">
-                        <div class="dark-card overflow-hidden h-full">
-                            <div class="h-64 relative overflow-hidden">
-                                <!-- Optional: Remove the icon overlay below if not needed -->
-                                <!-- <div class="absolute inset-0 flex items-center justify-center">
-                                    <i class="fas fa-shield-alt text-6xl text-white opacity-30"></i>
-                                </div> -->
-                                <img src="images/agribot_image.jpg" alt="AgriBot" class="w-full h-full object-cover absolute">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">AgriBot</h3>
-                                <p class="text-gray-400 mb-4">An agricultural robot that selects crops, recommends fertilizers, detects leaf diseases, and is managed remotely via my OTA platform, Firewire.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">jetson nano</span>
-                                    <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AI/ML</span>
-                                    <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">IoT</span>
-                                </div>
-                                <a href="#" class="text-cyber font-medium hover:underline">Classified</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                    
-                    <div class="project-card" data-category="engineering">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 relative overflow-hidden">
-                                    <img src="images/ROV.jpeg" alt="ESP32_Wireless_ROV_Control_System" class="w-full h-full object-cover absolute">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">ESP32 Wireless ROV Control System</h3>
-                                    <p class="text-gray-400 mb-4">I developed an ESP32-based system with NRF24L01+ modules for real-time wireless control and telemetry of an ROV using a handheld station.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">ROV</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">ESP32</span>
-                                    </div>
-                                    <a href="https://github.com/ahmed-ibrahim-asl/ROV" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="project-card" data-category="engineering">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 relative overflow-hidden">
-                                    <img src="images/Mega-Sumo.jpg" alt="MegaSumo-Nafisa" class="w-full h-full object-cover absolute">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">MegaSumo-Nafisa</h3>
-                                    <p class="text-gray-400 mb-4">Team Dead Code built autonomous Mega Sumo Cars with Arduino, sensors, and motor drivers, winning second place in Egypt adult division.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Arduino UNO</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Robotics</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">RoboChallenge</span>
-                                    </div>
-                                    <a href="https://github.com/ahmed-ibrahim-asl/MegaSumo-Nafisa" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="engineering">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 relative overflow-hidden">
-                                    <img src="images/Rocket_league.jpg" alt="Rocket League" class="w-full h-full object-cover absolute">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Rocket League Car</h3>
-                                    <p class="text-gray-400 mb-4">I developed two ways to control a Rocket League car: via a Bluetooth mobile app or a PS4 controller using the PS4-esp32 library and SixaxisPairTool.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Robotics</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Competition</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">esp32</span>
-                                    </div>
-                                    <a href="https://github.com/ahmed-ibrahim-asl/Rocket-League-Car" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="project-card" data-category="engineering">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 relative overflow-hidden">
-                                    <!-- Optional: Remove the icon overlay below if not needed -->
-                                    <!-- <div class="absolute inset-0 flex items-center justify-center">
-                                        <i class="fas fa-lightbulb text-6xl text-white opacity-30"></i>
-                                    </div> -->
-                                    <img src="images/Human Follower.jpg" alt="Human Follower Car" class="w-full h-full object-cover absolute">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Human Follower Car</h3>
-                                    <p class="text-gray-400 mb-4">I built an autonomous Human Follower car using Arduino Uno, servo, ultrasonic sensor, and motor driver to follow a person around.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Robotics</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Arduino Uno</span>
-                                    </div>
-                                    <a href="https://github.com/ahmed-ibrahim-asl/Arduino-Projects/tree/main/Human%20Follower%20Car" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="project-card" data-category="engineering">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 relative overflow-hidden">
-                                    <img src="images/Lock_system (2).png" alt="Door Lock System" class="w-full h-full object-cover absolute">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Door Lock System</h3>
-                                    <p class="text-gray-400 mb-4">The system uses two microcontrollers: Human-Machine Interface and Electronic Control Unit. Users can set and change 5-character passwords for secure access.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AVR32</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">STSmart</span>
-                                    </div>
-                                    <a href="https://github.com/ahmed-ibrahim-asl/Door-Lock-System-Avr32" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="project-card" data-category="engineering">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-blue-500 to-indigo-500 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Cryptic+Link" alt="Cryptic Link" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Cryptic Link ITI Graduation Project</h3>
-                                    <p class="text-gray-400 mb-4">CrypticLink is a hands-on project using three Atmel 32 microcontrollers, keypads, and LCDs to demonstrate encrypted data exchange and interception in networked communication.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AVR32</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">iti</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
-                                    </div>
-                                    <a href="https://github.com/ahmed-ibrahim-asl/CrypticLink-ITI-Graduation-Project" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="engineering">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-blue-500 to-indigo-500 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Walkie+Talkie" alt="walkie Talkie" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Walkie talkie</h3>
-                                    <p class="text-gray-400 mb-4">My goal was to apply what I learned in communication electronics by enabling communication between two points without microcontrollers, gaining practical experience with core concepts.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">communication</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">electronics</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
-                                    </div>
-                                    <a href="#" class="text-cyber font-medium hover:underline">Under Development</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="engineering">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-blue-500 to-indigo-500 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Firewire" alt="Firewire" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Firewire</h3>
-                                    <p class="text-gray-400 mb-4"><br />The goal of the platform is to provide a cost-effective solution for updating IoT devices without relying on AWS, using only a standard Raspberry Pi for hosting.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">communication</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">IoT</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">embedded systems</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">OTA</span>
-                                    </div>
-                                    <a href="#" class="text-cyber font-medium hover:underline">Still Classified</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="engineering">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-blue-500 to-indigo-500 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=WhatsAutoX" alt="Firewire" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">WhatsAutoX</h3>
-                                    <p class="text-gray-400 mb-4">WhatsAutoX automates WhatsApp messaging via the command line using WhatsApp Web and image recognition for login checks. It supports bulk messaging, flexible input methods, and works on Windows and Linux.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Automation</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
-                                    </div>
-                                    <a href="https://github.com/ahmed-ibrahim-asl/WhatsAutoX" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="project-card" data-category="video-editing">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-blue-600 to-purple-700 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/3B82F6/080d1a?text=DU+JobFair+Video" alt="DU JobFair Expert Interview" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">DU JobFair - Expert Interview Video</h3>
-                                    <p class="text-gray-400 mb-4">Created a highlight video for the DU JobFair featuring expert opinions including Dr. Ahmed Abdel Aleem on professionalism and career insights.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Video Editing</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Social Media</span>
-                                    </div>
-                                    <a href="https://web.facebook.com/61555154574308/videos/a-professional-is-someone-who-can-do-his-best-work-when-he-doesnt-feel-like-it-a/434092145931488/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="project-card" data-category="video-editing">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/6366F1/080d1a?text=Follow+Us+Guide" alt="Follow Page Updates Guide" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Stay Updated - Follow Guide Promo</h3>
-                                    <p class="text-gray-400 mb-4">Designed and edited a social media video that guides followers on how to stay updated with the page and access the full session with Eng. Karim Nour on Web Development.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Social Video</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Engagement Boost</span>
-                                    </div>
-                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D8%A5%D8%B2%D8%A7%D9%8A-%D8%AA%D8%AA%D8%A7%D8%A8%D8%B9-%D8%A7%D9%84%D9%80-updates-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9-%D8%A7%D9%88%D9%84-%D8%A8%D8%A3%D9%88%D9%84-%D9%85%D8%AA%D9%86%D8%B3%D9%88%D8%B4-%D8%AA%D8%AA%D8%A7%D8%A8%D8%B9%D9%88%D8%A7-%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D9%87-%D8%B9%D8%B4%D8%A7%D9%86-%D8%AA%D8%A7%D8%AE%D8%AF-acces/1004025417324059/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="project-card" data-category="video-editing">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-yellow-500 to-orange-600 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/F59E0B/080d1a?text=Web+Dev+Trends+Session" alt="Web Dev Trends Video" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Web Development Trends - Eng. Karim Nour</h3>
-                                    <p class="text-gray-400 mb-4">Edited and published a session teaser with Eng. Karim Nour, highlighting key trends every developer should follow to stay competitive in the evolving web development field.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Session Edit</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Tech Insights</span>
-                                    </div>
-                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D8%A7%D9%84%D9%80-web-development-%D8%A8%D8%AA%D8%B7%D9%88%D8%B1-%D9%83%D9%84-%D9%8A%D9%88%D9%85-%EF%B8%8F-%D8%A8%D8%B4%D9%85%D9%87%D9%86%D8%AF%D8%B3-%D9%83%D8%B1%D9%8A%D9%85-%D9%86%D9%88%D8%B1-%D8%A8%D9%8A%D9%88%D8%B6%D8%AD-%D9%81%D9%8A-%D8%A7%D9%84%D8%B3%D9%8A%D8%B4%D9%86-%D9%83%D9%84-%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D8%B1%D8%A7%D8%AA-/712009987465702/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="project-card" data-category="video-editing">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-cyan-600 to-blue-700 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/06B6D4/080d1a?text=What+is+Web+Development?" alt="What is Web Development? - Eng. Karim Nour" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">What is Web Development? - Intro Video</h3>
-                                    <p class="text-gray-400 mb-4">A short educational video with Eng. Karim Nour introducing the concept of web development and why it's one of the most competitive and fast-evolving fields in tech today.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Intro Video</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Educational Content</span>
-                                    </div>
-                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D8%A7%D9%84%D9%80-web-development-%D9%85%D8%AC%D8%A7%D9%84-%D8%AA%D9%86%D8%A7%D9%81%D8%B3%D9%8A-%D9%88%D9%85%D8%AA%D8%AC%D8%AF%D8%AF-%D8%AF%D8%A7%D9%8A%D9%85%D8%A7-%D9%84%D9%88-%D9%85%D8%B4-%D8%B9%D8%A7%D8%B1%D9%81-%D9%8A%D8%B9%D9%86%D9%8A-%D8%A7%D9%8A%D9%87-web-development/663874645855218/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="video-editing">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-purple-600 to-fuchsia-700 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/A855F7/080d1a?text=Front+vs+Back+End" alt="Front-End vs Back-End" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Front-End vs Back-End - Career Track Video</h3>
-                                    <p class="text-gray-400 mb-4">A focused video edit explaining the key differences between front-end and back-end development. Helps beginners choose the right track in web development, featuring Eng. Karim Nour.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Career Guidance</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Explainer Video</span>
-                                    </div>
-                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D9%87%D8%AA%D8%AA%D8%AE%D8%B5%D8%B5-web-development-%D8%A8%D8%B3-%D9%84%D8%B3%D8%A7-%D9%85%D8%B4-%D8%B9%D8%A7%D8%B1%D9%81-%D8%A7%D9%84%D9%81%D8%B1%D9%82-%D8%A8%D9%8A%D9%86-front-end-%D9%88-%D8%A7%D9%84%D9%80-back-end-%D8%B4%D9%88%D9%81-%D8%A7%D9%84%D9%81/871668597802346/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="video-editing">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-rose-600 to-red-700 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/F43F5E/080d1a?text=Dragons+Battle+Promo" alt="Dragons Battle Registration Video" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Dragons Battle - Final Registration Call</h3>
-                                    <p class="text-gray-400 mb-4">Created a fast-paced promotional video to boost last-minute registration for the Dragons Battle competition. Video designed for urgency, clarity, and call-to-action impact.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Event Promo</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Urgency Marketing</span>
-                                    </div>
-                                    <a href="https://web.facebook.com/dragonsbootcampllc/videos/%D8%A7%D9%84%D8%AA%D9%8A%D9%85%D8%A7%D8%AA-%D9%82%D8%B1%D8%A8%D8%AA-%D8%AA%D9%83%D8%AA%D9%85%D9%84-%D9%88%D9%86%D9%82%D9%81%D9%84-%D8%A3%D8%A8%D9%88%D8%A7%D8%A8-%D8%A7%D9%84%D8%A5%D8%B4%D8%AA%D8%B1%D8%A7%D9%83-%D8%B9%D8%B4%D8%A7%D9%86-%D8%A7%D9%84%D9%80-dragons-battle-%D8%AA%D8%A8%D8%AF%D8%A3-%D9%84%D8%B3%D8%A7-%D9%85%D8%B9%D8%A7%D9%83-%D9%81%D8%B1/191771537308645/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="video-editing">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-sky-600 to-indigo-700 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/0EA5E9/080d1a?text=Delta+Bootcamp+Recap" alt="Delta Bootcamp Sumo Video" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Delta Bootcamp – Sumo Competition Recap</h3>
-                                    <p class="text-gray-400 mb-4">Co-edited a highlight video summarizing our journey through Delta University’s Sumo Bootcamp. As an instructor and video editor, I had the honor of guiding and showcasing the work of brilliant engineering teams.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Event Recap</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Co-Editing</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Mentorship</span>
-                                    </div>
-                                    <a href="https://www.linkedin.com/posts/ahmed-ibrahim-asl_deltabootcamp-sumocompetition-engineeringjourney-activity-7080749465703170048-4TFP?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD4fJ_4BeA3Apl3cbCvDodYP4VH2tcQOHPo" class="text-cyber font-medium hover:underline" target="_blank">Watch Video</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-emerald-600 to-emerald-500 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=AgriBot UI" alt="AgriBot_Mobile_App_UI" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">AgriBot Mobile App UI</h3>
-                                    <p class="text-gray-400 mb-4">UI design for the mobile app of my university graduation project, Agribot.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">figma</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Agriculture</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Robotics</span>
-                                    </div>
-                                    <a href="#" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-sky-600 to-cyan-500 relative overflow-hidden">
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Firewire UI" alt="Firewire UI" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Firewire UI</h3>
-                                    <p class="text-gray-400 mb-4">Created eye-catching graphics for various social media marketing campaigns.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Graduation Project</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">figma</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">OTA</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AgriBot</span>
-                                    </div>
-                                    <a href="#" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-rose-600 to-pink-500 relative overflow-hidden">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                    </div>
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Dad4Hire UI" alt="Dad4Hire Mobile App UI" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Dad4Hire Mobile App UI</h3>
-                                    <p class="text-gray-400 mb-4">This was my UI/UX graduation project for Google DSC at EELU.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Mobile App</span>
-                                    </div>
-                                    <a href="https://www.behance.net/gallery/199626593/Dad4Hire" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-lime-600 to-green-500 relative overflow-hidden">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                    </div>
-                                    <img src="https://placehold.co/400x256/05D9E8/080d1a?text=TechTalk Series" alt="E-book Cover Design" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Tech talk series</h3>
-                                    <p class="text-gray-400 mb-4">Design for series tech series published in Dead code page.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">IT</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Canva</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">PhotoShop</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Educational-content</span>
-                                    </div>
-                                    <a href="https://www.behance.net/gallery/199630873/Template-tech-talk-series" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-violet-600 to-purple-500 relative overflow-hidden">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                    </div>
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=TensorFlow" alt="Dad4Hire Mobile App UI" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Introduction to TensorFlow</h3>
-                                    <p class="text-gray-400 mb-4">This is a design for educational post about TensorFlow.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Educational-content</span>
-                                    </div>
-                                    <a href="https://www.behance.net/gallery/199630337/TensorFlow-Quick-Introduction" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-amber-300 to-orange-500 relative overflow-hidden">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                    </div>
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Promo design" alt="Promo design" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Fund Your Grad Project Design</h3>
-                                    <p class="text-gray-400 mb-4">College Ad Session Promo | Eng. Abdelrahman Ibrahim</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Promotional Design</span>
-                                    </div>
-                                    <a href="https://web.facebook.com/Engineering.DeltaUniv/posts/%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%AD-%D9%84%D8%A7-%D9%8A%D8%A3%D8%AA%D9%8A-%D8%A8%D8%B3%D9%87%D9%88%D9%84%D8%A9-%D9%81%D9%87%D9%88-%D9%86%D8%AA%D8%A7%D8%AC-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D8%AC%D8%A7%D8%AF-%D9%88%D8%A7%D9%84%D9%85%D8%AB%D8%A7%D8%A8%D8%B1%D8%A9-%D8%B9%D9%86%D8%AF-%D8%A7%D9%82%D8%AA%D8%B1%D8%A7%D8%A8-%D9%86%D9%87%D8%A7%D9%8A%D8%A9-%D9%85%D8%B3%D9%8A%D8%B1%D8%AA%D9%83-%D8%A7%D9%84%D8%AC/122191064198208146/?_rdc=1&_rdr" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-teal-600 to-emerald-500 relative overflow-hidden">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                    </div>
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Training+Employment" alt="Delta University 4th Engineering Expo" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Delta 4th Eng. & Employment</h3>
-                                    <p class="text-gray-400 mb-4">This my attempt of enhancing the designs my university used in event.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Promotional Design</span>
-                                    </div>
-                                    <a href="https://www.behance.net/gallery/230070085/Delta-University-4th-Engineering-Expo" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-purple-300 to-indigo-500 relative overflow-hidden">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                    </div>
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Delta JobFair" alt="Delta University 4th Engineering Expo" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Delta Job fair 2024</h3>
-                                    <p class="text-gray-400 mb-4">This my attempt of enhancing the designs my university used in event.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Promotional Design</span>
-                                    </div>
-                                    <a href="https://www.behance.net/gallery/230072417/Delta-Job-Fair-2024" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-fuchsia-300 to-pink-500 relative overflow-hidden">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                    </div>
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Eid al-Fitr" alt="Delta University 4th Engineering Expo" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Greetings design</h3>
-                                    <p class="text-gray-400 mb-4">A digital illustration created for Eid al-Fitr.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Figma</span>
-                                    </div>
-                                    <a href="https://www.behance.net/gallery/230074039/Eid-Saeed-Astronaut-Greeting" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-slate-300 to-gray-500 relative overflow-hidden">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                    </div>
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=PartnerShips" alt="PartnerShips" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">PartnerShip Designs of Dead Code</h3>
-                                    <p class="text-gray-400 mb-4">Partnerships designs for my team Dead Code.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Canva</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Dead Code</span>
-                                    </div>
-                                    <a href="https://www.behance.net/gallery/230082703/PartnerShip-Designs-of-Dead-Code" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="graphic-design">
-                        <div class="project-inner">
-                            <div class="dark-card overflow-hidden h-full">
-                                <div class="h-64 bg-gradient-to-r from-slate-300 to-gray-500 relative overflow-hidden">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                    </div>
-                                    <img src="https://placehold.co/400x256/00FFFF/080d1a?text=Graduation+Book" alt="GraduationBook" class="w-full h-full object-cover absolute mix-blend-overlay">
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-2">Design for Graduation Book AgriBot</h3>
-                                    <p class="text-gray-400 mb-4">Design for my university graduation book.</p>
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UI/UX</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Canva</span>
-                                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">AgriBot</span>
-                                    </div>
-                                    <a href="#" class="text-cyber font-medium hover:underline">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    
-                </div>
-                
-                
-
-
-                <div class="text-center mt-12">
-                    <button id="view-all-btn" class="inline-block bg-transparent border-2 border-cyber text-cyber hover:bg-cyber hover:text-darkbg px-6 py-3 rounded-lg font-bold transition duration-300">
-                        View All Projects
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-20 bg-darkcard">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 section-title font-orbitron">
-                    <span class="text-cyber">GET IN</span> <span class="accent-text">TOUCH</span>
-                </h2>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <div>
-                        <p class="text-xl mb-8 text-center lg:text-left">
-                            Have a project in mind? Let's collaborate and bring your ideas to life!
-                        </p>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-center justify-center lg:justify-start">
-                                <div class="text-cyber text-2xl mr-4">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Email</h4>
-                                    <p class="text-gray-400">aassal950@gmail.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center justify-center lg:justify-start">
-                                <div class="text-cyber text-2xl mr-4">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Phone</h4>
-                                    <p class="text-gray-400">+201068163322</p>
-                                
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center justify-center lg:justify-start">
-                                <div class="text-cyber text-2xl mr-4">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg">Location</h4>
-                                    <p class="text-gray-400">Egypt, Al Mahala Al Kobra</p>
-                                    <p class="text-gray-400">Egypt, Alexanderia</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-10 text-center lg:text-left">
-                            <h4 class="font-bold text-xl mb-4">Follow Me</h4>
-                            <div class="flex space-x-6 justify-center lg:justify-start">
-                                <a href="https://github.com/ahmed-ibrahim-asl" class="text-2xl text-gray-400 hover:text-cyber transition">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/ahmed-ibrahim-asl/" class="text-2xl text-gray-400 hover:text-cyber transition">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://www.youtube.com/@ahmedassal8710" class="text-2xl text-gray-400 hover:text-cyber transition">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="https://tryhackme.com/p/MRH0N3Y" class="text-2xl text-gray-400 hover:text-cyber transition">
-                                    <i class="fas fa-user-secret"></i> </a>
-                                <a href="https://www.behance.net/ahmedassal3" class="text-2xl text-gray-400 hover:text-cyber transition">
-                                    <i class="fab fa-behance"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div class="dark-card p-8 rounded-xl">
-                            <form>
-                                <div class="mb-6">
-                                    <label for="name" class="block text-gray-300 font-medium mb-2">Name</label>
-                                    <input type="text" id="name" class="w-full px-4 py-3 bg-darkbg border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyber text-white" placeholder="Your name">
-                                </div>
-                                
-                                <div class="mb-6">
-                                    <label for="email" class="block text-gray-300 font-medium mb-2">Email</label>
-                                    <input type="email" id="email" class="w-full px-4 py-3 bg-darkbg border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyber text-white" placeholder="Your email">
-                                </div>
-                                
-                                <div class="mb-6">
-                                    <label for="project-details" class="block text-gray-300 font-medium mb-2">Project Details</label>
-                                    <textarea id="project-details" rows="5" class="w-full px-4 py-3 bg-darkbg border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyber text-white" placeholder="Tell me about your project"></textarea>
-                                </div>
-                                
-                                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white py-4 rounded-lg font-bold transition duration-300">
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="py-12 border-t border-gray-800">
+    <!-- Technologies Mastered -->
+    <div class="border-y border-darkcardborder bg-darkcard/30 backdrop-blur-sm py-8 overflow-hidden">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-                <div class="mb-6 md:mb-0">
-                    <div class="text-2xl font-bold mb-2">
-                        <span class="cyber-text text-cyber">AHMED ASL</span>
+            <p class="text-center text-sm font-semibold tracking-widest text-textmuted uppercase mb-6">Technologies Mastered</p>
+            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 opacity-80 transition-all duration-500">
+                <span class="tag bg-darkcard px-4 py-2 text-sm border-accent/50 text-white flex items-center gap-2"><i class="fa-solid fa-network-wired text-accent"></i> IoT</span>
+                <span class="tag bg-darkcard px-4 py-2 text-sm flex items-center gap-2"><i class="fa-solid fa-mobile-screen text-teal-400"></i> Flutter</span>
+                <span class="tag bg-darkcard px-4 py-2 text-sm border-accent/50 text-white flex items-center gap-2"><i class="fa-solid fa-microchip text-accent"></i> ESP32 & ESP8266</span>
+                <span class="tag bg-darkcard px-4 py-2 text-sm flex items-center gap-2"><i class="fa-solid fa-code text-blue-400"></i> C / C++</span>
+                <span class="tag bg-darkcard px-4 py-2 text-sm flex items-center gap-2"><i class="fa-solid fa-layer-group text-green-500"></i> KiCad</span>
+                <span class="tag bg-darkcard px-4 py-2 text-sm border-accent/50 text-white flex items-center gap-2"><i class="fa-brands fa-python text-yellow-400"></i> Python</span>
+                <span class="tag bg-darkcard px-4 py-2 text-sm flex items-center gap-2"><i class="fa-brands fa-html5 text-orange-500"></i> HTML & CSS</span>
+                <span class="tag bg-darkcard px-4 py-2 text-sm flex items-center gap-2"><i class="fa-solid fa-microchip text-teal-500"></i> Arduino</span>
+                <span class="tag bg-darkcard px-4 py-2 text-sm flex items-center gap-2"><i class="fa-solid fa-pen-nib text-purple-400"></i> Square Line Studio</span>
+                <span class="tag bg-darkcard px-4 py-2 text-sm border-accent/50 text-white flex items-center gap-2"><i class="fa-solid fa-terminal text-orange-400"></i> PlatformIO</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Consulting Pillars (Services) -->
+    <section id="services" class="py-24 px-6 relative">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Core Expertise</h2>
+                <p class="section-subtitle">A multidisciplinary approach encompassing hardware logic, user experience, and media production.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="premium-card p-8 group">
+                    <div class="w-14 h-14 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder mb-6 group-hover:border-accent group-hover:text-accent group-hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-300 text-textmuted">
+                        <i class="fa-solid fa-cloud-arrow-up text-2xl"></i>
                     </div>
-                    <p class="text-sm text-gray-500">Embedded Systems & IoT Engineering Services</p>
+                    <h3 class="text-2xl font-bold mb-4">IoT System Architecture</h3>
+                    <p class="text-textmuted leading-relaxed">
+                        End-to-end design of scalable sensor networks and secure cloud data pipelines using ESP32, Python, and PlatformIO.
+                    </p>
+                </div>
+
+                <div class="premium-card p-8 group">
+                    <div class="w-14 h-14 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder mb-6 group-hover:border-accent group-hover:text-accent group-hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-300 text-textmuted">
+                        <i class="fa-solid fa-microchip text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Custom Embedded Firmware</h3>
+                    <p class="text-textmuted leading-relaxed">
+                        High-performance C/C++ firmware optimized for extreme power efficiency, designed for hardware ranging from Arduino to industrial MCUs.
+                    </p>
+                </div>
+
+                <div class="premium-card p-8 group">
+                    <div class="w-14 h-14 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder mb-6 group-hover:border-accent group-hover:text-accent group-hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-300 text-textmuted">
+                        <i class="fa-solid fa-layer-group text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Hardware & PCB Design</h3>
+                    <p class="text-textmuted leading-relaxed">
+                        Robust schematic capture and strict routing logic using KiCad, ensuring low noise and manufacturing readiness.
+                    </p>
+                </div>
+
+                <div class="premium-card p-8 group">
+                    <div class="w-14 h-14 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder mb-6 group-hover:border-accent group-hover:text-accent group-hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-300 text-textmuted">
+                        <i class="fa-solid fa-mobile-screen-button text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Cross-Platform Development</h3>
+                    <p class="text-textmuted leading-relaxed">
+                        Seamless cross-platform mobile solutions built with Flutter to act user-interfaces for your connected proprietary hardware.
+                    </p>
                 </div>
                 
-                <div class="flex flex-col items-center md:items-end">
-                    <div class="flex space-x-6 mb-4">
-                        <a href="https://github.com/ahmed-ibrahim-asl" class="text-2xl text-gray-400 hover:text-cyber transition">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/ahmed-ibrahim-asl/" class="text-2xl text-gray-400 hover:text-cyber transition">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@ahmedassal8710" class="text-2xl text-gray-400 hover:text-cyber transition">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://tryhackme.com/p/MRH0N3Y" class="text-2xl text-gray-400 hover:text-cyber transition">
-                            <i class="fas fa-user-secret"></i> </a>
-                        <a href="https://www.behance.net/ahmedassal3" class="text-2xl text-gray-400 hover:text-cyber transition">
-                            <i class="fab fa-behance"></i> </a>
+                <div class="premium-card p-8 group">
+                    <div class="w-14 h-14 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder mb-6 group-hover:border-accent group-hover:text-accent group-hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-300 text-textmuted">
+                        <i class="fa-solid fa-pen-nib text-2xl"></i>
                     </div>
-                    <p class="text-sm text-gray-500">© 2025 Ahmed Asl. All rights reserved.</p>
+                    <h3 class="text-2xl font-bold mb-4">UI/UX & Graphic Design</h3>
+                    <p class="text-textmuted leading-relaxed">
+                        Designing intuitive interfaces and engaging promotional graphics, bridging the gap between technical complexity and user accessibility.
+                    </p>
+                </div>
+                
+                <div class="premium-card p-8 group">
+                    <div class="w-14 h-14 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder mb-6 group-hover:border-accent group-hover:text-accent group-hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-300 text-textmuted">
+                        <i class="fa-solid fa-film text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Video Editing</h3>
+                    <p class="text-textmuted leading-relaxed">
+                        Translating tech concepts into digestable, high-quality promotional, educational, and event-recap videos.
+                    </p>
+                </div>
+
+                <div class="premium-card p-8 group">
+                    <div class="w-14 h-14 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder mb-6 group-hover:border-accent group-hover:text-accent group-hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] transition-all duration-300 text-textmuted">
+                        <i class="fa-solid fa-shield-virus text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Security & Pentesting</h3>
+                    <p class="text-textmuted leading-relaxed">
+                        Actively discovering network and physical vulnerabilities to harden deployed hardware and software interfaces against breach attempts.
+                    </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Online Tutorials Section -->
+    <section id="tutorials" class="py-24 px-6 border-t border-darkcardborder bg-darkbg">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Technical Tutorials & Workshops</h2>
+                <p class="section-subtitle">Sharing knowledge is the ultimate proof of expertise. View my educational content.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tutorial 1 -->
+                <div class="premium-card overflow-hidden flex flex-col h-full group">
+                    <div class="h-48 relative overflow-hidden bg-darkcard border-b border-white/10">
+                        <img src="images/Ros Requirements_thubnail.jpg" alt="ROS Requirements Tutorial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/111827/FAFAFA?text=ROS+Tutorial'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2">ROS Requirements Crash Course</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow">Bite-sized crash courses that stack the skills you need to hit the ground running with Robot Operating System (ROS).</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">Python</span>
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">Linux</span>
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">ROS</span>
+                        </div>
+                        <a href="https://www.youtube.com/playlist?list=PLMSkmiBu0cz6m-LOsum_j4yto_h9PMG70" class="text-accent text-sm font-semibold hover:text-white transition-colors" target="_blank">Watch Playlist &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 2 -->
+                <div class="premium-card overflow-hidden flex flex-col h-full group">
+                    <div class="h-48 relative overflow-hidden bg-darkcard border-b border-white/10">
+                        <img src="images/intro_embeddedSystem.jpg" alt="Intro to Embedded Systems" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/111827/FAFAFA?text=Embedded+Systems'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Intro to Embedded Systems World</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow">Essential tips and tricks for efficient and error-free embedded software architecture and IoT design.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">Arduino</span>
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">AVR</span>
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">IoT</span>
+                        </div>
+                        <a href="https://web.facebook.com/watch/live/?ref=watch_permalink&v=1456207331975013" class="text-accent text-sm font-semibold hover:text-white transition-colors" target="_blank">Watch Session &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 3 -->
+                <div class="premium-card overflow-hidden flex flex-col h-full group">
+                    <div class="h-48 relative overflow-hidden bg-darkcard border-b border-white/10">
+                        <img src="images/embedded system worksop level1.jpg" alt="Embedded Workshop Level 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/111827/FAFAFA?text=Embedded+Workshop'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Embedded System Workshop L1</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow">A friendly, detailed workshop taking students through the fundamentals of embedded hardware, logic, and C/C++.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">C/C++</span>
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">Digital Logic</span>
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">Architecture</span>
+                        </div>
+                        <a href="https://youtube.com/playlist?list=PLzFyd8nPA2MyZav2MILCrSjpu92iy4PC4&si=twUFB8WvJpBhWeN2" class="text-accent text-sm font-semibold hover:text-white transition-colors" target="_blank">Watch Workshop &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 4 -->
+                <div class="premium-card overflow-hidden flex flex-col h-full group">
+                    <div class="h-48 relative overflow-hidden bg-darkcard border-b border-white/10">
+                        <img src="https://img.youtube.com/vi/B80aGV47fhw/maxresdefault.jpg" alt="Digital and Logic Laboratory" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/111827/FAFAFA?text=Digital+Logic'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Digital and Logic Laboratory</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow">Comprehensive lab sessions covering fundamental digital electronics, logic gates, and circuit implementation.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">Electronics</span>
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">Digital Logic</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=B80aGV47fhw&list=PLYt83m8l2mixN3QzpHG2rQrzKVBPwN4i4" class="text-accent text-sm font-semibold hover:text-white transition-colors" target="_blank">Watch Playlist &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tutorial 5 -->
+                <div class="premium-card overflow-hidden flex flex-col h-full group">
+                    <div class="h-48 relative overflow-hidden bg-darkcard border-b border-white/10">
+                        <img src="https://img.youtube.com/vi/hD-5lLwu4TM/maxresdefault.jpg" alt="Matlab Basics" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/111827/FAFAFA?text=Matlab'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold mb-2">Matlab Basics</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow">Essential Matlab programming for engineering computations, data visualization, and algorithm development.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">Matlab</span>
+                            <span class="text-xs bg-darkbg px-2 py-1 rounded text-white/70">Engineering</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=hD-5lLwu4TM&list=PLYt83m8l2mixe_1k4BWNVCg0HXdYx6BPw" class="text-accent text-sm font-semibold hover:text-white transition-colors" target="_blank">Watch Playlist &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Portfolio -->
+    <section id="projects" class="py-24 px-6 border-t border-darkcardborder">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="section-title">Portfolio & Case Studies</h2>
+                <p class="section-subtitle">Filter through my comprehensive history of cross-disciplinary projects.</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-3 mb-16">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="engineering">Engineering & IoT</button>
+                <button class="filter-btn" data-filter="design">UI/UX & Design</button>
+                <button class="filter-btn" data-filter="video">Video Editing</button>
+            </div>
+            
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- ENGINEERING -->
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="images/agribot_image.jpg" alt="AgriBot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy" onerror="this.src='https://placehold.co/600x400/111827/FAFAFA?text=AgriBot'">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">Jetson Nano</span><span class="tag">AI/ML</span><span class="tag">IoT</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">AgriBot Architecture</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">Agricultural robot executing crop selection, fertilizer recommendations, and remote IoT management via my custom OTA platform, Firewire.</p>
+                    </div>
+                </div>
+
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="images/ROV.jpeg" alt="ESP32 ROV" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy" onerror="this.src='https://placehold.co/600x400/111827/FAFAFA?text=ESP32+ROV'">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">ROV Control</span><span class="tag">ESP32</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Wireless ROV Control System</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">ESP32-based infrastructure using NRF24L01+ modules for real-time bidirectional telemetry and control of an ROV.</p>
+                    </div>
+                </div>
+
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="images/Lock_system (2).png" alt="Door Lock" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy" onerror="this.src='https://placehold.co/600x400/111827/FAFAFA?text=Door+Lock'">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">AVR32</span><span class="tag">Security</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Multi-MCU Security Lock</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">Implemented a high-security access system isolating logic across HMI and an Electronic Control Unit to prevent tampering.</p>
+                    </div>
+                </div>
+
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="images/Mega-Sumo.jpg" alt="MegaSumo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy" onerror="this.src='https://placehold.co/600x400/111827/FAFAFA?text=Mega+Sumo'">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">Arduino UNO</span><span class="tag">Robotics</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">MegaSumo Autonomous Robot</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">Engineered firmware and sensor-logic for a high-impact Autonomous vehicle utilizing rapid PID control loops. Secured 2nd place nationwide.</p>
+                    </div>
+                </div>
+
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard flex items-center justify-center border-b border-white/5 bg-gradient-to-br from-darkcard to-darkbg">
+                        <span class="text-white font-bold opacity-30 text-2xl tracking-widest uppercase">Firewire OTA</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">OTA Firmware</span><span class="tag">IoT Protocols</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Firewire Enterprise OTA</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">A massively scalable platform for remote Over-The-Air updates for edge IoT devices utilizing proprietary deployment protocols on Raspberry Pi.</p>
+                    </div>
+                </div>
+
+                <!-- Plant Care AI -->
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active reveal" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="https://placehold.co/600x400/111827/FAFAFA?text=Plant+Care+AI" alt="Plant Care AI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">Flutter</span><span class="tag">AI Vision</span><span class="tag">Sensors</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Plant Care AI</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">A smart monitoring system analyzing soil humidity and temperature in real-time. Incorporates an AI-powered camera for leaf disease detection, connected to a robust Flutter mobile application for scalable health tracking.</p>
+                    </div>
+                </div>
+
+                <!-- Mega Sumo Robot -->
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active reveal" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="https://placehold.co/600x400/111827/FAFAFA?text=Mega+Sumo+Robot" alt="Mega Sumo Robot" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">Robotics</span><span class="tag">High-Torque Motors</span><span class="tag">Control Logic</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mega Sumo Robot (Nafisa)</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">A fleet of autonomous Mega Sumo Cars engineered for high-intensity robotics competitions requiring robust mechanical design and advanced sensor integration. Secured 2nd place in Egypt's adult division.</p>
+                    </div>
+                </div>
+
+                <!-- Rocket League ESP32 Car -->
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active reveal" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="https://placehold.co/600x400/111827/FAFAFA?text=Rocket+League+ESP32" alt="Rocket League ESP32" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">ESP32</span><span class="tag">Wireless Comm</span><span class="tag">Bluetooth</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Rocket League - ESP32 Car</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">A custom-built, ultra-low latency wireless vehicle modeled after "Rocket League", powered by an ESP32 microcontroller and directly controlled via a synced PS4 controller over Bluetooth.</p>
+                    </div>
+                </div>
+
+                <!-- Human Follower Car -->
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active reveal" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="https://placehold.co/600x400/111827/FAFAFA?text=Human+Follower" alt="Human Follower" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">Arduino/ESP32</span><span class="tag">Vision Sensing</span><span class="tag">Motor Drivers</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Human Follower Car</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">An autonomous robotic vehicle programmed to actively identify and tail humans, relying on a fusion of ultrasonic and vision sensing to dynamically track movements in real-time.</p>
+                    </div>
+                </div>
+
+                <!-- Auto-Nav Car -->
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active reveal" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="https://placehold.co/600x400/111827/FAFAFA?text=Autonomous+Navigation" alt="Autonomous Navigation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">Microcontrollers</span><span class="tag">Ultrasonic</span><span class="tag">IR Sensors</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Autonomous Navigation Car</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">A robotic car project focused entirely on deterministic autonomous navigation and dynamic obstacle avoidance mapping within controlled, enclosed environments.</p>
+                    </div>
+                </div>
+
+                <!-- Fire Wire -->
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active reveal" data-category="engineering">
+                    <div class="h-56 relative bg-darkcard">
+                        <img src="https://placehold.co/600x400/111827/FAFAFA?text=Fire+Wire+OTA" alt="Fire Wire OTA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" loading="lazy">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">OTA Deployment</span><span class="tag">Web Dashboard</span><span class="tag">IoT Management</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Fire Wire (Hardware Management)</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">A comprehensive web-based platform and IoT dashboard engineered for remote hardware management. Features seamless firmware OTA versioning, device assignment, and real-time health telemetry.</p>
+                    </div>
+                </div>
+
+                <!-- UI/UX & GRAPHIC DESIGN -->
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active reveal" data-category="design">
+                    <div class="h-56 relative bg-emerald-900 overflow-hidden">
+                        <img src="https://placehold.co/600x400/064e3b/10b981?text=AgriBot+UI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" alt="AgriBot Mobile App UI">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">UI/UX</span><span class="tag">Figma</span><span class="tag">Mobile App</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">AgriBot Mobile App UI</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">A clean, functional user interface design for the AgriBot graduation project, allowing seamless remote hardware control.</p>
+                    </div>
+                </div>
+
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active" data-category="design">
+                    <div class="h-56 relative bg-rose-900 overflow-hidden">
+                        <img src="https://placehold.co/600x400/881337/fb7185?text=Dad4Hire+UI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" alt="Dad4Hire Mobile App UI">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">UI/UX</span><span class="tag">Figma</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Dad4Hire Mobile App UI</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">Comprehensive UI/UX design project developed for Google DSC at EELU, focusing on accessibility and task flow.</p>
+                    </div>
+                </div>
+
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active" data-category="design">
+                    <div class="h-56 relative bg-indigo-900 overflow-hidden">
+                        <img src="https://placehold.co/600x400/312e81/818cf8?text=Delta+Events" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" alt="Event Promo Designs">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">Graphic Design</span><span class="tag">Branding</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Delta University Promos</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">High-conversion promotional graphics designed for Delta University Job Fairs and 4th Engineering Expo.</p>
+                    </div>
+                </div>
+
+                <!-- VIDEO EDITING -->
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active" data-category="video">
+                    <div class="h-56 relative bg-sky-900 overflow-hidden">
+                        <img src="https://placehold.co/600x400/0c4a6e/38bdf8?text=Web+Dev+Video" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" alt="Web Dev Session Video">
+                        <div class="absolute inset-0 flex items-center justify-center"><i class="fa-solid fa-circle-play text-4xl text-white/50"></i></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">Video Editing</span><span class="tag">Social Media</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Web Development Tech Series</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">Dynamic editing, color grading, and motion graphics for Eng. Karim Nour's Web Development educational series.</p>
+                    </div>
+                </div>
+
+                <div class="premium-card overflow-hidden flex-col h-full group project-item active" data-category="video">
+                    <div class="h-56 relative bg-orange-900 overflow-hidden">
+                        <img src="https://placehold.co/600x400/7c2d12/fb923c?text=Dragons+Battle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" alt="Promo Video">
+                        <div class="absolute inset-0 flex items-center justify-center"><i class="fa-solid fa-circle-play text-4xl text-white/50"></i></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="tag">Promo Video</span><span class="tag">Event Marketing</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Dragons Battle Final Call</h3>
+                        <p class="text-textmuted text-sm mb-4 flex-grow leading-relaxed">Fast-paced promotional video utilizing rapid cuts and urgent typographic overlays to boost last-minute competition registration.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View More Button -->
+            <div id="view-more-container" class="mt-16 w-full flex justify-center">
+                <button id="view-more-projects" class="border border-white/20 text-white hover:bg-white/5 hover:border-accent hover:text-accent px-8 py-3 rounded text-sm font-semibold tracking-widest uppercase flex items-center gap-3 transition-all duration-300 group">
+                    Load More Projects <i class="fa-solid fa-chevron-down group-hover:translate-y-1 transition-transform"></i>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Academic Publications -->
+    <section id="publications" class="py-24 px-6 border-t border-darkcardborder bg-darkbg">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Academic Publications</h2>
+                <p class="section-subtitle">Advancing the field of embedded robotics through peer-reviewed research.</p>
+            </div>
+            
+            <a href="https://scholar.google.com.eg/citations?view_op=view_citation&hl=en&user=o72gFwkAAAAJ&citation_for_view=o72gFwkAAAAJ:u5HHmVD_uO8C" target="_blank" class="premium-card p-8 group block hover:-translate-y-2 transition-transform duration-300">
+                <div class="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                    <div class="w-16 h-16 rounded-2xl bg-darkcard flex-shrink-0 flex items-center justify-center border border-white/10 text-accent text-2xl group-hover:border-accent/50 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-2">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">Google Scholar</span>
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Research</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-accent transition-colors">Design and Implementation of Smart Agriculture Robot</h3>
+                        <p class="text-textmuted">A comprehensive study detailing the architecture and edge-AI mechanisms driving autonomous crop selection and disease diagnosis.</p>
+                    </div>
+                    <div class="hidden md:flex flex-shrink-0 text-3xl text-white/10 group-hover:text-accent transition-colors">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 border-t border-darkcardborder bg-darkcard/30 relative">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="section-title">About The Architect</h2>
+            </div>
+            
+            <div class="premium-card p-8 md:p-12">
+                <h3 class="text-2xl font-bold mb-6 text-white text-center sm:text-left">Multi-Disciplinary Technical Excellence</h3>
+                <div class="space-y-6 text-lg text-textmuted font-light leading-relaxed">
+                    <p>
+                        I am a versatile, security-conscious engineer bridging the critical gap between raw hardware capabilities and intuitive software interfaces. My background is defined by an aggressive breadth of cross-domain knowledge—combining low-level C++ firmware development, PCB Design (KiCad), Cybersecurity (Penetration Testing), and cross-platform UI engineering (Flutter).
+                    </p>
+                    <p>
+                        I thrive in uncharted technical territory. Whether that involves routing dense PCB copper traces, actively discovering network vulnerabilities as a pentester, or designing the UI/UX flows that communicate the technical value of a product to end-users, my focus is on rapid adaptation and solving complex bottlenecks aggressively.
+                    </p>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="mt-10 flex flex-wrap gap-6 justify-center sm:justify-start items-center">
+                    <a href="https://github.com/ahmed-ibrahim-asl" class="text-2xl text-textmuted hover:text-white transition-colors" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ahmed-ibrahim-asl/" class="text-2xl text-textmuted hover:text-blue-500 transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://tryhackme.com/p/MRH0N3Y" class="text-2xl text-textmuted hover:text-red-500 transition-colors" title="TryHackMe"><i class="fa-solid fa-user-shield"></i></a>
+                    <a href="https://www.behance.net/ahmedassal3" class="text-2xl text-textmuted hover:text-blue-400 transition-colors" title="Behance"><i class="fa-brands fa-behance"></i></a>
+                    <a href="https://www.youtube.com/@ahmedassal8710" class="text-2xl text-textmuted hover:text-red-500 transition-colors" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 border-y border-darkcardborder relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+        
+        <div class="container mx-auto max-w-5xl relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Build Something Brilliant</h2>
+                <p class="text-xl text-textmuted max-w-2xl mx-auto font-light">
+                    Reach out for IoT consulting, embedded architecture, Flutter development, or complete digital rebranding.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+                <!-- Contact Info -->
+                <div class="flex flex-col justify-center gap-8 bg-darkcard/40 p-8 md:p-10 rounded-[2rem] border border-darkcardborder shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]">
+                    
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder text-accent text-lg shadow-[0_0_15px_rgba(250,204,21,0.15)]">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-textmuted mb-1">Email</p>
+                            <a href="mailto:aassal950@gmail.com" class="text-base font-medium text-white hover:text-accent transition-colors">aassal950@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder text-accent text-lg shadow-[0_0_15px_rgba(250,204,21,0.15)]">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-textmuted mb-1">Phone / WhatsApp</p>
+                            <a href="tel:+201068163322" class="text-base font-medium text-white hover:text-accent transition-colors">+20 106 816 3322</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 rounded-full bg-darkbg flex items-center justify-center border border-darkcardborder text-accent text-lg shadow-[0_0_15px_rgba(250,204,21,0.15)]">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-textmuted mb-1">Locations</p>
+                            <p class="text-base font-medium text-white">Egypt (Al Mahala Al Kobra / Alexandria)</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-6 border-t border-white/10">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-textmuted mb-4">Connect on Platforms</p>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/ahmed-ibrahim-asl" class="w-10 h-10 rounded-full bg-darkbg border border-white/10 flex items-center justify-center text-textmuted hover:text-white hover:border-white hover:bg-white/5 transition-all"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/ahmed-ibrahim-asl/" class="w-10 h-10 rounded-full bg-darkbg border border-white/10 flex items-center justify-center text-textmuted hover:text-blue-500 hover:border-blue-500 hover:bg-blue-500/10 transition-all"><i class="fa-brands fa-linkedin hover:text-blue-500"></i></a>
+                            <a href="https://tryhackme.com/p/MRH0N3Y" class="w-10 h-10 rounded-full bg-darkbg border border-white/10 flex items-center justify-center text-textmuted hover:text-red-500 hover:border-red-500 hover:bg-red-500/10 transition-all"><i class="fa-solid fa-user-shield"></i></a>
+                            <a href="https://www.behance.net/ahmedassal3" class="w-10 h-10 rounded-full bg-darkbg border border-white/10 flex items-center justify-center text-textmuted hover:text-blue-400 hover:border-blue-400 hover:bg-blue-400/10 transition-all"><i class="fa-brands fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="premium-card p-8">
+                    <form action="https://formsubmit.co/aassal950@gmail.com" method="POST" class="flex flex-col gap-6 h-full justify-between">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Portfolio Inquiry!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="box">
+
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-textmuted mb-2">Name / Organization</label>
+                            <input type="text" name="name" id="name" required class="w-full bg-darkbg border border-darkcardborder rounded-full px-6 py-4 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)]" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-textmuted mb-2">Work Email</label>
+                            <input type="email" name="email" id="email" required class="w-full bg-darkbg border border-darkcardborder rounded-full px-6 py-4 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)]" placeholder="your@email.com">
+                        </div>
+                        <div class="flex-grow">
+                            <label for="details" class="block text-sm font-medium text-textmuted mb-2">Project Scope</label>
+                            <textarea name="details" id="details" required rows="5" class="w-full h-32 bg-darkbg border border-darkcardborder rounded-[1.5rem] px-6 py-4 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)]" placeholder="Tell me about what we are building..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full shadow-[0_0_20px_rgba(250,204,21,0.2)] mt-auto">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-darkbg text-center">
+        <div class="container mx-auto px-6 flex flex-col items-center gap-4">
+            <div class="text-xl font-bold tracking-tight text-white flex items-center gap-2 mb-2">
+                AHMED ASL
+            </div>
+            <p class="text-sm text-textmuted whitespace-nowrap">Embedded Systems. Security. Design.</p>
+            <p class="text-xs text-textmuted/50 mt-4">&copy; 2024 Ahmed Asl. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-        // Typing animation for the hero section
-        const phrases = [
-            "Embedded Systems Engineer",
-            "IoT Solutions Developer",
-            "PCB Design Specialist",
-            "Technical Instructor"
-        ];
-        
-        let currentPhrase = 0;
-        let currentChar = 0;
-        let isDeleting = false;
-        let typingSpeed = 100;
-        
-        function typeWriter() {
-            const element = document.getElementById('typing-text');
-            const fullPhrase = phrases[currentPhrase];
-            
-            if (isDeleting) {
-                element.textContent = fullPhrase.substring(0, currentChar - 1);
-                currentChar--;
-                typingSpeed = 50; // Faster deletion
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let menuOpen = false;
+
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('menu-hidden');
+                mobileMenu.classList.add('menu-visible');
+                menuToggle.innerHTML = '<i class="fas fa-times text-2xl"></i>';
             } else {
-                element.textContent = fullPhrase.substring(0, currentChar + 1);
-                currentChar++;
-                typingSpeed = 100; // Normal typing speed
+                mobileMenu.classList.remove('menu-visible');
+                mobileMenu.classList.add('menu-hidden');
+                menuToggle.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
             }
-            
-            if (!isDeleting && currentChar === fullPhrase.length) {
-                typingSpeed = 1500; // Pause at end of phrase
-                isDeleting = true;
-            } else if (isDeleting && currentChar === 0) {
-                isDeleting = false;
-                currentPhrase = (currentPhrase + 1) % phrases.length; // Cycle through phrases
-                typingSpeed = 500; // Pause before typing next phrase
-            }
-            
-            setTimeout(typeWriter, typingSpeed);
         }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (menuOpen) toggleMenu();
+            });
+        });
+
+        // Project Filtering & View More logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+        const viewMoreBtn = document.getElementById('view-more-projects');
+        const viewMoreContainer = document.getElementById('view-more-container');
         
-        // Function to create background particles
-        function createParticles() {
-            const container = document.getElementById('particles');
-            const particleCount = 50; // Number of particles
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random size for variety
-                const size = Math.random() * 5 + 1;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                
-                // Random position within the viewport
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.top = `${Math.random() * 100}%`;
-                
-                // Random animation duration and delay for staggered effect
-                particle.style.animation = `float ${Math.random() * 10 + 5}s ease-in-out infinite`;
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-                
-                container.appendChild(particle);
-            }
-        }
-        
-        // Function to create background circuit lines
-        function createCircuitLines() {
-            const container = document.getElementById('circuit-lines');
-            const lineCount = 15; // Number of circuit lines
-            
-            for (let i = 0; i < lineCount; i++) {
-                const line = document.createElement('div');
-                line.classList.add('circuit-line');
-                
-                // Random position, width, height, and rotation for diverse lines
-                const top = Math.random() * 100;
-                const left = Math.random() * 100;
-                const width = Math.random() * 200 + 50;
-                const height = Math.random() * 4 + 1;
-                const rotate = Math.random() * 180;
-                
-                line.style.top = `${top}%`;
-                line.style.left = `${left}%`;
-                line.style.width = `${width}px`;
-                line.style.height = `${height}px`;
-                line.style.transform = `rotate(${rotate}deg)`;
-                
-                container.appendChild(line);
-            }
-        }
+        let currentLimit = 6; // Show 6 items initially
+        let currentFilter = 'all';
 
-        // --- Dynamic Profile Picture Logic ---
-        const profilePictures = [
-            "images/profilePicture/profile2.jpg",
-            // Add more image paths as needed
-        ];
-
-        let lastProfilePictureIndex = -1; // To ensure a different image on refresh if possible
-
-        function updateProfilePicture() {
-            const profileImg = document.getElementById('profile-picture');
-            if (profileImg) {
-                let randomIndex;
-                do {
-                    randomIndex = Math.floor(Math.random() * profilePictures.length);
-                } while (randomIndex === lastProfilePictureIndex && profilePictures.length > 1); // Ensure different image if more than one
-                
-                profileImg.src = profilePictures[randomIndex];
-                lastProfilePictureIndex = randomIndex;
-            }
-        }
-
-        // Call on page load/refresh
-        updateProfilePicture();
-
-        // Update every hour (3600000 milliseconds = 1 hour)
-        setInterval(updateProfilePicture, 3600000); 
-        // For testing, you can set a shorter interval, e.g., 5000 for 5 seconds:
-        // setInterval(updateProfilePicture, 5000);
-
-
-        // Tutorial Filtering and "View All" functionality
-        const tutorialCards = document.querySelectorAll('#tutorials .tutorial-card');
-        const viewAllTutorialsBtn = document.getElementById('view-all-tutorials-btn');
-        const tutorialsPerLoad = 3; 
-        let showingAllTutorials = false;
-
-        // Filters and displays tutorials based on the `tutorialsPerLoad` count
-        function filterTutorials() {
-            showingAllTutorials = false;
-            viewAllTutorialsBtn.textContent = 'View All Tutorials';
-            viewAllTutorialsBtn.classList.remove('hidden'); // Ensure button is visible initially
-
+        function updateProjectVisibility() {
             let visibleCount = 0;
-            tutorialCards.forEach(card => {
-                if (visibleCount < tutorialsPerLoad) {
-                    card.style.display = 'flex'; // Use flex for visibility
+            let totalMatching = 0;
+
+            projectItems.forEach(item => {
+                const matchesFilter = currentFilter === 'all' || item.getAttribute('data-category') === currentFilter;
+                
+                if (matchesFilter) {
+                    totalMatching++;
+                    if (visibleCount < currentLimit) {
+                        item.classList.add('active');
+                        item.style.display = 'flex'; // Maintain our premium flex column
+                    } else {
+                        item.classList.remove('active');
+                        item.style.display = 'none'; // Mathematically hide from grid
+                    }
                     visibleCount++;
                 } else {
-                    card.style.display = 'none'; // Hide excess cards
+                    item.classList.remove('active');
+                    item.style.display = 'none';
                 }
             });
 
-            // Hide "View All" button if there are fewer tutorials than the display limit
-            if (tutorialCards.length <= tutorialsPerLoad) {
-                viewAllTutorialsBtn.classList.add('hidden');
+            // Toggle "Load More" button visibility
+            if (viewMoreContainer) {
+                if (totalMatching > currentLimit) {
+                    viewMoreContainer.style.display = 'flex';
+                } else {
+                    viewMoreContainer.style.display = 'none';
+                }
             }
         }
 
-        // Toggles between showing all tutorials and showing only the initial set
-        function toggleViewAllTutorials() {
-            showingAllTutorials = !showingAllTutorials;
-            viewAllTutorialsBtn.textContent = showingAllTutorials ? 'Show Less' : 'View All Tutorials';
-
-            let visibleCount = 0;
-            tutorialCards.forEach(card => {
-                if (showingAllTutorials) {
-                    card.style.display = 'flex'; // Show all tutorials
-                } else {
-                    if (visibleCount < tutorialsPerLoad) {
-                        card.style.display = 'flex'; // Show only the initial set
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none'; // Hide excess cards
-                    }
-                }
-            });
-        }
-        viewAllTutorialsBtn.addEventListener('click', toggleViewAllTutorials);
-
-        // Project Filtering and "View All" functionality
-        const projectsGrid = document.getElementById('projects-grid');
-        const projectCards = document.querySelectorAll('.project-card');
-        const categoryButtons = document.querySelectorAll('.category-btn');
-        const viewAllBtn = document.getElementById('view-all-btn');
-        const projectsPerLoad = 3; 
-        let currentCategory = 'all';
-        let showingAllProjects = false;
-
-        // Filters and displays projects based on category and `projectsPerLoad` count
-        function filterProjects(category) {
-            currentCategory = category;
-            showingAllProjects = false; // Reset when category changes
-            viewAllBtn.textContent = 'View All Projects';
-            viewAllBtn.classList.remove('hidden'); // Ensure button is visible initially
-
-            let visibleCount = 0;
-            projectCards.forEach(card => {
-                const cardCategory = card.dataset.category;
-                if (category === 'all' || cardCategory === category) {
-                    if (visibleCount < projectsPerLoad) {
-                        card.classList.add('active'); // Show active cards
-                        visibleCount++;
-                    } else {
-                        card.classList.remove('active'); // Hide excess cards
-                    }
-                } else {
-                    card.classList.remove('active'); // Hide cards not in the current category
-                }
-            });
-
-            // If all projects in the category are less than or equal to projectsPerLoad, hide the "View All" button
-            const totalInCategory = Array.from(projectCards).filter(card => 
-                category === 'all' || card.dataset.category === category
-            ).length;
-
-            if (totalInCategory <= projectsPerLoad) {
-                viewAllBtn.classList.add('hidden');
-            }
-        }
-
-        // Toggles between showing all projects and showing only the initial set for the current category
-        function toggleViewAllProjects() {
-            showingAllProjects = !showingAllProjects;
-            viewAllBtn.textContent = showingAllProjects ? 'Show Less' : 'View All Projects';
-
-            let visibleCount = 0;
-            projectCards.forEach(card => {
-                const cardCategory = card.dataset.category;
-                if (currentCategory === 'all' || cardCategory === currentCategory) {
-                    if (showingAllProjects) {
-                        card.classList.add('active'); // Show all projects in the category
-                    } else {
-                        if (visibleCount < projectsPerLoad) {
-                            card.classList.add('active'); // Show only the initial set
-                            visibleCount++;
-                        } else {
-                            card.classList.remove('active'); // Hide excess cards
-                        }
-                    }
-                }
-            });
-        }
-
-        // Event listeners for category buttons
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Update active button styling
-                categoryButtons.forEach(btn => {
-                    btn.classList.remove('bg-cyber', 'text-darkbg');
-                    btn.classList.add('bg-gray-700', 'text-white');
-                });
-                button.classList.add('bg-cyber', 'text-darkbg');
-                button.classList.remove('bg-gray-700', 'text-white');
-                filterProjects(button.dataset.category); // Filter projects based on selected category
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Style Active Button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Reset limit and update filter
+                currentFilter = btn.getAttribute('data-filter');
+                currentLimit = 6; 
+                updateProjectVisibility();
             });
         });
 
-        // Event listener for "View All Projects" button
-        viewAllBtn.addEventListener('click', toggleViewAllProjects);
+        if(viewMoreBtn) {
+            viewMoreBtn.addEventListener('click', () => {
+                currentLimit += 6; // Load 6 more items at a time
+                updateProjectVisibility();
+            });
+        }
         
-        // Mobile menu functionality
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        // Initial load
+        updateProjectVisibility();
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuOverlay.classList.add('active');
+        // Scroll Reveal Animation Observer
+        const fadeElements = document.querySelectorAll('.premium-card, .section-title, .tag, .hero-reveal');
+        
+        fadeElements.forEach(el => {
+            el.classList.add('reveal');
         });
 
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenuOverlay.classList.remove('active');
-        });
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
 
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuOverlay.classList.remove('active'); // Close menu on link click
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                // Trigger reveal immediately for hero targets, or wait for intersections for the rest
+                if (!entry.isIntersecting) return;
+                
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
             });
+        }, revealOptions);
+
+        fadeElements.forEach(el => {
+            revealOnScroll.observe(el);
         });
 
-        // Initialize animations and sections on load
-        document.addEventListener('DOMContentLoaded', () => {
-            typeWriter(); // Start typing animation
-            createParticles(); // Create background particles
-            createCircuitLines(); // Create background circuit lines
-            filterProjects('all'); // Display initial projects (all category)
-            filterTutorials(); // Display initial tutorials
-
-            // Add scroll event listener for animations (e.g., parallax effects)
-            window.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY;
-                document.documentElement.style.setProperty('--scroll', scrollPosition * 0.5 + 'px');
+        // Trigger the hero elements immediately on load if they are already in view
+        setTimeout(() => {
+            document.querySelectorAll('.hero-reveal').forEach(el => {
+                el.classList.add('active');
             });
-            
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault(); // Prevent default anchor click behavior
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return; // Ignore empty href
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth' // Smooth scroll to target section
-                        });
-                    }
-                });
-            });
-        });
+        }, 100);
     </script>
 </body>
 </html>
