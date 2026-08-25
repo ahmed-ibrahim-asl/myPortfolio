@@ -50,7 +50,7 @@ export default function BatteryEstimatorPage() {
       title="ESP32 Battery Life & Power Estimator"
       description="Estimate idealized battery life from repeating operating phases."
     >
-      <div className="tool-controls">
+      <div className="tool-controls battery-estimator">
         <h3 className="mono" style={{ fontSize: "0.8rem", color: "var(--pixel-gold)" }}>DEVICE PARAMETERS</h3>
         
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>

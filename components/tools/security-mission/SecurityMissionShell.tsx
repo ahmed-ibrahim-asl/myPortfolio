@@ -121,17 +121,17 @@ export function SecurityMissionShell() {
 
   return (
     <section
-      className={styles.root}
+      className={`${styles.root} asl-security-mission-shell`}
       data-security-mission
       data-ready={hydrated ? "true" : "false"}
       data-learning-level={state.project.learningLevel}
       style={{
-        "--security-panel": "#0c1023",
-        "--security-panel-raised": "#121831",
-        "--security-cyan": "#55d5d8",
-        "--security-green": "#8edb7a",
-        "--security-gold": "#f0c66c",
-        "--security-red": "#f49aab",
+        "--security-panel": "#12161C",
+        "--security-panel-raised": "#1C2129",
+        "--security-cyan": "#D9A441",
+        "--security-green": "#5FA37A",
+        "--security-gold": "#D9A441",
+        "--security-red": "#C4553D",
       } as React.CSSProperties}
     >
       <div className={styles.shell}>

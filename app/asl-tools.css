@@ -216,6 +216,130 @@
   content: "ASL / ACTIVE INSTRUMENT";
 }
 
+/* Advanced instruments keep their interaction engines and share one visual grammar. */
+.asl-model-mission-shell,
+.asl-security-mission-shell {
+  color: var(--asl-text) !important;
+  background: var(--asl-page) !important;
+  border-color: var(--asl-line) !important;
+  font-family: var(--asl-font) !important;
+}
+
+.asl-model-mission-shell > div,
+.asl-security-mission-shell > div {
+  width: min(calc(100% - 48px), var(--asl-shell));
+  padding-inline: 0;
+}
+
+.asl-model-mission-shell > div > header,
+.asl-security-mission-shell > div > header {
+  position: relative;
+  background: var(--asl-surface) !important;
+  border: 1px solid var(--asl-line) !important;
+  border-left: 3px solid var(--asl-gold) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.asl-model-mission-shell > div > header::after,
+.asl-security-mission-shell > div > header::after {
+  position: absolute;
+  right: 24px;
+  bottom: -8px;
+  color: var(--asl-gold-a12);
+  font-family: var(--asl-mark-ar);
+  font-size: clamp(5rem, 11vw, 10rem);
+  line-height: 1;
+  content: "عسل";
+  pointer-events: none;
+}
+
+.asl-model-mission-shell :is(button, input, select, textarea),
+.asl-security-mission-shell :is(button, input, select, textarea) {
+  min-height: 44px;
+  border-radius: var(--asl-radius-control) !important;
+}
+
+.asl-model-mission-shell :is(input, select, textarea),
+.asl-security-mission-shell :is(input, select, textarea) {
+  color: var(--asl-text) !important;
+  background: var(--asl-page) !important;
+  border-color: var(--asl-line) !important;
+  font-size: 16px !important;
+}
+
+.asl-model-mission-shell [data-mission-config-panel],
+.asl-model-mission-shell [data-workspace-panel="code"],
+.asl-security-mission-shell [data-mission-config-panel],
+.asl-security-mission-shell [data-workspace-panel="code"] {
+  background: var(--asl-surface) !important;
+  border-color: var(--asl-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.asl-model-mission-shell [data-active="true"],
+.asl-security-mission-shell [aria-pressed="true"],
+.asl-security-mission-shell [aria-selected="true"] {
+  color: #14100A !important;
+  background: var(--asl-gold) !important;
+}
+
+.embedded-workbench {
+  border-top: 1px solid var(--asl-line);
+}
+
+.embedded-family-tabs {
+  gap: 1px;
+  padding: 1px;
+  background: var(--asl-line);
+}
+
+.embedded-family-tab,
+.embedded-example-card,
+.embedded-controls,
+.embedded-output {
+  background: var(--asl-surface) !important;
+  border-color: var(--asl-line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.embedded-family-tab.is-active,
+.embedded-example-card.is-active {
+  color: var(--asl-text) !important;
+  background: var(--asl-gold-a12) !important;
+  border-color: var(--asl-gold) !important;
+}
+
+.pid-simulator,
+.battery-estimator {
+  background: var(--asl-surface) !important;
+  border: 1px solid var(--asl-line) !important;
+  border-top: 3px solid var(--asl-gold) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.pid-simulator + *,
+.battery-estimator + * {
+  min-width: 0;
+}
+
+.pid-simulator .tool-result-card,
+.battery-estimator .tool-result-card,
+.asl-workbench-shell .tool-results .tool-result-card {
+  background: var(--asl-raised) !important;
+  border-color: var(--asl-line) !important;
+  border-radius: var(--asl-radius-panel) !important;
+  box-shadow: none !important;
+}
+
+.asl-workbench-shell .pid-svg {
+  background: var(--asl-page) !important;
+  border-color: var(--asl-line) !important;
+}
+
 .tool-page,
 .calculator-panel,
 .tool-result-card,

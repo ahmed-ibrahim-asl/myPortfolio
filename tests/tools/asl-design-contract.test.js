@@ -69,3 +69,17 @@ test("tools use task groups and the shared ASL workbench shell", () => {
   assert.match(calculatorShell, /asl-calculator-shell/);
   assert.match(toolShell, /asl-workbench-shell/);
 });
+
+test("advanced workbenches expose ASL instrument modes", () => {
+  const sources = {
+    "components/tools/model-mission/ModelMissionShell.tsx": "asl-model-mission-shell",
+    "components/tools/security-mission/SecurityMissionShell.tsx": "asl-security-mission-shell",
+    "app/tools/sensor-code-generator/page.tsx": "embedded-workbench",
+    "app/tools/pid-simulator/page.tsx": "pid-simulator",
+    "app/tools/battery-estimator/page.tsx": "battery-estimator"
+  };
+
+  for (const [file, marker] of Object.entries(sources)) {
+    assert.match(read(file), new RegExp(marker), `${file} is missing ${marker}`);
+  }
+});

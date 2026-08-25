@@ -141,7 +141,7 @@ export default function PidSimulatorPage() {
       title="Interactive PID Simulator"
       description="Five short lessons on proportional, integral, and derivative control, ending with a free-tuning sandbox."
     >
-      <div className="tool-controls">
+      <div className="tool-controls pid-simulator">
         <h3 className="mono" style={{ fontSize: "0.8rem", color: "var(--pixel-gold)", margin: "0 0 8px" }}>LESSON</h3>
         <div
           role="tablist"

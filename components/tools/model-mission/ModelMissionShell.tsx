@@ -126,16 +126,16 @@ export function ModelMissionShell() {
 
   return (
     <section
-      className={styles.root}
+      className={`${styles.root} asl-model-mission-shell`}
       data-model-mission
       data-learning-level={state.project.learningLevel}
       style={{
-        "--panel": "#0c1023",
-        "--panel-raised": "#121831",
-        "--pixel-cyan": "#55d5d8",
-        "--pixel-green": "#8edb7a",
-        "--pixel-gold": "#f0c66c",
-        "--pixel-shadow": "#02030a",
+        "--panel": "#12161C",
+        "--panel-raised": "#1C2129",
+        "--pixel-cyan": "#D9A441",
+        "--pixel-green": "#5FA37A",
+        "--pixel-gold": "#D9A441",
+        "--pixel-shadow": "#080A0D",
       } as React.CSSProperties}
     >
       <div className={styles.shell}>
