@@ -3,6 +3,8 @@ import React from "react";
 import "./globals.css";
 import "./game-theme.css";
 import "./series-theme.css";
+import "./asl-theme.css";
+import "./asl-tools.css";
 import { JsonLd } from "@/components/JsonLd";
 import { MotionSystem } from "@/components/MotionSystem";
 import { SiteFooter } from "@/components/SiteFooter";

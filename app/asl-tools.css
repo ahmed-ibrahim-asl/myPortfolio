@@ -1,0 +1,18 @@
+/* Shared ASL workbench mappings are extended route by route. */
+.tool-page,
+.calculator-panel,
+.tool-result-card,
+.tool-section {
+  border-radius: var(--asl-radius-panel);
+}
+
+.calculator-field input,
+.calculator-field select,
+.tool-input input,
+.tool-input select,
+.tool-input textarea {
+  min-height: 44px;
+  border-color: var(--asl-line);
+  border-radius: var(--asl-radius-control);
+  font-size: 16px;
+}

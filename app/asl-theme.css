@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,300..800&family=Aref+Ruqaa:wght@400;700&family=Sora:wght@600;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  color-scheme: dark;
+  --asl-page: #0B0D11;
+  --asl-surface: #12161C;
+  --asl-raised: #1C2129;
+  --asl-sunken: #080A0D;
+  --asl-text: #E6E8EB;
+  --asl-text-secondary: #A7AEB8;
+  --asl-muted: #78828F;
+  --asl-line: #303640;
+  --asl-line-faint: rgba(230, 232, 235, 0.08);
+  --asl-gold: #D9A441;
+  --asl-gold-soft: #E8C777;
+  --asl-gold-a12: rgba(217, 164, 65, 0.12);
+  --asl-gold-a24: rgba(217, 164, 65, 0.24);
+  --asl-ok: #5FA37A;
+  --asl-alert: #C4553D;
+  --asl-info: #6E8BA8;
+  --asl-font: "Archivo", "Segoe UI", Arial, sans-serif;
+  --asl-mono: "Space Mono", "Cascadia Code", Consolas, monospace;
+  --asl-mark-ar: "Aref Ruqaa", Georgia, serif;
+  --asl-mark-latin: "Sora", "Archivo", sans-serif;
+  --asl-shell: 1240px;
+  --asl-reading: 74ch;
+  --asl-radius-control: 2px;
+  --asl-radius-panel: 4px;
+  --asl-header: 72px;
+
+  /* Compatibility aliases for the existing component tree. */
+  --paper: var(--asl-page);
+  --paper-deep: var(--asl-surface);
+  --ink: var(--asl-text);
+  --ink-soft: var(--asl-text-secondary);
+  --muted: var(--asl-muted);
+  --line: var(--asl-line);
+  --signal: var(--asl-gold);
+  --signal-dark: var(--asl-gold);
+  --night: var(--asl-page);
+  --night-soft: var(--asl-surface);
+  --night-line: var(--asl-line);
+  --night-text: var(--asl-text);
+  --white: var(--asl-raised);
+  --shell: var(--asl-shell);
+  --reading: var(--asl-reading);
+  --radius: var(--asl-radius-panel);
+  --header-height: var(--asl-header);
+  --font-ui: var(--asl-font);
+  --font-editorial: var(--asl-font);
+  --font-mono: var(--asl-mono);
+}
+
+html {
+  background: var(--asl-page);
+  color-scheme: dark;
+}
+
+body {
+  min-width: 320px;
+  color: var(--asl-text);
+  background:
+    linear-gradient(90deg, transparent calc(50% - 0.5px), var(--asl-line-faint) 50%, transparent calc(50% + 0.5px)),
+    var(--asl-page);
+  font-family: var(--asl-font);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+body::before {
+  display: none;
+}
+
+::selection {
+  color: #14100A;
+  background: var(--asl-gold);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--asl-text);
+  font-family: var(--asl-font);
+  font-variation-settings: "wdth" 92;
+  letter-spacing: -0.035em;
+}
+
+p {
+  color: var(--asl-text-secondary);
+}
+
+.shell {
+  width: min(calc(100% - 48px), var(--asl-shell));
+}
+
+.mono,
+.eyebrow {
+  font-family: var(--asl-mono);
+  letter-spacing: 0.12em;
+}
+
+.eyebrow {
+  color: var(--asl-gold);
+}
+
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 1px solid var(--asl-gold-soft);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 2px var(--asl-page);
+}
+
+button,
+.button,
+.site-nav a,
+.menu-toggle {
+  min-height: 44px;
+}
+
+.button {
+  min-width: 44px;
+  border-radius: var(--asl-radius-control);
+  transition: color 180ms ease-out, background-color 180ms ease-out, border-color 180ms ease-out;
+}
+
+.button.primary {
+  color: #14100A;
+  background: var(--asl-gold);
+  border-color: var(--asl-gold);
+  box-shadow: none;
+}
+
+.button.primary:hover {
+  color: #14100A;
+  background: var(--asl-gold-soft);
+  border-color: var(--asl-gold-soft);
+  transform: none;
+}
+
+.asl-logo {
+  display: inline-flex;
+  align-items: center;
+  color: var(--asl-gold);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.asl-logo--white {
+  color: var(--asl-text);
+}
+
+.asl-logo--latin {
+  font-family: var(--asl-mark-latin);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.asl-logo--arabic,
+.asl-logo--glyph {
+  font-family: var(--asl-mark-ar);
+  font-weight: 700;
+  direction: rtl;
+}
+
+.asl-logo--paired {
+  gap: 12px;
+  font-family: var(--asl-mark-latin);
+  font-weight: 700;
+}
+
+.asl-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(44px, 0.35fr) repeat(2, minmax(0, 1fr)) 28px repeat(2, minmax(0, 1fr)) minmax(44px, 0.35fr);
+  width: min(calc(100% - 48px), var(--asl-shell));
+  margin-inline: auto;
+  padding-block: clamp(72px, 9vw, 128px);
+}
+
+.asl-section-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--asl-line-faint);
+}
+
+.asl-section-rail span {
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 7px;
+  height: 7px;
+  background: var(--asl-gold);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.asl-section-label {
+  grid-column: 1 / 3;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  align-self: start;
+  color: var(--asl-muted);
+  font: 700 0.72rem/1 var(--asl-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.asl-section-label span:first-child {
+  color: var(--asl-gold);
+}
+
+.asl-section-content {
+  grid-column: 2 / 7;
+}
+
+@media (max-width: 899px) {
+  body {
+    background: var(--asl-page);
+  }
+
+  .asl-section {
+    display: block;
+    width: min(calc(100% - 40px), var(--asl-shell));
+    padding-block: 72px;
+    padding-left: 24px;
+  }
+
+  .asl-section-rail {
+    top: 68px;
+    bottom: auto;
+    left: 0;
+    height: 32px;
+  }
+
+  .asl-section-label {
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 639px) {
+  .shell,
+  .asl-section {
+    width: min(calc(100% - 40px), var(--asl-shell));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
