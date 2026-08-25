@@ -3,14 +3,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SystemHud } from "@/components/SystemHud";
+import { AslLogo } from "@/components/brand/AslLogo";
 
 const links = [
-  { href: "/work", label: "01 / Work" },
-  { href: "/about", label: "02 / About" },
-  { href: "/writing", label: "03 / Writing" },
-  { href: "/tools", label: "04 / Tools" },
-  { href: "/contact", label: "05 / Contact" }
+  { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
+  { href: "/writing", label: "Writing" },
+  { href: "/tools", label: "Tools" }
 ];
 
 export function SiteHeader() {
@@ -26,11 +25,19 @@ export function SiteHeader() {
           onClick={() => setOpen(false)}
           aria-label="Ahmed Asl portfolio home"
         >
-          <span className="brand-mark" aria-hidden="true">A1</span>
-          <span>AHMED ASL // EMBEDDED SYSTEMS</span>
+          <img
+            className="brand-mark"
+            src="/brand/hex-badge-gold.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <span className="brand-lockup">
+            <AslLogo form="latin" />
+            <span className="brand-name">Ahmed Ibrahim Asl</span>
+          </span>
         </Link>
 
-        <SystemHud />
+        <AslLogo form="arabic" className="header-arabic-signature" decorative />
 
         <button
           className="menu-toggle"
@@ -59,6 +66,14 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/contact"
+            className={`header-contact ${pathname.startsWith("/contact") ? "active" : ""}`}
+            aria-current={pathname.startsWith("/contact") ? "page" : undefined}
+            onClick={() => setOpen(false)}
+          >
+            Contact
+          </Link>
         </nav>
       </div>
     </header>

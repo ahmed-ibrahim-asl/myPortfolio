@@ -216,6 +216,171 @@ button,
   grid-column: 2 / 7;
 }
 
+/* Global shell */
+.site-header {
+  height: var(--asl-header);
+  background: rgba(11, 13, 17, 0.9);
+  border-bottom: 1px solid var(--asl-line);
+  backdrop-filter: blur(14px);
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+}
+
+.brand {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 44px;
+}
+
+.brand .brand-mark {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.brand-lockup {
+  display: grid;
+  gap: 3px;
+}
+
+.brand-lockup .asl-logo {
+  font-size: 1rem;
+}
+
+.brand-name {
+  color: var(--asl-muted);
+  font: 600 0.64rem/1 var(--asl-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.header-arabic-signature {
+  justify-self: center;
+  color: var(--asl-gold);
+  font-size: 2rem;
+  opacity: 0.75;
+}
+
+.site-nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-self: end;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 13px;
+  color: var(--asl-text-secondary);
+  font: 700 0.7rem/1 var(--asl-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: color 180ms ease-out, border-color 180ms ease-out, background-color 180ms ease-out;
+}
+
+.site-nav a::after {
+  display: none;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--asl-text);
+  background: var(--asl-gold-a12);
+  border-color: var(--asl-gold-a24);
+}
+
+.site-nav .header-contact {
+  margin-left: 8px;
+  color: #14100A;
+  background: var(--asl-gold);
+  border-color: var(--asl-gold);
+}
+
+.site-nav .header-contact:hover,
+.site-nav .header-contact.active {
+  color: #14100A;
+  background: var(--asl-gold-soft);
+  border-color: var(--asl-gold-soft);
+}
+
+.menu-toggle {
+  min-width: 44px;
+  color: var(--asl-text);
+}
+
+.site-footer {
+  color: var(--asl-text);
+  background: var(--asl-sunken);
+  border-top: 1px solid var(--asl-line);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+  gap: clamp(48px, 8vw, 120px);
+  padding-block: clamp(72px, 9vw, 116px);
+}
+
+.footer-identity {
+  display: grid;
+  gap: 24px;
+}
+
+.footer-identity .asl-logo {
+  width: max-content;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+}
+
+.footer-identity h2 {
+  max-width: 16ch;
+  margin: 0;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  line-height: 1;
+}
+
+.footer-identity p {
+  max-width: 54ch;
+  margin: 0;
+}
+
+.footer-contact {
+  align-content: start;
+}
+
+.footer-bottom {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  color: var(--asl-muted);
+  font: 700 0.68rem/1.4 var(--asl-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--asl-line-faint);
+}
+
+.footer-bottom nav {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-bottom a:hover {
+  color: var(--asl-gold);
+}
+
 @media (max-width: 899px) {
   body {
     background: var(--asl-page);
@@ -238,12 +403,71 @@ button,
   .asl-section-label {
     margin-bottom: 28px;
   }
+
+  .header-arabic-signature {
+    display: none;
+  }
+
+  .header-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    justify-self: end;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: var(--asl-header);
+    right: 20px;
+    left: 20px;
+    display: none;
+    gap: 4px;
+    padding: 12px;
+    background: var(--asl-surface);
+    border: 1px solid var(--asl-line);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  }
+
+  .site-nav.is-open {
+    display: grid;
+  }
+
+  .site-nav a {
+    justify-content: space-between;
+    padding-inline: 16px;
+  }
+
+  .site-nav .header-contact {
+    margin: 4px 0 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 639px) {
   .shell,
   .asl-section {
     width: min(calc(100% - 40px), var(--asl-shell));
+  }
+
+  .brand-name {
+    display: none;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 20px;
+  }
+
+  .footer-bottom nav {
+    flex-wrap: wrap;
+    gap: 14px 20px;
   }
 }
 

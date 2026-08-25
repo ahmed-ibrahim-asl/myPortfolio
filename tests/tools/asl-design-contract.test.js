@@ -18,3 +18,13 @@ test("ASL tokens, fonts, and responsive safeguards are loaded globally", () => {
   assert.match(theme, /prefers-reduced-motion:\s*reduce/);
   assert.match(theme, /min-(?:width|height):\s*44px/);
 });
+
+test("the global shell uses ASL identity without HUD navigation", () => {
+  const header = read("components/SiteHeader.tsx");
+  const footer = read("components/SiteFooter.tsx");
+
+  assert.match(header, /AslLogo/);
+  assert.doesNotMatch(header, /SystemHud/);
+  assert.match(header, /header-contact/);
+  assert.match(footer, /form="paired"/);
+});
