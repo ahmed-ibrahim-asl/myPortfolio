@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { ProjectCard } from "@/components/ProjectCard";
-import { PostCard } from "@/components/PostCard";
-import { SectionHeading } from "@/components/SectionHeading";
-import { ProfilePortrait } from "@/components/ProfilePortrait";
+import { AslLogo } from "@/components/brand/AslLogo";
+import { AslSection } from "@/components/brand/AslSection";
 import { FreeToolsHook } from "@/components/FreeToolsHook";
+import { PostCard } from "@/components/PostCard";
+import { ProfilePortrait } from "@/components/ProfilePortrait";
+import { ProjectCard } from "@/components/ProjectCard";
+import { SectionHeading } from "@/components/SectionHeading";
 import {
   education,
   experience,
@@ -12,11 +14,32 @@ import {
   projects,
   publication,
   technologyGroups,
-  toolkitHeading,
-  toolkitIntro,
   workingMethod
 } from "@/data/portfolio";
 import { getAllPosts } from "@/lib/content";
+
+const toolEntries = [
+  {
+    label: "Calculate",
+    description: "Circuit values, timing, conversions, and engineering math.",
+    href: "/tools#calculators"
+  },
+  {
+    label: "Generate",
+    description: "Embedded starter code and complete machine-learning projects.",
+    href: "/tools/sensor-code-generator"
+  },
+  {
+    label: "Simulate",
+    description: "Tune a PID loop and inspect the response before hardware tests.",
+    href: "/tools/pid-simulator"
+  },
+  {
+    label: "Plan",
+    description: "Turn a model idea into a reproducible training project.",
+    href: "/tools/ai-script-generator"
+  }
+];
 
 export default function HomePage() {
   const posts = getAllPosts();
@@ -27,257 +50,177 @@ export default function HomePage() {
 
   return (
     <>
-      {/* 1. Hero: client outcome + primary project CTA */}
-      <section className="hero" data-mission="origin" data-mission-label="ORIGIN" data-mission-num="01">
-        <div className="shell hero-shell">
-          <div className="hero-grid">
-            <div className="hero-copy">
-              <div className="hero-kicker">
-                <span className="status-dot" aria-hidden="true" />
-                {profile.label}
-              </div>
-              <h1 className="identity-title">
-                <span className="identity-name">{profile.name}</span>
-                <span className="identity-role">{profile.role}</span>
-              </h1>
-              <p className="hero-lede">
-                {profile.headline}
-              </p>
-              <p className="hero-sub">
-                {profile.summary}
-              </p>
-              <FreeToolsHook />
-              <div className="hero-actions">
-                <Link className="button primary" href="/contact">
-                  Tell me about your project
-                </Link>
-                <Link className="button text-button" href="#method">
-                  See how I solve problems
-                </Link>
-              </div>
-            </div>
-            <ProfilePortrait context="home" />
+      <section className="asl-hero" aria-labelledby="home-title">
+        <AslLogo form="arabic" className="asl-watermark" decorative />
+        <div className="shell asl-hero-frame">
+          <div className="asl-hero-index mono" aria-hidden="true">
+            <span>01</span>
+            <span>Origin</span>
           </div>
-        </div>
-      </section>
 
-      {/* 2. Credibility row */}
-      <section className="section home-about-section" data-mission="credentials" data-mission-label="CREDENTIALS" data-mission-num="02">
-        <div className="shell home-about-grid">
-          <div className="home-about-copy">
-            <h2>From problem to working prototype, across the full system.</h2>
-            <p>
-              I trace a problem from sensor or board through transport, application state,
-              and the operator interface. Teaching shapes how I engineer: I document
-              assumptions, explain failure modes, and check whether someone else can
-              understand and use the result.
+          <div className="asl-hero-copy">
+            <p className="hero-kicker">
+              <span className="status-dot" aria-hidden="true" />
+              {profile.label}
             </p>
-            <Link className="text-link" href="/about">
-              Read my full background
-            </Link>
+            <h1 id="home-title">
+              <span className="asl-hero-name">{profile.name}</span>
+              <span className="asl-hero-role">{profile.role}</span>
+            </h1>
+            <p className="asl-hero-lede">{profile.headline}</p>
+            <p className="asl-hero-summary">{profile.summary}</p>
+            <div className="hero-actions">
+              <Link className="button primary" href="/contact">
+                Send a project brief
+              </Link>
+              <Link className="button text-button" href="/work">
+                Inspect selected work
+              </Link>
+            </div>
           </div>
-          <dl className="home-about-facts">
-            <div>
-              <dt>Current role</dt>
-              <dd>
-                {experience[0].role}
-                <span>{experience[0].organization}</span>
-              </dd>
-            </div>
-            {education[0] ? (
+
+          <div className="asl-hero-line" aria-hidden="true"><span /></div>
+
+          <aside className="asl-hero-evidence" aria-label="Profile and availability">
+            <ProfilePortrait context="home" />
+            <dl className="asl-profile-register">
               <div>
-                <dt>Study</dt>
-                <dd>{education[0].credential}</dd>
+                <dt>Based</dt>
+                <dd>{profile.location}</dd>
               </div>
-            ) : null}
-            <div>
-              <dt>Based in</dt>
-              <dd>{profile.location}</dd>
-            </div>
-            <div>
-              <dt>Core focus</dt>
-              <dd>Hardware prototypes, IoT products, robotics, and engineering education</dd>
-            </div>
-          </dl>
+              <div>
+                <dt>Current role</dt>
+                <dd>{experience[0].role}</dd>
+              </div>
+              <div>
+                <dt>Availability</dt>
+                <dd>{profile.availability}</dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </section>
 
-      {/* 3. Featured projects */}
-      <section className="section shell" data-mission="projects" data-mission-label="PROJECTS" data-mission-num="03">
+      <AslSection index="02" label="Capabilities" className="asl-capabilities">
+        <SectionHeading title="One system, traced across its boundaries." />
+        <p className="section-intro asl-section-lede">
+          I work wherever the fault or unanswered question lives: board, firmware,
+          network, model, or operator interface.
+        </p>
+        <div className="asl-capability-register">
+          {technologyGroups.map((group) => (
+            <article key={group.index}>
+              <span className="mono">{group.index}</span>
+              <h3>{group.title}</h3>
+              <p>{group.description}</p>
+              <p className="asl-capability-tools mono">{group.tools.slice(0, 4).join(" · ")}</p>
+            </article>
+          ))}
+        </div>
+      </AslSection>
+
+      <AslSection index="03" label="Selected work" className="asl-selected-work">
         <SectionHeading
-         
-          title="Projects built around a problem, a build, and a result."
-          action={
-            <Link className="text-link" href="/work">
-              View all projects
-            </Link>
-          }
+          title="Problems, builds, and measured results."
+          action={<Link className="text-link" href="/work">Open the full work log</Link>}
         />
-        <div className="project-grid">
+        <div className="project-grid asl-project-log">
           {featuredProjects.map((project, index) => (
             <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
-      </section>
+      </AslSection>
 
-      {/* Experience and results strip */}
-      <section className="section home-proof-section">
-        <div className="shell">
-          <SectionHeading
-           
-            title="Teaching, research, and competition work."
-          />
-          <div className="proof-strip">
-            <article className="proof-card">
-              <span className="proof-index mono">01</span>
-              <p className="proof-label">University teaching</p>
-              <h3>{experience[0].role}</h3>
-              <p>{experience[0].organization}</p>
-              <Link className="text-link" href="/about#experience">
-                View experience
-              </Link>
+      <AslSection index="04" label="Evidence" className="asl-evidence-section">
+        <SectionHeading title="Teaching, research, and competition evidence." />
+        <div className="asl-evidence-register">
+          <article>
+            <span className="mono">Teaching</span>
+            <h3>{experience[0].role}</h3>
+            <p>{experience[0].organization}</p>
+            <Link className="text-link" href="/about#experience">View experience</Link>
+          </article>
+          <article>
+            <span className="mono">Research</span>
+            <h3>{publication.title}</h3>
+            <p>{publication.description}</p>
+            <Link className="text-link" href="/about#publications">View publication</Link>
+          </article>
+          <article>
+            <span className="mono">Competition</span>
+            <h3>{competitionProject.title}</h3>
+            <p>{competitionProject.outcome}</p>
+            <Link className="text-link" href={`/work#${competitionProject.slug}`}>View project</Link>
+          </article>
+          {education[0] ? (
+            <article>
+              <span className="mono">Study</span>
+              <h3>{education[0].institution}</h3>
+              <p>{education[0].credential}</p>
+              <Link className="text-link" href="/about">Read my background</Link>
             </article>
-            <article className="proof-card">
-              <span className="proof-index mono">02</span>
-              <p className="proof-label">Research publication</p>
-              <h3>{publication.title}</h3>
-              <p>{publication.description}</p>
-              <Link className="text-link" href="/about#publications">
-                View publication record
-              </Link>
-            </article>
-            <article className="proof-card">
-              <span className="proof-index mono">03</span>
-              <p className="proof-label">Robotics competition</p>
-              <h3>{competitionProject.title}</h3>
-              <p>{competitionProject.outcome}</p>
-              <Link className="text-link" href={`/work#${competitionProject.slug}`}>
-                View project
-              </Link>
-            </article>
-          </div>
+          ) : null}
         </div>
-      </section>
+      </AslSection>
 
-      {/* 4. Working method */}
-      <section id="method" className="section section-ink home-method-section" data-mission="method" data-mission-label="METHOD" data-mission-num="04">
-        <div className="shell">
-          <SectionHeading
-           
-            title="Question, learn, build, test."
-          />
-          <div className="method-signal-path" aria-hidden="true">
-            <svg viewBox="0 0 1000 12" preserveAspectRatio="none" className="method-svg-path">
-              <line x1="0" y1="6" x2="1000" y2="6" className="method-path-track" />
-              <line x1="0" y1="6" x2="1000" y2="6" className="method-path-pulse" />
-            </svg>
-          </div>
-          <div className="method-grid">
-            {workingMethod.map((item) => (
-              <article key={item.step} className="method-step" data-step={item.step}>
-                <span className="method-step-index mono">{item.step}</span>
-                <h3>{item.label}</h3>
-                <p>{item.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Toolkit */}
-      <section className="section shell home-toolkit-section" data-mission="toolkit" data-mission-label="TOOLKIT" data-mission-num="05">
-        <SectionHeading
-         
-          title={toolkitHeading}
-          action={
-            <Link className="text-link" href="/about#skills">
-              View full toolkit
-            </Link>
-          }
-        />
-        <p className="section-intro toolkit-intro">{toolkitIntro}</p>
-        <div className="technology-matrix">
-          {technologyGroups.map((group) => (
-            <article className="technology-cluster" key={group.index} data-node={group.index}>
-              <div className="technology-cluster-top">
-                <span className="technology-cluster-index mono">{group.index}</span>
-                <span className="mono">SYSTEM CLASS</span>
-              </div>
-              <h3>{group.title}</h3>
-              <p>{group.description}</p>
-              <ul className="technology-tool-list" aria-label={`${group.title} tools`}>
-                {group.tools.map((tool, i) => (
-                  <li key={tool}>
-                    <span className="mono" aria-hidden="true">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <strong>{tool}</strong>
-                  </li>
-                ))}
-              </ul>
+      <AslSection index="05" label="Method" className="asl-method" id="method">
+        <SectionHeading title="Question, learn, build, test." />
+        <div className="asl-method-register">
+          {workingMethod.map((item) => (
+            <article key={item.step}>
+              <span className="mono">{item.step}</span>
+              <h3>{item.label}</h3>
+              <p>{item.description}</p>
             </article>
           ))}
         </div>
-      </section>
+      </AslSection>
 
-      {/* 6. Curiosity origin teaser */}
-      <section className="section home-origin-section" data-mission="story" data-mission-label="STORY" data-mission-num="06">
-        <div className="shell home-origin-grid">
-          <div className="home-origin-copy">
-            <h2>Titles tell you where someone works. Questions tell you how they think.</h2>
-            <p>
-              Mine started with an ATM. I wanted to know how it recognized an account,
-              checked whether money was available, and exchanged information with systems
-              somewhere else. That curiosity moved into Windows CMD, BIOS passwords, online
-              games, electronics, networks, and eventually the machines and connected
-              products I build today.
-            </p>
-            <Link className="text-link" href="/about">
-              Read the full story
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Writing and teaching */}
-      <section className="section shell" data-mission="writing" data-mission-label="WRITING" data-mission-num="07">
+      <AslSection index="06" label="Workbench" className="asl-tool-entry">
         <SectionHeading
-         
-          title="Linux, embedded systems, Flutter, and security walkthroughs."
-          action={
-            <Link className="text-link" href="/writing">
-              Browse all writing
+          title="Use the tools built from the work."
+          action={<Link className="text-link" href="/tools">Open all engineering tools</Link>}
+        />
+        <FreeToolsHook />
+        <div className="asl-tool-register">
+          {toolEntries.map((entry, index) => (
+            <Link href={entry.href} key={entry.label}>
+              <span className="mono">{String(index + 1).padStart(2, "0")}</span>
+              <h3>{entry.label}</h3>
+              <p>{entry.description}</p>
+              <span className="asl-register-action mono">Open workbench</span>
             </Link>
-          }
+          ))}
+        </div>
+      </AslSection>
+
+      <AslSection index="07" label="Field notes" className="asl-writing-preview">
+        <SectionHeading
+          title="Methods another engineer can reproduce."
+          action={<Link className="text-link" href="/writing">Browse all field notes</Link>}
         />
         <div className="post-list">
           {posts.slice(0, 3).map((post, index) => (
             <PostCard key={post.slug} post={post} index={index} />
           ))}
         </div>
-      </section>
+      </AslSection>
 
-      {/* 8. Structured project-brief CTA */}
-      <section className="section home-contact-section" data-mission="contact" data-mission-label="CONTACT" data-mission-num="08">
-        <div className="shell home-contact-grid">
+      <AslSection index="08" label="Contact" className="asl-home-contact">
+        <div className="asl-contact-callout">
           <div>
-            <h2>Bring me the problem, even if the solution is not clear yet.</h2>
+            <h2>Bring the problem, even if the fix is unclear.</h2>
             <p>
-              Tell me what you are trying to build or fix, what already exists, and where
-              you are stuck. I will tell you whether I can help and what the next useful
-              step should be.
+              Describe the system, its current behavior, and what you have measured.
+              I will tell you whether I can help and what the next useful step is.
             </p>
           </div>
           <div className="home-contact-actions">
-            <Link className="button primary" href="/contact">
-              Send your project brief
-            </Link>
-            <a className="button text-button" href={`mailto:${profile.email}`}>
-              Email directly
-            </a>
+            <Link className="button primary" href="/contact">Send a project brief</Link>
+            <a className="button text-button" href={`mailto:${profile.email}`}>Email directly</a>
           </div>
         </div>
-      </section>
+      </AslSection>
     </>
   );
 }

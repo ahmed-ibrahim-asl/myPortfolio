@@ -381,6 +381,483 @@ button,
   color: var(--asl-gold);
 }
 
+/* Instrumented fault-line homepage */
+.asl-hero {
+  position: relative;
+  min-height: calc(100svh - var(--asl-header));
+  overflow: hidden;
+  border-bottom: 1px solid var(--asl-line);
+}
+
+.asl-watermark {
+  position: absolute;
+  top: 50%;
+  right: -0.04em;
+  z-index: 0;
+  color: var(--asl-text);
+  font-size: clamp(18rem, 38vw, 42rem);
+  line-height: 0.7;
+  opacity: 0.025;
+  transform: translateY(-43%);
+  pointer-events: none;
+}
+
+.asl-hero-frame {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(44px, 0.35fr) repeat(2, minmax(0, 1fr)) 28px repeat(2, minmax(0, 1fr)) minmax(44px, 0.35fr);
+  gap: 0;
+  align-items: center;
+  min-height: calc(100svh - var(--asl-header));
+  padding-block: clamp(64px, 8vw, 112px);
+}
+
+.asl-hero-index {
+  grid-column: 1;
+  display: grid;
+  gap: 12px;
+  align-self: start;
+  padding-top: 4px;
+  color: var(--asl-muted);
+  font-size: 0.68rem;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+}
+
+.asl-hero-index span:first-child {
+  color: var(--asl-gold);
+}
+
+.asl-hero-copy {
+  grid-column: 2 / 4;
+  max-width: 690px;
+  padding-right: clamp(32px, 5vw, 80px);
+}
+
+.asl-hero-copy .hero-kicker {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 32px;
+  color: var(--asl-gold);
+  font: 700 0.72rem/1.2 var(--asl-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.asl-hero-copy h1 {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.asl-hero-name {
+  font-size: clamp(4rem, 8.7vw, 8.8rem);
+  font-variation-settings: "wdth" 86;
+  font-weight: 650;
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.asl-hero-role {
+  max-width: 20ch;
+  color: var(--asl-gold);
+  font: 600 clamp(1.2rem, 2.1vw, 2rem)/1.15 var(--asl-font);
+  letter-spacing: -0.03em;
+}
+
+.asl-hero-lede {
+  max-width: 48ch;
+  margin-bottom: 16px;
+  color: var(--asl-text);
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  line-height: 1.48;
+}
+
+.asl-hero-summary {
+  max-width: 62ch;
+  margin-bottom: 32px;
+}
+
+.asl-hero-line {
+  position: relative;
+  grid-column: 4;
+  align-self: stretch;
+  justify-self: center;
+  width: 1px;
+  background: var(--asl-line);
+}
+
+.asl-hero-line span {
+  position: absolute;
+  top: 28%;
+  left: -4px;
+  width: 9px;
+  height: 9px;
+  background: var(--asl-gold);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.asl-hero-evidence {
+  grid-column: 5 / 7;
+  display: grid;
+  gap: 24px;
+  padding-left: clamp(32px, 5vw, 76px);
+}
+
+.profile-portrait {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.profile-portrait-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--asl-surface);
+  border: 1px solid var(--asl-line);
+}
+
+.profile-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: saturate(0.82) contrast(1.04);
+}
+
+.profile-portrait-frame::after {
+  position: absolute;
+  inset: 8px;
+  pointer-events: none;
+  content: "";
+  border: 1px solid var(--asl-gold-a24);
+}
+
+.profile-portrait-crop {
+  position: absolute;
+  left: 50%;
+  width: 36px;
+  height: 1px;
+  background: var(--asl-gold);
+  transform: translateX(-50%);
+}
+
+.profile-portrait-crop::after {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  width: 1px;
+  height: 13px;
+  content: "";
+  background: var(--asl-gold);
+}
+
+.profile-portrait-crop--top {
+  top: 8px;
+}
+
+.profile-portrait-crop--bottom {
+  bottom: 8px;
+}
+
+.profile-portrait figcaption {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  color: var(--asl-muted);
+  font: 700 0.64rem/1.5 var(--asl-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.profile-portrait figcaption span:first-child {
+  color: var(--asl-text);
+}
+
+.asl-profile-register {
+  display: grid;
+  margin: 0;
+  border: 1px solid var(--asl-line);
+  border-bottom: 0;
+}
+
+.asl-profile-register div {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 16px;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--asl-line);
+}
+
+.asl-profile-register dt {
+  color: var(--asl-muted);
+  font: 700 0.64rem/1.5 var(--asl-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.asl-profile-register dd {
+  margin: 0;
+  color: var(--asl-text-secondary);
+  font-size: 0.9rem;
+}
+
+.asl-section .section-heading {
+  align-items: end;
+  margin-bottom: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--asl-line);
+}
+
+.asl-section .section-heading h2 {
+  max-width: 17ch;
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 5.2rem);
+  font-weight: 600;
+  line-height: 0.98;
+}
+
+.asl-section-lede {
+  max-width: 66ch;
+  margin-bottom: 40px;
+}
+
+.asl-capability-register,
+.asl-method-register,
+.asl-tool-register {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--asl-line);
+  border-left: 1px solid var(--asl-line);
+}
+
+.asl-capability-register article,
+.asl-method-register article,
+.asl-tool-register > a {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-height: 260px;
+  padding: clamp(22px, 3vw, 34px);
+  background: var(--asl-surface);
+  border-right: 1px solid var(--asl-line);
+  border-bottom: 1px solid var(--asl-line);
+}
+
+.asl-capability-register .mono,
+.asl-method-register .mono,
+.asl-tool-register .mono,
+.asl-evidence-register .mono {
+  color: var(--asl-gold);
+  font-size: 0.68rem;
+}
+
+.asl-capability-register h3,
+.asl-method-register h3,
+.asl-tool-register h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.asl-capability-tools {
+  align-self: end;
+  margin: auto 0 0;
+  color: var(--asl-muted);
+  font-size: 0.64rem;
+  line-height: 1.8;
+}
+
+.asl-project-log {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--asl-line);
+}
+
+.asl-project-log .project-card {
+  display: grid;
+  grid-template-columns: 78px minmax(260px, 0.85fr) minmax(0, 1.15fr);
+  grid-template-rows: auto 1fr auto;
+  gap: 0;
+  min-height: 340px;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--asl-line);
+  border-bottom: 1px solid var(--asl-line);
+  border-left: 1px solid var(--asl-line);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.asl-project-log .project-card-top {
+  grid-row: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 16px;
+  border-right: 1px solid var(--asl-line);
+}
+
+.asl-project-log .project-media {
+  grid-row: 1 / 4;
+  min-height: 340px;
+  border: 0;
+  border-right: 1px solid var(--asl-line);
+}
+
+.asl-project-log .project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.72) contrast(1.05);
+}
+
+.asl-project-log .project-copy {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  padding: clamp(28px, 4vw, 52px);
+}
+
+.asl-project-log .project-copy h3 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(1.8rem, 3.2vw, 3.2rem);
+  line-height: 1;
+}
+
+.asl-project-log .project-meta {
+  grid-column: 3;
+  padding: 0 clamp(28px, 4vw, 52px) 32px;
+}
+
+.asl-evidence-register {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--asl-line);
+  border-left: 1px solid var(--asl-line);
+}
+
+.asl-evidence-register article {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 12px 24px;
+  padding: clamp(24px, 4vw, 44px);
+  border-right: 1px solid var(--asl-line);
+  border-bottom: 1px solid var(--asl-line);
+}
+
+.asl-evidence-register h3,
+.asl-evidence-register p,
+.asl-evidence-register a {
+  grid-column: 2;
+}
+
+.asl-evidence-register h3 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.asl-method {
+  background: var(--asl-sunken);
+}
+
+.asl-method-register article {
+  background: transparent;
+}
+
+.asl-tool-entry .free-tools-hook {
+  margin-bottom: 28px;
+  border-color: var(--asl-line);
+  border-radius: var(--asl-radius-panel);
+  box-shadow: none;
+}
+
+.asl-tool-register > a {
+  position: relative;
+  color: inherit;
+  transition: background-color 180ms ease-out, border-color 180ms ease-out;
+}
+
+.asl-tool-register > a:hover,
+.asl-tool-register > a:focus-visible {
+  z-index: 1;
+  background: var(--asl-raised);
+  border-color: var(--asl-gold-a24);
+}
+
+.asl-register-action {
+  align-self: end;
+  margin-top: auto;
+  color: var(--asl-text-secondary) !important;
+}
+
+.asl-writing-preview .post-list {
+  border-top: 1px solid var(--asl-line);
+}
+
+.asl-writing-preview .post-card {
+  border-right: 1px solid var(--asl-line);
+  border-bottom: 1px solid var(--asl-line);
+  border-left: 1px solid var(--asl-line);
+  border-radius: 0;
+}
+
+.asl-contact-callout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+  gap: 48px;
+  align-items: end;
+  padding: clamp(32px, 6vw, 72px);
+  background: var(--asl-gold-a12);
+  border: 1px solid var(--asl-gold-a24);
+}
+
+.asl-contact-callout h2 {
+  max-width: 16ch;
+  margin: 0 0 20px;
+  font-size: clamp(2.2rem, 5vw, 5rem);
+  line-height: 0.98;
+}
+
+.asl-contact-callout p {
+  max-width: 62ch;
+  margin-bottom: 0;
+}
+
+.asl-contact-callout .home-contact-actions {
+  display: grid;
+  gap: 12px;
+}
+
+@media (max-width: 1099px) {
+  .asl-hero-frame {
+    grid-template-columns: 34px minmax(0, 1.2fr) 20px minmax(280px, 0.8fr);
+  }
+
+  .asl-hero-index { grid-column: 1; }
+  .asl-hero-copy { grid-column: 2; }
+  .asl-hero-line { grid-column: 3; }
+  .asl-hero-evidence { grid-column: 4; }
+
+  .asl-capability-register,
+  .asl-method-register,
+  .asl-tool-register {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 899px) {
   body {
     background: var(--asl-page);
@@ -446,6 +923,62 @@ button,
   .footer-grid {
     grid-template-columns: 1fr;
   }
+
+  .asl-hero {
+    min-height: 0;
+  }
+
+  .asl-watermark {
+    top: 210px;
+    right: -0.12em;
+    font-size: min(74vw, 28rem);
+    transform: none;
+  }
+
+  .asl-hero-frame {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
+    min-height: 0;
+    padding-block: 72px;
+  }
+
+  .asl-hero-index {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .asl-hero-copy,
+  .asl-hero-evidence {
+    grid-column: 2;
+    padding: 0;
+  }
+
+  .asl-hero-copy {
+    grid-row: 1;
+    margin-bottom: 56px;
+  }
+
+  .asl-hero-evidence {
+    grid-row: 2;
+    grid-template-columns: minmax(220px, 0.78fr) minmax(240px, 1.22fr);
+    align-items: end;
+  }
+
+  .asl-hero-line {
+    display: none;
+  }
+
+  .asl-project-log .project-card {
+    grid-template-columns: 68px minmax(220px, 0.85fr) minmax(0, 1.15fr);
+  }
+
+  .asl-evidence-register {
+    grid-template-columns: 1fr;
+  }
+
+  .asl-contact-callout {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 639px) {
@@ -468,6 +1001,92 @@ button,
   .footer-bottom nav {
     flex-wrap: wrap;
     gap: 14px 20px;
+  }
+
+  .asl-hero-frame {
+    grid-template-columns: 18px minmax(0, 1fr);
+    width: min(calc(100% - 40px), var(--asl-shell));
+    padding-block: 56px;
+  }
+
+  .asl-hero-name {
+    font-size: clamp(3.2rem, 17vw, 5.2rem);
+  }
+
+  .asl-hero-evidence {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-portrait {
+    max-width: 360px;
+  }
+
+  .profile-portrait figcaption {
+    display: grid;
+  }
+
+  .asl-capability-register,
+  .asl-method-register,
+  .asl-tool-register,
+  .asl-evidence-register {
+    grid-template-columns: 1fr;
+  }
+
+  .asl-capability-register article,
+  .asl-method-register article,
+  .asl-tool-register > a {
+    min-height: 0;
+  }
+
+  .asl-project-log .project-card {
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+  }
+
+  .asl-project-log .project-card-top {
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+
+  .asl-project-log .project-media {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 220px;
+    border-right: 0;
+    border-bottom: 1px solid var(--asl-line);
+  }
+
+  .asl-project-log .project-copy,
+  .asl-project-log .project-meta {
+    grid-column: 2;
+  }
+
+  .asl-project-log .project-copy {
+    padding: 26px 22px;
+  }
+
+  .asl-project-log .project-meta {
+    padding: 0 22px 24px;
+  }
+
+  .asl-evidence-register article {
+    grid-template-columns: 1fr;
+  }
+
+  .asl-evidence-register h3,
+  .asl-evidence-register p,
+  .asl-evidence-register a {
+    grid-column: 1;
+  }
+
+  .asl-section .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .asl-section .section-heading h2 {
+    font-size: clamp(2.25rem, 12vw, 3.6rem);
   }
 }
 

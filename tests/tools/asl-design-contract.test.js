@@ -28,3 +28,15 @@ test("the global shell uses ASL identity without HUD navigation", () => {
   assert.match(header, /header-contact/);
   assert.match(footer, /form="paired"/);
 });
+
+test("home follows the ASL fault-line composition", () => {
+  const home = read("app/page.tsx");
+
+  assert.match(home, /className="asl-hero/);
+  assert.match(home, /className="asl-watermark"/);
+  assert.match(home, /<AslSection index="0[2-8]"/);
+  assert.doesNotMatch(home, /PixelWorld|SystemHud|data-text=/);
+  for (const label of ["Calculate", "Generate", "Simulate", "Plan"]) {
+    assert.ok(home.includes(`label: "${label}"`));
+  }
+});
