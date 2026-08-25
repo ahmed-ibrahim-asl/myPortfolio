@@ -25,7 +25,7 @@ export const metadata = createPageMetadata({
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="asl-page asl-about-trace">
       <JsonLd data={createProfilePageJsonLd()} />
 
       <section className="page-intro shell about-intro about-story-intro">
@@ -303,6 +303,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -12,8 +12,9 @@ export const metadata = createPageMetadata({
 
 export default function WorkPage() {
   return (
-    <>
-      <section className="page-intro shell">
+    <div className="asl-page asl-work-log">
+      <section className="page-intro shell asl-page-intro">
+        <p className="eyebrow">Work log / verified builds</p>
         <h1>Embedded Systems, IoT, and Robotics Projects</h1>
         <p className="page-lede">
           Explore my work in ESP32 firmware, IoT telemetry, autonomous robots,
@@ -27,7 +28,7 @@ export default function WorkPage() {
           <span className="mono muted">{projects.length} projects</span>
           <span className="mono muted">Hardware, firmware, and interface work</span>
         </div>
-        <div className="project-grid">
+        <div className="project-grid asl-work-log-list">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.slug}
@@ -38,6 +39,6 @@ export default function WorkPage() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { WritingIndex } from "@/components/WritingIndex";
 import { WritingSeries } from "@/components/WritingSeries";
-import { WorldGallery } from "@/components/WorldGallery";
 import { getAllPosts } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -17,16 +16,15 @@ export default function WritingPage() {
   const posts = allPosts.filter((post) => !post.draft);
 
   return (
-    <>
-      <section className="page-intro shell writing-intro">
+    <div className="asl-page asl-field-notes">
+      <section className="page-intro shell writing-intro asl-page-intro">
+        <p className="eyebrow">Field notes / reproducible methods</p>
         <h1>Linux Walkthroughs and Engineering Tutorials</h1>
         <p className="page-lede">
           I document the commands, design decisions, tests, and failure modes
           behind embedded systems, Linux, cybersecurity, Flutter, and AI work.
         </p>
       </section>
-
-      <WorldGallery />
 
       <WritingSeries posts={allPosts} />
 
@@ -48,6 +46,6 @@ export default function WritingPage() {
         </div>
         <WritingIndex posts={posts} />
       </section>
-    </>
+    </div>
   );
 }

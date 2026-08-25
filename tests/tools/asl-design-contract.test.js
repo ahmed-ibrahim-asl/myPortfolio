@@ -40,3 +40,19 @@ test("home follows the ASL fault-line composition", () => {
     assert.ok(home.includes(`label: "${label}"`));
   }
 });
+
+test("primary routes declare their ASL page modes", () => {
+  const expected = new Map([
+    ["app/work/page.tsx", "asl-work-log"],
+    ["app/about/page.tsx", "asl-about-trace"],
+    ["app/writing/page.tsx", "asl-field-notes"],
+    ["app/contact/page.tsx", "asl-brief"]
+  ]);
+
+  for (const [file, className] of expected) {
+    assert.ok(read(file).includes(className), `${file} is missing ${className}`);
+  }
+
+  assert.doesNotMatch(read("app/writing/page.tsx"), /WorldGallery/);
+  assert.match(read("app/writing/[slug]/page.tsx"), /asl-article/);
+});

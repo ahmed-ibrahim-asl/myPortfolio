@@ -57,7 +57,7 @@ export default async function ArticlePage({ params }: PageProps) {
   const wasUpdated = post.updatedAt && post.updatedAt !== post.publishedAt;
 
   return (
-    <article className="article-page">
+    <article className="article-page asl-article">
       <JsonLd data={createArticleJsonLd(post)} />
 
       <header className="article-header shell">

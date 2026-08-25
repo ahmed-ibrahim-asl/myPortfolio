@@ -12,8 +12,9 @@ export const metadata = createPageMetadata({
 
 export default function ContactPage() {
   return (
-    <section className="contact-page shell">
+    <section className="contact-page shell asl-page asl-brief">
       <div className="contact-lead">
+        <p className="eyebrow">Project brief / reply within two working days</p>
         <h1>Bring me the problem, even if the solution is not clear yet.</h1>
         <p>
           Tell me what you are trying to build or fix, what already exists, and where
@@ -38,6 +39,37 @@ export default function ContactPage() {
             <span>Email address</span>
             <input name="email" type="email" required placeholder="you@example.com" />
           </label>
+          <div className="contact-field-grid">
+            <label>
+              <span>Work type</span>
+              <select name="workType" defaultValue="Build a system">
+                <option>Diagnose a fault</option>
+                <option>Build a system</option>
+                <option>Review and harden</option>
+                <option>Technical education</option>
+              </select>
+            </label>
+            <label>
+              <span>Domain</span>
+              <select name="domain" defaultValue="Embedded systems">
+                <option>Embedded systems</option>
+                <option>Electronics</option>
+                <option>IoT and connected products</option>
+                <option>Robotics</option>
+                <option>Applied AI</option>
+                <option>Security</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span>Timeline</span>
+            <select name="timeline" defaultValue="This month">
+              <option>Urgent diagnosis</option>
+              <option>This month</option>
+              <option>Next quarter</option>
+              <option>Exploring the scope</option>
+            </select>
+          </label>
           <label>
             <span>Project brief</span>
             <textarea
@@ -47,12 +79,24 @@ export default function ContactPage() {
               placeholder="Describe the system, constraints, current state, and desired result."
             />
           </label>
+          <label>
+            <span>Project links</span>
+            <input
+              name="links"
+              type="url"
+              placeholder="Repository, logs, scope captures, or documentation"
+            />
+          </label>
           <button className="button primary" type="submit">
             Send your project brief
           </button>
         </form>
 
         <aside className="contact-aside">
+          <div className="contact-aside-heading">
+            <span className="mono">Direct channels</span>
+            <p>Use the brief for project context or choose a direct channel.</p>
+          </div>
           <div>
             <div className="contact-socials">
               <a href={`mailto:${profile.email}`} aria-label="Email Ahmed directly">
