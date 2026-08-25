@@ -256,7 +256,7 @@
 
 .asl-model-mission-shell :is(button, input, select, textarea),
 .asl-security-mission-shell :is(button, input, select, textarea) {
-  min-height: 44px;
+  min-height: 44px !important;
   border-radius: var(--asl-radius-control) !important;
 }
 

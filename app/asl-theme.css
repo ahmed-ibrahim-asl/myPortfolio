@@ -1219,6 +1219,10 @@ button,
   border-radius: 0;
 }
 
+.asl-article .copy-code {
+  min-height: 44px;
+}
+
 @media (max-width: 1099px) {
   .asl-hero-frame {
     grid-template-columns: 34px minmax(0, 1.2fr) 20px minmax(280px, 0.8fr);

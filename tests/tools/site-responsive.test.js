@@ -310,8 +310,37 @@ test(
               const embeddedExamples = document.querySelectorAll(".embedded-example-card").length;
               const embeddedLabel = document.querySelector(".embedded-workbench label > span, .embedded-workbench .tool-input > label");
               const embeddedLabelFontSize = embeddedLabel ? parseFloat(getComputedStyle(embeddedLabel).fontSize) : 0;
+              const rootStyle = getComputedStyle(document.documentElement);
+              const visibleControls = [...document.querySelectorAll("button, input, select, textarea")]
+                .filter((el) => {
+                  const style = getComputedStyle(el);
+                  const type = el.getAttribute("type");
+                  return style.display !== "none"
+                    && style.visibility !== "hidden"
+                    && type !== "hidden"
+                    && type !== "checkbox"
+                    && type !== "radio"
+                    && el.getClientRects().length > 0;
+                });
+              const smallestControlHeight = visibleControls.length
+                ? Math.min(...visibleControls.map((el) => el.getBoundingClientRect().height))
+                : 44;
+              const smallestControl = visibleControls.find(
+                (el) => Math.abs(el.getBoundingClientRect().height - smallestControlHeight) < 0.1
+              );
+              const smallestControlSelector = smallestControl
+                ? smallestControl.tagName.toLowerCase()
+                  + (typeof smallestControl.className === "string" && smallestControl.className.trim()
+                    ? "." + smallestControl.className.trim().split(/\s+/).join(".")
+                    : "")
+                : null;
               return {
                 bodyFontSize: parseFloat(getComputedStyle(document.body).fontSize),
+                aslPageToken: rootStyle.getPropertyValue("--asl-page").trim().toUpperCase(),
+                aslGoldToken: rootStyle.getPropertyValue("--asl-gold").trim().toUpperCase(),
+                systemHudCount: document.querySelectorAll(".system-hud, .pixel-world").length,
+                smallestControlHeight,
+                smallestControlSelector,
                 overflowPx,
                 clientWidth: doc.clientWidth,
                 worstSelector,
@@ -349,6 +378,11 @@ test(
 
           const {
             bodyFontSize,
+            aslPageToken,
+            aslGoldToken,
+            systemHudCount,
+            smallestControlHeight,
+            smallestControlSelector,
             overflowPx,
             worstSelector,
             worstRight,
@@ -381,6 +415,21 @@ test(
           if (bodyFontSize < 16) {
             failures.push(
               `${route} @ ${viewport.label}: base text remains below the 16px readability floor`
+            );
+          }
+          if (aslPageToken !== "#0B0D11" || aslGoldToken !== "#D9A441") {
+            failures.push(
+              `${route} @ ${viewport.label}: ASL palette tokens are not active `
+              + `(page=${aslPageToken}, gold=${aslGoldToken})`
+            );
+          }
+          if (systemHudCount !== 0) {
+            failures.push(`${route} @ ${viewport.label}: obsolete HUD or pixel scene remains mounted`);
+          }
+          if (smallestControlHeight < 43.5) {
+            failures.push(
+              `${route} @ ${viewport.label}: an interactive control is below the 44px target floor `
+              + `(${smallestControlHeight.toFixed(1)}px, ${smallestControlSelector})`
             );
           }
           if (overflowPx > 1) {
