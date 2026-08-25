@@ -1,4 +1,221 @@
-/* Shared ASL workbench mappings are extended route by route. */
+/* Shared ASL instrument register and workbench mappings. */
+.asl-tools-register {
+  background:
+    linear-gradient(90deg, transparent calc(16.66% - 1px), var(--asl-line-faint) 16.66%, transparent calc(16.66% + 1px)),
+    linear-gradient(90deg, transparent calc(83.33% - 1px), var(--asl-line-faint) 83.33%, transparent calc(83.33% + 1px));
+}
+
+.asl-tools-header {
+  position: relative;
+  min-height: 68vh;
+  padding-block: clamp(96px, 12vw, 176px) 64px;
+}
+
+.asl-tools-header::after {
+  position: absolute;
+  top: 94px;
+  right: 0;
+  color: var(--asl-gold-a12);
+  font-family: var(--asl-mark-ar);
+  font-size: clamp(7rem, 18vw, 15rem);
+  line-height: 0.8;
+  content: "عسل";
+  pointer-events: none;
+}
+
+.asl-tools-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+.asl-tools-header h1 {
+  max-width: 900px;
+  margin: 18px 0 24px;
+  font-size: clamp(3rem, 7.4vw, 7rem);
+  line-height: 0.9;
+}
+
+.asl-tools-header .section-intro {
+  max-width: 720px;
+}
+
+.asl-task-index {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: clamp(48px, 8vw, 96px);
+  border-block: 1px solid var(--asl-line);
+}
+
+.asl-task-index a {
+  display: grid;
+  min-height: 96px;
+  padding: 20px;
+  color: var(--asl-text);
+  border-left: 1px solid var(--asl-line);
+  font-size: 1rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color 160ms ease-out, color 160ms ease-out;
+}
+
+.asl-task-index a:last-child {
+  border-right: 1px solid var(--asl-line);
+}
+
+.asl-task-index a:hover {
+  color: var(--asl-gold-soft);
+  background: var(--asl-gold-a12);
+}
+
+.asl-task-index span {
+  color: var(--asl-muted);
+  font-family: var(--asl-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+}
+
+.asl-task-group {
+  border-top: 1px solid var(--asl-line);
+}
+
+.asl-tools-register .tools-intro-grid {
+  align-items: end;
+}
+
+.asl-tools-register .tools-intro-note {
+  background: var(--asl-surface);
+  border: 1px solid var(--asl-line);
+  border-left: 3px solid var(--asl-gold);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.asl-tools-register .writing-tools {
+  gap: 16px;
+  padding: 20px 0;
+  border-block: 1px solid var(--asl-line);
+}
+
+.asl-tools-register .search-field,
+.asl-tools-register .filter-row button {
+  border-radius: var(--asl-radius-control);
+}
+
+.asl-tools-register .calculator-catalog-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--asl-line);
+  border: 1px solid var(--asl-line);
+}
+
+.asl-tools-register .calculator-catalog-card {
+  min-width: 0;
+  background: var(--asl-page);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.asl-tools-register .calculator-catalog-card:hover,
+.asl-tools-register .calculator-catalog-card:focus-visible {
+  background: var(--asl-surface);
+  transform: none;
+}
+
+.asl-tools-register .calculator-catalog-copy .post-meta {
+  color: var(--asl-gold);
+  font-family: var(--asl-mono);
+}
+
+.asl-workbench-groups {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--asl-line);
+}
+
+.asl-workbench-group {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.72fr) minmax(0, 2fr);
+  border-bottom: 1px solid var(--asl-line);
+  scroll-margin-top: calc(var(--asl-header) + 20px);
+}
+
+.asl-workbench-group-heading {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 16px;
+  align-content: start;
+  padding: 28px 24px 28px 0;
+  border-right: 1px solid var(--asl-line);
+}
+
+.asl-workbench-group-heading > span {
+  color: var(--asl-gold);
+  font-size: 0.72rem;
+}
+
+.asl-workbench-group-heading h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+}
+
+.asl-workbench-group-heading p {
+  max-width: 29ch;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.asl-workbench-group-tools {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--asl-line);
+}
+
+.asl-workbench-group-tools:has(> :only-child) {
+  grid-template-columns: 1fr;
+}
+
+.asl-workbench-group .tool-nav-card {
+  margin: 0;
+  background: var(--asl-page);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.asl-workbench-group .tool-nav-card:hover,
+.asl-workbench-group .tool-nav-card:focus-visible {
+  background: var(--asl-surface);
+  transform: none;
+}
+
+.asl-calculator-shell,
+.asl-workbench-shell {
+  position: relative;
+}
+
+.asl-calculator-shell .tool-header,
+.asl-workbench-shell .tool-shell-heading {
+  border-left: 1px solid var(--asl-gold);
+}
+
+.asl-calculator-shell .tool-body,
+.asl-workbench-shell .tool-grid {
+  position: relative;
+}
+
+.asl-calculator-shell .tool-body::before,
+.asl-workbench-shell .tool-grid::before {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--asl-muted);
+  font-family: var(--asl-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  content: "ASL / ACTIVE INSTRUMENT";
+}
+
 .tool-page,
 .calculator-panel,
 .tool-result-card,
@@ -15,4 +232,60 @@
   border-color: var(--asl-line);
   border-radius: var(--asl-radius-control);
   font-size: 16px;
+}
+
+@media (max-width: 899px) {
+  .asl-tools-register .calculator-catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .asl-workbench-group {
+    grid-template-columns: 1fr;
+  }
+
+  .asl-workbench-group-heading {
+    border-right: 0;
+    border-bottom: 1px solid var(--asl-line);
+  }
+}
+
+@media (max-width: 639px) {
+  .asl-tools-header {
+    min-height: auto;
+    padding-block: 88px 48px;
+  }
+
+  .asl-tools-header::after {
+    top: 78px;
+    font-size: 7rem;
+  }
+
+  .asl-tools-header h1 {
+    font-size: clamp(2.65rem, 14vw, 4.6rem);
+  }
+
+  .asl-task-index {
+    grid-template-columns: 1fr;
+  }
+
+  .asl-task-index a,
+  .asl-task-index a:last-child {
+    grid-template-columns: 38px 1fr;
+    min-height: 52px;
+    border-right: 1px solid var(--asl-line);
+    border-bottom: 1px solid var(--asl-line);
+  }
+
+  .asl-task-index a:last-child {
+    border-bottom: 0;
+  }
+
+  .asl-tools-register .calculator-catalog-grid,
+  .asl-workbench-group-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .asl-workbench-group-heading {
+    padding-right: 0;
+  }
 }

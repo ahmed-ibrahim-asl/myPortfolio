@@ -14,13 +14,52 @@ export const metadata = createPageMetadata({
 
 export default function ToolsIndexPage() {
   const calculators = getAllTools();
+  const workbenchGroups = [
+    {
+      label: "Generate",
+      note: "Turn a brief into usable code and project scaffolding.",
+      ids: ["ai-script-generator", "sensor-code-generator"]
+    },
+    {
+      label: "Simulate",
+      note: "Explore control behavior before tuning hardware.",
+      ids: ["pid-simulator"]
+    },
+    {
+      label: "Plan",
+      note: "Estimate power budgets before committing components.",
+      ids: ["battery-estimator"]
+    },
+    {
+      label: "Investigate",
+      note: "Build commands for authorized, documented security labs.",
+      ids: ["security-command-builder"]
+    }
+  ];
 
   return (
-    <>
-      <section id="calculators" className="section shell tools-calculator-section">
+    <div className="asl-page asl-tools-register">
+      <section className="section shell asl-tools-header" aria-labelledby="tools-title">
+        <p className="eyebrow">Engineering workbench / 41 working instruments</p>
+        <h1 id="tools-title">Choose the job. Open the instrument.</h1>
+        <p className="section-intro">
+          Fast calculators for known quantities and guided workbenches for the larger engineering
+          decisions around code, control, power, and security.
+        </p>
+        <nav className="asl-task-index" aria-label="Tool tasks">
+          <a href="#calculators"><span>01</span>Calculate</a>
+          {workbenchGroups.map((group, index) => (
+            <a href={`#task-${group.label.toLowerCase()}`} key={group.label}>
+              <span>{String(index + 2).padStart(2, "0")}</span>{group.label}
+            </a>
+          ))}
+        </nav>
+      </section>
+
+      <section id="calculators" className="section shell tools-calculator-section asl-task-group">
         <div className="tools-intro-grid">
           <div>
-            <p className="eyebrow">36 free electronics calculators</p>
+            <p className="eyebrow">01 / Calculate / 36 instruments</p>
             <h1>Start with the calculation in front of you.</h1>
             <p className="section-intro">
               Search circuits, component values, timing, number systems, conversions, and
@@ -38,7 +77,7 @@ export default function ToolsIndexPage() {
       </section>
 
       <div className="shell tools-scroll-cue" aria-hidden="true">
-        <span className="mono">SCROLL FOR GENERATORS</span>
+        <span className="mono">GUIDED WORKBENCHES</span>
         <span className="tools-scroll-track"><span /></span>
       </div>
 
@@ -54,12 +93,40 @@ export default function ToolsIndexPage() {
           </div>
         </div>
 
-        <div className="project-grid">
-          {engineeringTools.map((tool, index) => (
-            <ToolNavCard key={tool.id} tool={tool} index={index} />
-          ))}
+        <div className="asl-workbench-groups">
+          {workbenchGroups.map((group, groupIndex) => {
+            const tools = group.ids
+              .map((id) => engineeringTools.find((tool) => tool.id === id))
+              .filter((tool): tool is (typeof engineeringTools)[number] => Boolean(tool));
+
+            return (
+              <section
+                className="asl-workbench-group"
+                id={`task-${group.label.toLowerCase()}`}
+                key={group.label}
+                aria-labelledby={`task-title-${groupIndex}`}
+              >
+                <header className="asl-workbench-group-heading">
+                  <span className="mono">{String(groupIndex + 2).padStart(2, "0")}</span>
+                  <div>
+                    <h3 id={`task-title-${groupIndex}`}>{group.label}</h3>
+                    <p>{group.note}</p>
+                  </div>
+                </header>
+                <div className="asl-workbench-group-tools">
+                  {tools.map((tool) => (
+                    <ToolNavCard
+                      key={tool.id}
+                      tool={tool}
+                      index={engineeringTools.findIndex((item) => item.id === tool.id)}
+                    />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </section>
-    </>
+    </div>
   );
 }

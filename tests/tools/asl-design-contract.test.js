@@ -56,3 +56,16 @@ test("primary routes declare their ASL page modes", () => {
   assert.doesNotMatch(read("app/writing/page.tsx"), /WorldGallery/);
   assert.match(read("app/writing/[slug]/page.tsx"), /asl-article/);
 });
+
+test("tools use task groups and the shared ASL workbench shell", () => {
+  const index = read("app/tools/page.tsx");
+  const calculatorShell = read("components/tools/CalculatorShell.js");
+  const toolShell = read("components/tools/ToolShell.tsx");
+
+  for (const label of ["Calculate", "Generate", "Simulate", "Plan", "Investigate"]) {
+    assert.match(index, new RegExp(label), `missing ${label} task group`);
+  }
+
+  assert.match(calculatorShell, /asl-calculator-shell/);
+  assert.match(toolShell, /asl-workbench-shell/);
+});

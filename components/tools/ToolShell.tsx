@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export function ToolShell({ title, description, children }: { title: string, description: string, children: React.ReactNode }) {
   return (
-    <section className="section shell tool-page">
+    <section className="section shell tool-page asl-workbench-shell">
       <div className="tool-shell-heading">
         <Link href="/tools" className="text-link tool-shell-back">
           Back to Tools

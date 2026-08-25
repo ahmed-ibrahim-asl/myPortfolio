@@ -3,7 +3,7 @@ import { CalculatorFinder } from "./CalculatorFinder";
 
 export function CalculatorShell({ tool, children }) {
   return (
-    <article className="tool-page">
+    <article className="tool-page asl-calculator-shell">
       <header className="article-header tool-header shell">
         <Link className="article-back" href="/tools">
           All engineering tools
