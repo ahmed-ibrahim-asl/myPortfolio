@@ -27,7 +27,7 @@ export function SiteHeader() {
         >
           <img
             className="brand-mark"
-            src="/brand/hex-badge-gold.svg"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand/hex-badge-gold.svg`}
             alt=""
             aria-hidden="true"
           />

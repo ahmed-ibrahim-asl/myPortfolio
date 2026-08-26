@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { existsSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { calculators } from "../../data/calculators.js";
 
@@ -32,6 +32,10 @@ test("the GitHub Pages export preserves Next.js _next assets", { timeout: 120_00
     true,
     "out/_next must contain the exported Next.js assets"
   );
+
+  const homeHtml = readFileSync(join(process.cwd(), "out", "index.html"), "utf8");
+  assert.match(homeHtml, /(?:src|href)="\/myPortflio\/brand\/hex-badge-gold\.svg"/);
+  assert.doesNotMatch(homeHtml, /(?:src|href)="\/brand\//);
 
   for (const { slug } of calculators) {
     assert.equal(
