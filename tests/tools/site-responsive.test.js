@@ -120,6 +120,7 @@ async function createClient(port, url) {
   let nextId = 1;
   const pending = new Map();
   const events = new Map();
+  const consoleErrors = [];
 
   await new Promise((resolve, reject) => {
     socket.addEventListener("open", resolve, { once: true });
@@ -133,6 +134,15 @@ async function createClient(port, url) {
       if (message.error) handlers.reject(new Error(message.error.message));
       else handlers.resolve(message.result);
       return;
+    }
+    if (message.method === "Runtime.exceptionThrown") {
+      consoleErrors.push(message.params?.exceptionDetails?.text ?? "Uncaught runtime exception");
+    }
+    if (message.method === "Runtime.consoleAPICalled" && message.params?.type === "error") {
+      consoleErrors.push(
+        message.params.args?.map((arg) => arg.value ?? arg.description ?? "console error").join(" ")
+        ?? "console error"
+      );
     }
     const waiters = events.get(message.method);
     if (waiters) {
@@ -155,7 +165,7 @@ async function createClient(port, url) {
       events.set(method, waiters);
     });
 
-  return { socket, send, waitForEvent };
+  return { socket, send, waitForEvent, consoleErrors };
 }
 
 test(
@@ -647,6 +657,9 @@ test(
       }
       if (navigation.returnHomeHasMissionUi) {
         failures.push("client navigation: floating mission UI returns after tools → home");
+      }
+      if (client.consoleErrors.length) {
+        failures.push(`browser console errors:\n${client.consoleErrors.join("\n")}`);
       }
     } finally {
       if (client?.socket) client.socket.close();
