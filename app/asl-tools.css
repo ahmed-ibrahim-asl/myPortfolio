@@ -216,6 +216,25 @@
   content: "ASL / ACTIVE INSTRUMENT";
 }
 
+.asl-calculator-shell .swatch {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+  border-color: var(--asl-line);
+  box-shadow: none;
+}
+
+.asl-calculator-shell .swatch:hover,
+.asl-calculator-shell .swatch:focus-visible {
+  transform: none;
+}
+
+.asl-calculator-shell .swatch.active {
+  border-color: var(--asl-text);
+  box-shadow: 0 0 0 2px var(--asl-gold);
+}
+
 /* Advanced instruments keep their interaction engines and share one visual grammar. */
 .asl-model-mission-shell,
 .asl-security-mission-shell {

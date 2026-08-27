@@ -325,6 +325,9 @@ test(
               const smallestControlHeight = visibleControls.length
                 ? Math.min(...visibleControls.map((el) => el.getBoundingClientRect().height))
                 : 44;
+              const smallestControlWidth = visibleControls.length
+                ? Math.min(...visibleControls.map((el) => el.getBoundingClientRect().width))
+                : 44;
               const smallestControl = visibleControls.find(
                 (el) => Math.abs(el.getBoundingClientRect().height - smallestControlHeight) < 0.1
               );
@@ -340,6 +343,7 @@ test(
                 aslGoldToken: rootStyle.getPropertyValue("--asl-gold").trim().toUpperCase(),
                 systemHudCount: document.querySelectorAll(".system-hud, .pixel-world").length,
                 smallestControlHeight,
+                smallestControlWidth,
                 smallestControlSelector,
                 overflowPx,
                 clientWidth: doc.clientWidth,
@@ -382,6 +386,7 @@ test(
             aslGoldToken,
             systemHudCount,
             smallestControlHeight,
+            smallestControlWidth,
             smallestControlSelector,
             overflowPx,
             worstSelector,
@@ -430,6 +435,12 @@ test(
             failures.push(
               `${route} @ ${viewport.label}: an interactive control is below the 44px target floor `
               + `(${smallestControlHeight.toFixed(1)}px, ${smallestControlSelector})`
+            );
+          }
+          if (smallestControlWidth < 43.5) {
+            failures.push(
+              `${route} @ ${viewport.label}: an interactive control is below the 44px width floor `
+              + `(${smallestControlWidth.toFixed(1)}px)`
             );
           }
           if (overflowPx > 1) {
@@ -546,6 +557,37 @@ test(
       const homeLoaded = client.waitForEvent("Page.loadEventFired");
       await client.send("Page.navigate", { url: `${baseUrl}/` });
       await homeLoaded;
+      let focus = { isNav: false, width: 0, style: "none", color: "" };
+      for (let tabPress = 0; tabPress < 10 && !focus.isNav; tabPress += 1) {
+        await client.send("Input.dispatchKeyEvent", {
+          type: "keyDown",
+          key: "Tab",
+          code: "Tab",
+          windowsVirtualKeyCode: 9,
+          nativeVirtualKeyCode: 9
+        });
+        await client.send("Input.dispatchKeyEvent", {
+          type: "keyUp",
+          key: "Tab",
+          code: "Tab",
+          windowsVirtualKeyCode: 9,
+          nativeVirtualKeyCode: 9
+        });
+        const focusResult = await client.send("Runtime.evaluate", {
+          returnByValue: true,
+          expression: `(() => {
+            const active = document.activeElement;
+            const style = active ? getComputedStyle(active) : null;
+            return {
+              isNav: Boolean(active?.matches(".site-nav a")),
+              width: style ? parseFloat(style.outlineWidth) : 0,
+              style: style?.outlineStyle ?? "none",
+              color: style?.outlineColor ?? ""
+            };
+          })()`
+        });
+        focus = focusResult.result.value;
+      }
       const navigationResult = await client.send("Runtime.evaluate", {
         awaitPromise: true,
         returnByValue: true,
@@ -588,6 +630,17 @@ test(
       const navigation = navigationResult.result.value;
       if (navigation.homeHasMissionUi) {
         failures.push("client navigation: floating mission UI covers the initial home route");
+      }
+      if (
+        !focus.isNav
+        || focus.width < 3
+        || focus.style === "none"
+        || !/rgb\(232, 199, 119\)|rgb\(217, 164, 65\)/.test(focus.color)
+      ) {
+        failures.push(
+          `keyboard focus: first navigation link lacks the required 3px ASL gold outline `
+          + `(${focus.width}px ${focus.style} ${focus.color})`
+        );
       }
       if (navigation.toolsHasMissionUi) {
         failures.push("client navigation: mission UI remains visible after home → tools");

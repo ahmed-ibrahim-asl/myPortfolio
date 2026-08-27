@@ -105,8 +105,8 @@ p {
 }
 
 :where(a, button, input, textarea, select, [tabindex]):focus-visible {
-  outline: 1px solid var(--asl-gold-soft);
-  outline-offset: 4px;
+  outline: 3px solid var(--asl-gold-soft);
+  outline-offset: 3px;
   box-shadow: 0 0 0 2px var(--asl-page);
 }
 

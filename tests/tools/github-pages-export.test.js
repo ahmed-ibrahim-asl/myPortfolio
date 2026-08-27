@@ -44,4 +44,32 @@ test("the GitHub Pages export preserves Next.js _next assets", { timeout: 120_00
       `missing exported calculator route: ${slug}`
     );
   }
+
+  const htmlFiles = [];
+  const collectHtml = (directory) => {
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const path = join(directory, entry.name);
+      if (entry.isDirectory()) collectHtml(path);
+      else if (entry.name.endsWith(".html")) htmlFiles.push(path);
+    }
+  };
+  collectHtml(join(process.cwd(), "out"));
+
+  const brokenInternalLinks = [];
+  const root = join(process.cwd(), "out");
+  for (const htmlFile of htmlFiles) {
+    const html = readFileSync(htmlFile, "utf8");
+    for (const match of html.matchAll(/href="(\/myPortflio\/[^"?#]*)/g)) {
+      const pathname = match[1].slice("/myPortflio".length);
+      if (pathname.startsWith("/_next/")) continue;
+      const relative = pathname.replace(/^\//, "");
+      const candidates = pathname.endsWith("/")
+        ? [join(root, relative, "index.html")]
+        : [join(root, relative), join(root, `${relative}.html`), join(root, relative, "index.html")];
+      if (!candidates.some(existsSync)) {
+        brokenInternalLinks.push(`${htmlFile}: ${match[1]}`);
+      }
+    }
+  }
+  assert.deepEqual(brokenInternalLinks, [], `broken exported links:\n${brokenInternalLinks.join("\n")}`);
 });
