@@ -1,0 +1,56 @@
+1:"$Sreact.fragment"
+3:I[97367,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+2:T993,<p>Use these shortcuts as a shared vocabulary. A shortcut is the start of a brief, not the complete prompt. Always add the subject, audience, aspect ratio, required labels, and what must remain technically accurate.</p>
+<h2>Explain structure</h2>
+<ul>
+<li><code>/blueprint</code>: orthographic engineering drawing with measured callouts and restrained line work.</li>
+<li><code>/layer</code>: stacked layers that explain how a product or interface is assembled.</li>
+<li><code>/explodeview</code>: separated components, aligned to their assembly order.</li>
+<li><code>/machineview</code>: one clear technical perspective focused on functional parts.</li>
+<li><code>/machineview360</code>: a consistent multi-angle rotation sheet.</li>
+<li><code>/topview</code>: a strict overhead view for layouts, boards, and workspaces.</li>
+</ul>
+<h2>Explain change</h2>
+<ul>
+<li><code>/sequence</code>: numbered frames showing a process in chronological order.</li>
+<li><code>/beforeafter</code>: two matched frames with only the relevant change highlighted.</li>
+<li><code>/defectview</code>: a diagnostic view that locates a fault, symptom, and likely cause.</li>
+</ul>
+<h2>Present an idea</h2>
+<ul>
+<li><code>/handwritten</code>: annotated notebook treatment for teaching and early reasoning.</li>
+<li><code>/3dbillboard</code>: bold dimensional headline or object on a simple campaign stage.</li>
+<li><code>/floating3d</code>: isolated components arranged in depth for a cover image.</li>
+<li><code>/magazinecover</code>: editorial hierarchy with a strong title and controlled secondary copy.</li>
+<li><code>/metaad</code>: social advertisement composition with one promise and one action.</li>
+<li><code>/adcreativecode</code>: product-led ad concept where code or output is the main evidence.</li>
+<li><code>/goldenhour</code>: warm natural light for human or field-project photography.</li>
+<li><code>/wideshot</code>: environmental context that shows where a system operates.</li>
+<li><code>/footwaretechpac</code>: manufacturing specification sheet. Use only for apparel or footwear work.</li>
+</ul>
+<h2>Portfolio cover recipe</h2>
+<p>Start with one shortcut, then add: the real tool name, the problem it solves, one visible input-to-output relationship, the ASL ink and gold palette, Archivo and Space Mono labels, flat lighting, no glossy sci-fi effects, no fake UI, and no unreadable text. Keep the image useful at both 16:9 and mobile card crops.</p>
+7:X
+e:X
+e:C
+0:{"buildId":"NzJiHbc2RYUYa3bZVL4UO","data":[{"rsc":["$","$1","c",{"children":[["$","article",null,{"className":"asl-page article-page shell","children":[["$","header",null,{"className":"article-header","children":[["$","p",null,{"className":"eyebrow","children":"Prompt"}],["$","h1",null,{"children":"Visual Direction Shortcut Index"}],["$","p",null,{"className":"article-summary","children":"A practical index for producing consistent diagrams, covers, and explanatory images with GPT Image."}],["$","div",null,{"className":"tag-row article-tags","children":[["$","span",null,{"className":"tag","children":"GPT Image"}],[["$","span","Visual Direction",{"className":"tag","children":"Visual Direction"}],["$","span","GPT Image",{"className":"tag","children":"GPT Image"}],["$","span","Engineering",{"className":"tag","children":"Engineering"}]]]}]]}],["$","div",null,{"className":"article-body","dangerouslySetInnerHTML":{"__html":"$2"}}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,"$L8","$L9","$La"]}],"isPartial":"$@b","staleTime":"$7","varyParams":null},{"rsc":"$Lc","isPartial":"$@d","staleTime":"$7","varyParams":"$e"},{"rsc":"$Lf","isPartial":"$@10","staleTime":"$7","varyParams":"$e"}],"isUpgradeableISRFallback":false,"a":"$@11","rootVaryParams":null,"needsRuntimeRequest":"$@12"}
+13:I[97367,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"ViewportBoundary"]
+14:I[97367,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"MetadataBoundary"]
+15:I[27201,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"IconMark"]
+16:I[39756,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"default"]
+17:I[37457,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"default"]
+5:null
+8:["$","$L13",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}]
+9:["$","div",null,{"hidden":true,"children":["$","$L14",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Visual Direction Shortcut Index"}],["$","meta","1",{"name":"description","content":"A practical index for producing consistent diagrams, covers, and explanatory images with GPT Image."}],["$","link","2",{"rel":"author","href":"https://ahmed-ibrahim-asl.github.io/myPortflio/about/"}],["$","meta","3",{"name":"author","content":"Ahmed Asl"}],["$","meta","4",{"name":"creator","content":"Ahmed Asl"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","7",{"name":"category","content":"technology"}],["$","link","8",{"rel":"canonical","href":"https://ahmed-ibrahim-asl.github.io/myPortflio/prompts/visual-direction-index/"}],["$","meta","9",{"property":"og:title","content":"Visual Direction Shortcut Index | Ahmed Asl"}],["$","meta","10",{"property":"og:description","content":"A practical index for producing consistent diagrams, covers, and explanatory images with GPT Image."}],["$","meta","11",{"property":"og:url","content":"https://ahmed-ibrahim-asl.github.io/myPortflio/prompts/visual-direction-index/"}],["$","meta","12",{"property":"og:site_name","content":"Ahmed Asl"}],["$","meta","13",{"property":"og:locale","content":"en_US"}],["$","meta","14",{"property":"og:image","content":"https://ahmed-ibrahim-asl.github.io/myPortflio/opengraph-image.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Ahmed Asl, IoT & Embedded Systems Engineer"}],["$","meta","18",{"property":"og:type","content":"website"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"Visual Direction Shortcut Index | Ahmed Asl"}],["$","meta","21",{"name":"twitter:description","content":"A practical index for producing consistent diagrams, covers, and explanatory images with GPT Image."}],["$","meta","22",{"name":"twitter:image","content":"https://ahmed-ibrahim-asl.github.io/myPortflio/twitter-image.png"}],["$","link","23",{"rel":"icon","href":"/myPortflio/icon.svg?icon.0yv64dno9_oy9.svg","sizes":"any","type":"image/svg+xml"}],["$","$L15","24",{}]]}]}]}]
+a:["$","meta",null,{"name":"next-size-adjust","content":""}]
+c:["$","$1","c",{"children":[null,["$","$L16",null,{"parallelRouterKey":"children","template":["$","$L17",null,{}]}]]}]
+f:["$","$1","c",{"children":[null,["$","$L16",null,{"parallelRouterKey":"children","template":["$","$L17",null,{}]}]]}]
+12:true
+7:300
+7:C
+11:0
+b:"$undefined"
+d:"$undefined"
+10:"$undefined"
+6:"$undefined"

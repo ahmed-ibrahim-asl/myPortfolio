@@ -1,0 +1,100 @@
+1:"$Sreact.fragment"
+2:I[91591,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js","/myPortflio/_next/static/chunks/2fbwjvuhq1yt3.js"],"WritingIndex"]
+4:I[97367,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[97367,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"ViewportBoundary"]
+a:I[97367,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"MetadataBoundary"]
+3:T774,
+A project page shows the finished system. These field notes record the decisions
+behind it: commands, measurements, failed approaches, and checks that proved the
+result.
+
+## Topics I cover
+
+The archive focuses on work I can test and explain:
+
+- embedded systems, firmware, sensors, and connected-device architecture;
+- Linux, networking, and legal cybersecurity challenges;
+- Flutter interfaces for physical products;
+- robotics and control systems;
+- AI and machine-learning experiments with reproducible inputs and results.
+
+Some entries are short references. Longer walkthroughs include the environment,
+commands, expected output, failure modes, and files needed to repeat the work.
+
+## How I write a walkthrough
+
+A walkthrough should help the reader recognize the problem again. My longer
+articles follow a consistent structure:
+
+1. define the goal and constraints;
+2. record the environment and prerequisites;
+3. show the investigation or design process;
+4. explain the working solution;
+5. document common failure modes;
+6. finish with reusable checks or lessons.
+
+> A useful technical note gives the reader a method they can apply elsewhere.
+
+## Reproducible examples
+
+Commands appear in copyable terminal blocks:
+
+```bash
+ssh user@example-host -p 2220
+```
+
+I record versions, dependencies, configuration, and expected output when they
+change the result. Security articles stay within legal labs, owned systems, and
+defensive learning.
+
+## Series in progress
+
+The OverTheWire Bandit walkthrough covers Linux commands and problem-solving in
+a controlled challenge environment. The Learn With Me series develops practical
+foundations in Linux, Python, Dart and Flutter, and Git.
+
+The archive grows alongside active engineering and teaching work. If an entry
+helps another person verify a result or avoid a repeated mistake, it has served
+its purpose.8:X
+24:X
+24:C
+0:{"buildId":"NzJiHbc2RYUYa3bZVL4UO","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"asl-page asl-field-notes","children":[["$","section",null,{"className":"page-intro shell writing-intro asl-page-intro","children":[["$","p",null,{"className":"eyebrow","children":"Topic filtered view"}],["$","h1",null,{"className":"capitalize","children":"linux"}],["$","p",null,{"className":"page-lede","children":["Found ",1," ","note"," in this topic."]}]]}],["$","section",null,{"className":"shell page-section writing-index-section","children":["$","$L2",null,{"posts":[{"slug":"welcome-to-field-notes","title":"Engineering Field Notes: Methods and Tests","summary":"How I document embedded systems, Linux, cybersecurity, Flutter, and AI work so another engineer can reproduce the result.","category":"Notes","tags":["Engineering","Linux","Documentation"],"publishedAt":"2026-07-20","updatedAt":"2026-07-25","difficulty":"All levels","draft":false,"content":"$3","html":"","readingTime":2}]}]}]]}],[["$","script","script-0",{"src":"/myPortflio/_next/static/chunks/2fbwjvuhq1yt3.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Notes on linux"}],["$","meta","1",{"name":"description","content":"Read technical notes and tutorials about linux."}],["$","link","2",{"rel":"author","href":"https://ahmed-ibrahim-asl.github.io/myPortflio/about/"}],["$","meta","3",{"name":"author","content":"Ahmed Asl"}],"$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f"]}]}]}],"$L20"]}],"isPartial":"$@21","staleTime":"$8","varyParams":null},{"rsc":"$L22","isPartial":"$@23","staleTime":"$8","varyParams":"$24"},{"rsc":"$L25","isPartial":"$@26","staleTime":"$8","varyParams":"$24"},{"rsc":"$L27","isPartial":"$@28","staleTime":"$8","varyParams":"$24"}],"isUpgradeableISRFallback":false,"a":"$@29","rootVaryParams":null,"needsRuntimeRequest":"$@2a"}
+2b:I[27201,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"IconMark"]
+2c:I[39756,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"default"]
+2d:I[37457,["/myPortflio/_next/static/chunks/3dat-1lfo157j.js"],"default"]
+6:null
+b:["$","meta","4",{"name":"creator","content":"Ahmed Asl"}]
+c:["$","meta","5",{"name":"robots","content":"index, follow"}]
+d:["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}]
+e:["$","meta","7",{"name":"category","content":"technology"}]
+f:["$","link","8",{"rel":"canonical","href":"https://ahmed-ibrahim-asl.github.io/myPortflio/notes/topics/linux/"}]
+10:["$","meta","9",{"property":"og:title","content":"Notes on linux | Ahmed Asl"}]
+11:["$","meta","10",{"property":"og:description","content":"Read technical notes and tutorials about linux."}]
+12:["$","meta","11",{"property":"og:url","content":"https://ahmed-ibrahim-asl.github.io/myPortflio/notes/topics/linux/"}]
+13:["$","meta","12",{"property":"og:site_name","content":"Ahmed Asl"}]
+14:["$","meta","13",{"property":"og:locale","content":"en_US"}]
+15:["$","meta","14",{"property":"og:image","content":"https://ahmed-ibrahim-asl.github.io/myPortflio/opengraph-image.png"}]
+16:["$","meta","15",{"property":"og:image:width","content":"1200"}]
+17:["$","meta","16",{"property":"og:image:height","content":"630"}]
+18:["$","meta","17",{"property":"og:image:alt","content":"Ahmed Asl, IoT & Embedded Systems Engineer"}]
+19:["$","meta","18",{"property":"og:type","content":"website"}]
+1a:["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}]
+1b:["$","meta","20",{"name":"twitter:title","content":"Notes on linux | Ahmed Asl"}]
+1c:["$","meta","21",{"name":"twitter:description","content":"Read technical notes and tutorials about linux."}]
+1d:["$","meta","22",{"name":"twitter:image","content":"https://ahmed-ibrahim-asl.github.io/myPortflio/twitter-image.png"}]
+1e:["$","link","23",{"rel":"icon","href":"/myPortflio/icon.svg?icon.0yv64dno9_oy9.svg","sizes":"any","type":"image/svg+xml"}]
+1f:["$","$L2b","24",{}]
+20:["$","meta",null,{"name":"next-size-adjust","content":""}]
+22:["$","$1","c",{"children":[null,["$","$L2c",null,{"parallelRouterKey":"children","template":["$","$L2d",null,{}]}]]}]
+25:["$","$1","c",{"children":[null,["$","$L2c",null,{"parallelRouterKey":"children","template":["$","$L2d",null,{}]}]]}]
+27:["$","$1","c",{"children":[null,["$","$L2c",null,{"parallelRouterKey":"children","template":["$","$L2d",null,{}]}]]}]
+2a:true
+8:300
+8:C
+29:0
+21:"$undefined"
+23:"$undefined"
+26:"$undefined"
+28:"$undefined"
+7:"$undefined"
