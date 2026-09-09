@@ -1,0 +1,52 @@
+1:"$Sreact.fragment"
+2:I[22016,["/myPortflio/_next/static/chunks/2mxs03mvzrkex.js","/myPortflio/_next/static/chunks/0-_ic2hzfoeq8.js"],""]
+3:I[11812,["/myPortflio/_next/static/chunks/2mxs03mvzrkex.js","/myPortflio/_next/static/chunks/0-_ic2hzfoeq8.js"],"UnifiedToolsIndex"]
+4:I[97367,["/myPortflio/_next/static/chunks/2mxs03mvzrkex.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+9:I[97367,["/myPortflio/_next/static/chunks/2mxs03mvzrkex.js"],"ViewportBoundary"]
+a:I[97367,["/myPortflio/_next/static/chunks/2mxs03mvzrkex.js"],"MetadataBoundary"]
+8:X
+27:X
+27:C
+0:{"buildId":"zLWDpiUUyFPnaNIo9ukkv","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"asl-page asl-tools-register asl-tool-category-page","children":["$","div",null,{"className":"section shell asl-tool-category-shell","children":[["$","nav",null,{"className":"asl-tool-breadcrumb","aria-label":"Breadcrumb","children":[["$","$L2",null,{"href":"/tools/","children":"Tools"}],["$","span",null,{"aria-hidden":"true","children":"/"}],["$","span",null,{"aria-current":"page","children":"Workbenches"}]]}],["$","header",null,{"className":"asl-tool-category-header","children":[["$","p",null,{"className":"eyebrow","children":["Guided systems"," / ",6," ","tools"]}],["$","h1",null,{"children":"Workbenches"}],["$","p",null,{"children":"Larger, guided environments for planning, simulation, code generation, and technical practice."}]]}],["$","section",null,{"className":"asl-tool-category-catalog","aria-label":"Workbenches tools","children":["$","$L3",null,{"items":[{"id":"gradify","title":"Gradify: GPA & Graduation Planner","summary":"Calculate university GPA, plan a target, and explore grading scales. Includes Delta engineering transcript import, prerequisite checks, semester planning, and PDF reports.","href":"/tools/gradify/","category":"Workbenches","kind":"Workbench","tags":["GRADIFY","Delta tested"],"coverImage":"/myPortflio/media/tools/tool-gradify.svg","icon":"GRADIFY"},{"id":"ai-script-generator","title":"AI Script Generator","summary":"A guided, step-by-step builder that generates a complete, runnable Python training project - not a snippet - for YOLO detection, sensor time-series, and edge image classification.","href":"/tools/ai-script-generator/","category":"Workbenches","kind":"Workbench","tags":["AI_GEN","Most substantial"],"coverImage":"/myPortflio/media/tools/tool-ai-script-generator-v4.png","icon":"AI_GEN"},{"id":"security-command-builder","title":"Security Mission","summary":"Build, validate, and learn security-tool commands for authorized labs - 22/22 eCPPT objectives covered, with safe shell quoting and secret redaction built in.","href":"/tools/security-command-builder/","category":"Workbenches","kind":"Workbench","tags":["SECURITY_CLI","Most substantial"],"coverImage":"/myPortflio/media/tools/tool-security-mission-v4.png","icon":"SECURITY_CLI"},{"id":"pid-simulator","title":"Interactive PID Simulator","summary":"Tune proportional, integral, and derivative gains with a live physics loop to visualize system response.","href":"/tools/pid-simulator/","category":"Workbenches","kind":"Workbench","tags":["CONTROL_SYS","Interactive"],"coverImage":"/myPortflio/media/tools/tool-pid-simulator-v4.png","icon":"CONTROL_SYS"},{"id":"sensor-code-generator","title":"Sensor Code Generator","summary":"Generate Arduino, ESP-IDF, and PlatformIO boilerplate for common sensors to jumpstart hardware bring-up.","href":"/tools/sensor-code-generator/","category":"Workbenches","kind":"Workbench","tags":["CODE_GEN","Interactive"],"coverImage":"/myPortflio/media/tools/tool-sensor-code-generator-v4.png","icon":"CODE_GEN"},{"id":"battery-estimator","title":"ESP32 Battery Life & Power Estimator","summary":"Calculate ESP32 battery life from sleep and active duty cycles. Estimates total runtime and average current draw.","href":"/tools/battery-estimator/","category":"Workbenches","kind":"Workbench","tags":["BATTERY_SYS","Interactive"],"coverImage":"/myPortflio/media/tools/tool-battery-estimator-v2.png","icon":"BATTERY_SYS"}],"categoryTitle":"Workbenches"}]}]]}]}],[["$","script","script-0",{"src":"/myPortflio/_next/static/chunks/0-_ic2hzfoeq8.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Workbenches Engineering Tools"}],"$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22"]}]}]}],"$L23"]}],"isPartial":"$@24","staleTime":"$8","varyParams":null},{"rsc":"$L25","isPartial":"$@26","staleTime":"$8","varyParams":"$27"},{"rsc":"$L28","isPartial":"$@29","staleTime":"$8","varyParams":"$27"},{"rsc":"$L2a","isPartial":"$@2b","staleTime":"$8","varyParams":"$27"}],"isUpgradeableISRFallback":false,"a":"$@2c","rootVaryParams":null,"needsRuntimeRequest":"$@2d"}
+2e:I[27201,["/myPortflio/_next/static/chunks/2mxs03mvzrkex.js"],"IconMark"]
+2f:I[39756,["/myPortflio/_next/static/chunks/2mxs03mvzrkex.js"],"default"]
+30:I[37457,["/myPortflio/_next/static/chunks/2mxs03mvzrkex.js"],"default"]
+6:null
+b:["$","meta","1",{"name":"description","content":"Larger, guided environments for planning, simulation, code generation, and technical practice."}]
+c:["$","link","2",{"rel":"author","href":"https://ahmed-ibrahim-asl.github.io/myPortflio/about/"}]
+d:["$","meta","3",{"name":"author","content":"Ahmed Asl"}]
+e:["$","meta","4",{"name":"creator","content":"Ahmed Asl"}]
+f:["$","meta","5",{"name":"robots","content":"index, follow"}]
+10:["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}]
+11:["$","meta","7",{"name":"category","content":"technology"}]
+12:["$","link","8",{"rel":"canonical","href":"https://ahmed-ibrahim-asl.github.io/myPortflio/tools/category/workbenches/"}]
+13:["$","meta","9",{"property":"og:title","content":"Workbenches Engineering Tools | Ahmed Asl"}]
+14:["$","meta","10",{"property":"og:description","content":"Larger, guided environments for planning, simulation, code generation, and technical practice."}]
+15:["$","meta","11",{"property":"og:url","content":"https://ahmed-ibrahim-asl.github.io/myPortflio/tools/category/workbenches/"}]
+16:["$","meta","12",{"property":"og:site_name","content":"Ahmed Asl"}]
+17:["$","meta","13",{"property":"og:locale","content":"en_US"}]
+18:["$","meta","14",{"property":"og:image","content":"https://ahmed-ibrahim-asl.github.io/myPortflio/opengraph-image.png"}]
+19:["$","meta","15",{"property":"og:image:width","content":"1200"}]
+1a:["$","meta","16",{"property":"og:image:height","content":"630"}]
+1b:["$","meta","17",{"property":"og:image:alt","content":"Ahmed Asl, IoT & Embedded Systems Engineer"}]
+1c:["$","meta","18",{"property":"og:type","content":"website"}]
+1d:["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}]
+1e:["$","meta","20",{"name":"twitter:title","content":"Workbenches Engineering Tools | Ahmed Asl"}]
+1f:["$","meta","21",{"name":"twitter:description","content":"Larger, guided environments for planning, simulation, code generation, and technical practice."}]
+20:["$","meta","22",{"name":"twitter:image","content":"https://ahmed-ibrahim-asl.github.io/myPortflio/twitter-image.png"}]
+21:["$","link","23",{"rel":"icon","href":"/myPortflio/icon.svg?icon.0yv64dno9_oy9.svg","sizes":"any","type":"image/svg+xml"}]
+22:["$","$L2e","24",{}]
+23:["$","meta",null,{"name":"next-size-adjust","content":""}]
+25:["$","$1","c",{"children":[null,["$","$L2f",null,{"parallelRouterKey":"children","template":["$","$L30",null,{}]}]]}]
+28:["$","$1","c",{"children":[null,["$","$L2f",null,{"parallelRouterKey":"children","template":["$","$L30",null,{}]}]]}]
+2a:["$","$1","c",{"children":[null,["$","$L2f",null,{"parallelRouterKey":"children","template":["$","$L30",null,{}]}]]}]
+2d:true
+8:300
+8:C
+2c:0
+24:"$undefined"
+26:"$undefined"
+29:"$undefined"
+2b:"$undefined"
+7:"$undefined"

@@ -1,6 +1,6 @@
-:HL["/myPortflio/_next/static/chunks/3juwl-if04qo4.css","style"]
+:HL["/myPortflio/_next/static/chunks/2qqnq666vh-hf.css","style"]
 :HL["/myPortflio/_next/static/chunks/3pj675dm3kggz.css","style"]
-:HL["/myPortflio/_next/static/chunks/1z_eer_54pt0l.css","style"]
+:HL["/myPortflio/_next/static/chunks/3v-ogrxk9a2ev.css","style"]
 :HL["/myPortflio/_next/static/media/280fac012b00b901-s.p.3ihiqn4pviisd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/media/5ad8fdb5805e9b4a-s.p.0-uv4l43gdmt7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/media/610e555290c4abf9-s.p.2-ung-zkeya_q.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -13,5 +13,5 @@
 :HL["/myPortflio/_next/static/media/dc0d9adbac686440-s.p.3cik_s2si-ft-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/media/dda2c5944c1d02d1-s.p.0af27si8jwinc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/chunks/2l1_dq_x-4mlo.css","style"]
-:HL["/myPortflio/_next/static/chunks/4311ms6svbgsy.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"work","param":null,"prefetchHints":4160,"slots":{"children":{"name":"category","param":{"type":"d","key":"video-media","siblings":["recognition","ui-preview"]},"prefetchHints":4192,"slots":{"children":{"name":"project","param":{"type":"d","key":"dragons-battle-promo","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"oVsEiSklzKCCt2vUm7Ihl"}
+:HL["/myPortflio/_next/static/chunks/1z99lxp7ue12a.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"work","param":null,"prefetchHints":4160,"slots":{"children":{"name":"category","param":{"type":"d","key":"video-media","siblings":["recognition","ui-preview"]},"prefetchHints":4192,"slots":{"children":{"name":"project","param":{"type":"d","key":"dragons-battle-promo","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}},"staleTime":300,"buildId":"zLWDpiUUyFPnaNIo9ukkv"}
