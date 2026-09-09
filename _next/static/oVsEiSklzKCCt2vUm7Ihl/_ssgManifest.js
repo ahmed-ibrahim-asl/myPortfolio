@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fnotes\u002F[slug]","\u002Fnotes\u002Flibrary\u002F[slug]","\u002Fnotes\u002Ftopics\u002F[topic]","\u002Fprompts\u002F[slug]","\u002Ftools\u002F[slug]","\u002Fwork\u002F[category]","\u002Fwork\u002F[category]\u002F[project]","\u002Fwriting\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
