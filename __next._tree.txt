@@ -1,6 +1,6 @@
-:HL["/myPortflio/_next/static/chunks/2qqnq666vh-hf.css","style"]
+:HL["/myPortflio/_next/static/chunks/3w232e_62y_9z.css","style"]
 :HL["/myPortflio/_next/static/chunks/3pj675dm3kggz.css","style"]
-:HL["/myPortflio/_next/static/chunks/0qj6xyvdna9sy.css","style"]
+:HL["/myPortflio/_next/static/chunks/1uzsfjy8xh4bw.css","style"]
 :HL["/myPortflio/_next/static/media/280fac012b00b901-s.p.3ihiqn4pviisd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/media/5ad8fdb5805e9b4a-s.p.0-uv4l43gdmt7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/media/610e555290c4abf9-s.p.2-ung-zkeya_q.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -19,4 +19,4 @@
 :HL["/myPortflio/media/tools/tool-gradify.svg","image"]
 :HL["/myPortflio/media/tools/tool-ai-script-generator-v4.png","image"]
 :HL["/myPortflio/media/tools/tool-security-mission-v4.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"yywOzPKcM9e9r9COIGgxx"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"3YMnOMMdtlUOnb7atBwci"}
