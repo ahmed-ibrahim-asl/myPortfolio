@@ -18,7 +18,7 @@
     <path d="M-14 -10 L14 -10"/>
     <path d="M-14 6 L6 6"/>
   </g></g>
-  <text x="48" y="56" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" letter-spacing="1" fill="#55d5d8" font-weight="700">UI/UX & DESIGN</text>
+  <text x="48" y="56" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" letter-spacing="1" fill="#55d5d8" font-weight="700">UI/UX &amp; DESIGN</text>
   <text x="48" y="552" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="30" fill="#eef1ff" font-weight="700">Dad4Hire Mobile App UI</text>
   <text x="912" y="552" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="26" fill="#55d5d8" text-anchor="end">&#8599;</text>
 </svg>
