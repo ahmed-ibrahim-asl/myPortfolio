@@ -1,6 +1,6 @@
 :HL["/myPortflio/_next/static/chunks/2qqnq666vh-hf.css","style"]
 :HL["/myPortflio/_next/static/chunks/3pj675dm3kggz.css","style"]
-:HL["/myPortflio/_next/static/chunks/3v-ogrxk9a2ev.css","style"]
+:HL["/myPortflio/_next/static/chunks/0qj6xyvdna9sy.css","style"]
 :HL["/myPortflio/_next/static/media/280fac012b00b901-s.p.3ihiqn4pviisd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/media/5ad8fdb5805e9b4a-s.p.0-uv4l43gdmt7.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/media/610e555290c4abf9-s.p.2-ung-zkeya_q.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -13,4 +13,4 @@
 :HL["/myPortflio/_next/static/media/dc0d9adbac686440-s.p.3cik_s2si-ft-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/media/dda2c5944c1d02d1-s.p.0af27si8jwinc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortflio/_next/static/chunks/2yhm0vdeb7-0o.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"tools","param":null,"prefetchHints":4160,"slots":{"children":{"name":"slug","param":{"type":"d","key":"speed-distance-time-calculator","siblings":["ai-script-generator","battery-estimator","category","gradify","pid-simulator","security-command-builder","sensor-code-generator"]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"zLWDpiUUyFPnaNIo9ukkv"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"tools","param":null,"prefetchHints":4160,"slots":{"children":{"name":"slug","param":{"type":"d","key":"speed-distance-time-calculator","siblings":["ai-script-generator","battery-estimator","category","gradify","pid-simulator","security-command-builder","sensor-code-generator"]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"yywOzPKcM9e9r9COIGgxx"}
