@@ -19,4 +19,4 @@
 :HL["/myPortfolio/media/tools/tool-gradify.svg","image"]
 :HL["/myPortfolio/media/tools/tool-ai-script-generator-v4.png","image"]
 :HL["/myPortfolio/media/tools/tool-security-mission-v4.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"N9tzr7SpdHHQiJZkVMgPd"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"UttFxLlCtczjjCNujAOLX"}
