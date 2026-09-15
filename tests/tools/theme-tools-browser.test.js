@@ -40,7 +40,7 @@ test("theme choice persists and tool categories stay focused in both themes", { 
       theme: "dark",
       colorScheme: "dark",
       background: "rgb(11, 13, 17)",
-      categoryCount: 10,
+      categoryCount: 6,
       toggleBeforeContact: true
     });
 
@@ -59,7 +59,7 @@ test("theme choice persists and tool categories stay focused in both themes", { 
         await page.evaluate((nextTheme) => {
           localStorage.setItem("asl-theme-preference", nextTheme);
         }, theme);
-        for (const route of ["/tools/", "/tools/category/resistors/"]) {
+        for (const route of ["/tools/", "/tools/category/circuit-design/"]) {
           await page.goto(`${baseUrl}${route}`, { waitUntil: "networkidle0" });
           assert.equal(
             await page.evaluate(() => document.documentElement.dataset.theme),
@@ -98,9 +98,17 @@ test("theme choice persists and tool categories stay focused in both themes", { 
     assert.equal(mobileToggle.labelVisible, true);
 
     await page.goto(`${baseUrl}/tools/category/resistors/`, { waitUntil: "networkidle0" });
-    await page.type("input[type='search']", "battery");
-    await page.waitForFunction(() => document.querySelectorAll(".unified-tool-card").length === 0);
-    assert.match(await page.$eval(".calculator-results-count", (node) => node.textContent), /0 tools/i);
+    assert.equal(await page.$eval("h1", (node) => node.textContent), "Circuit Design");
+    assert.deepEqual(
+      await page.$$eval(".asl-tool-category-catalog section > h2", (nodes) => nodes.map((node) => node.textContent)),
+      [
+        "Fundamentals",
+        "Resistors & Networks",
+        "Timing, Filters & Analog Design",
+        "Control Design",
+        "Power Conversion & Supplies"
+      ]
+    );
   } finally {
     await browser.close();
   }

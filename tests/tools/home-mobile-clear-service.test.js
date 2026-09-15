@@ -129,12 +129,14 @@ test('mobile homepage leads with a proportional clear-service identity while des
       mobileIdentityHidden: getComputedStyle(document.querySelector('.home-mobile-identity')).display === 'none',
       portraitVisible: getComputedStyle(document.querySelector('.home-portrait')).display !== 'none',
       portraitLoaded: document.querySelector('.home-portrait img')?.complete && document.querySelector('.home-portrait img')?.naturalWidth > 0,
+      mobileIdentityAlt: document.querySelector('.home-mobile-identity img')?.alt,
       h1Count: document.querySelectorAll('h1').length,
     }));
     assert.equal(desktop.title, 'Break the problem down.');
     assert.equal(desktop.mobileIdentityHidden, true);
     assert.equal(desktop.portraitVisible, true);
     assert.equal(desktop.portraitLoaded, true);
+    assert.equal(desktop.mobileIdentityAlt, 'Ahmed Ibrahim Asl');
     assert.equal(desktop.h1Count, 1);
   } finally {
     await browser.close();

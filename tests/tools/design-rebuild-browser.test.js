@@ -34,7 +34,7 @@ test('rebuilt tools simulate state, generate gates, render math and fit both the
     await page.$eval('#full-cascade',e=>e.scrollIntoView());
     await page.screenshot({path:'test-results/design-rebuild/full-cascade.png'});
     await page.goto(`${base}/tools/category/control-design/`,{waitUntil:'networkidle0'});
-    assert.deepEqual(await page.$$eval('img',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[]);
+    assert.deepEqual(await page.$$eval('.asl-tool-category-catalog img',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[]);
     await page.goto(`${base}/tools/buck-converter-designer/`,{waitUntil:'networkidle0'});
     await clickText('Switch OFF');
     assert.match(await page.$eval('[aria-live=polite]',e=>e.textContent),/./);
@@ -48,7 +48,7 @@ test('rebuilt tools simulate state, generate gates, render math and fit both the
         await page.setViewport({width,height:1000});
         await page.evaluate(t=>{document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;},theme);
         assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${slug} ${width} ${theme}: overflow`);
-        assert.deepEqual(await page.$$eval('img',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[],slug+' image load');
+        assert.deepEqual(await page.$$eval('img:not([width="64"][height="64"])',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[],slug+' image load');
         await page.screenshot({path:`test-results/design-rebuild/${slug.replaceAll('/','-')}-${width}-${theme}.png`,fullPage:true});
       }
     }

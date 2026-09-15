@@ -7,7 +7,7 @@ export function ToolPortfolioBridge() {
   return (
     <aside className={styles.bridge} aria-label="About the tool creator">
       <div className={styles.identity}>
-        <img src={profile.portrait} alt="Ahmed Asl" width="64" height="64" loading="lazy" />
+        <img src={profile.portrait} alt={profile.name} width="64" height="64" loading="lazy" />
         <div><span className={styles.label}>Behind the workbench</span><Link href="/about/">{profile.name}</Link><p>{profile.role}</p></div>
       </div>
       <div className={styles.copy}>

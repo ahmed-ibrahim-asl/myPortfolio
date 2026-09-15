@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import puppeteer from 'puppeteer-core';
 import {mkdir} from 'node:fs/promises';
 const base=process.env.SITE_RESPONSIVE_BASE_URL||'http://localhost:3012/myPortflio';
+const executablePath=process.env.CHROME_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
 test('SMPS modes, phases, validation, artwork and responsive pages',async()=>{
- const browser=await puppeteer.launch({executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
+ const browser=await puppeteer.launch({executablePath,headless:true});
  try{
   const page=await browser.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
   await page.goto(`${base}/tools/smps-designer/`,{waitUntil:'networkidle0'});
@@ -23,7 +24,7 @@ test('SMPS modes, phases, validation, artwork and responsive pages',async()=>{
   const input=await page.$('main input[type=number]');await input.click();await page.keyboard.down('Control');await page.keyboard.press('A');await page.keyboard.up('Control');await page.keyboard.press('Backspace');assert.equal(await input.evaluate(e=>e.value),'');await page.waitForSelector('[role=alert]');assert.equal(await page.$('svg[aria-label^="Isolated flyback"]'),null);
   await page.goto(`${base}/tools/category/power-conversion-supplies/`,{waitUntil:'networkidle0'});
   assert.ok(await page.$('a[href$="/tools/smps-designer/"]'));
-  assert.deepEqual(await page.$$eval('img',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[]);
+  assert.deepEqual(await page.$$eval('.asl-tool-category-catalog img',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[]);
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}
 });

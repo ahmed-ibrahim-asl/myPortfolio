@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="home-hero-copy">
           <p className="eyebrow"><span>001</span> SYSTEMS ENGINEER / EGYPT</p>
           <div className="home-mobile-identity">
-            <Image src={profile.portrait} alt="" width={112} height={112} sizes="(max-width: 560px) 112px, 84px" loading="eager" />
+            <Image src={profile.portrait} alt={profile.name} width={112} height={112} sizes="(max-width: 560px) 112px, 84px" loading="eager" />
             <div className="home-mobile-identity-copy">
               <strong>{profile.name}</strong>
               <small>{profile.role}</small>
