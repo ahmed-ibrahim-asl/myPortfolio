@@ -48,7 +48,6 @@ export default async function ToolCategoryPage({ params }: { params: Promise<{ s
           <p>{category.intro}</p>
         </header>
         <section className="asl-tool-category-catalog" aria-label={`${category.title} tools`}>
-          {category.slug==='circuit-design'&&<p style={{marginBottom:28}}><Link href="/tools/smps-designer/">Looking for power supplies? Explore the new SMPS Design tool →</Link></p>}
           {category.slug === "circuit-design" ? <div className={styles.groups}>
             {[...new Set(items.map(item => item.group))].map(group => <section key={group}>
               <h2>{group}</h2>

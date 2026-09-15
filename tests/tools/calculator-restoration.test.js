@@ -4,23 +4,25 @@ import { existsSync, readFileSync } from "node:fs";
 import { readdir } from "node:fs/promises";
 
 const catalogUrl = new URL("../../data/calculators.js", import.meta.url);
+const designCatalogUrl = new URL("../../data/design-tools.js", import.meta.url);
 const registryUrl = new URL("../../components/tools/calculators/index.js", import.meta.url);
 const visualRegistryUrl = new URL("../../data/calculator-visuals.js", import.meta.url);
 
-test("all 36 completed calculators are present and registered", async () => {
+test("all completed calculators and custom design tools are present", async () => {
   assert.equal(existsSync(catalogUrl), true, "calculator catalog must be restored");
   assert.equal(existsSync(registryUrl), true, "calculator component registry must be restored");
 
   const { calculators } = await import(catalogUrl.href);
+  const { designTools } = await import(designCatalogUrl.href);
   const registrySource = readFileSync(registryUrl, "utf8");
   const componentFiles = (
     await readdir(new URL("../../components/tools/calculators/", import.meta.url))
   ).filter((name) => name.endsWith(".js") && name !== "index.js");
 
-  assert.equal(calculators.length, 36);
-  assert.equal(new Set(calculators.map(({ slug }) => slug)).size, 36);
+  assert.equal(calculators.length, componentFiles.length + designTools.length);
+  assert.equal(new Set(calculators.map(({ slug }) => slug)).size, calculators.length);
   assert.equal(componentFiles.length, 36);
-  for (const { slug } of calculators) {
+  for (const { slug } of calculators.filter(({ custom }) => !custom)) {
     assert.match(registrySource, new RegExp(`[\"]${slug}[\"]\\s*:`), `${slug} must be registered`);
   }
 });
@@ -37,7 +39,10 @@ test("every calculator resolves to its own supported visual contract", async () 
   assert.deepEqual(calculatorCategories, [
     "Fundamentals",
     "Resistors",
-    "Timing & Filters",
+    "Circuit Design",
+    "Control Design",
+    "Power Conversion & Supplies",
+    "Text & Encoding",
     "Conversions",
     "Number Systems",
     "Physics & Math"

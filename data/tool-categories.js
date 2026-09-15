@@ -9,40 +9,16 @@ export const toolCategories = Object.freeze([
     intro: "Larger, guided environments for planning, simulation, code generation, and technical practice."
   }),
   Object.freeze({
-    slug: "fundamentals",
-    title: "Fundamentals",
-    label: "Circuit essentials",
-    intro: "Everyday voltage, current, resistance, LED, divider, and battery calculations."
-  }),
-  Object.freeze({
-    slug: "resistors",
-    title: "Resistors",
-    label: "Values and networks",
-    intro: "Decode resistor bands and solve series or parallel resistor networks quickly."
-  }),
-  Object.freeze({
     slug: "circuit-design",
     title: "Circuit Design",
     label: "Interactive schematics",
-    intro: "Choose a circuit, set its values, and explore its behavior. Each designer opens on its own page."
+    intro: "Move from electrical fundamentals and resistor networks to timing, control logic, analog circuits, and practical power supplies."
   }),
   Object.freeze({
     slug: "text-encoding",
     title: "Text & Encoding",
     label: "Letters and representations",
     intro: "Explore letter shifts and translate ASCII text to and from hexadecimal."
-  }),
-  Object.freeze({
-    slug: "control-design",
-    title: "Control Design",
-    label: "Memory and state",
-    intro: "Translate a control requirement into flip-flops, registers, counters, and visual state behavior."
-  }),
-  Object.freeze({
-    slug: "power-conversion-supplies",
-    title: "Power Conversion & Supplies",
-    label: "Low-voltage power design",
-    intro: "Estimate rectifier ripple, regulator stability, and switching-converter component values for low-voltage systems."
   }),
   Object.freeze({
     slug: "conversions",
@@ -64,15 +40,48 @@ export const toolCategories = Object.freeze([
   })
 ]);
 
+const circuitCategoryAliases = Object.freeze([
+  "fundamentals",
+  "resistors",
+  "timing-filters",
+  "control-design",
+  "power-conversion-supplies"
+]);
+
+const circuitCategoryTitles = Object.freeze([
+  "Fundamentals",
+  "Resistors",
+  "Circuit Design",
+  "Control Design",
+  "Power Conversion & Supplies"
+]);
+
+const circuitGroupOrder = Object.freeze([
+  "Fundamentals",
+  "Resistors & Networks",
+  "Timing, Filters & Analog Design",
+  "Control Design",
+  "Power Conversion & Supplies"
+]);
+
+function getCircuitGroup(category) {
+  if (category === "Fundamentals") return "Fundamentals";
+  if (category === "Resistors") return "Resistors & Networks";
+  if (category === "Control Design") return "Control Design";
+  if (category === "Power Conversion & Supplies") return "Power Conversion & Supplies";
+  return "Timing, Filters & Analog Design";
+}
+
 export function getToolCategory(slug) {
-  return toolCategories.find((category) => category.slug === (slug === 'timing-filters' ? 'circuit-design' : slug));
+  const canonicalSlug = circuitCategoryAliases.includes(slug) ? "circuit-design" : slug;
+  return toolCategories.find((category) => category.slug === canonicalSlug);
 }
 
 export function getToolCategoryItems(slug) {
   const category = getToolCategory(slug);
   if (!category) return [];
 
-  if (slug === "workbenches") {
+  if (category.slug === "workbenches") {
     return engineeringTools.map((tool) => ({
       id: tool.id,
       title: tool.title,
@@ -87,8 +96,11 @@ export function getToolCategoryItems(slug) {
     }));
   }
 
-  return calculators
-    .filter((tool) => tool.category === category.title)
+  const matchingTools = category.slug === "circuit-design"
+    ? calculators.filter((tool) => circuitCategoryTitles.includes(tool.category))
+    : calculators.filter((tool) => tool.category === category.title);
+
+  return matchingTools
     .map((tool) => ({
       id: tool.slug,
       title: tool.title,
@@ -98,8 +110,12 @@ export function getToolCategoryItems(slug) {
       kind: "Calculator",
       tags: [...(tool.tags ?? [])],
       visualKey: tool.visualKey,
-      group: tool.group
-    }));
+      group: category.slug === "circuit-design" ? getCircuitGroup(tool.category) : tool.group
+    }))
+    .sort((first, second) => {
+      if (category.slug !== "circuit-design") return 0;
+      return circuitGroupOrder.indexOf(first.group) - circuitGroupOrder.indexOf(second.group);
+    });
 }
 
 export function getToolCategorySummaries() {
@@ -114,5 +130,8 @@ export function getToolCategorySummaries() {
 }
 
 export function getToolCategoryStaticParams() {
-  return [...toolCategories.map(({ slug }) => ({ slug })), {slug:'timing-filters'}];
+  return [
+    ...toolCategories.map(({ slug }) => ({ slug })),
+    ...circuitCategoryAliases.map((slug) => ({ slug }))
+  ];
 }

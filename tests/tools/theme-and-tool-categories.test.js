@@ -59,25 +59,61 @@ test("the pre-hydration initializer applies and restores only a valid saved them
   });
 });
 
-test("the tools library exposes ten destinations and preserves the old timing URL", () => {
+test("the tools library exposes six destinations and consolidates old circuit URLs", () => {
   assert.deepEqual(
     toolCategories.map(({ slug }) => slug),
     [
       "workbenches",
-      "fundamentals",
-      "resistors",
       "circuit-design",
       "text-encoding",
-      "control-design",
-      "power-conversion-supplies",
       "conversions",
       "number-systems",
       "physics-math"
     ]
   );
-  assert.equal(new Set(toolCategories.map(({ slug }) => slug)).size, 10);
-  assert.equal(getToolCategory("timing-filters")?.title, "Circuit Design");
+  assert.equal(new Set(toolCategories.map(({ slug }) => slug)).size, 6);
+  for (const slug of [
+    "fundamentals",
+    "resistors",
+    "timing-filters",
+    "control-design",
+    "power-conversion-supplies"
+  ]) {
+    assert.equal(getToolCategory(slug)?.slug, "circuit-design", slug);
+  }
   assert.equal(getToolCategory("not-a-category"), undefined);
+});
+
+test("Circuit Design contains every circuit class once in the approved section order", () => {
+  const items = getToolCategoryItems("circuit-design");
+  const circuitCategories = [
+    "Fundamentals",
+    "Resistors",
+    "Circuit Design",
+    "Control Design",
+    "Power Conversion & Supplies"
+  ];
+  const expectedIds = calculators
+    .filter(({ category }) => circuitCategories.includes(category))
+    .map(({ slug }) => slug)
+    .sort();
+
+  assert.deepEqual(items.map(({ id }) => id).sort(), expectedIds);
+  assert.equal(new Set(items.map(({ id }) => id)).size, items.length);
+  assert.deepEqual(
+    [...new Set(items.map(({ group }) => group))],
+    [
+      "Fundamentals",
+      "Resistors & Networks",
+      "Timing, Filters & Analog Design",
+      "Control Design",
+      "Power Conversion & Supplies"
+    ]
+  );
+
+  for (const slug of ["fundamentals", "resistors", "timing-filters", "control-design", "power-conversion-supplies"]) {
+    assert.deepEqual(getToolCategoryItems(slug), items, slug);
+  }
 });
 
 test("every current tool belongs to exactly one category", () => {
@@ -97,7 +133,7 @@ test("every current tool belongs to exactly one category", () => {
 test("category summaries provide useful counts and examples for the hub", () => {
   const summaries = getToolCategorySummaries();
 
-  assert.equal(summaries.length, 10);
+  assert.equal(summaries.length, 6);
   assert.deepEqual(
     summaries.map(({ count }) => count),
     toolCategories.map(category => getToolCategoryItems(category.slug).length)
@@ -111,12 +147,20 @@ test("category summaries provide useful counts and examples for the hub", () => 
 test("static category params cover every destination", () => {
   assert.deepEqual(
     getToolCategoryStaticParams(),
-    [...toolCategories.map(({ slug }) => ({ slug })), {slug:"timing-filters"}]
+    [
+      ...toolCategories.map(({ slug }) => ({ slug })),
+      { slug: "fundamentals" },
+      { slug: "resistors" },
+      { slug: "timing-filters" },
+      { slug: "control-design" },
+      { slug: "power-conversion-supplies" }
+    ]
   );
 });
 
 test("category search cannot surface tools from another category", () => {
-  const resistorTools = getToolCategoryItems("resistors");
+  const resistorTools = getToolCategoryItems("circuit-design")
+    .filter(({ category }) => category === "Resistors");
 
   assert.deepEqual(
     filterToolItems(resistorTools, "series").map(({ id }) => id),
