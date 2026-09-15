@@ -7,13 +7,13 @@
 - [Home](https://ahmed-ibrahim-asl.github.io/myPortfolio/): Overview of Ahmed's embedded systems, IoT, robotics, research, teaching work, and free engineering tools.
 - [Work](https://ahmed-ibrahim-asl.github.io/myPortfolio/work/): Embedded firmware, robotics, IoT telemetry, secure hardware, OTA management, Flutter, and interface projects.
 - [About](https://ahmed-ibrahim-asl.github.io/myPortfolio/about/): Experience, university teaching, technical capabilities, publications, CV, and workshops.
-- [Writing](https://ahmed-ibrahim-asl.github.io/myPortfolio/writing/): Engineering field notes, Linux and cybersecurity walkthroughs, and the Learn With Me series.
+- [Engineering notes](https://ahmed-ibrahim-asl.github.io/myPortfolio/notes/): Published engineering field notes, Linux and cybersecurity walkthroughs, and the Learn With Me series.
 - [Tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/): Searchable electronics calculators and guided engineering workbenches.
 - [Contact](https://ahmed-ibrahim-asl.github.io/myPortfolio/contact/): Email and professional profiles.
 
 ## Free engineering tools
 
-- [Electronics calculators](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/#calculators): 36 interactive calculators for circuits, component values, timing, conversions, number systems, and engineering math.
+- [Circuit design tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/circuit-design/): Interactive calculators for circuits, component values, timing, power supplies, and control logic. Models, assumptions, and limitations are explained on individual tool pages.
 - [Model Mission](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/ai-script-generator/): Guided computer vision project builder with YOLO26, YOLOE open-vocabulary detection, monocular depth, and U-Net segmentation examples.
 - [Sensor Code Generator](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/sensor-code-generator/): Arduino, ESP-IDF, and PlatformIO code for sensors, I2C, SPI, UART, Bluetooth, Wi-Fi, ESP-NOW, and other embedded interfaces.
 - [PID Simulator](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/pid-simulator/): Interactive proportional, integral, and derivative controller tuning.
@@ -40,4 +40,4 @@
 - [Google Scholar](https://scholar.google.com/citations?user=o72gFwkAAAAJ&hl=en)
 - [TryHackMe](https://tryhackme.com/p/MRH0N3Y)
 - [Behance](https://www.behance.net/ahmedassal3)
-- [YouTube](https://www.youtube.com/@ahmedassal8710)
+- [YouTube](https://www.youtube.com/@ahmed-ibrahim-asl)
