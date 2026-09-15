@@ -48,7 +48,7 @@ export function ToolSearchHook({ slug }: ToolSearchHookProps) {
           <p className={styles.eyebrow}>Design guide</p>
           <h2 id={headingId}>Use the result with engineering context</h2>
         </div>
-        <p className={styles.reviewed}>Technical content reviewed <time dateTime={hook.reviewedOn}>September 15, 2026</time></p>
+        <p className={styles.reviewed}>Technical content reviewed <time dateTime={hook.reviewedOn}>{new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeZone: "UTC" }).format(new Date(`${hook.reviewedOn}T00:00:00Z`))}</time></p>
       </header>
 
       <div className={styles.detailGrid}>
@@ -98,7 +98,8 @@ export function ToolSearchSchema({ slug }: ToolSearchHookProps) {
   if (!hook) return null;
 
   const url = absoluteUrl(`/tools/${slug}/`);
-  return (
+  const toolsUrl = absoluteUrl("/tools/");
+  return <>
     <JsonLd data={{
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -113,6 +114,32 @@ export function ToolSearchSchema({ slug }: ToolSearchHookProps) {
       inLanguage: "en",
       dateModified: hook.reviewedOn,
       author: { "@id": personId },
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+      },
     }} />
-  );
+    <JsonLd data={{
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": `${url}#questions`,
+      mainEntity: hook.questions.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    }} />
+    <JsonLd data={{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": `${url}#breadcrumbs`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+        { "@type": "ListItem", position: 2, name: "Engineering tools", item: toolsUrl },
+        { "@type": "ListItem", position: 3, name: hook.seoTitle, item: url },
+      ],
+    }} />
+  </>;
 }

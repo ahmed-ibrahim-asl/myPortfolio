@@ -1,6 +1,6 @@
-# Ahmed Asl
+# Ahmed Ibrahim Asl
 
-> Portfolio of Ahmed Asl, an IoT and embedded systems engineer, teaching assistant, and technical educator based in Egypt.
+> Portfolio of Ahmed Ibrahim Asl, an Embedded Systems & IoT R&D Engineer, teaching assistant, and technical educator based in Egypt.
 
 ## Core pages
 
@@ -13,7 +13,13 @@
 
 ## Free engineering tools
 
+- [Guided workbenches](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/workbenches/): Project generators, academic planning, control simulation, embedded code, security commands, and battery estimation.
 - [Circuit design tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/circuit-design/): Interactive calculators for circuits, component values, timing, power supplies, and control logic. Models, assumptions, and limitations are explained on individual tool pages.
+- [Text and encoding tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/text-encoding/): ROT transformations plus ASCII and hexadecimal conversions with worked examples.
+- [Unit conversion tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/conversions/): Temperature and capacitance converters with explicit units and assumptions.
+- [Number-system tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/number-systems/): Binary, hexadecimal, complements, shifts, and multi-base conversion tools.
+- [Physics and math tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/physics-math/): Motion, force, wavelength, frequency, percentages, roots, and logarithm calculators.
+- [Gradify](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/gradify/): University GPA calculation and a Delta Engineering transcript and graduation planner.
 - [Model Mission](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/ai-script-generator/): Guided computer vision project builder with YOLO26, YOLOE open-vocabulary detection, monocular depth, and U-Net segmentation examples.
 - [Sensor Code Generator](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/sensor-code-generator/): Arduino, ESP-IDF, and PlatformIO code for sensors, I2C, SPI, UART, Bluetooth, Wi-Fi, ESP-NOW, and other embedded interfaces.
 - [PID Simulator](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/pid-simulator/): Interactive proportional, integral, and derivative controller tuning.

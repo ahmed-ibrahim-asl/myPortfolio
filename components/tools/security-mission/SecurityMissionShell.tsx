@@ -20,6 +20,7 @@ import { CommandPreviewPanel } from "./CommandPreviewPanel";
 import { SecurityMissionRail } from "./SecurityMissionRail";
 import { SecurityMissionStepPanel } from "./SecurityMissionStepPanel";
 import { WorkflowPreviewPanel } from "./WorkflowPreviewPanel";
+import { ToolDirectAnswer, ToolSearchHook } from "@/components/tools/ToolSearchHook";
 import styles from "./SecurityMission.module.css";
 
 export function SecurityMissionShell() {
@@ -158,6 +159,8 @@ export function SecurityMissionShell() {
           <span><i data-status="scope" /> {state.project.authorizationContext.replaceAll("-", " ")}</span>
           <span><i data-status="count" /> 109 tools / 159 actions</span>
         </div>
+
+        <ToolDirectAnswer slug="security-command-builder" />
 
         <details className={styles.levelDisclosure}>
           <summary>
@@ -329,6 +332,7 @@ export function SecurityMissionShell() {
             )}
           </section>
         </div>
+        <ToolSearchHook slug="security-command-builder" />
       </div>
     </section>
   );

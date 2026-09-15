@@ -1,6 +1,7 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { ToolShell } from '../../components/tools/ToolShell';
 
 describe('tool search-hook shell integration', () => {
@@ -19,5 +20,17 @@ describe('tool search-hook shell integration', () => {
     expect(guideIndex).toBeGreaterThan(-1);
     expect(answerIndex).toBeLessThan(workbenchIndex);
     expect(guideIndex).toBeGreaterThan(workbenchIndex);
+  });
+
+  it('integrates the shared search layer into Security Mission and Gradify', () => {
+    const securityPage = readFileSync('app/tools/security-command-builder/page.tsx', 'utf8');
+    const securityShell = readFileSync('components/tools/security-mission/SecurityMissionShell.tsx', 'utf8');
+    const gradifyPage = readFileSync('app/tools/gradify/page.tsx', 'utf8');
+    expect(securityPage).toMatch(/ToolSearchSchema/);
+    expect(securityShell).toMatch(/ToolDirectAnswer/);
+    expect(securityShell).toMatch(/ToolSearchHook/);
+    expect(gradifyPage).toMatch(/ToolDirectAnswer/);
+    expect(gradifyPage).toMatch(/ToolSearchHook/);
+    expect(gradifyPage).toMatch(/ToolSearchSchema/);
   });
 });

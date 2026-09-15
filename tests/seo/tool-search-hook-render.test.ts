@@ -21,20 +21,27 @@ describe('tool search-hook presentation', () => {
     expect(layer).toContain('href="/work/embedded-iot/agribot-architecture"');
     expect(layer).toContain('href="/contact"');
 
-    const json = schemaMarkup.match(/<script[^>]*>(.*)<\/script>/)?.[1];
-    expect(json).toBeTruthy();
-    const data = JSON.parse(json!);
-    expect(data['@type']).toBe('WebApplication');
-    expect(data.name).toBe('Flyback SMPS Design Calculator for DCM Supplies');
-    expect(data.isAccessibleForFree).toBe(true);
-    expect(data.author).toEqual({ '@id': personId });
-    expect(data.aggregateRating).toBeUndefined();
-    expect(data.review).toBeUndefined();
+    const schemas = [...schemaMarkup.matchAll(/<script[^>]*>(.*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
+    const application = schemas.find((item) => item['@type'] === 'WebApplication');
+    const faq = schemas.find((item) => item['@type'] === 'FAQPage');
+    const breadcrumbs = schemas.find((item) => item['@type'] === 'BreadcrumbList');
+    expect(application.name).toBe('Flyback SMPS Design Calculator for DCM Supplies');
+    expect(application.isAccessibleForFree).toBe(true);
+    expect(application.offers).toEqual(expect.objectContaining({ price: '0', priceCurrency: 'USD' }));
+    expect(application.author).toEqual({ '@id': personId });
+    expect(application.aggregateRating).toBeUndefined();
+    expect(application.review).toBeUndefined();
+    expect(faq.mainEntity).toHaveLength(3);
+    expect(breadcrumbs.itemListElement).toHaveLength(3);
   });
 
-  it('renders nothing for a tool without an approved record', () => {
-    expect(renderToStaticMarkup(React.createElement(ToolDirectAnswer, { slug: 'square-root-calculator' }))).toBe('');
-    expect(renderToStaticMarkup(React.createElement(ToolSearchHook, { slug: 'square-root-calculator' }))).toBe('');
-    expect(renderToStaticMarkup(React.createElement(ToolSearchSchema, { slug: 'square-root-calculator' }))).toBe('');
+  it('renders a direct answer, worked example, and schema for every published calculator', () => {
+    const answer = renderToStaticMarkup(React.createElement(ToolDirectAnswer, { slug: 'square-root-calculator' }));
+    const layer = renderToStaticMarkup(React.createElement(ToolSearchHook, { slug: 'square-root-calculator' }));
+    const schema = renderToStaticMarkup(React.createElement(ToolSearchSchema, { slug: 'square-root-calculator' }));
+    expect(answer).toMatch(/square root/i);
+    expect(layer).toContain('Enter 144');
+    expect(layer.match(/data-tool-question=/g)).toHaveLength(3);
+    expect(schema).toContain('WebApplication');
   });
 });

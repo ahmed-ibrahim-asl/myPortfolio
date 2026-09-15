@@ -4,23 +4,18 @@ import {
   toolSearchHooks,
   validateToolSearchHooks,
 } from '../../data/tool-search-hooks';
+import { calculators } from '../../data/calculators';
+import { engineeringTools } from '../../data/tools';
 
-const expectedSlugs = [
-  'smps-designer',
-  'buck-converter-designer',
-  'control-design-assistant',
-  'logic-gate-designer',
-  'cascaded-opamp-gain-designer',
-  '555-timer-astable-circuit-calculator',
-  'pid-simulator',
-  'sensor-code-generator',
-  'battery-estimator',
-  'ai-script-generator',
-].sort();
+const expectedSlugs = [...new Set([
+  ...calculators.map((tool) => tool.slug),
+  ...engineeringTools.map((tool) => tool.id),
+])].sort();
 
 describe('tool search-hook registry', () => {
-it('priority engineering tools have complete, truthful search-hook records', () => {
+it('every public engineering tool has a complete, truthful search-hook record', () => {
   expect(Object.keys(toolSearchHooks).sort()).toEqual(expectedSlugs);
+  expect(expectedSlugs).toHaveLength(53);
   expect(validateToolSearchHooks()).toEqual({ valid: true, issues: [] });
 
   const questions = new Set<string>();
@@ -34,7 +29,11 @@ it('priority engineering tools have complete, truthful search-hook records', () 
     expect(hook!.limitations.length, slug).toBeGreaterThanOrEqual(2);
     expect(hook!.evidence.href).toMatch(/^\/work\/[a-z0-9-]+\/[a-z0-9-]+\/$/);
     expect(hook!.cta.href).toBe('/contact/');
-    expect(hook!.reviewedOn).toBe('2026-09-15');
+    expect(hook!.reviewedOn).toMatch(/^2026-09-(15|16)$/);
+    expect(hook!.seoTitle.length, `${slug}: SEO title length`).toBeGreaterThanOrEqual(35);
+    expect(hook!.seoTitle.length, `${slug}: SEO title length`).toBeLessThanOrEqual(65);
+    expect(hook!.metaDescription.length, `${slug}: meta description length`).toBeGreaterThanOrEqual(120);
+    expect(hook!.metaDescription.length, `${slug}: meta description length`).toBeLessThanOrEqual(165);
     expect(questions.has(hook!.primaryQuestion), hook!.primaryQuestion).toBe(false);
     questions.add(hook!.primaryQuestion);
     expect('locale' in hook!).toBe(false);
@@ -42,9 +41,13 @@ it('priority engineering tools have complete, truthful search-hook records', () 
   }
 });
 
-it('unregistered tools do not receive generic search filler', () => {
-  expect(getToolSearchHook('square-root-calculator')).toBeNull();
+it('published calculators receive specific search content while unknown slugs stay empty', () => {
+  expect(getToolSearchHook('square-root-calculator')?.primaryQuestion).toMatch(/square root/i);
+  expect(getToolSearchHook('rot-explorer')?.scenario.description).toMatch(/HELLO|URYYB/i);
+  expect(getToolSearchHook('security-command-builder')?.directAnswer).toMatch(/authorized/i);
+  expect(getToolSearchHook('gradify')?.directAnswer).toMatch(/GPA|graduation/i);
   expect(getToolSearchHook('')).toBeNull();
+  expect(getToolSearchHook('not-a-real-tool')).toBeNull();
 });
 
 it('AI builder copy covers both trainable and inference-only workflows', () => {

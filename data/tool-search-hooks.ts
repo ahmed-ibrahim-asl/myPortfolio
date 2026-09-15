@@ -1,3 +1,7 @@
+import { calculators } from "./calculators";
+import { engineeringTools } from "./tools";
+import { toolSearchSeeds } from "./tool-search-seeds";
+
 export type ToolSearchQuestion = {
   question: string;
   answer: string;
@@ -16,12 +20,12 @@ export type ToolSearchHook = {
   questions: ToolSearchQuestion[];
   evidence: { title: string; description: string; href: string };
   cta: { title: string; description: string; href: "/contact/" };
-  reviewedOn: "2026-09-15";
+  reviewedOn: "2026-09-15" | "2026-09-16";
 };
 
 const reviewedOn = "2026-09-15" as const;
 
-export const toolSearchHooks = {
+const richToolSearchHooks = {
   "smps-designer": {
     slug: "smps-designer",
     seoTitle: "Flyback SMPS Design Calculator for DCM Supplies",
@@ -214,8 +218,174 @@ export const toolSearchHooks = {
   },
 } satisfies Record<string, ToolSearchHook>;
 
+type PublicTool = {
+  slug: string;
+  title: string;
+  summary: string;
+  category: string;
+};
+
+function normalizeCopy(value: string): string {
+  const copy = value.replaceAll("—", ".").replace(/\s+/g, " ").trim();
+  return /[.!?]$/.test(copy) ? copy : `${copy}.`;
+}
+
+function boundedTitle(title: string): string {
+  const candidates = [
+    `${title} | Free Online Engineering Tool`,
+    `Free ${title} | Engineering Calculator`,
+    `${title} | Free Browser Calculator`,
+  ];
+  return candidates.find((candidate) => candidate.length >= 35 && candidate.length <= 65)
+    ?? `${title.slice(0, 42).trim()} | Free Online Tool`;
+}
+
+function boundedDescription(summary: string): string {
+  const suffixes = [
+    " Enter your values, review the result, and follow the worked example in this free browser tool.",
+    " Check the assumptions and worked example before applying the result to a real design.",
+  ];
+  let value = normalizeCopy(summary);
+  for (const suffix of suffixes) {
+    if (value.length >= 120) break;
+    value += suffix;
+  }
+  if (value.length <= 165) return value;
+  const clipped = value.slice(0, 162);
+  return `${clipped.slice(0, clipped.lastIndexOf(" "))}...`;
+}
+
+function evidenceFor(tool: PublicTool): ToolSearchHook["evidence"] {
+  if (tool.slug === "security-command-builder") return {
+    title: "Multi-MCU Security Lock",
+    description: "See a hardware access-control system where authorization, inputs, outputs, and failure behavior must remain explicit.",
+    href: "/work/embedded-iot/multi-mcu-security-lock/",
+  };
+  if (["Text & Encoding", "Number Systems", "Conversions"].includes(tool.category)) return {
+    title: "FireWire Enterprise OTA",
+    description: "See how data formats, device identity, firmware versions, and controlled updates fit into a real embedded platform.",
+    href: "/work/embedded-iot/firewire-enterprise-ota/",
+  };
+  if (tool.category === "Physics & Math") return {
+    title: "Human Follower Car",
+    description: "See a mobile robot where measured distance, motion, sensing, and control calculations meet physical hardware.",
+    href: "/work/robotics/human-follower-car/",
+  };
+  if (tool.category === "Control Design") return {
+    title: "ToolGuard",
+    description: "See how state, availability, identity, and outputs become a complete embedded control workflow.",
+    href: "/work/embedded-iot/toolguard/",
+  };
+  if (tool.slug === "gradify") return {
+    title: "AgriBot system architecture",
+    description: "Explore a multi-part engineering project planned across hardware, software, sensing, and an operator interface.",
+    href: "/work/embedded-iot/agribot-architecture/",
+  };
+  return {
+    title: "Aqua Sync 2.0.0",
+    description: "See a connected embedded system where calculations must become component choices, firmware, sensing, and tested hardware.",
+    href: "/work/embedded-iot/aqua-sync/",
+  };
+}
+
+function limitationsFor(tool: PublicTool): string[] {
+  if (["Text & Encoding", "Number Systems"].includes(tool.category)) return [
+    "The result depends on the selected width, alphabet, encoding, and input format",
+    "Encoding and number conversion do not provide encryption, authentication, or protection for sensitive data",
+  ];
+  if (["Conversions", "Physics & Math"].includes(tool.category)) return [
+    "The calculation is only as accurate as the entered values, units, and rounding",
+    "The ideal relationship does not include measurement uncertainty, calibration error, or application-specific limits",
+  ];
+  if (tool.slug === "security-command-builder") return [
+    "Generated commands are for owned or explicitly authorized lab targets only",
+    "The workbench cannot approve scope, credentials, network impact, legal authority, or the safety of a live environment",
+  ];
+  if (tool.slug === "gradify") return [
+    "The planner cannot guarantee that a course will be offered or that university rules will remain unchanged",
+    "Imported transcripts and calculated plans must be checked against official records and academic advising",
+  ];
+  return [
+    "The result follows an idealized educational model and the values you enter",
+    "It does not replace datasheet limits, tolerances, protection, thermal checks, measurement, or application-specific validation",
+  ];
+}
+
+function buildGeneratedHook(tool: PublicTool): ToolSearchHook {
+  const seed = toolSearchSeeds[tool.slug];
+  const limitations = limitationsFor(tool);
+  const directAnswer = seed.directAnswer ?? `${normalizeCopy(tool.summary)} Enter the known values and inspect the result immediately. For example, ${seed.example} Use the output to check your reasoning or shortlist a design, then verify the units, assumptions, and real-world limits that apply.`;
+  return {
+    slug: tool.slug,
+    seoTitle: boundedTitle(tool.title),
+    metaDescription: boundedDescription(tool.summary),
+    primaryQuestion: `How do I use a ${seed.primaryQuery}?`,
+    directAnswer,
+    usefulFor: [
+      `Solving a ${seed.primaryQuery} task without repeating the arithmetic by hand`,
+      "Changing one input at a time to understand how it affects the result",
+    ],
+    outputs: [
+      "A result calculated from the values and units you enter",
+      `A concrete reference case: ${seed.example}`,
+    ],
+    limitations,
+    scenario: {
+      title: "Try a concrete set of values",
+      description: `${seed.example} Change one input at a time, confirm the units, and compare the result with an independent calculation or relevant datasheet.`,
+    },
+    questions: [
+      {
+        question: `What should I enter in the ${tool.title}?`,
+        answer: "Use known values in the units shown beside each field. Keep every input within a realistic range and convert units before comparing the result with another source.",
+      },
+      {
+        question: `Can I use the ${tool.title} result directly?`,
+        answer: limitations[1],
+      },
+      {
+        question: `How should I verify the ${tool.title} result?`,
+        answer: "Repeat the worked example, check the units and assumptions, then compare the output with a second calculation, a trusted reference, or a measurement from the real system.",
+      },
+    ],
+    evidence: evidenceFor(tool),
+    cta: {
+      title: "Need the calculation connected to a working prototype?",
+      description: "Share the requirements, inputs, hardware limits, expected output, and how the result will be tested in the complete system.",
+      href: "/contact/",
+    },
+    reviewedOn: "2026-09-16",
+  };
+}
+
+const publicTools: PublicTool[] = [
+  ...calculators.map((tool) => ({
+    slug: tool.slug,
+    title: tool.title,
+    summary: tool.summary,
+    category: tool.category,
+  })),
+  ...engineeringTools.map((tool) => ({
+    slug: tool.id,
+    title: tool.title,
+    summary: tool.description,
+    category: tool.category ?? "Engineering workbench",
+  })),
+];
+
+const generatedToolSearchHooks = Object.fromEntries(
+  publicTools
+    .filter((tool) => !(tool.slug in richToolSearchHooks) && toolSearchSeeds[tool.slug])
+    .map((tool) => [tool.slug, buildGeneratedHook(tool)]),
+) as Record<string, ToolSearchHook>;
+
+export const toolSearchHooks: Record<string, ToolSearchHook> = Object.freeze({
+  ...generatedToolSearchHooks,
+  ...richToolSearchHooks,
+});
+
 export function getToolSearchHook(slug: string): ToolSearchHook | null {
-  return toolSearchHooks[slug as keyof typeof toolSearchHooks] ?? null;
+  return toolSearchHooks[slug] ?? null;
 }
 
 export function validateToolSearchHooks(): { valid: boolean; issues: string[] } {
@@ -230,6 +400,8 @@ export function validateToolSearchHooks(): { valid: boolean; issues: string[] } 
     }
     if (!/^\/work\/[a-z0-9-]+\/[a-z0-9-]+\/$/.test(hook.evidence.href)) issues.push(`${key}: evidence must use an internal project URL`);
     if (hook.cta.href !== "/contact/") issues.push(`${key}: CTA must lead to /contact/`);
+    if (hook.seoTitle.length < 35 || hook.seoTitle.length > 65) issues.push(`${key}: SEO title must be 35 to 65 characters`);
+    if (hook.metaDescription.length < 120 || hook.metaDescription.length > 165) issues.push(`${key}: meta description must be 120 to 165 characters`);
     if (questions.has(hook.primaryQuestion)) issues.push(`${key}: duplicate primary question`);
     questions.add(hook.primaryQuestion);
   }

@@ -15,6 +15,10 @@ const routes = [
   'sensor-code-generator',
   'battery-estimator',
   'ai-script-generator',
+  'square-root-calculator',
+  'rot-explorer',
+  'security-command-builder',
+  'gradify',
 ];
 
 test('priority tool hooks are visible, structured, and responsive', async () => {
@@ -53,7 +57,7 @@ test('priority tool hooks are visible, structured, and responsive', async () => 
           };
           const answer = document.querySelector('[data-tool-direct-answer]');
           const guide = document.querySelector('[data-tool-search-hook]');
-          const interactive = [...document.querySelectorAll('input, select, textarea, button')].find((element) =>
+          const interactive = [...document.querySelectorAll('input, select, textarea, button, a')].find((element) =>
             answer && guide
             && Boolean(answer.compareDocumentPosition(element) & Node.DOCUMENT_POSITION_FOLLOWING)
             && Boolean(element.compareDocumentPosition(guide) & Node.DOCUMENT_POSITION_FOLLOWING));

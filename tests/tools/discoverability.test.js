@@ -19,9 +19,19 @@ test("the sitemap includes every calculator and advanced workbench", async () =>
 test("llms.txt advertises the live tools using the repository's real base path", async () => {
   const source = await readFile(new URL("../../public/llms.txt", import.meta.url), "utf8");
 
-  assert.doesNotMatch(source, /github\.io\/myPortfolio/);
-  assert.match(source, /github\.io\/myPortflio\/tools\//);
-  assert.match(source, /Electronics calculators/i);
+  assert.match(source, /^# Ahmed Ibrahim Asl/m);
+  assert.match(source, /Embedded Systems & IoT R&D Engineer/);
+  assert.doesNotMatch(source, /github\.io\/myPortflio/);
+  assert.match(source, /github\.io\/myPortfolio\/tools\//);
+  for (const category of [
+    "workbenches",
+    "circuit-design",
+    "text-encoding",
+    "conversions",
+    "number-systems",
+    "physics-math",
+  ]) assert.match(source, new RegExp(`/tools/category/${category}/`));
+  assert.match(source, /Gradify/i);
   assert.match(source, /Model Mission/i);
   assert.match(source, /Sensor Code Generator/i);
 });
