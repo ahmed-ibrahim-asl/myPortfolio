@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ProfilePortrait } from "@/components/ProfilePortrait";
-import { profile, projects, technologyGroups, workingMethod } from "@/data/portfolio";
+import { profile, projects, workingMethod } from "@/data/portfolio";
 import { workCategories } from "@/data/work-categories";
 import { engineeringTools } from "@/data/tools";
 import { calculators } from "@/data/calculators";
@@ -47,12 +47,6 @@ export default function HomePage() {
         </aside>
       </section>
 
-      <section className="home-register shell" aria-label="Portfolio map">
-        <div><span>01</span><strong>{projects.length}</strong><small>PROJECTS LOGGED</small></div>
-        <div><span>02</span><strong>{technologyGroups.length}</strong><small>PRACTICE AREAS</small></div>
-        <div><span>03</span><strong>{totalToolCount}</strong><small>WORKING TOOLS</small></div>
-        <div><span>04</span><strong>OPEN</strong><small>BRIEF STATUS</small></div>
-      </section>
       <section className="home-hook shell" aria-label="Tool catalog size">
         <p><strong>{totalToolCount} tools</strong> live on this site right now - calculators, generators, and guided workflows you can actually run, not a roadmap.</p>
         <Link className="text-link" href="/tools">Open the tools index</Link>

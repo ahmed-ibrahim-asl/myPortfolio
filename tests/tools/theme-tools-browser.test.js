@@ -76,26 +76,32 @@ test("theme choice persists and tool categories stay focused in both themes", { 
     }
 
     await page.setViewport({ width: 390, height: 844 });
+    await page.evaluate(() => localStorage.setItem("asl-theme-preference", "dark"));
     await page.goto(`${baseUrl}/tools/`, { waitUntil: "networkidle0" });
     await page.click(".menu-toggle");
     const mobileToggle = await page.$eval(".theme-toggle", (button) => {
       const rect = button.getBoundingClientRect();
-      const navRect = button.parentElement.getBoundingClientRect();
-      const navStyle = getComputedStyle(button.parentElement);
-      const mobileLabel = button.querySelector(".theme-toggle-mobile-label");
+      const action = button.querySelector(".theme-toggle-action");
       return {
-        widthDifference: navRect.width
-          - parseFloat(navStyle.paddingLeft)
-          - parseFloat(navStyle.paddingRight)
-          - rect.width,
-        labelVisible: getComputedStyle(mobileLabel).display !== "none"
+        labels: [...action.children].map((node) => node.textContent.trim()),
+        gap: parseFloat(getComputedStyle(action).gap),
+        mobileLabelExists: Boolean(button.querySelector(".theme-toggle-mobile-label")),
+        ariaLabel: button.getAttribute("aria-label"),
+        width: rect.width,
+        height: rect.height
       };
     });
-    assert.ok(
-      mobileToggle.widthDifference <= 44,
-      `mobile appearance row leaves ${mobileToggle.widthDifference}px unused`
-    );
-    assert.equal(mobileToggle.labelVisible, true);
+    assert.deepEqual(mobileToggle.labels, ["☀", "Light"]);
+    assert.ok(mobileToggle.gap >= 6);
+    assert.equal(mobileToggle.mobileLabelExists, false);
+    assert.equal(mobileToggle.ariaLabel, "Switch to light theme");
+    assert.ok(mobileToggle.width >= 44 && mobileToggle.height >= 44);
+
+    await page.click(".theme-toggle");
+    assert.deepEqual(await page.$eval(".theme-toggle", (button) => ({
+      labels: [...button.querySelectorAll(".theme-toggle-action > span")].map((node) => node.textContent.trim()),
+      ariaLabel: button.getAttribute("aria-label")
+    })), { labels: ["☾", "Dark"], ariaLabel: "Switch to dark theme" });
 
     await page.goto(`${baseUrl}/tools/category/resistors/`, { waitUntil: "networkidle0" });
     assert.equal(await page.$eval("h1", (node) => node.textContent), "Circuit Design");

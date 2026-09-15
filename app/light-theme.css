@@ -12,7 +12,7 @@ html[data-theme="light"] {
 [data-theme="light"] .portrait-id strong { color: #FFFFFF; }
 [data-theme="light"] .site-footer .eyebrow { color: var(--text-primary); }
 [data-theme="light"] .prompt-panel code { color: var(--text-primary); }
-[data-theme="light"] :is(.home-register span, .notes-resource-rail span, .notes-list > a > span) { color: var(--text-primary); }
+[data-theme="light"] :is(.notes-resource-rail span, .notes-list > a > span) { color: var(--text-primary); }
 [data-theme="light"] .home-hook strong { color: var(--text-primary); }
 [data-theme="light"] :is(.publication-record, .tutorial-card) { background: var(--bg-surface); border-color: var(--line-strong); }
 /* Legacy About components must not keep their pale, dark-surface ink. */

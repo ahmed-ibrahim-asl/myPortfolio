@@ -32,6 +32,7 @@ test('mobile homepage leads with a proportional clear-service identity while des
       const identityCopy = identity?.querySelector('.home-mobile-identity-copy');
       const titleLines = [...(title?.querySelectorAll('.home-mobile-title-line') ?? [])];
       const menu = document.querySelector('.menu-toggle');
+      const register = document.querySelector('.home-register');
       const rect = element => element?.getBoundingClientRect();
       const font = element => element ? Number.parseFloat(getComputedStyle(element).fontSize) : null;
       const domOrder = [identity, title, intro, document.querySelector('.home-actions'), arabic]
@@ -69,6 +70,7 @@ test('mobile homepage leads with a proportional clear-service identity while des
         menuVisibleText: menu?.innerText.trim(),
         menuWidth: rect(menu)?.width,
         menuHeight: rect(menu)?.height,
+        registerExists: Boolean(register),
       };
     });
 
@@ -110,6 +112,7 @@ test('mobile homepage leads with a proportional clear-service identity while des
         assert.equal(mobile.menuLabel, 'Open navigation');
         assert.equal(mobile.menuVisibleText, '');
         assert.ok(mobile.menuWidth >= 48 && mobile.menuHeight >= 48, `${width}/${theme}: menu target`);
+        assert.equal(mobile.registerExists, false);
       }
     }
 
@@ -131,6 +134,7 @@ test('mobile homepage leads with a proportional clear-service identity while des
       portraitLoaded: document.querySelector('.home-portrait img')?.complete && document.querySelector('.home-portrait img')?.naturalWidth > 0,
       mobileIdentityAlt: document.querySelector('.home-mobile-identity img')?.alt,
       h1Count: document.querySelectorAll('h1').length,
+      registerExists: Boolean(document.querySelector('.home-register')),
     }));
     assert.equal(desktop.title, 'Break the problem down.');
     assert.equal(desktop.mobileIdentityHidden, true);
@@ -138,6 +142,7 @@ test('mobile homepage leads with a proportional clear-service identity while des
     assert.equal(desktop.portraitLoaded, true);
     assert.equal(desktop.mobileIdentityAlt, 'Ahmed Ibrahim Asl');
     assert.equal(desktop.h1Count, 1);
+    assert.equal(desktop.registerExists, false);
   } finally {
     await browser.close();
   }

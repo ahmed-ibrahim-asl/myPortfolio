@@ -38,7 +38,6 @@ export function ThemeToggle() {
       aria-pressed={theme === "light"}
       onClick={toggleTheme}
     >
-      <span className="theme-toggle-mobile-label">Appearance</span>
       <span className="theme-toggle-action">
         <span aria-hidden="true">{nextTheme === "light" ? "☀" : "☾"}</span>
         <span>{nextTheme === "light" ? "Light" : "Dark"}</span>

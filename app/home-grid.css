@@ -19,7 +19,6 @@
 .theme-toggle { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 10px; color: var(--text-secondary); background: transparent; border: 1px solid transparent; font: var(--fw-semibold) .7rem/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
 .theme-toggle:hover { color: var(--text-primary); border-color: var(--line-hairline); background: var(--bg-hover); }
 .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.theme-toggle-mobile-label { display: none; }
 .theme-toggle-action { display: inline-flex; align-items: center; gap: 7px; }
 .menu-toggle { display: none; }
 .menu-icon { position: relative; display: block; width: 22px; height: 16px; }
@@ -66,12 +65,6 @@
 .portrait-id span:last-child { text-align: right; font-family: var(--font-text-ar); }
 .portrait-status { width: min(100%, 390px); display: flex; justify-content: space-between; margin-top: 16px; color: var(--text-muted); font: var(--type-label); letter-spacing: .1em; }
 
-.home-register { display: grid; grid-template-columns: repeat(4, 1fr); border-inline: 1px solid var(--line-hairline); border-bottom: 1px solid var(--line-hairline); }
-.home-register > div { min-height: 140px; display: grid; grid-template-columns: auto 1fr; grid-template-rows: 1fr auto; gap: 6px 18px; align-items: end; padding: 28px; border-right: 1px solid var(--line-hairline); }
-.home-register > div:last-child { border-right: 0; }
-.home-register span { grid-row: 1 / 3; align-self: start; color: var(--accent); font: var(--type-label); }
-.home-register strong { color: var(--text-primary); font: var(--fw-semibold) clamp(2.1rem, 4vw, 3.6rem)/1 var(--font-display); }
-.home-register small { color: var(--text-muted); font: var(--type-label); letter-spacing: .1em; }
 .home-hook { min-height: 68px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 28px; padding: 20px 28px; border-inline: 1px solid var(--line-hairline); border-bottom: 1px solid var(--line-hairline); }
 .home-hook p { margin: 0; color: var(--text-secondary); font: var(--type-caption); }
 .home-hook strong { color: var(--accent); }
@@ -169,16 +162,12 @@
   .site-nav { position: absolute; top: 71px; right: 0; left: 0; z-index: 72; display: none; padding: 12px 22px; background: var(--bg-surface); border-bottom: 1px solid var(--line-strong); box-shadow: 0 30px 70px rgba(0,0,0,.55); }
   .site-nav.is-open { display: grid; }
   .site-nav a { min-height: 48px; padding-inline: 14px; font-size: .78rem; }
-  .theme-toggle { min-height: 48px; width: 100%; justify-content: space-between; padding-inline: 14px; border-color: transparent; font-size: .78rem; }
-  .theme-toggle-mobile-label { display: inline; color: var(--text-primary); }
+  .theme-toggle { min-height: 48px; width: fit-content; justify-content: flex-start; padding-inline: 14px; border-color: transparent; font-size: .78rem; }
   .site-nav .header-contact { margin: 6px 0 0; }
   .menu-overlay { position: fixed; inset: 72px 0 0; z-index: 69; display: block; width: 100%; border: 0; background: var(--bg-scrim); }
   .home-hero { height: auto; min-height: 0; grid-template-columns: 1fr; }
   .home-hero-copy { min-height: 0; padding-block: 64px; border-right: 0; border-bottom: 1px solid var(--line-hairline); }
   .home-portrait { padding: 42px clamp(24px, 10vw, 90px) 54px; }
-  .home-register { grid-template-columns: repeat(2, 1fr); }
-  .home-register > div:nth-child(2) { border-right: 0; }
-  .home-register > div:nth-child(-n+2) { border-bottom: 1px solid var(--line-hairline); }
   .home-section-head { grid-template-columns: 1fr; gap: 20px; }
   .project-ledger { height: auto; grid-template-columns: 1fr; grid-template-rows: auto; }
   .project-entry, .project-entry-1 { grid-row: auto; min-height: 360px; }
@@ -222,10 +211,6 @@
   .home-copy-mobile { display: inline; }
   .home-portrait { display: none; }
   .portrait-id { font-size: .62rem; }
-  .home-register { grid-template-columns: 1fr; }
-  .home-register > div { min-height: 112px; border-right: 0; border-bottom: 1px solid var(--line-hairline); }
-  .home-register > div:nth-child(3) { border-bottom: 1px solid var(--line-hairline); }
-  .home-register > div:last-child { border-bottom: 0; }
   .home-section, .home-method { padding-inline: var(--page-gutter); }
   .project-entry, .project-entry-1 { min-height: 310px; }
   .tool-entry { grid-template-columns: 1fr auto; gap: 18px; }
