@@ -1,0 +1,15 @@
+# Rebuild recent design tools
+
+User-authorized rebuild, in the existing dirty source checkout. Preserve unrelated work and do not commit or publish until the local result is reviewed.
+
+## Tasks
+- [ ] Power: replace all placeholder drawings with electrically connected schematics, correct catch diode orientation, true four-diode bridge, regulator ground and capacitors. Interactive operating phases and live values. Validate math, avoid generic stability claims.
+- [ ] Shared math: KaTeX display equations with bundled fonts and accessible MathML. Apply to all recent circuit/opamp/power tools.
+- [ ] Control: mutually meaningful intent selections, simulation for memory/counters/registers, circuit beside table, gate-level expansion, unique keys, invalid input handling.
+- [ ] Logic: selectors for desired input conditions generate actual multiple gates, live traces and truth tables; editable conditions, no expression entry needed.
+- [ ] Opamp: correct signed and zero-input cascade math, staged schematics, actual package pinouts verified against primary datasheets.
+- [ ] Covers and layout: consistent theme-aware technical SVG art for all recent tools, image-led category/finder cards, breadcrumb spacing, ROT explanation.
+- [ ] Review, domain tests, browser interactions, themes/mobile/console, production build.
+
+## Power task brief
+Own only components/tools/design/PowerConversionDesigner.tsx, PowerSchematic.tsx, PowerDesigner.module.css (new), lib/tools/power-conversion.js, tests/tools/power-conversion.test.js. Rewrite cleanly; source currently contains severe placeholder wiring, incorrect diode orientation, fake stability checks. Buck: actual ideal asynchronous buck power stage with switch, diode anode to ground/cathode switching node, L, output C, load, Vin source/common return. ON/OFF controls highlight correct closed current paths. Bridge: four correctly directed diodes, isolated AC terminals, DC +/− reservoir and load, half-cycle control highlights conducting pair. Linear: input/output caps and regulator common, clear no generic stability inference; datasheet-specific requirement inputs or vetted profiles if feasible. Field values update labels. Use display equations via shared default component `./MathEquation` accepting `{tex:string,label?:string}` (root creates it). Scope math: finite validation, 0<efficiency<=100, no negative ripple valley or nonfinite results; output capacitance buck is ideal ripple-only minimum, label it. Need numerical tests with reference values and rejected inputs. Research authoritative TI SLVA477B and regulator stability guidance with web. Keep current default export API `{kind:'bridge'|'linear'|'buck'}`. Can change PowerSchematic props within task. Use dedicated CSS/module plus shared DesignLab existing classes but do not edit shared CSS. No package changes, builds, git commits, or browser work (root owns those). Report to docs/superpowers/plans/2026-09-10-power-rebuild-report.md with implementation, sources, test evidence, concerns. Main agent handles integration and review.

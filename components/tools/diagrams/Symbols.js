@@ -164,3 +164,29 @@ export function CapacitorV({ x, y, label }) {
 export function capacitorVHeight() {
   return 50;
 }
+
+export function LedSymbol({ x, y, label, lit = true }) {
+  const size = 16;
+  return (
+    <g stroke="var(--ink)" strokeWidth="2">
+      <line x1={x - 24} y1={y} x2={x - size} y2={y} />
+      <polygon
+        points={`${x - size},${y - size} ${x - size},${y + size} ${x + size},${y}`}
+        fill={lit ? "var(--asl-gold, var(--pixel-gold))" : "none"}
+      />
+      <line x1={x + size} y1={y - size} x2={x + size} y2={y + size} strokeWidth="3" />
+      <line x1={x + size} y1={y} x2={x + 24} y2={y} />
+      {lit ? (
+        <g stroke="var(--asl-gold, var(--pixel-gold))" strokeWidth="1.5">
+          <line x1={x - 4} y1={y - size - 6} x2={x + 2} y2={y - size - 16} />
+          <line x1={x + 6} y1={y - size - 4} x2={x + 12} y2={y - size - 14} />
+        </g>
+      ) : null}
+      {label ? (
+        <text x={x} y={y + size + 18} textAnchor="middle" className="diagram-label" stroke="none">
+          {label}
+        </text>
+      ) : null}
+    </g>
+  );
+}

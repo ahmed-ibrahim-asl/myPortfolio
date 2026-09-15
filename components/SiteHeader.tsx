@@ -1,81 +1,59 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AslLogo } from "@/components/brand/AslLogo";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const links = [
+  { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/writing", label: "Writing" },
-  { href: "/tools", label: "Tools" }
+  { href: "/tools", label: "Tools" },
+  { href: "/notes", label: "Notes" },
+  { href: "/about", label: "About" }
 ];
 
 export function SiteHeader() {
-  const pathname = usePathname() || "";
+  const pathname = usePathname() || "/";
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
 
   return (
     <header className="site-header">
       <div className="shell header-inner">
-        <Link
-          className="brand"
-          href="/"
-          onClick={() => setOpen(false)}
-          aria-label="Ahmed Asl portfolio home"
-        >
-          <img
-            className="brand-mark"
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand/hex-badge-gold.svg`}
-            alt=""
-            aria-hidden="true"
-          />
-          <span className="brand-lockup">
-            <AslLogo form="latin" />
-            <span className="brand-name">Ahmed Ibrahim Asl</span>
-          </span>
+        <Link className="brand" href="/" onClick={() => setOpen(false)} aria-label="Ahmed Ibrahim Asl home">
+          <span className="brand-latin">ASL</span>
+          <span className="brand-divider" aria-hidden="true" />
+          <span className="brand-arabic" lang="ar" dir="rtl">بشمهندس عسل</span>
+          <span className="brand-agent">AGENT / 101</span>
         </Link>
-
-        <AslLogo form="arabic" className="header-arabic-signature" decorative />
-
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-expanded={open}
-          aria-controls="site-navigation"
-          onClick={() => setOpen((value) => !value)}
-        >
-          <span>{open ? "Close menu" : "Open menu"}</span>
-          <span aria-hidden="true">{open ? "×" : "+"}</span>
+        <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="site-navigation" onClick={() => setOpen((value) => !value)}>
+          <span>{open ? "Close" : "Menu"}</span><span aria-hidden="true">{open ? "x" : "+"}</span>
         </button>
-
-        <nav
-          id="site-navigation"
-          className={`site-nav ${open ? "is-open" : ""}`}
-          aria-label="Primary navigation"
-        >
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={pathname.startsWith(link.href) ? "active" : ""}
-              aria-current={pathname.startsWith(link.href) ? "page" : undefined}
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Link
-            href="/contact"
-            className={`header-contact ${pathname.startsWith("/contact") ? "active" : ""}`}
-            aria-current={pathname.startsWith("/contact") ? "page" : undefined}
-            onClick={() => setOpen(false)}
-          >
-            Contact
-          </Link>
+        <nav id="site-navigation" className={`site-nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
+          {links.map((link) => {
+            const active = link.href === "/"
+              ? pathname === "/"
+              : pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return <Link key={link.href} href={link.href} className={active ? "active" : ""} aria-current={active ? "page" : undefined} onClick={() => setOpen(false)}>{link.label}</Link>;
+          })}
+          <ThemeToggle />
+          <Link className="header-contact" href="/contact" onClick={() => setOpen(false)}>Start a project</Link>
         </nav>
       </div>
+      {open ? <button className="menu-overlay" aria-label="Close navigation" onClick={() => setOpen(false)} /> : null}
     </header>
   );
 }

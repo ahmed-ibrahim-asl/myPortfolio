@@ -1,0 +1,39 @@
+﻿{
+  "covers": [
+    {
+      "id": "ai-script-generator",
+      "required": true,
+      "format": "webp",
+      "aspectRatio": "16:9",
+      "prompt": "A clean, dark interface showing python code generation, terminal output, high contrast, golden accents, technical styling."
+    },
+    {
+      "id": "security-command-builder",
+      "required": true,
+      "format": "webp",
+      "aspectRatio": "16:9",
+      "prompt": "A terminal window with cybersecurity commands, glowing text, dark mode, high contrast, technical styling."
+    },
+    {
+      "id": "pid-simulator",
+      "required": true,
+      "format": "webp",
+      "aspectRatio": "16:9",
+      "prompt": "An interactive chart showing PID control loop tuning, technical UI, high contrast, golden accents."
+    },
+    {
+      "id": "sensor-code-generator",
+      "required": true,
+      "format": "webp",
+      "aspectRatio": "16:9",
+      "prompt": "Embedded C code snippet generating on a dark screen, electronic components, high contrast, technical styling."
+    },
+    {
+      "id": "battery-estimator",
+      "required": true,
+      "format": "webp",
+      "aspectRatio": "16:9",
+      "prompt": "A battery capacity calculation UI, voltage and current readings, dark mode, technical styling."
+    }
+  ]
+}

@@ -4,12 +4,35 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { profile } from "@/data/portfolio";
 
+const TICKER_SKILLS = [
+  "ESP32", "IoT", "PlatformIO", "KiCad", "Python",
+  "FreeRTOS", "Flutter", "ROS2", "YOLO", "eCPPT",
+  "Metasploit", "Nmap", "C/C++", "TryHackMe", "Arduino",
+  "MQTT", "WebSockets", "PCB Design", "Sensor Fusion", "Robotics",
+  // duplicate for seamless loop
+  "ESP32", "IoT", "PlatformIO", "KiCad", "Python",
+  "FreeRTOS", "Flutter", "ROS2", "YOLO", "eCPPT",
+  "Metasploit", "Nmap", "C/C++", "TryHackMe", "Arduino",
+  "MQTT", "WebSockets", "PCB Design", "Sensor Fusion", "Robotics",
+];
+
 export function SystemHud() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMission, setActiveMission] = useState("01 // ORIGIN");
   const [scrollPct, setScrollPct] = useState(0);
+  const [uptime, setUptime] = useState("00:00:00");
 
   useEffect(() => {
+    // Uptime counter (counts up from session start)
+    const startTime = Date.now();
+    const uptimeInterval = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      const h = String(Math.floor(elapsed / 3600)).padStart(2, "0");
+      const m = String(Math.floor((elapsed % 3600) / 60)).padStart(2, "0");
+      const s = String(elapsed % 60).padStart(2, "0");
+      setUptime(`${h}:${m}:${s}`);
+    }, 1000);
+
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const docHeight =
@@ -49,6 +72,7 @@ export function SystemHud() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("keydown", handleKeyDown);
+      clearInterval(uptimeInterval);
     };
   }, [isOpen]);
 
@@ -79,7 +103,7 @@ export function SystemHud() {
                 onClick={() => setIsOpen(false)}
                 aria-label="Close HUD"
               >
-                [ESC / CLOSE ×]
+                [ESC / CLOSE �-]
               </button>
             </div>
 
@@ -88,7 +112,7 @@ export function SystemHud() {
                 <div className="hud-card">
                   <span className="hud-card-label mono">SYSTEM STATUS</span>
                   <div className="hud-metric mono">
-                    <span className="status-green">● OPERATIONAL</span>
+                    <span className="status-green">�-� OPERATIONAL</span>
                   </div>
                   <p className="hud-desc">Next.js 16 Static Export • SSG Verified</p>
                 </div>
@@ -106,9 +130,28 @@ export function SystemHud() {
                 </div>
 
                 <div className="hud-card">
-                  <span className="hud-card-label mono">SECURITY &amp; SANITATION</span>
-                  <div className="hud-metric mono text-green">XSS_PROTECTED</div>
-                  <p className="hud-desc">Defensive HTML Pass Active</p>
+                  <span className="hud-card-label mono">SESSION UPTIME</span>
+                  <div className="hud-metric mono text-cyan">{uptime}</div>
+                  <p className="hud-desc">XSS_PROTECTED • Defensive Pass Active</p>
+                </div>
+              </div>
+
+              {/* Hacker-flavor rows */}
+              <div className="hud-threat-row mono">
+                <span className="hud-threat-label">THREAT_LEVEL</span>
+                <span className="hud-threat-value">▓▒░ MINIMAL - NO ACTIVE INTRUSIONS</span>
+              </div>
+              <div className="hud-webslinger-row mono">
+                <span className="hud-webslinger-label">WEB_SLINGER</span>
+                <span className="hud-webslinger-value">⬡ ACTIVE - ROOFTOP TRAVERSAL ENABLED</span>
+              </div>
+
+              {/* Skills ticker */}
+              <div className="hud-ticker-wrap" aria-hidden="true">
+                <div className="hud-ticker-track">
+                  {TICKER_SKILLS.map((skill, i) => (
+                    <span key={i} className="hud-ticker-item mono">{skill}</span>
+                  ))}
                 </div>
               </div>
 

@@ -5,6 +5,7 @@ import { readdir } from "node:fs/promises";
 
 const catalogUrl = new URL("../../data/calculators.js", import.meta.url);
 const registryUrl = new URL("../../components/tools/calculators/index.js", import.meta.url);
+const visualRegistryUrl = new URL("../../data/calculator-visuals.js", import.meta.url);
 
 test("all 36 completed calculators are present and registered", async () => {
   assert.equal(existsSync(catalogUrl), true, "calculator catalog must be restored");
@@ -24,22 +25,14 @@ test("all 36 completed calculators are present and registered", async () => {
   }
 });
 
-test("every calculator resolves to a supported original visual", async () => {
+test("every calculator resolves to its own supported visual contract", async () => {
   const { calculators, calculatorCategories } = await import(catalogUrl.href);
-  const supported = new Set([
-    "ohms",
-    "resistor",
-    "divider",
-    "led",
-    "battery",
-    "capacitor",
-    "wave",
-    "filter",
-    "timer",
-    "number",
-    "conversion",
-    "physics"
-  ]);
+  const visualRegistryExists = existsSync(visualRegistryUrl);
+
+  assert.equal(visualRegistryExists, true, "calculator visual registry must exist");
+  if (!visualRegistryExists) return;
+
+  const { calculatorVisuals } = await import(visualRegistryUrl.href);
 
   assert.deepEqual(calculatorCategories, [
     "Fundamentals",
@@ -49,7 +42,11 @@ test("every calculator resolves to a supported original visual", async () => {
     "Number Systems",
     "Physics & Math"
   ]);
-  assert.ok(calculators.every(({ visualKey }) => supported.has(visualKey)));
+  assert.ok(calculators.every(({ slug, visualKey }) => visualKey === slug));
+  assert.deepEqual(
+    Object.keys(calculatorVisuals).sort(),
+    calculators.map(({ slug }) => slug).sort()
+  );
 });
 
 test("calculator search matches useful metadata and related results exclude the active tool", async () => {
@@ -125,14 +122,20 @@ test("shared calculator controls expose accessible result and selection semantic
   assert.match(index, /aria-pressed=\{category === item\}/);
 });
 
-test("the Tools hub retains advanced tools and exposes the calculator index", () => {
+test("the Tools hub reveals focused category destinations before individual tools", () => {
   const hub = readFileSync(new URL("../../app/tools/page.tsx", import.meta.url), "utf8");
+  const catalog = readFileSync(
+    new URL("../../components/tools/UnifiedToolsIndex.tsx", import.meta.url),
+    "utf8"
+  );
   assert.match(hub, /engineeringTools/);
   assert.match(hub, /getAllTools/);
-  assert.match(hub, /id="calculators"/);
-  assert.match(hub, /id="advanced-tools"/);
-  assert.match(hub, /<ToolsIndex tools=\{calculators\}/);
-  assert.ok(hub.indexOf('id="calculators"') < hub.indexOf('id="advanced-tools"'));
+  assert.match(hub, /ToolsCategoryHub/);
+  assert.doesNotMatch(hub, /UnifiedToolsIndex/);
+  assert.match(catalog, /data-unified-tools-catalog/);
+  assert.match(catalog, /lockedItems/);
+  assert.match(catalog, /filterToolItems/);
+  assert.doesNotMatch(hub, /id="calculators"|id="advanced-tools"/);
 });
 
 test("the calculator route statically generates catalog slugs", () => {

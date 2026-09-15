@@ -4,12 +4,16 @@ import assert from "node:assert/strict";
 import { SECURITY_ACTIONS } from "../../lib/tools/security-mission/catalog.js";
 import { createDefaultSecurityMissionProject } from "../../lib/tools/security-mission/project-config.js";
 import { compileSecurityCommand } from "../../lib/tools/security-mission/compiler.js";
+import { getAllSecurityControls } from "../../lib/tools/security-mission/control-registry.js";
 import {
   SECURITY_FLAG_GLOSSARY,
   getSecurityFlagDescription,
 } from "../../lib/tools/security-mission/flag-glossary.js";
 
 function collectRegistryFlagPairs() {
+  const controlsByPath = new Map(
+    getAllSecurityControls().map((control) => [control.valuePath, control]),
+  );
   const pairs = new Set();
   for (const action of SECURITY_ACTIONS) {
     for (const ft of action.fixedTokens ?? []) {
@@ -17,6 +21,15 @@ function collectRegistryFlagPairs() {
     }
     for (const rule of action.argumentRules ?? []) {
       if (rule.flag) pairs.add(`${action.toolId} ${rule.flag}`);
+      if (rule.rawFlagFromValue) {
+        // The control's own option values ARE the possible flags here (e.g. a scan-type
+        // select whose options are literally "-sS", "-sT", ...), so those are what need
+        // glossary coverage, not the rule itself (which has no static flag string).
+        const control = controlsByPath.get(rule.valuePath);
+        for (const option of control?.options ?? []) {
+          if (option.value) pairs.add(`${action.toolId} ${option.value}`);
+        }
+      }
     }
   }
   return pairs;

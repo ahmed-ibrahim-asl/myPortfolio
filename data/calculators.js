@@ -1,3 +1,4 @@
+import { designTools, circuitGroup } from './design-tools.js';
 const SOURCE_LABEL = "Last Minute Engineers";
 
 const calculatorCatalog = [
@@ -6,7 +7,7 @@ const calculatorCatalog = [
     title: "Ohm's Law Calculator",
     category: "Fundamentals",
     summary:
-      "Find voltage, current, or resistance from the other two — the one relationship every circuit obeys.",
+      "Find voltage, current, or resistance from the other two - the one relationship every circuit obeys.",
     tags: ["Voltage", "Current", "Resistance"],
     sourceUrl: "https://lastminuteengineers.com/ohms-law-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -26,7 +27,7 @@ const calculatorCatalog = [
     title: "5-Band Resistor Color Code Calculator",
     category: "Resistors",
     summary:
-      "The same idea with one more digit of precision — for the tighter-tolerance resistors that use five bands.",
+      "The same idea with one more digit of precision - for the tighter-tolerance resistors that use five bands.",
     tags: ["Resistors", "Color code", "5-band"],
     sourceUrl: "https://lastminuteengineers.com/5-band-resistor-color-code-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -46,7 +47,7 @@ const calculatorCatalog = [
     title: "Parallel Resistor Calculator",
     category: "Resistors",
     summary:
-      "Wire resistors side by side and the math flips — flip each value, add them, flip the sum back.",
+      "Wire resistors side by side and the math flips - flip each value, add them, flip the sum back.",
     tags: ["Resistors", "Parallel circuit"],
     sourceUrl: "https://lastminuteengineers.com/parallel-resistor-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -56,7 +57,7 @@ const calculatorCatalog = [
     title: "Voltage Divider Calculator",
     category: "Fundamentals",
     summary:
-      "Two resistors in series split a voltage in proportion to their size — the trick behind most sensor circuits.",
+      "Two resistors in series split a voltage in proportion to their size - the trick behind most sensor circuits.",
     tags: ["Voltage divider", "Resistors"],
     sourceUrl: "https://lastminuteengineers.com/voltage-divider-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -86,7 +87,7 @@ const calculatorCatalog = [
     title: "555 Timer Monostable Circuit Calculator",
     category: "Timing & Filters",
     summary:
-      "One trigger, one pulse — work out exactly how long a 555 timer's one-shot output stays high.",
+      "One trigger, one pulse - work out exactly how long a 555 timer's one-shot output stays high.",
     tags: ["555 timer", "Monostable", "Pulse width"],
     sourceUrl: "https://lastminuteengineers.com/555-timer-monostable-circuit-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -96,7 +97,7 @@ const calculatorCatalog = [
     title: "Capacitive Reactance Calculator",
     category: "Timing & Filters",
     summary:
-      "See how much a capacitor resists AC current at a given frequency — resistance's frequency-dependent cousin.",
+      "See how much a capacitor resists AC current at a given frequency - resistance's frequency-dependent cousin.",
     tags: ["Capacitors", "AC circuits", "Reactance"],
     sourceUrl: "https://lastminuteengineers.com/capacitive-reactance-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -146,7 +147,7 @@ const calculatorCatalog = [
     title: "Low Pass Filter Calculator",
     category: "Timing & Filters",
     summary:
-      "The same RC pair, wired the other way round — keep the lows, roll off everything above the cutoff.",
+      "The same RC pair, wired the other way round - keep the lows, roll off everything above the cutoff.",
     tags: ["Filters", "RC circuit", "Cutoff frequency"],
     sourceUrl: "https://lastminuteengineers.com/low-pass-filter-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -156,7 +157,7 @@ const calculatorCatalog = [
     title: "Op-Amp Gain Calculator",
     category: "Timing & Filters",
     summary:
-      "Two resistors decide how much an op-amp amplifies a signal — and whether it flips polarity on the way.",
+      "Two resistors decide how much an op-amp amplifies a signal - and whether it flips polarity on the way.",
     tags: ["Op-amp", "Gain", "Amplifier"],
     sourceUrl: "https://lastminuteengineers.com/op-amp-gain-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -186,7 +187,7 @@ const calculatorCatalog = [
     title: "Temperature Conversion",
     category: "Conversions",
     summary:
-      "Celsius, Fahrenheit, and Kelvin — three scales for the same thing, converted both ways at once.",
+      "Celsius, Fahrenheit, and Kelvin - three scales for the same thing, converted both ways at once.",
     tags: ["Temperature", "Unit conversion"],
     sourceUrl: "https://lastminuteengineers.com/temperature-conversion/",
     sourceLabel: SOURCE_LABEL
@@ -196,7 +197,7 @@ const calculatorCatalog = [
     title: "Decimal, Binary, Octal and Hex Converter",
     category: "Number Systems",
     summary:
-      "Type a number in any base and read it back in all four at once — decimal, binary, octal, and hex.",
+      "Type a number in any base and read it back in all four at once - decimal, binary, octal, and hex.",
     tags: ["Number bases", "Binary", "Hex"],
     sourceUrl: "https://lastminuteengineers.com/decimal-binary-octal-hex-converter/",
     sourceLabel: SOURCE_LABEL
@@ -216,7 +217,7 @@ const calculatorCatalog = [
     title: "One's Complement Calculator",
     category: "Number Systems",
     summary:
-      "Flip every bit in a binary number — the building block behind how computers represent negative numbers.",
+      "Flip every bit in a binary number - the building block behind how computers represent negative numbers.",
     tags: ["Binary", "Complement"],
     sourceUrl: "https://lastminuteengineers.com/ones-1s-complement-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -254,7 +255,7 @@ const calculatorCatalog = [
     title: "Log Base 2 Calculator",
     category: "Number Systems",
     summary:
-      "Find out how many times a number has to double to reach another — the question log base 2 answers.",
+      "Find out how many times a number has to double to reach another - the question log base 2 answers.",
     tags: ["Logarithms", "Binary"],
     sourceUrl: "https://lastminuteengineers.com/log-base-2-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -274,7 +275,7 @@ const calculatorCatalog = [
     title: "Hex Calculator",
     category: "Number Systems",
     summary:
-      "The same arithmetic, base 16 — handy for anyone reading memory addresses or register values all day.",
+      "The same arithmetic, base 16 - handy for anyone reading memory addresses or register values all day.",
     tags: ["Hex", "Arithmetic"],
     sourceUrl: "https://lastminuteengineers.com/hex-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -314,7 +315,7 @@ const calculatorCatalog = [
     title: "Wavelength Calculator",
     category: "Physics & Math",
     summary:
-      "Find the physical length of one wave cycle from its speed and frequency — light, sound, or radio.",
+      "Find the physical length of one wave cycle from its speed and frequency - light, sound, or radio.",
     tags: ["Waves", "Physics", "RF"],
     sourceUrl: "https://lastminuteengineers.com/wavelength-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -324,7 +325,7 @@ const calculatorCatalog = [
     title: "Frequency-to-Period Calculator",
     category: "Physics & Math",
     summary:
-      "Frequency and period are just each other's reciprocal — flip one to get the other, either direction.",
+      "Frequency and period are just each other's reciprocal - flip one to get the other, either direction.",
     tags: ["Waves", "Timing"],
     sourceUrl: "https://lastminuteengineers.com/frequency-to-period-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -353,7 +354,7 @@ const calculatorCatalog = [
     title: "Cube Root Calculator",
     category: "Physics & Math",
     summary:
-      "Same idea as a square root, one dimension further — the number that multiplies by itself three times.",
+      "Same idea as a square root, one dimension further - the number that multiplies by itself three times.",
     tags: ["Math", "Roots"],
     sourceUrl: "https://lastminuteengineers.com/cube-root-calculator/",
     sourceLabel: SOURCE_LABEL
@@ -363,33 +364,22 @@ const calculatorCatalog = [
 export const calculatorCategories = Object.freeze([
   "Fundamentals",
   "Resistors",
-  "Timing & Filters",
+  "Circuit Design",
+  "Control Design",
+  "Power Conversion & Supplies",
+  "Text & Encoding",
   "Conversions",
   "Number Systems",
   "Physics & Math"
 ]);
 
-function resolveVisualKey(tool) {
-  if (tool.slug === "ohms-law-calculator" || tool.slug === "op-amp-gain-calculator") {
-    return "ohms";
-  }
-  if (tool.slug === "voltage-divider-calculator") return "divider";
-  if (tool.slug === "led-series-resistor-calculator") return "led";
-  if (tool.slug === "battery-life-calculator") return "battery";
-  if (tool.category === "Resistors") return "resistor";
-  if (tool.slug.includes("555-timer")) return "timer";
-  if (tool.slug.includes("filter") || tool.slug.includes("reactance")) return "filter";
-  if (tool.category === "Timing & Filters") return "wave";
-  if (tool.slug.includes("capacitor") || tool.slug.includes("capacitance")) return "capacitor";
-  if (tool.category === "Conversions") return "conversion";
-  if (tool.category === "Number Systems") return "number";
-  if (tool.slug.includes("wavelength") || tool.slug.includes("frequency")) return "wave";
-  return "physics";
-}
-
 export const calculators = Object.freeze(
-  calculatorCatalog.map((tool) => Object.freeze({
+  [...calculatorCatalog, ...designTools].map((tool) => Object.freeze({
     ...tool,
-    visualKey: resolveVisualKey(tool)
+    category: tool.category === 'Timing & Filters'
+      ? (/555|filter|op-amp/.test(tool.slug) ? 'Circuit Design' : 'Fundamentals')
+      : /^(ascii-to-hex|hex-to-ascii)/.test(tool.slug) ? 'Text & Encoding' : tool.category,
+    group: tool.group || circuitGroup(tool.slug),
+    visualKey: tool.slug
   }))
 );

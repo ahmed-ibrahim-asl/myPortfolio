@@ -1,10 +1,8 @@
 "use client";
 
-import {
-  useId,
-  useState,
-} from "react";
-
+import { useState } from "react";
+import { FloatingExplainer } from "../FloatingExplainer";
+import type { Position } from "../useDraggable";
 import styles from "./SecurityMission.module.css";
 
 export type ExplanationData = {
@@ -17,12 +15,13 @@ export type ExplanationData = {
 };
 
 export function SecurityExplanation({
+  title = "Explain this choice",
   explanation,
 }: {
+  title?: string;
   explanation?: ExplanationData;
 }) {
-  const [expanded, setExpanded] = useState(false);
-  const panelId = useId();
+  const [anchor, setAnchor] = useState<Position | null>(null);
   if (!explanation) return null;
 
   const rows = [
@@ -32,29 +31,32 @@ export function SecurityExplanation({
     ["Avoid it when", explanation.avoidWhen],
     ["Trade-off", explanation.tradeoff],
     ["Command effect", explanation.codeEffect],
-  ].filter(([, value]) => Boolean(value));
+  ].filter(([, value]) => Boolean(value)) as [string, string][];
 
   return (
     <div className={styles.explanation}>
       <button
         type="button"
         className={styles.explanationButton}
-        aria-expanded={expanded}
-        aria-controls={panelId}
-        onClick={() => setExpanded((value) => !value)}
+        aria-haspopup="dialog"
+        onClick={(event) =>
+          setAnchor({
+            x: Math.min(event.clientX + 12, window.innerWidth - 320),
+            y: Math.max(event.clientY - 16, 12),
+          })
+        }
       >
-        {expanded ? "Hide explanation" : "Explain this choice"}
+        Explain this choice
       </button>
-      {expanded && (
-        <dl id={panelId} className={styles.explanationPanel}>
+      {anchor ? (
+        <FloatingExplainer title={title} isOpen onClose={() => setAnchor(null)} anchorPosition={anchor}>
           {rows.map(([label, value]) => (
-            <div key={label}>
-              <dt>{label}</dt>
-              <dd>{value}</dd>
-            </div>
+            <p key={label}>
+              <strong>{label}:</strong> {value}
+            </p>
           ))}
-        </dl>
-      )}
+        </FloatingExplainer>
+      ) : null}
     </div>
   );
 }

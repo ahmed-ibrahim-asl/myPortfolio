@@ -2,10 +2,12 @@
 
 import { useMemo, useState } from "react";
 import {
+  CalculatorLearning,
   CalculatorPanel,
   CalculatorResult,
   CalculatorResults,
   ColorSwatchPicker,
+  LearningDisclosure,
   Mnemonic,
   ToolSection,
   WorkedExample
@@ -36,52 +38,8 @@ export function ResistorColorCodeCalculator() {
   ];
 
   return (
-    <div className="article-body">
-      <ToolSection title="What's going on">
-        <p>
-          A resistor is too small to print a number on, so manufacturers paint the number instead —
-          as a sequence of colored bands. Learn the code once and any resistor in the drawer becomes
-          readable at a glance, no multimeter required.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="Build it up">
-        <p>
-          Four bands, four jobs. The first two bands are digits — they spell out a two-digit number.
-          The third band is a multiplier — it tells you how many zeros to add (or, for gold and
-          silver, how far to shift the decimal point). The fourth band is tolerance — how far the
-          real resistance is allowed to drift from that number.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="The formula">
-        <p className="mono">R = (D1 × 10 + D2) × Multiplier</p>
-        <p>
-          D1 and D2 are the first two digits, read left to right starting from the band closest to
-          the edge of the resistor.
-        </p>
-      </ToolSection>
-
-      <Mnemonic phrase="Big Bears Race Over Yellow Grass, Blue Violets Grow Wild">
-        <p>
-          Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White — digits 0 through 9,
-          in the order the bands are always printed. The sentence walks the color wheel in the same
-          order the bands do, so once it&rsquo;s stuck, so is the code.
-        </p>
-      </Mnemonic>
-
-      <ToolSection title="Worked example">
-        <WorkedExample>
-          <p className="step">Bands: Brown, Black, Red, Gold</p>
-          <p className="step">Digits: 1, 0 → 10</p>
-          <p className="step">Multiplier: Red → ×100</p>
-          <p className="step">R = 10 × 100 = 1,000 Ω = 1 kΩ ± 5%</p>
-        </WorkedExample>
-      </ToolSection>
-
-      <ResistorBandsDiagram bands={bandHexes} />
-
-      <CalculatorPanel>
+    <div className="article-body" data-calculator-experience>
+      <CalculatorPanel compact visual={<ResistorBandsDiagram bands={bandHexes} />}>
         <ColorSwatchPicker
           label="Band 1 (1st digit)"
           colors={DIGIT_COLORS}
@@ -113,9 +71,55 @@ export function ResistorColorCodeCalculator() {
         <CalculatorResults>
           <CalculatorResult label="Resistance" value={formatOhms(value)} />
           <CalculatorResult label="Tolerance" value={`± ${tol}%`} />
-          <CalculatorResult label="Range" value={`${formatOhms(min)} – ${formatOhms(max)}`} />
+          <CalculatorResult label="Range" value={`${formatOhms(min)} to ${formatOhms(max)}`} />
         </CalculatorResults>
       </CalculatorPanel>
+
+      <CalculatorLearning>
+        <ToolSection title="What's going on">
+          <p>
+            A resistor is too small to print a number on, so manufacturers paint the number instead -
+            as a sequence of colored bands. Learn the code once and any resistor in the drawer becomes
+            readable at a glance, no multimeter required.
+          </p>
+        </ToolSection>
+
+        <ToolSection title="The formula">
+          <p className="mono">R = (D1 × 10 + D2) × Multiplier</p>
+          <p>
+            D1 and D2 are the first two digits, read left to right starting from the band closest to
+            the edge of the resistor.
+          </p>
+        </ToolSection>
+
+        <LearningDisclosure>
+          <ToolSection title="Build it up">
+            <p>
+              Four bands, four jobs. The first two bands are digits - they spell out a two-digit number.
+              The third band is a multiplier - it tells you how many zeros to add (or, for gold and
+              silver, how far to shift the decimal point). The fourth band is tolerance - how far the
+              real resistance is allowed to drift from that number.
+            </p>
+          </ToolSection>
+
+          <Mnemonic phrase="Big Bears Race Over Yellow Grass, Blue Violets Grow Wild">
+            <p>
+              Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White - digits 0 through 9,
+              in the order the bands are always printed. The sentence walks the color wheel in the same
+              order the bands do, so once it&rsquo;s stuck, so is the code.
+            </p>
+          </Mnemonic>
+
+          <ToolSection title="Worked example">
+            <WorkedExample>
+              <p className="step">Bands: Brown, Black, Red, Gold</p>
+              <p className="step">Digits: 1, 0 → 10</p>
+              <p className="step">Multiplier: Red → ×100</p>
+              <p className="step">R = 10 × 100 = 1,000 Ω = 1 kΩ ± 5%</p>
+            </WorkedExample>
+          </ToolSection>
+        </LearningDisclosure>
+      </CalculatorLearning>
     </div>
   );
 }

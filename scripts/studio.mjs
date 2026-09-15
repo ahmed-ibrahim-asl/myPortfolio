@@ -2,7 +2,6 @@ import http from "node:http";
 import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
-import { spawn } from "node:child_process";
 import { parseFrontmatter, stringifyFrontmatter } from "../lib/frontmatter.js";
 import { marked } from "marked";
 
@@ -40,8 +39,8 @@ function safeSlug(value = "") {
 
 function safeFileName(value = "") {
   const extension = path.extname(value).toLowerCase();
-  const allowed = new Set([".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"]);
-  if (!allowed.has(extension)) throw new Error("Unsupported image format.");
+  const allowed = new Set([".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg", ".pdf"]);
+  if (!allowed.has(extension)) throw new Error("Unsupported file format. Use an image or PDF.");
   const base = path
     .basename(value, extension)
     .toLowerCase()
@@ -133,50 +132,13 @@ async function writePost({ slug, previousSlug, meta, content }) {
   return readPost(nextSlug);
 }
 
-function run(command, args) {
-  return new Promise((resolve, reject) => {
-    const child = spawn(command, args, {
-      cwd: root,
-      windowsHide: true,
-      shell: false
-    });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (data) => (stdout += data));
-    child.stderr.on("data", (data) => (stderr += data));
-    child.on("error", reject);
-    child.on("close", (code) => {
-      if (code === 0) resolve({ stdout: stdout.trim(), stderr: stderr.trim() });
-      else reject(new Error(stderr.trim() || stdout.trim() || `${command} failed`));
-    });
-  });
-}
-
 async function publish(slug) {
   const post = await readPost(slug);
   post.meta.draft = false;
   await writePost(post);
-
-  await run("git", ["add", "--", `content/writing/${post.slug}.md`]);
-  const assetDir = path.join(publicBlogDir, post.slug);
-  if (fsSync.existsSync(assetDir)) {
-    await run("git", ["add", "--", `public/blog/${post.slug}`]);
-  }
-
-  let committed = true;
-  try {
-    await run("git", ["diff", "--cached", "--quiet"]);
-    committed = false;
-  } catch {
-    await run("git", ["commit", "-m", `content: publish ${post.slug}`]);
-  }
-
-  await run("git", ["push"]);
   return {
     post: await readPost(post.slug),
-    message: committed
-      ? "Published and pushed to GitHub."
-      : "No content changes to commit; GitHub is already up to date."
+    message: "Marked public in the local workspace. Review and deploy separately."
   };
 }
 

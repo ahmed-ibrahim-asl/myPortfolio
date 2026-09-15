@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-motion="on">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>ASL / The living workbench — concept preview</title>
+  <link rel="stylesheet" href="./style.css"><script src="./main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="preview"><span><i></i> DESIGN STUDY / NOT THE CURRENT HOMEPAGE</span><a href="../../">Compare with current site ↗</a></div>
+  <header class="nav wrap">
+    <a class="brand" href="../../" aria-label="Ahmed Asl homepage">عسل<span>AHMED ASL<small>SYSTEMS ENGINEER</small></span></a>
+    <nav aria-label="Concept navigation"><a href="#selected">Selected work</a><a href="#workbench">The workbench</a></nav>
+    <div class="settings"><button id="motion" aria-pressed="true">Motion on</button><button id="theme" aria-label="Switch to light theme">Light mode ◐</button></div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="selected">
+      <div class="hero-top"><p class="eyebrow"><span class="status-dot"></span> HARDWARE. SOFTWARE. THE CONNECTION BETWEEN.</p><span class="edition">PORTFOLIO / ENGINEERING</span></div>
+      <div class="hero-grid">
+        <div class="intro"><p class="arabic" lang="ar" dir="rtl">فكّك المشكلة</p><h1>From a signal.<br>To something<br><em>that works.</em></h1><p class="lede">I’m Ahmed Asl. I build connected systems—from embedded electronics and robotics to the interfaces that make them useful.</p><a class="primary" href="../../work/">Explore my work <span>↗</span></a><a class="quiet" href="#workbench">Or try the workbench below ↓</a></div>
+        <div class="hardware">
+          <div class="image-frame"><img id="project-image" src="../../media/portfolio/showcase/agribot/cover.webp" alt="AI-styled presentation of the AgriBot agricultural robot" width="1672" height="941"><span class="image-label" id="image-label">AGRIBOT / AI-STYLED PROJECT COVER</span><div class="crosshair crosshair-one" aria-hidden="true"></div><div class="crosshair crosshair-two" aria-hidden="true"></div></div>
+          <div class="project-caption"><div><span class="eyebrow">FEATURED SYSTEM</span><h2>AgriBot<span>↗</span></h2></div><p>Agricultural robotics.<br>Connected from field to interface.</p></div>
+          <div class="layer-switch" role="group" aria-label="Explore AgriBot layers"><button data-layer="hardware" aria-pressed="true">01 <span>Hardware</span></button><button data-layer="software" aria-pressed="false">02 <span>Software</span></button><button data-layer="interface" aria-pressed="false">03 <span>Interface</span></button></div>
+          <div class="layer-detail" aria-live="polite"><p id="layer-copy">The physical platform brings the electronics, mobile chassis, and agricultural hardware into one system.</p><a href="../../work/embedded-iot/agribot-architecture/">Read the project ↗</a></div>
+        </div>
+      </div>
+      <div class="disciplines"><span>EMBEDDED SYSTEMS</span><i>+</i><span>ROBOTICS</span><i>+</i><span>APPLIED AI</span><i>+</i><span>USEFUL INTERFACES</span></div>
+    </section>
+    <section class="bench-section" id="workbench"><div class="wrap">
+      <header class="section-heading"><div><p class="eyebrow">DON’T JUST READ ABOUT IT</p><h2>Give the system<br><em>something to respond to.</em></h2></div><p>Move the input. Follow the decision.<br>See the output change.<br><span>A small example of how I think and build.</span></p></header>
+      <div class="bench" id="bench" data-active="false">
+        <div class="bench-bar"><span><i class="status-dot"></i> INTERACTIVE BENCH / THRESHOLD CONTROL</span><span>ILLUSTRATIVE DEMO · NOT LIVE TELEMETRY</span></div>
+        <div class="signal-flow">
+          <div class="signal-panel"><span class="eyebrow">01 / INPUT</span><h3>A physical signal</h3><div class="reading"><output id="sensor-value" for="sensor">35</output><span>%</span></div><label for="sensor">Simulated sensor level</label><input id="sensor" type="range" min="0" max="100" value="35"><div class="range-label"><span>0 / LOW</span><span>100 / HIGH</span></div></div>
+          <div class="connector" aria-hidden="true"><span></span><b>→</b></div>
+          <div class="signal-panel decision"><span class="eyebrow">02 / DECISION</span><h3>A simple rule</h3><div class="rule">INPUT <span>≥</span> 60<span class="percent">%</span></div><p>If the signal reaches the threshold, enable the output.</p><div class="evaluation" id="evaluation">35 &lt; 60 · condition not met</div></div>
+          <div class="connector output-wire" aria-hidden="true"><span></span><b>→</b></div>
+          <div class="signal-panel output"><span class="eyebrow">03 / OUTPUT</span><h3>A visible response</h3><div class="output-reading"><div class="lamp" aria-hidden="true"><svg viewBox="0 0 60 60"><path d="M22 42v-5c-13-9-6-25 8-25s21 16 8 25v5M22 47h16M26 52h8"/><path d="M30 2v5M8 12l4 4M48 16l4-4M3 31h6M51 31h6"/></svg></div><strong id="output-state" role="status">OFF</strong></div><p id="output-copy">Below the threshold.<br>The output stays disabled.</p></div>
+        </div>
+        <div class="bench-footer"><span>One input. One rule. An observable result.</span><a href="../../tools/logic-gate-designer/">Build your own logic circuit ↗</a></div>
+      </div>
+    </div></section>
+    <section class="tools wrap"><header class="section-heading"><div><p class="eyebrow">TAKE IT FURTHER</p><h2>Open a real tool.</h2></div><a class="quiet" href="../../tools/">Browse the engineering workbench ↗</a></header>
+      <div class="tool-grid"><a class="tool-card" href="../../tools/smps-designer/"><div class="tool-art"><picture><source media="(prefers-color-scheme: light)" srcset="../../media/tools/design/smps-dark.svg"><img src="../../media/tools/design/smps-dark.svg" alt="Isolated flyback power supply diagram" loading="eager"></picture><span class="launch">↗</span></div><div class="tool-text"><span class="eyebrow">POWER ELECTRONICS</span><h3>See where the energy goes.</h3><p>Explore the switching phases of an isolated flyback supply, with calculations and component explanations.</p><span class="tool-link">Open SMPS Designer →</span></div></a>
+      <a class="tool-card" href="../../tools/category/circuit-design/"><div class="tool-art circuit-art" aria-hidden="true"><svg viewBox="0 0 600 260"><defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="currentColor" opacity=".08"/></pattern></defs><rect width="600" height="260" fill="url(#grid)"/><path class="schematic" d="M60 165H210M210 90V210L345 150ZM345 150H535M410 150V55H305M265 55H175V120H210M265 45H305V65H265Z"/><text x="225" y="129">−</text><text x="225" y="178">+</text><path class="wave" d="M75 225q20-30 40 0t40 0M430 220q20-55 40 0t40 0"/><circle cx="410" cy="150" r="5"/><text x="64" y="130">IN</text><text x="480" y="115">OUT</text><text x="254" y="31">FEEDBACK</text></svg><span class="launch">↗</span></div><div class="tool-text"><span class="eyebrow">CIRCUIT DESIGN</span><h3>Understand it. Then design it.</h3><p>Explore amplifiers, filters, timers, and tuned circuits through interactive schematics and readable equations.</p><span class="tool-link">Explore circuit tools →</span></div></a></div>
+    </section>
+    <footer class="wrap concept-footer"><div><span class="eyebrow">THE IDEA BEHIND THIS PREVIEW</span><p>Let the engineering be the experience.</p></div><p>Original concept inspired by MotionSite’s hardware-led compositions.<br>Your existing assets. Purposeful motion. No template code copied.</p><a href="../../">Back to your current homepage ↗</a></footer>
+  </main>
+</body>
+</html>

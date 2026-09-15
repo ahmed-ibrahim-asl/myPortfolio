@@ -3,10 +3,12 @@
 import { useMemo, useState } from "react";
 import {
   CalculatorField,
+  CalculatorLearning,
   CalculatorPanel,
   CalculatorResult,
   CalculatorResults,
   CalculatorSelect,
+  LearningDisclosure,
   Mnemonic,
   ToolSection,
   WorkedExample
@@ -70,51 +72,8 @@ export function OhmsLawCalculator() {
   const inputs = INPUT_LABELS[mode];
 
   return (
-    <div className="article-body">
-      <ToolSection title="What's going on">
-        <p>
-          Push electricity through a wire and three things share the room: how hard you&rsquo;re
-          pushing (voltage), how much charge is actually moving (current), and how much the wire
-          fights back against that flow (resistance). Squeeze one of them and the other two react.
-          Ohm&rsquo;s Law is just the sentence that keeps them honest.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="Build it up">
-        <p>
-          Start from something intuitive: the harder you push (more voltage), the more current flows
-          — so current grows with voltage. Now add resistance: for the same push, a wire that
-          resists more lets less current through — so current shrinks as resistance grows. Put those
-          two observations together and current has to be voltage divided by resistance.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="The formula">
-        <p className="mono">V = I × R</p>
-        <p>
-          V is voltage in volts, I is current in amps, R is resistance in ohms. Rearrange it however
-          the problem needs: I = V ÷ R, or R = V ÷ I.
-        </p>
-      </ToolSection>
-
-      <Mnemonic tag="VIR" phrase="Very Important Rule">
-        <p>
-          Stack the letters in a triangle — V on top, I and R side by side underneath. Cover the
-          quantity you&rsquo;re solving for; whatever is left tells you whether to multiply or
-          divide. Cover V and you&rsquo;re left with I next to R — multiply. Cover I or R and
-          you&rsquo;re left with V over the other — divide.
-        </p>
-      </Mnemonic>
-
-      <ToolSection title="Worked example">
-        <WorkedExample>
-          <p className="step">Known: V = 12 V, R = 4 Ω</p>
-          <p className="step">I = V ÷ R = 12 ÷ 4</p>
-          <p className="step">I = 3 A</p>
-        </WorkedExample>
-      </ToolSection>
-
-      <CalculatorPanel>
+    <div className="article-body" data-calculator-experience>
+      <CalculatorPanel compact>
         <CalculatorSelect
           label="Solve for"
           value={mode}
@@ -151,6 +110,53 @@ export function OhmsLawCalculator() {
           <p className="muted">Enter two valid numbers to see the result.</p>
         )}
       </CalculatorPanel>
+
+      <CalculatorLearning>
+        <ToolSection title="What's going on">
+          <p>
+            Push electricity through a wire and three things share the room: how hard you&rsquo;re
+            pushing (voltage), how much charge is actually moving (current), and how much the wire
+            fights back against that flow (resistance). Squeeze one of them and the other two react.
+            Ohm&rsquo;s Law is just the sentence that keeps them honest.
+          </p>
+        </ToolSection>
+
+        <ToolSection title="The formula">
+          <p className="mono">V = I × R</p>
+          <p>
+            V is voltage in volts, I is current in amps, R is resistance in ohms. Rearrange it however
+            the problem needs: I = V ÷ R, or R = V ÷ I.
+          </p>
+        </ToolSection>
+
+        <LearningDisclosure>
+          <ToolSection title="Build it up">
+            <p>
+              Start from something intuitive: the harder you push (more voltage), the more current flows
+              - so current grows with voltage. Now add resistance: for the same push, a wire that
+              resists more lets less current through - so current shrinks as resistance grows. Put those
+              two observations together and current has to be voltage divided by resistance.
+            </p>
+          </ToolSection>
+
+          <Mnemonic tag="VIR" phrase="Very Important Rule">
+            <p>
+              Stack the letters in a triangle - V on top, I and R side by side underneath. Cover the
+              quantity you&rsquo;re solving for; whatever is left tells you whether to multiply or
+              divide. Cover V and you&rsquo;re left with I next to R - multiply. Cover I or R and
+              you&rsquo;re left with V over the other - divide.
+            </p>
+          </Mnemonic>
+
+          <ToolSection title="Worked example">
+            <WorkedExample>
+              <p className="step">Known: V = 12 V, R = 4 Ω</p>
+              <p className="step">I = V ÷ R = 12 ÷ 4</p>
+              <p className="step">I = 3 A</p>
+            </WorkedExample>
+          </ToolSection>
+        </LearningDisclosure>
+      </CalculatorLearning>
     </div>
   );
 }

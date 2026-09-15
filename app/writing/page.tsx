@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { WritingIndex } from "@/components/WritingIndex";
 import { WritingSeries } from "@/components/WritingSeries";
 import { getAllPosts } from "@/lib/content";
@@ -8,7 +9,7 @@ export const metadata = createPageMetadata({
   title: "Engineering Tutorials and Linux Walkthroughs",
   description:
     "Read Ahmed Asl's tutorials on Linux, cybersecurity, embedded systems, Python, Git, Dart, Flutter, IoT, and machine learning.",
-  pathname: "/writing/"
+  pathname: "/notes/"
 });
 
 export default function WritingPage() {
@@ -27,6 +28,19 @@ export default function WritingPage() {
       </section>
 
       <WritingSeries posts={allPosts} />
+
+      <section className="shell notes-resource-rail" aria-label="Reference collections">
+        <Link href="/notes/library">
+          <span className="mono">PDF / LIBRARY</span>
+          <strong>Open the engineering document shelf</strong>
+          <small>Read reference documents without leaving the site.</small>
+        </Link>
+        <Link href="/prompts">
+          <span className="mono">PROMPTS / INDEX</span>
+          <strong>Reuse a visual or technical workflow</strong>
+          <small>Slash-style guides for repeatable results.</small>
+        </Link>
+      </section>
 
       <section
         className="shell page-section writing-index-section"

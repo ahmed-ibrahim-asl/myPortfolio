@@ -1,10 +1,12 @@
 import { ModelMissionShell } from "@/components/tools/model-mission/ModelMissionShell";
 import { createPageMetadata } from "@/lib/seo";
+import { getToolSearchHook } from "@/data/tool-search-hooks";
+
+const searchHook = getToolSearchHook("ai-script-generator")!;
 
 export const metadata = createPageMetadata({
-  title: "Model Mission: Guided AI and Computer Vision Builder",
-  description:
-    "Generate complete Python workflows for YOLO26, YOLOE open-vocabulary detection, monocular depth, U-Net segmentation, sensor AI, image classification, and classical machine learning.",
+  title: searchHook.seoTitle,
+  description: searchHook.metaDescription,
   pathname: "/tools/ai-script-generator/",
 });
 

@@ -1,0 +1,85 @@
+/* Light surfaces use dark ink; photographic plates retain their own contrast. */
+html[data-theme="light"] {
+  --asl-gold: color-mix(in srgb, var(--gold-700) 85%, black);
+  --asl-gold-soft: color-mix(in srgb, var(--gold-700) 85%, black);
+  --pixel-cyan: var(--text-primary);
+  --pixel-green: var(--text-primary);
+}
+[data-theme="light"] .text-link { color: var(--text-primary); border-color: var(--line-strong); }
+[data-theme="light"] .text-link:hover,
+[data-theme="light"] .text-link:focus-visible { color: var(--text-primary); border-color: var(--text-primary); background: var(--bg-hover); }
+[data-theme="light"] .portrait-id,
+[data-theme="light"] .portrait-id strong { color: #FFFFFF; }
+[data-theme="light"] .site-footer .eyebrow { color: var(--text-primary); }
+[data-theme="light"] .prompt-panel code { color: var(--text-primary); }
+[data-theme="light"] :is(.home-register span, .notes-resource-rail span, .notes-list > a > span) { color: var(--text-primary); }
+[data-theme="light"] .home-hook strong { color: var(--text-primary); }
+[data-theme="light"] :is(.publication-record, .tutorial-card) { background: var(--bg-surface); border-color: var(--line-strong); }
+/* Legacy About components must not keep their pale, dark-surface ink. */
+[data-theme="light"] .technology-cluster > p,
+[data-theme="light"] .section-intro,
+[data-theme="light"] .article-summary,
+[data-theme="light"] .post-main > p,
+[data-theme="light"] .tutorial-card p,
+[data-theme="light"] .publication-authors,
+[data-theme="light"] .publication-venue,
+[data-theme="light"] .publication-sync-note,
+[data-theme="light"] .publication-record-index strong,
+[data-theme="light"] .course-card-top span:first-child,
+[data-theme="light"] .technology-tool-list strong,
+[data-theme="light"] .course-card p,
+[data-theme="light"] .timeline-item p,
+[data-theme="light"] .about-statement .profile-credential-card p {
+  color: var(--text-primary);
+}
+[data-theme="light"] .teaching-section {
+  background: var(--bg-page);
+  border-color: var(--line-strong);
+}
+[data-theme="light"] .technology-tool-list,
+[data-theme="light"] .technology-tool-list li { border-color: var(--line-strong); }
+[data-theme="light"] .button.text-button {
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border-color: var(--line-strong);
+  box-shadow: none;
+}
+[data-theme="light"] .button.text-button:hover,
+[data-theme="light"] .button.text-button:focus-visible {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+  border-color: var(--text-primary);
+}
+[data-theme="light"] .project-ledger { height: auto; grid-template-rows: auto; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+[data-theme="light"] .project-ledger .project-entry { display: flex; flex-direction: column; grid-row: auto; background: var(--bg-surface); }
+[data-theme="light"] .project-ledger .project-entry > img { position: static; height: 240px; object-fit: contain; background: #101318; }
+[data-theme="light"] .project-ledger .project-entry::after { display: none; }
+[data-theme="light"] .project-ledger .project-copy { position: static; padding: 24px; flex: 1; }
+[data-theme="light"] .project-ledger .project-copy h3,
+[data-theme="light"] .project-ledger .project-copy span,
+[data-theme="light"] .project-ledger .project-copy p { color: var(--text-primary); }
+[data-theme="light"] .tool-cover img { object-fit: contain; background: #101318; }
+[data-theme="light"] .tool-copy p,
+[data-theme="light"] .eyebrow span,
+[data-theme="light"] .tool-cover span { color: var(--text-primary); }
+[data-theme="light"] .unified-tool-cover img { object-fit: contain; filter: none; background: #101318; }
+[data-theme="light"] .unified-tool-cover span { color: #F2D69B; background: #101318; }
+[data-theme="light"] #gradify-delta :where(.text-indigo-600,.text-indigo-700,.text-indigo-800,.text-indigo-900) { color: var(--text-primary); }
+[data-theme="light"] #gradify-delta :where(.text-red-500,.text-red-600) { color: var(--state-alert); }
+[data-theme="light"] .section-ink { background: var(--bg-sunken); border-color: var(--line-strong); }
+[data-theme="light"] .copy-code { color: var(--text-primary); background: var(--bg-surface); border-color: var(--line-strong); }
+[data-theme="light"] :is(.button.primary, .timeline-index, .filter-row button.active, .bit-cell-mark, .terminal-code-copy) {
+  color: var(--accent-on); background: var(--gold-500);
+}
+[data-theme="light"] .asl-workbench-shell .button:not(.text-button) { color: var(--accent-on); background: var(--gold-500); }
+[data-theme="light"] :is(.learn-track-status, .publication-ranking) { color: var(--text-primary); background: var(--bg-selected); }
+[data-theme="light"] .asl-model-mission-shell [data-active="true"],
+[data-theme="light"] .asl-security-mission-shell [data-active="true"],
+[data-theme="light"] .asl-security-mission-shell button[data-state="current"],
+[data-theme="light"] .asl-security-mission-shell :is([aria-pressed="true"], [aria-selected="true"]):not([data-selected]) {
+  color: var(--accent-on) !important; background: var(--gold-500) !important;
+}
+@media(max-width: 1000px) {
+  [data-theme="light"] .project-ledger { grid-template-columns: minmax(0, 1fr); }
+  [data-theme="light"] .project-ledger .project-entry > img { height: auto; max-height: 360px; aspect-ratio: 16 / 9; }
+}

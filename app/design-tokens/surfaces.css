@@ -1,0 +1,65 @@
+:root{
+  /* ---- Radii. Deliberately near-square: 4px is the house corner. */
+  --r-0:0; /* @kind radius */
+  --r-1:2px;
+  --r-2:4px;    /* default: cards, inputs, buttons */
+  --r-3:8px;    /* dialogs, large panels only */
+  --r-pill:999px; /* status dots and count pills only */
+
+  /* ---- Borders */
+  --bw-hairline:1px; /* @kind other */
+  --bw-strong:2px; /* @kind other */
+  --border-hairline:var(--bw-hairline) solid var(--line-hairline); /* @kind other */
+  --border-faint:var(--bw-hairline) solid var(--line-faint); /* @kind other */
+  --border-accent:var(--bw-hairline) solid var(--line-accent);
+
+  /* ---- Elevation. Dark UI separates with borders, not drop shadows.
+     Shadows exist only for things that float above the page. */
+  --shadow-0:none; /* @kind shadow */
+  --shadow-1:0 1px 2px rgba(0,0,0,.45);
+  --shadow-2:0 8px 24px -8px rgba(0,0,0,.65);
+  --shadow-3:0 24px 64px -16px rgba(0,0,0,.75);
+  --inset-top:inset 0 1px 0 rgba(230,232,235,.055); /* the "machined edge" */
+  /* COMPOSITE tokens. A custom property's var() substitution resolves at the
+     element where it is DECLARED, so these inherit as finished strings and can
+     never follow a theme or accent scope from here. Every scope that changes
+     --bg-page, --focus-ring or the accent ramp must redeclare them. */
+  --ring-focus:0 0 0 2px var(--bg-page),0 0 0 3px var(--focus-ring); /* @kind other */
+  --glow-accent:0 0 0 1px var(--gold-a40),0 0 32px -8px rgba(217,164,65,.35);
+
+  /* ---- Blueprint grid background (use sparingly, on empty zones).
+     SHORTHAND ONLY: this value embeds position/size, so it is valid for
+     "background:" and INVALID for "background-image:" (the longhand computes to
+     none). Add a colour as the last layer when you need one:
+       background: var(--bg-grid), var(--bg-surface); */
+  --bg-grid:linear-gradient(var(--grid-line) 1px,transparent 1px) 0 0/100% 64px,
+            linear-gradient(90deg,var(--grid-line) 1px,transparent 1px) 0 0/64px 100%;
+  /* ---- Honeycomb clip for the hex mark container */
+  --clip-hex:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%); /* @kind other */
+}
+
+/* Light-theme elevation. Paper still separates with hairlines first - shadows are
+   softer and cooler, and the machined top edge becomes a faint dark rule instead
+   of a white one (a white inset on white is nothing). */
+.theme-light,.theme-paper,[data-theme="light"]{
+  --shadow-1:0 1px 2px rgba(11,13,17,.07); /* @kind shadow */
+  --shadow-2:0 8px 24px -8px rgba(11,13,17,.14); /* @kind shadow */
+  --shadow-3:0 24px 64px -16px rgba(11,13,17,.20); /* @kind shadow */
+  --inset-top:inset 0 1px 0 rgba(11,13,17,.05); /* @kind shadow */
+  --ring-focus:0 0 0 2px #F4F5F7,0 0 0 3px var(--focus-ring); /* @kind other */
+  --glow-accent:0 0 0 1px color-mix(in srgb,var(--gold-600) 46%,transparent),0 0 32px -10px color-mix(in srgb,var(--gold-600) 45%,transparent); /* @kind shadow */
+}
+.theme-dark,[data-theme="dark"]{
+  --shadow-1:0 1px 2px rgba(0,0,0,.45); /* @kind shadow */
+  --shadow-2:0 8px 24px -8px rgba(0,0,0,.65); /* @kind shadow */
+  --shadow-3:0 24px 64px -16px rgba(0,0,0,.75); /* @kind shadow */
+  --inset-top:inset 0 1px 0 rgba(230,232,235,.055); /* @kind shadow */
+  --ring-focus:0 0 0 2px #0B0D11,0 0 0 3px var(--focus-ring); /* @kind other */
+  --glow-accent:0 0 0 1px color-mix(in srgb,var(--gold-500) 40%,transparent),0 0 32px -8px color-mix(in srgb,var(--gold-500) 35%,transparent); /* @kind shadow */
+}
+
+/* Gold field: the page IS the accent, so the ring's halo matches gold and the
+   indicator goes near-black - a gold ring on gold is invisible. */
+.theme-gold,[data-theme="gold"]{
+  --ring-focus:0 0 0 2px var(--gold-500),0 0 0 3px #14100A; /* @kind other */
+}

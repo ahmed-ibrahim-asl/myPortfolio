@@ -204,7 +204,7 @@ async function savePost({ draft = true, silent = false } = {}) {
 async function publishPost() {
   const post = await savePost({ draft: false, silent: true });
   if (!post) return;
-  if (!window.confirm("Commit this article and push it to GitHub?")) return;
+  if (!window.confirm("Mark this article public in the local workspace?")) return;
   try {
     elements.publish.disabled = true;
     elements.publish.textContent = "Publishing…";
@@ -217,12 +217,12 @@ async function publishPost() {
     showToast(result.message);
   } catch (error) {
     showToast(
-      `Saved locally, but Git publishing failed: ${error.message}`,
+      `Could not mark the local article public: ${error.message}`,
       true
     );
   } finally {
     elements.publish.disabled = false;
-    elements.publish.textContent = "Publish to GitHub ↗";
+    elements.publish.textContent = "Mark public locally";
   }
 }
 
@@ -236,7 +236,7 @@ async function archivePost() {
     });
     fillEditor(post);
     await loadPosts();
-    showToast("Article returned to drafts. Push the change when ready.");
+    showToast("Article returned to local drafts.");
   } catch (error) {
     showToast(error.message, true);
   }
@@ -312,7 +312,7 @@ async function uploadImage(file) {
         suffix: ")",
         placeholder: result.path
       });
-      showToast("Image added to this article.");
+      showToast(`${file.name.toLowerCase().endsWith(".pdf") ? "PDF" : "Image"} added to this article.`);
     } catch (error) {
       showToast(error.message, true);
     }
@@ -461,3 +461,55 @@ window.addEventListener("beforeunload", (event) => {
 });
 
 loadPosts().catch((error) => showToast(error.message, true));
+
+// Autosave and Recovery implementation
+let autosaveTimer = null;
+let lastSavedContent = null;
+
+function setupAutosave() {
+  if (autosaveTimer) clearInterval(autosaveTimer);
+  autosaveTimer = setInterval(async () => {
+    if (!state.current || !state.dirty) return;
+    
+    // Auto-save as draft only
+    const postData = collectPost(true);
+    const postHash = JSON.stringify(postData);
+    if (postHash === lastSavedContent) return;
+    
+    // Try API save, fallback to localStorage recovery
+    try {
+      const post = await api("/api/posts", {
+        method: "POST",
+        body: postHash
+      });
+      state.previousSlug = post.slug;
+      state.current = post;
+      elements.slug.value = post.slug;
+      setDirty(false);
+      lastSavedContent = postHash;
+      elements.saveStatus.textContent = "Autosaved";
+      setTimeout(() => setDirty(false), 2000);
+    } catch (e) {
+      console.warn("Autosave failed, storing to localStorage for recovery");
+      localStorage.setItem("studio-recovery", postHash);
+      elements.saveStatus.textContent = "Offline - Saved locally";
+    }
+  }, 10000); // 10 seconds autosave
+}
+
+window.addEventListener("load", () => {
+  const recovered = localStorage.getItem("studio-recovery");
+  if (recovered) {
+    if (confirm("Found unsaved work from a previous offline session. Recover it?")) {
+      const data = JSON.parse(recovered);
+      fillEditor({
+        slug: data.slug,
+        meta: data.meta,
+        content: data.content
+      });
+      setDirty(true);
+    }
+    localStorage.removeItem("studio-recovery");
+  }
+  setupAutosave();
+});

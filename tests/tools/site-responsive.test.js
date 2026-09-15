@@ -1,16 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, mkdtempSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
 
-// Sitewide horizontal-overflow check across every real route, at the four breakpoints the
-// archived design-system checklist (design-system/ahmed-asl-portfolio/MASTER.md) already
-// specifies but nothing ever ran: 320/390 (phones), 768 (tablet), 1024 (small desktop), 1440
-// (desktop). This complements the per-tool responsive tests (which drive full interaction
-// journeys on one tool each) by covering breadth across the whole site in one pass.
+// Sitewide browser audit at the eight viewports selected for this portfolio. It checks the
+// rendered geometry rather than relying on media-query source inspection alone.
 
 const chromeCandidates = [
   process.env.CHROME_PATH,
@@ -19,11 +16,14 @@ const chromeCandidates = [
 ].filter(Boolean);
 
 const VIEWPORTS = [
-  { width: 320, height: 720, label: "320 (small phone)" },
   { width: 390, height: 844, label: "390 (phone)" },
   { width: 768, height: 1024, label: "768 (tablet)" },
-  { width: 1024, height: 800, label: "1024 (small desktop)" },
-  { width: 1440, height: 900, label: "1440 (desktop)" }
+  { width: 950, height: 900, label: "950 (split view)" },
+  { width: 982, height: 986, label: "982 (near square)" },
+  { width: 1366, height: 768, label: "1366 (laptop)" },
+  { width: 1920, height: 1080, label: "1920 (desktop)" },
+  { width: 2560, height: 1440, label: "2560 (large desktop)" },
+  { width: 3440, height: 1440, label: "3440 (ultrawide)" }
 ];
 
 const ROUTES = [
@@ -32,8 +32,14 @@ const ROUTES = [
   "/about/",
   "/writing/",
   "/writing/welcome-to-field-notes/",
+  "/notes/",
+  "/notes/library/",
+  "/notes/library/test-document/",
+  "/prompts/",
+  "/prompts/visual-direction-index/",
   "/contact/",
   "/tools/",
+  "/tools/category/resistors/",
   "/tools/battery-estimator/",
   "/tools/pid-simulator/",
   "/tools/sensor-code-generator/",
@@ -44,6 +50,24 @@ const ROUTES = [
   "/tools/555-timer-astable-circuit-calculator/",
   "/tools/decimal-binary-octal-hex-converter/"
 ];
+
+const screenshotDirectory = process.env.RESPONSIVE_SCREENSHOT_DIR;
+const screenshotRoutes = new Map([
+  ["/", "home"],
+  ["/about/", "about"],
+  ["/contact/", "contact"],
+  ["/work/", "work"],
+  ["/writing/", "writing"],
+  ["/prompts/", "prompts"],
+  ["/prompts/visual-direction-index/", "prompt-detail"],
+  ["/notes/library/", "library"],
+  ["/notes/library/test-document/", "library-detail"],
+  ["/tools/", "tools"],
+  ["/tools/security-command-builder/", "security"],
+  ["/tools/ohms-law-calculator/", "calculator"],
+  ["/tools/555-timer-astable-circuit-calculator/", "timer"],
+  ["/tools/pid-simulator/", "pid"]
+]);
 
 function stopProcessTree(child) {
   if (!child?.pid || child.exitCode !== null) return;
@@ -169,8 +193,8 @@ async function createClient(port, url) {
 }
 
 test(
-  "every route stays free of horizontal overflow at 320/390/768/1024/1440",
-  { timeout: 180_000 },
+  "every route is responsive at 390/768/950/982/1366/1920/2560/3440",
+  { timeout: 300_000 },
   async (t) => {
     const chromePath = chromeCandidates.find(existsSync);
     if (!chromePath) {
@@ -215,6 +239,7 @@ test(
     const failures = [];
 
     try {
+      if (screenshotDirectory) mkdirSync(screenshotDirectory, { recursive: true });
       if (app) await waitForServer(`${baseUrl}/`, app);
       const session = await startChrome(chromePath, userDataDir);
       chrome = session.chrome;
@@ -239,12 +264,44 @@ test(
             returnByValue: true,
             expression: `(async () => {
               const auditRoute = ${JSON.stringify(route)};
+              window.scrollTo(0, 0);
               if (auditRoute === "/writing/") {
                 for (let attempt = 0; attempt < 100; attempt += 1) {
                   if (document.querySelector(".post-list .indexed-badge")
                     ?.getClientRects().length) break;
                   await new Promise((resolve) => setTimeout(resolve, 25));
                 }
+              }
+              if (auditRoute.includes("calculator")) {
+                for (let attempt = 0; attempt < 100; attempt += 1) {
+                  const body = document.querySelector(".tool-body");
+                  if (body?.getBoundingClientRect().width > document.documentElement.clientWidth * 0.8) break;
+                  await new Promise((resolve) => setTimeout(resolve, 25));
+                }
+              }
+              if (auditRoute === "/tools/") {
+                for (let attempt = 0; attempt < 100; attempt += 1) {
+                  if (document.querySelectorAll("a[href*='/tools/category/']").length === 7) break;
+                  await new Promise((resolve) => setTimeout(resolve, 25));
+                }
+              }
+              // Next.js dev server dynamically injects CSS. Wait for it to apply.
+              for (let attempt = 0; attempt < 100; attempt += 1) {
+                if (parseFloat(getComputedStyle(document.body).fontSize) >= 16 &&
+                    getComputedStyle(document.documentElement).getPropertyValue("--asl-page").trim()) break;
+                await new Promise((resolve) => setTimeout(resolve, 50));
+              }
+              const readySelector = auditRoute === "/about/"
+                ? ".asl-about-trace .about-intro h1"
+                : auditRoute === "/contact/"
+                  ? ".asl-brief .contact-grid"
+                  : auditRoute === "/tools/security-command-builder/"
+                    ? ".asl-security-mission-shell [data-step-continue]"
+                    : "main > *";
+              for (let attempt = 0; attempt < 100; attempt += 1) {
+                const readyElement = document.querySelector(readySelector);
+                if (readyElement?.getBoundingClientRect().width > 0) break;
+                await new Promise((resolve) => setTimeout(resolve, 25));
               }
               await new Promise((resolve) =>
                 requestAnimationFrame(() => requestAnimationFrame(resolve))
@@ -298,10 +355,22 @@ test(
               const removedSceneCount = document.querySelectorAll(
                 ".pixel-world, .engineering-image-frame--bench, .engineering-image-signal"
               ).length;
-              const freeToolsHook = document.querySelector(".free-tools-hook");
-              const calculatorSection = document.querySelector("#calculators");
-              const advancedToolsSection = document.querySelector("#advanced-tools");
-              const calculatorThumbnails = document.querySelectorAll(".calculator-thumbnail svg").length;
+              const freeToolsHook = document.querySelector(".tool-ledger");
+              const toolCategoryCards = [...document.querySelectorAll("a[href*='/tools/category/']")];
+              const unifiedCatalog = document.querySelector("[data-unified-tools-catalog]");
+              const unifiedSearch = unifiedCatalog?.querySelector("input[type='search']");
+              const calculatorThumbnailElements = [...document.querySelectorAll(".calculator-thumbnail")];
+              const calculatorThumbnails = calculatorThumbnailElements.length;
+              const calculatorThumbnailVisualVariants = new Set(
+                calculatorThumbnailElements.map((element) => element.getAttribute("aria-label") ?? "")
+              ).size;
+              const calculatorThumbnailGenericLabels = calculatorThumbnailElements.filter((element) =>
+                /circuit diagram$/i.test(element.getAttribute("aria-label") ?? "")
+              ).length;
+              const calculatorThumbnailRect = calculatorThumbnailElements[0]?.getBoundingClientRect() ?? null;
+              const calculatorThumbnailAspect = calculatorThumbnailRect?.height
+                ? calculatorThumbnailRect.width / calculatorThumbnailRect.height
+                : 0;
               const calculatorResultText = document.querySelector(".calculator-results-count")?.textContent ?? "";
               const calculatorFinder = document.querySelector(".calculator-finder");
               const calculatorFinderSearch = calculatorFinder?.querySelector("input[type='search']");
@@ -320,6 +389,162 @@ test(
               const embeddedExamples = document.querySelectorAll(".embedded-example-card").length;
               const embeddedLabel = document.querySelector(".embedded-workbench label > span, .embedded-workbench .tool-input > label");
               const embeddedLabelFontSize = embeddedLabel ? parseFloat(getComputedStyle(embeddedLabel).fontSize) : 0;
+              const gridToggleCount = document.querySelectorAll(".grid-toggle-button").length;
+              const hero = document.querySelector(".home-hero");
+              const heroRect = hero?.getBoundingClientRect() ?? null;
+              const arabicTitleRect = document.querySelector(".home-title-ar")?.getBoundingClientRect() ?? null;
+              const englishTitleRect = document.querySelector(".home-title-stack h1")?.getBoundingClientRect() ?? null;
+              const portrait = document.querySelector(".portrait-instrument");
+              const portraitRect = portrait?.getBoundingClientRect() ?? null;
+              const portraitCardRect = portrait?.querySelector(".profile-portrait")?.getBoundingClientRect() ?? null;
+              const portraitId = portrait?.querySelector(".portrait-id");
+              const portraitIdRect = portraitId?.getBoundingClientRect() ?? null;
+              const portraitIdLabels = portraitId ? [...portraitId.querySelectorAll("span")] : [];
+              const portraitIdFirstRect = portraitIdLabels[0]?.getBoundingClientRect() ?? null;
+              const portraitIdLastRect = portraitIdLabels.at(-1)?.getBoundingClientRect() ?? null;
+              const portraitColumn = document.querySelector(".home-portrait");
+              const portraitBackground = portraitColumn ? getComputedStyle(portraitColumn).backgroundColor : "";
+              const pageBackground = getComputedStyle(document.body).backgroundColor;
+              const desktopNavLink = document.querySelector(".site-nav a");
+              const desktopNavFontSize = desktopNavLink
+                ? parseFloat(getComputedStyle(desktopNavLink).fontSize)
+                : 0;
+              const aboutHeading = document.querySelector(".asl-about-trace .about-intro h1");
+              const aboutHeadingRect = aboutHeading?.getBoundingClientRect() ?? null;
+              const aboutHeadingFontSize = aboutHeading
+                ? parseFloat(getComputedStyle(aboutHeading).fontSize)
+                : 0;
+              const aboutPortraitRect = document.querySelector(".profile-portrait--about")?.getBoundingClientRect() ?? null;
+              const aboutIntro = document.querySelector(".asl-about-trace .about-intro");
+              const aboutStoryLabel = document.querySelector(".asl-about-trace .about-story-grid .mono");
+              const aboutIntroBeforeDisplay = aboutIntro
+                ? getComputedStyle(aboutIntro, "::before").display
+                : "none";
+              const aboutStoryLabelColor = aboutStoryLabel
+                ? getComputedStyle(aboutStoryLabel).color
+                : "";
+              const contactGridRect = document.querySelector(".asl-brief .contact-grid")?.getBoundingClientRect() ?? null;
+              const contactForm = document.querySelector(".asl-brief .contact-form");
+              const contactFormPadding = contactForm
+                ? parseFloat(getComputedStyle(contactForm).paddingLeft)
+                : 0;
+              const contactCallout = document.querySelector(".home-contact-section");
+              const contactCalloutBackground = contactCallout
+                ? getComputedStyle(contactCallout).backgroundColor
+                : "";
+              const inactiveToolFilter = document.querySelector(".asl-tools-register .filter-row button:not(.active)");
+              const activeToolFilter = document.querySelector(".asl-tools-register .filter-row button.active");
+              const inactiveToolFilterColor = inactiveToolFilter
+                ? getComputedStyle(inactiveToolFilter).color
+                : "";
+              const activeToolFilterColor = activeToolFilter
+                ? getComputedStyle(activeToolFilter).color
+                : "";
+              const securityPrimary = document.querySelector("[data-step-continue]");
+              const securityCurrentStep = document.querySelector(".asl-security-mission-shell [data-state='current'] strong");
+              const securityInactiveStep = document.querySelector(".asl-security-mission-shell [data-state='upcoming'] strong");
+              const securityPrimaryColor = securityPrimary ? getComputedStyle(securityPrimary).color : "";
+              const securityCurrentStepColor = securityCurrentStep ? getComputedStyle(securityCurrentStep).color : "";
+              const securityInactiveStepColor = securityInactiveStep ? getComputedStyle(securityInactiveStep).color : "";
+              const diagramLabel = document.querySelector(".asl-calculator-shell .diagram-label");
+              const diagramCaption = document.querySelector(".asl-calculator-shell .tool-diagram-caption");
+              const hasDiagramCaption = Boolean(diagramCaption);
+              const diagramLabelColor = diagramLabel ? getComputedStyle(diagramLabel).fill : "";
+              const diagramCaptionColor = diagramCaption ? getComputedStyle(diagramCaption).color : "";
+              const routeShell = document.querySelector(
+                ".home-page > .shell, .asl-page > .shell, .tool-page > .shell, .asl-article > .shell"
+              );
+              const routeShellRect = routeShell?.getBoundingClientRect() ?? null;
+              const routeContentShells = [...document.querySelectorAll(
+                "#main-content .asl-page > .shell, #main-content .asl-page.shell, "
+                + "#main-content .tool-page > .shell, #main-content .asl-article > .shell"
+              )].filter((element) => element.getBoundingClientRect().width > 0);
+              const routeShellPaddings = routeContentShells.map((element) => {
+                const style = getComputedStyle(element);
+                return {
+                  left: parseFloat(style.paddingLeft) || 0,
+                  right: parseFloat(style.paddingRight) || 0
+                };
+              });
+              const routeShellPaddingMin = routeShellPaddings.length
+                ? Math.min(...routeShellPaddings.flatMap(({ left, right }) => [left, right]))
+                : 0;
+              const routeShellPaddingMax = routeShellPaddings.length
+                ? Math.max(...routeShellPaddings.flatMap(({ left, right }) => [left, right]))
+                : 0;
+              const routeShellPaddingAsymmetry = routeShellPaddings.length
+                ? Math.max(...routeShellPaddings.map(({ left, right }) => Math.abs(left - right)))
+                : 0;
+              const promptGrid = document.querySelector(".asl-prompts-register .project-grid");
+              const promptGridRect = promptGrid?.getBoundingClientRect() ?? null;
+              const promptCard = document.querySelector(".asl-prompts-register .post-card");
+              const promptCardStyle = promptCard ? getComputedStyle(promptCard) : null;
+              // Promoted from h3 to h2 so the page doesn't skip a heading level (h1 straight to h3).
+              const promptCardHeading = promptCard?.querySelector("h2");
+              const promptCardSummary = promptCard?.querySelector("p");
+              const routeIntro = document.querySelector(".asl-page > .page-intro");
+              const routeIntroBefore = routeIntro ? getComputedStyle(routeIntro, "::before") : null;
+              const routeIntroAfter = routeIntro ? getComputedStyle(routeIntro, "::after") : null;
+              const routeIntroLede = routeIntro?.querySelector(".page-lede");
+              const contactLabel = document.querySelector(".asl-brief .contact-form label > span");
+              const articleBody = document.querySelector(".asl-article .article-body");
+              const articleHeading = articleBody?.querySelector("h2");
+              const articleBodyStyle = articleBody ? getComputedStyle(articleBody) : null;
+              const articleHeadingStyle = articleHeading ? getComputedStyle(articleHeading) : null;
+              const articleHeadingMarkerStyle = articleHeading
+                ? getComputedStyle(articleHeading, "::before")
+                : null;
+              const workArchive = document.querySelector(".asl-work-log .archive-header");
+              const workTag = document.querySelector(".asl-work-log-list .tag");
+              const workOutcome = document.querySelector(".asl-work-log-list .outcome");
+              const workMedia = document.querySelector(".asl-work-log-list .project-media");
+              const workMediaImage = workMedia?.querySelector("img");
+              const workProjectCopy = document.querySelector(".asl-work-log-list .project-copy");
+              const workMediaRect = workMedia?.getBoundingClientRect() ?? null;
+              const workProjectCopyRect = workProjectCopy?.getBoundingClientRect() ?? null;
+              const workMediaStyle = workMedia ? getComputedStyle(workMedia) : null;
+              const workMediaImageStyle = workMediaImage ? getComputedStyle(workMediaImage) : null;
+              const workHubCards = [...document.querySelectorAll("#main-content .asl-page a")]
+                .filter((card) => typeof card.className === "string" && card.className.includes("category"));
+              const workHubNonGoldAccentCount = workHubCards.filter((card) => {
+                const marker = card.querySelector("span");
+                return marker && getComputedStyle(marker).color !== "rgb(217, 164, 65)";
+              }).length;
+              const workHubRoundedCardCount = workHubCards.filter((card) =>
+                parseFloat(getComputedStyle(card).borderTopLeftRadius) > 0
+              ).length;
+              const homeProjectEntries = [...document.querySelectorAll(".project-ledger .project-entry")];
+              const homeProjectMaxHeight = homeProjectEntries.length
+                ? Math.max(...homeProjectEntries.map((entry) => entry.getBoundingClientRect().height))
+                : 0;
+              const unifiedToolsGrid = document.querySelector(".unified-tools-grid");
+              const unifiedToolsGridStyle = unifiedToolsGrid ? getComputedStyle(unifiedToolsGrid) : null;
+              const calculatorArticle = document.querySelector(".asl-calculator-shell .tool-body > .article-body");
+              const calculatorPanelRect = calculatorArticle?.querySelector(":scope > [data-tool-workspace]")?.getBoundingClientRect() ?? null;
+              const calculatorFirstControlRect = calculatorArticle
+                ?.querySelector(
+                  ":scope > [data-tool-workspace] .calculator-workspace-controls input, "
+                  + ":scope > [data-tool-workspace] .calculator-workspace-controls select, "
+                  + ":scope > [data-tool-workspace] .calculator-workspace-controls textarea, "
+                  + ":scope > [data-tool-workspace] .calculator-grid input, "
+                  + ":scope > [data-tool-workspace] .calculator-grid select, "
+                  + ":scope > [data-tool-workspace] .calculator-grid textarea"
+                )
+                ?.getBoundingClientRect() ?? null;
+              const calculatorExplanationRect = calculatorArticle?.querySelector(":scope > [data-tool-learning]")?.getBoundingClientRect() ?? null;
+              const headerInner = document.querySelector(".site-header .header-inner");
+              const footerGrid = document.querySelector(".site-footer .footer-grid");
+              const headerStyle = headerInner ? getComputedStyle(headerInner) : null;
+              const footerStyle = footerGrid ? getComputedStyle(footerGrid) : null;
+              const watermarkTargets = [
+                document.querySelector(".asl-tools-header"),
+                document.querySelector(".asl-model-mission-shell > div > header"),
+                document.querySelector(".asl-security-mission-shell > div > header")
+              ].filter(Boolean);
+              const visibleWatermarkCount = watermarkTargets.filter((el) => {
+                const content = getComputedStyle(el, "::after").content;
+                return content && content !== "none" && content !== "normal" && content.length > 2;
+              }).length;
               const rootStyle = getComputedStyle(document.documentElement);
               const visibleControls = [...document.querySelectorAll("button, input, select, textarea")]
                 .filter((el) => {
@@ -349,6 +574,7 @@ test(
                 : null;
               return {
                 bodyFontSize: parseFloat(getComputedStyle(document.body).fontSize),
+                primaryTextColor: getComputedStyle(document.body).color,
                 aslPageToken: rootStyle.getPropertyValue("--asl-page").trim().toUpperCase(),
                 aslGoldToken: rootStyle.getPropertyValue("--asl-gold").trim().toUpperCase(),
                 systemHudCount: document.querySelectorAll(".system-hud, .pixel-world").length,
@@ -372,11 +598,14 @@ test(
                 portraitCount,
                 removedSceneCount,
                 hasFreeToolsHook: Boolean(freeToolsHook),
+                toolCategoryCardCount: toolCategoryCards.length,
+                invalidToolCategoryCards: toolCategoryCards.filter((card) => card.querySelector("a, button")).length,
                 documentTitle: document.title,
-                calculatorsBeforeAdvanced: Boolean(calculatorSection && advancedToolsSection)
-                  && (calculatorSection.compareDocumentPosition(advancedToolsSection)
-                    & Node.DOCUMENT_POSITION_FOLLOWING) !== 0,
+                hasUnifiedCatalog: Boolean(unifiedCatalog && unifiedSearch),
                 calculatorThumbnails,
+                calculatorThumbnailVisualVariants,
+                calculatorThumbnailGenericLabels,
+                calculatorThumbnailAspect,
                 calculatorResultText,
                 hasScrollCue: Boolean(document.querySelector(".tools-scroll-cue")),
                 hasCalculatorFinder: Boolean(calculatorFinder && calculatorFinderSearch),
@@ -385,13 +614,110 @@ test(
                 calculatorCatalogTagRows,
                 embeddedFamilyTabs,
                 embeddedExamples,
-                embeddedLabelFontSize
+                embeddedLabelFontSize,
+                gridToggleCount,
+                heroBottom: heroRect?.bottom ?? 0,
+                heroTop: heroRect?.top ?? 0,
+                arabicTitleBottom: arabicTitleRect?.bottom ?? 0,
+                englishTitleTop: englishTitleRect?.top ?? 0,
+                portraitTop: portraitRect?.top ?? 0,
+                portraitBottom: portraitRect?.bottom ?? 0,
+                portraitCardBottomGap: portraitRect && portraitCardRect
+                  ? portraitRect.bottom - portraitCardRect.bottom
+                  : 0,
+                portraitIdEdgeInset: portraitIdRect && portraitIdFirstRect && portraitIdLastRect
+                  ? Math.min(
+                      portraitIdFirstRect.left - portraitIdRect.left,
+                      portraitIdRect.right - portraitIdLastRect.right
+                    )
+                  : 0,
+                portraitBackground,
+                pageBackground,
+                desktopNavFontSize,
+                aboutHeadingFontSize,
+                aboutHeadingLeft: aboutHeadingRect?.left ?? 0,
+                aboutHeadingRight: aboutHeadingRect?.right ?? 0,
+                aboutPortraitWidth: aboutPortraitRect?.width ?? 0,
+                aboutIntroBeforeDisplay,
+                aboutStoryLabelColor,
+                contactGridLeft: contactGridRect?.left ?? 0,
+                contactGridRight: contactGridRect?.right ?? doc.clientWidth,
+                contactFormPadding,
+                contactCalloutBackground,
+                inactiveToolFilterColor,
+                activeToolFilterColor,
+                securityPrimaryColor,
+                securityCurrentStepColor,
+                securityInactiveStepColor,
+                diagramLabelColor,
+                hasDiagramCaption,
+                diagramCaptionColor,
+                routeShellLeft: routeShellRect?.left ?? 0,
+                routeShellRight: routeShellRect?.right ?? doc.clientWidth,
+                routeContentShellCount: routeContentShells.length,
+                routeShellPaddingMin,
+                routeShellPaddingMax,
+                routeShellPaddingAsymmetry,
+                promptGridLeft: promptGridRect?.left ?? 0,
+                promptGridRight: promptGridRect?.right ?? doc.clientWidth,
+                promptCardBackground: promptCardStyle?.backgroundColor ?? "",
+                promptCardShadow: promptCardStyle?.boxShadow ?? "",
+                promptCardHeadingColor: promptCardHeading ? getComputedStyle(promptCardHeading).color : "",
+                promptCardSummaryColor: promptCardSummary ? getComputedStyle(promptCardSummary).color : "",
+                routeIntroBeforeDisplay: routeIntroBefore?.display ?? "none",
+                routeIntroAfterDisplay: routeIntroAfter?.display ?? "none",
+                routeIntroAfterRight: routeIntroAfter ? parseFloat(routeIntroAfter.right) || 0 : 0,
+                routeIntroLedeColor: routeIntroLede ? getComputedStyle(routeIntroLede).color : "",
+                contactLabelColor: contactLabel ? getComputedStyle(contactLabel).color : "",
+                articleBodyBackground: articleBodyStyle?.backgroundColor ?? "",
+                articleBodyShadow: articleBodyStyle?.boxShadow ?? "",
+                articleBodyFontFamily: articleBodyStyle?.fontFamily ?? "",
+                articleHeadingBorderColor: articleHeadingStyle?.borderTopColor ?? "",
+                articleHeadingBorderWidth: articleHeadingStyle ? parseFloat(articleHeadingStyle.borderTopWidth) || 0 : 0,
+                articleHeadingMarkerDisplay: articleHeadingMarkerStyle?.display ?? "none",
+                articleHeadingMarkerContent: articleHeadingMarkerStyle?.content ?? "none",
+                workArchiveBackground: workArchive ? getComputedStyle(workArchive).backgroundColor : "",
+                workTagBackground: workTag ? getComputedStyle(workTag).backgroundColor : "",
+                workTagColor: workTag ? getComputedStyle(workTag).color : "",
+                workOutcomeColor: workOutcome ? getComputedStyle(workOutcome).color : "",
+                workMediaPadding: workMediaStyle ? parseFloat(workMediaStyle.paddingLeft) || 0 : 0,
+                workMediaObjectFit: workMediaImageStyle?.objectFit ?? "",
+                workMediaRight: workMediaRect?.right ?? 0,
+                workProjectCopyLeft: workProjectCopyRect?.left ?? 0,
+                workHubCardCount: workHubCards.length,
+                workHubNonGoldAccentCount,
+                workHubRoundedCardCount,
+                homeProjectMaxHeight,
+                unifiedToolsGridGap: unifiedToolsGridStyle ? parseFloat(unifiedToolsGridStyle.gap) || 0 : 0,
+                calculatorPanelTop: calculatorPanelRect?.top ?? 0,
+                calculatorPanelWidth: calculatorPanelRect?.width ?? 0,
+                calculatorFirstControlBottom: calculatorFirstControlRect?.bottom ?? 0,
+                calculatorExplanationTop: calculatorExplanationRect?.top ?? 0,
+                headerPaddingLeft: headerStyle ? parseFloat(headerStyle.paddingLeft) || 0 : 0,
+                headerPaddingRight: headerStyle ? parseFloat(headerStyle.paddingRight) || 0 : 0,
+                footerPaddingLeft: footerStyle ? parseFloat(footerStyle.paddingLeft) || 0 : 0,
+                footerPaddingRight: footerStyle ? parseFloat(footerStyle.paddingRight) || 0 : 0,
+                toolBodyWidth: toolBodyRect?.width ?? 0,
+                visibleWatermarkCount
               };
             })()`
           });
 
+          if (screenshotDirectory && screenshotRoutes.has(route)) {
+            const screenshot = await client.send("Page.captureScreenshot", {
+              format: "png",
+              captureBeyondViewport: false
+            });
+            const routeName = screenshotRoutes.get(route);
+            writeFileSync(
+              join(screenshotDirectory, `${routeName}-${viewport.width}.png`),
+              Buffer.from(screenshot.data, "base64")
+            );
+          }
+
           const {
             bodyFontSize,
+            primaryTextColor,
             aslPageToken,
             aslGoldToken,
             systemHudCount,
@@ -399,6 +725,7 @@ test(
             smallestControlWidth,
             smallestControlSelector,
             overflowPx,
+            clientWidth,
             worstSelector,
             worstRight,
             unexpectedMissionUi,
@@ -414,9 +741,14 @@ test(
             portraitCount,
             removedSceneCount,
             hasFreeToolsHook,
+            toolCategoryCardCount,
+            invalidToolCategoryCards,
             documentTitle,
-            calculatorsBeforeAdvanced,
+            hasUnifiedCatalog,
             calculatorThumbnails,
+            calculatorThumbnailVisualVariants,
+            calculatorThumbnailGenericLabels,
+            calculatorThumbnailAspect,
             calculatorResultText,
             hasScrollCue,
             hasCalculatorFinder,
@@ -425,7 +757,84 @@ test(
             calculatorCatalogTagRows,
             embeddedFamilyTabs,
             embeddedExamples,
-            embeddedLabelFontSize
+            embeddedLabelFontSize,
+            gridToggleCount,
+            heroBottom,
+            heroTop,
+            arabicTitleBottom,
+            englishTitleTop,
+            portraitTop,
+            portraitBottom,
+            portraitCardBottomGap,
+            portraitIdEdgeInset,
+            portraitBackground,
+            pageBackground,
+            desktopNavFontSize,
+            aboutHeadingFontSize,
+            aboutHeadingLeft,
+            aboutHeadingRight,
+            aboutPortraitWidth,
+            aboutIntroBeforeDisplay,
+            aboutStoryLabelColor,
+            contactGridLeft,
+            contactGridRight,
+            contactFormPadding,
+            contactCalloutBackground,
+            inactiveToolFilterColor,
+            activeToolFilterColor,
+            securityPrimaryColor,
+            securityCurrentStepColor,
+            securityInactiveStepColor,
+            diagramLabelColor,
+            hasDiagramCaption,
+            diagramCaptionColor,
+            routeShellLeft,
+            routeShellRight,
+            routeContentShellCount,
+            routeShellPaddingMin,
+            routeShellPaddingMax,
+            routeShellPaddingAsymmetry,
+            promptGridLeft,
+            promptGridRight,
+            promptCardBackground,
+            promptCardShadow,
+            promptCardHeadingColor,
+            promptCardSummaryColor,
+            routeIntroBeforeDisplay,
+            routeIntroAfterDisplay,
+            routeIntroAfterRight,
+            routeIntroLedeColor,
+            contactLabelColor,
+            articleBodyBackground,
+            articleBodyShadow,
+            articleBodyFontFamily,
+            articleHeadingBorderColor,
+            articleHeadingBorderWidth,
+            articleHeadingMarkerDisplay,
+            articleHeadingMarkerContent,
+            workArchiveBackground,
+            workTagBackground,
+            workTagColor,
+            workOutcomeColor,
+            workMediaPadding,
+            workMediaObjectFit,
+            workMediaRight,
+            workProjectCopyLeft,
+            workHubCardCount,
+            workHubNonGoldAccentCount,
+            workHubRoundedCardCount,
+            homeProjectMaxHeight,
+            unifiedToolsGridGap,
+            calculatorPanelTop,
+            calculatorPanelWidth,
+            calculatorFirstControlBottom,
+            calculatorExplanationTop,
+            headerPaddingLeft,
+            headerPaddingRight,
+            footerPaddingLeft,
+            footerPaddingRight,
+            toolBodyWidth,
+            visibleWatermarkCount
           } = result.result.value;
           if (bodyFontSize < 16) {
             failures.push(
@@ -440,6 +849,9 @@ test(
           }
           if (systemHudCount !== 0) {
             failures.push(`${route} @ ${viewport.label}: obsolete HUD or pixel scene remains mounted`);
+          }
+          if (gridToggleCount !== 0) {
+            failures.push(`${route} @ ${viewport.label}: the removed grid control is still visible`);
           }
           if (smallestControlHeight < 43.5) {
             failures.push(
@@ -472,7 +884,114 @@ test(
           if (contentOutsideViewport) {
             failures.push(`${route} @ ${viewport.label}: visible tool content leaves the viewport`);
           }
-          if (route === "/writing/" && viewport.width === 1440) {
+          if (route !== "/" && routeContentShellCount > 0) {
+            const expectedGutter = Math.min(72, Math.max(20, clientWidth * 0.04));
+            if (
+              Math.abs(routeShellPaddingMin - expectedGutter) > 1.5
+              || Math.abs(routeShellPaddingMax - expectedGutter) > 1.5
+              || routeShellPaddingAsymmetry > 1
+            ) {
+              failures.push(
+                `${route} @ ${viewport.label}: route shells do not share the adaptive gutter `
+                + `(expected=${expectedGutter.toFixed(1)}, min=${routeShellPaddingMin.toFixed(1)}, `
+                + `max=${routeShellPaddingMax.toFixed(1)}, asymmetry=${routeShellPaddingAsymmetry.toFixed(1)})`
+              );
+            }
+          }
+          {
+            const expectedGutter = Math.min(72, Math.max(20, clientWidth * 0.04));
+            if (
+              Math.abs(headerPaddingLeft - expectedGutter) > 1.5
+              || Math.abs(headerPaddingRight - expectedGutter) > 1.5
+              || Math.abs(footerPaddingLeft - expectedGutter) > 1.5
+              || Math.abs(footerPaddingRight - expectedGutter) > 1.5
+            ) {
+              failures.push(
+                `${route} @ ${viewport.label}: header and footer do not follow the route gutter `
+                + `(expected=${expectedGutter.toFixed(1)}, header=${headerPaddingLeft.toFixed(1)}/`
+                + `${headerPaddingRight.toFixed(1)}, footer=${footerPaddingLeft.toFixed(1)}/`
+                + `${footerPaddingRight.toFixed(1)})`
+              );
+            }
+          }
+          if (routeIntroLedeColor) {
+            const expectedGutter = Math.min(72, Math.max(20, clientWidth * 0.04));
+            if (routeIntroBeforeDisplay !== "none" || routeIntroLedeColor !== "rgb(138, 147, 161)") {
+              failures.push(
+                `${route} @ ${viewport.label}: a page intro retains legacy blue decoration or copy `
+                + `(${routeIntroBeforeDisplay}, ${routeIntroLedeColor})`
+              );
+            }
+            if (clientWidth <= 639) {
+              if (routeIntroAfterDisplay !== "none") {
+                failures.push(`${route} @ ${viewport.label}: the measured-work label crowds the mobile intro`);
+              }
+            } else if (Math.abs(routeIntroAfterRight - expectedGutter) > 1.5) {
+              failures.push(
+                `${route} @ ${viewport.label}: the measured-work label does not align to the content gutter `
+                + `(${routeIntroAfterRight.toFixed(1)}px)`
+              );
+            }
+          }
+          if (route === "/prompts/" && viewport.width >= 1366) {
+            const expectedGutter = Math.min(72, Math.max(20, clientWidth * 0.04));
+            if (
+              promptGridLeft < expectedGutter - 1.5
+              || promptGridRight > clientWidth - expectedGutter + 1.5
+            ) {
+              failures.push(
+                `${route} @ ${viewport.label}: prompt cards touch a viewport edge `
+                + `(left=${promptGridLeft.toFixed(1)}, right=${promptGridRight.toFixed(1)})`
+              );
+            }
+            if (
+              promptCardBackground !== "rgb(18, 22, 28)"
+              || promptCardShadow !== "none"
+              || promptCardHeadingColor !== primaryTextColor
+              || promptCardSummaryColor !== "rgb(138, 147, 161)"
+            ) {
+              failures.push(
+                `${route} @ ${viewport.label}: prompt cards retain legacy blue styling `
+                + `(${promptCardBackground}, ${promptCardShadow}, `
+                + `${promptCardHeadingColor}, ${promptCardSummaryColor})`
+              );
+            }
+          }
+          if (articleBodyBackground) {
+            if (
+              articleBodyBackground !== "rgb(18, 22, 28)"
+              || articleBodyShadow !== "none"
+              || !articleBodyFontFamily.includes("Archivo")
+              || (articleHeadingBorderColor && articleHeadingBorderColor !== "rgb(217, 164, 65)")
+              || (articleHeadingBorderColor && Math.abs(articleHeadingBorderWidth - 1) > 0.1)
+              || (articleHeadingMarkerDisplay !== "none" && articleHeadingMarkerContent !== "none")
+            ) {
+              failures.push(
+                `${route} @ ${viewport.label}: article content retains the legacy blue panel treatment `
+                + `(${articleBodyBackground}, ${articleBodyShadow}, `
+                + `${articleBodyFontFamily}, ${articleHeadingBorderWidth}px ${articleHeadingBorderColor}, `
+                + `marker=${articleHeadingMarkerDisplay}/${articleHeadingMarkerContent})`
+              );
+            }
+          }
+          if (route === "/work/") {
+            if (workHubCardCount < 1 || workHubNonGoldAccentCount !== 0 || workHubRoundedCardCount !== 0) {
+              failures.push(
+                `${route} @ ${viewport.label}: WorkHub cards do not use the single gold, square-corner system `
+                + `(cards=${workHubCardCount}, nonGold=${workHubNonGoldAccentCount}, rounded=${workHubRoundedCardCount})`
+              );
+            }
+          }
+          if (visibleWatermarkCount !== 0) {
+            failures.push(`${route} @ ${viewport.label}: a decorative Arabic watermark remains visible`);
+          }
+          if (viewport.width >= 1366 && desktopNavFontSize > 11.5) {
+            failures.push(
+              `${route} @ ${viewport.label}: desktop navigation type is oversized `
+              + `(${desktopNavFontSize.toFixed(1)}px)`
+            );
+          }
+          if (route === "/writing/" && viewport.width === 1366) {
             if (badgeWidth < 52 || badgeHeight < 52 || badgeSpans !== 2) {
               failures.push(
                 `${route} @ ${viewport.label}: indexed badge is not a centered 52px two-part badge `
@@ -496,55 +1015,219 @@ test(
                 `${route} @ ${viewport.label}: contact actions contain an arrow or wrap their labels`
               );
             }
+            if (
+              viewport.width >= 1366
+              && (contactGridLeft < 23 || contactGridRight > clientWidth - 23)
+            ) {
+              failures.push(
+                `${route} @ ${viewport.label}: contact content touches the viewport edge `
+                + `(left=${contactGridLeft.toFixed(1)}, right=${contactGridRight.toFixed(1)})`
+              );
+            }
+            if (viewport.width >= 1366 && contactFormPadding > 40) {
+              failures.push(
+                `${route} @ ${viewport.label}: contact form wastes space with `
+                + `${contactFormPadding.toFixed(1)}px internal padding`
+              );
+            }
+            if (contactLabelColor !== "rgb(217, 164, 65)") {
+              failures.push(
+                `${route} @ ${viewport.label}: form labels retain a legacy non-brand color `
+                + `(${contactLabelColor})`
+              );
+            }
           }
           if (route === "/") {
             if (portraitCount !== 1 || removedSceneCount !== 0 || !hasFreeToolsHook) {
               failures.push(
-                `${route} @ ${viewport.label}: home must show one static portrait, no engineering scene, and the free-tools hook`
+                `${route} @ ${viewport.label}: home must show one static portrait, no engineering scene, and the workbench hook`
               );
+            }
+            if (viewport.width >= 1366) {
+              if (portraitIdEdgeInset < 8) {
+                failures.push(
+                  `${route} @ ${viewport.label}: portrait identity labels touch or clip their strip `
+                  + `(${portraitIdEdgeInset.toFixed(1)}px inset)`
+                );
+              }
+              if (homeProjectMaxHeight > 480) {
+                failures.push(
+                  `${route} @ ${viewport.label}: selected evidence imagery is still oversized `
+                  + `(${homeProjectMaxHeight.toFixed(1)}px)`
+                );
+              }
+              if (heroBottom > viewport.height + 1 || portraitBottom > viewport.height + 1) {
+                failures.push(
+                  `${route} @ ${viewport.label}: the complete hero does not fit in the initial viewport`
+                );
+              }
+              if (englishTitleTop - arabicTitleBottom < 16) {
+                failures.push(
+                  `${route} @ ${viewport.label}: Arabic and English hero titles overlap or lack spacing`
+                );
+              }
+              if (portraitTop - heroTop > 104) {
+                failures.push(
+                  `${route} @ ${viewport.label}: portrait starts too low in the hero`
+                );
+              }
+              if (portraitBackground !== pageBackground) {
+                failures.push(
+                  `${route} @ ${viewport.label}: portrait column still has a contrasting vertical stripe`
+                );
+              }
+              if (portraitCardBottomGap > 12.5) {
+                failures.push(
+                  `${route} @ ${viewport.label}: portrait card has excessive lower frame padding `
+                  + `(${portraitCardBottomGap.toFixed(1)}px)`
+                );
+              }
             }
           }
           if (route === "/about/") {
             if (portraitCount !== 1 || removedSceneCount !== 0) {
               failures.push(`${route} @ ${viewport.label}: about must show one static portrait with no engineering scene`);
             }
-            if (viewport.width === 1440 && documentTitle !== "Embedded Systems Engineer and Educator") {
+            if (viewport.width === 1366 && documentTitle !== "Embedded Systems Engineer and Educator") {
               failures.push(
                 `${route} @ ${viewport.label}: browser title is still suffixed (${documentTitle})`
               );
             }
+            if (viewport.width >= 1366) {
+              if (aboutHeadingFontSize > 88 || aboutHeadingLeft < 23 || aboutHeadingRight > clientWidth - 23) {
+                failures.push(
+                  `${route} @ ${viewport.label}: about hero type is oversized or clipped `
+                  + `(font=${aboutHeadingFontSize.toFixed(1)}, left=${aboutHeadingLeft.toFixed(1)}, `
+                  + `right=${aboutHeadingRight.toFixed(1)})`
+                );
+              }
+              if (aboutPortraitWidth > 420) {
+                failures.push(
+                  `${route} @ ${viewport.label}: about portrait is oversized (${aboutPortraitWidth.toFixed(1)}px)`
+                );
+              }
+              if (/rgb\(18, 22, 45\)/.test(contactCalloutBackground)) {
+                failures.push(`${route} @ ${viewport.label}: legacy blue contact CTA is still active`);
+              }
+              if (aboutIntroBeforeDisplay !== "none" || aboutStoryLabelColor !== "rgb(217, 164, 65)") {
+                failures.push(
+                  `${route} @ ${viewport.label}: legacy decorative colors remain in About `
+                  + `(${aboutIntroBeforeDisplay}, ${aboutStoryLabelColor})`
+                );
+              }
+            }
           }
-          if (route === "/tools/" && viewport.width === 1440) {
-            if (!calculatorsBeforeAdvanced || calculatorThumbnails !== 36) {
+          if (route === "/tools/" && viewport.width === 1366) {
+            if (hasUnifiedCatalog || calculatorThumbnails !== 0 || toolCategoryCardCount !== 7) {
               failures.push(
-                `${route} @ ${viewport.label}: calculator search is not first or cards lack 36 original diagrams`
+                `${route} @ ${viewport.label}: the root must show seven categories before individual tools`
               );
             }
-            if (!/36 calculators/i.test(calculatorResultText) || !hasScrollCue) {
+            if (invalidToolCategoryCards !== 0) {
               failures.push(
-                `${route} @ ${viewport.label}: calculator result feedback or generator scroll cue is missing`
+                `${route} @ ${viewport.label}: category destinations contain nested interactive elements`
               );
             }
-            if (destinationCardCount < 36 || invalidDestinationCards !== 0) {
+            if (hasScrollCue) {
               failures.push(
-                `${route} @ ${viewport.label}: tool destinations are not full-surface semantic links`
-              );
-            }
-            if (calculatorCatalogTagRows !== 0) {
-              failures.push(
-                `${route} @ ${viewport.label}: calculator cards repeat tags instead of concise summaries`
+                `${route} @ ${viewport.label}: the old scroll cue remains`
               );
             }
           }
-          if (route === "/tools/ohms-law-calculator/" && viewport.width === 1440) {
+          if (route === "/tools/category/resistors/" && viewport.width === 1366) {
+            if (!hasUnifiedCatalog || calculatorThumbnails !== 4) {
+              failures.push(
+                `${route} @ ${viewport.label}: the focused searchable resistor shelf is incomplete`
+              );
+            }
+            if (!/^4 tools$/i.test(calculatorResultText.trim()) || destinationCardCount !== 4 || invalidDestinationCards !== 0) {
+              failures.push(
+                `${route} @ ${viewport.label}: category result feedback or destination links are wrong`
+              );
+            }
+            if (
+              calculatorThumbnailVisualVariants !== 4
+              || calculatorThumbnailGenericLabels !== 0
+              || Math.abs(calculatorThumbnailAspect - 16 / 9) > 0.03
+            ) {
+              failures.push(
+                `${route} @ ${viewport.label}: category covers are not purpose-specific 16:9 visuals`
+              );
+            }
+            if (unifiedToolsGridGap < 16) {
+              failures.push(
+                `${route} @ ${viewport.label}: tool cards are still joined without useful spacing `
+                + `(${unifiedToolsGridGap.toFixed(1)}px)`
+              );
+            }
+          }
+          if (route === "/tools/security-command-builder/" && viewport.width === 1366) {
+            if (
+              securityPrimaryColor !== "rgb(20, 16, 10)"
+              || securityCurrentStepColor !== "rgb(20, 16, 10)"
+              || securityInactiveStepColor !== primaryTextColor
+            ) {
+              failures.push(
+                `${route} @ ${viewport.label}: security controls retain muted button labels `
+                + `(${securityPrimaryColor}, ${securityCurrentStepColor}, ${securityInactiveStepColor})`
+              );
+            }
+          }
+          if (route === "/tools/555-timer-astable-circuit-calculator/" && viewport.width === 1366) {
+            if (
+              diagramLabelColor !== primaryTextColor
+              || (hasDiagramCaption && diagramCaptionColor !== "rgb(138, 147, 161)")
+            ) {
+              failures.push(
+                `${route} @ ${viewport.label}: calculator diagram labels are not legible `
+                + `(${diagramLabelColor}, ${diagramCaptionColor})`
+              );
+            }
+          }
+          if (route.includes("calculator") && viewport.width >= 1366 && toolBodyWidth < viewport.width * 0.8) {
+            failures.push(
+              `${route} @ ${viewport.label}: calculator content remains narrowly centered`
+            );
+          }
+          if (
+            route.includes("calculator")
+            && viewport.width >= 1366
+            && calculatorPanelWidth < toolBodyWidth * 0.88
+          ) {
+            failures.push(
+              `${route} @ ${viewport.label}: interactive calculator panel remains a centered island `
+              + `(panel=${calculatorPanelWidth.toFixed(1)}px, body=${toolBodyWidth.toFixed(1)}px)`
+            );
+          }
+          if (
+            route.includes("calculator")
+            && viewport.width === 1366
+            && calculatorFirstControlBottom > viewport.height
+          ) {
+            failures.push(
+              `${route} @ ${viewport.label}: the first calculator control is below the initial viewport `
+              + `(bottom=${calculatorFirstControlBottom.toFixed(1)}px)`
+            );
+          }
+          if (
+            route.includes("calculator")
+            && viewport.width >= 1366
+            && calculatorPanelTop >= calculatorExplanationTop
+          ) {
+            failures.push(
+              `${route} @ ${viewport.label}: explanation still appears before the working calculator `
+              + `(calculator=${calculatorPanelTop.toFixed(1)}, explanation=${calculatorExplanationTop.toFixed(1)})`
+            );
+          }
+          if (route === "/tools/ohms-law-calculator/" && viewport.width === 1366) {
             if (!hasCalculatorFinder) {
               failures.push(
                 `${route} @ ${viewport.label}: shared calculator finder is missing`
               );
             }
           }
-          if (route === "/tools/sensor-code-generator/" && viewport.width === 1440) {
-            if (embeddedFamilyTabs !== 3 || embeddedExamples < 5) {
+          if (route === "/tools/sensor-code-generator/" && viewport.width === 1366) {
+            if (embeddedFamilyTabs !== 5 || embeddedExamples < 5) {
               failures.push(
                 `${route} @ ${viewport.label}: embedded families or example presets are missing`
               );
@@ -559,8 +1242,8 @@ test(
       }
 
       await client.send("Emulation.setDeviceMetricsOverride", {
-        width: 1440,
-        height: 900,
+        width: 1366,
+        height: 768,
         deviceScaleFactor: 1,
         mobile: false
       });
@@ -626,8 +1309,7 @@ test(
             || visible(document.querySelector(".mobile-mission-readout"));
           document.querySelector("a.brand")?.click();
           await waitFor(
-            () => location.pathname.endsWith("/")
-              && document.querySelectorAll("[data-mission]").length > 0,
+            () => location.pathname.endsWith("/"),
             "client navigation back home"
           );
           return {
@@ -645,7 +1327,7 @@ test(
         !focus.isNav
         || focus.width < 3
         || focus.style === "none"
-        || !/rgb\(232, 199, 119\)|rgb\(217, 164, 65\)/.test(focus.color)
+        || !/rgb\(232, 188, 102\)|rgb\(217, 164, 65\)/.test(focus.color)
       ) {
         failures.push(
           `keyboard focus: first navigation link lacks the required 3px ASL gold outline `

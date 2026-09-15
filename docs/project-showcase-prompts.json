@@ -1,0 +1,40 @@
+{
+  "method": "Built-in imagegen, referenced-image edits. Covers are AI-styled presentations; galleries retain source content with WebP encoding only.",
+  "prompts": [
+    {
+      "key": "agribot",
+      "prompt": "Use case: compositing. Edit the supplied real project photo into a premium ASL engineering portfolio cover. Wide 16:9 landscape. Replace only the surrounding room/background and presentation lighting with a restrained midnight navy (#08131c) engineering studio, subtle fine blue grid on the back wall, dark charcoal matte display plinth with a thin muted metallic gold edge, soft cool-blue fill and warm gold rim illumination. Clean architectural backdrop, not a busy sci-fi room. The real device is the hero, large and fully visible, around 65% of frame, with generous safe margins. Preserve exact hardware identity, proportions, number of components, material colors, wiring, cutouts, and handmade construction. Do not redesign or beautify the actual device into a different product. Ground it with natural contact shadows. No text, no logos, no Miraj branding, no invented screens or callouts, no people, no plants, no extra devices. Keep black hardware readable. Only change environment and lighting. Single image, not collage. Subject is the supplied agricultural robot: black four-wheel chassis, two raised spray-arm mechanisms with orange ends, large yellow tank. Preserve these specific features exactly; no extra arms or wheels.",
+      "inputs": [
+        "C:/Users/Asl/AppData/Local/Temp/codex-clipboard-55893074-3fae-4335-97f2-cd02cd2f969c.png"
+      ]
+    },
+    {
+      "key": "plant-care",
+      "prompt": "Use case: compositing. Edit the supplied real project photo into a premium ASL engineering portfolio cover. Wide 16:9 landscape. Replace only the surrounding room/background and presentation lighting with a restrained midnight navy (#08131c) engineering studio, subtle fine blue grid on the back wall, dark charcoal matte display plinth with a thin muted metallic gold edge, soft cool-blue fill and warm gold rim illumination. Clean architectural backdrop, not a busy sci-fi room. The real device is the hero, large and fully visible, around 65% of frame, with generous safe margins. Preserve exact hardware identity, proportions, number of components, material colors, wiring, cutouts, and handmade construction. Do not redesign or beautify the actual device into a different product. Ground it with natural contact shadows. No text, no logos, no Miraj branding, no invented screens or callouts, no people, no plants, no extra devices. Keep black hardware readable. Only change environment and lighting. Single image, not collage. Subject is the tall woodgrain Plant Care AI enclosure with central camera, four lights, and connected soil-moisture fork and metal temperature probe. Bring both probes into the foreground fully visible while preserving their designs, woodgrain body and actual wiring. No added leaves.",
+      "inputs": [
+        "C:/Users/Asl/AppData/Local/Temp/codex-clipboard-be07b664-3ea5-44d6-8224-fb4303e8dbc1.png"
+      ]
+    },
+    {
+      "key": "mediamate",
+      "prompt": "Use case: compositing. Edit the supplied real project photo into a premium ASL engineering portfolio cover. Wide 16:9 landscape. Replace only the surrounding room/background and presentation lighting with a restrained midnight navy (#08131c) engineering studio, subtle fine blue grid on the back wall, dark charcoal matte display plinth with a thin muted metallic gold edge, soft cool-blue fill and warm gold rim illumination. Clean architectural backdrop, not a busy sci-fi room. The real device is the hero, large and fully visible, around 65% of frame, with generous safe margins. Preserve exact hardware identity, proportions, number of components, material colors, wiring, cutouts, and handmade construction. Do not redesign or beautify the actual device into a different product. Ground it with natural contact shadows. No text, no logos, no Miraj branding, no invented screens or callouts, no people, no plants, no extra devices. Keep black hardware readable. Only change environment and lighting. Single image, not collage. Subject is the medication dispenser prototype: exactly three cream cylindrical reservoirs on the angular black base, center blue LCD, left square button. Preserve reservoir openings, exact geometry and existing LCD text as supplied, no added pills or medical symbols.",
+      "inputs": [
+        "C:/Users/Asl/AppData/Local/Temp/codex-clipboard-0175ae9a-2732-49d5-bed8-991981fae636.png"
+      ]
+    },
+    {
+      "key": "smart-mosque",
+      "prompt": "Use case: compositing. Edit the supplied real project photo into a premium ASL engineering portfolio cover. Wide 16:9 landscape. Replace only the surrounding room/background and presentation lighting with a restrained midnight navy (#08131c) engineering studio, subtle fine blue grid on the back wall, dark charcoal matte display plinth with a thin muted metallic gold edge, soft cool-blue fill and warm gold rim illumination. Clean architectural backdrop, not a busy sci-fi room. The real device is the hero, large and fully visible, around 65% of frame, with generous safe margins. Preserve exact hardware identity, proportions, number of components, material colors, wiring, cutouts, and handmade construction. Do not redesign or beautify the actual device into a different product. Ground it with natural contact shadows. No text, no logos, no Miraj branding, no invented screens or callouts, no people, no plants, no extra devices. Keep black hardware readable. Only change environment and lighting. Single image, not collage. Subject is the small wooden Smart Mosque Model, NOT a full-size building. Preserve laser-cut wood grain, rectangular box, black edges, two arched door cutouts on the front, four vented arch windows on the right, and flat silhouette dome and crescent finial on the roof. Keep model exactly, including visible small door electronics. Remove original desk and room.",
+      "inputs": [
+        "C:/Users/Asl/AppData/Local/Temp/codex-clipboard-051c5ffb-84be-404b-b1f2-b22fee1d8b6d.png"
+      ]
+    },
+    {
+      "key": "autonomous-car",
+      "prompt": "Use case: compositing. Edit the supplied real project photo into a premium ASL engineering portfolio cover. Wide 16:9 landscape. Replace only the surrounding room/background and presentation lighting with a restrained midnight navy (#08131c) engineering studio, subtle fine blue grid on the back wall, dark charcoal matte display plinth with a thin muted metallic gold edge, soft cool-blue fill and warm gold rim illumination. Clean architectural backdrop, not a busy sci-fi room. The real device is the hero, large and fully visible, around 65% of frame, with generous safe margins. Preserve exact hardware identity, proportions, number of components, material colors, wiring, cutouts, and handmade construction. Do not redesign or beautify the actual device into a different product. Ground it with natural contact shadows. No text, no logos, no Miraj branding, no invented screens or callouts, no people, no plants, no extra devices. Keep black hardware readable. Only change environment and lighting. Single image, not collage. Subject is this specific homemade autonomous car: stacked wooden/acrylic decks, yellow wheels, visible dev board, jumper wires, batteries, and front two-eyed ultrasonic sensor on its servo. Preserve all components and handmade details, do not turn it into a sleek commercial robot. Remove desk papers and indoor room.",
+      "inputs": [
+        "C:/Users/Asl/AppData/Local/Temp/codex-clipboard-16f6901b-ab49-423a-ad66-6da1343d8b6a.png"
+      ]
+    }
+  ]
+}

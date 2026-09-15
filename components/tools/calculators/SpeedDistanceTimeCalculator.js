@@ -3,10 +3,12 @@
 import { useMemo, useState } from "react";
 import {
   CalculatorField,
+  CalculatorLearning,
   CalculatorPanel,
   CalculatorResult,
   CalculatorResults,
   CalculatorSelect,
+  LearningDisclosure,
   Mnemonic,
   ToolSection,
   WorkedExample
@@ -48,43 +50,7 @@ export function SpeedDistanceTimeCalculator() {
   const inputs = INPUT_LABELS[mode];
 
   return (
-    <div className="article-body">
-      <ToolSection title="What's going on">
-        <p>
-          Speed is just a way of answering &ldquo;how far, in how long?&rdquo; in a single number.
-          Cover more ground in the same time, or the same ground in less time, and speed goes up
-          either way.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="Build it up">
-        <p>
-          If something covers 100 meters in 10 seconds, it&rsquo;s covering 10 meters every second —
-          divide the distance by the time and you get the rate. Run that backward and distance is
-          just speed multiplied by however long you kept it up; time is distance split into
-          speed-sized chunks.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="The formula">
-        <p className="mono">speed = distance / time</p>
-      </ToolSection>
-
-      <Mnemonic tag="DST triangle" phrase="Distance on top, Speed and Time below">
-        <p>
-          Same triangle trick as Ohm&rsquo;s Law: D over S×T. Cover the one you want — D alone means
-          divide, S or T alone means D over the other one.
-        </p>
-      </Mnemonic>
-
-      <ToolSection title="Worked example">
-        <WorkedExample>
-          <p className="step">Distance = 100 m, Time = 10 s</p>
-          <p className="step">Speed = 100 ÷ 10</p>
-          <p className="step">Speed = 10 m/s</p>
-        </WorkedExample>
-      </ToolSection>
-
+    <div className="article-body" data-calculator-experience>
       <CalculatorPanel>
         <CalculatorSelect
           label="Solve for"
@@ -121,6 +87,46 @@ export function SpeedDistanceTimeCalculator() {
           <p className="muted">Enter two valid numbers to see the result.</p>
         )}
       </CalculatorPanel>
+
+      <CalculatorLearning>
+        <ToolSection title="What's going on">
+          <p>
+            Speed is just a way of answering &ldquo;how far, in how long?&rdquo; in a single number.
+            Cover more ground in the same time, or the same ground in less time, and speed goes up
+            either way.
+          </p>
+        </ToolSection>
+
+        <ToolSection title="The formula">
+          <p className="mono">speed = distance / time</p>
+        </ToolSection>
+
+        <LearningDisclosure>
+          <ToolSection title="Build it up">
+            <p>
+              If something covers 100 meters in 10 seconds, it&rsquo;s covering 10 meters every second -
+              divide the distance by the time and you get the rate. Run that backward and distance is
+              just speed multiplied by however long you kept it up; time is distance split into
+              speed-sized chunks.
+            </p>
+          </ToolSection>
+
+          <Mnemonic tag="DST triangle" phrase="Distance on top, Speed and Time below">
+            <p>
+              Same triangle trick as Ohm&rsquo;s Law: D over S×T. Cover the one you want - D alone means
+              divide, S or T alone means D over the other one.
+            </p>
+          </Mnemonic>
+
+          <ToolSection title="Worked example">
+            <WorkedExample>
+              <p className="step">Distance = 100 m, Time = 10 s</p>
+              <p className="step">Speed = 100 ÷ 10</p>
+              <p className="step">Speed = 10 m/s</p>
+            </WorkedExample>
+          </ToolSection>
+        </LearningDisclosure>
+      </CalculatorLearning>
     </div>
   );
 }

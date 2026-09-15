@@ -3,10 +3,12 @@
 import { useMemo, useState } from "react";
 import {
   CalculatorField,
+  CalculatorLearning,
   CalculatorPanel,
   CalculatorResult,
   CalculatorResults,
   CalculatorSelect,
+  LearningDisclosure,
   Mnemonic,
   ToolSection,
   WorkedExample
@@ -58,44 +60,7 @@ export function ForceMassAccelerationCalculator() {
   const inputs = INPUT_LABELS[mode];
 
   return (
-    <div className="article-body">
-      <ToolSection title="What's going on">
-        <p>
-          Push on something and it accelerates — how much it accelerates depends on how hard you
-          push and how much there is to move. Newton&rsquo;s second law is the sentence that pins
-          that relationship down exactly.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="Build it up">
-        <p>
-          Push twice as hard on the same object and it accelerates twice as fast — force and
-          acceleration scale together directly. But push the same amount on something twice as heavy
-          and it only accelerates half as fast — mass resists acceleration. Combine both
-          observations and force has to equal mass times acceleration.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="The formula">
-        <p className="mono">F = m × a</p>
-        <p>F is force in newtons, m is mass in kilograms, a in m/s².</p>
-      </ToolSection>
-
-      <Mnemonic tag="F = ma" phrase="Heavier needs harder">
-        <p>
-          Same shape as Ohm&rsquo;s Law&rsquo;s triangle: F on top, m and a on the bottom. Cover
-          what you want, multiply or divide whatever is left.
-        </p>
-      </Mnemonic>
-
-      <ToolSection title="Worked example">
-        <WorkedExample>
-          <p className="step">m = 10 kg, a = 5 m/s²</p>
-          <p className="step">F = 10 × 5</p>
-          <p className="step">F = 50 N</p>
-        </WorkedExample>
-      </ToolSection>
-
+    <div className="article-body" data-calculator-experience>
       <CalculatorPanel>
         <CalculatorSelect
           label="Solve for"
@@ -132,6 +97,47 @@ export function ForceMassAccelerationCalculator() {
           <p className="muted">Enter two valid numbers to see the result.</p>
         )}
       </CalculatorPanel>
+
+      <CalculatorLearning>
+        <ToolSection title="What's going on">
+          <p>
+            Push on something and it accelerates - how much it accelerates depends on how hard you
+            push and how much there is to move. Newton&rsquo;s second law is the sentence that pins
+            that relationship down exactly.
+          </p>
+        </ToolSection>
+
+        <ToolSection title="The formula">
+          <p className="mono">F = m × a</p>
+          <p>F is force in newtons, m is mass in kilograms, a in m/s².</p>
+        </ToolSection>
+
+        <LearningDisclosure>
+          <ToolSection title="Build it up">
+            <p>
+              Push twice as hard on the same object and it accelerates twice as fast - force and
+              acceleration scale together directly. But push the same amount on something twice as heavy
+              and it only accelerates half as fast - mass resists acceleration. Combine both
+              observations and force has to equal mass times acceleration.
+            </p>
+          </ToolSection>
+
+          <Mnemonic tag="F = ma" phrase="Heavier needs harder">
+            <p>
+              Same shape as Ohm&rsquo;s Law&rsquo;s triangle: F on top, m and a on the bottom. Cover
+              what you want, multiply or divide whatever is left.
+            </p>
+          </Mnemonic>
+
+          <ToolSection title="Worked example">
+            <WorkedExample>
+              <p className="step">m = 10 kg, a = 5 m/s²</p>
+              <p className="step">F = 10 × 5</p>
+              <p className="step">F = 50 N</p>
+            </WorkedExample>
+          </ToolSection>
+        </LearningDisclosure>
+      </CalculatorLearning>
     </div>
   );
 }

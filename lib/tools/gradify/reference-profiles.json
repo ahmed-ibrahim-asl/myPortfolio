@@ -1,0 +1,889 @@
+[
+  {
+    "id": "october-six-dentistry",
+    "name": "October 6 University: Dentistry",
+    "arabicName": "جامعة 6 أكتوبر: طب الأسنان",
+    "status": "reference",
+    "sourceUrl": "https://o6u.edu.eg/uploads/1%20dent/-%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D8%B7%D8%A7%D9%84%D8%A8%20--Final-%202024-2025.pdf?FactId=11&id=3243",
+    "note": "Dentistry student guide 2024–2025, p.25. Faculty-specific reference; GPACal's Engineering calculator is explicitly unavailable for lack of a grading table. Confirm current cohort.",
+    "grades": [
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 93
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 89
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 84
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 76
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 73
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 70
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 67
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 64
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "must-biotechnology",
+    "name": "Misr University for Science & Technology: Biotechnology",
+    "arabicName": "جامعة مصر للعلوم والتكنولوجيا: التكنولوجيا الحيوية",
+    "status": "reference",
+    "sourceUrl": "https://must.edu.eg/wp-content/uploads/2024/01/Student-Guide.pdf",
+    "note": "Biotechnology student guide, p.27, published under 2024/01. A− is 3.6 here. Faculty-specific reference; confirm regulation/cohort.",
+    "grades": [
+      {
+        "grade": "A*",
+        "points": 4,
+        "minPercent": 95
+      },
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 90
+      },
+      {
+        "grade": "A-",
+        "points": 3.6,
+        "minPercent": 85
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 75
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 72
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 70
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 65
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 63
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 62
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "nahda-engineering",
+    "name": "Nahda University: Communications & Computer Engineering",
+    "arabicName": "جامعة النهضة: هندسة الاتصالات والحاسبات",
+    "status": "reference",
+    "sourceUrl": "https://www.nub.edu.eg/wp-content/uploads/2021/11/%D8%AA%D9%88%D8%B5%D9%8A%D9%81-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC-%D9%87%D9%86%D8%AF%D8%B3%D8%A9-%D8%A7%D9%84%D8%A5%D8%AA%D8%B5%D8%A7%D9%84%D8%A7%D8%AA-%D9%88-%D8%A7%D9%84%D8%AD%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA.pdf",
+    "note": "Official engineering program specification, Article 38, p.26. Business uses different percentage boundaries. Reference, not user-tested; confirm current regulation.",
+    "grades": [
+      {
+        "grade": "A+",
+        "points": 4,
+        "minPercent": 97
+      },
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 93
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 89
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 84
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 76
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 73
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 70
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 67
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 64
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "miu-engineering",
+    "name": "Misr International University: Engineering",
+    "arabicName": "جامعة مصر الدولية: الهندسة",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "Letter points extracted from GPACal Engineering selector on 8 September 2026. Its percentage table overlaps: C+ 65–<72 and B−70–<75. Percentage conversion is deliberately omitted pending authoritative clarification. Reference, not user-tested.",
+    "grades": [
+      {
+        "grade": "A",
+        "points": 4
+      },
+      {
+        "grade": "A-",
+        "points": 3.7
+      },
+      {
+        "grade": "B+",
+        "points": 3.3
+      },
+      {
+        "grade": "B",
+        "points": 3
+      },
+      {
+        "grade": "B-",
+        "points": 2.7
+      },
+      {
+        "grade": "C+",
+        "points": 2.3
+      },
+      {
+        "grade": "C",
+        "points": 2
+      },
+      {
+        "grade": "C-",
+        "points": 1.7
+      },
+      {
+        "grade": "D+",
+        "points": 1.3
+      },
+      {
+        "grade": "D",
+        "points": 1
+      },
+      {
+        "grade": "F",
+        "points": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "cairo-mass-communication",
+    "name": "Cairo University: Mass Communication",
+    "arabicName": "جامعة القاهرة: الإعلام",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "Letter points and percentage boundaries read from GPACal Mass Communication table on 8 September 2026. B+/C+/D+ are 3.4/2.4/1.4. Faculty-specific; confirm current regulation. Reference, not user-tested.",
+    "grades": [
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 90
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 87
+      },
+      {
+        "grade": "B+",
+        "points": 3.4,
+        "minPercent": 84
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 77
+      },
+      {
+        "grade": "C+",
+        "points": 2.4,
+        "minPercent": 74
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 70
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 67
+      },
+      {
+        "grade": "D+",
+        "points": 1.4,
+        "minPercent": 64
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "horus-engineering",
+    "name": "Horus University: Engineering",
+    "arabicName": "جامعة حورس: الهندسة",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "Letter points and percentage boundaries read from GPACal Engineering table on 8 September 2026. Official Engineering FAQ confirms a 4.0 scale only. Faculty-specific; confirm current regulation and repeat policies. Reference, not user-tested.",
+    "grades": [
+      {
+        "grade": "A+",
+        "points": 4,
+        "minPercent": 97
+      },
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 93
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 89
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 84
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 76
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 73
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 70
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 67
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 64
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "eru-engineering",
+    "name": "Egyptian Russian University: Engineering",
+    "arabicName": "الجامعة المصرية الروسية: الهندسة",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "Letter points and percentage boundaries read from GPACal Engineering table on 8 September 2026. Official ERU guide editions differ in pass/repeat provisions. This appears to be the 50% pass scale; confirm applicable cohort. Reference, not user-tested.",
+    "grades": [
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 90
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 85
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 75
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 70
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 65
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 60
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 55
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 52.5
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 50
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "delta-pharmd",
+    "name": "Delta University: Pharmacy (PharmD 2019–2020 onward)",
+    "arabicName": "جامعة الدلتا: الصيدلة PharmD (من 2019–2020)",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "Read directly from the named faculty's GPACal grading table on 8 September 2026. GPACal identifies PharmD starting with the 2019–2020 cohort; it also offers an older system, not included in this profile. Reference only; these faculties were not validated through the user's tested Delta Engineering PDF workflow.",
+    "grades": [
+      {
+        "grade": "A+",
+        "points": 4,
+        "minPercent": 97
+      },
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 93
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 89
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 84
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 76
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 73
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 70
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 67
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 64
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "delta-physical-therapy",
+    "name": "Delta University: Physical Therapy",
+    "arabicName": "جامعة الدلتا: العلاج الطبيعي",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "Read directly from the named faculty's GPACal grading table on 8 September 2026. No cohort selector was offered for this faculty in GPACal. Reference only; these faculties were not validated through the user's tested Delta Engineering PDF workflow.",
+    "grades": [
+      {
+        "grade": "A+",
+        "points": 4,
+        "minPercent": 97
+      },
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 93
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 89
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 84
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 76
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 73
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 70
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 67
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 64
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "delta-dentistry",
+    "name": "Delta University: Dentistry",
+    "arabicName": "جامعة الدلتا: طب الأسنان",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "Read directly from the named faculty's GPACal grading table on 8 September 2026. No cohort selector was offered for this faculty in GPACal. Reference only; these faculties were not validated through the user's tested Delta Engineering PDF workflow.",
+    "grades": [
+      {
+        "grade": "A+",
+        "points": 4,
+        "minPercent": 97
+      },
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 93
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 89
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 84
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 76
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 73
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 70
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 67
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 64
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "delta-administration",
+    "name": "Delta University: Administration",
+    "arabicName": "جامعة الدلتا: الإدارة",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "Read directly from the named faculty's GPACal grading table on 8 September 2026. No cohort selector was offered for this faculty in GPACal. Reference only; these faculties were not validated through the user's tested Delta Engineering PDF workflow.",
+    "grades": [
+      {
+        "grade": "A+",
+        "points": 4,
+        "minPercent": 97
+      },
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 93
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 89
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 84
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 76
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 73
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 70
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 67
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 64
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "delta-medicine",
+    "name": "Delta University: Medicine",
+    "arabicName": "جامعة الدلتا: الطب",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "Read directly from the named faculty's GPACal grading table on 8 September 2026. No cohort selector was offered for this faculty in GPACal. Reference only; these faculties were not validated through the user's tested Delta Engineering PDF workflow.",
+    "grades": [
+      {
+        "grade": "A+",
+        "points": 4,
+        "minPercent": 97
+      },
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 93
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 89
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 84
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 80
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 76
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 73
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 70
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 67
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 64
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  },
+  {
+    "id": "auc-continuing-education",
+    "name": "American University in Cairo: Continuing Education",
+    "arabicName": "الجامعة الأمريكية بالقاهرة: التعليم المستمر",
+    "status": "reference",
+    "sourceUrl": "https://gpacal.net/",
+    "note": "GPACal's AUC entry is explicitly School of Continuing Education programs. Grade table read 8 September 2026; this percentage ladder is not asserted for undergraduate/graduate programs. Confirm applicable program rules. Reference, not user-tested.",
+    "grades": [
+      {
+        "grade": "A",
+        "points": 4,
+        "minPercent": 94
+      },
+      {
+        "grade": "A-",
+        "points": 3.7,
+        "minPercent": 90
+      },
+      {
+        "grade": "B+",
+        "points": 3.3,
+        "minPercent": 87
+      },
+      {
+        "grade": "B",
+        "points": 3,
+        "minPercent": 84
+      },
+      {
+        "grade": "B-",
+        "points": 2.7,
+        "minPercent": 80
+      },
+      {
+        "grade": "C+",
+        "points": 2.3,
+        "minPercent": 77
+      },
+      {
+        "grade": "C",
+        "points": 2,
+        "minPercent": 74
+      },
+      {
+        "grade": "C-",
+        "points": 1.7,
+        "minPercent": 70
+      },
+      {
+        "grade": "D+",
+        "points": 1.3,
+        "minPercent": 66
+      },
+      {
+        "grade": "D",
+        "points": 1,
+        "minPercent": 60
+      },
+      {
+        "grade": "F",
+        "points": 0,
+        "minPercent": 0
+      }
+    ],
+    "maxGpa": 4
+  }
+]

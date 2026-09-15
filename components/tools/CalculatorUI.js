@@ -1,7 +1,7 @@
 export function ToolSection({ title, children }) {
   return (
     <section className="tool-section">
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       {children}
     </section>
   );
@@ -27,11 +27,52 @@ export function WorkedExample({ children }) {
   );
 }
 
-export function CalculatorPanel({ title = "Try it", children }) {
+/**
+ * The one calm learning region for a calculator page. Everything passed in - "What's going on",
+ * the formula, mnemonic, worked example - shares one entry rule and heading instead of each
+ * getting its own bordered panel.
+ */
+export function CalculatorLearning({ children }) {
   return (
-    <div className="calculator-panel">
+    <section className="tool-learning-flow" aria-labelledby="learn-heading" data-tool-learning>
+      <h2 id="learn-heading">Understand the result</h2>
+      {children}
+    </section>
+  );
+}
+
+/**
+ * Longer derivation, mnemonic, and worked-example content that would otherwise push the next
+ * region more than one viewport away. Native disclosure keeps it reachable without another box.
+ */
+export function LearningDisclosure({ summary = "Show the derivation, mnemonic, and worked example", children }) {
+  return (
+    <details className="tool-disclosure">
+      <summary>{summary}</summary>
+      <div className="tool-disclosure-body">{children}</div>
+    </details>
+  );
+}
+
+export function CalculatorPanel({ title = "Try it", compact = false, visual, children }) {
+  if (!compact) {
+    return (
+      <div className="calculator-panel" data-tool-workspace>
+        <p className="eyebrow">{title}</p>
+        <div className="calculator-grid">{children}</div>
+      </div>
+    );
+  }
+
+  const className = `calculator-panel calculator-panel-compact${visual ? " calculator-panel-has-visual" : ""}`;
+
+  return (
+    <div className={className} data-tool-workspace>
       <p className="eyebrow">{title}</p>
-      <div className="calculator-grid">{children}</div>
+      <div className="calculator-workspace-layout">
+        {visual ? <div className="calculator-workspace-visual">{visual}</div> : null}
+        <div className="calculator-workspace-controls">{children}</div>
+      </div>
     </div>
   );
 }
@@ -51,6 +92,17 @@ export function CalculatorField({ label, suffix, ...inputProps }) {
           {...inputProps}
         />
         {suffix ? <span className="calculator-field-suffix">{suffix}</span> : null}
+      </div>
+    </label>
+  );
+}
+
+export function CalculatorTextArea({ label, ...textareaProps }) {
+  return (
+    <label className="calculator-field calculator-field-wide">
+      <span>{label}</span>
+      <div className="calculator-field-input">
+        <textarea rows={3} spellCheck="false" {...textareaProps} />
       </div>
     </label>
   );
@@ -108,7 +160,7 @@ export function ColorSwatchPicker({ label, colors, value, onChange, colorKey }) 
           </button>
         ))}
       </div>
-      <p className="swatch-selected muted mono">{selected?.name ?? "—"}</p>
+      <p className="swatch-selected muted mono">{selected?.name ?? "-"}</p>
     </div>
   );
 }

@@ -5,7 +5,7 @@ export function VoltageDividerDiagram() {
     <DiagramFrame
       viewBox="0 0 240 220"
       height={220}
-      caption="R1 and R2 in series — the tap between them is Vout"
+      caption="R1 and R2 in series - the tap between them is Vout"
     >
       <text x={60} y={16} textAnchor="middle" className="diagram-label">
         Vin

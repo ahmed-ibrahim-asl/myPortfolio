@@ -1,0 +1,20 @@
+:root{
+  /* Archivo, IBM Plex Sans Arabic, Aref Ruqaa, Sora, and Space Mono are self-hosted by next/font. */
+  --font-core:var(--font-loaded-archivo),"Helvetica Neue",Arial,sans-serif;
+  --font-display-ar:var(--font-loaded-plex-arabic),Tahoma,sans-serif;
+  --font-text-ar:var(--font-loaded-plex-arabic),Tahoma,sans-serif;
+  --font-mark-latin:var(--font-loaded-sora),var(--font-loaded-archivo),Arial,sans-serif;
+  --font-mark-ar:var(--font-loaded-aref-ruqaa),var(--font-loaded-plex-arabic),serif;
+
+  /* Data / labels / code. Never for long prose. */
+  --font-mono:var(--font-loaded-space-mono),"SFMono-Regular",Menlo,monospace;
+  /* Labels that may contain Arabic - Arabic glyphs resolve to Plex Arabic, not a generic fallback. */
+  --font-mono-bi:var(--font-loaded-space-mono),var(--font-loaded-plex-arabic),Menlo,monospace;
+
+  /* Bilingual convenience stacks: safe for mixed-script strings */
+  --font-sans:var(--font-core),var(--font-text-ar); /* @kind font */
+  --font-display:var(--font-core),var(--font-display-ar); /* @kind font */
+}
+
+/* Arabic pages/blocks opt in by direction or lang - Latin fallback stays intact */
+[lang|="ar"],[dir="rtl"]{--font-sans:var(--font-text-ar),var(--font-core);--font-display:var(--font-display-ar),var(--font-core)}

@@ -2,10 +2,12 @@
 
 import { useMemo, useState } from "react";
 import {
+  CalculatorLearning,
   CalculatorPanel,
   CalculatorResult,
   CalculatorResults,
   ColorSwatchPicker,
+  LearningDisclosure,
   Mnemonic,
   ToolSection,
   WorkedExample
@@ -40,51 +42,8 @@ export function FiveBandResistorColorCodeCalculator() {
   const max = value * (1 + tol / 100);
 
   return (
-    <div className="article-body">
-      <ToolSection title="What's going on">
-        <p>
-          Precision resistors need more than two significant digits to say what they mean, so they
-          trade one of the multiplier&rsquo;s shortcuts for an extra digit of accuracy. Same idea as
-          the 4-band code, one more band of resolution.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="Build it up">
-        <p>
-          Where a 4-band resistor spells out a two-digit number, a 5-band resistor spells out three
-          digits before the multiplier kicks in. That&rsquo;s the whole difference — everything else
-          about reading the bands works exactly the same way, left to right.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="The formula">
-        <p className="mono">R = (D1 × 100 + D2 × 10 + D3) × Multiplier</p>
-        <p>
-          D1, D2, and D3 are the first three digits, read from the band nearest the resistor&rsquo;s
-          edge inward.
-        </p>
-      </ToolSection>
-
-      <Mnemonic phrase="One extra digit, one extra chance to be exact">
-        <p>
-          Reuse the same color sentence as the 4-band code — Black, Brown, Red, Orange, Yellow,
-          Green, Blue, Violet, Grey, White — just read it for three bands instead of two before you
-          hit the multiplier. The color order never changes; only how many digits you collect does.
-        </p>
-      </Mnemonic>
-
-      <ToolSection title="Worked example">
-        <WorkedExample>
-          <p className="step">Bands: Brown, Black, Black, Brown, Brown</p>
-          <p className="step">Digits: 1, 0, 0 → 100</p>
-          <p className="step">Multiplier: Brown → ×10</p>
-          <p className="step">R = 100 × 10 = 1,000 Ω = 1 kΩ ± 1%</p>
-        </WorkedExample>
-      </ToolSection>
-
-      <ResistorBandsDiagram bands={bandHexes} />
-
-      <CalculatorPanel>
+    <div className="article-body" data-calculator-experience>
+      <CalculatorPanel compact visual={<ResistorBandsDiagram bands={bandHexes} />}>
         <ColorSwatchPicker
           label="Band 1 (1st digit)"
           colors={DIGIT_COLORS}
@@ -123,9 +82,54 @@ export function FiveBandResistorColorCodeCalculator() {
         <CalculatorResults>
           <CalculatorResult label="Resistance" value={formatOhms(value)} />
           <CalculatorResult label="Tolerance" value={`± ${tol}%`} />
-          <CalculatorResult label="Range" value={`${formatOhms(min)} – ${formatOhms(max)}`} />
+          <CalculatorResult label="Range" value={`${formatOhms(min)} to ${formatOhms(max)}`} />
         </CalculatorResults>
       </CalculatorPanel>
+
+      <CalculatorLearning>
+        <ToolSection title="What's going on">
+          <p>
+            Precision resistors need more than two significant digits to say what they mean, so they
+            trade one of the multiplier&rsquo;s shortcuts for an extra digit of accuracy. Same idea as
+            the 4-band code, one more band of resolution.
+          </p>
+        </ToolSection>
+
+        <ToolSection title="The formula">
+          <p className="mono">R = (D1 × 100 + D2 × 10 + D3) × Multiplier</p>
+          <p>
+            D1, D2, and D3 are the first three digits, read from the band nearest the resistor&rsquo;s
+            edge inward.
+          </p>
+        </ToolSection>
+
+        <LearningDisclosure>
+          <ToolSection title="Build it up">
+            <p>
+              Where a 4-band resistor spells out a two-digit number, a 5-band resistor spells out three
+              digits before the multiplier kicks in. That&rsquo;s the whole difference - everything else
+              about reading the bands works exactly the same way, left to right.
+            </p>
+          </ToolSection>
+
+          <Mnemonic phrase="One extra digit, one extra chance to be exact">
+            <p>
+              Reuse the same color sentence as the 4-band code - Black, Brown, Red, Orange, Yellow,
+              Green, Blue, Violet, Grey, White - just read it for three bands instead of two before you
+              hit the multiplier. The color order never changes; only how many digits you collect does.
+            </p>
+          </Mnemonic>
+
+          <ToolSection title="Worked example">
+            <WorkedExample>
+              <p className="step">Bands: Brown, Black, Black, Brown, Brown</p>
+              <p className="step">Digits: 1, 0, 0 → 100</p>
+              <p className="step">Multiplier: Brown → ×10</p>
+              <p className="step">R = 100 × 10 = 1,000 Ω = 1 kΩ ± 1%</p>
+            </WorkedExample>
+          </ToolSection>
+        </LearningDisclosure>
+      </CalculatorLearning>
     </div>
   );
 }

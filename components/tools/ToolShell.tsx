@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ToolDirectAnswer, ToolSearchHook, ToolSearchSchema } from "@/components/tools/ToolSearchHook";
 
-export function ToolShell({ title, description, children }: { title: string, description: string, children: React.ReactNode }) {
+export function ToolShell({ slug, title, description, children }: { slug?: string, title: string, description: string, children: React.ReactNode }) {
   return (
     <section className="section shell tool-page asl-workbench-shell">
       <div className="tool-shell-heading">
@@ -10,16 +11,18 @@ export function ToolShell({ title, description, children }: { title: string, des
           Back to Tools
         </Link>
         <SectionHeading
-         
           title={title}
+          level="h1"
         />
         <p className="section-intro tool-shell-description">
           {description}
         </p>
       </div>
+      {slug ? <><ToolDirectAnswer slug={slug} /><ToolSearchSchema slug={slug} /></> : null}
       <div className="tool-grid">
         {children}
       </div>
+      {slug ? <ToolSearchHook slug={slug} /> : null}
     </section>
   );
 }

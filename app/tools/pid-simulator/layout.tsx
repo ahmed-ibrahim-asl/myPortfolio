@@ -1,10 +1,12 @@
 import type { ReactNode } from "react";
 import { createPageMetadata } from "@/lib/seo";
+import { getToolSearchHook } from "@/data/tool-search-hooks";
+
+const searchHook = getToolSearchHook("pid-simulator")!;
 
 export const metadata = createPageMetadata({
-  title: "Interactive PID Control Simulator",
-  description:
-    "Tune proportional, integral, and derivative gains and see the live response of thermal and mass-spring systems.",
+  title: searchHook.seoTitle,
+  description: searchHook.metaDescription,
   pathname: "/tools/pid-simulator/",
 });
 

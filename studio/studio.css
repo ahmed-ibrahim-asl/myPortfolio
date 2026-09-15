@@ -1,15 +1,15 @@
 :root {
-  --paper: #f2f0e9;
-  --paper-deep: #e7e3d8;
-  --ink: #151713;
-  --muted: #70746c;
-  --line: #cbc8bc;
-  --signal: #a54120;
-  --night: #181b17;
+  --paper: #0B0D11;
+  --paper-deep: #161921;
+  --ink: #E6E8EB;
+  --muted: #78828F;
+  --line: rgba(230, 232, 235, 0.08);
+  --signal: #D9A441;
+  --night: #080A0D;
   --white: #fff;
-  --ui: "Aptos", "Segoe UI", Arial, sans-serif;
+  --ui: "Inter", "Segoe UI", sans-serif;
   --editorial: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --mono: "Cascadia Code", Consolas, monospace;
+  --mono: "IBM Plex Mono", "Cascadia Code", monospace;
 }
 
 * {

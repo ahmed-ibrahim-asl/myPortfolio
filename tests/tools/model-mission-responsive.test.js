@@ -1060,19 +1060,14 @@ test(
           );
           initializerExplanation?.querySelector("button")?.click();
           if (initializerExplanation) await pause();
+          const floatingExplainer = document.querySelector(".floating-explainer");
           const initializerExplanationText =
-            initializerExplanation?.textContent ?? "";
+            floatingExplainer?.textContent ?? "";
           const explanationButton =
             initializerExplanation?.querySelector("button");
-          const explanationPanelId =
-            explanationButton?.getAttribute("aria-controls");
           const initializerExplanationA11y = {
-            expanded: explanationButton?.getAttribute("aria-expanded"),
-            controlsVisible: Boolean(
-              explanationPanelId
-              && document.getElementById(explanationPanelId)
-                ?.getClientRects().length
-            ),
+            hasPopup: explanationButton?.getAttribute("aria-haspopup"),
+            controlsVisible: Boolean(floatingExplainer?.getClientRects().length),
           };
           const installCommand = document.querySelector(
             "[data-mission-code-panel] code"
@@ -1193,7 +1188,7 @@ test(
       }
       assert.deepEqual(
         neuralControlResult.initializerExplanationA11y,
-        { expanded: "true", controlsVisible: true },
+        { hasPopup: "dialog", controlsVisible: true },
       );
       assert.match(neuralControlResult.installCommand, /^pip install \S+( \S+)*$/);
       assert.doesNotMatch(neuralControlResult.installCommand, /\s{2,}/);
@@ -1233,19 +1228,17 @@ test(
         returnByValue: true,
         expression: `(() => {
           const root = document.querySelector("[data-model-mission]");
-          const explanation = document.querySelector(
-            '[data-layer-explanation="initializer"] [id$="-explanation"]'
-          );
-          const card = explanation?.closest("article");
+          // MissionExplanation now opens a floating, draggable window (FloatingExplainer)
+          // rather than expanding inline under the card, so the containment contract that
+          // matters is "stays on screen", not "stays inside its trigger's parent card".
+          const explanation = document.querySelector(".floating-explainer");
           const explanationRect = explanation?.getBoundingClientRect();
-          const cardRect = card?.getBoundingClientRect();
           const explanationContained = Boolean(
             explanationRect
-            && cardRect
-            && explanationRect.left >= cardRect.left - 1
-            && explanationRect.right <= cardRect.right + 1
-            && explanationRect.top >= cardRect.top - 1
-            && explanationRect.bottom <= cardRect.bottom + 1
+            && explanationRect.left >= -1
+            && explanationRect.right <= window.innerWidth + 1
+            && explanationRect.top >= -1
+            && explanationRect.bottom <= window.innerHeight + 1
           );
           const gradientElements = root
             ? [root, ...root.querySelectorAll("*")]

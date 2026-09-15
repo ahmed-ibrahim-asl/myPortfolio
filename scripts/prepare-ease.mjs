@@ -61,7 +61,7 @@ const brandProfile = {
       },
       {
         url: "https://hwangstice.github.io/blog/overthewire-bandit/",
-        title: "OverTheWire Bandit — visual reference only",
+        title: "OverTheWire Bandit - visual reference only",
         render_mode: "html"
       }
     ],
@@ -72,12 +72,12 @@ const brandProfile = {
     errors: []
   },
   metadata: {
-    title: "Ahmed Asl — IoT & Embedded Systems Engineer",
+    title: "Ahmed Asl - IoT & Embedded Systems Engineer",
     description:
       "Engineering portfolio and practical field notes across embedded systems, IoT, Flutter, Linux, cybersecurity, and AI.",
     locale: "en",
     open_graph: {
-      title: "Ahmed Asl — Embedded Systems, IoT & Field Notes",
+      title: "Ahmed Asl - Embedded Systems, IoT & Field Notes",
       description:
         "Hardware logic, human clarity, and reproducible engineering notes.",
       image: null

@@ -84,7 +84,7 @@ test('PID Engine - thermal plant never overshoots (no momentum to carry past the
   }
   // A P-only controller still leaves steady-state error on the thermal plant too (force
   // settles where force === position, i.e. kp*(target-p) === p => p = kp*target/(1+kp) = 33.33
-  // for kp=2, target=50) — the thermal plant changes overshoot behavior, not this.
+  // for kp=2, target=50). The thermal plant changes overshoot behavior, not this.
   assert.ok(Math.abs(state.position - 33.33) < 0.5, `expected P-only steady state near 33.33, got ${state.position}`);
   assert.ok(peak <= 50 + 0.01, `expected no overshoot past target, got peak ${peak}`);
 });
@@ -92,7 +92,7 @@ test('PID Engine - thermal plant never overshoots (no momentum to carry past the
 test('PID Engine - adding Ki lets the thermal plant reach the target despite no overshoot risk', () => {
   // ki must be large enough that the integral needed to sustain force === target at equilibrium
   // (integralError = target / ki, since kp's own contribution is 0 once error reaches 0) stays
-  // under the engine's fixed anti-windup clamp of 50 — otherwise the integrator saturates before
+  // under the engine's fixed anti-windup clamp of 50; otherwise the integrator saturates before
   // closing the gap, which is itself a real, correct control-systems interaction (see the
   // windup-saturation test below), just not the one this test is demonstrating.
   const engine = createPidEngine();
@@ -114,7 +114,7 @@ test('PID Engine - adding Ki lets the thermal plant reach the target despite no 
 test('PID Engine - integral windup can saturate against the anti-windup clamp before reaching the target', () => {
   // With kp=2, ki=0.5, target=50: closing the gap fully would require integralError = 100
   // (since force must equal 50 at equilibrium and kp's contribution is 0 once error is 0,
-  // so 0.5 * integralError = 50), but integralError is clamped to +/-50 — so the system
+  // so 0.5 * integralError = 50), but integralError is clamped to +/-50, so the system
   // permanently stalls short of the target, not because it needs more simulated time.
   const engine = createPidEngine();
   let state;
@@ -188,6 +188,35 @@ test('calculatePidMetrics - steady-state error is the mean absolute error of rec
     travelStartPos: 0
   });
   assert.ok(Math.abs(metrics.steadyStateError - 2) < 0.001);
+});
+
+test('PID Engine - drone plant must fight gravity, so P+D alone droops below target', () => {
+  const engine = createPidEngine();
+  let state;
+  for (let i = 0; i < 2000; i += 1) {
+    state = engine.step({ dt: 1 / 60, mass: 1, damping: 0.8, target: 50, kp: 2, ki: 0, kd: 0.5, plant: 'drone' });
+  }
+  assert.ok(state.position < 49, `expected gravity droop below target, got ${state.position}`);
+  assert.ok(state.position > 30, `expected the drone to still climb substantially, got ${state.position}`);
+});
+
+test('PID Engine - drone plant with Ki closes the gravity-droop gap', () => {
+  const engine = createPidEngine();
+  let state;
+  for (let i = 0; i < 2000; i += 1) {
+    state = engine.step({ dt: 1 / 60, mass: 1, damping: 0.8, target: 50, kp: 4, ki: 1, kd: 2, plant: 'drone' });
+  }
+  assert.ok(Math.abs(state.position - 50) < 0.5, `expected Ki to close the gap, got ${state.position}`);
+});
+
+test('PID Engine - drone plant cannot fall through the ground', () => {
+  const engine = createPidEngine();
+  let state;
+  for (let i = 0; i < 100; i += 1) {
+    state = engine.step({ dt: 1 / 60, mass: 1, damping: 0.8, target: -50, kp: 5, ki: 0, kd: 0, plant: 'drone' });
+  }
+  assert.strictEqual(state.position, 0);
+  assert.strictEqual(state.velocity, 0);
 });
 
 test('calculatePidMetrics - only the most recent 30 history samples count toward steady-state error', () => {

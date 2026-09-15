@@ -162,12 +162,12 @@ test(
     // Every selector below (.ml-generator-code-panel, .ml-generator-config-panel,
     // .ml-generator-copy, etc.) targets components/tools/ml-generator/GeneratorCodePanel.tsx
     // and components/tools/ml-workbench/AiLearningWorkbench.tsx. Neither is imported by
-    // anything anymore (verified via repo-wide grep) — app/tools/ai-script-generator/page.tsx
+    // anything anymore (verified via repo-wide grep). app/tools/ai-script-generator/page.tsx
     // renders ModelMissionShell instead, whose equivalent panel uses CSS-module classes and
     // data-mission-* attribute hooks. This test currently exercises dead code and gives zero
     // real coverage of the live page. Skipped rather than left red or deleted: rewriting it
     // against ModelMissionShell / MissionCodePanel / MissionStepPanel is real, separate work.
-    skip: "targets a component tree (ml-generator/ml-workbench) no longer rendered by the live page — needs a rewrite against ModelMissionShell, not a selector patch",
+    skip: "targets a component tree (ml-generator/ml-workbench) no longer rendered by the live page; it needs a rewrite against ModelMissionShell, not a selector patch",
   },
   async (t) => {
     const chromePath = chromeCandidates.find((candidate) => existsSync(candidate));

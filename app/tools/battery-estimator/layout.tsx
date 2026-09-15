@@ -1,10 +1,12 @@
 import type { ReactNode } from "react";
 import { createPageMetadata } from "@/lib/seo";
+import { getToolSearchHook } from "@/data/tool-search-hooks";
+
+const searchHook = getToolSearchHook("battery-estimator")!;
 
 export const metadata = createPageMetadata({
-  title: "ESP32 Battery Life and Power Estimator",
-  description:
-    "Estimate ESP32 runtime, average current, Wi-Fi energy, sleep current, and usable battery capacity for an embedded design.",
+  title: searchHook.seoTitle,
+  description: searchHook.metaDescription,
   pathname: "/tools/battery-estimator/",
 });
 

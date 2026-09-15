@@ -1,7 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { FloatingExplainer } from "../FloatingExplainer";
+import type { Position } from "../useDraggable";
 import styles from "./SecurityMission.module.css";
+
+interface OpenExplainer {
+  flag: string;
+  description: string;
+  position: Position;
+}
 
 export function CommandAssemblyTrace({
   generatedCommand,
@@ -15,8 +23,18 @@ export function CommandAssemblyTrace({
   onChooseSource?: (valuePath: string) => void;
 }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [openExplainer, setOpenExplainer] = useState<OpenExplainer | null>(null);
 
   if (!generatedCommand?.tokens?.length) return null;
+
+  const explainToken = (token: any, event: { clientX: number; clientY: number }) => {
+    if (!token.flagDescription) return;
+    setOpenExplainer({
+      flag: token.value,
+      description: token.flagDescription,
+      position: { x: Math.min(event.clientX + 12, window.innerWidth - 320), y: Math.max(event.clientY - 16, 12) },
+    });
+  };
   const labels = new Map(
     controls.map((control) => [control.valuePath, control.label]),
   );
@@ -63,6 +81,7 @@ export function CommandAssemblyTrace({
                   data-token-type={token.type}
                   data-has-description="true"
                   title={tooltip}
+                  onClick={(event) => explainToken(token, event)}
                   {...hoverProps}
                 >
                   {text}
@@ -92,7 +111,10 @@ export function CommandAssemblyTrace({
                 focusedValuePath === token.sourcePath ? "true" : "false"
               }
               title={tooltip}
-              onClick={() => onChooseSource?.(token.sourcePath)}
+              onClick={(event) => {
+                onChooseSource?.(token.sourcePath);
+                explainToken(token, event);
+              }}
               {...hoverProps}
             >
               {text}
@@ -112,6 +134,23 @@ export function CommandAssemblyTrace({
         <div><dt>Recipe</dt><dd>verified flag</dd></div>
         <div><dt>Your value</dt><dd>quoted argument</dd></div>
       </dl>
+      {openExplainer ? (
+        <FloatingExplainer
+          title={openExplainer.flag}
+          isOpen
+          onClose={() => setOpenExplainer(null)}
+          anchorPosition={openExplainer.position}
+        >
+          <p>{openExplainer.description}</p>
+          {generatedCommand.sourceUrls?.[0] ? (
+            <p>
+              <a href={generatedCommand.sourceUrls[0]} target="_blank" rel="noreferrer">
+                Verified against official docs
+              </a>
+            </p>
+          ) : null}
+        </FloatingExplainer>
+      ) : null}
     </section>
   );
 }

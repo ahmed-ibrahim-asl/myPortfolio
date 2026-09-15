@@ -436,7 +436,7 @@ export function NeuralLayerEditor({
         >
           {NEURAL_LAYER_TYPES.map((type) => (
             <option key={type.id} value={type.id}>
-              {type.label} — {type.purpose}
+              {type.label} - {type.purpose}
             </option>
           ))}
         </select>

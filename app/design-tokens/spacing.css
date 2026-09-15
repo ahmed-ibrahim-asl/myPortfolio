@@ -1,0 +1,40 @@
+:root{
+  /* 4px base. 2px exists only for hairline offsets and tick marks. */
+  --sp-0:0; /* @kind spacing */
+  --sp-1:2px;
+  --sp-2:4px;
+  --sp-3:8px;
+  --sp-4:12px;
+  --sp-5:16px;
+  --sp-6:20px;
+  --sp-7:24px;
+  --sp-8:32px;
+  --sp-9:40px;
+  --sp-10:48px;
+  --sp-11:64px;
+  --sp-12:80px;
+  --sp-13:96px;
+  --sp-14:128px;
+  --sp-15:160px;
+
+  /* Rhythm roles */
+  --gap-inline:var(--sp-3);       /* icon ↔ label */
+  --gap-stack:var(--sp-4);        /* label ↔ field */
+  --gap-group:var(--sp-7);        /* card ↔ card */
+  --gap-block:var(--sp-10);       /* block ↔ block */
+  --gap-section:var(--sp-13);     /* section ↔ section (web) */
+
+  --pad-control:var(--sp-3) var(--sp-5);
+  --pad-card:var(--sp-7);
+  --pad-panel:var(--sp-8);
+
+  /* Layout */
+  --measure:66ch;                 /* max prose width */
+  --measure-ar:58ch;              /* Arabic sets wider per glyph */
+  --page-max:1280px; /* @kind spacing */
+  /* One adaptive edge contract for every route, header, footer and workbench. */
+  --page-gutter:clamp(var(--sp-6),4vw,72px);
+  --grid-unit:8px;                /* blueprint background pitch = 8 / 64 */
+  --rail:56px;                    /* fixed side rail */
+  --topbar:56px;
+}

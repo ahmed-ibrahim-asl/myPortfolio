@@ -3,10 +3,12 @@
 import { useMemo, useState } from "react";
 import {
   CalculatorField,
+  CalculatorLearning,
   CalculatorPanel,
   CalculatorResult,
   CalculatorResults,
   CalculatorSelect,
+  LearningDisclosure,
   Mnemonic,
   ToolSection,
   WorkedExample
@@ -34,56 +36,19 @@ export function LowPassFilterCalculator() {
   }, [r, c, cUnit]);
 
   return (
-    <div className="article-body">
-      <ToolSection title="What's going on">
-        <p>
-          A low pass filter is a high pass filter&rsquo;s mirror image: low frequencies pass through
-          mostly untouched, and anything above the cutoff gets progressively weaker. It&rsquo;s the
-          circuit behind smoothing out a jittery sensor reading or knocking the buzz out of a PWM
-          signal before it reaches an amplifier.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="Build it up">
-        <p>
-          Same resistor and capacitor in series as a high pass filter — the only change is which
-          component you read the output across. Take it across the capacitor instead of the
-          resistor, and the behavior flips: at low frequency the capacitor&rsquo;s reactance is
-          high, so it happily passes the voltage through to the output; at high frequency its
-          reactance drops, and it starts shorting the signal to ground instead of letting it reach
-          the output.
-        </p>
-      </ToolSection>
-
-      <SeriesRCDiagram
-        first="resistor"
-        firstLabel="R"
-        second="capacitor"
-        secondLabel="C"
-        caption="R and C in series — Vout is read across C, so lows pass and highs get shorted to ground"
-      />
-
-      <ToolSection title="The formula">
-        <p className="mono">fc = 1 / (2π × R × C)</p>
-        <p>Identical formula to the high pass filter — only the output tap point differs.</p>
-      </ToolSection>
-
-      <Mnemonic tag="Same fc, different tap" phrase="Read across the capacitor, not the resistor">
-        <p>
-          The math is exactly the same as a high pass filter. The only thing to remember is which
-          leg of the RC pair you&rsquo;re measuring: capacitor for low pass, resistor for high pass.
-        </p>
-      </Mnemonic>
-
-      <ToolSection title="Worked example">
-        <WorkedExample>
-          <p className="step">R = 1.6 kΩ, C = 100 nF</p>
-          <p className="step">fc = 1 / (2π × 1,600 × 1e-7)</p>
-          <p className="step">fc ≈ 995 Hz</p>
-        </WorkedExample>
-      </ToolSection>
-
-      <CalculatorPanel>
+    <div className="article-body" data-calculator-experience>
+      <CalculatorPanel
+        compact
+        visual={(
+          <SeriesRCDiagram
+            first="resistor"
+            firstLabel="R"
+            second="capacitor"
+            secondLabel="C"
+            caption="R and C in series - Vout is read across C, so lows pass and highs get shorted to ground"
+          />
+        )}
+      >
         <CalculatorField
           label="Resistance"
           suffix="Ω"
@@ -114,6 +79,50 @@ export function LowPassFilterCalculator() {
           <p className="muted">Enter valid, positive numbers.</p>
         )}
       </CalculatorPanel>
+
+      <CalculatorLearning>
+        <ToolSection title="What's going on">
+          <p>
+            A low pass filter is a high pass filter&rsquo;s mirror image: low frequencies pass through
+            mostly untouched, and anything above the cutoff gets progressively weaker. It&rsquo;s the
+            circuit behind smoothing out a jittery sensor reading or knocking the buzz out of a PWM
+            signal before it reaches an amplifier.
+          </p>
+        </ToolSection>
+
+        <ToolSection title="The formula">
+          <p className="mono">fc = 1 / (2π × R × C)</p>
+          <p>Identical formula to the high pass filter - only the output tap point differs.</p>
+        </ToolSection>
+
+        <LearningDisclosure>
+          <ToolSection title="Build it up">
+            <p>
+              Same resistor and capacitor in series as a high pass filter - the only change is which
+              component you read the output across. Take it across the capacitor instead of the
+              resistor, and the behavior flips: at low frequency the capacitor&rsquo;s reactance is
+              high, so it happily passes the voltage through to the output; at high frequency its
+              reactance drops, and it starts shorting the signal to ground instead of letting it reach
+              the output.
+            </p>
+          </ToolSection>
+
+          <Mnemonic tag="Same fc, different tap" phrase="Read across the capacitor, not the resistor">
+            <p>
+              The math is exactly the same as a high pass filter. The only thing to remember is which
+              leg of the RC pair you&rsquo;re measuring: capacitor for low pass, resistor for high pass.
+            </p>
+          </Mnemonic>
+
+          <ToolSection title="Worked example">
+            <WorkedExample>
+              <p className="step">R = 1.6 kΩ, C = 100 nF</p>
+              <p className="step">fc = 1 / (2π × 1,600 × 1e-7)</p>
+              <p className="step">fc ≈ 995 Hz</p>
+            </WorkedExample>
+          </ToolSection>
+        </LearningDisclosure>
+      </CalculatorLearning>
     </div>
   );
 }

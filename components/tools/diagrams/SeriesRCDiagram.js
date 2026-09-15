@@ -12,7 +12,7 @@ import {
 export function SeriesRCDiagram({ first, firstLabel, second, secondLabel, caption }) {
   const startX = 20;
   const y = 55;
-  const firstWidth = first === "resistor" ? 70 : 60;
+  const firstWidth = first === "resistor" ? 70 : 50;
   const nodeX = startX + 30 + firstWidth + 20;
   const secondHeight = second === "resistor" ? 70 : 50;
   const legY = y + 20;

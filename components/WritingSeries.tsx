@@ -73,7 +73,7 @@ function PostEntry({ post }: { post: Post }) {
       {post.draft ? (
         <span className="series-entry-title">{post.title}</span>
       ) : (
-        <Link className="series-entry-title" href={`/writing/${post.slug}`}>
+        <Link className="series-entry-title" href={`/notes/${post.slug}`}>
           {post.title}
         </Link>
       )}

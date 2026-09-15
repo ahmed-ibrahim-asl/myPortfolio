@@ -9,15 +9,19 @@ import {
   generateEmbeddedCode
 } from '../../lib/tools/embedded-generator/catalog.js';
 
-test('Embedded Generator - targets distinguish sensors, communication, and interfaces', () => {
+test('Embedded Generator - targets distinguish sensors, communication, interfaces, hardening, and SBCs', () => {
   assert.deepStrictEqual(EMBEDDED_FAMILIES.map(({ id }) => id), [
     'sensor',
     'communication',
-    'interface'
+    'interface',
+    'hardening',
+    'sbc'
   ]);
   assert.strictEqual(EMBEDDED_TARGETS.find(({ id }) => id === 'bme280').family, 'sensor');
   assert.strictEqual(EMBEDDED_TARGETS.find(({ id }) => id === 'espnow-sender').family, 'communication');
   assert.strictEqual(EMBEDDED_TARGETS.find(({ id }) => id === 'esp32s3-usb-cdc').family, 'interface');
+  assert.strictEqual(EMBEDDED_TARGETS.find(({ id }) => id === 'deep-sleep-timer').family, 'hardening');
+  assert.strictEqual(EMBEDDED_TARGETS.find(({ id }) => id === 'sbc-gpio-io').family, 'sbc');
   assert.ok(EMBEDDED_EXAMPLES.length >= 10);
 });
 

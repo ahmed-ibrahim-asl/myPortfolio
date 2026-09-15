@@ -18,7 +18,9 @@ export function ProjectCard({ project, index, compact = false }: ProjectCardProp
         <span className="mono muted">{project.year}</span>
       </div>
 
-      {project.image ? (
+      {project.website ? (
+        <div className="project-media website-preview"><span className="mono">Website design / live project</span><strong>{project.title}</strong><span>{project.website}</span></div>
+      ) : project.image ? (
         <div className="project-media">
           <img
             src={project.image}
@@ -38,7 +40,7 @@ export function ProjectCard({ project, index, compact = false }: ProjectCardProp
           aria-label={`${project.title} additional images`}
         >
           {project.gallery.map((image) => (
-            <img src={image.src} alt={image.alt} loading="lazy" key={image.src} />
+            <a href={image.src} target="_blank" rel="noreferrer" key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /></a>
           ))}
         </div>
       ) : null}
@@ -46,6 +48,8 @@ export function ProjectCard({ project, index, compact = false }: ProjectCardProp
         <p className="project-category">{project.category}</p>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
+        {project.links?.map(link => <a className="text-link" href={link.href} target={link.href.startsWith("#") ? undefined : "_blank"} rel={link.href.startsWith("#") ? undefined : "noreferrer"} key={link.href}>{link.label}</a>)}
+        {project.slug === "multi-mcu-security-lock" && <small>Illustrated architecture above; original Proteus simulations below.</small>}
       </div>
 
       <div className="project-meta">

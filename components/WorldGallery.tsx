@@ -33,7 +33,7 @@ export function WorldGallery() {
             <Link
               className={`world-card${world.featured ? " featured" : ""}`}
               key={world.id}
-              href={`/writing?topic=${world.filterTerm}#published-field-logs`}
+              href={`/notes?topic=${world.filterTerm}#published-field-logs`}
               aria-label={`Browse ${world.label} articles`}
             >
               <div className="world-card-top mono">

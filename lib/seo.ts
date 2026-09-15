@@ -119,7 +119,7 @@ export function createProfilePageJsonLd(): JsonLdData {
 }
 
 export function createArticleJsonLd(post: Post): JsonLdData {
-  const url = absoluteUrl(`/writing/${post.slug}/`);
+  const url = absoluteUrl(`/notes/${post.slug}/`);
 
   return {
     "@context": "https://schema.org",

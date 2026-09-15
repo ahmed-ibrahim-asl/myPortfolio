@@ -7,6 +7,19 @@
   overflow: visible;
 }
 
+/* Filled actions have their own ink; theme text accents are not fill colors. */
+:global(.asl-model-mission-shell) .stepActions button:last-child,
+:global(.asl-model-mission-shell) .addLayer button,
+:global(.asl-model-mission-shell) .codeActions button:first-child {
+  color: var(--accent-on);
+  background: var(--gold-500);
+  border-color: var(--gold-500);
+}
+:global(.asl-model-mission-shell) .taskCard[data-selected="true"],
+:global(.asl-model-mission-shell) .modelGrid button[data-selected="true"] {
+  color: var(--text-primary);
+}
+
 .shell {
   width: min(calc(100% - 40px), 1440px);
   min-width: 0;
@@ -35,7 +48,9 @@
 }
 
 .backLink {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   margin-bottom: 28px;
   color: var(--pixel-cyan);
   font-size: 0.9rem;
@@ -93,11 +108,40 @@
   font-size: 1rem;
 }
 
+.levelDisclosure {
+  margin-top: 26px;
+}
+
+.levelDisclosure > summary {
+  padding: 10px 0;
+  color: var(--muted);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  list-style: none;
+}
+
+.levelDisclosure > summary::-webkit-details-marker {
+  display: none;
+}
+
+.levelDisclosure > summary::before {
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--pixel-gold);
+  content: "+";
+}
+
+.levelDisclosure[open] > summary::before {
+  content: "\2212";
+}
+
 .levelSwitch {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
-  margin-top: 26px;
+  margin-top: 10px;
   background: var(--line);
   border: 1px solid var(--line);
   box-shadow: 5px 5px 0 var(--pixel-shadow);
@@ -181,7 +225,7 @@
 }
 
 .workflow button[data-active="true"] span {
-  color: var(--night);
+  color: var(--accent-on);
 }
 
 .mobileTabs {
@@ -199,8 +243,8 @@
 }
 
 .mobileTabs button[aria-selected="true"] {
-  color: var(--night);
-  background: var(--pixel-cyan);
+  color: var(--accent-on);
+  background: var(--gold-500);
 }
 
 .workspace {
@@ -213,7 +257,7 @@
 .configurePanel,
 .codePanel {
   background: var(--panel);
-  border: 2px solid #465176;
+  border: 2px solid var(--asl-line);
   box-shadow: 6px 6px 0 var(--pixel-shadow);
 }
 
@@ -727,12 +771,12 @@
 }
 
 .errorBox {
-  border-color: #dc7183;
+  border-color: var(--asl-alert);
 }
 
 .errorBox strong,
 .layerError {
-  color: #f49aab;
+  color: var(--asl-alert);
 }
 
 .codeLoading {
@@ -767,7 +811,7 @@
 }
 
 .layerCard[data-error="true"] {
-  border-color: #dc7183;
+  border-color: var(--asl-alert);
 }
 
 .layerHeading {
@@ -847,7 +891,7 @@
 }
 
 .root :global(.ml-generator-field-error) {
-  color: #f49aab;
+  color: var(--asl-alert);
   font-size: 0.9rem;
 }
 
@@ -1054,35 +1098,32 @@
 
 .fieldError {
   margin: 0;
-  color: #f49aab;
+  color: var(--asl-alert);
   font-size: 0.9rem;
 }
 
-.explanation,
 .recommendation {
   padding: 10px;
   background: var(--panel);
   border: 1px solid var(--line);
 }
 
+.explanation {
+  margin-top: 2px;
+}
+
 .explanation button {
-  min-height: 34px;
-  padding: 6px 8px;
+  padding: 0;
   color: var(--pixel-cyan);
-  background: var(--panel-raised);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: 0;
   cursor: pointer;
-  font-size: 0.94rem;
+  font-size: 0.86rem;
   font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.explanationBody {
-  display: grid;
-  gap: 7px;
-  margin-top: 10px;
-}
-
-.explanationBody p,
 .recommendation {
   margin: 0;
   color: var(--muted);
@@ -1090,7 +1131,6 @@
   line-height: 1.5;
 }
 
-.explanationBody strong,
 .recommendation strong {
   color: var(--pixel-green);
 }

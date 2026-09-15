@@ -1,5 +1,6 @@
 import publicationFeed from "./publications.json";
 import {
+  Course,
   Education,
   Experience,
   ExpertiseItem,
@@ -12,7 +13,7 @@ import {
   WorkingMethodItem
 } from "@/types/portfolio";
 
-const basePath = process.env.GITHUB_ACTIONS === "true" ? "/myPortflio" : "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const asset = (pathname: string): string => `${basePath}${pathname}`;
 
 export const profile: Profile = {
@@ -49,15 +50,20 @@ export const profile: Profile = {
     },
     { label: "TryHackMe", href: "https://tryhackme.com/p/MRH0N3Y" },
     { label: "Behance", href: "https://www.behance.net/ahmedassal3" },
-    { label: "YouTube", href: "https://www.youtube.com/@ahmedassal8710" }
+    { label: "YouTube", href: "https://www.youtube.com/@ahmed-ibrahim-asl" }
   ]
 };
 
 export const education: Education[] = [
   {
-    credential: "Postgraduate Qualifying Studies in Mechatronics, Mansoura University, February 2025 to Present",
+    credential: "Master’s studies in Mechatronics — in progress; first qualifying semester completed",
     institution: "Mansoura University",
-    period: "February 2025 to Present"
+    period: "February 2026 – June 2028 (expected)"
+  },
+  {
+    credential: "Bachelor of Applied Science in Communication and Telecom Engineering — GPA 3.661",
+    institution: "",
+    period: "October 2020 – June 2025"
   }
 ];
 
@@ -189,14 +195,183 @@ export const workingMethod: WorkingMethodItem[] = [
   }
 ];
 
-export const coursesTaught: string[] = [
-  "Satellite Communication",
-  "Acoustics",
-  "Digital and Logic Circuits",
-  "Measurement and Sensors"
+export const coursesTaught: Course[] = [
+  {
+    title: "Satellite Communication",
+    institution: "Delta University",
+    description: "Undergraduate lectures and laboratory instruction."
+  },
+  {
+    title: "Acoustics",
+    institution: "Delta University",
+    description: "Undergraduate lectures and laboratory instruction."
+  },
+  {
+    title: "Digital and Logic Circuits",
+    institution: "Delta University",
+    description: "Undergraduate lectures and laboratory instruction."
+  },
+  {
+    title: "Measurement and Sensors",
+    institution: "Delta University",
+    description: "Undergraduate lectures and laboratory instruction."
+  },
+  {
+    title: "Analog Communication",
+    institution: "Delta University",
+    description: "Practical MATLAB laboratory work for analog communication concepts and signal analysis."
+  },
+  {
+    title: "MATLAB Onramp",
+    institution: "Recorded online course",
+    description: "A guided introduction to MATLAB fundamentals for engineering calculations and visualization.",
+    href: "https://www.youtube.com/playlist?list=PLYt83m8l2mixe_1k4BWNVCg0HXdYx6BPw",
+    actionLabel: "Watch the course"
+  }
 ];
 
 export const projects: Project[] = [
+  {
+    slug: "aqua-sync", title: "Aqua Sync 2.0.0", category: "Engineering & IoT", year: "",
+    role: "Embedded Systems Engineer | ESP32 Firmware Developer | CrowPanel HMI & OTA Integration",
+    description: "Upgraded an existing ESP32-based Aqua Sync system by programming a 7-inch CrowPanel HMI to interface with 10 one-wire temperature sensors and a DHT sensor, connecting two embedded boards, and implementing OTA updates. Designed the interface in Figma before building the final UI in SquareLine Studio.",
+    outcome: "Sensor monitoring, board-to-board integration, and OTA firmware updates",
+    tags: ["ESP32", "CrowPanel HMI", "One-wire sensors", "DHT", "OTA", "Figma", "SquareLine Studio"],
+    image: asset("/media/portfolio/showcase/aqua-sync/cover-asl-v1.webp"),
+    imageNote: "AI-styled cover based on the prototype. Original hardware and screen photos below; not a wiring reference.",
+    gallery: [{src: asset("/media/portfolio/showcase/aqua-sync/photos-1.webp"), alt: "Aqua Sync sensor boards connected to the 7-inch CrowPanel HMI"}],
+    links: [{label: "View interface design in Figma", href: "https://www.figma.com/design/uSNevyW1fgwfgnIF2y8q0T/AquaSynq_Project?node-id=0-1&p=f"}],
+    featured: false
+  },
+  {
+    slug: "toolguard", title: "ToolGuard", category: "Engineering & IoT", year: "",
+    role: "Hardware Programming | Mobile UI/UX Design | Flutter Development | Firebase Integration",
+    description: "Designed and developed a prototype system to manage borrowing and returning shared tools. I handled hardware programming, mobile UI/UX design, full Flutter application development, and Firebase integration for real-time data storage and tracking. The system monitors tool availability, tracks borrowed items and overdue returns, and provides notifications through a clean mobile interface.",
+    outcome: "Shared-tool availability, borrowing records, and overdue notifications",
+    tags: ["Hardware prototype", "Flutter", "Firebase", "UI/UX"],
+    image: asset("/media/portfolio/showcase/toolguard/cover-asl-v1.webp"),
+    imageNote: "AI-styled cover based on the prototype. Original build photos below.",
+    gallery: [
+      {src: asset("/media/portfolio/showcase/toolguard/photos-1.webp"), alt: "ToolGuard tool rack with front LCD"},
+      {src: asset("/media/portfolio/showcase/toolguard/photos-2.webp"), alt: "ToolGuard prototype with side-mounted card reader"}
+    ],
+    uiGallery: [{src: asset("/media/portfolio/showcase/toolguard/ui-1.webp"), alt: "ToolGuard availability dashboard, borrowing records, and notifications"}],
+    featured: false
+  },
+  {
+    slug: "fall-detection-system", title: "Fall Detection System", category: "Engineering & IoT", year: "",
+    description: "A fall-detection prototype documented through a Raspberry Pi and relay setup, a computer-vision development demo, and a companion smart-home control interface with normal and alarm-locked device states.",
+    outcome: "Prototype hardware, vision development, and device-control interface",
+    tags: ["Raspberry Pi", "Computer vision", "Relay control", "Mobile UI"],
+    image: asset("/media/portfolio/showcase/fall-detection/cover-asl-v1.webp"),
+    imageNote: "AI-styled view of the prototype hardware. Original photos below; not a wiring reference or evidence of clinical performance.",
+    gallery: [
+      {src: asset("/media/portfolio/showcase/fall-detection/photos-1.webp"), alt: "Raspberry Pi connected to a four-channel relay module"},
+      {src: asset("/media/portfolio/showcase/fall-detection/photos-2.webp"), alt: "Computer-vision development demo with object detection boxes"}
+    ],
+    uiGallery: [{src: asset("/media/portfolio/showcase/fall-detection/ui-1.webp"), alt: "Smart-home controls in normal and alarm-locked states"}],
+    featured: false
+  },
+  {
+    slug: "muscle-activity-monitoring", title: "Real-Time Muscle Activity Monitoring", category: "Engineering & IoT", year: "",
+    description: "Developed a wearable muscle activity monitoring system using the MyoWare 2.0 EMG sensor and a custom Flutter mobile application for real-time visualization and analysis. Surface electrodes capture muscle signals, which stream to the app as live graphs and metrics including peak values, mean amplitude, and signal variability. Firebase provides real-time data synchronization and cloud storage.",
+    outcome: "Wearable EMG sensing with live mobile graphs and signal metrics",
+    tags: ["MyoWare 2.0", "EMG", "Flutter", "Firebase", "Wearable"],
+    image: asset("/media/portfolio/showcase/muscle-monitoring/cover-asl-v1.webp"),
+    imageNote: "AI-styled cover based on the wearable prototype. Original build photos below; not a medical certification or performance claim.",
+    gallery: [
+      {src: asset("/media/portfolio/showcase/muscle-monitoring/photos-1.webp"), alt: "Wearable muscle monitoring prototype with strap and enclosure"},
+      {src: asset("/media/portfolio/showcase/muscle-monitoring/photos-2.webp"), alt: "Wearable EMG prototype showing surface electrodes"}
+    ],
+    uiGallery: [{src: asset("/media/portfolio/showcase/muscle-monitoring/ui-1.webp"), alt: "MyoMeter live signal graph and sensor metrics"}],
+    featured: false
+  },
+  {
+    slug: "mediamate",
+    title: "MediaMate",
+    category: "Engineering & IoT",
+    year: "",
+    description: "A medication dispenser prototype with a companion mobile interface for patient and doctor access, medication schedules, and adherence tracking.",
+    outcome: "Connected dispenser and medication-management interface",
+    tags: ["Hardware prototype", "Mobile UI", "Medication scheduling"],
+    image: asset("/media/portfolio/showcase/mediamate/cover.webp"),
+    imageNote: "AI-styled cover. Original build photos below.",
+    gallery: [
+      { src: asset("/media/portfolio/showcase/mediamate/photos-1.webp"), alt: "MediaMate original hardware photo 1" }
+    ],
+    uiGallery: [
+      { src: asset("/media/portfolio/showcase/mediamate/ui-1.webp"), alt: "MediaMate original mobile interface 1" },
+      { src: asset("/media/portfolio/showcase/mediamate/ui-2.webp"), alt: "MediaMate original mobile interface 2" },
+      { src: asset("/media/portfolio/showcase/mediamate/ui-3.webp"), alt: "MediaMate original mobile interface 3" }
+    ],
+    featured: false
+  },
+  {
+    slug: "smart-mosque-model",
+    title: "Smart Mosque Model",
+    category: "Engineering & IoT",
+    year: "",
+    description: "Applied IoT model for automatically managing mosque energy and ventilation.",
+    outcome: "Physical IoT model with an Arabic companion app",
+    tags: ["IoT", "Energy management", "Ventilation"],
+    image: asset("/media/portfolio/showcase/smart-mosque/cover.webp"),
+    imageNote: "AI-styled cover. Original build photos below.",
+    gallery: [
+      { src: asset("/media/portfolio/showcase/smart-mosque/photos-1.webp"), alt: "Smart Mosque Model original hardware photo 1" },
+      { src: asset("/media/portfolio/showcase/smart-mosque/photos-2.webp"), alt: "Smart Mosque Model original hardware photo 2" },
+      { src: asset("/media/portfolio/showcase/smart-mosque/photos-3.webp"), alt: "Smart Mosque Model original hardware photo 3" },
+      { src: asset("/media/portfolio/showcase/smart-mosque/photos-4.webp"), alt: "Smart Mosque Model original hardware photo 4" },
+      { src: asset("/media/portfolio/showcase/smart-mosque/photos-5.webp"), alt: "Smart Mosque Model front view with two displays" }
+    ],
+    uiGallery: [
+      { src: asset("/media/portfolio/showcase/smart-mosque/ui-1.webp"), alt: "Smart Mosque Model original mobile interface 1" },
+      { src: asset("/media/portfolio/showcase/smart-mosque/ui-2.webp"), alt: "Smart Mosque Model original mobile interface 2" },
+      { src: asset("/media/portfolio/showcase/smart-mosque/ui-3.webp"), alt: "Smart Mosque Model original mobile interface 3" },
+      { src: asset("/media/portfolio/showcase/smart-mosque/ui-4.webp"), alt: "Smart Mosque Model original mobile interface 4" }
+    ],
+    featured: false
+  },
+  {
+    slug: "biovety-website",
+    title: "Biovety International",
+    category: "Web Development",
+    year: "Client work",
+    description: "Website design for a veterinary-health business, bringing its company presentation, product catalogue, and partner contact information into one clear browsing experience.",
+    outcome: "Company website and product discovery",
+    tags: ["Web design", "Product catalogue", "Business website"],
+    image: "",
+    website: "biovety.com",
+    links: [{ label: "Visit Biovety", href: "https://biovety.com/" }],
+    featured: false
+  },
+  {
+    slug: "miraj-academy-website",
+    title: "Miraj Academy",
+    category: "Web Development",
+    year: "Client work",
+    description: "Website design for technical training and engineering R&D, connecting visitors with services, engineering projects, courses, and learning resources.",
+    outcome: "Engineering services and learning resources",
+    tags: ["Web design", "Education", "Engineering"],
+    image: "",
+    website: "miraj.academy",
+    links: [{ label: "Visit Miraj Academy", href: "https://miraj.academy/" }],
+    featured: false
+  },
+  {
+    slug: "amit-avr-autonomous-car",
+    title: "AVR32 Autonomous Car",
+    category: "Robotics / AMIT Graduation Project",
+    year: "Nov 2024",
+    description: "Graduation project for the AMIT Embedded Systems Diploma: an AVR-based autonomous car that detects and avoids obstacles using an ultrasonic sensor and servo motor.",
+    outcome: "Obstacle detection and avoidance",
+    tags: ["Embedded systems", "Ultrasonic", "Servo control"],
+    image: asset("/media/portfolio/showcase/autonomous-car/cover.webp"),
+    imageNote: "AI-styled cover. Original build photos below.",
+    gallery: [
+      { src: asset("/media/portfolio/showcase/autonomous-car/photos-1.webp"), alt: "AVR32 autonomous car original hardware photo 1" }
+    ],
+    featured: false
+  },
   {
     slug: "agribot-architecture",
     title: "AgriBot Architecture",
@@ -204,9 +379,15 @@ export const projects: Project[] = [
     year: "2024",
     description:
       "An agricultural robot that combines crop selection, fertilizer recommendations, leaf-disease diagnosis, and remote device management through Firewire OTA.",
-    outcome: "Agriculture workflow integration",
+    outcome: "Joint first place / Delta Region Environmental Forum 2026",
     tags: ["Jetson Nano", "AI/ML", "IoT"],
-    image: asset("/media/optimized/project-agribot.webp"),
+    image: asset("/media/portfolio/showcase/agribot/cover.webp"),
+    imageNote: "AI-styled cover. Original build photos below.",
+    gallery: [
+      { src: asset("/media/portfolio/showcase/agribot/photos-1.webp"), alt: "AgriBot original hardware photo 1" }
+    ],
+    links: [{ label: "View award and certificates", href: "#agribot-award" }],
+    uiGallery: [1, 2, 3, 4].map(index => ({src: asset(`/media/portfolio/showcase/agribot/ui-${index}.webp`), alt: `AgriBot original mobile interface collection ${index}`})),
     featured: true
   },
   {
@@ -230,10 +411,10 @@ export const projects: Project[] = [
       "An access-control prototype that separates the human-machine interface from the electronic control unit to limit the effect of physical tampering.",
     outcome: "Separated control and interface logic",
     tags: ["AVR", "Security", "Embedded C"],
-    image: asset("/media/optimized/project-lock-primary.webp"),
+    image: asset("/media/portfolio/security-lock-cover.webp"),
     gallery: [
-      { src: asset("/media/optimized/project-lock-hardware.webp"), alt: "Multi-MCU security lock hardware" },
-      { src: asset("/media/optimized/project-lock-diagram.webp"), alt: "Multi-MCU security lock system diagram" }
+      { src: asset("/media/portfolio/lock-running.png"), alt: "Original Proteus simulation: door control with two ATmega32 microcontrollers" },
+      { src: asset("/media/portfolio/lock-password.png"), alt: "Original Proteus simulation: setting a new password" }
     ],
     featured: true
   },
@@ -241,12 +422,19 @@ export const projects: Project[] = [
     slug: "megasumo-autonomous-robot",
     title: "MegaSumo Autonomous Robot",
     category: "Robotics",
-    year: "2023",
+    year: "2022",
     description:
       "Competition firmware and sensor logic for an autonomous sumo robot, built around fast control loops and arena-tuned behavior.",
-    outcome: "2nd place nationwide",
+    outcome: "2nd in Egypt / Sumo Mega (Adult), Robot Challenge 2022",
     tags: ["Arduino", "Robotics", "Control"],
-    image: asset("/media/optimized/project-megasumo.webp"),
+    image: asset("/media/portfolio/showcase/robotics-covers/megasumo-asl-v1.png"),
+    imageNote: "AI-styled cover based on the original build photo. Original image below.",
+    gallery: [{ src: asset("/media/optimized/project-megasumo.webp"), alt: "Original MegaSumo robot with metal wedge, ultrasonic sensors and battery holders" }],
+    links: [
+      { label: "Watch project video 1", href: asset("/media/portfolio/showcase/megasumo/megasumo-demo.mp4") },
+      { label: "Watch project video 2", href: asset("/media/portfolio/showcase/megasumo/megasumo-demo-2.mp4") },
+      { label: "View competition result", href: "#dead-code-award" }
+    ],
     featured: true
   },
   {
@@ -258,7 +446,11 @@ export const projects: Project[] = [
       "A remote firmware and hardware management platform for edge devices, with version tracking, device assignment, and health telemetry.",
     outcome: "Remote fleet management",
     tags: ["OTA", "Raspberry Pi", "IoT"],
-    image: asset("/media/generated/placeholders/firewire-enterprise-ota.svg"),
+    image: asset("/media/portfolio/showcase/firewire/cover-asl-v1.webp"),
+    imageNote: "AI-styled monitor mockup based on the original dashboard. Original screenshot below; displayed device states are demo data.",
+    gallery: [
+      { src: asset("/media/portfolio/showcase/firewire/original-dashboard.png"), alt: "Original FireWire OTA dashboard showing three registered devices and zero online devices" }
+    ],
     featured: false
   },
   {
@@ -270,7 +462,19 @@ export const projects: Project[] = [
       "A plant-monitoring system that combines soil and temperature sensing, leaf-disease detection, and a Flutter app.",
     outcome: "Sensor and vision data in one app",
     tags: ["Flutter", "AI Vision", "Sensors"],
-    image: asset("/media/generated/placeholders/plant-care-ai.svg"),
+    image: asset("/media/portfolio/showcase/plant-care/cover.webp"),
+    imageNote: "AI-styled cover. Original build photos below.",
+    gallery: [
+      { src: asset("/media/portfolio/showcase/plant-care/photos-1.webp"), alt: "Plant Care AI original hardware photo 1" },
+      { src: asset("/media/portfolio/showcase/plant-care/photos-2.webp"), alt: "Plant Care AI original hardware photo 2" },
+      { src: asset("/media/portfolio/showcase/plant-care/photos-3.webp"), alt: "Plant Care AI original hardware photo 3" },
+      { src: asset("/media/portfolio/showcase/plant-care/photos-4.webp"), alt: "Plant Care AI original hardware photo 4" },
+      { src: asset("/media/portfolio/showcase/plant-care/photos-5.webp"), alt: "Plant Care AI original hardware photo 5" }
+    ],
+    uiGallery: [
+      { src: asset("/media/portfolio/showcase/plant-care/ui-1.webp"), alt: "Plant Care AI original mobile interface 1" },
+      { src: asset("/media/portfolio/showcase/plant-care/ui-2.webp"), alt: "Plant Care AI original mobile interface 2" }
+    ],
     featured: false
   },
   {
@@ -282,7 +486,9 @@ export const projects: Project[] = [
       "A wireless ESP32 vehicle controlled with synchronized PS4 controller input over Bluetooth.",
     outcome: "Bluetooth vehicle control",
     tags: ["ESP32", "Bluetooth", "PS4"],
-    image: asset("/media/optimized/project-rocket-league.webp"),
+    image: asset("/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1.png"),
+    imageNote: "AI-styled cover showing the selected car from the original photo. Original image below.",
+    gallery: [{ src: asset("/media/portfolio/showcase/robotics-covers/rocket-league-original-left.png"), alt: "Original Rocket League car with yellow camouflage controller, black chassis and foam bumpers" }],
     featured: false
   },
   {
@@ -294,19 +500,9 @@ export const projects: Project[] = [
       "A mobile robot that combines ultrasonic and vision sensing to detect and follow a moving person.",
     outcome: "Person-following control",
     tags: ["Vision", "Ultrasonic", "Motor control"],
-    image: asset("/media/optimized/project-human-follower.webp"),
-    featured: false
-  },
-  {
-    slug: "autonomous-navigation-car",
-    title: "Autonomous Navigation Car",
-    category: "Robotics",
-    year: "2022",
-    description:
-      "An indoor mobile robot with deterministic path logic and obstacle avoidance using IR and ultrasonic sensors.",
-    outcome: "Indoor obstacle avoidance",
-    tags: ["IR sensors", "Ultrasonic", "MCU"],
-    image: asset("/media/generated/placeholders/autonomous-navigation-car.svg"),
+    image: asset("/media/portfolio/showcase/robotics-covers/human-follower-asl-v5.png"),
+    imageNote: "AI-generated visualization using the confirmed Arduino Uno, with illustrative cable management. Not a wiring reference or an exact build photograph; original frame below.",
+    gallery: [{ src: asset("/media/optimized/project-human-follower.webp"), alt: "Original video frame of the Human Follower Car with black chassis, yellow wheels and exposed wiring" }],
     featured: false
   },
   {
@@ -318,7 +514,8 @@ export const projects: Project[] = [
       "A mobile interface for monitoring AgriBot sensor data and controlling the graduation-project robot.",
     outcome: "Remote hardware control",
     tags: ["Figma", "Mobile UI", "IoT"],
-    image: asset("/media/generated/placeholders/agribot-mobile-ui.svg"),
+    image: asset("/media/portfolio/showcase/agribot/ui-1.webp"),
+    uiGallery: [1, 2, 3, 4].map(index => ({src: asset(`/media/portfolio/showcase/agribot/ui-${index}.webp`), alt: `AgriBot original mobile interface collection ${index}`})),
     featured: false
   },
   {
@@ -399,6 +596,15 @@ export const tutorials: Tutorial[] = [
 ];
 
 export const experience: Experience[] = [
+  {
+    role: "Coding Instructor",
+    organization: "iSchool",
+    type: "Part-time",
+    period: "Apr 2026 - Jun 2026",
+    location: "Remote",
+    description: "Taught coding in a remote, part-time instructor role, combining programming instruction with student support.",
+    tags: ["Teaching", "Programming"]
+  },
   {
     role: "Teaching Assistant",
     organization: "Delta University for Science and Technology",

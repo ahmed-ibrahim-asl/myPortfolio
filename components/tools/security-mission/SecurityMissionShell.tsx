@@ -126,12 +126,12 @@ export function SecurityMissionShell() {
       data-ready={hydrated ? "true" : "false"}
       data-learning-level={state.project.learningLevel}
       style={{
-        "--security-panel": "#12161C",
-        "--security-panel-raised": "#1C2129",
-        "--security-cyan": "#D9A441",
-        "--security-green": "#5FA37A",
-        "--security-gold": "#D9A441",
-        "--security-red": "#C4553D",
+        "--security-panel": "var(--bg-surface)",
+        "--security-panel-raised": "var(--bg-raised)",
+        "--security-cyan": "var(--text-accent)",
+        "--security-green": "var(--state-ok)",
+        "--security-gold": "var(--text-accent)",
+        "--security-red": "var(--state-alert)",
       } as React.CSSProperties}
     >
       <div className={styles.shell}>
@@ -159,33 +159,39 @@ export function SecurityMissionShell() {
           <span><i data-status="count" /> 109 tools / 159 actions</span>
         </div>
 
-        <div
-          className={styles.levelSwitch}
-          role="group"
-          aria-label="Explanation level"
-        >
-          {[
-            ["guided", "Guided", "Required choices and safe defaults"],
-            ["customize", "Customize", "Common tuning and output choices"],
-            ["advanced", "Advanced", "Specialist controls and protocols"],
-          ].map(([value, label, help]) => (
-            <button
-              type="button"
-              key={value}
-              aria-pressed={state.project.learningLevel === value}
-              data-active={
-                state.project.learningLevel === value ? "true" : "false"
-              }
-              onClick={() => dispatch({
-                type: "set-learning-level",
-                level: value,
-              })}
-            >
-              <strong>{label}</strong>
-              <span>{help}</span>
-            </button>
-          ))}
-        </div>
+        <details className={styles.levelDisclosure}>
+          <summary>
+            Every option is shown by default - narrow it down
+            {state.project.learningLevel !== "advanced" ? ` (currently: ${state.project.learningLevel})` : ""}
+          </summary>
+          <div
+            className={styles.levelSwitch}
+            role="group"
+            aria-label="Explanation level"
+          >
+            {[
+              ["guided", "Guided", "Required choices and safe defaults"],
+              ["customize", "Customize", "Common tuning and output choices"],
+              ["advanced", "Advanced", "Every option, no fields hidden"],
+            ].map(([value, label, help]) => (
+              <button
+                type="button"
+                key={value}
+                aria-pressed={state.project.learningLevel === value}
+                data-active={
+                  state.project.learningLevel === value ? "true" : "false"
+                }
+                onClick={() => dispatch({
+                  type: "set-learning-level",
+                  level: value,
+                })}
+              >
+                <strong>{label}</strong>
+                <span>{help}</span>
+              </button>
+            ))}
+          </div>
+        </details>
 
         <SecurityMissionRail
           currentStepId={state.stepId}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CalculatorFinder } from "./CalculatorFinder";
+import { ToolDirectAnswer, ToolSearchHook, ToolSearchSchema } from "./ToolSearchHook";
 
 export function CalculatorShell({ tool, children }) {
   return (
@@ -20,9 +21,18 @@ export function CalculatorShell({ tool, children }) {
         </div>
       </header>
 
+      <div className="shell">
+        <ToolDirectAnswer slug={tool.slug} />
+        <ToolSearchSchema slug={tool.slug} />
+      </div>
+
       <div className="tool-body shell">{children}</div>
 
       <div className="shell">
+        <ToolSearchHook slug={tool.slug} />
+      </div>
+
+      <div className="shell tool-support-region">
         <CalculatorFinder activeSlug={tool.slug} />
       </div>
 
@@ -37,7 +47,7 @@ export function CalculatorShell({ tool, children }) {
           <a href={tool.sourceUrl} target="_blank" rel="noreferrer">
             {tool.title}
           </a>{" "}
-          — thank you for making electronics approachable for makers everywhere.
+          - thank you for making electronics approachable for makers everywhere.
         </p>
       </footer>
     </article>

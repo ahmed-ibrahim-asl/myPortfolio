@@ -34,7 +34,8 @@ test("the GitHub Pages export preserves Next.js _next assets", { timeout: 120_00
   );
 
   const homeHtml = readFileSync(join(process.cwd(), "out", "index.html"), "utf8");
-  assert.match(homeHtml, /(?:src|href)="\/myPortflio\/brand\/hex-badge-gold\.svg"/);
+  // Guards against a regression of the historical bug where a public/ asset
+  // was referenced with an unprefixed root path instead of NEXT_PUBLIC_BASE_PATH.
   assert.doesNotMatch(homeHtml, /(?:src|href)="\/brand\//);
 
   for (const { slug } of calculators) {

@@ -3,10 +3,12 @@
 import { useMemo, useState } from "react";
 import {
   CalculatorField,
+  CalculatorLearning,
   CalculatorPanel,
   CalculatorResult,
   CalculatorResults,
   CalculatorSelect,
+  LearningDisclosure,
   Mnemonic,
   ToolSection,
   WorkedExample
@@ -29,59 +31,19 @@ export function RcTimeConstantCalculator() {
   }, [r, c, cUnit]);
 
   return (
-    <div className="article-body">
-      <ToolSection title="What's going on">
-        <p>
-          A capacitor doesn&rsquo;t charge instantly — it fills up like a bucket under a tap. A
-          resistor in the circuit controls how fast that bucket fills. Put the two together and
-          there&rsquo;s a single number that describes the pace: the RC time constant, tau (τ).
-        </p>
-      </ToolSection>
-
-      <ToolSection title="Build it up">
-        <p>
-          A bigger resistor is a narrower tap — it slows the flow of charge into the capacitor. A
-          bigger capacitor is a bigger bucket — it takes more charge to fill to the same level. Slow
-          the flow or grow the bucket and either way, filling takes longer. So the time constant
-          just grows with both.
-        </p>
-        <p>
-          In one time constant, a charging capacitor reaches about 63% of its final voltage. After
-          roughly five time constants (5τ), it&rsquo;s considered fully charged for practical
-          purposes.
-        </p>
-      </ToolSection>
-
-      <SeriesRCDiagram
-        first="resistor"
-        firstLabel="R"
-        second="capacitor"
-        secondLabel="C"
-        caption="R charges C — Vout is the voltage building up across the capacitor"
-      />
-
-      <ToolSection title="The formula">
-        <p className="mono">τ = R × C</p>
-        <p>τ is in seconds when R is in ohms and C is in farads.</p>
-      </ToolSection>
-
-      <Mnemonic tag="τ = RC" phrase="Resistance times Capacitance, that's it">
-        <p>
-          No division, no square roots — the two letters you fed in are the two letters you
-          multiply. If you can remember there&rsquo;s nothing else to the formula, you&rsquo;ve
-          remembered the formula.
-        </p>
-      </Mnemonic>
-
-      <ToolSection title="Worked example">
-        <WorkedExample>
-          <p className="step">R = 10 kΩ, C = 100 µF</p>
-          <p className="step">τ = 10,000 × 0.0001</p>
-          <p className="step">τ = 1 second</p>
-        </WorkedExample>
-      </ToolSection>
-
-      <CalculatorPanel>
+    <div className="article-body" data-calculator-experience>
+      <CalculatorPanel
+        compact
+        visual={(
+          <SeriesRCDiagram
+            first="resistor"
+            firstLabel="R"
+            second="capacitor"
+            secondLabel="C"
+            caption="R charges C - Vout is the voltage building up across the capacitor"
+          />
+        )}
+      >
         <CalculatorField
           label="Resistance"
           suffix="Ω"
@@ -113,6 +75,53 @@ export function RcTimeConstantCalculator() {
           <p className="muted">Enter valid numbers to see the result.</p>
         )}
       </CalculatorPanel>
+
+      <CalculatorLearning>
+        <ToolSection title="What's going on">
+          <p>
+            A capacitor doesn&rsquo;t charge instantly - it fills up like a bucket under a tap. A
+            resistor in the circuit controls how fast that bucket fills. Put the two together and
+            there&rsquo;s a single number that describes the pace: the RC time constant, tau (τ).
+          </p>
+        </ToolSection>
+
+        <ToolSection title="The formula">
+          <p className="mono">τ = R × C</p>
+          <p>τ is in seconds when R is in ohms and C is in farads.</p>
+        </ToolSection>
+
+        <LearningDisclosure>
+          <ToolSection title="Build it up">
+            <p>
+              A bigger resistor is a narrower tap - it slows the flow of charge into the capacitor. A
+              bigger capacitor is a bigger bucket - it takes more charge to fill to the same level. Slow
+              the flow or grow the bucket and either way, filling takes longer. So the time constant
+              just grows with both.
+            </p>
+            <p>
+              In one time constant, a charging capacitor reaches about 63% of its final voltage. After
+              roughly five time constants (5τ), it&rsquo;s considered fully charged for practical
+              purposes.
+            </p>
+          </ToolSection>
+
+          <Mnemonic tag="τ = RC" phrase="Resistance times Capacitance, that's it">
+            <p>
+              No division, no square roots - the two letters you fed in are the two letters you
+              multiply. If you can remember there&rsquo;s nothing else to the formula, you&rsquo;ve
+              remembered the formula.
+            </p>
+          </Mnemonic>
+
+          <ToolSection title="Worked example">
+            <WorkedExample>
+              <p className="step">R = 10 kΩ, C = 100 µF</p>
+              <p className="step">τ = 10,000 × 0.0001</p>
+              <p className="step">τ = 1 second</p>
+            </WorkedExample>
+          </ToolSection>
+        </LearningDisclosure>
+      </CalculatorLearning>
     </div>
   );
 }

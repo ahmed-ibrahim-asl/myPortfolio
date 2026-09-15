@@ -1,0 +1,76 @@
+.schematicScroll {
+  overflow-x: auto;
+  border: 1px solid var(--border-color, #8892a433);
+  border-radius: 14px;
+  background: var(--bg-surface);
+  margin: 1rem 0;
+}
+.schematic {
+  display: block;
+  width: 100%;
+  min-width: 650px;
+  height: auto;
+  color: var(--text-primary);
+  font-family: var(--font-mono, monospace);
+}
+.schematic text {
+  fill: currentColor;
+  font-size: 13px;
+  stroke: none;
+}
+.wire,
+.active {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.active {
+  stroke: var(--text-accent);
+  stroke-width: 3.5;
+}
+.phases {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.phases button {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--border-color, #8892a466);
+  border-radius: 8px;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  font: inherit;
+}
+.phases button[aria-pressed="true"] {
+  border-color: var(--text-accent);
+  box-shadow: inset 0 0 0 1px var(--text-accent);
+}
+.phases button:focus-visible {
+  outline: 3px solid var(--text-accent);
+  outline-offset: 3px;
+}
+.status {
+  line-height: 1.7;
+  min-height: 3.5em;
+  color: var(--text-secondary);
+}
+.sources {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.sources a {
+  color: var(--text-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.equations {
+  display: grid;
+  gap: 0.6rem;
+  margin-block: 1.2rem;
+}

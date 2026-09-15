@@ -387,7 +387,7 @@ body::before { border-width: 4px; }
 .profile-credential-card h2 { margin: 0 0 8px; font-size: clamp(1.35rem,2.5vw,2rem); text-transform: uppercase; }
 .profile-credential-card .eyebrow { margin-bottom: 8px; font-family: var(--font-ui); font-size: 0.75rem; }
 .profile-credential-card .button { flex: 0 0 auto; }
-.timeline-type { margin-top: 8px; color: var(--pixel-green) !important; font-size: .65rem !important; text-transform: uppercase; }
+.timeline-type { margin-top: 8px; color: var(--pixel-green) !important; font-size: .7rem !important; text-transform: uppercase; }
 .research-record { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,.75fr); gap: 48px; align-items: center; }
 .research-record h2 { margin: 0; font-size: clamp(1.8rem,4vw,3.5rem); text-transform: uppercase; text-shadow: 3px 3px 0 #1e2543; }
 .research-record-copy { padding: 24px; background: var(--panel); border: 1px solid #465176; box-shadow: 6px 6px 0 var(--pixel-shadow); }
@@ -1335,7 +1335,7 @@ body::before { border-width: 4px; }
 
 /* --- Engineering Tools --- */
 .tool-page { padding-top: 80px; padding-bottom: 100px; --shell: 1500px; }
-.tool-grid { display: grid; grid-template-columns: minmax(280px, .35fr) minmax(0, 1fr); gap: 36px; align-items: start; }
+.tool-grid { display: grid; grid-template-columns: minmax(320px, .42fr) minmax(0, 1fr); gap: 36px; align-items: start; }
 .tool-grid > * { min-width: 0; }
 .tool-controls { display: grid; min-width: 0; align-content: start; gap: 22px; padding: 24px; background: var(--panel); border: 2px solid #465176; box-shadow: 6px 6px 0 var(--pixel-shadow); }
 .tool-input label { display: grid; gap: 8px; color: var(--pixel-cyan); font-size: 0.75rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
@@ -2273,10 +2273,10 @@ article.tool-page {
   box-shadow: 5px 5px 0 var(--pixel-shadow);
 }
 
-.tool-section h2 {
+.tool-section h3 {
   margin: 0;
   color: var(--pixel-cyan);
-  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.4rem);
   letter-spacing: -0.025em;
   text-transform: uppercase;
 }
@@ -2397,7 +2397,7 @@ article.tool-page {
 .calculator-field > span {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -2466,7 +2466,7 @@ article.tool-page {
 .calculator-result-label {
   color: #95b7aa;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -2613,7 +2613,7 @@ article.tool-page {
   }
 }
 
-/* Readable portfolio story and controls — 2026 experience pass. */
+/* Readable portfolio story and controls - 2026 experience pass. */
 :root {
   --font-size-body: 1rem;
   --font-size-reading: 1.0625rem;
@@ -2977,7 +2977,7 @@ body {
 
 .embedded-family-tabs {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
 }
 
@@ -3399,15 +3399,15 @@ body {
   padding: 18px;
 }
 
-.calculator-catalog-copy h3 {
+.calculator-catalog-copy h2 {
   margin: 10px 0 10px;
   font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   line-height: 1.2;
   text-transform: uppercase;
 }
 
-.calculator-catalog-copy h3 a:hover,
-.calculator-catalog-copy h3 a:focus-visible {
+.calculator-catalog-copy h2 a:hover,
+.calculator-catalog-copy h2 a:focus-visible {
   color: var(--pixel-cyan);
 }
 
@@ -3669,3 +3669,267 @@ body {
     animation: none;
   }
 }
+
+/* ============================================================
+   TOOL CARD COVER IMAGES - GPT Image 2 Generated
+   ============================================================ */
+.tool-nav-card { position: relative; overflow: hidden; }
+
+.tool-card-cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--paper-deep);
+}
+
+.tool-card-cover-img {
+  object-fit: cover;
+  transition: transform 320ms steps(4, end), filter 320ms ease;
+  filter: saturate(0.85) brightness(0.9);
+}
+
+.tool-nav-card:hover .tool-card-cover-img,
+.tool-nav-card:focus-visible .tool-card-cover-img {
+  transform: scale(1.04);
+  filter: saturate(1.1) brightness(1.0);
+}
+
+.tool-card-cover-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, transparent 40%, rgba(5, 7, 19, 0.92) 100%),
+    linear-gradient(to right, rgba(85, 213, 216, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(85, 213, 216, 0.06) 1px, transparent 1px);
+  background-size: auto, 24px 24px, 24px 24px;
+}
+
+.tool-card-cover-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--pixel-cyan);
+  background: rgba(5, 7, 19, 0.55);
+  border-bottom: 1px solid rgba(85, 213, 216, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+/* ============================================================
+   GLITCH EFFECT - Hero Identity Title (Hacker Aesthetic)
+   ============================================================ */
+@keyframes glitch-shift {
+  0%   { clip-path: inset(0 0 95% 0); transform: translateX(0); }
+  5%   { clip-path: inset(10% 0 85% 0); transform: translateX(-4px); color: #ff2244; }
+  10%  { clip-path: inset(30% 0 60% 0); transform: translateX(4px); color: var(--pixel-cyan); }
+  15%  { clip-path: inset(65% 0 20% 0); transform: translateX(-2px); color: var(--pixel-gold); }
+  20%  { clip-path: inset(0 0 0 0); transform: translateX(0); color: inherit; }
+  100% { clip-path: inset(0 0 0 0); transform: translateX(0); }
+}
+
+@keyframes glitch-noise {
+  0%, 100% { opacity: 1; }
+  48%       { opacity: 1; }
+  49%       { opacity: 0.4; }
+  50%       { opacity: 1; }
+  98%       { opacity: 1; }
+  99%       { opacity: 0.6; }
+}
+
+.identity-name {
+  position: relative;
+  display: block;
+}
+
+.identity-name::before,
+.identity-name::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.identity-name:hover::before {
+  opacity: 1;
+  color: #ff2244;
+  animation: glitch-shift 0.6s steps(1, end) 1;
+  mix-blend-mode: screen;
+}
+
+.identity-name:hover::after {
+  opacity: 1;
+  color: var(--pixel-cyan);
+  animation: glitch-shift 0.6s steps(1, end) 0.08s 1;
+  mix-blend-mode: screen;
+}
+
+.identity-name:hover {
+  animation: glitch-noise 4s linear infinite;
+}
+
+/* ============================================================
+   SPIDER-WEB SCANLINES - Hero Section Overlay
+   ============================================================ */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.04;
+  background-image:
+    /* Diagonal web strands */
+    repeating-linear-gradient(
+      135deg,
+      rgba(85, 213, 216, 0.6) 0px,
+      rgba(85, 213, 216, 0.6) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(85, 213, 216, 0.4) 0px,
+      rgba(85, 213, 216, 0.4) 1px,
+      transparent 1px,
+      transparent 60px
+    );
+}
+
+.hero .hero-grid { position: relative; z-index: 1; }
+
+/* ============================================================
+   SPIDER-WEB PIXEL WORLD - Web Lines & Slinger
+   ============================================================ */
+.pixel-web-line { stroke: rgba(85, 213, 216, 0.5); stroke-width: 1; fill: none; stroke-dasharray: 4 3; }
+.pixel-web-anchor { fill: rgba(85, 213, 216, 0.8); }
+.pixel-slinger { fill: var(--pixel-cyan); }
+.pixel-slinger-body { fill: #cc1a2e; }
+.pixel-slinger-mask { fill: #cc1a2e; }
+.pixel-slinger-eye { fill: #eef1ff; }
+
+@keyframes web-swing {
+  0%   { transform: translateX(0px) translateY(0px) rotate(0deg); }
+  25%  { transform: translateX(18px) translateY(-8px) rotate(8deg); }
+  50%  { transform: translateX(36px) translateY(0px) rotate(0deg); }
+  75%  { transform: translateX(18px) translateY(8px) rotate(-8deg); }
+  100% { transform: translateX(0px) translateY(0px) rotate(0deg); }
+}
+
+.pixel-slinger-group {
+  transform-origin: 480px 200px;
+  animation: web-swing 3.2s ease-in-out infinite;
+}
+
+/* ============================================================
+   SYSTEM HUD - Hacker Flavor Additions
+   ============================================================ */
+.hud-threat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: rgba(204, 26, 46, 0.08);
+  border: 1px solid rgba(204, 26, 46, 0.25);
+  margin-top: 8px;
+}
+
+.hud-threat-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ff4466;
+  text-transform: uppercase;
+}
+
+.hud-threat-value {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--pixel-green);
+}
+
+.hud-webslinger-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: rgba(85, 213, 216, 0.06);
+  border: 1px solid rgba(85, 213, 216, 0.2);
+  margin-top: 4px;
+}
+
+.hud-webslinger-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--pixel-cyan);
+  text-transform: uppercase;
+}
+
+.hud-webslinger-value {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--pixel-gold);
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.hud-ticker-wrap {
+  overflow: hidden;
+  width: 100%;
+  padding: 6px 0;
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+}
+
+.hud-ticker-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: ticker-scroll 18s linear infinite;
+  white-space: nowrap;
+}
+
+.hud-ticker-item {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+  padding-inline: 20px;
+}
+
+.hud-ticker-item::before {
+  content: "// ";
+  color: var(--pixel-cyan);
+}
+
+/* ============================================================
+   REDUCED MOTION OVERRIDES - Web & Glitch
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .pixel-slinger-group { animation: none; }
+  .identity-name:hover::before,
+  .identity-name:hover::after { animation: none; opacity: 0; }
+  .identity-name:hover { animation: none; }
+  .hud-ticker-track { animation: none; }
+}
+

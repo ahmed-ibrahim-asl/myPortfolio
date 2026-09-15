@@ -22,13 +22,13 @@ export function CalculatorFinder({ activeSlug }) {
   }, [active?.category, activeSlug, category, query]);
 
   return (
-    <section className="calculator-finder" aria-labelledby="calculator-finder-title">
+    <section className="calculator-finder" aria-labelledby="calculator-finder-title" data-tool-support>
       <div className="calculator-finder-heading">
         <div>
           <p className="eyebrow">Stay at the bench</p>
           <h2 id="calculator-finder-title">Find another calculator</h2>
         </div>
-        <Link href="/tools/#calculators">Browse all 36 calculators</Link>
+        <Link href="/tools/#calculators">Browse all {calculators.length} calculators</Link>
       </div>
       <div className="calculator-finder-controls">
         <label className="search-field">
@@ -49,7 +49,7 @@ export function CalculatorFinder({ activeSlug }) {
       <div className="calculator-finder-results">
         {matches.map((tool) => (
           <Link href={`/tools/${tool.slug}/`} key={tool.slug}>
-            <CalculatorThumbnail visualKey={tool.visualKey} title={tool.title} compact />
+            <CalculatorThumbnail visualKey={tool.visualKey} title={tool.title} />
             <span>{tool.title}</span>
           </Link>
         ))}

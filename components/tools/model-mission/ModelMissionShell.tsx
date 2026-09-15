@@ -16,6 +16,7 @@ import {
 import { MissionCodePanel } from "./MissionCodePanel";
 import { MissionStepPanel } from "./MissionStepPanel";
 import { WorkflowRail } from "./WorkflowRail";
+import { ToolDirectAnswer, ToolSearchHook, ToolSearchSchema } from "@/components/tools/ToolSearchHook";
 import styles from "./ModelMission.module.css";
 
 type MissionProjectBundle = ReturnType<
@@ -130,11 +131,12 @@ export function ModelMissionShell() {
       data-model-mission
       data-learning-level={state.project.learningLevel}
       style={{
-        "--panel": "#12161C",
-        "--panel-raised": "#1C2129",
-        "--pixel-cyan": "#D9A441",
-        "--pixel-green": "#5FA37A",
-        "--pixel-gold": "#D9A441",
+        "--panel": "var(--bg-surface)",
+        "--panel-raised": "var(--bg-raised)",
+        "--pixel-cyan": "var(--text-accent)",
+        "--pixel-green": "var(--text-accent)",
+        "--pixel-gold": "var(--text-accent)",
+        "--muted": "var(--text-secondary)",
         "--pixel-shadow": "#080A0D",
       } as React.CSSProperties}
     >
@@ -157,35 +159,46 @@ export function ModelMissionShell() {
           </div>
         </header>
 
-        <div
-          className={styles.levelSwitch}
-          role="group"
-          aria-label="Explanation level"
-        >
-          {[
-            ["guided", "Guided", "Safe defaults"],
-            ["customize", "Customize", "More choices"],
-            ["advanced", "Advanced", "Production controls"],
-          ].map(([value, label, help]) => (
-            <button
-              type="button"
-              key={value}
-              aria-pressed={state.project.learningLevel === value}
-              data-active={
-                state.project.learningLevel === value
-                  ? "true"
-                  : "false"
-              }
-              onClick={() => dispatch({
-                type: "set-learning-level",
-                level: value,
-              })}
-            >
-              <strong>{label}</strong>
-              <span>{help}</span>
-            </button>
-          ))}
-        </div>
+        <ToolDirectAnswer slug="ai-script-generator" />
+        <ToolSearchSchema slug="ai-script-generator" />
+
+        <details className={styles.levelDisclosure}>
+          <summary>
+            Guided mode: safe defaults shown
+            {state.project.learningLevel !== "guided"
+              ? ` (currently: ${state.project.learningLevel})`
+              : ""}
+          </summary>
+          <div
+            className={styles.levelSwitch}
+            role="group"
+            aria-label="Explanation level"
+          >
+            {[
+              ["guided", "Guided", "Safe defaults"],
+              ["customize", "Customize", "More choices"],
+              ["advanced", "Advanced", "Production controls"],
+            ].map(([value, label, help]) => (
+              <button
+                type="button"
+                key={value}
+                aria-pressed={state.project.learningLevel === value}
+                data-active={
+                  state.project.learningLevel === value
+                    ? "true"
+                    : "false"
+                }
+                onClick={() => dispatch({
+                  type: "set-learning-level",
+                  level: value,
+                })}
+              >
+                <strong>{label}</strong>
+                <span>{help}</span>
+              </button>
+            ))}
+          </div>
+        </details>
 
         <WorkflowRail
           activeStepId={state.stepId}
@@ -300,6 +313,8 @@ export function ModelMissionShell() {
             />
           </div>
         </div>
+
+        <ToolSearchHook slug="ai-script-generator" />
       </div>
     </section>
   );

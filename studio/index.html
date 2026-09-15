@@ -38,10 +38,10 @@
             <span class="status-dot"></span>
             Files remain in your repository
           </div>
-          <ol class="publish-flow" aria-label="Publishing workflow">
+          <ol class="publish-flow" aria-label="Local publishing workflow">
             <li><strong>Save draft</strong> writes Markdown locally.</li>
-            <li><strong>Publish</strong> commits the article and pushes Git.</li>
-            <li><strong>GitHub Pages</strong> rebuilds the live website.</li>
+            <li><strong>Publish</strong> marks the article public only in this workspace.</li>
+            <li><strong>Review</strong> the local change before a separate deployment.</li>
           </ol>
         </footer>
       </aside>
@@ -59,7 +59,7 @@
               Save draft
             </button>
             <button id="publish-post" class="publish-button" type="button" disabled>
-              Publish to GitHub ↗
+              Mark public locally
             </button>
           </div>
         </header>
@@ -68,7 +68,7 @@
           <span class="empty-index">A–WRITING</span>
           <h1>Open a note or start a new one.</h1>
           <p>
-            Draft locally, preview the real structure, and publish only when the
+            Draft locally, preview the real structure, and mark public only when the
             article is ready.
           </p>
           <button id="empty-new-post" class="publish-button" type="button">
@@ -149,7 +149,7 @@
                 <button type="button" data-code title="Code block">&lt;/&gt;</button>
                 <button type="button" data-link title="Link">↗ Link</button>
                 <button type="button" id="image-button" title="Upload image">▧ Image</button>
-                <input id="image-input" type="file" accept="image/*" hidden />
+                <input id="image-input" type="file" accept="image/*,application/pdf" hidden />
               </div>
 
               <div id="composer-panels" class="composer-panels write">

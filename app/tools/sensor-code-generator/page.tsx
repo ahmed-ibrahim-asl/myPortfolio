@@ -152,6 +152,7 @@ export default function SensorCodeGeneratorPage() {
 
   return (
     <ToolShell
+      slug="sensor-code-generator"
       title="Embedded Code Workbench"
       description="Choose a sensor, communication workflow, or board interface. Start from a working example, adjust real wiring values, and copy a documented starter project."
     >
@@ -190,7 +191,7 @@ export default function SensorCodeGeneratorPage() {
               <span>{selection.family === "sensor" ? "Sensor" : selection.family === "communication" ? "Communication workflow" : "Board interface"}</span>
               <select value={selection.target} onChange={(event) => chooseTarget(event.target.value)}>
                 {familyTargets.map((target) => (
-                  <option value={target.id} key={target.id}>{target.label} — {target.summary}</option>
+                  <option value={target.id} key={target.id}>{target.label} - {target.summary}</option>
                 ))}
               </select>
             </label>
@@ -229,7 +230,11 @@ export default function SensorCodeGeneratorPage() {
                       </select>
                     ) : (
                       <input
-                        type="number"
+                        type="text"
+                        inputMode="numeric"
+                        pattern="-?[0-9]*"
+                        lang="en"
+                        autoComplete="off"
                         value={String(activeParams[field.key] ?? field.default)}
                         onChange={(event) => changeParam(field, event.target.value)}
                       />

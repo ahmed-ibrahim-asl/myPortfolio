@@ -94,8 +94,13 @@ export default function ContactPage() {
 
         <aside className="contact-aside">
           <div className="contact-aside-heading">
-            <span className="mono">Direct channels</span>
-            <p>Use the brief for project context or choose a direct channel.</p>
+            <span className="mono">01 / NONTECHNICAL CLIENT</span>
+            <p>Use the form for a structured project brief. It helps me understand the business goal and constraints before we talk.</p>
+          </div>
+          
+          <div className="contact-aside-heading" style={{ marginTop: '2rem' }}>
+            <span className="mono">02 / TECHNICAL COLLABORATOR</span>
+            <p>If you are an engineer, researcher, or recruiter, you can bypass the form and reach out directly.</p>
           </div>
           <div>
             <div className="contact-socials">
@@ -133,7 +138,7 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
-          <p className="availability-note">
+          <p className="availability-note" style={{ marginTop: '2rem' }}>
             <span className="status-dot" aria-hidden="true" />
             {profile.availability}
           </p>

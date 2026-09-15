@@ -1,0 +1,36 @@
+.equation {
+  margin: 16px 0;
+  padding: 20px 24px;
+  border: 1px solid var(--line-hairline);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  min-width: 0;
+}
+.label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.math {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 0;
+  font-size: 1.3rem;
+}
+.math :global(.katex-display) {
+  margin: 0;
+  text-align: left;
+}
+.math :global(.katex-display > .katex) {
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .equation {
+    padding: 16px;
+  }
+  .math {
+    font-size: 1.05rem;
+  }
+}

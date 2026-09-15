@@ -145,21 +145,29 @@ test("every action exposes a control for every consumed project path", () => {
   );
   for (const action of SECURITY_ACTIONS) {
     for (const rule of action.argumentRules ?? []) {
-      assert.ok(
-        controlPaths.has(rule.valuePath),
-        `${action.id}:${rule.valuePath}`,
-      );
-      assert.ok(
-        getSecurityControls({
-          actionId: action.id,
-          stepId: rule.valuePath.startsWith("target.")
-            ? "target"
-            : "configure",
-          learningLevel: "advanced",
-          project: createDefaultSecurityMissionProject(),
-        }).some(({ valuePath }) => valuePath === rule.valuePath),
-        `reachable:${action.id}:${rule.valuePath}`,
-      );
+      // A composeFrom rule (e.g. msfconsole's resource-script builder) has no single
+      // valuePath of its own - each segment it draws from is the thing that needs a
+      // reachable control, so check those instead of the rule itself.
+      const valuePaths = rule.composeFrom
+        ? rule.composeFrom.map((segment) => segment.valuePath).filter(Boolean)
+        : [rule.valuePath];
+      for (const valuePath of valuePaths) {
+        assert.ok(
+          controlPaths.has(valuePath),
+          `${action.id}:${valuePath}`,
+        );
+        assert.ok(
+          getSecurityControls({
+            actionId: action.id,
+            stepId: valuePath.startsWith("target.")
+              ? "target"
+              : "configure",
+            learningLevel: "advanced",
+            project: createDefaultSecurityMissionProject(),
+          }).some((control) => control.valuePath === valuePath),
+          `reachable:${action.id}:${valuePath}`,
+        );
+      }
     }
   }
 });

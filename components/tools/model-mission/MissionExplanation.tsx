@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { FloatingExplainer } from "../FloatingExplainer";
+import type { Position } from "../useDraggable";
 import styles from "./ModelMission.module.css";
 
 type MissionExplanationProps = {
@@ -20,32 +22,44 @@ export function MissionExplanation({
   id,
   explanation,
 }: MissionExplanationProps) {
-  const [open, setOpen] = useState(false);
-  const panelId = `${id}-explanation`;
+  const [anchor, setAnchor] = useState<Position | null>(null);
+
+  const rows: [string, string][] = [
+    ["What it is", explanation.what],
+    ["Why it matters", explanation.why],
+    ["Use it when", explanation.useWhen],
+    ["Avoid it when", explanation.avoidWhen ?? ""],
+    ["Trade-off", explanation.tradeoff ?? ""],
+    ["Python effect", explanation.codeEffect],
+  ].filter(([, value]) => Boolean(value)) as [string, string][];
 
   return (
     <div className={styles.explanation}>
       <button
         type="button"
-        aria-expanded={open}
-        aria-controls={panelId}
-        onClick={() => setOpen((value) => !value)}
+        aria-haspopup="dialog"
+        onClick={(event) =>
+          setAnchor({
+            x: Math.min(event.clientX + 12, window.innerWidth - 320),
+            y: Math.max(event.clientY - 16, 12),
+          })
+        }
       >
-        {open ? "Hide explanation" : "Learn this choice"}
+        Learn this choice
       </button>
-      {open ? (
-        <div id={panelId} className={styles.explanationBody}>
-          <p><strong>What it is:</strong> {explanation.what}</p>
-          <p><strong>Why it matters:</strong> {explanation.why}</p>
-          <p><strong>Use it when:</strong> {explanation.useWhen}</p>
-          {explanation.avoidWhen ? (
-            <p><strong>Avoid it when:</strong> {explanation.avoidWhen}</p>
-          ) : null}
-          {explanation.tradeoff ? (
-            <p><strong>Trade-off:</strong> {explanation.tradeoff}</p>
-          ) : null}
-          <p><strong>Python effect:</strong> {explanation.codeEffect}</p>
-        </div>
+      {anchor ? (
+        <FloatingExplainer
+          title="Learn this choice"
+          isOpen
+          onClose={() => setAnchor(null)}
+          anchorPosition={anchor}
+        >
+          {rows.map(([label, value]) => (
+            <p key={label}>
+              <strong>{label}:</strong> {value}
+            </p>
+          ))}
+        </FloatingExplainer>
       ) : null}
     </div>
   );

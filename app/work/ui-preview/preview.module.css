@@ -1,0 +1,21 @@
+.preview { padding: 44px clamp(20px, 5vw, 72px) 72px; max-width: 1100px; margin: auto; }
+.intro { margin-bottom: 26px; }
+.eyebrow { font-family: var(--asl-mono); font-size: 10px; letter-spacing: .14em; color: var(--asl-gold); }
+.intro h1 { margin: 8px 0 4px; font-size: clamp(28px, 4vw, 44px); line-height: 1.15; }
+.intro p { margin: 0; font-size: 14px; }
+.container { margin: 0; border: 1px solid var(--asl-line); background: var(--asl-surface); border-radius: 12px; overflow: hidden; }
+.stage { position: relative; display: flex; justify-content: center; padding: 54px 24px 42px; background-color: #08131c; background-image: linear-gradient(#26415433 1px, transparent 1px), linear-gradient(90deg, #26415433 1px, transparent 1px); background-size: 32px 32px; border-bottom: 1px solid var(--asl-line); }
+.stageLabel, .stageFoot { position: absolute; font-family: var(--asl-mono); font-size: 9px; letter-spacing: .13em; color: #8596a2; }
+.stageLabel { top: 19px; left: 22px; }
+.stageFoot { bottom: 15px; right: 22px; }
+.phone { display: block; width: min(100%, 224px); padding: 0 7px; border: 1px solid #aa8548; border-radius: 29px; background: #10161c; box-shadow: 0 22px 45px #0007, inset 0 0 0 3px #252c32; text-decoration: none; }
+.speaker { display: block; height: 16px; position: relative; }
+.speaker::after { content: ""; position: absolute; width: 34px; height: 3px; border-radius: 3px; background: #555b60; left: calc(50% - 17px); top: 7px; }
+.phone img { width: 100%; height: auto; display: block; border-radius: 15px; }
+.chin { display: block; height: 14px; }
+.caption { padding: 23px 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.caption h2 { margin: 6px 0 8px; font-size: 21px; line-height: 1.2; }
+.caption p { margin: 0; font-size: 13px; max-width: 48ch; }
+.caption a { display: flex; gap: 18px; align-items: center; flex-shrink: 0; min-height: 44px; color: var(--asl-gold); font-size: 12px; text-decoration: none; border-bottom: 1px solid #aa854860; }
+.container a:focus-visible { outline: 3px solid var(--asl-gold); outline-offset: 4px; }
+@media (max-width: 600px) { .caption { flex-direction: column; align-items: flex-start; padding: 22px; gap: 14px; } .preview { padding-top: 30px; } }

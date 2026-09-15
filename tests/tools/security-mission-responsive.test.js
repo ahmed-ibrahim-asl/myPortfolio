@@ -246,6 +246,9 @@ test(
           await waitFor('[data-security-mission][data-ready="true"]');
           (await waitFor("[data-step-continue]")).click();
           await frame();
+          // "Tool" is the default entry mode (fast mode); switch to "Objective" to test that path.
+          (await waitFor('[data-entry-mode="objective"]')).click();
+          await frame();
           (await waitFor(
             '[data-objective-id="host-discovery-port-scanning"]'
           )).click();

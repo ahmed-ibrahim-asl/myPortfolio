@@ -1,0 +1,354 @@
+:root{
+  /* ---- Base: ink ramp. The five reference values from the identity sheet are 900/800/700/100 + gold. */
+  --ink-900:#0B0D11; /* page floor */
+  --ink-850:#0E1116;
+  --ink-800:#12161C; /* surface */
+  --ink-700:#1C2129; /* raised surface / strong hairline */
+  --ink-600:#262D37; /* hairline */
+  --ink-500:#39424F;
+  --ink-400:#5A6474; /* muted text on dark */
+  --ink-300:#8A93A1;
+  --ink-200:#B4BBC5;
+  --ink-100:#E6E8EB; /* soft white - the only "white" */
+  --ink-050:#F4F5F7; /* light-mode paper */
+
+  /* ---- Accent: warm golden yellow. One accent, used at low area. */
+  --gold-700:#8F6520;
+  --gold-600:#B8842C;
+  --gold-500:#D9A441; /* the accent */
+  --gold-400:#E8BC66;
+  --gold-300:#F2D69B;
+  --gold-a12:rgba(217,164,65,.12);
+  --gold-a24:rgba(217,164,65,.24);
+  --gold-a40:rgba(217,164,65,.40);
+
+  /* ---- Accent variations. Gold is the default; these are alternate accents for
+     sub-brands, project identities and campaign surfaces. Opt in on <html> or on
+     any element: class="accent-copper" / [data-accent="copper"]. Each one only
+     re-maps the gold ramp + tints, so every component and both light and gold
+     themes follow it with no further work. One accent per surface, always. */
+}
+
+/* Copper - warmer and redder than gold. Reads as hardware and soldered metal. */
+.accent-copper,[data-accent="copper"]{
+  --gold-700:#8A4A24; --gold-600:#B05F2C; --gold-500:#D07A3E;
+  --gold-400:#E39A64; --gold-300:#F0C29B;
+  --gold-a12:rgba(208,122,62,.12); --gold-a24:rgba(208,122,62,.24); --gold-a40:rgba(208,122,62,.40);
+  /* The accent-derived aliases MUST be redeclared: :root already resolved them
+     against gold, and a resolved custom property inherits as a value - remapping
+     the ramp on a descendant cannot reach back into it. */
+  --accent:#D07A3E; --accent-hover:#E39A64; --accent-press:#B05F2C; --accent-on:#1A0E06;
+  --text-accent:#D07A3E; --text-link:#E39A64; --text-link-hover:#F0C29B;
+  --line-accent:rgba(208,122,62,.40); --bg-selected:rgba(208,122,62,.12);
+  --focus-ring:#E39A64;
+  --ring-focus:0 0 0 2px #0B0D11,0 0 0 3px #E39A64; /* @kind other */
+  --glow-accent:0 0 0 1px rgba(208,122,62,.40),0 0 32px -8px rgba(208,122,62,.35); /* @kind shadow */
+}
+/* Brass - cooler and greener than gold. The quietest of the metals. */
+.accent-brass,[data-accent="brass"]{
+  --gold-700:#7A7420; --gold-600:#9E972C; --gold-500:#C2BA45;
+  --gold-400:#D8D172; --gold-300:#EAE5AB;
+  --gold-a12:rgba(194,186,69,.12); --gold-a24:rgba(194,186,69,.24); --gold-a40:rgba(194,186,69,.40);
+  --accent:#C2BA45; --accent-hover:#D8D172; --accent-press:#9E972C; --accent-on:#14130A;
+  --text-accent:#C2BA45; --text-link:#D8D172; --text-link-hover:#EAE5AB;
+  --line-accent:rgba(194,186,69,.40); --bg-selected:rgba(194,186,69,.12);
+  --focus-ring:#D8D172;
+  --ring-focus:0 0 0 2px #0B0D11,0 0 0 3px #D8D172; /* @kind other */
+  --glow-accent:0 0 0 1px rgba(194,186,69,.40),0 0 32px -8px rgba(194,186,69,.35); /* @kind shadow */
+}
+/* Signal - desaturated cyan. The one non-metal: for instrumentation-heavy
+   surfaces where gold competes with a warm data visualisation. */
+.accent-signal,[data-accent="signal"]{
+  --gold-700:#1E6470; --gold-600:#2A8391; --gold-500:#3AA5B5;
+  --gold-400:#6BC2CE; --gold-300:#A7DCE4;
+  --gold-a12:rgba(58,165,181,.12); --gold-a24:rgba(58,165,181,.24); --gold-a40:rgba(58,165,181,.40);
+  --accent:#3AA5B5; --accent-hover:#6BC2CE; --accent-press:#2A8391; --accent-on:#08181C;
+  --text-accent:#3AA5B5; --text-link:#6BC2CE; --text-link-hover:#A7DCE4;
+  --line-accent:rgba(58,165,181,.40); --bg-selected:rgba(58,165,181,.12);
+  --focus-ring:#6BC2CE;
+  --ring-focus:0 0 0 2px #0B0D11,0 0 0 3px #6BC2CE; /* @kind other */
+  --glow-accent:0 0 0 1px rgba(58,165,181,.40),0 0 32px -8px rgba(58,165,181,.35); /* @kind shadow */
+}
+/* Ink - no accent at all. Type weight and hairlines carry every distinction.
+   For documents, print and any surface that must not shout. */
+.accent-none,[data-accent="none"]{
+  --gold-700:#8A93A1; --gold-600:#B4BBC5; --gold-500:#E6E8EB;
+  --gold-400:#F4F5F7; --gold-300:#FFFFFF;
+  --gold-a12:rgba(230,232,235,.10); --gold-a24:rgba(230,232,235,.18); --gold-a40:rgba(230,232,235,.32);
+  --accent:#E6E8EB; --accent-hover:#F4F5F7; --accent-press:#B4BBC5; --accent-on:#0B0D11;
+  --text-accent:#E6E8EB; --text-link:#E6E8EB; --text-link-hover:#FFFFFF;
+  --line-accent:rgba(230,232,235,.32); --bg-selected:rgba(230,232,235,.10);
+  --focus-ring:#E6E8EB;
+  --glow-accent:none; /* @kind shadow */
+}
+:root{
+
+  /* ---- Status: desaturated instrument colours. Never neon. */
+  --state-ok:#5FA37A;
+  --state-warn:#D9A441;
+  --state-alert:#C4553D;
+  --state-info:#6E8BA8;
+  --state-idle:#78828F;
+  --state-ok-a12:rgba(95,163,122,.12);
+  --state-alert-a12:rgba(196,85,61,.12);
+  --state-info-a12:rgba(110,139,168,.12);
+
+  /* ---- Semantic aliases: dark is the default theme. */
+  --bg-page:var(--ink-900);
+  --bg-surface:var(--ink-800);
+  --bg-raised:var(--ink-700);
+  --bg-sunken:#080A0D;
+  --bg-inset:rgba(0,0,0,.28);
+  --bg-hover:rgba(230,232,235,.05);
+  --bg-active:rgba(230,232,235,.09);
+  --bg-selected:var(--gold-a12);
+
+  --text-primary:var(--ink-100);
+  --text-secondary:var(--ink-300);
+  --text-muted:#929CAB; /* Readable on page, surface and raised panels. */
+  --text-accent:var(--gold-500);
+  --text-inverse:var(--ink-900);
+  --text-link:var(--gold-400);
+  --text-link-hover:var(--gold-300);
+
+  --line-hairline:var(--ink-600);
+  --line-strong:var(--ink-500);
+  --line-faint:rgba(230,232,235,.07);
+  --line-accent:var(--gold-a40);
+
+  --accent:var(--gold-500);
+  --accent-hover:var(--gold-400);
+  --accent-press:var(--gold-600);
+  --accent-on:#14100A; /* text on a gold fill */
+
+  --focus-ring:var(--gold-400);
+  --grid-line:rgba(230,232,235,.045); /* blueprint grid */
+  /* The only two places transparency + blur are allowed. */
+  --bg-sticky:rgba(11,13,17,.86);
+  --bg-scrim:rgba(6,8,11,.72);
+  /* Portrait mat. The only photo in the system has a white studio ground, so the
+     mount must contrast with BOTH the page and that white. On dark the mat is
+     near-white; on light it inverts to a dark plate - a white mat on paper is
+     invisible, and --bg-surface is #FFFFFF there, i.e. the photo's own ground. */
+  --portrait-mat:var(--ink-050);
+
+  /* ---- Warm surfaces. Ink with a gold cast - for hero and feature zones that
+     need to separate from the page without a second hue or a gradient. */
+  --bg-warm:#14120E;
+  --bg-warm-raised:#1E1A13;
+  --line-warm:#2E2719;
+
+  /* ---- Domain palette. CATEGORICAL, not brand: the four practice areas, for
+     tagging work. Same desaturated instrument register as the status set.
+     Rules: one domain colour per element, as a dot / 12% tint / border only,
+     never a large fill, and never in the same element as a status colour. */
+  --domain-embedded:#5A7FA6;   /* أنظمة مدمجة */
+  --domain-electronics:#7E8C4E; /* إلكترونيات */
+  --domain-ai:#3F8C86;          /* ذكاء اصطناعي تطبيقي */
+  --domain-security:#A0503F;    /* أمن المعلومات */
+  --domain-embedded-a12:rgba(90,127,166,.12);
+  --domain-electronics-a12:rgba(126,140,78,.12);
+  --domain-ai-a12:rgba(63,140,134,.12);
+  --domain-security-a12:rgba(160,80,63,.12);
+}
+
+/* ---------------------------------------------------------------------------
+   LIGHT THEME. A first-class second theme, not an inversion trick: same ink
+   ramp, same gold, re-assigned. Opt in on any element or on <html>:
+     <html class="theme-light">  ·  <div data-theme="light">
+   `.theme-paper` is the legacy alias and stays supported.
+   Gold darkens to --gold-600/700 here - --gold-500 on white fails contrast for
+   text. Status colours darken for the same reason.
+   Nest `.theme-dark` inside a light page to punch a dark panel back out.
+--------------------------------------------------------------------------- */
+.theme-light,.theme-paper,[data-theme="light"]{
+  --bg-page:var(--ink-050);
+  --bg-surface:#FFFFFF;
+  --bg-raised:#FFFFFF;
+  --bg-sunken:#E9EBEE;
+  --bg-inset:rgba(11,13,17,.04);
+  --bg-hover:rgba(11,13,17,.04);
+  --bg-active:rgba(11,13,17,.07);
+  --bg-selected:color-mix(in srgb,var(--gold-600) 13%,transparent);
+
+  --text-primary:var(--ink-900);
+  --text-secondary:#111318;
+  --text-muted:#111318;
+  --text-accent:var(--gold-700);
+  --text-inverse:var(--ink-050);
+  --text-link:#111318;
+  --text-link-hover:#704B12;
+
+  --line-hairline:#D5D9DE;
+  --line-strong:#B9BFC8;
+  --line-faint:rgba(11,13,17,.08);
+  --line-accent:color-mix(in srgb,var(--gold-600) 55%,transparent);
+
+  /* Accent tints re-based on --gold-600 so they read on white - derived from the
+     ramp, so an accent variation flows through here too. */
+  --gold-a12:color-mix(in srgb,var(--gold-600) 13%,transparent);
+  --gold-a24:color-mix(in srgb,var(--gold-600) 26%,transparent);
+  --gold-a40:color-mix(in srgb,var(--gold-600) 46%,transparent);
+
+  /* Instrument colours, darkened to hold on paper. */
+  --state-ok:#326E4E;
+  --state-warn:#9A6E22;
+  --state-alert:#A8402B;
+  --state-info:#4E6E8C;
+  --state-idle:#727B89;
+  --state-ok-a12:rgba(63,133,96,.13);
+  --state-alert-a12:rgba(168,64,43,.13);
+  --state-info-a12:rgba(78,110,140,.13);
+
+  --accent:var(--gold-600);
+  --accent-hover:var(--gold-500);
+  --accent-press:var(--gold-700);
+  /* Gold is a LIGHT colour in both themes - text on a gold fill is near-black in
+     both. (The theme flip applies to gold as *text on a surface*, not as a fill.) */
+  --accent-on:#14100A;
+
+  --focus-ring:var(--gold-700);
+  --grid-line:rgba(11,13,17,.05);
+  --bg-sticky:rgba(244,245,247,.88);
+  --bg-scrim:rgba(11,13,17,.44);
+  --portrait-mat:var(--ink-800);
+
+  --bg-warm:#FBF7EF;
+  --bg-warm-raised:#FFFDF8;
+  --line-warm:#E5DCC9;
+
+  /* Domain hues darken on paper, same as the status set. */
+  --domain-embedded:#3F5E80;
+  --domain-electronics:#5C6836;
+  --domain-ai:#2C6B66;
+  --domain-security:#8A3D2C;
+  --domain-embedded-a12:rgba(63,94,128,.13);
+  --domain-electronics-a12:rgba(92,104,54,.13);
+  --domain-ai-a12:rgba(44,107,102,.13);
+  --domain-security-a12:rgba(138,61,44,.13);
+}
+
+/* ---------------------------------------------------------------------------
+   ACCENT �- LIGHT THEME pairings. `.theme-light` redeclares --accent and
+   --accent-on against the gold ramp, and it is declared after the accent blocks,
+   so on an element carrying both classes the theme wins. Copper and signal have
+   a materially darker 600 step than gold, which took their button labels below
+   AA (4.08:1 and 4.38:1). These pairings restore the floor from BOTH sides:
+   the fill darkens to the 700 step and the label flips to white. Brass, none
+   and gold already clear AA on light and are left alone.
+   Declared last so they win over .theme-light; the descendant form covers an
+   accent scope nested inside a light-themed ancestor.
+--------------------------------------------------------------------------- */
+.theme-light.accent-copper,.theme-light .accent-copper,
+.theme-paper.accent-copper,.theme-paper .accent-copper,
+[data-theme="light"].accent-copper,[data-theme="light"] .accent-copper,
+[data-theme="light"][data-accent="copper"],[data-theme="light"] [data-accent="copper"]{
+  --accent:#8A4A24; --accent-hover:#B05F2C; --accent-press:#6E3A1C; --accent-on:#FFFFFF;
+  --text-accent:#8A4A24; --text-link:#8A4A24; --text-link-hover:#B05F2C;
+  --focus-ring:#8A4A24;
+  --line-accent:rgba(138,74,36,.55); --bg-selected:rgba(138,74,36,.13);
+  --ring-focus:0 0 0 2px #F4F5F7,0 0 0 3px #8A4A24; /* @kind other */
+  --glow-accent:0 0 0 1px rgba(138,74,36,.46),0 0 32px -10px rgba(138,74,36,.45); /* @kind shadow */
+}
+.theme-light.accent-signal,.theme-light .accent-signal,
+.theme-paper.accent-signal,.theme-paper .accent-signal,
+[data-theme="light"].accent-signal,[data-theme="light"] .accent-signal,
+[data-theme="light"][data-accent="signal"],[data-theme="light"] [data-accent="signal"]{
+  --accent:#1E6470; --accent-hover:#2A8391; --accent-press:#174E58; --accent-on:#FFFFFF;
+  --text-accent:#1E6470; --text-link:#1E6470; --text-link-hover:#2A8391;
+  --focus-ring:#1E6470;
+  --line-accent:rgba(30,100,112,.55); --bg-selected:rgba(30,100,112,.13);
+  --ring-focus:0 0 0 2px #F4F5F7,0 0 0 3px #1E6470; /* @kind other */
+  --glow-accent:0 0 0 1px rgba(30,100,112,.46),0 0 32px -10px rgba(30,100,112,.45); /* @kind shadow */
+}
+/* Brass and none on light: the ramp is right, only the fill/label pairing needs
+   pinning so the theme's gold assumption doesn't leak in. */
+.theme-light.accent-brass,.theme-light .accent-brass,
+.theme-paper.accent-brass,.theme-paper .accent-brass,
+[data-theme="light"].accent-brass,[data-theme="light"] .accent-brass{
+  --accent:#7A7420; --accent-hover:#9E972C; --accent-press:#635E1A; --accent-on:#FFFFFF;
+  --text-accent:#635E1A; --text-link:#635E1A; --text-link-hover:#7A7420;
+  --focus-ring:#7A7420;
+  --line-accent:rgba(122,116,32,.55); --bg-selected:rgba(122,116,32,.13);
+  --ring-focus:0 0 0 2px #F4F5F7,0 0 0 3px #7A7420; /* @kind other */
+  --glow-accent:0 0 0 1px rgba(122,116,32,.46),0 0 32px -10px rgba(122,116,32,.45); /* @kind shadow */
+}
+.theme-light.accent-none,.theme-light .accent-none,
+.theme-paper.accent-none,.theme-paper .accent-none,
+[data-theme="light"].accent-none,[data-theme="light"] .accent-none{
+  --accent:var(--ink-900); --accent-hover:#39424F; --accent-press:#080A0D; --accent-on:#FFFFFF;
+  --text-accent:var(--ink-900); --text-link:var(--ink-900); --text-link-hover:#39424F;
+  --focus-ring:var(--ink-900);
+  --line-accent:rgba(11,13,17,.55); --bg-selected:rgba(11,13,17,.10);
+  --ring-focus:0 0 0 2px #F4F5F7,0 0 0 3px #0B0D11; /* @kind other */
+  --glow-accent:none; /* @kind shadow */
+}
+
+/* ---------------------------------------------------------------------------
+   GOLD FIELD. The inverted plate: gold ground, near-black ink. Covers, social
+   graphics, one call-out panel per page - never a whole interface, never body
+   copy longer than a sentence. Status and domain colours are suppressed here
+   (they muddy on gold); use ink weight instead.
+--------------------------------------------------------------------------- */
+.theme-gold,[data-theme="gold"]{
+  --bg-page:var(--gold-500);
+  --bg-surface:var(--gold-400);
+  --bg-raised:var(--gold-300);
+  --bg-sunken:var(--gold-600);
+  --bg-inset:rgba(20,16,10,.10);
+  --bg-hover:rgba(20,16,10,.07);
+  --bg-active:rgba(20,16,10,.12);
+  --bg-selected:rgba(20,16,10,.12);
+
+  --text-primary:#14100A;
+  --text-secondary:rgba(20,16,10,.72);
+  --text-muted:rgba(20,16,10,.56);
+  --text-accent:#14100A;
+  --text-inverse:var(--gold-500);
+  --text-link:#14100A;
+  --text-link-hover:rgba(20,16,10,.72);
+
+  --line-hairline:rgba(20,16,10,.20);
+  --line-strong:rgba(20,16,10,.34);
+  --line-faint:rgba(20,16,10,.11);
+  --line-accent:rgba(20,16,10,.34);
+
+  --accent:#14100A;
+  --accent-hover:#241D12;
+  --accent-press:#0B0906;
+  --accent-on:var(--gold-300);
+
+  --focus-ring:#14100A;
+  --grid-line:rgba(20,16,10,.07);
+  --bg-sticky:rgba(217,164,65,.88);
+  --bg-scrim:rgba(20,16,10,.52);
+  --portrait-mat:var(--ink-900);
+  --inset-top:inset 0 1px 0 rgba(255,255,255,.22);
+  --shadow-1:0 1px 2px rgba(20,16,10,.14);
+  --shadow-2:0 8px 24px -8px rgba(20,16,10,.26);
+  --shadow-3:0 24px 64px -16px rgba(20,16,10,.34);
+  --glow-accent:none; /* @kind shadow */
+  color-scheme:light;
+}
+
+/* Dark island inside a light page - restores the :root defaults. */
+.theme-dark,[data-theme="dark"]{
+  --bg-page:var(--ink-900);--bg-surface:var(--ink-800);--bg-raised:var(--ink-700);
+  --bg-sunken:#080A0D;--bg-inset:rgba(0,0,0,.28);
+  --bg-hover:rgba(230,232,235,.05);--bg-active:rgba(230,232,235,.09);--bg-selected:var(--gold-a12);
+  --text-primary:var(--ink-100);--text-secondary:var(--ink-300);--text-muted:#929CAB;
+  --text-accent:var(--gold-500);--text-inverse:var(--ink-900);
+  --text-link:var(--gold-400);--text-link-hover:var(--gold-300);
+  --line-hairline:var(--ink-600);--line-strong:var(--ink-500);
+  --line-faint:rgba(230,232,235,.07);--line-accent:var(--gold-a40);
+  --gold-a12:color-mix(in srgb,var(--gold-500) 12%,transparent);--gold-a24:color-mix(in srgb,var(--gold-500) 24%,transparent);--gold-a40:color-mix(in srgb,var(--gold-500) 40%,transparent);
+  --state-ok:#5FA37A;--state-warn:#D9A441;--state-alert:#C4553D;--state-info:#6E8BA8;--state-idle:#78828F;
+  --state-ok-a12:rgba(95,163,122,.12);--state-alert-a12:rgba(196,85,61,.12);--state-info-a12:rgba(110,139,168,.12);
+  --accent:var(--gold-500);--accent-hover:var(--gold-400);--accent-press:var(--gold-600);--accent-on:#14100A;
+  --focus-ring:var(--gold-400);--grid-line:rgba(230,232,235,.045);
+  --bg-sticky:rgba(11,13,17,.86);--bg-scrim:rgba(6,8,11,.72);--portrait-mat:var(--ink-050);
+  --bg-warm:#14120E;--bg-warm-raised:#1E1A13;--line-warm:#2E2719;
+  --domain-embedded:#5A7FA6;--domain-electronics:#7E8C4E;--domain-ai:#3F8C86;--domain-security:#A0503F;
+  --domain-embedded-a12:rgba(90,127,166,.12);--domain-electronics-a12:rgba(126,140,78,.12);
+  --domain-ai-a12:rgba(63,140,134,.12);--domain-security-a12:rgba(160,80,63,.12);
+}

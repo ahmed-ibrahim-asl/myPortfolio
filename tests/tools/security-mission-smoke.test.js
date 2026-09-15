@@ -8,7 +8,7 @@ test("Security Mission Builder smoke test", async (t) => {
     const result = builder.getState();
     assert.equal(result.project.platform, "linux");
     assert.equal(result.project.shell, "bash");
-    assert.equal(result.project.learningLevel, "guided");
+    assert.equal(result.project.learningLevel, "advanced");
     assert.equal(result.actions.length, 0);
   });
 

@@ -53,6 +53,7 @@ export interface GalleryItem {
 }
 
 export interface Project {
+  role?: string;
   slug: string;
   title: string;
   category: string;
@@ -62,6 +63,10 @@ export interface Project {
   tags: string[];
   image: string;
   gallery?: GalleryItem[];
+  uiGallery?: GalleryItem[];
+  imageNote?: string;
+  links?: SocialLink[];
+  website?: string;
   featured: boolean;
 }
 
@@ -71,6 +76,14 @@ export interface Tutorial {
   tags: string[];
   image: string;
   href: string;
+}
+
+export interface Course {
+  title: string;
+  institution: string;
+  description: string;
+  href?: string;
+  actionLabel?: string;
 }
 
 export interface Experience {

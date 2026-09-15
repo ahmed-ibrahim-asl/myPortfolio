@@ -3,14 +3,17 @@
 import { useMemo, useState } from "react";
 import {
   CalculatorField,
+  CalculatorLearning,
   CalculatorPanel,
   CalculatorResult,
   CalculatorResults,
+  LearningDisclosure,
   Mnemonic,
   ToolSection,
   WorkedExample
 } from "../CalculatorUI";
 import { formatOhms } from "@/lib/resistorColors";
+import { LedCircuitDiagram } from "../diagrams/LedCircuitDiagram";
 
 function computeLedResistor(supply, forward, current) {
   if (![supply, forward, current].every(Number.isFinite) || current <= 0) {
@@ -34,47 +37,8 @@ export function LedSeriesResistorCalculator() {
   );
 
   return (
-    <div className="article-body">
-      <ToolSection title="What's going on">
-        <p>
-          An LED has no built-in resistance to speak of — wire one straight to a battery and it
-          draws as much current as the supply can give, which is usually enough to destroy it in
-          about a second. The series resistor&rsquo;s only job is to eat the extra voltage the LED
-          doesn&rsquo;t need, so the current stays at a safe level.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="Build it up">
-        <p>
-          An LED has a fixed forward voltage — the voltage it drops once it&rsquo;s lit, regardless
-          of the supply. Whatever voltage is left over from the supply has to be absorbed by
-          something else in the loop, or it forces too much current through the LED. That something
-          else is the resistor: it drops the leftover voltage while limiting current to whatever the
-          LED is rated for.
-        </p>
-      </ToolSection>
-
-      <ToolSection title="The formula">
-        <p className="mono">R = (Vsupply − Vforward) / Iforward</p>
-      </ToolSection>
-
-      <Mnemonic phrase="Source minus Forward, over Flow">
-        <p>
-          Subtract what the LED keeps (its forward voltage) from what the supply gives (source
-          voltage), then divide by how much current you want flowing. Leftover voltage, over desired
-          flow.
-        </p>
-      </Mnemonic>
-
-      <ToolSection title="Worked example">
-        <WorkedExample>
-          <p className="step">Vsupply = 5 V, Vforward = 2 V, I = 20 mA</p>
-          <p className="step">R = (5 − 2) / 0.02</p>
-          <p className="step">R = 150 Ω</p>
-        </WorkedExample>
-      </ToolSection>
-
-      <CalculatorPanel>
+    <div className="article-body" data-calculator-experience>
+      <CalculatorPanel compact visual={<LedCircuitDiagram safe={Boolean(result)} />}>
         <CalculatorField
           label="Supply voltage"
           suffix="V"
@@ -103,11 +67,55 @@ export function LedSeriesResistorCalculator() {
             />
           </CalculatorResults>
         ) : (
-          <p className="muted">
-            Supply voltage must be higher than the LED&rsquo;s forward voltage.
+          <p className="tool-input-notice">
+            Impossible combination: {supply || 0} V supply can&rsquo;t exceed a {forward || 0} V LED forward
+            drop. Raise the supply voltage or choose an LED with a lower forward voltage.
           </p>
         )}
       </CalculatorPanel>
+
+      <CalculatorLearning>
+        <ToolSection title="What's going on">
+          <p>
+            An LED has no built-in resistance to speak of - wire one straight to a battery and it
+            draws as much current as the supply can give, which is usually enough to destroy it in
+            about a second. The series resistor&rsquo;s only job is to eat the extra voltage the LED
+            doesn&rsquo;t need, so the current stays at a safe level.
+          </p>
+        </ToolSection>
+
+        <ToolSection title="The formula">
+          <p className="mono">R = (Vsupply − Vforward) / Iforward</p>
+        </ToolSection>
+
+        <LearningDisclosure>
+          <ToolSection title="Build it up">
+            <p>
+              An LED has a fixed forward voltage - the voltage it drops once it&rsquo;s lit, regardless
+              of the supply. Whatever voltage is left over from the supply has to be absorbed by
+              something else in the loop, or it forces too much current through the LED. That something
+              else is the resistor: it drops the leftover voltage while limiting current to whatever the
+              LED is rated for.
+            </p>
+          </ToolSection>
+
+          <Mnemonic phrase="Source minus Forward, over Flow">
+            <p>
+              Subtract what the LED keeps (its forward voltage) from what the supply gives (source
+              voltage), then divide by how much current you want flowing. Leftover voltage, over desired
+              flow.
+            </p>
+          </Mnemonic>
+
+          <ToolSection title="Worked example">
+            <WorkedExample>
+              <p className="step">Vsupply = 5 V, Vforward = 2 V, I = 20 mA</p>
+              <p className="step">R = (5 − 2) / 0.02</p>
+              <p className="step">R = 150 Ω</p>
+            </WorkedExample>
+          </ToolSection>
+        </LearningDisclosure>
+      </CalculatorLearning>
     </div>
   );
 }
