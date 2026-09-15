@@ -20,12 +20,16 @@ export default function HomePage() {
         <div className="home-hero-copy">
           <p className="eyebrow"><span>001</span> SYSTEMS ENGINEER / EGYPT</p>
           <div className="home-mobile-identity">
-            <Image src={profile.portrait} alt="" width={84} height={84} sizes="84px" loading="eager" />
-            <div><strong>{profile.name}</strong><small>{profile.role}</small></div>
+            <Image src={profile.portrait} alt="" width={112} height={112} sizes="(max-width: 560px) 112px, 84px" loading="eager" />
+            <div className="home-mobile-identity-copy">
+              <strong>{profile.name}</strong>
+              <small>{profile.role}</small>
+              <span className="home-mobile-capabilities">PROTOTYPING · FIRMWARE · SYSTEM INTEGRATION</span>
+            </div>
           </div>
           <div className="home-title-stack">
             <p className="home-title-ar home-title-ar-desktop" lang="ar" dir="rtl">فكّك المشكلة</p>
-            <h1><span className="home-copy-desktop">Break the problem <b>down.</b></span><span className="home-copy-mobile">Your hardware idea. <b>A working prototype.</b></span></h1>
+            <h1><span className="home-copy-desktop">Break the problem <b>down.</b></span><span className="home-copy-mobile home-mobile-headline"><span className="home-mobile-title-line">Your hardware idea.</span><b className="home-mobile-title-line">A prototype ready to test.</b></span></h1>
           </div>
           <p className="home-intro"><span className="home-copy-desktop">I build connected systems from physical signal to useful interface. Embedded hardware, robotics, applied AI, and the tools that make the work easier to repeat.</span><span className="home-copy-mobile">Firmware, connected electronics, and usable interfaces. I bring the pieces together so you can test your idea in the real world.</span></p>
           <div className="home-actions">

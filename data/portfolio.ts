@@ -17,8 +17,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const asset = (pathname: string): string => `${basePath}${pathname}`;
 
 export const profile: Profile = {
-  name: "Ahmed Asl",
-  role: "IoT & Embedded Systems Engineer",
+  name: "Ahmed Ibrahim Asl",
+  role: "Embedded Systems & IoT R&D Engineer",
   label: "LIFELONG LEARNER / PROBLEM SOLVER",
   headline:
     "I turn rough hardware and IoT ideas into working prototypes and usable products.",
@@ -28,9 +28,9 @@ export const profile: Profile = {
   availability: "Open to selected embedded systems, IoT, and robotics collaborations",
   portrait: asset("/media/optimized/profile-ahmed.webp"),
   portraits: [
-    { src: asset("/images/profilePicture/profile1.jpg"), alt: "Portrait of Ahmed Asl in a dark jacket" },
-    { src: asset("/images/profilePicture/profile2.jpg"), alt: "Portrait of Ahmed Asl outdoors" },
-    { src: asset("/images/profilePicture/profile3.png"), alt: "Professional portrait of Ahmed Asl" }
+    { src: asset("/images/profilePicture/profile1.jpg"), alt: "Portrait of Ahmed Ibrahim Asl in a dark jacket" },
+    { src: asset("/images/profilePicture/profile2.jpg"), alt: "Portrait of Ahmed Ibrahim Asl outdoors" },
+    { src: asset("/images/profilePicture/profile3.png"), alt: "Professional portrait of Ahmed Ibrahim Asl" }
   ],
   cv: "https://drive.google.com/file/d/1G9lNDitCXg250JGz8vRperY6zMPoT9gs/view?usp=sharing",
   scholar: "https://scholar.google.com/citations?user=o72gFwkAAAAJ&hl=en",

@@ -39,8 +39,8 @@ export function SiteHeader() {
           <span className="brand-arabic" lang="ar" dir="rtl">بشمهندس عسل</span>
           <span className="brand-agent">AGENT / 101</span>
         </Link>
-        <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="site-navigation" onClick={() => setOpen((value) => !value)}>
-          <span>{open ? "Close" : "Menu"}</span><span aria-hidden="true">{open ? "x" : "+"}</span>
+        <button className="menu-toggle" type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} aria-controls="site-navigation" onClick={() => setOpen((value) => !value)}>
+          <span className="menu-icon" aria-hidden="true"><span /><span /><span /></span>
         </button>
         <nav id="site-navigation" className={`site-nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
           {links.map((link) => {
