@@ -31,10 +31,10 @@ export default function HomePage() {
             <p className="home-title-ar home-title-ar-desktop" lang="ar" dir="rtl">فكّك المشكلة</p>
             <h1><span className="home-copy-desktop">Break the problem <b>down.</b></span><span className="home-copy-mobile home-mobile-headline"><span className="home-mobile-title-line">Your hardware idea.</span><b className="home-mobile-title-line">A prototype ready to test.</b></span></h1>
           </div>
-          <p className="home-intro"><span className="home-copy-desktop">I build connected systems from physical signal to useful interface. Embedded hardware, robotics, applied AI, and the tools that make the work easier to repeat.</span><span className="home-copy-mobile">Firmware, connected electronics, and usable interfaces. I bring the pieces together so you can test your idea in the real world.</span></p>
+          <p className="home-intro"><span className="home-copy-desktop">I build connected systems from physical signal to useful interface. Embedded hardware, robotics, applied AI, and the tools that make the work easier to repeat.</span><span className="home-copy-mobile">I turn firmware and connected electronics into working prototypes.</span></p>
           <div className="home-actions">
-            <Link className="btn-primary" href="/work"><span className="home-copy-desktop">View selected work</span><span className="home-copy-mobile">See selected projects</span></Link>
-            <Link className="btn-secondary" href="/tools"><span className="home-copy-desktop">Open engineering tools</span><span className="home-copy-mobile">Explore free engineering tools</span></Link>
+            <Link className="btn-primary home-action-primary" href="/work"><span className="home-copy-desktop">View selected work</span><span className="home-copy-mobile">See selected projects</span></Link>
+            <Link className="btn-secondary home-action-tools" href="/tools"><span className="home-copy-desktop">Open engineering tools</span><span className="home-copy-mobile">Explore {totalToolCount} free engineering tools →</span></Link>
           </div>
           <p className="home-title-ar home-title-ar-mobile" lang="ar" dir="rtl">فكّك المشكلة. وابني الحل.</p>
         </div>

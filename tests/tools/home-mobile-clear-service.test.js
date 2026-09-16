@@ -35,7 +35,8 @@ test('mobile homepage leads with a proportional clear-service identity while des
       const register = document.querySelector('.home-register');
       const rect = element => element?.getBoundingClientRect();
       const font = element => element ? Number.parseFloat(getComputedStyle(element).fontSize) : null;
-      const domOrder = [identity, title, intro, document.querySelector('.home-actions'), arabic]
+      const actionStyles = actions.map(action => getComputedStyle(action));
+      const domOrder = [identity, title, intro, document.querySelector('.home-actions')]
         .map(element => [...document.querySelectorAll('.home-hero-copy *')].indexOf(element));
       return {
         title: title?.innerText.trim(),
@@ -43,6 +44,7 @@ test('mobile homepage leads with a proportional clear-service identity while des
         titleLineWidths: titleLines.map(line => rect(line)?.width),
         intro: intro?.innerText.trim(),
         arabic: arabic?.innerText.trim(),
+        arabicVisible: Boolean(arabic && getComputedStyle(arabic).display !== 'none'),
         name: name?.textContent.trim(),
         role: role?.textContent.trim(),
         capabilities: capabilities?.textContent.trim(),
@@ -57,9 +59,12 @@ test('mobile homepage leads with a proportional clear-service identity while des
         actionWidths: actions.map(action => rect(action).width),
         actionFits: actions.map(action => action.scrollWidth <= action.clientWidth + 1),
         actionWhiteSpace: actions.map(action => getComputedStyle(action).whiteSpace),
+        actionBorders: actionStyles.map(style => style.borderTopWidth),
+        actionBackgrounds: actionStyles.map(style => style.backgroundColor),
+        actionTextDecorations: actionStyles.map(style => style.textDecorationLine),
         actionsWidth: rect(document.querySelector('.home-actions'))?.width,
         actionLabels: actions.map(action => action.innerText.trim()),
-        order: [rect(identity)?.top, rect(title)?.top, rect(intro)?.top, rect(actions[0])?.top, rect(arabic)?.top],
+        order: [rect(identity)?.top, rect(title)?.top, rect(intro)?.top, rect(actions[0])?.top],
         domOrder,
         overflow: document.documentElement.scrollWidth - innerWidth,
         h1Count: document.querySelectorAll('h1').length,
@@ -82,8 +87,9 @@ test('mobile homepage leads with a proportional clear-service identity while des
         const mobile = await readMobileHero();
         assert.equal(mobile.title, 'Your hardware idea.\nA prototype ready to test.');
         assert.deepEqual(mobile.titleLines, ['Your hardware idea.', 'A prototype ready to test.']);
-        assert.equal(mobile.intro, 'Firmware, connected electronics, and usable interfaces. I bring the pieces together so you can test your idea in the real world.');
+        assert.equal(mobile.intro, 'I turn firmware and connected electronics into working prototypes.');
         assert.equal(mobile.arabic, 'فكّك المشكلة. وابني الحل.');
+        assert.equal(mobile.arabicVisible, false);
         assert.equal(mobile.name, 'Ahmed Ibrahim Asl');
         assert.equal(mobile.role, 'Embedded Systems & IoT R&D Engineer');
         assert.equal(mobile.capabilities, 'PROTOTYPING · FIRMWARE · SYSTEM INTEGRATION');
@@ -96,12 +102,16 @@ test('mobile homepage leads with a proportional clear-service identity while des
         assert.ok(mobile.capabilitiesFont >= 8 && mobile.capabilitiesFont <= 10);
         assert.ok(mobile.titleFont >= 30 && mobile.titleFont <= 41, `${width}/${theme}: ${mobile.titleFont}`);
         assert.ok(mobile.introFont >= 14 && mobile.introFont < 16);
-        assert.deepEqual(mobile.actionLabels, ['SEE SELECTED PROJECTS', 'EXPLORE FREE ENGINEERING TOOLS']);
+        assert.deepEqual(mobile.actionLabels, ['SEE SELECTED PROJECTS', 'EXPLORE 53 FREE ENGINEERING TOOLS →']);
         assert.equal(mobile.actionWidths.length, 2);
-        assert.ok(mobile.actionHeights.every(height => height >= 48), `${width}/${theme}: ${mobile.actionHeights}`);
+        assert.ok(mobile.actionHeights[0] >= 48, `${width}/${theme}: primary action is too short`);
+        assert.ok(mobile.actionHeights[1] >= 44, `${width}/${theme}: tools link target is too short`);
         assert.ok(mobile.actionWidths.every(actionWidth => Math.abs(actionWidth - mobile.actionsWidth) <= 1), `${width}/${theme}: actions are not full width`);
         assert.ok(mobile.actionFits.every(Boolean), `${width}/${theme}: CTA text overflows`);
         assert.ok(mobile.actionWhiteSpace.every(value => value === 'nowrap'), `${width}/${theme}: CTA text wraps`);
+        assert.equal(mobile.actionBorders[1], '0px', `${width}/${theme}: tools action still looks boxed`);
+        assert.equal(mobile.actionBackgrounds[1], 'rgba(0, 0, 0, 0)', `${width}/${theme}: tools action still has a filled background`);
+        assert.equal(mobile.actionTextDecorations[1], 'underline', `${width}/${theme}: tools action is not a quiet text link`);
         assert.ok(mobile.titleLineWidths.every(lineWidth => lineWidth <= mobile.identityWidth), `${width}/${theme}: headline phrase overflows`);
         assert.deepEqual(mobile.order, [...mobile.order].sort((a, b) => a - b));
         assert.deepEqual(mobile.domOrder, [...mobile.domOrder].sort((a, b) => a - b));
@@ -135,6 +145,9 @@ test('mobile homepage leads with a proportional clear-service identity while des
       mobileIdentityAlt: document.querySelector('.home-mobile-identity img')?.alt,
       h1Count: document.querySelectorAll('h1').length,
       registerExists: Boolean(document.querySelector('.home-register')),
+      actionLabels: [...document.querySelectorAll('.home-actions a')].map(action => action.innerText.trim()),
+      actionBorders: [...document.querySelectorAll('.home-actions a')].map(action => getComputedStyle(action).borderTopWidth),
+      actionTextDecorations: [...document.querySelectorAll('.home-actions a')].map(action => getComputedStyle(action).textDecorationLine),
     }));
     assert.equal(desktop.title, 'Break the problem down.');
     assert.equal(desktop.mobileIdentityHidden, true);
@@ -143,6 +156,9 @@ test('mobile homepage leads with a proportional clear-service identity while des
     assert.equal(desktop.mobileIdentityAlt, 'Ahmed Ibrahim Asl');
     assert.equal(desktop.h1Count, 1);
     assert.equal(desktop.registerExists, false);
+    assert.deepEqual(desktop.actionLabels, ['VIEW SELECTED WORK', 'OPEN ENGINEERING TOOLS']);
+    assert.ok(desktop.actionBorders.every(width => width !== '0px'));
+    assert.ok(desktop.actionTextDecorations.every(value => value !== 'underline'));
   } finally {
     await browser.close();
   }
