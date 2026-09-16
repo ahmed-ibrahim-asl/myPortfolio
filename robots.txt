@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://ahmed-ibrahim-asl.github.io/myPortfolio/sitemap.xml
+Sitemap: https://eng-asl.com/sitemap.xml
