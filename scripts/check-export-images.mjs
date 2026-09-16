@@ -11,8 +11,8 @@ function walk(dir) {
         const src = match[1];
         if(!src.startsWith('/')) continue;
         count++;
-        const local = path.join('out',decodeURIComponent(src.replace(/^\/myPortfolio\//,'')));
-        if(!src.startsWith('/myPortfolio/') || !fs.existsSync(local)) errors.add(src);
+        const local = path.join('out',decodeURIComponent(src.replace(/^\//,'')));
+        if(!fs.existsSync(local)) errors.add(src);
       }
     }
   }

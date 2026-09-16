@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { JSDOM } from 'jsdom';
 
 const origin = process.env.SITE_TEST_URL || 'http://localhost:3000';
-const canonicalBase = 'https://ahmed-ibrahim-asl.github.io/myPortfolio';
+const canonicalBase = 'https://eng-asl.com';
 const pages = ['/tools/smps-designer/', '/tools/gradify/', '/tools/battery-estimator/'];
 for (const path of pages) {
   const response = await fetch(origin + path);

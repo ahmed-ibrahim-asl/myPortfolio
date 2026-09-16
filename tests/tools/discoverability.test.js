@@ -16,13 +16,13 @@ test("the sitemap includes every calculator and advanced workbench", async () =>
   }
 });
 
-test("llms.txt advertises the live tools using the repository's real base path", async () => {
+test("llms.txt advertises the live tools on the custom domain", async () => {
   const source = await readFile(new URL("../../public/llms.txt", import.meta.url), "utf8");
 
   assert.match(source, /^# Ahmed Ibrahim Asl/m);
   assert.match(source, /Embedded Systems & IoT R&D Engineer/);
-  assert.doesNotMatch(source, /github\.io\/myPortflio/);
-  assert.match(source, /github\.io\/myPortfolio\/tools\//);
+  assert.doesNotMatch(source, /github\.io\/myPort(?:f|F)lio/);
+  assert.match(source, /https:\/\/eng-asl\.com\/tools\//);
   for (const category of [
     "workbenches",
     "circuit-design",

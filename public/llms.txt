@@ -4,27 +4,27 @@
 
 ## Core pages
 
-- [Home](https://ahmed-ibrahim-asl.github.io/myPortfolio/): Overview of Ahmed's embedded systems, IoT, robotics, research, teaching work, and free engineering tools.
-- [Work](https://ahmed-ibrahim-asl.github.io/myPortfolio/work/): Embedded firmware, robotics, IoT telemetry, secure hardware, OTA management, Flutter, and interface projects.
-- [About](https://ahmed-ibrahim-asl.github.io/myPortfolio/about/): Experience, university teaching, technical capabilities, publications, CV, and workshops.
-- [Engineering notes](https://ahmed-ibrahim-asl.github.io/myPortfolio/notes/): Published engineering field notes, Linux and cybersecurity walkthroughs, and the Learn With Me series.
-- [Tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/): Searchable electronics calculators and guided engineering workbenches.
-- [Contact](https://ahmed-ibrahim-asl.github.io/myPortfolio/contact/): Email and professional profiles.
+- [Home](https://eng-asl.com/): Overview of Ahmed's embedded systems, IoT, robotics, research, teaching work, and free engineering tools.
+- [Work](https://eng-asl.com/work/): Embedded firmware, robotics, IoT telemetry, secure hardware, OTA management, Flutter, and interface projects.
+- [About](https://eng-asl.com/about/): Experience, university teaching, technical capabilities, publications, CV, and workshops.
+- [Engineering notes](https://eng-asl.com/notes/): Published engineering field notes, Linux and cybersecurity walkthroughs, and the Learn With Me series.
+- [Tools](https://eng-asl.com/tools/): Searchable electronics calculators and guided engineering workbenches.
+- [Contact](https://eng-asl.com/contact/): Email and professional profiles.
 
 ## Free engineering tools
 
-- [Guided workbenches](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/workbenches/): Project generators, academic planning, control simulation, embedded code, security commands, and battery estimation.
-- [Circuit design tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/circuit-design/): Interactive calculators for circuits, component values, timing, power supplies, and control logic. Models, assumptions, and limitations are explained on individual tool pages.
-- [Text and encoding tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/text-encoding/): ROT transformations plus ASCII and hexadecimal conversions with worked examples.
-- [Unit conversion tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/conversions/): Temperature and capacitance converters with explicit units and assumptions.
-- [Number-system tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/number-systems/): Binary, hexadecimal, complements, shifts, and multi-base conversion tools.
-- [Physics and math tools](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/category/physics-math/): Motion, force, wavelength, frequency, percentages, roots, and logarithm calculators.
-- [Gradify](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/gradify/): University GPA calculation and a Delta Engineering transcript and graduation planner.
-- [Model Mission](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/ai-script-generator/): Guided computer vision project builder with YOLO26, YOLOE open-vocabulary detection, monocular depth, and U-Net segmentation examples.
-- [Sensor Code Generator](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/sensor-code-generator/): Arduino, ESP-IDF, and PlatformIO code for sensors, I2C, SPI, UART, Bluetooth, Wi-Fi, ESP-NOW, and other embedded interfaces.
-- [PID Simulator](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/pid-simulator/): Interactive proportional, integral, and derivative controller tuning.
-- [Battery Life Estimator](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/battery-estimator/): ESP32 runtime and average-current estimates from active and sleep duty cycles.
-- [Security Mission](https://ahmed-ibrahim-asl.github.io/myPortfolio/tools/security-command-builder/): Guided command builder for authorized security labs.
+- [Guided workbenches](https://eng-asl.com/tools/category/workbenches/): Project generators, academic planning, control simulation, embedded code, security commands, and battery estimation.
+- [Circuit design tools](https://eng-asl.com/tools/category/circuit-design/): Interactive calculators for circuits, component values, timing, power supplies, and control logic. Models, assumptions, and limitations are explained on individual tool pages.
+- [Text and encoding tools](https://eng-asl.com/tools/category/text-encoding/): ROT transformations plus ASCII and hexadecimal conversions with worked examples.
+- [Unit conversion tools](https://eng-asl.com/tools/category/conversions/): Temperature and capacitance converters with explicit units and assumptions.
+- [Number-system tools](https://eng-asl.com/tools/category/number-systems/): Binary, hexadecimal, complements, shifts, and multi-base conversion tools.
+- [Physics and math tools](https://eng-asl.com/tools/category/physics-math/): Motion, force, wavelength, frequency, percentages, roots, and logarithm calculators.
+- [Gradify](https://eng-asl.com/tools/gradify/): University GPA calculation and a Delta Engineering transcript and graduation planner.
+- [Model Mission](https://eng-asl.com/tools/ai-script-generator/): Guided computer vision project builder with YOLO26, YOLOE open-vocabulary detection, monocular depth, and U-Net segmentation examples.
+- [Sensor Code Generator](https://eng-asl.com/tools/sensor-code-generator/): Arduino, ESP-IDF, and PlatformIO code for sensors, I2C, SPI, UART, Bluetooth, Wi-Fi, ESP-NOW, and other embedded interfaces.
+- [PID Simulator](https://eng-asl.com/tools/pid-simulator/): Interactive proportional, integral, and derivative controller tuning.
+- [Battery Life Estimator](https://eng-asl.com/tools/battery-estimator/): ESP32 runtime and average-current estimates from active and sleep duty cycles.
+- [Security Mission](https://eng-asl.com/tools/security-command-builder/): Guided command builder for authorized security labs.
 
 ## Areas of work
 

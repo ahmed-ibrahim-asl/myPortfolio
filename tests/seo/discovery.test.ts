@@ -7,7 +7,7 @@ import { projects } from '../../data/portfolio';
 import { groupWork } from '../../data/work-categories';
 import type { Project } from '../../types/portfolio';
 
-const base = 'https://ahmed-ibrahim-asl.github.io/myPortfolio';
+const base = 'https://eng-asl.com';
 
 describe('search discovery contract', () => {
   it('lists canonical notes pages, not duplicate legacy writing pages', () => {

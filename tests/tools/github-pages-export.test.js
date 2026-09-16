@@ -5,7 +5,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { calculators } from "../../data/calculators.js";
 
-test("the GitHub Pages export preserves Next.js _next assets", { timeout: 120_000 }, () => {
+test("the custom-domain GitHub Pages export uses root-relative assets", { timeout: 120_000 }, () => {
   const npmCommand = process.platform === "win32" ? process.env.ComSpec || "cmd.exe" : "npm";
   const npmArgs =
     process.platform === "win32" ? ["/d", "/s", "/c", "npm.cmd", "run", "build"] : ["run", "build"];
@@ -26,6 +26,11 @@ test("the GitHub Pages export preserves Next.js _next assets", { timeout: 120_00
     true,
     "out/.nojekyll must exist so GitHub Pages serves the _next directory"
   );
+  assert.equal(
+    readFileSync(join(process.cwd(), "out", "CNAME"), "utf8").trim(),
+    "eng-asl.com",
+    "the Pages artifact must preserve the custom domain"
+  );
   const nextAssets = join(process.cwd(), "out", "_next");
   assert.equal(
     existsSync(nextAssets) && readdirSync(nextAssets).length > 0,
@@ -34,9 +39,16 @@ test("the GitHub Pages export preserves Next.js _next assets", { timeout: 120_00
   );
 
   const homeHtml = readFileSync(join(process.cwd(), "out", "index.html"), "utf8");
-  // Guards against a regression of the historical bug where a public/ asset
-  // was referenced with an unprefixed root path instead of NEXT_PUBLIC_BASE_PATH.
-  assert.doesNotMatch(homeHtml, /(?:src|href)="\/brand\//);
+  assert.doesNotMatch(
+    homeHtml,
+    /(?:src|href)="\/myPortfolio\//,
+    "custom-domain assets and links must not include the former repository base path"
+  );
+  assert.match(
+    homeHtml,
+    /href="\/_next\/static\/[^\"]+\.css"/,
+    "stylesheets must load from the custom domain root"
+  );
 
   for (const { slug } of calculators) {
     assert.equal(
