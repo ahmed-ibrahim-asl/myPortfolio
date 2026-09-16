@@ -14,9 +14,9 @@
 :HL["/myPortfolio/_next/static/media/dda2c5944c1d02d1-s.p.0af27si8jwinc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/myPortfolio/media/optimized/profile-ahmed.webp","image"]
 :HL["/myPortfolio/media/portfolio/showcase/agribot/cover.webp","image"]
-:HL["/myPortfolio/media/optimized/project-rov.webp","image"]
+:HL["/myPortfolio/media/portfolio/showcase/wireless-rov/prototype.webp","image"]
 :HL["/myPortfolio/media/portfolio/security-lock-cover.webp","image"]
 :HL["/myPortfolio/media/tools/tool-gradify.svg","image"]
 :HL["/myPortfolio/media/tools/tool-ai-script-generator-v4.png","image"]
 :HL["/myPortfolio/media/tools/tool-security-mission-v4.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"cdtVDvzHiICxX5YS0GMqN"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4116,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"hrZDoRoP-uo6kgW-PZktL"}
