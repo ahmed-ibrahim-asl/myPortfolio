@@ -63,6 +63,7 @@ export interface Project {
   tags: string[];
   image: string;
   gallery?: GalleryItem[];
+  galleryLabel?: string;
   uiGallery?: GalleryItem[];
   imageNote?: string;
   links?: SocialLink[];

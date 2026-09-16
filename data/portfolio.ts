@@ -382,10 +382,6 @@ export const projects: Project[] = [
     outcome: "Joint first place / Delta Region Environmental Forum 2026",
     tags: ["Jetson Nano", "AI/ML", "IoT"],
     image: asset("/media/portfolio/showcase/agribot/cover.webp"),
-    imageNote: "AI-styled cover. Original build photos below.",
-    gallery: [
-      { src: asset("/media/portfolio/showcase/agribot/photos-1.webp"), alt: "AgriBot original hardware photo 1" }
-    ],
     links: [{ label: "View award and certificates", href: "#agribot-award" }],
     uiGallery: [1, 2, 3, 4].map(index => ({src: asset(`/media/portfolio/showcase/agribot/ui-${index}.webp`), alt: `AgriBot original mobile interface collection ${index}`})),
     featured: true
@@ -399,7 +395,21 @@ export const projects: Project[] = [
       "An ESP32 control system with NRF24L01+ radios for bidirectional telemetry and commands between an operator and a remotely operated vehicle.",
     outcome: "Bidirectional telemetry and control",
     tags: ["ESP32", "NRF24L01+", "ROV"],
-    image: asset("/media/optimized/project-rov.webp"),
+    image: asset("/media/portfolio/showcase/wireless-rov/prototype.webp"),
+    imageNote: "Real ROV prototype. SolidWorks mechanical design and related Q1 research are available below.",
+    galleryLabel: "View SolidWorks mechanical design",
+    gallery: [
+      {
+        src: asset("/media/portfolio/showcase/wireless-rov/solidworks-design.webp"),
+        alt: "SolidWorks mechanical design of the wireless remotely operated vehicle"
+      }
+    ],
+    links: [
+      {
+        label: "Read the related Q1 Scientific Reports paper",
+        href: "https://www.nature.com/articles/s41598-025-23281-8"
+      }
+    ],
     featured: true
   },
   {
