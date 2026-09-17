@@ -18,7 +18,7 @@ export default function HomePage() {
     <div className="home-page">
       <section className="home-hero shell">
         <div className="home-hero-copy">
-          <p className="eyebrow"><span>001</span> SYSTEMS ENGINEER / EGYPT</p>
+          <p className="eyebrow"><span>001</span> {profile.role} / EGYPT</p>
           <div className="home-mobile-identity">
             <Image src={profile.portrait} alt={profile.name} width={112} height={112} sizes="(max-width: 560px) 112px, 84px" loading="eager" />
             <div className="home-mobile-identity-copy">
@@ -43,7 +43,7 @@ export default function HomePage() {
             <ProfilePortrait context="home" />
             <div className="portrait-id"><span>Ahmed Ibrahim Asl</span><strong>101</strong><span lang="ar" dir="rtl">أحمد إبراهيم عسل</span></div>
           </div>
-          <div className="portrait-status"><span>SYSTEMS ENGINEER</span><span>AGENT 101</span></div>
+          <div className="portrait-status"><span>{profile.role}</span><span>AGENT 101</span></div>
         </aside>
       </section>
 

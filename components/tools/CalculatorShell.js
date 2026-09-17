@@ -22,13 +22,13 @@ export function CalculatorShell({ tool, children }) {
       </header>
 
       <div className="shell">
-        <ToolDirectAnswer slug={tool.slug} />
         <ToolSearchSchema slug={tool.slug} />
       </div>
 
       <div className="tool-body shell">{children}</div>
 
       <div className="shell">
+        <ToolDirectAnswer slug={tool.slug} />
         <ToolSearchHook slug={tool.slug} />
       </div>
 

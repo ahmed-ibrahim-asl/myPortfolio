@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import path from 'node:path';
 import { mkdir } from 'node:fs/promises';
 import puppeteer from 'puppeteer-core';
+import { ensureGradifyTranscript } from './gradify-fixture.js';
 
 const base = process.env.SITE_RESPONSIVE_BASE_URL || 'http://localhost:3000';
 const executablePath = process.env.CHROME_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
@@ -15,7 +15,7 @@ async function clickText(page, text) {
 }
 async function upload(page) {
   await page.goto(`${base}/tools/gradify/planner/`, { waitUntil: 'networkidle0' });
-  await (await page.$('#gradify-delta input[type=file]')).uploadFile(path.resolve('test-results/gradify/synthetic-transcript.pdf'));
+  await (await page.$('#gradify-delta input[type=file]')).uploadFile(ensureGradifyTranscript());
   await page.waitForSelector('.delta-current-courses, [aria-label="Full plan target CGPA"]');
 }
 test('reviewed full and single-term generation, current-course names, exclusions and goal precision', { timeout: 120000 }, async () => {

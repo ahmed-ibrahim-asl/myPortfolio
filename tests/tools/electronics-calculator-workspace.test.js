@@ -60,29 +60,29 @@ test("electronics calculators without diagrams opt into compact mode without fak
   }
 });
 
-test("an unscoped calculator retains the legacy panel path", () => {
-  const source = read("components/tools/calculators/SquareRootCalculator.js");
+test("a calculator outside the compact rollout retains the legacy panel path", () => {
+  const source = read("components/tools/calculators/TemperatureConversion.js");
   assert.match(source, /<CalculatorPanel>/);
   assert.doesNotMatch(source, /<CalculatorPanel compact/);
 });
 
-test("compact workspace CSS is bounded, visual-first, and switches to 44/56 columns at 860px", () => {
+test("compact workspace CSS uses the available width and switches to 44/56 columns at 860px", () => {
   const css = read("app/asl-tools.css");
-  assert.match(css, /\.calculator-panel-compact\s*\{[^}]*max-width:\s*1180px/s);
+  assert.match(css, /\.asl-calculator-shell \.calculator-panel-compact\s*\{[^}]*width:\s*100%[^}]*max-width:\s*none/s);
   assert.match(
     css,
     /\.calculator-workspace-layout\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/s
   );
   assert.match(css, /@media\s*\(min-width:\s*860px\)/);
   assert.match(css, /grid-template-columns:\s*minmax\(0,\s*44fr\)\s+minmax\(0,\s*56fr\)/);
-  assert.match(css, /\.calculator-workspace-controls\s*\{[^}]*grid-column:\s*1/s);
-  assert.match(css, /\.calculator-workspace-visual\s*\{[^}]*grid-column:\s*2/s);
+  assert.match(css, /\.calculator-panel-has-visual \.calculator-workspace-controls\s*\{[^}]*grid-column:\s*1/s);
+  assert.match(css, /\.calculator-panel-has-visual \.calculator-workspace-visual\s*\{[^}]*grid-column:\s*2/s);
 });
 
-test("compact calculators without a visual use a readable control width", () => {
+test("compact calculators without a visual use the full responsive workspace width", () => {
   const css = read("app/asl-tools.css");
   assert.match(
     css,
-    /\.calculator-panel-compact:not\(\.calculator-panel-has-visual\)\s*\{[^}]*max-width:\s*760px/s
+    /\.asl-calculator-shell \.calculator-panel-compact:not\(\.calculator-panel-has-visual\)\s*\{[^}]*max-width:\s*none/s
   );
 });

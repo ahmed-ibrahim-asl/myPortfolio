@@ -1157,7 +1157,7 @@
   min-height: 180px;
   padding: 16px;
   background: transparent;
-  border: 1px solid var(--asl-line);
+  border: 0;
   font-size: 0.875rem;
   font-weight: 800;
 }

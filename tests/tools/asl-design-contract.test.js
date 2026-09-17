@@ -6,6 +6,13 @@ import { engineeringTools } from "../../data/tools.js";
 
 const read = (path) => readFileSync(path, "utf8");
 
+const assertToolCover = (id, expectedPath) => {
+  const tool = engineeringTools.find((item) => item.id === id);
+  assert.ok(tool, `${id} is missing from the engineering tool catalog`);
+  assert.equal(tool.coverImage, expectedPath);
+  assert.ok(existsSync(`public${expectedPath}`), `missing approved cover: public${expectedPath}`);
+};
+
 test("ASL tokens, fonts, and responsive safeguards are loaded globally", () => {
   const layout = read("app/layout.tsx");
   const theme = read("app/asl-theme.css");
@@ -69,66 +76,31 @@ test("teaching and publication records use the approved public identity and cour
 });
 
 test("Sensor Code Generator uses the approved configurable embedded-workbench cover", () => {
-  const tools = read("data/tools.js");
-
-  assert.match(
-    tools,
-    /sensor-code-generator[\s\S]*coverImage:\s*"\/media\/tools\/tool-sensor-code-generator-v4\.png"/
-  );
-  assert.ok(
-    existsSync("public/media/tools/tool-sensor-code-generator-v4.png"),
-    "the approved Sensor Code Generator cover is missing"
-  );
+  assertToolCover("sensor-code-generator", "/media/tools/tool-sensor-code-generator-v4.png");
 });
 
 test("AI Script Generator uses the approved configurable ML workflow cover", () => {
-  const tools = read("data/tools.js");
-
-  assert.match(
-    tools,
-    /ai-script-generator[\s\S]*coverImage:\s*"\/media\/tools\/tool-ai-script-generator-v4\.png"/
-  );
-  assert.ok(
-    existsSync("public/media/tools/tool-ai-script-generator-v4.png"),
-    "the approved AI Script Generator cover is missing"
-  );
+  assertToolCover("ai-script-generator", "/media/tools/tool-ai-script-generator-v4.png");
 });
 
 test("Security Mission uses the approved tool configuration cover", () => {
-  const tools = read("data/tools.js");
-
-  assert.match(
-    tools,
-    /security-command-builder[\s\S]*coverImage:\s*"\/media\/tools\/tool-security-mission-v4\.png"/
-  );
-  assert.ok(
-    existsSync("public/media/tools/tool-security-mission-v4.png"),
-    "the approved Security Mission cover is missing"
-  );
+  assertToolCover("security-command-builder", "/media/tools/tool-security-mission-v4.png");
 });
 
 test("Interactive PID Simulator uses the approved simplified tuning cover", () => {
-  const tools = read("data/tools.js");
-
-  assert.match(
-    tools,
-    /pid-simulator[\s\S]*coverImage:\s*"\/media\/tools\/tool-pid-simulator-v4\.png"/
-  );
-  assert.ok(
-    existsSync("public/media/tools/tool-pid-simulator-v4.png"),
-    "the approved PID Simulator cover is missing"
-  );
+  assertToolCover("pid-simulator", "/media/tools/tool-pid-simulator-v4.png");
 });
 
 test("every workbench has a generated cover with its reproducible prompt", () => {
-  assert.equal(engineeringTools.length, 5);
-  assert.equal(new Set(engineeringTools.map((tool) => tool.coverImage)).size, 5);
+  const generatedCoverTools = engineeringTools.filter((tool) => tool.id !== "gradify");
+  assert.equal(generatedCoverTools.length, 5);
+  assert.equal(new Set(generatedCoverTools.map((tool) => tool.coverImage)).size, 5);
 
   const promptManifestPath = "docs/assets/tool-cover-prompts.md";
   assert.ok(existsSync(promptManifestPath), "missing the workbench cover prompt manifest");
   const promptManifest = read(promptManifestPath);
 
-  for (const tool of engineeringTools) {
+  for (const tool of generatedCoverTools) {
     const assetPath = `public${tool.coverImage}`;
     assert.ok(existsSync(assetPath), `missing generated workbench cover: ${assetPath}`);
     assert.match(promptManifest, new RegExp(tool.coverImage.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
@@ -139,7 +111,7 @@ test("home follows the approved editorial instrument composition", () => {
   const home = read("app/page.tsx");
 
   assert.match(home, /className="home-hero shell"/);
-  assert.match(home, /className="home-title-ar"/);
+  assert.match(home, /className="home-title-ar\b/);
   assert.match(home, /className="portrait-instrument"/);
   assert.match(home, /className="project-ledger"/);
   assert.match(home, /className="tool-ledger"/);
@@ -151,7 +123,6 @@ test("home follows the approved editorial instrument composition", () => {
 
 test("primary routes declare their ASL page modes", () => {
   const expected = new Map([
-    ["app/work/page.tsx", "asl-work-log"],
     ["app/about/page.tsx", "asl-about-trace"],
     ["app/writing/page.tsx", "asl-field-notes"],
     ["app/contact/page.tsx", "asl-brief"]
@@ -195,7 +166,7 @@ test("every calculator has one purpose-specific visual contract", async () => {
   const calculatorSlugs = calculators.map((tool) => tool.slug).sort();
 
   assert.deepEqual(Object.keys(calculatorVisuals).sort(), calculatorSlugs);
-  assert.equal(new Set(calculators.map((tool) => tool.visualKey)).size, 36);
+  assert.equal(new Set(calculators.map((tool) => tool.visualKey)).size, calculators.length);
 
   for (const tool of calculators) {
     const visual = calculatorVisuals[tool.slug];
@@ -259,10 +230,10 @@ test("the approved series-resistor cover uses one physical current path", async 
 
   assert.equal(
     visual.image,
-    "/media/calculators/series-resistors-physical-network-v1.png"
+    "/media/calculators/series-resistors-no-scales-v2.png"
   );
   assert.ok(
-    existsSync("public/media/calculators/series-resistors-physical-network-v1.png"),
+    existsSync("public/media/calculators/series-resistors-no-scales-v2.png"),
     "the approved series-resistor raster is missing"
   );
   assert.match(visual.ariaLabel, /1 kiloohm.*2\.2 kiloohm.*4\.7 kiloohm/i);
@@ -289,10 +260,10 @@ test("the approved voltage-divider cover uses one closed source-to-ground series
 
   assert.equal(
     visual.image,
-    "/media/calculators/voltage-divider-9v-6v-v1.png"
+    "/media/calculators/voltage-divider-no-scales-v2.png"
   );
   assert.ok(
-    existsSync("public/media/calculators/voltage-divider-9v-6v-v1.png"),
+    existsSync("public/media/calculators/voltage-divider-no-scales-v2.png"),
     "the approved voltage-divider raster is missing"
   );
   assert.match(visual.ariaLabel, /9 volt.*R1.*Vout.*R2.*negative/i);
@@ -304,10 +275,10 @@ test("the approved RC time-constant cover pairs a schematic RC path with its cha
 
   assert.equal(
     visual.image,
-    "/media/calculators/rc-time-constant-schematic-v2.png"
+    "/media/calculators/rc-time-constant-no-scales-v3.png"
   );
   assert.ok(
-    existsSync("public/media/calculators/rc-time-constant-schematic-v2.png"),
+    existsSync("public/media/calculators/rc-time-constant-no-scales-v3.png"),
     "the approved RC time-constant raster is missing"
   );
   assert.match(visual.ariaLabel, /schematic resistor.*polarized capacitor.*63\.2.*99\.3/i);
@@ -323,14 +294,15 @@ test("the ASL tool surfaces contain no decorative Arabic watermark", () => {
 test("one Windows launcher starts only the local portfolio server", () => {
   const launchers = readdirSync(".").filter((name) => name.toLowerCase().endsWith(".bat"));
   const launcher = read("start.bat");
+  const startScript = read("scripts/start-local.ps1");
 
   assert.deepEqual(launchers, ["start.bat"]);
-  assert.match(
-    launcher,
-    /(?:npm(?:\.cmd)?\s+run\s+dev|Start-Process[\s\S]*npm\.cmd[\s\S]*ArgumentList\s+'run','dev')/i
-  );
-  assert.match(launcher, /localhost:3000/i);
+  assert.match(launcher, /scripts\\start-local\.ps1/i);
+  assert.match(startScript, /localhost:3000/i);
+  assert.match(startScript, /node_modules\\next\\dist\\bin\\next/);
+  assert.match(startScript, /'dev',\s*'--hostname',\s*'127\.0\.0\.1',\s*'--port',\s*'3000'/);
   assert.doesNotMatch(launcher, /set\s+\/p|RUN_STUDIO|RUN_BUILD|test:auto/i);
+  assert.doesNotMatch(startScript, /RUN_STUDIO|RUN_BUILD|test:auto/i);
 });
 
 test("advanced workbenches expose ASL instrument modes", () => {

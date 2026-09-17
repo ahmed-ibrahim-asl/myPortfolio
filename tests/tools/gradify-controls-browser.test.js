@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import path from 'node:path';
 import puppeteer from 'puppeteer-core';
+import { ensureGradifyTranscript } from './gradify-fixture.js';
 
 const base = process.env.SITE_RESPONSIVE_BASE_URL || 'http://localhost:3000';
 const executablePath = process.env.CHROME_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
@@ -11,9 +11,9 @@ test('student name remains editable after clearing and reaches the report', { ti
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: 390, height: 844 });
-    await page.goto(`${base}/tools/gradify/planner/`);
+    await page.goto(`${base}/tools/gradify/planner/`, { waitUntil: 'networkidle0' });
     await page.waitForSelector('#gradify-delta input[type=file]');
-    await (await page.$('#gradify-delta input[type=file]')).uploadFile(path.resolve('test-results/gradify/synthetic-transcript.pdf'));
+    await (await page.$('#gradify-delta input[type=file]')).uploadFile(ensureGradifyTranscript());
     const selector = '[aria-label="Student academic summary"] input';
     await page.waitForSelector(selector);
     const toastBounds = await page.$eval('#gradify-delta .pointer-events-none', e => ({left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right}));

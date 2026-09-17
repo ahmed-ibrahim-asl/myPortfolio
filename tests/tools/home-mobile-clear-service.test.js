@@ -139,6 +139,9 @@ test('mobile homepage leads with a proportional clear-service identity while des
     await page.reload({ waitUntil: 'networkidle0' });
     const desktop = await page.evaluate(() => ({
       title: document.querySelector('.home-title-stack h1')?.innerText.trim(),
+      eyebrow: document.querySelector('.home-hero-copy > .eyebrow')?.innerText.trim(),
+      portraitRole: document.querySelector('.portrait-status span')?.innerText.trim(),
+      footerRole: document.querySelector('.footer-bottom span:last-child')?.innerText.trim(),
       mobileIdentityHidden: getComputedStyle(document.querySelector('.home-mobile-identity')).display === 'none',
       portraitVisible: getComputedStyle(document.querySelector('.home-portrait')).display !== 'none',
       portraitLoaded: document.querySelector('.home-portrait img')?.complete && document.querySelector('.home-portrait img')?.naturalWidth > 0,
@@ -150,6 +153,9 @@ test('mobile homepage leads with a proportional clear-service identity while des
       actionTextDecorations: [...document.querySelectorAll('.home-actions a')].map(action => getComputedStyle(action).textDecorationLine),
     }));
     assert.equal(desktop.title, 'Break the problem down.');
+    assert.equal(desktop.eyebrow, '001\nEMBEDDED SYSTEMS & IOT R&D ENGINEER / EGYPT');
+    assert.equal(desktop.portraitRole, 'Embedded Systems & IoT R&D Engineer');
+    assert.equal(desktop.footerRole, 'EGYPT / EMBEDDED SYSTEMS & IOT R&D ENGINEER / AGENT 101');
     assert.equal(desktop.mobileIdentityHidden, true);
     assert.equal(desktop.portraitVisible, true);
     assert.equal(desktop.portraitLoaded, true);

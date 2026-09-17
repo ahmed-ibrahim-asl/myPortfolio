@@ -53,7 +53,7 @@ test("the calculator finder is visually quiet: one divider, no card borders on r
 
   assert.match(css, /\.calculator-finder\s*\{[^}]*border:\s*0/s);
   assert.match(css, /\.calculator-finder-results > a\s*\{[^}]*border:\s*0/s);
-  assert.match(css, /\.tool-support-region\s*\{[^}]*border-top:\s*1px solid/s);
+  assert.match(css, /\.asl-calculator-shell \.tool-support-region\s*\{[^}]*border-top:\s*1px solid/s);
 });
 
 test("every calculator component uses the shared learning wrapper instead of loose sections", () => {

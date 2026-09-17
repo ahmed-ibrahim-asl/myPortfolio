@@ -18,11 +18,11 @@ export function ToolShell({ slug, title, description, children }: { slug?: strin
           {description}
         </p>
       </div>
-      {slug ? <><ToolDirectAnswer slug={slug} /><ToolSearchSchema slug={slug} /></> : null}
+      {slug ? <ToolSearchSchema slug={slug} /> : null}
       <div className="tool-grid">
         {children}
       </div>
-      {slug ? <ToolSearchHook slug={slug} /> : null}
+      {slug ? <><ToolDirectAnswer slug={slug} /><ToolSearchHook slug={slug} /></> : null}
     </section>
   );
 }

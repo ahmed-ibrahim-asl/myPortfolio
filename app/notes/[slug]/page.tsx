@@ -112,7 +112,7 @@ export default async function ArticlePage({ params }: PageProps) {
           <p className="mono muted">
             <Link href="/about">Ahmed Asl</Link>
           </p>
-          <p>Embedded systems engineer and teaching assistant in Egypt.</p>
+          <p>Embedded Systems &amp; IoT R&amp;D Engineer and teaching assistant in Egypt.</p>
           <a href="#article-end">Jump to article end <span aria-hidden="true">&darr;</span></a>
         </aside>
 

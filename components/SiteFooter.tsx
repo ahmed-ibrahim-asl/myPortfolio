@@ -19,7 +19,7 @@ export function SiteFooter() {
       <div className="shell footer-bottom">
         <span>© {new Date().getFullYear()} AHMED IBRAHIM ASL</span>
         <span className="footer-signature" lang="ar" dir="rtl">بشمهندس عسل</span>
-        <span>EGYPT / SYSTEMS ENGINEER / AGENT 101</span>
+        <span>EGYPT / {profile.role} / AGENT 101</span>
       </div>
     </footer>
   );

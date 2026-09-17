@@ -15,7 +15,7 @@ import {
 import { createPageMetadata, createProfilePageJsonLd } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Embedded Systems Engineer and Educator",
+  title: "Embedded Systems & IoT R&D Engineer",
   description:
     "Meet Ahmed Asl, an embedded systems and IoT engineer and teaching assistant. View his experience, technical skills, publications, courses, CV, and workshops.",
   pathname: "/about/"

@@ -185,10 +185,8 @@ test(
       return;
     }
 
-    const existingUrl =
-      process.env.AI_GENERATOR_TEST_URL
-      ?? "http://127.0.0.1:3000/tools/ai-script-generator/";
-    const useExisting = await serverReady(existingUrl);
+    const existingUrl = process.env.AI_GENERATOR_TEST_URL;
+    const useExisting = Boolean(existingUrl && await serverReady(existingUrl));
     const port = 31_000 + Math.floor(Math.random() * 4_000);
     const routeUrl = useExisting
       ? existingUrl
@@ -301,7 +299,8 @@ test(
           const initialSelectedDetail = document.querySelector(
             "[data-selected-task-detail]"
           );
-          const arrowCtas = [...document.querySelectorAll("a, button")]
+          const missionRoot = document.querySelector("[data-model-mission]");
+          const arrowCtas = [...(missionRoot?.querySelectorAll("a, button") ?? [])]
             .filter((item) => /[←→↗]/.test(item.textContent ?? ""))
             .map((item) => item.textContent.trim());
           document.querySelector('[data-mission-task="monocular-depth"]').click();

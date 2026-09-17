@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import puppeteer from 'puppeteer-core';
 import {mkdir} from 'node:fs/promises';
-const base=process.env.SITE_RESPONSIVE_BASE_URL||'http://localhost:3012/myPortflio';
+const base=process.env.TEST_BASE_URL||process.env.SITE_RESPONSIVE_BASE_URL||'http://localhost:3000';
 const executablePath=process.env.CHROME_PATH||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
 test('SMPS modes, phases, validation, artwork and responsive pages',async()=>{
  const browser=await puppeteer.launch({executablePath,headless:true});

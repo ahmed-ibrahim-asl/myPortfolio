@@ -39,7 +39,7 @@ const ROUTES = [
   "/prompts/visual-direction-index/",
   "/contact/",
   "/tools/",
-  "/tools/category/resistors/",
+  "/tools/category/circuit-design/",
   "/tools/battery-estimator/",
   "/tools/pid-simulator/",
   "/tools/sensor-code-generator/",
@@ -372,6 +372,13 @@ test(
                 ? calculatorThumbnailRect.width / calculatorThumbnailRect.height
                 : 0;
               const calculatorResultText = document.querySelector(".calculator-results-count")?.textContent ?? "";
+              const categoryCatalog = document.querySelector(".asl-tool-category-catalog");
+              const categoryDestinationCards = categoryCatalog
+                ? [...categoryCatalog.querySelectorAll("a[href^='/tools/']")]
+                : [];
+              const categoryGroupCount = categoryCatalog?.querySelectorAll(":scope > div > section").length ?? 0;
+              const categoryCardGrid = categoryDestinationCards[0]?.parentElement ?? null;
+              const categoryCardGridStyle = categoryCardGrid ? getComputedStyle(categoryCardGrid) : null;
               const calculatorFinder = document.querySelector(".calculator-finder");
               const calculatorFinderSearch = calculatorFinder?.querySelector("input[type='search']");
               const destinationCards = [...document.querySelectorAll(
@@ -607,6 +614,14 @@ test(
                 calculatorThumbnailGenericLabels,
                 calculatorThumbnailAspect,
                 calculatorResultText,
+                categoryDestinationCardCount: categoryDestinationCards.length,
+                invalidCategoryDestinationCards: categoryDestinationCards.filter((card) =>
+                  !card.getAttribute("href") || card.querySelector("a, button")
+                ).length,
+                categoryGroupCount,
+                categoryCardGridGap: categoryCardGridStyle
+                  ? parseFloat(categoryCardGridStyle.gap) || 0
+                  : 0,
                 hasScrollCue: Boolean(document.querySelector(".tools-scroll-cue")),
                 hasCalculatorFinder: Boolean(calculatorFinder && calculatorFinderSearch),
                 destinationCardCount: destinationCards.length,
@@ -750,6 +765,10 @@ test(
             calculatorThumbnailGenericLabels,
             calculatorThumbnailAspect,
             calculatorResultText,
+            categoryDestinationCardCount,
+            invalidCategoryDestinationCards,
+            categoryGroupCount,
+            categoryCardGridGap,
             hasScrollCue,
             hasCalculatorFinder,
             destinationCardCount,
@@ -1088,7 +1107,7 @@ test(
             if (portraitCount !== 1 || removedSceneCount !== 0) {
               failures.push(`${route} @ ${viewport.label}: about must show one static portrait with no engineering scene`);
             }
-            if (viewport.width === 1366 && documentTitle !== "Embedded Systems Engineer and Educator") {
+            if (viewport.width === 1366 && documentTitle !== "Embedded Systems & IoT R&D Engineer") {
               failures.push(
                 `${route} @ ${viewport.label}: browser title is still suffixed (${documentTitle})`
               );
@@ -1118,9 +1137,9 @@ test(
             }
           }
           if (route === "/tools/" && viewport.width === 1366) {
-            if (hasUnifiedCatalog || calculatorThumbnails !== 0 || toolCategoryCardCount !== 7) {
+            if (hasUnifiedCatalog || calculatorThumbnails !== 0 || toolCategoryCardCount !== 6) {
               failures.push(
-                `${route} @ ${viewport.label}: the root must show seven categories before individual tools`
+                `${route} @ ${viewport.label}: the root must show six consolidated categories before individual tools`
               );
             }
             if (invalidToolCategoryCards !== 0) {
@@ -1134,19 +1153,19 @@ test(
               );
             }
           }
-          if (route === "/tools/category/resistors/" && viewport.width === 1366) {
-            if (!hasUnifiedCatalog || calculatorThumbnails !== 4) {
+          if (route === "/tools/category/circuit-design/" && viewport.width === 1366) {
+            if (categoryGroupCount !== 5 || calculatorThumbnails !== 26) {
               failures.push(
-                `${route} @ ${viewport.label}: the focused searchable resistor shelf is incomplete`
+                `${route} @ ${viewport.label}: the grouped circuit-design shelf is incomplete`
               );
             }
-            if (!/^4 tools$/i.test(calculatorResultText.trim()) || destinationCardCount !== 4 || invalidDestinationCards !== 0) {
+            if (categoryDestinationCardCount !== 26 || invalidCategoryDestinationCards !== 0) {
               failures.push(
-                `${route} @ ${viewport.label}: category result feedback or destination links are wrong`
+                `${route} @ ${viewport.label}: grouped category destination links are wrong`
               );
             }
             if (
-              calculatorThumbnailVisualVariants !== 4
+              calculatorThumbnailVisualVariants !== 26
               || calculatorThumbnailGenericLabels !== 0
               || Math.abs(calculatorThumbnailAspect - 16 / 9) > 0.03
             ) {
@@ -1154,10 +1173,10 @@ test(
                 `${route} @ ${viewport.label}: category covers are not purpose-specific 16:9 visuals`
               );
             }
-            if (unifiedToolsGridGap < 16) {
+            if (categoryCardGridGap < 16) {
               failures.push(
                 `${route} @ ${viewport.label}: tool cards are still joined without useful spacing `
-                + `(${unifiedToolsGridGap.toFixed(1)}px)`
+                + `(${categoryCardGridGap.toFixed(1)}px)`
               );
             }
           }

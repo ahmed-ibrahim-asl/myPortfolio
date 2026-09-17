@@ -106,7 +106,7 @@
 }
 
 .scenario {
-  background: linear-gradient(135deg, var(--asl-gold-a12), transparent 58%);
+  background: var(--asl-gold-a12);
 }
 
 .scenario p:last-child {
