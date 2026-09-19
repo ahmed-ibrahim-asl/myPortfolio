@@ -6897,6 +6897,496 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       }
     ]
   },
+  "/media/tools/tool-rf-antenna-v1.png": {
+    "source": "/media/tools/tool-rf-antenna-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/320.avif",
+        "width": 320,
+        "bytes": 4645
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/640.avif",
+        "width": 640,
+        "bytes": 12511
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/960.avif",
+        "width": 960,
+        "bytes": 22925
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/1280.avif",
+        "width": 1280,
+        "bytes": 38677
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/320.webp",
+        "width": 320,
+        "bytes": 5922
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/640.webp",
+        "width": 640,
+        "bytes": 16616
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/960.webp",
+        "width": 960,
+        "bytes": 30910
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/1280.webp",
+        "width": 1280,
+        "bytes": 50688
+      }
+    ]
+  },
+  "/media/tools/tool-rf-frequency-bands-v1.png": {
+    "source": "/media/tools/tool-rf-frequency-bands-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/320.avif",
+        "width": 320,
+        "bytes": 5104
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/640.avif",
+        "width": 640,
+        "bytes": 14320
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/960.avif",
+        "width": 960,
+        "bytes": 24855
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/1280.avif",
+        "width": 1280,
+        "bytes": 43811
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/320.webp",
+        "width": 320,
+        "bytes": 6772
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/640.webp",
+        "width": 640,
+        "bytes": 18424
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/960.webp",
+        "width": 960,
+        "bytes": 34668
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/1280.webp",
+        "width": 1280,
+        "bytes": 57884
+      }
+    ]
+  },
+  "/media/tools/tool-rf-multiple-access-v1.png": {
+    "source": "/media/tools/tool-rf-multiple-access-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/320.avif",
+        "width": 320,
+        "bytes": 6254
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/640.avif",
+        "width": 640,
+        "bytes": 16305
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/960.avif",
+        "width": 960,
+        "bytes": 27749
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/1280.avif",
+        "width": 1280,
+        "bytes": 42823
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/320.webp",
+        "width": 320,
+        "bytes": 8342
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/640.webp",
+        "width": 640,
+        "bytes": 23166
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/960.webp",
+        "width": 960,
+        "bytes": 39978
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/1280.webp",
+        "width": 1280,
+        "bytes": 60386
+      }
+    ]
+  },
+  "/media/tools/tool-rf-noise-gt-v1.png": {
+    "source": "/media/tools/tool-rf-noise-gt-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/320.avif",
+        "width": 320,
+        "bytes": 4696
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/640.avif",
+        "width": 640,
+        "bytes": 14783
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/960.avif",
+        "width": 960,
+        "bytes": 28421
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/1280.avif",
+        "width": 1280,
+        "bytes": 45941
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/320.webp",
+        "width": 320,
+        "bytes": 6044
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/640.webp",
+        "width": 640,
+        "bytes": 20556
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/960.webp",
+        "width": 960,
+        "bytes": 41566
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/1280.webp",
+        "width": 1280,
+        "bytes": 68058
+      }
+    ]
+  },
+  "/media/tools/tool-rf-path-v1.png": {
+    "source": "/media/tools/tool-rf-path-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/320.avif",
+        "width": 320,
+        "bytes": 4370
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/640.avif",
+        "width": 640,
+        "bytes": 11995
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/960.avif",
+        "width": 960,
+        "bytes": 22817
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/1280.avif",
+        "width": 1280,
+        "bytes": 39497
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/320.webp",
+        "width": 320,
+        "bytes": 4702
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/640.webp",
+        "width": 640,
+        "bytes": 15252
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/960.webp",
+        "width": 960,
+        "bytes": 29584
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/1280.webp",
+        "width": 1280,
+        "bytes": 49854
+      }
+    ]
+  },
+  "/media/tools/tool-satellite-doppler-delay-v1.png": {
+    "source": "/media/tools/tool-satellite-doppler-delay-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/320.avif",
+        "width": 320,
+        "bytes": 5597
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/640.avif",
+        "width": 640,
+        "bytes": 16872
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/960.avif",
+        "width": 960,
+        "bytes": 32014
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/1280.avif",
+        "width": 1280,
+        "bytes": 50135
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/320.webp",
+        "width": 320,
+        "bytes": 7050
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/640.webp",
+        "width": 640,
+        "bytes": 22580
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/960.webp",
+        "width": 960,
+        "bytes": 44242
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/1280.webp",
+        "width": 1280,
+        "bytes": 71464
+      }
+    ]
+  },
+  "/media/tools/tool-satellite-link-budget-v1.png": {
+    "source": "/media/tools/tool-satellite-link-budget-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/320.avif",
+        "width": 320,
+        "bytes": 5832
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/640.avif",
+        "width": 640,
+        "bytes": 18004
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/960.avif",
+        "width": 960,
+        "bytes": 34662
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/1280.avif",
+        "width": 1280,
+        "bytes": 55470
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/320.webp",
+        "width": 320,
+        "bytes": 7190
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/640.webp",
+        "width": 640,
+        "bytes": 23276
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/960.webp",
+        "width": 960,
+        "bytes": 46624
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/1280.webp",
+        "width": 1280,
+        "bytes": 77262
+      }
+    ]
+  },
+  "/media/tools/tool-satellite-look-angles-v1.png": {
+    "source": "/media/tools/tool-satellite-look-angles-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/320.avif",
+        "width": 320,
+        "bytes": 5208
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/640.avif",
+        "width": 640,
+        "bytes": 14931
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/960.avif",
+        "width": 960,
+        "bytes": 27802
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/1280.avif",
+        "width": 1280,
+        "bytes": 42872
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/320.webp",
+        "width": 320,
+        "bytes": 6192
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/640.webp",
+        "width": 640,
+        "bytes": 19766
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/960.webp",
+        "width": 960,
+        "bytes": 36578
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/1280.webp",
+        "width": 1280,
+        "bytes": 58652
+      }
+    ]
+  },
+  "/media/tools/tool-satellite-orbit-v1.png": {
+    "source": "/media/tools/tool-satellite-orbit-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/320.avif",
+        "width": 320,
+        "bytes": 4039
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/640.avif",
+        "width": 640,
+        "bytes": 11701
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/960.avif",
+        "width": 960,
+        "bytes": 21139
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/1280.avif",
+        "width": 1280,
+        "bytes": 34333
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/320.webp",
+        "width": 320,
+        "bytes": 4826
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/640.webp",
+        "width": 640,
+        "bytes": 15112
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/960.webp",
+        "width": 960,
+        "bytes": 28930
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/1280.webp",
+        "width": 1280,
+        "bytes": 46906
+      }
+    ]
+  },
+  "/media/tools/tool-satellite-power-lifetime-v1.png": {
+    "source": "/media/tools/tool-satellite-power-lifetime-v1.png",
+    "width": 1280,
+    "height": 720,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/320.avif",
+        "width": 320,
+        "bytes": 5587
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/640.avif",
+        "width": 640,
+        "bytes": 14894
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/960.avif",
+        "width": 960,
+        "bytes": 27487
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/1280.avif",
+        "width": 1280,
+        "bytes": 44065
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/320.webp",
+        "width": 320,
+        "bytes": 6724
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/640.webp",
+        "width": 640,
+        "bytes": 21028
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/960.webp",
+        "width": 960,
+        "bytes": 40292
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/1280.webp",
+        "width": 1280,
+        "bytes": 64998
+      }
+    ]
+  },
   "/media/tools/tool-security-mission-v4.png": {
     "source": "/media/tools/tool-security-mission-v4.png",
     "width": 1672,

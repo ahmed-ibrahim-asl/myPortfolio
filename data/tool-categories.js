@@ -83,6 +83,19 @@ const circuitGroupOrder = Object.freeze([
   "Power Conversion & Supplies"
 ]);
 
+const specialistCoverImages = Object.freeze({
+  "satellite-orbit": "/media/tools/tool-satellite-orbit-v1.png",
+  "satellite-look-angles": "/media/tools/tool-satellite-look-angles-v1.png",
+  "satellite-power-lifetime": "/media/tools/tool-satellite-power-lifetime-v1.png",
+  "satellite-doppler-delay": "/media/tools/tool-satellite-doppler-delay-v1.png",
+  "satellite-link-budget": "/media/tools/tool-satellite-link-budget-v1.png",
+  "rf-frequency-bands": "/media/tools/tool-rf-frequency-bands-v1.png",
+  "rf-antenna": "/media/tools/tool-rf-antenna-v1.png",
+  "rf-rf-path": "/media/tools/tool-rf-path-v1.png",
+  "rf-noise-gt": "/media/tools/tool-rf-noise-gt-v1.png",
+  "rf-multiple-access": "/media/tools/tool-rf-multiple-access-v1.png"
+});
+
 function getCircuitGroup(category) {
   if (category === "Fundamentals") return "Fundamentals";
   if (category === "Resistors") return "Resistors & Networks";
@@ -102,19 +115,23 @@ export function getToolCategoryItems(slug) {
   if (["satellite", "rf-engineering"].includes(category.slug)) {
     const specialistTools = category.slug === "satellite" ? satelliteCalculators : rfCalculators;
     const routeRoot = category.slug === "satellite" ? "satellite" : "rf";
-    return specialistTools.map((tool) => ({
-      id: `${routeRoot}-${tool.slug}`,
-      title: tool.title,
-      summary: tool.summary,
-      href: `/tools/${routeRoot}/${tool.slug}/`,
-      category: category.title,
-      kind: "Calculator",
-      group: tool.group,
-      tags: [...tool.topics, category.title],
-      symbols: tool.lessons.flatMap((lesson) => lesson.symbols ? [lesson.symbols] : []),
-      aliases: tool.slug.split("-"),
-      icon: "SATELLITE_RF"
-    }));
+    return specialistTools.map((tool) => {
+      const id = `${routeRoot}-${tool.slug}`;
+      return {
+        id,
+        title: tool.title,
+        summary: tool.summary,
+        href: `/tools/${routeRoot}/${tool.slug}/`,
+        category: category.title,
+        kind: "Calculator",
+        group: tool.group,
+        tags: [...tool.topics, category.title],
+        symbols: tool.lessons.flatMap((lesson) => lesson.symbols ? [lesson.symbols] : []),
+        aliases: tool.slug.split("-"),
+        icon: "SATELLITE_RF",
+        coverImage: specialistCoverImages[id]
+      };
+    });
   }
 
   if (category.slug === "workbenches") {
