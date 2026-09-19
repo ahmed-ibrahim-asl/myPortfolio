@@ -7150,44 +7150,44 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/320.avif",
         "width": 320,
-        "bytes": 5597
+        "bytes": 6438
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/640.avif",
         "width": 640,
-        "bytes": 16872
+        "bytes": 20583
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/960.avif",
         "width": 960,
-        "bytes": 32014
+        "bytes": 41074
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/1280.avif",
         "width": 1280,
-        "bytes": 50135
+        "bytes": 64828
       }
     ],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/320.webp",
         "width": 320,
-        "bytes": 7050
+        "bytes": 8646
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/640.webp",
         "width": 640,
-        "bytes": 22580
+        "bytes": 27900
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/960.webp",
         "width": 960,
-        "bytes": 44242
+        "bytes": 54564
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/1280.webp",
         "width": 1280,
-        "bytes": 71464
+        "bytes": 87218
       }
     ]
   },
@@ -7297,44 +7297,44 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/320.avif",
         "width": 320,
-        "bytes": 4039
+        "bytes": 3329
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/640.avif",
         "width": 640,
-        "bytes": 11701
+        "bytes": 10058
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/960.avif",
         "width": 960,
-        "bytes": 21139
+        "bytes": 19483
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/1280.avif",
         "width": 1280,
-        "bytes": 34333
+        "bytes": 35535
       }
     ],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/320.webp",
         "width": 320,
-        "bytes": 4826
+        "bytes": 3770
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/640.webp",
         "width": 640,
-        "bytes": 15112
+        "bytes": 11860
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/960.webp",
         "width": 960,
-        "bytes": 28930
+        "bytes": 23732
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/1280.webp",
         "width": 1280,
-        "bytes": 46906
+        "bytes": 41360
       }
     ]
   },
