@@ -17,7 +17,7 @@ import { createPageMetadata, createProfilePageJsonLd } from "@/lib/seo";
 export const metadata = createPageMetadata({
   title: "Embedded Systems & IoT R&D Engineer",
   description:
-    "Meet Ahmed Asl, an embedded systems and IoT engineer and teaching assistant. View his experience, technical skills, publications, courses, CV, and workshops.",
+    "Meet Ahmed Ibrahim Asl (Ahmed Asl), an Embedded Systems & IoT R&D Engineer. Explore his prototypes, experience, technical skills, publications, courses, and CV.",
   pathname: "/about/"
 });
 
@@ -29,12 +29,17 @@ export default function AboutPage() {
       <section className="page-intro shell about-intro about-story-intro">
         <div className="about-intro-copy">
           <span className="eyebrow">Engineer / educator / lifelong learner</span>
-          <h1>I build by following the question through the whole system.</h1>
+          <h1>Ahmed Ibrahim Asl</h1>
           <p className="page-lede">
-            My first big question was about an ATM: how one machine could recognize an
+            I am Ahmed Asl, an Embedded Systems &amp; IoT R&amp;D Engineer. I build by following
+            the question through the whole system. My first big question was about an ATM:
+            how one machine could recognize an
             account, check money somewhere else, and complete a physical action safely.
             That question became a career across electronics, firmware, networks, software,
             security, robotics, and teaching.
+          </p>
+          <p className="about-name-note">
+            My Arabic family name, عسل, also appears in English records as Assal and Assl; this site uses Asl as the preferred spelling.
           </p>
           <nav className="portfolio-jump-links" aria-label="About sections"><a className="text-link" href="#experience">Experience</a><a className="text-link" href="#education">Education</a><a className="text-link" href="#volunteering">Volunteering</a><Link className="text-link" href="/work/#recognition">Awards</Link></nav>
         </div>

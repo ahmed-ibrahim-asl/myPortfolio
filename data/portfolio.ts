@@ -395,10 +395,14 @@ export const projects: Project[] = [
       "An ESP32 control system with NRF24L01+ radios for bidirectional telemetry and commands between an operator and a remotely operated vehicle.",
     outcome: "Bidirectional telemetry and control",
     tags: ["ESP32", "NRF24L01+", "ROV"],
-    image: asset("/media/portfolio/showcase/wireless-rov/prototype.webp"),
-    imageNote: "Real ROV prototype. SolidWorks mechanical design and related Q1 research are available below.",
-    galleryLabel: "View SolidWorks mechanical design",
+    image: asset("/media/portfolio/showcase/wireless-rov/cover-asl-v1.png"),
+    imageNote: "AI-styled project visualization based on the real ROV prototype. Original prototype and SolidWorks mechanical design are available below.",
+    galleryLabel: "View original prototype and SolidWorks design",
     gallery: [
+      {
+        src: asset("/media/portfolio/showcase/wireless-rov/prototype.webp"),
+        alt: "Original physical prototype of the wireless remotely operated vehicle"
+      },
       {
         src: asset("/media/portfolio/showcase/wireless-rov/solidworks-design.webp"),
         alt: "SolidWorks mechanical design of the wireless remotely operated vehicle"
@@ -421,7 +425,7 @@ export const projects: Project[] = [
       "An access-control prototype that separates the human-machine interface from the electronic control unit to limit the effect of physical tampering.",
     outcome: "Separated control and interface logic",
     tags: ["AVR", "Security", "Embedded C"],
-    image: asset("/media/portfolio/security-lock-cover.webp"),
+    image: asset("/media/portfolio/multi-mcu-security-lock-architecture.svg"),
     gallery: [
       { src: asset("/media/portfolio/lock-running.png"), alt: "Original Proteus simulation: door control with two ATmega32 microcontrollers" },
       { src: asset("/media/portfolio/lock-password.png"), alt: "Original Proteus simulation: setting a new password" }

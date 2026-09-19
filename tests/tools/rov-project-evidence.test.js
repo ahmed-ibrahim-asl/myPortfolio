@@ -10,9 +10,11 @@ async function loadProject(path) {
 test("Wireless ROV presents the real prototype, SolidWorks design, and related Q1 paper", async () => {
   const html = await loadProject("/work/embedded-iot/wireless-rov-control/");
 
+  assert.match(html, /wireless-rov\/cover-asl-v1\.png/);
   assert.match(html, /wireless-rov\/prototype\.webp/);
   assert.match(html, /wireless-rov\/solidworks-design\.webp/);
-  assert.match(html, /View SolidWorks mechanical design/);
+  assert.match(html, /AI-styled project visualization/);
+  assert.match(html, /View original prototype and SolidWorks design/);
   assert.match(html, /Read the related Q1 Scientific Reports paper/);
   assert.match(html, /s41598-025-23281-8/);
 });

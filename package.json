@@ -19,8 +19,10 @@
     "sync:scholar": "node scripts/sync-scholar-publications.mjs",
     "prepare:gradify": "node scripts/prepare-gradify.mjs",
     "test:gradify": "vitest run --config vitest.gradify.config.ts",
-    "predev": "npm run prepare:gradify",
-    "prebuild": "npm run prepare:gradify",
+    "prepare:images": "node scripts/public-image-pipeline.mjs --write",
+    "check:images": "node scripts/public-image-pipeline.mjs --check",
+    "predev": "npm run prepare:gradify && npm run prepare:images",
+    "prebuild": "npm run prepare:gradify && npm run prepare:images",
     "postbuild": "node scripts/prepare-static-segments.mjs"
   },
   "dependencies": {
@@ -52,6 +54,7 @@
     "eslint-config-next": "^16.3.1",
     "jsdom": "^29.1.1",
     "prettier": "^3.9.6",
+    "sharp": "^0.35.4",
     "tailwindcss": "^3.4.19",
     "typescript": "^6.0.3",
     "vitest": "^4.1.10"

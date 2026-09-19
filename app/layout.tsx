@@ -71,6 +71,13 @@ const fontVariables = [
   sora.variable
 ].join(" ");
 
+const localeInitializerScript = `(() => {
+  const arabic = location.pathname.startsWith('/ar/');
+  document.documentElement.lang = arabic ? 'ar' : 'en';
+  if (arabic) document.documentElement.dir = 'rtl';
+  else document.documentElement.removeAttribute('dir');
+})();`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: siteConfig.title,
@@ -125,6 +132,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={fontVariables} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: localeInitializerScript }} />
         <script dangerouslySetInnerHTML={{ __html: themeInitializerScript }} />
       </head>
       <body>

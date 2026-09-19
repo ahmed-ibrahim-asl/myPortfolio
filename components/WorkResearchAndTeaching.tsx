@@ -1,4 +1,5 @@
 import { publications, publicationSource, tutorials } from "@/data/portfolio";
+import { PublicImage } from "@/components/PublicImage";
 
 export function WorkResearchAndTeaching() {
   return <>
@@ -83,7 +84,7 @@ export function WorkResearchAndTeaching() {
         <div className="tutorial-grid">
           {tutorials.map((tutorial) => (
             <a className="tutorial-card" href={tutorial.href} target="_blank" rel="noreferrer" key={tutorial.title}>
-              <img src={tutorial.image} alt={`${tutorial.title} cover`} loading="lazy" />
+              <PublicImage src={tutorial.image} alt={`${tutorial.title} cover`} loading="lazy" sizes="(max-width: 760px) 100vw, 33vw" />
               <div>
                 <div className="tag-row">
                   {tutorial.tags.map((tag) => (

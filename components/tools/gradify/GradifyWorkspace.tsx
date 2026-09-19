@@ -7,6 +7,7 @@ import { UNIVERSITY_PROFILES, getUniversityProfile, type UniversityProfile } fro
 import { gradifySections, type GradifySection } from "@/data/gradify-sections";
 import UniversityCalculator from "./UniversityCalculator";
 import GradeReference from "./GradeReference";
+import { GradifyCalculatorSeo } from "./GradifyCalculatorSeo";
 import styles from "./GradifyWorkspace.module.css";
 
 const DeltaWorkspace = dynamic(() => import("./delta/DeltaWorkspace"), { ssr: false, loading: () => <div className={styles.loading} role="status">Loading the Delta graduation workspace…</div> });
@@ -30,7 +31,7 @@ export default function GradifyWorkspace({ section = "calculator" }: { section?:
   return <article className={styles.workspace} data-gradify-workspace>
     <header className={styles.heading}>
       <Link href="/tools/gradify/" className={styles.backLink}>← All Gradify tools</Link>
-      <div className={styles.titleRow}><div><p className={styles.eyebrow}>Gradify</p><div className={styles.titleLine}><h1>{entry.title}</h1></div><p className={styles.description}>{entry.detail}</p></div></div>
+      <div className={styles.titleRow}><div><p className={styles.eyebrow}>Gradify</p><div className={styles.titleLine}><h1>{entry.h1}</h1></div><p className={styles.description}>{entry.detail}</p></div></div>
     </header>
     <nav className={styles.toolNavigation} aria-label="Gradify tools">{gradifySections.map(item => <Link key={item.slug} href={`/tools/gradify/${item.slug}/`} aria-current={section === item.slug ? "page" : undefined}>{item.title}</Link>)}</nav>
     <section className={styles.universityBar} aria-label="University selection">
@@ -42,5 +43,6 @@ export default function GradifyWorkspace({ section = "calculator" }: { section?:
       {section === "planner" && <DeltaWorkspace />}
       {section === "guide" && <GradeReference profile={guideProfile} />}
     </div>
+    {section === "calculator" ? <GradifyCalculatorSeo /> : null}
   </article>;
 }

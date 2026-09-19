@@ -7,9 +7,9 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Ahmed Asl",
-  title: "Ahmed Asl | Hardware Prototypes & IoT Products",
+  title: "Ahmed Ibrahim Asl | Embedded Systems & IoT R&D Engineer",
   description:
-    "Ahmed Asl turns rough hardware and IoT ideas into working prototypes and usable products. He works across electronics, embedded systems, robotics, connected products, mechatronics, and technical teaching.",
+    "Ahmed Ibrahim Asl (Ahmed Asl) is an Embedded Systems & IoT R&D Engineer who turns firmware, connected electronics, and robotics ideas into working prototypes.",
   url: "https://eng-asl.com"
 };
 

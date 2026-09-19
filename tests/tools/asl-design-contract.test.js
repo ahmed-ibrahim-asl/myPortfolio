@@ -47,10 +47,12 @@ test("the global shell uses the bilingual ASL identity without HUD navigation", 
   assert.doesNotMatch(header, /SystemHud/);
   assert.doesNotMatch(header, /GridToggle|grid-toggle-button/);
   assert.match(header, /header-contact/);
-  assert.match(header, /\{ href: "\/", label: "Home" \}/);
+  assert.match(header, /getDictionary/);
+  assert.match(header, /LanguageSwitch/);
+  assert.match(header, /dictionary\.nav\.home/);
   assert.doesNotMatch(header, /label: "Prompts"/);
   assert.ok(
-    header.indexOf('label: "Home"') < header.indexOf('label: "Work"'),
+    header.indexOf("dictionary.nav.home") < header.indexOf("dictionary.nav.work"),
     "Home must be the first primary navigation destination"
   );
   assert.match(footer, /footer-signature/);
@@ -67,10 +69,7 @@ test("teaching and publication records use the approved public identity and cour
   assert.match(portfolio, /title:\s*"Analog Communication"/);
   assert.match(portfolio, /practical MATLAB/i);
   assert.match(portfolio, /title:\s*"MATLAB Onramp"/);
-  assert.match(
-    portfolio,
-    /youtube\.com\/playlist\?list=PLYt83m8l2mixe_1k4BWNVCg0HXdYx6BPw/
-  );
+  assert.match(portfolio, /youtube\.com\/playlist\?list=PLYt83m8l2mixe_1k4BWNVCg0HXdYx6BPw/);
   assert.doesNotMatch(publications, /AIME Asl|AI Asl/);
   assert.match(publications, /Ahmed Ibrahim Asl/);
 });
@@ -91,8 +90,8 @@ test("Interactive PID Simulator uses the approved simplified tuning cover", () =
   assertToolCover("pid-simulator", "/media/tools/tool-pid-simulator-v4.png");
 });
 
-test("every workbench has a generated cover with its reproducible prompt", () => {
-  const generatedCoverTools = engineeringTools.filter((tool) => tool.id !== "gradify");
+test("every raster-cover workbench has a generated cover with its reproducible prompt", () => {
+  const generatedCoverTools = engineeringTools.filter((tool) => tool.coverImage.endsWith(".png"));
   assert.equal(generatedCoverTools.length, 5);
   assert.equal(new Set(generatedCoverTools.map((tool) => tool.coverImage)).size, 5);
 
@@ -103,7 +102,10 @@ test("every workbench has a generated cover with its reproducible prompt", () =>
   for (const tool of generatedCoverTools) {
     const assetPath = `public${tool.coverImage}`;
     assert.ok(existsSync(assetPath), `missing generated workbench cover: ${assetPath}`);
-    assert.match(promptManifest, new RegExp(tool.coverImage.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    assert.match(
+      promptManifest,
+      new RegExp(tool.coverImage.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    );
   }
 });
 
@@ -160,8 +162,9 @@ test("tools use a category-first hub and searchable category shelves", () => {
 });
 
 test("every calculator has one purpose-specific visual contract", async () => {
-  const visualModule = await import("../../data/calculator-visuals.js")
-    .catch(() => ({ calculatorVisuals: {} }));
+  const visualModule = await import("../../data/calculator-visuals.js").catch(() => ({
+    calculatorVisuals: {}
+  }));
   const calculatorVisuals = visualModule.calculatorVisuals;
   const calculatorSlugs = calculators.map((tool) => tool.slug).sort();
 
@@ -180,10 +183,7 @@ test("the approved 5-band resistor cover uses its generated raster evidence", as
   const visual = calculatorVisuals["5-band-resistor-color-code-calculator"];
   const thumbnail = read("components/tools/CalculatorThumbnail.js");
 
-  assert.equal(
-    visual.image,
-    "/media/calculators/five-band-resistor-4k7-v3.png"
-  );
+  assert.equal(visual.image, "/media/calculators/five-band-resistor-4k7-v3.png");
   assert.ok(
     existsSync("public/media/calculators/five-band-resistor-4k7-v3.png"),
     "the approved 5-band resistor raster is missing"
@@ -197,10 +197,7 @@ test("the approved 4-band resistor cover uses its generated raster evidence", as
   const visual = calculatorVisuals["resistor-color-code-calculator"];
   const thumbnail = read("components/tools/CalculatorThumbnail.js");
 
-  assert.equal(
-    visual.image,
-    "/media/calculators/four-band-resistor-4k7-v1.png"
-  );
+  assert.equal(visual.image, "/media/calculators/four-band-resistor-4k7-v1.png");
   assert.ok(
     existsSync("public/media/calculators/four-band-resistor-4k7-v1.png"),
     "the approved 4-band resistor raster is missing"
@@ -213,10 +210,7 @@ test("the approved Ohm's law cover uses its generated physical measurement evide
   const { calculatorVisuals } = await import("../../data/calculator-visuals.js");
   const visual = calculatorVisuals["ohms-law-calculator"];
 
-  assert.equal(
-    visual.image,
-    "/media/calculators/ohms-law-physical-measurement-v1.png"
-  );
+  assert.equal(visual.image, "/media/calculators/ohms-law-physical-measurement-v1.png");
   assert.ok(
     existsSync("public/media/calculators/ohms-law-physical-measurement-v1.png"),
     "the approved Ohm's law raster is missing"
@@ -228,10 +222,7 @@ test("the approved series-resistor cover uses one physical current path", async 
   const { calculatorVisuals } = await import("../../data/calculator-visuals.js");
   const visual = calculatorVisuals["series-resistor-calculator"];
 
-  assert.equal(
-    visual.image,
-    "/media/calculators/series-resistors-no-scales-v2.png"
-  );
+  assert.equal(visual.image, "/media/calculators/series-resistors-no-scales-v2.png");
   assert.ok(
     existsSync("public/media/calculators/series-resistors-no-scales-v2.png"),
     "the approved series-resistor raster is missing"
@@ -243,10 +234,7 @@ test("the approved parallel-resistor cover uses three branches across two shared
   const { calculatorVisuals } = await import("../../data/calculator-visuals.js");
   const visual = calculatorVisuals["parallel-resistor-calculator"];
 
-  assert.equal(
-    visual.image,
-    "/media/calculators/parallel-resistors-physical-network-v1.png"
-  );
+  assert.equal(visual.image, "/media/calculators/parallel-resistors-physical-network-v1.png");
   assert.ok(
     existsSync("public/media/calculators/parallel-resistors-physical-network-v1.png"),
     "the approved parallel-resistor raster is missing"
@@ -258,10 +246,7 @@ test("the approved voltage-divider cover uses one closed source-to-ground series
   const { calculatorVisuals } = await import("../../data/calculator-visuals.js");
   const visual = calculatorVisuals["voltage-divider-calculator"];
 
-  assert.equal(
-    visual.image,
-    "/media/calculators/voltage-divider-no-scales-v2.png"
-  );
+  assert.equal(visual.image, "/media/calculators/voltage-divider-no-scales-v2.png");
   assert.ok(
     existsSync("public/media/calculators/voltage-divider-no-scales-v2.png"),
     "the approved voltage-divider raster is missing"
@@ -273,10 +258,7 @@ test("the approved RC time-constant cover pairs a schematic RC path with its cha
   const { calculatorVisuals } = await import("../../data/calculator-visuals.js");
   const visual = calculatorVisuals["rc-time-constant-calculator"];
 
-  assert.equal(
-    visual.image,
-    "/media/calculators/rc-time-constant-no-scales-v3.png"
-  );
+  assert.equal(visual.image, "/media/calculators/rc-time-constant-no-scales-v3.png");
   assert.ok(
     existsSync("public/media/calculators/rc-time-constant-no-scales-v3.png"),
     "the approved RC time-constant raster is missing"

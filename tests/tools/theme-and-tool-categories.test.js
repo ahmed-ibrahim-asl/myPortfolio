@@ -2,13 +2,11 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import vm from "node:vm";
 
-import {
-  THEME_STORAGE_KEY,
-  normalizeTheme,
-  themeInitializerScript
-} from "../../lib/theme.js";
+import { THEME_STORAGE_KEY, normalizeTheme, themeInitializerScript } from "../../lib/theme.js";
 import { calculators } from "../../data/calculators.js";
 import { engineeringTools } from "../../data/tools.js";
+import { satelliteCalculators } from "../../data/satellite-course.js";
+import { rfCalculators } from "../../data/rf-calculators.js";
 import {
   getToolCategory,
   getToolCategoryItems,
@@ -59,7 +57,7 @@ test("the pre-hydration initializer applies and restores only a valid saved them
   });
 });
 
-test("the tools library exposes six destinations and consolidates old circuit URLs", () => {
+test("the tools library exposes eight destinations and consolidates old circuit URLs", () => {
   assert.deepEqual(
     toolCategories.map(({ slug }) => slug),
     [
@@ -68,10 +66,12 @@ test("the tools library exposes six destinations and consolidates old circuit UR
       "text-encoding",
       "conversions",
       "number-systems",
-      "physics-math"
+      "physics-math",
+      "satellite",
+      "rf-engineering"
     ]
   );
-  assert.equal(new Set(toolCategories.map(({ slug }) => slug)).size, 6);
+  assert.equal(new Set(toolCategories.map(({ slug }) => slug)).size, 8);
   for (const slug of [
     "fundamentals",
     "resistors",
@@ -111,7 +111,13 @@ test("Circuit Design contains every circuit class once in the approved section o
     ]
   );
 
-  for (const slug of ["fundamentals", "resistors", "timing-filters", "control-design", "power-conversion-supplies"]) {
+  for (const slug of [
+    "fundamentals",
+    "resistors",
+    "timing-filters",
+    "control-design",
+    "power-conversion-supplies"
+  ]) {
     assert.deepEqual(getToolCategoryItems(slug), items, slug);
   }
 });
@@ -122,6 +128,8 @@ test("every current tool belongs to exactly one category", () => {
   );
   const expectedIds = [
     ...engineeringTools.map(({ id }) => id),
+    ...satelliteCalculators.map(({ slug }) => `satellite-${slug}`),
+    ...rfCalculators.map(({ slug }) => `rf-${slug}`),
     ...calculators.map(({ slug }) => slug)
   ].sort();
 
@@ -133,10 +141,10 @@ test("every current tool belongs to exactly one category", () => {
 test("category summaries provide useful counts and examples for the hub", () => {
   const summaries = getToolCategorySummaries();
 
-  assert.equal(summaries.length, 6);
+  assert.equal(summaries.length, 8);
   assert.deepEqual(
     summaries.map(({ count }) => count),
-    toolCategories.map(category => getToolCategoryItems(category.slug).length)
+    toolCategories.map((category) => getToolCategoryItems(category.slug).length)
   );
   for (const summary of summaries) {
     assert.ok(summary.examples.length > 0 && summary.examples.length <= 3);
@@ -145,22 +153,20 @@ test("category summaries provide useful counts and examples for the hub", () => 
 });
 
 test("static category params cover every destination", () => {
-  assert.deepEqual(
-    getToolCategoryStaticParams(),
-    [
-      ...toolCategories.map(({ slug }) => ({ slug })),
-      { slug: "fundamentals" },
-      { slug: "resistors" },
-      { slug: "timing-filters" },
-      { slug: "control-design" },
-      { slug: "power-conversion-supplies" }
-    ]
-  );
+  assert.deepEqual(getToolCategoryStaticParams(), [
+    ...toolCategories.map(({ slug }) => ({ slug })),
+    { slug: "fundamentals" },
+    { slug: "resistors" },
+    { slug: "timing-filters" },
+    { slug: "control-design" },
+    { slug: "power-conversion-supplies" }
+  ]);
 });
 
 test("category search cannot surface tools from another category", () => {
-  const resistorTools = getToolCategoryItems("circuit-design")
-    .filter(({ category }) => category === "Resistors");
+  const resistorTools = getToolCategoryItems("circuit-design").filter(
+    ({ category }) => category === "Resistors"
+  );
 
   assert.deepEqual(
     filterToolItems(resistorTools, "series").map(({ id }) => id),

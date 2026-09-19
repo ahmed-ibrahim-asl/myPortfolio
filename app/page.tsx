@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { ProfilePortrait } from "@/components/ProfilePortrait";
+import { PublicImage } from "@/components/PublicImage";
 import { profile, projects, workingMethod } from "@/data/portfolio";
 import { workCategories } from "@/data/work-categories";
+import { satelliteCalculators } from "@/data/satellite-course";
+import { rfCalculators } from "@/data/rf-calculators";
 import { engineeringTools } from "@/data/tools";
 import { calculators } from "@/data/calculators";
 import { formatDate, getAllPosts } from "@/lib/content";
@@ -12,7 +14,7 @@ export default function HomePage() {
   const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
   const featuredTools = engineeringTools.slice(0, 3);
   const notes = getAllPosts().slice(0, 3);
-  const totalToolCount = engineeringTools.length + calculators.length;
+  const totalToolCount = engineeringTools.length + calculators.length + satelliteCalculators.length + rfCalculators.length;
 
   return (
     <div className="home-page">
@@ -20,7 +22,7 @@ export default function HomePage() {
         <div className="home-hero-copy">
           <p className="eyebrow"><span>001</span> {profile.role} / EGYPT</p>
           <div className="home-mobile-identity">
-            <Image src={profile.portrait} alt={profile.name} width={112} height={112} sizes="(max-width: 560px) 112px, 84px" loading="eager" />
+            <PublicImage src={profile.portrait} alt={profile.name} sizes="(max-width: 560px) 112px, 84px" loading="eager" fetchPriority="high" />
             <div className="home-mobile-identity-copy">
               <strong>{profile.name}</strong>
               <small>{profile.role}</small>
@@ -33,8 +35,8 @@ export default function HomePage() {
           </div>
           <p className="home-intro"><span className="home-copy-desktop">I build connected systems from physical signal to useful interface. Embedded hardware, robotics, applied AI, and the tools that make the work easier to repeat.</span><span className="home-copy-mobile">I turn firmware and connected electronics into working prototypes.</span></p>
           <div className="home-actions">
-            <Link className="btn-primary home-action-primary" href="/work"><span className="home-copy-desktop">View selected work</span><span className="home-copy-mobile">See selected projects</span></Link>
-            <Link className="btn-secondary home-action-tools" href="/tools"><span className="home-copy-desktop">Open engineering tools</span><span className="home-copy-mobile">Explore {totalToolCount} free engineering tools →</span></Link>
+            <Link className="btn-primary home-action-primary" href="/work"><span className="home-copy-desktop">View projects</span><span className="home-copy-mobile">View projects</span></Link>
+            <Link className="btn-secondary home-action-tools" href="/tools"><span className="home-copy-desktop">Explore tools</span><span className="home-copy-mobile">Explore tools</span></Link>
           </div>
           <p className="home-title-ar home-title-ar-mobile" lang="ar" dir="rtl">فكّك المشكلة. وابني الحل.</p>
         </div>
@@ -60,7 +62,7 @@ export default function HomePage() {
         <div className="project-ledger">
           {featuredProjects.map((project, index) => (
             <Link className={`project-entry project-entry-${index + 1}`} href={`/work/${workCategories.find(group => group.categories.includes(project.category))?.id}/${project.slug}/`} key={project.slug}>
-              <img src={project.image} alt="" />
+              <PublicImage src={project.image} alt="" sizes="(max-width: 760px) 100vw, 33vw" />
               <span className="project-index">0{index + 1}</span>
               <div className="project-copy"><p>{project.category} / {project.year}</p><h3>{project.title}</h3><span>{project.outcome}</span></div>
             </Link>
@@ -78,7 +80,7 @@ export default function HomePage() {
           {featuredTools.map((tool, index) => (
             <Link className="tool-entry" href={tool.href} key={tool.id}>
               <div className="tool-cover" aria-hidden="true">
-                {tool.coverImage ? <img src={tool.coverImage} alt="" /> : <i />}
+                {tool.coverImage ? <PublicImage src={tool.coverImage} alt="" sizes="(max-width: 760px) 100vw, 33vw" /> : <i />}
                 <span>0{index + 1}</span>
                 <strong>{tool.icon}</strong>
               </div>

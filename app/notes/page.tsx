@@ -1,6 +1,7 @@
 import React from "react";
 import { WritingIndex } from "@/components/WritingIndex";
 import { WritingSeries } from "@/components/WritingSeries";
+import { PlannedNotes } from "@/components/PlannedNotes";
 import { getAllPosts } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -46,6 +47,7 @@ export default function WritingPage() {
         </div>
         <WritingIndex posts={posts} />
       </section>
+      <PlannedNotes />
     </div>
   );
 }

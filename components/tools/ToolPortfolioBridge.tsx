@@ -2,12 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import { profile } from '@/data/portfolio';
 import styles from './ToolPortfolioBridge.module.css';
+import { PublicImage } from '@/components/PublicImage';
 
 export function ToolPortfolioBridge() {
   return (
     <aside className={styles.bridge} aria-label="About the tool creator">
       <div className={styles.identity}>
-        <img src={profile.portrait} alt={profile.name} width="64" height="64" loading="lazy" />
+        <PublicImage src={profile.portrait} alt={profile.name} sizes="64px" loading="lazy" />
         <div><span className={styles.label}>Behind the workbench</span><Link href="/about/">{profile.name}</Link><p>{profile.role}</p></div>
       </div>
       <div className={styles.copy}>

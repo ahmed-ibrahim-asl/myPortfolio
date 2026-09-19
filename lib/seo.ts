@@ -5,19 +5,33 @@ import { Post } from "@/types/content";
 import { PageMetadataOptions, JsonLdData } from "@/types/seo";
 
 export const personId: string = `${absoluteUrl("/")}#ahmed-asl`;
+export const personAliases = Object.freeze([
+  "Ahmed Ibrahim Asl",
+  "Ahmed Asl",
+  "Ahmed Ibrahim Assal",
+  "Ahmed Assal",
+  "Ahmed Ibrahim Assl",
+  "Ahmed Assl",
+  "أحمد إبراهيم عسل",
+  "أحمد عسل"
+]);
 export const websiteId: string = `${absoluteUrl("/")}#website`;
 export const socialImage: string = absoluteUrl("/opengraph-image.png");
 export const twitterImage: string = absoluteUrl("/twitter-image.png");
 
-export function createPageMetadata({ title, description, pathname = "" }: PageMetadataOptions): Metadata {
+export function createPageMetadata({ title, description, pathname = "", locale = "en", translated = false }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(pathname);
+  const englishPath = pathname.startsWith("/ar/") ? pathname.slice(3) || "/" : pathname;
+  const arabicPath = englishPath === "/" ? "/ar/" : `/ar${englishPath.startsWith("/") ? englishPath : `/${englishPath}`}`;
   const socialTitle = `${title} | ${siteConfig.name}`;
 
   return {
     title,
     description,
+    keywords: [...personAliases, "embedded systems engineer", "IoT R&D engineer", "engineering calculators"],
     alternates: {
-      canonical: url
+      canonical: url,
+      ...(translated ? { languages: { en: absoluteUrl(englishPath), ar: absoluteUrl(arabicPath), "x-default": absoluteUrl(englishPath) } } : {})
     },
     authors: [
       {
@@ -28,7 +42,7 @@ export function createPageMetadata({ title, description, pathname = "" }: PageMe
     creator: profile.name,
     openGraph: {
       type: "website",
-      locale: "en_US",
+      locale: locale === "ar" ? "ar_EG" : "en_US",
       url,
       siteName: siteConfig.name,
       title: socialTitle,
@@ -59,7 +73,9 @@ export function createSiteJsonLd(): JsonLdData {
         "@type": "Person",
         "@id": personId,
         name: profile.name,
+        alternateName: personAliases,
         url: absoluteUrl("/about/"),
+        mainEntityOfPage: absoluteUrl("/about/"),
         image: absoluteUrl("/media/optimized/profile-ahmed.webp"),
         jobTitle: profile.role,
         description: siteConfig.description,
@@ -106,11 +122,14 @@ export function createProfilePageJsonLd(): JsonLdData {
     "@id": `${absoluteUrl("/about/")}#profile-page`,
     url: absoluteUrl("/about/"),
     name: `About ${profile.name}`,
-    dateModified: "2026-07-25",
+    dateModified: "2026-09-17",
     mainEntity: {
       "@type": "Person",
       "@id": personId,
       name: profile.name,
+      alternateName: personAliases,
+      jobTitle: profile.role,
+      url: absoluteUrl("/about/"),
       image: absoluteUrl("/media/optimized/profile-ahmed.webp"),
       description: siteConfig.description,
       sameAs: profile.socials.map((social) => social.href)

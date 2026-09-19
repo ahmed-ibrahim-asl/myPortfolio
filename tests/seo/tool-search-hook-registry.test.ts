@@ -7,7 +7,11 @@ import {
 import { calculators } from '../../data/calculators';
 import { engineeringTools } from '../../data/tools';
 
+import { satelliteCalculators } from "../../data/satellite-course";
+import { rfCalculators } from "../../data/rf-calculators";
 const expectedSlugs = [...new Set([
+  ...satelliteCalculators.map(tool => "satellite-" + tool.slug),
+  ...rfCalculators.map(tool => "rf-" + tool.slug),
   ...calculators.map((tool) => tool.slug),
   ...engineeringTools.map((tool) => tool.id),
 ])].sort();
@@ -15,7 +19,7 @@ const expectedSlugs = [...new Set([
 describe('tool search-hook registry', () => {
 it('every public engineering tool has a complete, truthful search-hook record', () => {
   expect(Object.keys(toolSearchHooks).sort()).toEqual(expectedSlugs);
-  expect(expectedSlugs).toHaveLength(53);
+  expect(expectedSlugs).not.toContain('satellite-communication');
   expect(validateToolSearchHooks()).toEqual({ valid: true, issues: [] });
 
   const questions = new Set<string>();
@@ -29,7 +33,7 @@ it('every public engineering tool has a complete, truthful search-hook record', 
     expect(hook!.limitations.length, slug).toBeGreaterThanOrEqual(2);
     expect(hook!.evidence.href).toMatch(/^\/work\/[a-z0-9-]+\/[a-z0-9-]+\/$/);
     expect(hook!.cta.href).toBe('/contact/');
-    expect(hook!.reviewedOn).toMatch(/^2026-09-(15|16)$/);
+    expect(hook!.reviewedOn).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     expect(hook!.seoTitle.length, `${slug}: SEO title length`).toBeGreaterThanOrEqual(35);
     expect(hook!.seoTitle.length, `${slug}: SEO title length`).toBeLessThanOrEqual(65);
     expect(hook!.metaDescription.length, `${slug}: meta description length`).toBeGreaterThanOrEqual(120);

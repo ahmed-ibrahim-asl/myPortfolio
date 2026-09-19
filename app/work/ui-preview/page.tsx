@@ -1,4 +1,5 @@
 import styles from "./preview.module.css";
+import { PublicImage } from "@/components/PublicImage";
 
 export const metadata = { title: "Mobile UI container preview", robots: { index: false, follow: false } };
 
@@ -16,7 +17,7 @@ export default function MobileUiPreview() {
         <span className={styles.stageLabel}>MOBILE APPLICATION</span>
         <a className={styles.phone} href={screen} target="_blank" rel="noreferrer" aria-label="Open the original Smart Mosque home screen at full size">
           <span className={styles.speaker} aria-hidden="true" />
-          <img src={screen} width={720} height={1600} alt="Smart Mosque Arabic home screen showing prayer times, mosque occupancy, and devotional sections" />
+          <PublicImage src={screen} sizes="(max-width: 760px) 80vw, 360px" alt="Smart Mosque Arabic home screen showing prayer times, mosque occupancy, and devotional sections" />
           <span className={styles.chin} aria-hidden="true" />
         </a>
         <span className={styles.stageFoot}>ORIGINAL APP INTERFACE</span>

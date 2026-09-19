@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: Props) {
   const { section } = await params;
   const entry = gradifySections.find(item => item.slug === section);
   if (!entry) notFound();
-  return createPageMetadata({ title: `${entry.title} | Gradify`, description: entry.detail, pathname: `/tools/gradify/${entry.slug}/` });
+  return createPageMetadata({ title: entry.seoTitle, description: entry.metaDescription, pathname: `/tools/gradify/${entry.slug}/` });
 }
 export default async function GradifyToolPage({ params }: Props) {
   const { section } = await params;

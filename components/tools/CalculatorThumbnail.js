@@ -1,4 +1,5 @@
 import { calculatorVisuals } from "@/data/calculator-visuals";
+import { PublicImage } from "@/components/PublicImage";
 
 function InstrumentGrid() {
   return (
@@ -340,15 +341,16 @@ export function CalculatorThumbnail({ visualKey, title, compact = false }) {
     >
       {visual.imageDark ? (
         <>
-          <img className="calculator-thumbnail-image calculator-thumbnail-image-dark" src={visual.imageDark} alt="" aria-hidden="true" />
-          <img className="calculator-thumbnail-image calculator-thumbnail-image-light" src={visual.imageLight} alt="" aria-hidden="true" />
+          <PublicImage className="calculator-thumbnail-image calculator-thumbnail-image-dark" src={visual.imageDark} alt="" aria-hidden="true" sizes="320px" />
+          <PublicImage className="calculator-thumbnail-image calculator-thumbnail-image-light" src={visual.imageLight} alt="" aria-hidden="true" sizes="320px" />
         </>
       ) : visual.image ? (
-        <img
+        <PublicImage
           className="calculator-thumbnail-image"
           src={visual.image}
           alt=""
           aria-hidden="true"
+          sizes="320px"
         />
       ) : (
         <svg viewBox="0 0 240 135" aria-hidden="true" focusable="false">

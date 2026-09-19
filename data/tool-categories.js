@@ -1,18 +1,22 @@
 import { calculators } from "./calculators.js";
 import { engineeringTools } from "./tools.js";
+import { satelliteCalculators } from "./satellite-course.js";
+import { rfCalculators } from "./rf-calculators.js";
 
 export const toolCategories = Object.freeze([
   Object.freeze({
     slug: "workbenches",
     title: "Workbenches",
     label: "Guided systems",
-    intro: "Larger, guided environments for planning, simulation, code generation, and technical practice."
+    intro:
+      "Larger, guided environments for planning, simulation, code generation, and technical practice."
   }),
   Object.freeze({
     slug: "circuit-design",
     title: "Circuit Design",
     label: "Interactive schematics",
-    intro: "Move from electrical fundamentals and resistor networks to timing, control logic, analog circuits, and practical power supplies."
+    intro:
+      "Move from electrical fundamentals and resistor networks to timing, control logic, analog circuits, and practical power supplies."
   }),
   Object.freeze({
     slug: "text-encoding",
@@ -24,7 +28,8 @@ export const toolCategories = Object.freeze([
     slug: "conversions",
     title: "Conversions",
     label: "Units and markings",
-    intro: "Translate capacitor markings, capacitance units, and temperature scales without guesswork."
+    intro:
+      "Translate capacitor markings, capacitance units, and temperature scales without guesswork."
   }),
   Object.freeze({
     slug: "number-systems",
@@ -37,6 +42,20 @@ export const toolCategories = Object.freeze([
     title: "Physics & Math",
     label: "Motion and quantities",
     intro: "Solve motion, force, wavelength, frequency, percentage, and root relationships."
+  }),
+  Object.freeze({
+    slug: "satellite",
+    title: "Satellite",
+    label: "Mission engineering",
+    intro:
+      "Plan orbit geometry, spacecraft power, propagation timing, and end-to-end satellite links with connected engineering calculators."
+  }),
+  Object.freeze({
+    slug: "rf-engineering",
+    title: "RF Engineering",
+    label: "Carrier to receiver",
+    intro:
+      "Plan carriers and antennas, trace RF paths, evaluate receiver noise, and estimate multiple-access capacity."
   })
 ]);
 
@@ -80,25 +99,45 @@ export function getToolCategory(slug) {
 export function getToolCategoryItems(slug) {
   const category = getToolCategory(slug);
   if (!category) return [];
-
-  if (category.slug === "workbenches") {
-    return engineeringTools.map((tool) => ({
-      id: tool.id,
+  if (["satellite", "rf-engineering"].includes(category.slug)) {
+    const specialistTools = category.slug === "satellite" ? satelliteCalculators : rfCalculators;
+    const routeRoot = category.slug === "satellite" ? "satellite" : "rf";
+    return specialistTools.map((tool) => ({
+      id: `${routeRoot}-${tool.slug}`,
       title: tool.title,
-      summary: tool.description,
-      href: tool.href.endsWith("/") ? tool.href : `${tool.href}/`,
+      summary: tool.summary,
+      href: `/tools/${routeRoot}/${tool.slug}/`,
       category: category.title,
-      kind: "Workbench",
-      group: "Workbenches",
-      tags: [tool.icon, tool.highlight ?? "Interactive"],
-      coverImage: tool.coverImage,
-      icon: tool.icon
+      kind: "Calculator",
+      group: tool.group,
+      tags: [...tool.topics, category.title],
+      symbols: tool.lessons.flatMap((lesson) => lesson.symbols ? [lesson.symbols] : []),
+      aliases: tool.slug.split("-"),
+      icon: "SATELLITE_RF"
     }));
   }
 
-  const matchingTools = category.slug === "circuit-design"
-    ? calculators.filter((tool) => circuitCategoryTitles.includes(tool.category))
-    : calculators.filter((tool) => tool.category === category.title);
+  if (category.slug === "workbenches") {
+    return engineeringTools
+      .filter((tool) => !tool.id.startsWith("satellite-"))
+      .map((tool) => ({
+        id: tool.id,
+        title: tool.title,
+        summary: tool.description,
+        href: tool.href.endsWith("/") ? tool.href : `${tool.href}/`,
+        category: category.title,
+        kind: "Workbench",
+        group: "Workbenches",
+        tags: [tool.icon, tool.highlight ?? "Interactive"],
+        coverImage: tool.coverImage,
+        icon: tool.icon
+      }));
+  }
+
+  const matchingTools =
+    category.slug === "circuit-design"
+      ? calculators.filter((tool) => circuitCategoryTitles.includes(tool.category))
+      : calculators.filter((tool) => tool.category === category.title);
 
   return matchingTools
     .map((tool) => ({

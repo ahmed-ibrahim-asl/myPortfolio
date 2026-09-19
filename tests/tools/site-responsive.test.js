@@ -164,8 +164,9 @@ async function createClient(port, url) {
     }
     if (message.method === "Runtime.consoleAPICalled" && message.params?.type === "error") {
       consoleErrors.push(
-        message.params.args?.map((arg) => arg.value ?? arg.description ?? "console error").join(" ")
-        ?? "console error"
+        message.params.args
+          ?.map((arg) => arg.value ?? arg.description ?? "console error")
+          .join(" ") ?? "console error"
       );
     }
     const waiters = events.get(message.method);
@@ -862,26 +863,30 @@ test(
           }
           if (aslPageToken !== "#0B0D11" || aslGoldToken !== "#D9A441") {
             failures.push(
-              `${route} @ ${viewport.label}: ASL palette tokens are not active `
-              + `(page=${aslPageToken}, gold=${aslGoldToken})`
+              `${route} @ ${viewport.label}: ASL palette tokens are not active ` +
+                `(page=${aslPageToken}, gold=${aslGoldToken})`
             );
           }
           if (systemHudCount !== 0) {
-            failures.push(`${route} @ ${viewport.label}: obsolete HUD or pixel scene remains mounted`);
+            failures.push(
+              `${route} @ ${viewport.label}: obsolete HUD or pixel scene remains mounted`
+            );
           }
           if (gridToggleCount !== 0) {
-            failures.push(`${route} @ ${viewport.label}: the removed grid control is still visible`);
+            failures.push(
+              `${route} @ ${viewport.label}: the removed grid control is still visible`
+            );
           }
           if (smallestControlHeight < 43.5) {
             failures.push(
-              `${route} @ ${viewport.label}: an interactive control is below the 44px target floor `
-              + `(${smallestControlHeight.toFixed(1)}px, ${smallestControlSelector})`
+              `${route} @ ${viewport.label}: an interactive control is below the 44px target floor ` +
+                `(${smallestControlHeight.toFixed(1)}px, ${smallestControlSelector})`
             );
           }
           if (smallestControlWidth < 43.5) {
             failures.push(
-              `${route} @ ${viewport.label}: an interactive control is below the 44px width floor `
-              + `(${smallestControlWidth.toFixed(1)}px)`
+              `${route} @ ${viewport.label}: an interactive control is below the 44px width floor ` +
+                `(${smallestControlWidth.toFixed(1)}px)`
             );
           }
           if (overflowPx > 1) {
@@ -906,115 +911,126 @@ test(
           if (route !== "/" && routeContentShellCount > 0) {
             const expectedGutter = Math.min(72, Math.max(20, clientWidth * 0.04));
             if (
-              Math.abs(routeShellPaddingMin - expectedGutter) > 1.5
-              || Math.abs(routeShellPaddingMax - expectedGutter) > 1.5
-              || routeShellPaddingAsymmetry > 1
+              Math.abs(routeShellPaddingMin - expectedGutter) > 1.5 ||
+              Math.abs(routeShellPaddingMax - expectedGutter) > 1.5 ||
+              routeShellPaddingAsymmetry > 1
             ) {
               failures.push(
-                `${route} @ ${viewport.label}: route shells do not share the adaptive gutter `
-                + `(expected=${expectedGutter.toFixed(1)}, min=${routeShellPaddingMin.toFixed(1)}, `
-                + `max=${routeShellPaddingMax.toFixed(1)}, asymmetry=${routeShellPaddingAsymmetry.toFixed(1)})`
+                `${route} @ ${viewport.label}: route shells do not share the adaptive gutter ` +
+                  `(expected=${expectedGutter.toFixed(1)}, min=${routeShellPaddingMin.toFixed(1)}, ` +
+                  `max=${routeShellPaddingMax.toFixed(1)}, asymmetry=${routeShellPaddingAsymmetry.toFixed(1)})`
               );
             }
           }
           {
             const expectedGutter = Math.min(72, Math.max(20, clientWidth * 0.04));
             if (
-              Math.abs(headerPaddingLeft - expectedGutter) > 1.5
-              || Math.abs(headerPaddingRight - expectedGutter) > 1.5
-              || Math.abs(footerPaddingLeft - expectedGutter) > 1.5
-              || Math.abs(footerPaddingRight - expectedGutter) > 1.5
+              Math.abs(headerPaddingLeft - expectedGutter) > 1.5 ||
+              Math.abs(headerPaddingRight - expectedGutter) > 1.5 ||
+              Math.abs(footerPaddingLeft - expectedGutter) > 1.5 ||
+              Math.abs(footerPaddingRight - expectedGutter) > 1.5
             ) {
               failures.push(
-                `${route} @ ${viewport.label}: header and footer do not follow the route gutter `
-                + `(expected=${expectedGutter.toFixed(1)}, header=${headerPaddingLeft.toFixed(1)}/`
-                + `${headerPaddingRight.toFixed(1)}, footer=${footerPaddingLeft.toFixed(1)}/`
-                + `${footerPaddingRight.toFixed(1)})`
+                `${route} @ ${viewport.label}: header and footer do not follow the route gutter ` +
+                  `(expected=${expectedGutter.toFixed(1)}, header=${headerPaddingLeft.toFixed(1)}/` +
+                  `${headerPaddingRight.toFixed(1)}, footer=${footerPaddingLeft.toFixed(1)}/` +
+                  `${footerPaddingRight.toFixed(1)})`
               );
             }
           }
           if (routeIntroLedeColor) {
             const expectedGutter = Math.min(72, Math.max(20, clientWidth * 0.04));
-            if (routeIntroBeforeDisplay !== "none" || routeIntroLedeColor !== "rgb(138, 147, 161)") {
+            if (
+              routeIntroBeforeDisplay !== "none" ||
+              routeIntroLedeColor !== "rgb(138, 147, 161)"
+            ) {
               failures.push(
-                `${route} @ ${viewport.label}: a page intro retains legacy blue decoration or copy `
-                + `(${routeIntroBeforeDisplay}, ${routeIntroLedeColor})`
+                `${route} @ ${viewport.label}: a page intro retains legacy blue decoration or copy ` +
+                  `(${routeIntroBeforeDisplay}, ${routeIntroLedeColor})`
               );
             }
             if (clientWidth <= 639) {
               if (routeIntroAfterDisplay !== "none") {
-                failures.push(`${route} @ ${viewport.label}: the measured-work label crowds the mobile intro`);
+                failures.push(
+                  `${route} @ ${viewport.label}: the measured-work label crowds the mobile intro`
+                );
               }
             } else if (Math.abs(routeIntroAfterRight - expectedGutter) > 1.5) {
               failures.push(
-                `${route} @ ${viewport.label}: the measured-work label does not align to the content gutter `
-                + `(${routeIntroAfterRight.toFixed(1)}px)`
+                `${route} @ ${viewport.label}: the measured-work label does not align to the content gutter ` +
+                  `(${routeIntroAfterRight.toFixed(1)}px)`
               );
             }
           }
           if (route === "/prompts/" && viewport.width >= 1366) {
             const expectedGutter = Math.min(72, Math.max(20, clientWidth * 0.04));
             if (
-              promptGridLeft < expectedGutter - 1.5
-              || promptGridRight > clientWidth - expectedGutter + 1.5
+              promptGridLeft < expectedGutter - 1.5 ||
+              promptGridRight > clientWidth - expectedGutter + 1.5
             ) {
               failures.push(
-                `${route} @ ${viewport.label}: prompt cards touch a viewport edge `
-                + `(left=${promptGridLeft.toFixed(1)}, right=${promptGridRight.toFixed(1)})`
+                `${route} @ ${viewport.label}: prompt cards touch a viewport edge ` +
+                  `(left=${promptGridLeft.toFixed(1)}, right=${promptGridRight.toFixed(1)})`
               );
             }
             if (
-              promptCardBackground !== "rgb(18, 22, 28)"
-              || promptCardShadow !== "none"
-              || promptCardHeadingColor !== primaryTextColor
-              || promptCardSummaryColor !== "rgb(138, 147, 161)"
+              promptCardBackground !== "rgb(18, 22, 28)" ||
+              promptCardShadow !== "none" ||
+              promptCardHeadingColor !== primaryTextColor ||
+              promptCardSummaryColor !== "rgb(138, 147, 161)"
             ) {
               failures.push(
-                `${route} @ ${viewport.label}: prompt cards retain legacy blue styling `
-                + `(${promptCardBackground}, ${promptCardShadow}, `
-                + `${promptCardHeadingColor}, ${promptCardSummaryColor})`
+                `${route} @ ${viewport.label}: prompt cards retain legacy blue styling ` +
+                  `(${promptCardBackground}, ${promptCardShadow}, ` +
+                  `${promptCardHeadingColor}, ${promptCardSummaryColor})`
               );
             }
           }
           if (articleBodyBackground) {
             if (
-              articleBodyBackground !== "rgb(18, 22, 28)"
-              || articleBodyShadow !== "none"
-              || !articleBodyFontFamily.includes("Archivo")
-              || (articleHeadingBorderColor && articleHeadingBorderColor !== "rgb(217, 164, 65)")
-              || (articleHeadingBorderColor && Math.abs(articleHeadingBorderWidth - 1) > 0.1)
-              || (articleHeadingMarkerDisplay !== "none" && articleHeadingMarkerContent !== "none")
+              articleBodyBackground !== "rgb(18, 22, 28)" ||
+              articleBodyShadow !== "none" ||
+              !articleBodyFontFamily.includes("Archivo") ||
+              (articleHeadingBorderColor && articleHeadingBorderColor !== "rgb(217, 164, 65)") ||
+              (articleHeadingBorderColor && Math.abs(articleHeadingBorderWidth - 1) > 0.1) ||
+              (articleHeadingMarkerDisplay !== "none" && articleHeadingMarkerContent !== "none")
             ) {
               failures.push(
-                `${route} @ ${viewport.label}: article content retains the legacy blue panel treatment `
-                + `(${articleBodyBackground}, ${articleBodyShadow}, `
-                + `${articleBodyFontFamily}, ${articleHeadingBorderWidth}px ${articleHeadingBorderColor}, `
-                + `marker=${articleHeadingMarkerDisplay}/${articleHeadingMarkerContent})`
+                `${route} @ ${viewport.label}: article content retains the legacy blue panel treatment ` +
+                  `(${articleBodyBackground}, ${articleBodyShadow}, ` +
+                  `${articleBodyFontFamily}, ${articleHeadingBorderWidth}px ${articleHeadingBorderColor}, ` +
+                  `marker=${articleHeadingMarkerDisplay}/${articleHeadingMarkerContent})`
               );
             }
           }
           if (route === "/work/") {
-            if (workHubCardCount < 1 || workHubNonGoldAccentCount !== 0 || workHubRoundedCardCount !== 0) {
+            if (
+              workHubCardCount < 1 ||
+              workHubNonGoldAccentCount !== 0 ||
+              workHubRoundedCardCount !== 0
+            ) {
               failures.push(
-                `${route} @ ${viewport.label}: WorkHub cards do not use the single gold, square-corner system `
-                + `(cards=${workHubCardCount}, nonGold=${workHubNonGoldAccentCount}, rounded=${workHubRoundedCardCount})`
+                `${route} @ ${viewport.label}: WorkHub cards do not use the single gold, square-corner system ` +
+                  `(cards=${workHubCardCount}, nonGold=${workHubNonGoldAccentCount}, rounded=${workHubRoundedCardCount})`
               );
             }
           }
           if (visibleWatermarkCount !== 0) {
-            failures.push(`${route} @ ${viewport.label}: a decorative Arabic watermark remains visible`);
+            failures.push(
+              `${route} @ ${viewport.label}: a decorative Arabic watermark remains visible`
+            );
           }
           if (viewport.width >= 1366 && desktopNavFontSize > 11.5) {
             failures.push(
-              `${route} @ ${viewport.label}: desktop navigation type is oversized `
-              + `(${desktopNavFontSize.toFixed(1)}px)`
+              `${route} @ ${viewport.label}: desktop navigation type is oversized ` +
+                `(${desktopNavFontSize.toFixed(1)}px)`
             );
           }
           if (route === "/writing/" && viewport.width === 1366) {
             if (badgeWidth < 52 || badgeHeight < 52 || badgeSpans !== 2) {
               failures.push(
-                `${route} @ ${viewport.label}: indexed badge is not a centered 52px two-part badge `
-                + `(width=${badgeWidth}, height=${badgeHeight}, spans=${badgeSpans})`
+                `${route} @ ${viewport.label}: indexed badge is not a centered 52px two-part badge ` +
+                  `(width=${badgeWidth}, height=${badgeHeight}, spans=${badgeSpans})`
               );
             }
             if (destinationCardCount < 1 || invalidDestinationCards !== 0) {
@@ -1035,24 +1051,24 @@ test(
               );
             }
             if (
-              viewport.width >= 1366
-              && (contactGridLeft < 23 || contactGridRight > clientWidth - 23)
+              viewport.width >= 1366 &&
+              (contactGridLeft < 23 || contactGridRight > clientWidth - 23)
             ) {
               failures.push(
-                `${route} @ ${viewport.label}: contact content touches the viewport edge `
-                + `(left=${contactGridLeft.toFixed(1)}, right=${contactGridRight.toFixed(1)})`
+                `${route} @ ${viewport.label}: contact content touches the viewport edge ` +
+                  `(left=${contactGridLeft.toFixed(1)}, right=${contactGridRight.toFixed(1)})`
               );
             }
             if (viewport.width >= 1366 && contactFormPadding > 40) {
               failures.push(
-                `${route} @ ${viewport.label}: contact form wastes space with `
-                + `${contactFormPadding.toFixed(1)}px internal padding`
+                `${route} @ ${viewport.label}: contact form wastes space with ` +
+                  `${contactFormPadding.toFixed(1)}px internal padding`
               );
             }
             if (contactLabelColor !== "rgb(217, 164, 65)") {
               failures.push(
-                `${route} @ ${viewport.label}: form labels retain a legacy non-brand color `
-                + `(${contactLabelColor})`
+                `${route} @ ${viewport.label}: form labels retain a legacy non-brand color ` +
+                  `(${contactLabelColor})`
               );
             }
           }
@@ -1065,14 +1081,14 @@ test(
             if (viewport.width >= 1366) {
               if (portraitIdEdgeInset < 8) {
                 failures.push(
-                  `${route} @ ${viewport.label}: portrait identity labels touch or clip their strip `
-                  + `(${portraitIdEdgeInset.toFixed(1)}px inset)`
+                  `${route} @ ${viewport.label}: portrait identity labels touch or clip their strip ` +
+                    `(${portraitIdEdgeInset.toFixed(1)}px inset)`
                 );
               }
               if (homeProjectMaxHeight > 480) {
                 failures.push(
-                  `${route} @ ${viewport.label}: selected evidence imagery is still oversized `
-                  + `(${homeProjectMaxHeight.toFixed(1)}px)`
+                  `${route} @ ${viewport.label}: selected evidence imagery is still oversized ` +
+                    `(${homeProjectMaxHeight.toFixed(1)}px)`
                 );
               }
               if (heroBottom > viewport.height + 1 || portraitBottom > viewport.height + 1) {
@@ -1086,9 +1102,7 @@ test(
                 );
               }
               if (portraitTop - heroTop > 104) {
-                failures.push(
-                  `${route} @ ${viewport.label}: portrait starts too low in the hero`
-                );
+                failures.push(`${route} @ ${viewport.label}: portrait starts too low in the hero`);
               }
               if (portraitBackground !== pageBackground) {
                 failures.push(
@@ -1097,27 +1111,36 @@ test(
               }
               if (portraitCardBottomGap > 12.5) {
                 failures.push(
-                  `${route} @ ${viewport.label}: portrait card has excessive lower frame padding `
-                  + `(${portraitCardBottomGap.toFixed(1)}px)`
+                  `${route} @ ${viewport.label}: portrait card has excessive lower frame padding ` +
+                    `(${portraitCardBottomGap.toFixed(1)}px)`
                 );
               }
             }
           }
           if (route === "/about/") {
             if (portraitCount !== 1 || removedSceneCount !== 0) {
-              failures.push(`${route} @ ${viewport.label}: about must show one static portrait with no engineering scene`);
+              failures.push(
+                `${route} @ ${viewport.label}: about must show one static portrait with no engineering scene`
+              );
             }
-            if (viewport.width === 1366 && documentTitle !== "Embedded Systems & IoT R&D Engineer") {
+            if (
+              viewport.width === 1366 &&
+              documentTitle !== "Embedded Systems & IoT R&D Engineer"
+            ) {
               failures.push(
                 `${route} @ ${viewport.label}: browser title is still suffixed (${documentTitle})`
               );
             }
             if (viewport.width >= 1366) {
-              if (aboutHeadingFontSize > 88 || aboutHeadingLeft < 23 || aboutHeadingRight > clientWidth - 23) {
+              if (
+                aboutHeadingFontSize > 88 ||
+                aboutHeadingLeft < 23 ||
+                aboutHeadingRight > clientWidth - 23
+              ) {
                 failures.push(
-                  `${route} @ ${viewport.label}: about hero type is oversized or clipped `
-                  + `(font=${aboutHeadingFontSize.toFixed(1)}, left=${aboutHeadingLeft.toFixed(1)}, `
-                  + `right=${aboutHeadingRight.toFixed(1)})`
+                  `${route} @ ${viewport.label}: about hero type is oversized or clipped ` +
+                    `(font=${aboutHeadingFontSize.toFixed(1)}, left=${aboutHeadingLeft.toFixed(1)}, ` +
+                    `right=${aboutHeadingRight.toFixed(1)})`
                 );
               }
               if (aboutPortraitWidth > 420) {
@@ -1126,20 +1149,25 @@ test(
                 );
               }
               if (/rgb\(18, 22, 45\)/.test(contactCalloutBackground)) {
-                failures.push(`${route} @ ${viewport.label}: legacy blue contact CTA is still active`);
-              }
-              if (aboutIntroBeforeDisplay !== "none" || aboutStoryLabelColor !== "rgb(217, 164, 65)") {
                 failures.push(
-                  `${route} @ ${viewport.label}: legacy decorative colors remain in About `
-                  + `(${aboutIntroBeforeDisplay}, ${aboutStoryLabelColor})`
+                  `${route} @ ${viewport.label}: legacy blue contact CTA is still active`
+                );
+              }
+              if (
+                aboutIntroBeforeDisplay !== "none" ||
+                aboutStoryLabelColor !== "rgb(217, 164, 65)"
+              ) {
+                failures.push(
+                  `${route} @ ${viewport.label}: legacy decorative colors remain in About ` +
+                    `(${aboutIntroBeforeDisplay}, ${aboutStoryLabelColor})`
                 );
               }
             }
           }
           if (route === "/tools/" && viewport.width === 1366) {
-            if (hasUnifiedCatalog || calculatorThumbnails !== 0 || toolCategoryCardCount !== 6) {
+            if (hasUnifiedCatalog || calculatorThumbnails !== 0 || toolCategoryCardCount !== 8) {
               failures.push(
-                `${route} @ ${viewport.label}: the root must show six consolidated categories before individual tools`
+                `${route} @ ${viewport.label}: the root must show eight consolidated categories before individual tools`
               );
             }
             if (invalidToolCategoryCards !== 0) {
@@ -1148,9 +1176,7 @@ test(
               );
             }
             if (hasScrollCue) {
-              failures.push(
-                `${route} @ ${viewport.label}: the old scroll cue remains`
-              );
+              failures.push(`${route} @ ${viewport.label}: the old scroll cue remains`);
             }
           }
           if (route === "/tools/category/circuit-design/" && viewport.width === 1366) {
@@ -1165,9 +1191,9 @@ test(
               );
             }
             if (
-              calculatorThumbnailVisualVariants !== 26
-              || calculatorThumbnailGenericLabels !== 0
-              || Math.abs(calculatorThumbnailAspect - 16 / 9) > 0.03
+              calculatorThumbnailVisualVariants !== 26 ||
+              calculatorThumbnailGenericLabels !== 0 ||
+              Math.abs(calculatorThumbnailAspect - 16 / 9) > 0.03
             ) {
               failures.push(
                 `${route} @ ${viewport.label}: category covers are not purpose-specific 16:9 visuals`
@@ -1175,74 +1201,76 @@ test(
             }
             if (categoryCardGridGap < 16) {
               failures.push(
-                `${route} @ ${viewport.label}: tool cards are still joined without useful spacing `
-                + `(${categoryCardGridGap.toFixed(1)}px)`
+                `${route} @ ${viewport.label}: tool cards are still joined without useful spacing ` +
+                  `(${categoryCardGridGap.toFixed(1)}px)`
               );
             }
           }
           if (route === "/tools/security-command-builder/" && viewport.width === 1366) {
             if (
-              securityPrimaryColor !== "rgb(20, 16, 10)"
-              || securityCurrentStepColor !== "rgb(20, 16, 10)"
-              || securityInactiveStepColor !== primaryTextColor
+              securityPrimaryColor !== "rgb(20, 16, 10)" ||
+              securityCurrentStepColor !== "rgb(20, 16, 10)" ||
+              securityInactiveStepColor !== primaryTextColor
             ) {
               failures.push(
-                `${route} @ ${viewport.label}: security controls retain muted button labels `
-                + `(${securityPrimaryColor}, ${securityCurrentStepColor}, ${securityInactiveStepColor})`
+                `${route} @ ${viewport.label}: security controls retain muted button labels ` +
+                  `(${securityPrimaryColor}, ${securityCurrentStepColor}, ${securityInactiveStepColor})`
               );
             }
           }
           if (route === "/tools/555-timer-astable-circuit-calculator/" && viewport.width === 1366) {
             if (
-              diagramLabelColor !== primaryTextColor
-              || (hasDiagramCaption && diagramCaptionColor !== "rgb(138, 147, 161)")
+              diagramLabelColor !== primaryTextColor ||
+              (hasDiagramCaption && diagramCaptionColor !== "rgb(138, 147, 161)")
             ) {
               failures.push(
-                `${route} @ ${viewport.label}: calculator diagram labels are not legible `
-                + `(${diagramLabelColor}, ${diagramCaptionColor})`
+                `${route} @ ${viewport.label}: calculator diagram labels are not legible ` +
+                  `(${diagramLabelColor}, ${diagramCaptionColor})`
               );
             }
           }
-          if (route.includes("calculator") && viewport.width >= 1366 && toolBodyWidth < viewport.width * 0.8) {
+          if (
+            route.includes("calculator") &&
+            viewport.width >= 1366 &&
+            toolBodyWidth < viewport.width * 0.8
+          ) {
             failures.push(
               `${route} @ ${viewport.label}: calculator content remains narrowly centered`
             );
           }
           if (
-            route.includes("calculator")
-            && viewport.width >= 1366
-            && calculatorPanelWidth < toolBodyWidth * 0.88
+            route.includes("calculator") &&
+            viewport.width >= 1366 &&
+            calculatorPanelWidth < toolBodyWidth * 0.88
           ) {
             failures.push(
-              `${route} @ ${viewport.label}: interactive calculator panel remains a centered island `
-              + `(panel=${calculatorPanelWidth.toFixed(1)}px, body=${toolBodyWidth.toFixed(1)}px)`
+              `${route} @ ${viewport.label}: interactive calculator panel remains a centered island ` +
+                `(panel=${calculatorPanelWidth.toFixed(1)}px, body=${toolBodyWidth.toFixed(1)}px)`
             );
           }
           if (
-            route.includes("calculator")
-            && viewport.width === 1366
-            && calculatorFirstControlBottom > viewport.height
+            route.includes("calculator") &&
+            viewport.width === 1366 &&
+            calculatorFirstControlBottom > viewport.height
           ) {
             failures.push(
-              `${route} @ ${viewport.label}: the first calculator control is below the initial viewport `
-              + `(bottom=${calculatorFirstControlBottom.toFixed(1)}px)`
+              `${route} @ ${viewport.label}: the first calculator control is below the initial viewport ` +
+                `(bottom=${calculatorFirstControlBottom.toFixed(1)}px)`
             );
           }
           if (
-            route.includes("calculator")
-            && viewport.width >= 1366
-            && calculatorPanelTop >= calculatorExplanationTop
+            route.includes("calculator") &&
+            viewport.width >= 1366 &&
+            calculatorPanelTop >= calculatorExplanationTop
           ) {
             failures.push(
-              `${route} @ ${viewport.label}: explanation still appears before the working calculator `
-              + `(calculator=${calculatorPanelTop.toFixed(1)}, explanation=${calculatorExplanationTop.toFixed(1)})`
+              `${route} @ ${viewport.label}: explanation still appears before the working calculator ` +
+                `(calculator=${calculatorPanelTop.toFixed(1)}, explanation=${calculatorExplanationTop.toFixed(1)})`
             );
           }
           if (route === "/tools/ohms-law-calculator/" && viewport.width === 1366) {
             if (!hasCalculatorFinder) {
-              failures.push(
-                `${route} @ ${viewport.label}: shared calculator finder is missing`
-              );
+              failures.push(`${route} @ ${viewport.label}: shared calculator finder is missing`);
             }
           }
           if (route === "/tools/sensor-code-generator/" && viewport.width === 1366) {
@@ -1343,14 +1371,14 @@ test(
         failures.push("client navigation: floating mission UI covers the initial home route");
       }
       if (
-        !focus.isNav
-        || focus.width < 3
-        || focus.style === "none"
-        || !/rgb\(232, 188, 102\)|rgb\(217, 164, 65\)/.test(focus.color)
+        !focus.isNav ||
+        focus.width < 3 ||
+        focus.style === "none" ||
+        !/rgb\(232, 188, 102\)|rgb\(217, 164, 65\)/.test(focus.color)
       ) {
         failures.push(
-          `keyboard focus: first navigation link lacks the required 3px ASL gold outline `
-          + `(${focus.width}px ${focus.style} ${focus.color})`
+          `keyboard focus: first navigation link lacks the required 3px ASL gold outline ` +
+            `(${focus.width}px ${focus.style} ${focus.color})`
         );
       }
       if (navigation.toolsHasMissionUi) {

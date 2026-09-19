@@ -47,6 +47,7 @@ test('power schematics keep component labels off conductors and show a component
   await page.setViewport({width:1440,height:1000});
   await page.goto('http://localhost:3000/tools/category/power-conversion-supplies/',{waitUntil:'networkidle0'});
   await page.evaluate(()=>document.documentElement.dataset.theme='light');
+  await page.evaluate(async()=>{await Promise.all([...document.images].map(image=>{image.loading='eager';return image.decode();}));});
   assert.deepEqual(await page.$$eval('img',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[]);
   await page.screenshot({path:'test-results/power-schematic-layout/covers-light.png',fullPage:true});
   assert.deepEqual(errors,[]);

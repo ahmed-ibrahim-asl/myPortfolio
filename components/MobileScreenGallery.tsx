@@ -3,11 +3,12 @@
 import { useId, useRef, useState } from "react";
 import type { MobileScreen } from "@/data/mobile-screens";
 import styles from "./MobileScreenGallery.module.css";
+import { PublicImage } from "./PublicImage";
 
 function ScreenImage({ screen }: { screen: MobileScreen }) {
   const { crop } = screen;
   return <span className={styles.screen} style={{ aspectRatio: `${crop.width} / ${crop.height}` }}>
-    <img src={screen.src} alt={screen.title} loading="lazy" draggable={false} style={{
+    <PublicImage src={screen.src} alt={screen.title} loading="lazy" draggable={false} sizes="(max-width: 760px) 70vw, 320px" style={{
       width: `${screen.sourceWidth / crop.width * 100}%`,
       height: `${screen.sourceHeight / crop.height * 100}%`,
       left: `${-crop.x / crop.width * 100}%`,

@@ -7,6 +7,8 @@ import { gradifySections } from "@/data/gradify-sections";
 import { toolCategories } from "@/data/tool-categories";
 import { projects } from "@/data/portfolio";
 import { groupWork } from "@/data/work-categories";
+import {satelliteCalculators} from '@/data/satellite-course';
+import {rfCalculators} from '@/data/rf-calculators';
 
 const routes = [
   { pathname: "", changeFrequency: "weekly", priority: 1 },
@@ -53,5 +55,13 @@ export default function sitemap() {
     }))
   ]);
   // Keep only canonical, published routes. Omit lastModified when no reliable date exists.
-  return [...new Map([...pages, ...calculators, ...posts, ...gradify, ...categories, ...work].map(entry => [entry.url, entry])).values()];
+  const satellite=[...satelliteCalculators.map(tool=>({url:`${siteConfig.url}/tools/satellite/${tool.slug}/`,changeFrequency:'monthly',priority:0.7}))];
+  const rf=[...rfCalculators.map(tool=>({url:`${siteConfig.url}/tools/rf/${tool.slug}/`,changeFrequency:'monthly',priority:0.7}))];
+  const arabicRoutes=[
+    "/ar/", "/ar/about/", "/ar/contact/", "/ar/work/", "/ar/tools/", "/ar/notes/",
+    ...toolCategories.map(category=>`/ar/tools/category/${category.slug}/`),
+    ...satelliteCalculators.map(tool=>`/ar/tools/satellite/${tool.slug}/`),
+    ...rfCalculators.map(tool=>`/ar/tools/rf/${tool.slug}/`)
+  ].map(pathname=>({url:`${siteConfig.url}${pathname}`,changeFrequency:'monthly',priority:0.65}));
+  return [...new Map([...pages, ...calculators, ...posts, ...gradify, ...categories, ...work,...satellite,...rf,...arabicRoutes].map(entry => [entry.url, entry])).values()];
 }

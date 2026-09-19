@@ -1,0 +1,5 @@
+import { profile } from "@/data/portfolio";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({ title: "عن أحمد إبراهيم عسل", description: "تعرف على خبرة أحمد إبراهيم عسل في الأنظمة المدمجة وإنترنت الأشياء والروبوتات والتعليم الهندسي.", pathname: "/ar/about/", locale: "ar", translated: true });
+export default function ArabicAboutPage(){return <div className="asl-page asl-arabic-page"><section className="page-intro shell asl-page-intro"><p className="eyebrow">مهندس / مُدرّس / متعلم طول الوقت</p><h1>أحمد إبراهيم عسل</h1><p className="page-lede">أنا مهندس بحث وتطوير في الأنظمة المدمجة وإنترنت الأشياء. شغلي بيبدأ من فهم الإشارة والقرار المطلوب، وبعدها أوصل الإلكترونيات بالـ firmware والاتصالات والواجهة لحد ما يبقى عندنا نظام نقدر نختبره ونطوره.</p><p>اسم العائلة «عسل» ممكن يظهر في السجلات الإنجليزية بصيغ Asl أو Assal أو Assl، والصيغة الأساسية المستخدمة هنا هي Asl.</p><a className="btn-primary" href={profile.cv} target="_blank" rel="noreferrer">افتح السيرة الذاتية</a></section></div>}

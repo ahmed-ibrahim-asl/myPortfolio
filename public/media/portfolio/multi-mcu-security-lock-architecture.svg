@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-MCU security lock architecture</title>
+  <desc id="desc">An HMI microcontroller and a control microcontroller communicate across an authenticated UART trust boundary. The HMI connects to a keypad and display. The control side connects to EEPROM, alarm, motor driver, and lock actuator.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 12 6 0 12Z" fill="#4aa3d8"/></marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0 12 6 0 12Z" fill="#e2ac3f"/></marker>
+    <style>
+      .label{font:700 25px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:2px;fill:#f4f7fb}.small{font:600 19px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1px;fill:#aebfce}.domain{fill:#111a27;stroke:#35475c;stroke-width:3}.block{fill:#17283d;stroke:#4aa3d8;stroke-width:4}.peripheral{fill:#121f30;stroke:#71849a;stroke-width:3}.secure{fill:#2b2417;stroke:#e2ac3f;stroke-width:4}.wire{fill:none;stroke:#4aa3d8;stroke-width:5;marker-end:url(#arrow-blue)}.status{fill:none;stroke:#e2ac3f;stroke-width:5;marker-end:url(#arrow-amber)}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="#0b111a"/>
+  <path d="M800 110V900" stroke="#e2ac3f" stroke-width="3" stroke-dasharray="12 14"/>
+  <text x="800" y="82" text-anchor="middle" class="small" fill="#e2ac3f">TRUST BOUNDARY</text>
+
+  <rect x="90" y="130" width="620" height="720" rx="18" class="domain"/>
+  <rect x="890" y="130" width="620" height="720" rx="18" class="domain"/>
+  <text x="130" y="188" class="small">INTERFACE DOMAIN</text>
+  <text x="930" y="188" class="small">CONTROL DOMAIN</text>
+
+  <rect x="250" y="370" width="300" height="170" rx="12" class="block"/>
+  <text x="400" y="445" text-anchor="middle" class="label">HMI MCU</text>
+  <text x="400" y="483" text-anchor="middle" class="small">INPUT + FEEDBACK</text>
+  <rect x="150" y="235" width="210" height="90" rx="10" class="peripheral"/><text x="255" y="288" text-anchor="middle" class="label">KEYPAD</text>
+  <rect x="440" y="235" width="210" height="90" rx="10" class="peripheral"/><text x="545" y="288" text-anchor="middle" class="label">DISPLAY</text>
+  <path d="M255 325V370" class="wire"/><path d="M545 370V325" class="status"/>
+
+  <rect x="1050" y="370" width="300" height="170" rx="12" class="block"/>
+  <text x="1200" y="445" text-anchor="middle" class="label">CONTROL MCU</text>
+  <text x="1200" y="483" text-anchor="middle" class="small">POLICY + ACTUATION</text>
+  <rect x="940" y="235" width="210" height="90" rx="10" class="peripheral"/><text x="1045" y="288" text-anchor="middle" class="label">EEPROM</text>
+  <rect x="1250" y="235" width="210" height="90" rx="10" class="peripheral"/><text x="1355" y="288" text-anchor="middle" class="label">ALARM</text>
+  <rect x="940" y="650" width="240" height="95" rx="10" class="peripheral"/><text x="1060" y="707" text-anchor="middle" class="label">MOTOR DRIVER</text>
+  <rect x="1260" y="650" width="200" height="95" rx="10" class="peripheral"/><text x="1360" y="707" text-anchor="middle" class="small">LOCK ACTUATOR</text>
+  <path d="M1045 325V370" class="status"/><path d="M1355 370V325" class="wire"/><path d="M1200 540V600H1060V650" class="wire"/><path d="M1180 697H1260" class="wire"/>
+
+  <rect x="655" y="400" width="290" height="110" rx="10" class="secure"/>
+  <text x="800" y="447" text-anchor="middle" class="label">AUTHENTICATED UART</text>
+  <text x="800" y="480" text-anchor="middle" class="small">FRAMED + VERIFIED</text>
+  <path d="M550 430H655" class="wire"/><path d="M945 480H550" class="status"/>
+  <text x="605" y="412" class="small">COMMAND</text><text x="900" y="535" text-anchor="end" class="small">STATUS</text>
+
+  <text x="100" y="930" class="small">ACCESS REQUESTS STAY SEPARATE FROM ACTUATOR AUTHORITY</text>
+  <text x="1500" y="930" text-anchor="end" class="small">ASL / EMBEDDED SECURITY ARCHITECTURE</text>
+</svg>

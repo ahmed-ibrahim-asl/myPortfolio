@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { plannedNotes } from "@/data/planned-notes";
+import { createPageMetadata } from "@/lib/seo";
+export const metadata=createPageMetadata({title:"ملاحظات هندسية",description:"خطة موضوعات هندسية سيكتبها أحمد عسل بعد اكتمال التجارب والأدلة.",pathname:"/ar/notes/",locale:"ar",translated:true});
+export default function ArabicNotesPage(){return <div className="asl-page asl-arabic-page"><section className="page-intro shell asl-page-intro"><p className="eyebrow">ملاحظات ميدانية</p><h1>المقالات العربية قيد الإعداد</h1><p className="page-lede">لن أنشر صفحة فارغة. كل موضوع سيتحول لمقال بعد اكتمال الشرح والتجارب والمراجع.</p><p>المحتوى التفصيلي متاح بالإنجليزية</p><Link className="btn-secondary" href="/notes/">افتح الملاحظات الإنجليزية</Link></section><section className="shell page-section"><div className="planned-notes-grid">{plannedNotes.map(note=><article className="planned-note-card" key={note.title}><p className="mono">{note.topic} / مخطط</p><h2 dir="auto">{note.title}</h2><p>{note.summary}</p></article>)}</div></section></div>}

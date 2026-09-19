@@ -3,6 +3,8 @@ export interface PageMetadataOptions {
   description: string;
   pathname?: string;
   image?: string;
+  locale?: "en" | "ar";
+  translated?: boolean;
 }
 
 export interface JsonLdData {

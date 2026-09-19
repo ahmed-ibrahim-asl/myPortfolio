@@ -1,0 +1,17 @@
+.catalog { display: grid; gap: clamp(1.5rem, 3vw, 2.75rem); }
+.searchRow { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .75rem; align-items: stretch; }
+.searchRow button { min-height: 44px; padding: .65rem 1rem; border: 1px solid var(--line); background: var(--surface); color: var(--text); font: 650 .875rem/1 var(--font-sans); }
+.resultRow { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; color: var(--muted); }
+.resultRow strong { color: var(--text); }
+.group { display: grid; gap: 1rem; }
+.group > h2 { margin: 0; padding-block-end: .7rem; border-block-end: 1px solid var(--line); }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.card { display: grid; grid-template-columns: minmax(9rem, 34%) 1fr; gap: 1rem; min-width: 0; padding: 1rem; border: 1px solid var(--line); background: var(--surface); color: inherit; text-decoration: none; }
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card h3 { margin: .25rem 0 .45rem; }
+.card p { margin: 0; color: var(--muted); }
+.cover { display: grid; place-items: center; min-height: 9rem; overflow: hidden; border: 1px solid var(--line); background: var(--bg); }
+.cover img { width: 100%; height: 100%; object-fit: contain; }
+.meta { font: 600 .6875rem/1.3 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; }
+.open { display: inline-block; margin-block-start: 1rem; color: var(--accent); font-weight: 700; }
+@media (max-width: 720px) { .cards, .card { grid-template-columns: 1fr; } .searchRow { grid-template-columns: 1fr; } .searchRow button { width: 100%; } }

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { PublicImage } from "@/components/PublicImage";
 
 interface ToolNavCardProps {
   tool: {
@@ -20,10 +20,9 @@ export function ToolNavCard({ tool, index }: ToolNavCardProps) {
     <Link className="project-card card-link tool-nav-card" href={tool.href}>
       {tool.coverImage ? (
         <div className="tool-card-cover">
-          <Image
+          <PublicImage
             src={tool.coverImage}
             alt={`${tool.title} tool cover`}
-            fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="tool-card-cover-img"
           />

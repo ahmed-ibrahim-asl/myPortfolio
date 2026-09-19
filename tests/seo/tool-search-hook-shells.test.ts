@@ -18,7 +18,7 @@ describe('tool search-hook shell integration', () => {
     const guideIndex = markup.indexOf('data-tool-search-hook');
     expect(answerIndex).toBeGreaterThan(-1);
     expect(guideIndex).toBeGreaterThan(-1);
-    expect(answerIndex).toBeLessThan(workbenchIndex);
+    expect(answerIndex).toBeGreaterThan(workbenchIndex);
     expect(guideIndex).toBeGreaterThan(workbenchIndex);
   });
 

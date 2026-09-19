@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { PublicImage } from "@/components/PublicImage";
 import { calculatorCategories } from "@/data/calculators";
 import { filterToolItems } from "@/lib/tool-search";
 import { CalculatorThumbnail } from "./CalculatorThumbnail";
@@ -134,10 +134,9 @@ export function UnifiedToolsIndex({
           >
             {tool.kind === "Workbench" && tool.coverImage ? (
               <div className="unified-tool-cover">
-                <Image
+                <PublicImage
                   src={tool.coverImage}
                   alt=""
-                  fill
                   sizes="(max-width: 700px) 100vw, (max-width: 1300px) 50vw, 33vw"
                 />
                 <span>{tool.icon}</span>

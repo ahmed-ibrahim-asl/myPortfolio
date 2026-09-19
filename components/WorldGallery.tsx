@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ambientWorlds } from "@/data/ambient";
+import { PublicImage } from "@/components/PublicImage";
 
 export function WorldGallery() {
   const [animationsEnabled, setAnimationsEnabled] = useState(false);
@@ -42,10 +43,11 @@ export function WorldGallery() {
               </div>
               <div className="world-media">
                 {animationsEnabled ? (
-                  <img
+                  <PublicImage
                     src={world.image}
                     alt={`Pixel-art scene representing ${world.label}`}
                     loading={world.featured ? "eager" : "lazy"}
+                    sizes="(max-width: 760px) 100vw, 33vw"
                     referrerPolicy="no-referrer"
                   />
                 ) : (

@@ -2,6 +2,8 @@ import React from "react";
 import { engineeringTools } from "@/data/tools";
 import { ToolsCategoryHub } from "@/components/tools/ToolsCategoryHub";
 import { getAllTools } from "@/lib/tools";
+import { satelliteCalculators } from "@/data/satellite-course";
+import { rfCalculators } from "@/data/rf-calculators";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -13,11 +15,12 @@ export const metadata = createPageMetadata({
 
 export default function ToolsIndexPage() {
   const calculators = getAllTools();
+  const totalToolCount = engineeringTools.length + calculators.length + satelliteCalculators.length + rfCalculators.length;
 
   return (
     <div className="asl-page asl-tools-register">
       <header className="section shell asl-tools-header" aria-labelledby="tools-title">
-        <p className="eyebrow">Engineering workbench / {engineeringTools.length + calculators.length} working instruments</p>
+        <p className="eyebrow">Engineering workbench / {totalToolCount} working instruments</p>
         <div className="asl-tools-heading-grid">
           <h1 id="tools-title">Find the right instrument for the job.</h1>
           <p className="section-intro">

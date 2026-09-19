@@ -7,6 +7,7 @@ import styles from "./ToolSearchHook.module.css";
 
 type ToolSearchHookProps = {
   slug: string;
+  pathname?: string;
 };
 
 export function ToolDirectAnswer({ slug }: ToolSearchHookProps) {
@@ -93,11 +94,11 @@ export function ToolSearchHook({ slug }: ToolSearchHookProps) {
   );
 }
 
-export function ToolSearchSchema({ slug }: ToolSearchHookProps) {
+export function ToolSearchSchema({ slug, pathname }: ToolSearchHookProps) {
   const hook = getToolSearchHook(slug);
   if (!hook) return null;
 
-  const url = absoluteUrl(`/tools/${slug}/`);
+  const url = absoluteUrl(pathname ?? `/tools/${slug}/`);
   const toolsUrl = absoluteUrl("/tools/");
   return <>
     <JsonLd data={{

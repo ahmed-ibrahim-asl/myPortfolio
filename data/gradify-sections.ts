@@ -1,6 +1,6 @@
 export const gradifySections = [
-  { slug: "calculator", title: "GPA calculator", detail: "Calculate semester and cumulative GPA, then plan the grades you need next.", label: "Courses & grades" },
-  { slug: "planner", title: "Graduation planning", detail: "Import a Delta Engineering transcript, check prerequisites, and plan your remaining semesters.", label: "Transcript & degree plan" },
-  { slug: "guide", title: "Grading guide", detail: "Choose your university to explore its grading scale and understand how points are calculated.", label: "University grading rules" }
+  { slug: "calculator", title: "GPA calculator", h1: "Free GPA & CGPA Calculator", seoTitle: "GPA Calculator & CGPA Calculator | Gradify", metaDescription: "Calculate semester GPA and cumulative GPA (CGPA) free using course grades and credit hours, then estimate the grades needed to reach your target GPA.", detail: "Calculate semester and cumulative GPA, then plan the grades you need next.", label: "Courses & grades" },
+  { slug: "planner", title: "Graduation planning", h1: "Graduation Planning", seoTitle: "Graduation Planner | Gradify", metaDescription: "Import a Delta Engineering transcript, check prerequisites, and plan remaining semesters with a clear graduation path and GPA targets.", detail: "Import a Delta Engineering transcript, check prerequisites, and plan your remaining semesters.", label: "Transcript & degree plan" },
+  { slug: "guide", title: "Grading guide", h1: "University Grading Guide", seoTitle: "University Grading Scale Guide | Gradify", metaDescription: "Compare university grading scales and understand how letter grades, grade points, GPA, and cumulative GPA are calculated.", detail: "Choose your university to explore its grading scale and understand how points are calculated.", label: "University grading rules" }
 ] as const;
 export type GradifySection = typeof gradifySections[number]["slug"];

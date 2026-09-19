@@ -3,7 +3,7 @@ import test from "node:test";
 import puppeteer from "puppeteer-core";
 
 const executablePath = "C:/Program Files/Google/Chrome/Application/chrome.exe";
-const baseUrl = process.env.TEST_BASE_URL || "http://127.0.0.1:3105";
+const baseUrl = process.env.TEST_BASE_URL || "http://localhost:3000";
 
 test("the desktop portrait mat has equal left and right insets", async () => {
   const browser = await puppeteer.launch({ executablePath, headless: true, args: ["--no-sandbox"] });

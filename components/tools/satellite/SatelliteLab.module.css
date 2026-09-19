@@ -1,0 +1,360 @@
+.lab {
+  --lab-surface: var(--bg-surface, var(--card-bg, var(--bg-secondary, #f5f7fb)));
+  --lab-text: var(--text-primary, #16243b);
+  --lab-muted: var(--text-secondary, #607086);
+  --lab-border: var(--line, var(--border-color, #d7dfeb));
+  color: var(--lab-text);
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+.lab * {
+  box-sizing: border-box;
+}
+.lab h2 {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  margin: 6px 0;
+}
+.lab h3 {
+  font-size: 1.05rem;
+  margin: 0 0 12px;
+}
+.lab p {
+  color: var(--lab-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 10px 0;
+}
+.heading,
+.equipmentTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+.eyebrow {
+  color: var(--lab-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.lab button,
+.lab select,
+.lab input[type="number"],
+.lab textarea {
+  font: inherit;
+  color: var(--lab-text);
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border);
+  border-radius: 9px;
+  padding: 10px 12px;
+  min-height: 44px;
+  max-width: 100%;
+}
+.lab button {
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.lab button:hover {
+  border-color: #3b82f6;
+}
+.lab button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.lab :is(button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+.lab button[aria-pressed="true"] {
+  border-color: #10b981;
+  background: color-mix(in srgb, #10b981 9%, var(--lab-surface));
+}
+.experimentSelect {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.experimentSelect select {
+  width: 100%;
+  font-weight: 500;
+}
+.brief,
+.panel,
+.equipment {
+  border: 1px solid var(--lab-border);
+  background: var(--lab-surface);
+  padding: 20px;
+  border-radius: 16px;
+  min-width: 0;
+}
+.brief {
+  border-left: 3px solid #3b82f6;
+}
+.lab details summary {
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.lab details summary::before {
+  content: "＋";
+  margin-right: 8px;
+}
+.lab details[open] summary::before {
+  content: "−";
+}
+.path {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.path span {
+  padding: 12px 18px;
+  border: 1px solid var(--lab-border);
+  border-radius: 12px;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  flex: 1;
+  min-width: 0;
+}
+.path .online {
+  border-color: #10b981;
+  background: color-mix(in srgb, #10b981 8%, var(--lab-surface));
+}
+.path b {
+  color: var(--lab-muted);
+}
+.bench {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 14px;
+}
+.equipmentTop h3 {
+  margin: 0;
+}
+.equipmentTop button {
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+.equipment .control {
+  margin-top: 14px;
+}
+.control {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  font-size: 0.79rem;
+  color: var(--lab-muted);
+}
+.control span {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.control strong {
+  font-weight: 600;
+  color: var(--lab-text);
+}
+.control select,
+.control input,
+.control textarea {
+  width: 100%;
+  min-width: 0;
+}
+.control input[type="range"] {
+  accent-color: #3b82f6;
+  margin: 0;
+  min-height: 32px;
+}
+.control textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.twocol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  min-width: 0;
+}
+.patches {
+  display: grid;
+  gap: 8px;
+}
+.patches button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.patches i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--lab-muted);
+  flex-shrink: 0;
+}
+.patches [aria-pressed="true"] i {
+  background: #10b981;
+}
+.patches span {
+  margin-left: auto;
+  font-size: 0.65rem;
+  color: var(--lab-muted);
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.scope {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: color-mix(in srgb, var(--lab-text) 3%, var(--lab-surface));
+  border: 1px solid var(--lab-border);
+  border-radius: 10px;
+  margin: 16px 0 8px;
+  color: var(--lab-text);
+}
+.legend {
+  font-size: 0.75rem !important;
+}
+.good {
+  color: var(--success-color, #16815f);
+}
+.bad {
+  color: var(--error-color, #d34545);
+}
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.channels span {
+  font-size: 0.72rem;
+  border: 1px solid var(--lab-border);
+  padding: 7px 10px;
+  border-radius: 20px;
+}
+.faults {
+  font-size: 0.8rem;
+  color: var(--error-color, #d34545);
+  line-height: 1.8;
+}
+.sensor,
+.terminal {
+  display: block;
+  border: 1px solid var(--lab-border);
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 9px;
+  font:
+    600 0.95rem/1.5 ui-monospace,
+    monospace;
+  overflow-wrap: anywhere;
+}
+.sensor {
+  color: var(--success-color, #16815f);
+}
+.check {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+.check input {
+  width: 18px;
+  height: 18px;
+}
+.video {
+  max-width: 450px;
+  aspect-ratio: 16/9;
+  background: #101825;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e5edf7;
+  overflow: hidden;
+  margin: 14px auto;
+  font-size: 0.7rem;
+}
+.bars {
+  width: 100%;
+  flex: 1;
+  background: linear-gradient(
+    to right,
+    #eee 0 14.3%,
+    #ffe53a 14.3% 28.6%,
+    #38d2e5 28.6% 42.9%,
+    #42dc77 42.9% 57.2%,
+    #ed55d6 57.2% 71.5%,
+    #e85555 71.5% 85.8%,
+    #458ae6 85.8%
+  );
+}
+.video span {
+  padding: 12px;
+}
+.source {
+  font-size: 0.73rem !important;
+}
+.lab output {
+  min-width: 0;
+}
+@media (max-width: 650px) {
+  .twocol {
+    grid-template-columns: 1fr;
+  }
+  .heading {
+    align-items: flex-start;
+  }
+  .heading button {
+    font-size: 0.72rem;
+  }
+  .panel,
+  .equipment,
+  .brief {
+    padding: 16px;
+  }
+  .path {
+    gap: 5px;
+  }
+  .path span {
+    padding: 10px 6px;
+    font-size: 0.67rem;
+  }
+  .path b {
+    font-size: 0.75rem;
+  }
+  .equipmentTop {
+    flex-wrap: wrap;
+  }
+  .patches span {
+    font-size: 0.6rem;
+  }
+  .channels span {
+    font-size: 0.68rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lab * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

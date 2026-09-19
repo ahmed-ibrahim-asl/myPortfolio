@@ -24,6 +24,7 @@ test('SMPS modes, phases, validation, artwork and responsive pages',async()=>{
   const input=await page.$('main input[type=number]');await input.click();await page.keyboard.down('Control');await page.keyboard.press('A');await page.keyboard.up('Control');await page.keyboard.press('Backspace');assert.equal(await input.evaluate(e=>e.value),'');await page.waitForSelector('[role=alert]');assert.equal(await page.$('svg[aria-label^="Isolated flyback"]'),null);
   await page.goto(`${base}/tools/category/power-conversion-supplies/`,{waitUntil:'networkidle0'});
   assert.ok(await page.$('a[href$="/tools/smps-designer/"]'));
+  await page.evaluate(async()=>{await Promise.all([...document.images].map(image=>{image.loading='eager';return image.decode();}));});
   assert.deepEqual(await page.$$eval('.asl-tool-category-catalog img',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[]);
   assert.deepEqual(errors,[]);
  }finally{await browser.close();}

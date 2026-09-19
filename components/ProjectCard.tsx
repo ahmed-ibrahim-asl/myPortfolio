@@ -1,5 +1,6 @@
 import React from "react";
 import { Project } from "@/types/portfolio";
+import { PublicImage } from "@/components/PublicImage";
 
 interface ProjectCardProps {
   project: Project;
@@ -22,10 +23,11 @@ export function ProjectCard({ project, index, compact = false }: ProjectCardProp
         <div className="project-media website-preview"><span className="mono">Website design / live project</span><strong>{project.title}</strong><span>{project.website}</span></div>
       ) : project.image ? (
         <div className="project-media">
-          <img
+          <PublicImage
             src={project.image}
             alt={`${project.title} hardware or interface`}
             loading="lazy"
+            sizes="(max-width: 760px) 100vw, 50vw"
           />
         </div>
       ) : (
@@ -40,7 +42,7 @@ export function ProjectCard({ project, index, compact = false }: ProjectCardProp
           aria-label={`${project.title} additional images`}
         >
           {project.gallery.map((image) => (
-            <a href={image.src} target="_blank" rel="noreferrer" key={image.src}><img src={image.src} alt={image.alt} loading="lazy" /></a>
+            <a href={image.src} target="_blank" rel="noreferrer" key={image.src}><PublicImage src={image.src} alt={image.alt} loading="lazy" sizes="160px" /></a>
           ))}
         </div>
       ) : null}
