@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -16,11 +16,20 @@ export function SiteHeader() {
   const links = [
     { href: homeHref, label: dictionary.nav.home },
     { href: `${prefix}/work`, label: dictionary.nav.work },
-    { href: `${prefix}/tools`, label: dictionary.nav.tools },
+    { href: `${prefix}/tools`, label: dictionary.nav.tools }
+  ];
+  const moreLinks = [
     { href: `${prefix}/notes`, label: dictionary.nav.notes },
     { href: `${prefix}/about`, label: dictionary.nav.about }
   ];
   const [open, setOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef<HTMLDetailsElement>(null);
+  const isActive = (href: string) =>
+    href === homeHref
+      ? pathname === homeHref || pathname === homeHref.replace(/\/$/, "")
+      : pathname === href || pathname.startsWith(`${href}/`);
+  const moreActive = moreLinks.some((link) => isActive(link.href));
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -29,11 +38,27 @@ export function SiteHeader() {
 
   useEffect(() => {
     const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape") {
+        setOpen(false);
+        setMoreOpen(false);
+      }
     };
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
   }, []);
+
+  useEffect(() => {
+    if (!moreOpen) return;
+    const closeOnOutsideClick = (event: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(event.target as Node)) setMoreOpen(false);
+    };
+    document.addEventListener("click", closeOnOutsideClick);
+    return () => document.removeEventListener("click", closeOnOutsideClick);
+  }, [moreOpen]);
+
+  useEffect(() => {
+    setMoreOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -54,11 +79,39 @@ export function SiteHeader() {
         </button>
         <nav id="site-navigation" className={`site-nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
           {links.map((link) => {
-            const active = link.href === homeHref
-              ? pathname === homeHref || pathname === homeHref.replace(/\/$/, "")
-              : pathname === link.href || pathname.startsWith(`${link.href}/`);
+            const active = isActive(link.href);
             return <Link key={link.href} href={link.href} className={active ? "active" : ""} aria-current={active ? "page" : undefined} onClick={() => setOpen(false)}>{link.label}</Link>;
           })}
+          <details
+            ref={moreRef}
+            className="nav-more"
+            open={moreOpen}
+            onToggle={(event) => setMoreOpen((event.target as HTMLDetailsElement).open)}
+          >
+            <summary className={moreActive ? "active" : ""} aria-label={dictionary.nav.more}>
+              {dictionary.nav.more}
+            </summary>
+            <div className="nav-more-menu" role="menu" aria-label={dictionary.nav.more}>
+              {moreLinks.map((link) => {
+                const active = isActive(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    role="menuitem"
+                    className={active ? "active" : ""}
+                    aria-current={active ? "page" : undefined}
+                    onClick={() => {
+                      setOpen(false);
+                      setMoreOpen(false);
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </details>
           <ThemeToggle />
           <LanguageSwitch />
           <Link className="header-contact" href={`${prefix}/contact`} onClick={() => setOpen(false)}>{dictionary.nav.contact}</Link>

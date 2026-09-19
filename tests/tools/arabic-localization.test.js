@@ -7,7 +7,7 @@ import { toLocalePath, toLocalizedToolPath } from "../../lib/i18n/routes.ts";
 
 test("Arabic dictionary covers the shared shell with authored labels", () => {
   const ar = getDictionary("ar");
-  assert.deepEqual(ar.nav, { home: "الرئيسية", work: "المشاريع", tools: "الأدوات", notes: "الملاحظات", about: "عني", contact: "تواصل" });
+  assert.deepEqual(ar.nav, { home: "الرئيسية", work: "المشاريع", tools: "الأدوات", notes: "الملاحظات", about: "عني", contact: "تواصل", more: "المزيد" });
   assert.equal(ar.actions.viewProjects, "شوف المشاريع");
   assert.equal(ar.actions.exploreTools, "استكشف الأدوات");
 });
@@ -62,4 +62,34 @@ test("sitemap publishes substantive Arabic routes but no translated note placeho
 test("the header brand keeps Arabic visitors inside the Arabic site", () => {
   const header = readFileSync("components/SiteHeader.tsx", "utf8");
   assert.match(header, /className="brand" href=\{homeHref\}/);
+});
+
+test("English and Arabic home pages share one component instead of duplicated markup", () => {
+  const enHome = readFileSync("app/page.tsx", "utf8");
+  const arHome = readFileSync("app/ar/page.tsx", "utf8");
+  assert.match(enHome, /HomePageView locale="en"/);
+  assert.match(arHome, /HomePageView locale="ar"/);
+  const shared = readFileSync("components/HomePageView.tsx", "utf8");
+  // Every section and the profile media present on the English home page must
+  // also exist in the shared component the Arabic page renders.
+  for (const marker of [
+    "ProfilePortrait",
+    "home-hero",
+    "home-hook",
+    "home-workbench",
+    "home-brain",
+    "home-method",
+    "project-ledger",
+    "tool-ledger"
+  ]) {
+    assert.match(shared, new RegExp(marker), marker);
+  }
+});
+
+test("Arabic satellite and RF tool routes include the same search-hook guide as English", () => {
+  for (const path of ["app/ar/tools/satellite/[slug]/page.jsx", "app/ar/tools/rf/[slug]/page.jsx"]) {
+    const source = readFileSync(path, "utf8");
+    assert.match(source, /ToolSearchHook/, path);
+    assert.match(source, /ToolSearchSchema/, path);
+  }
 });

@@ -101,7 +101,18 @@ p {
 .asl-page > .shell,
 .asl-page.shell,
 .asl-page .section > .shell,
-.tool-page > .shell {
+.tool-page > .shell,
+.tool-page.shell {
+  padding-inline: var(--page-gutter);
+}
+
+/* Matches SatelliteWorkspace.module.css .workspace's box model so the design
+   guide / FAQ sections below a satellite or RF calculator share its gutter and
+   right edge instead of stretching wider (or narrower) than the workbench above. */
+.tool-search-hook-shell {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
   padding-inline: var(--page-gutter);
 }
 
@@ -314,7 +325,7 @@ button,
 }
 
 .site-nav .header-contact {
-  margin-left: 8px;
+  margin-inline-start: 8px;
   color: #14100A;
   background: var(--asl-gold);
   border-color: var(--asl-gold);
@@ -325,6 +336,84 @@ button,
   color: #14100A;
   background: var(--asl-gold-soft);
   border-color: var(--asl-gold-soft);
+}
+
+.nav-more {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-more summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 13px;
+  color: var(--asl-text-secondary);
+  font: 700 0.7rem/1 var(--asl-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  cursor: pointer;
+  list-style: none;
+  transition: color 180ms ease-out, border-color 180ms ease-out, background-color 180ms ease-out;
+}
+
+.nav-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-more summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-inline-end: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 180ms ease-out;
+}
+
+.nav-more[open] summary::after {
+  transform: rotate(225deg);
+}
+
+.nav-more summary:hover,
+.nav-more summary.active,
+.nav-more[open] summary {
+  color: var(--asl-text);
+  background: var(--asl-gold-a12);
+  border-color: var(--asl-gold-a24);
+}
+
+.nav-more-menu {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 8px);
+  z-index: 20;
+  display: grid;
+  min-width: 160px;
+  padding: 8px;
+  gap: 2px;
+  background: var(--asl-surface);
+  border: 1px solid var(--asl-line);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+.nav-more-menu a {
+  padding: 10px 13px;
+  color: var(--asl-text-secondary);
+  font: 700 0.7rem/1 var(--asl-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.nav-more-menu a:hover,
+.nav-more-menu a.active {
+  color: var(--asl-text);
+  background: var(--asl-gold-a12);
+  border-color: var(--asl-gold-a24);
 }
 
 .menu-toggle {
@@ -1527,6 +1616,28 @@ button,
   .site-nav a {
     justify-content: space-between;
     padding-inline: 16px;
+  }
+
+  .nav-more {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-more summary {
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 16px;
+  }
+
+  .nav-more-menu {
+    position: static;
+    min-width: 0;
+    margin-top: 2px;
+    padding: 0;
+    padding-inline-start: 16px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
   }
 
   .site-nav .header-contact {

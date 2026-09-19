@@ -5,12 +5,15 @@ import { readFileSync } from "node:fs";
 test("shared site actions use the approved concise labels", () => {
   const header = readFileSync("components/SiteHeader.tsx", "utf8");
   const footer = readFileSync("components/SiteFooter.tsx", "utf8");
-  const home = readFileSync("app/page.tsx", "utf8");
+  // The English and Arabic home pages now share components/HomePageView.tsx
+  // (locale-parameterized) instead of each having its own duplicated markup,
+  // so that is where the CTA copy actually lives.
+  const home = readFileSync("components/HomePageView.tsx", "utf8");
   assert.match(header, /dictionary\.nav\.contact/);
   assert.match(footer, /dictionary\.actions\.sendBrief/);
   assert.match(footer, /dictionary\.actions\.email/);
-  assert.match(home, />View projects<\/span>/);
-  assert.match(home, />Explore tools<\/span>/);
+  assert.match(home, /dictionary\.actions\.viewProjects/);
+  assert.match(home, /dictionary\.actions\.exploreTools/);
 });
 
 test("mobile actions keep readable type and touch heights", () => {

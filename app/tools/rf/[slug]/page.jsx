@@ -27,6 +27,8 @@ export default async function RfToolPage({ params }) {
   return <>
     <ToolSearchSchema slug={`rf-${slug}`} pathname={`/tools/rf/${slug}/`} />
     <SatelliteWorkspace key={slug} slug={slug} routeRoot="rf" />
-    <ToolSearchHook slug={`rf-${slug}`} />
+    <div className="tool-search-hook-shell">
+      <ToolSearchHook slug={`rf-${slug}`} />
+    </div>
   </>;
 }

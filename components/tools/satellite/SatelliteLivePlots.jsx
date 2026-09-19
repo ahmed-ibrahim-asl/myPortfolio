@@ -5,7 +5,10 @@ import {
   buildAntennaPattern,
   tdmaSegments,
   orbitPosition,
-  orbitSweep
+  orbitSweep,
+  svgCoord,
+  svgPoint,
+  svgPoints
 } from "../../../lib/tools/satellite/visuals.js";
 
 export function OrbitPlot({ values, results }) {
@@ -31,9 +34,12 @@ export function OrbitPlot({ values, results }) {
   const x = earthX + position.x * scale,
     y = 135 - position.y * scale;
   const earthSize = Math.max(4, Math.min(95, (Number(values.earthRadiusM || 6371e3) / a) * scale));
-  const sector = orbitSweep(e, fraction, Math.min(0.05, 1 - fraction))
-    .map((p) => `${earthX + p.x * scale},${135 - p.y * scale}`)
-    .join(" ");
+  const sector = svgPoints(
+    orbitSweep(e, fraction, Math.min(0.05, 1 - fraction)).map((p) => [
+      earthX + p.x * scale,
+      135 - p.y * scale
+    ])
+  );
   return (
     <figure data-orbit-plot tabIndex={0}>
       <svg
@@ -46,29 +52,29 @@ export function OrbitPlot({ values, results }) {
           cx="310"
           cy="135"
           rx={scale}
-          ry={scale * Math.sqrt(1 - e * e)}
+          ry={svgCoord(scale * Math.sqrt(1 - e * e))}
           fill="none"
           stroke="currentColor"
           strokeDasharray="4 4"
         />
-        <polygon points={`${earthX},135 ${sector}`} fill="currentColor" opacity=".25" />
+        <polygon points={`${svgPoint(earthX, 135)} ${sector}`} fill="currentColor" opacity=".25" />
         {[0, 0.5].map((start, i) => (
           <polygon
             key={start}
             data-equal-area-sector={i + 1}
-            points={`${earthX},135 ${orbitSweep(e, start, 0.05)
-              .map((p) => `${earthX + p.x * scale},${135 - p.y * scale}`)
-              .join(" ")}`}
+            points={`${svgPoint(earthX, 135)} ${svgPoints(
+              orbitSweep(e, start, 0.05).map((p) => [earthX + p.x * scale, 135 - p.y * scale])
+            )}`}
             fill="currentColor"
             fillOpacity={i === 0 ? 0.35 : 0.12}
             stroke="currentColor"
             strokeDasharray={i === 0 ? undefined : "3 3"}
           />
         ))}
-        <circle cx={earthX} cy="135" r={earthSize} fill="currentColor" opacity=".2" />
-        <circle cx={earthX} cy="135" r="3" fill="currentColor" />
-        <path d={`M${earthX} 135L${x} ${y}`} stroke="currentColor" />
-        <circle data-orbit-satellite cx={x} cy={y} r="6" fill="currentColor" />
+        <circle cx={svgCoord(earthX)} cy="135" r={svgCoord(earthSize)} fill="currentColor" opacity=".2" />
+        <circle cx={svgCoord(earthX)} cy="135" r="3" fill="currentColor" />
+        <path d={`M${svgCoord(earthX)} 135L${svgCoord(x)} ${svgCoord(y)}`} stroke="currentColor" />
+        <circle data-orbit-satellite cx={svgCoord(x)} cy={svgCoord(y)} r="6" fill="currentColor" />
         <text x="40" y="26">
           e = {e.toFixed(4)} · Earth at one focus
         </text>
@@ -120,29 +126,29 @@ export function CoveragePlot({ values, results }) {
   const satelliteY = cy - orbitalRadius * scale;
   const dx = r * Math.sin(theta),
     boundaryY = cy - r * Math.cos(theta);
-  const cap = `M${cx - dx} ${boundaryY} A${r} ${r} 0 0 1 ${cx + dx} ${boundaryY} Z`;
+  const cap = `M${svgCoord(cx - dx)} ${svgCoord(boundaryY)} A${svgCoord(r)} ${svgCoord(r)} 0 0 1 ${svgCoord(cx + dx)} ${svgCoord(boundaryY)} Z`;
   const summary = `Central angle ${results.centralAngleDeg.toFixed(2)}°, surface coverage ${(results.coverageFraction * 100).toFixed(2)}%, minimum elevation ${Number(values.minimumElevationDeg).toFixed(1)}°.`;
   return (
     <figure data-coverage-plot tabIndex={0}>
       <svg viewBox="0 0 620 330" role="img" aria-label={summary}>
         <title>Satellite surface coverage cross-section</title>
-        <circle cx={cx} cy={cy} r={r} fill="currentColor" opacity=".08" />
-        <circle cx={cx} cy={cy} r={r} fill="none" stroke="currentColor" />
+        <circle cx={svgCoord(cx)} cy={svgCoord(cy)} r={svgCoord(r)} fill="currentColor" opacity=".08" />
+        <circle cx={svgCoord(cx)} cy={svgCoord(cy)} r={svgCoord(r)} fill="none" stroke="currentColor" />
         <path data-coverage-cap d={cap} fill="currentColor" opacity=".45" />
         <path
-          d={`M${cx - dx} ${boundaryY} L${cx} ${satelliteY} L${cx + dx} ${boundaryY}`}
+          d={`M${svgCoord(cx - dx)} ${svgCoord(boundaryY)} L${svgCoord(cx)} ${svgCoord(satelliteY)} L${svgCoord(cx + dx)} ${svgCoord(boundaryY)}`}
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
         />
         <path
-          d={`M${cx - dx} ${boundaryY} L${cx} ${cy} L${cx + dx} ${boundaryY} M${cx} ${cy} V${satelliteY}`}
+          d={`M${svgCoord(cx - dx)} ${svgCoord(boundaryY)} L${svgCoord(cx)} ${svgCoord(cy)} L${svgCoord(cx + dx)} ${svgCoord(boundaryY)} M${svgCoord(cx)} ${svgCoord(cy)} V${svgCoord(satelliteY)}`}
           fill="none"
           stroke="currentColor"
           strokeDasharray="4 4"
           opacity=".6"
         />
-        <circle cx={cx} cy={satelliteY} r="5" fill="currentColor" />
+        <circle cx={svgCoord(cx)} cy={svgCoord(satelliteY)} r="5" fill="currentColor" />
         <text x={cx + 12} y={satelliteY - 8}>
           Satellite
         </text>
@@ -183,8 +189,8 @@ export function LookAnglePlot({ results }) {
       >
         <title>Local horizon and compass bearing</title>
         <path d="M45 145H300M170 40V250" stroke="currentColor" strokeDasharray="4 4" />
-        <path d={`M170 145L${x} ${y}`} stroke="currentColor" strokeWidth="3" />
-        <circle data-elevation-point cx={x} cy={y} r="6" fill="currentColor" />
+        <path d={`M170 145L${svgCoord(x)} ${svgCoord(y)}`} stroke="currentColor" strokeWidth="3" />
+        <circle data-elevation-point cx={svgCoord(x)} cy={svgCoord(y)} r="6" fill="currentColor" />
         <text x="50" y="28">
           Elevation {results.elevationDeg?.toFixed(2)}°
         </text>
@@ -193,7 +199,7 @@ export function LookAnglePlot({ results }) {
         </text>
         <circle cx="465" cy="145" r="85" fill="none" stroke="currentColor" />
         <path
-          d={`M465 145L${465 + 75 * Math.sin(az)} ${145 - 75 * Math.cos(az)}`}
+          d={`M465 145L${svgCoord(465 + 75 * Math.sin(az))} ${svgCoord(145 - 75 * Math.cos(az))}`}
           stroke="currentColor"
           strokeWidth="3"
         />
@@ -234,11 +240,11 @@ export function AntennaPlot({ values, results }) {
   const span = pattern.spanDeg;
   const x = (angle) => 55 + ((angle + span) / (2 * span)) * 510;
   const y = (db) => 205 - ((Math.max(-30, db) + 30) / 30) * 155;
-  const cartesianPath = pattern.points.map((point, index) => `${index ? "L" : "M"}${x(point.angleDeg)},${y(point.db)}`).join(" ");
+  const cartesianPath = pattern.points.map((point, index) => `${index ? "L" : "M"}${svgPoint(x(point.angleDeg), y(point.db))}`).join(" ");
   const polarPath = pattern.points.map((point, index) => {
     const displayAngle = (point.angleDeg / span) * (Math.PI / 3);
     const radius = 112 * Math.max(0, (point.db + 30) / 30);
-    return `${index ? "L" : "M"}${150 + radius * Math.sin(displayAngle)},${142 - radius * Math.cos(displayAngle)}`;
+    return `${index ? "L" : "M"}${svgPoint(150 + radius * Math.sin(displayAngle), 142 - radius * Math.cos(displayAngle))}`;
   }).join(" ");
   const probePower = relativeBeamPower(probeAngle, beam);
   const probeDb = Math.max(-60, 10 * Math.log10(probePower));
@@ -268,9 +274,9 @@ export function AntennaPlot({ values, results }) {
           <path d="M150 142V28" stroke="#d9a43a" strokeWidth="2" />
           {pattern.halfPowerAnglesDeg.map((angle) => {
             const displayAngle = (angle / span) * (Math.PI / 3);
-            return <path key={angle} d={`M150 142L${150 + 56 * Math.sin(displayAngle)} ${142 - 56 * Math.cos(displayAngle)}`} stroke="#218b87" strokeDasharray="4 4" />;
+            return <path key={angle} d={`M150 142L${svgPoint(150 + 56 * Math.sin(displayAngle), 142 - 56 * Math.cos(displayAngle))}`} stroke="#218b87" strokeDasharray="4 4" />;
           })}
-          <circle cx={polarProbeX} cy={polarProbeY} r="6" fill="#d9a43a"><title>{`${probeAngle.toFixed(3)}°, ${probeDb.toFixed(2)} dB`}</title></circle>
+          <circle cx={svgCoord(polarProbeX)} cy={svgCoord(polarProbeY)} r="6" fill="#d9a43a"><title>{`${probeAngle.toFixed(3)}°, ${probeDb.toFixed(2)} dB`}</title></circle>
           <text x="150" y="270" textAnchor="middle">Polar view / normalized radius</text>
         </svg>
         <svg data-antenna-cartesian viewBox="0 0 620 280" role="img" aria-label={`Cartesian antenna approximation, half-power beamwidth ${beam.toFixed(3)} degrees`} onPointerMove={updateFromPointer}>
@@ -278,9 +284,9 @@ export function AntennaPlot({ values, results }) {
           <path d="M55 50V205H565" fill="none" stroke="currentColor" />
           <path d="M55 65H565M55 81H565M310 50V205" stroke="currentColor" strokeDasharray="4 5" opacity=".35" />
           <path data-beam-curve d={cartesianPath} fill="none" stroke="var(--signal)" strokeWidth="4" />
-          {pattern.halfPowerAnglesDeg.map((angle) => <path key={angle} d={`M${x(angle)} 50V205`} stroke="#218b87" strokeDasharray="4 4" />)}
-          <path d={`M${probeX} 50V205`} stroke="#d9a43a" strokeWidth="2" />
-          <circle cx={probeX} cy={probeY} r="6" fill="#d9a43a" />
+          {pattern.halfPowerAnglesDeg.map((angle) => <path key={angle} d={`M${svgCoord(x(angle))} 50V205`} stroke="#218b87" strokeDasharray="4 4" />)}
+          <path d={`M${svgCoord(probeX)} 50V205`} stroke="#d9a43a" strokeWidth="2" />
+          <circle cx={svgCoord(probeX)} cy={svgCoord(probeY)} r="6" fill="#d9a43a" />
           <text x="65" y="35">HPBW {beam.toFixed(3)}° · half-power ±{(beam / 2).toFixed(3)}°</text>
           <text x="65" y="228">−{span.toFixed(2)}°</text><text x="310" y="228" textAnchor="middle">0°</text><text x="560" y="228" textAnchor="end">+{span.toFixed(2)}°</text>
           <text x="310" y="260" textAnchor="middle">Off-axis angle / relative power dB</text>
@@ -321,9 +327,9 @@ export function TdmaPlot({ values }) {
             <g key={s.label}>
               <rect
                 data-tdma-segment={s.label}
-                x={start}
+                x={svgCoord(start)}
                 y="60"
-                width={Math.max(0, width)}
+                width={svgCoord(Math.max(0, width))}
                 height="70"
                 fill="currentColor"
                 fillOpacity={0.2 + i * 0.2}

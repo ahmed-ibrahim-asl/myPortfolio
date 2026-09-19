@@ -14,7 +14,7 @@
   padding: clamp(20px, 3vw, 30px);
   background: var(--asl-surface);
   border: 1px solid var(--asl-line);
-  border-left: 3px solid var(--asl-gold);
+  border-inline-start: 3px solid var(--asl-gold);
 }
 
 .answer h2,
@@ -65,7 +65,7 @@
   max-width: 28ch;
   margin: 0;
   font-size: 0.82rem;
-  text-align: right;
+  text-align: end;
 }
 
 .reviewed time {
@@ -77,7 +77,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   border-top: 1px solid var(--asl-line);
-  border-left: 1px solid var(--asl-line);
+  border-inline-start: 1px solid var(--asl-line);
 }
 
 .detailBlock,
@@ -85,7 +85,7 @@
 .cta {
   min-width: 0;
   padding: clamp(22px, 3vw, 34px);
-  border-right: 1px solid var(--asl-line);
+  border-inline-end: 1px solid var(--asl-line);
   border-bottom: 1px solid var(--asl-line);
 }
 
@@ -98,7 +98,7 @@
 
 .detailBlock ul {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-inline-start: 1.1rem;
 }
 
 .detailBlock li + li {
@@ -122,13 +122,13 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 24px;
   border-top: 1px solid var(--asl-line);
-  border-left: 1px solid var(--asl-line);
+  border-inline-start: 1px solid var(--asl-line);
 }
 
 .question {
   min-width: 0;
   padding: clamp(20px, 2.5vw, 30px);
-  border-right: 1px solid var(--asl-line);
+  border-inline-end: 1px solid var(--asl-line);
   border-bottom: 1px solid var(--asl-line);
 }
 
@@ -174,7 +174,7 @@
 
   .reviewed {
     max-width: none;
-    text-align: left;
+    text-align: start;
   }
 
   .questionGrid {

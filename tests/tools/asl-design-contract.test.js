@@ -110,7 +110,9 @@ test("every raster-cover workbench has a generated cover with its reproducible p
 });
 
 test("home follows the approved editorial instrument composition", () => {
-  const home = read("app/page.tsx");
+  // English and Arabic home pages share components/HomePageView.tsx instead of
+  // each duplicating the section markup, so that is where this composition lives.
+  const home = read("components/HomePageView.tsx");
 
   assert.match(home, /className="home-hero shell"/);
   assert.match(home, /className="home-title-ar\b/);
@@ -119,8 +121,10 @@ test("home follows the approved editorial instrument composition", () => {
   assert.match(home, /className="tool-ledger"/);
   assert.match(home, /className="brain-grid"/);
   assert.doesNotMatch(home, /PixelWorld|SystemHud|data-text=/);
-  assert.match(home, /Break the problem/);
-  assert.match(home, /فكّك المشكلة/);
+  // The hero headline copy itself now lives in the i18n dictionary, not inline in the component.
+  const dictionaries = read("lib/i18n/dictionaries.ts");
+  assert.match(dictionaries, /Break the problem/);
+  assert.match(dictionaries, /فكّك المشكلة/);
 });
 
 test("primary routes declare their ASL page modes", () => {

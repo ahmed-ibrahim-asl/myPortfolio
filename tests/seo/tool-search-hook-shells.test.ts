@@ -33,4 +33,15 @@ describe('tool search-hook shell integration', () => {
     expect(gradifyPage).toMatch(/ToolSearchHook/);
     expect(gradifyPage).toMatch(/ToolSearchSchema/);
   });
+
+  it('gives Arabic satellite and RF tool routes the same search-hook guide as their English counterparts', () => {
+    const arSatellitePage = readFileSync('app/ar/tools/satellite/[slug]/page.jsx', 'utf8');
+    const arRfPage = readFileSync('app/ar/tools/rf/[slug]/page.jsx', 'utf8');
+    for (const page of [arSatellitePage, arRfPage]) {
+      expect(page).toMatch(/ToolSearchSchema/);
+      expect(page).toMatch(/ToolSearchHook/);
+      // The guide reuses the shared gutter shell so it aligns with the workbench above it.
+      expect(page).toMatch(/tool-search-hook-shell/);
+    }
+  });
 });

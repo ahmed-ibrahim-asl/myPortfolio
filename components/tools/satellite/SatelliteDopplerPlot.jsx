@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { svgCoord } from "../../../lib/tools/satellite/visuals.js";
 
 export default function SatelliteDopplerPlot({ values, results }) {
   const [progress, setProgress] = useState(0),
@@ -41,7 +42,7 @@ export default function SatelliteDopplerPlot({ values, results }) {
         </text>
         <path d="M80 100H540" stroke="currentColor" strokeDasharray="4 4" />
         <rect x="65" y="85" width="30" height="30" fill="none" stroke="currentColor" />
-        <circle data-doppler-satellite cx={sx} cy="100" r="10" fill="currentColor" />
+        <circle data-doppler-satellite cx={svgCoord(sx)} cy="100" r="10" fill="currentColor" />
         <text x="35" y="145">
           Ground receiver
         </text>
@@ -59,8 +60,8 @@ export default function SatelliteDopplerPlot({ values, results }) {
         <circle cx="310" cy="205" r="5" fill="currentColor" />
         <circle
           data-delay-pulse
-          cx={total ? px : 80}
-          cy={total ? py : 290}
+          cx={svgCoord(total ? px : 80)}
+          cy={svgCoord(total ? py : 290)}
           r="7"
           fill="currentColor"
         />

@@ -1,5 +1,5 @@
 "use client";
-import { fdmaAllocation, tdmaBurstLayout } from "../../../lib/tools/satellite/visuals.js";
+import { fdmaAllocation, tdmaBurstLayout, svgCoord } from "../../../lib/tools/satellite/visuals.js";
 export function FdmaPlot({ values }) {
   const a = fdmaAllocation(values),
     shown = Math.min(6, a.count),
@@ -17,7 +17,7 @@ export function FdmaPlot({ values }) {
           Full transponder: {(values.transponderBandwidthHz / 1e6).toFixed(3)} MHz
         </text>
         <rect x="50" y="48" width="520" height="35" fill="none" stroke="currentColor" />
-        <rect x="50" y="48" width={occupied} height="35" fill="currentColor" opacity=".35" />
+        <rect x="50" y="48" width={svgCoord(occupied)} height="35" fill="currentColor" opacity=".35" />
         <text x="50" y="107">
           {a.count} complete slots · unused {(a.unusedHz / 1000).toFixed(3)} kHz
         </text>
@@ -30,9 +30,9 @@ export function FdmaPlot({ values }) {
           return (
             <g key={i}>
               <rect
-                x={50 + i * slotWidth}
+                x={svgCoord(50 + i * slotWidth)}
                 y="170"
-                width={slotWidth - guardWidth}
+                width={svgCoord(slotWidth - guardWidth)}
                 height="60"
                 fill="currentColor"
                 opacity=".35"
@@ -40,14 +40,14 @@ export function FdmaPlot({ values }) {
               />
               <rect
                 data-fdma-guard
-                x={50 + (i + 1) * slotWidth - guardWidth}
+                x={svgCoord(50 + (i + 1) * slotWidth - guardWidth)}
                 y="170"
-                width={guardWidth}
+                width={svgCoord(guardWidth)}
                 height="60"
                 fill="currentColor"
                 opacity=".8"
               />
-              <text x={60 + i * slotWidth} y="206">
+              <text x={svgCoord(60 + i * slotWidth)} y="206">
                 CH {i + 1}
               </text>
             </g>
@@ -97,9 +97,9 @@ export function TdmaBursts({ values }) {
                   return (
                     <rect
                       key={part.label}
-                      x={start}
+                      x={svgCoord(start)}
                       y="48"
-                      width={width}
+                      width={svgCoord(width)}
                       height="45"
                       fill="currentColor"
                       fillOpacity={0.25 + 0.25 * i}

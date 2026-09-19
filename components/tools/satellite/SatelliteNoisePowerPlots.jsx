@@ -1,5 +1,5 @@
 "use client";
-import { noiseContributions, powerAtFraction } from "../../../lib/tools/satellite/visuals.js";
+import { noiseContributions, powerAtFraction, svgCoord, svgPoint } from "../../../lib/tools/satellite/visuals.js";
 export function NoisePlot({ values }) {
   const rows = noiseContributions(values.stages, values.referenceTemperatureK);
   const total = rows.reduce((sum, row) => sum + row.inputK, 0);
@@ -24,7 +24,7 @@ export function NoisePlot({ values }) {
               data-noise-stage={r.stage}
               x="35"
               y={75 + i * 65}
-              width={total > 0 ? (550 * r.inputK) / total : 0}
+              width={svgCoord(total > 0 ? (550 * r.inputK) / total : 0)}
               height="20"
               fill="currentColor"
               opacity=".6"
@@ -46,7 +46,7 @@ export function PowerPlot({ values, results }) {
   const path = Array.from(
     { length: 61 },
     (_, i) =>
-      `${i ? "L" : "M"}${70 + (500 * i) / 60},${y(powerAtFraction(values, results, i / 60))}`
+      `${i ? "L" : "M"}${svgPoint(70 + (500 * i) / 60, y(powerAtFraction(values, results, i / 60)))}`
   ).join(" ");
   return (
     <figure data-power-plot tabIndex={0}>
@@ -59,7 +59,7 @@ export function PowerPlot({ values, results }) {
         <path d="M70 40V225H580" stroke="currentColor" fill="none" />
         <path data-power-curve d={path} stroke="currentColor" strokeWidth="3" fill="none" />
         <path
-          d={`M70 ${y(values.requiredPowerW)}H580`}
+          d={`M70 ${svgCoord(y(values.requiredPowerW))}H580`}
           stroke="currentColor"
           strokeDasharray="5 5"
         />

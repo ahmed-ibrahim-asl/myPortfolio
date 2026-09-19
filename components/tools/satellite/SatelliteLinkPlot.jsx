@@ -1,5 +1,6 @@
 "use client";
 import { linkVisual } from "../../../lib/tools/satellite/link-visual.js";
+import { svgCoord } from "../../../lib/tools/satellite/visuals.js";
 export default function SatelliteLinkPlot({ values, mode }) {
   const panels = linkVisual(values, mode);
   return (
@@ -20,7 +21,7 @@ export default function SatelliteLinkPlot({ values, mode }) {
             >
               <title>{panel.title}</title>
               <path
-                d={`M50 ${y(0)}H580`}
+                d={`M50 ${svgCoord(y(0))}H580`}
                 stroke="currentColor"
                 strokeDasharray="4 4"
                 opacity=".5"
@@ -28,10 +29,10 @@ export default function SatelliteLinkPlot({ values, mode }) {
               {panel.rows.map((r, i) => (
                 <g key={r.label}>
                   <rect
-                    x={60 + i * width}
-                    y={Math.min(y(r.start), y(r.end))}
-                    width={width - 12}
-                    height={Math.max(1, Math.abs(y(r.end) - y(r.start)))}
+                    x={svgCoord(60 + i * width)}
+                    y={svgCoord(Math.min(y(r.start), y(r.end)))}
+                    width={svgCoord(width - 12)}
+                    height={svgCoord(Math.max(1, Math.abs(y(r.end) - y(r.start))))}
                     fill="currentColor"
                     fillOpacity={r.delta < 0 ? 0.25 : 0.65}
                     stroke="currentColor"
@@ -40,10 +41,10 @@ export default function SatelliteLinkPlot({ values, mode }) {
                       {`${r.label}: ${r.delta.toFixed(2)} dB; cumulative ${r.end.toFixed(2)}`}
                     </title>
                   </rect>
-                  <text x={60 + i * width} y="240" transform={`rotate(30 ${60 + i * width} 240)`}>
+                  <text x={svgCoord(60 + i * width)} y="240" transform={`rotate(30 ${svgCoord(60 + i * width)} 240)`}>
                     {r.label}
                   </text>
-                  <text x={60 + i * width} y={Math.max(25, Math.min(y(r.start), y(r.end)) - 8)}>
+                  <text x={svgCoord(60 + i * width)} y={svgCoord(Math.max(25, Math.min(y(r.start), y(r.end)) - 8))}>
                     {r.end.toFixed(1)}
                   </text>
                 </g>

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { leoPass } from "../../../lib/tools/satellite/engine.js";
+import { svgCoord } from "../../../lib/tools/satellite/visuals.js";
 export default function SatelliteLeoPass({ frequencyHz, mode }) {
   const [altitude, setAltitude] = useState(800),
     [fraction, setFraction] = useState(0.5);
@@ -11,7 +12,7 @@ export default function SatelliteLeoPass({ frequencyHz, mode }) {
   );
   const peak = Math.max(...samples.map((p) => Math.abs(p.dopplerHz)), 1);
   const y = (p) => 145 - (p.dopplerHz / peak) * 85;
-  const curve = samples.map((p, i) => `${i ? "L" : "M"}${60 + i * 5} ${y(p)}`).join(" ");
+  const curve = samples.map((p, i) => `${i ? "L" : "M"}${60 + i * 5} ${svgCoord(y(p))}`).join(" ");
   return (
     <section data-leo-pass aria-label="LEO overhead pass model">
       <h3>LEO overhead pass</h3>
@@ -52,7 +53,7 @@ export default function SatelliteLeoPass({ frequencyHz, mode }) {
           <title>Doppler versus elapsed visible-pass time</title>
           <path d="M60 45V245H560M60 145H560" stroke="currentColor" fill="none" />
           <path d={curve} stroke="currentColor" strokeWidth="2" fill="none" />
-          <circle cx={60 + 500 * fraction} cy={y(current)} r="6" fill="currentColor" />
+          <circle cx={svgCoord(60 + 500 * fraction)} cy={svgCoord(y(current))} r="6" fill="currentColor" />
           <text x="60" y="25">
             Doppler ±{(peak / 1000).toFixed(1)} kHz · zero at zenith
           </text>
