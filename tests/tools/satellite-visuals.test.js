@@ -49,6 +49,39 @@ test("equal-duration orbit sectors enclose equal areas at perigee and apogee", (
   assert.ok(Math.abs(area(far) - 0.1360349523175663) < 1e-5);
   assert.ok(near.at(-1).trueAnomaly > far.at(-1).trueAnomaly + Math.PI);
 });
+test("orbit instrument state reports apsides, speed, time and a unit tangent", () => {
+  const periodS = 7200;
+  const base = {
+    eccentricity: 0.5,
+    semiMajorAxisM: 7400e3,
+    earthRadiusM: 1000e3,
+    periodS,
+    muKm3S2: 398600.4418
+  };
+  const perigee = visuals.orbitInstrumentState({ ...base, fraction: 0 });
+  const apogee = visuals.orbitInstrumentState({ ...base, fraction: 0.5 });
+  assert.equal(perigee.radiusKm, 3700);
+  assert.equal(apogee.radiusKm, 11100);
+  assert.equal(perigee.elapsedS, 0);
+  assert.equal(apogee.elapsedS, periodS / 2);
+  assert.ok(perigee.speedKmS > apogee.speedKmS);
+  assert.ok(Math.abs(Math.hypot(...perigee.velocityDirection) - 1) < 1e-12);
+  assert.equal(perigee.perigeeKm, 3700);
+  assert.equal(perigee.apogeeKm, 11100);
+});
+test("orbit instrument wraps a completed period to the starting state", () => {
+  const input = {
+    eccentricity: 0,
+    semiMajorAxisM: 7171e3,
+    earthRadiusM: 6371e3,
+    periodS: 6000,
+    muKm3S2: 398600.4418
+  };
+  const start = visuals.orbitInstrumentState({ ...input, fraction: 0 });
+  const complete = visuals.orbitInstrumentState({ ...input, fraction: 1 });
+  assert.deepEqual(complete.position, start.position);
+  assert.equal(start.altitudeKm, 800);
+});
 test("noise plot contributions use preceding power gains, not their dB values", () => {
   assert.equal(typeof visuals.noiseContributions, "function");
   const rows = visuals.noiseContributions(
