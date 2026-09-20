@@ -84,3 +84,49 @@ export function buildToolMobileImagePrompt(source) {
     "Avoid: all text, letters, numbers, equations, labels, logos, watermarks, tiny details, photoreal people."
   ].join("\n");
 }
+
+const variationConcepts = Object.freeze({
+  gradify: ["gradify", "a university grade card, a rising progress path, and a graduation cap showing grades becoming a graduation plan"],
+  "smps-designer": ["smps-designer", "a power switch repeatedly filling a magnetic transformer and delivering smooth DC power to a load"],
+  "rot-explorer": ["rot-explorer", "a ring of alphabet tiles rotating so a readable message becomes shifted letters"],
+  "air-core-coil-designer": ["air-core-coil-designer", "copper wire wrapping into a neat air-core coil while its diameter and turn spacing are visibly adjustable"],
+  "lc-resonance-designer": ["lc-resonance-designer", "a coil and capacitor exchanging energy while one clean wave grows at their shared resonant frequency"],
+  "band-pass-filter-designer": ["band-pass-filter-designer", "a mixed group of slow, middle, and fast waves entering a filter that allows only the middle band through"],
+  "cascaded-opamp-gain-designer": ["cascaded-opamp-gain-designer", "a small signal passing through two amplifier triangles and becoming larger at each stage"],
+  "control-design-assistant": ["control-design-assistant", "an input decision flowing through a simple memory block to a controlled output lamp"],
+  "logic-gate-designer": ["logic-gate-designer", "two physical input switches entering a logic gate and controlling one output lamp"],
+  "bridge-rectifier-designer": ["bridge-rectifier-designer", "an alternating wave entering four diodes and leaving as a one-direction pulsing voltage smoothed by a capacitor"],
+  "linear-regulator-stability-designer": ["linear-regulator-stability-designer", "a noisy high voltage entering a regulator and leaving as a calm steady lower voltage supported by two capacitors"],
+  "buck-converter-designer": ["buck-converter-designer", "a fast power switch feeding an inductor and capacitor to turn a high DC voltage into a lower steady DC voltage"],
+  "resistor-color-code-calculator": ["four-band-resistor", "one beige resistor whose four large color bands map to resistance and tolerance"],
+  "5-band-resistor-color-code-calculator": ["five-band-precision-resistor", "one blue precision resistor whose five large color bands map to a more precise resistance"],
+  "series-resistor-calculator": ["series-resistors", "three resistors connected end to end in one continuous current path, making a larger total resistance"],
+  "parallel-resistor-calculator": ["parallel-resistors", "three resistors on separate branches between the same two rails, giving current multiple paths"],
+  "voltage-divider-calculator": ["voltage-divider", "two stacked resistors across a battery with a clear midpoint tap producing a smaller voltage"],
+  "led-series-resistor-calculator": ["led-current-limiter", "a battery, one resistor, and a safely glowing LED in one simple current loop"]
+});
+
+function buildVariationPrompt(concept, mobile) {
+  return [
+    "Use case: scientific-educational",
+    `Asset type: ${mobile ? "square mobile" : "landscape desktop"} tool-card cover`,
+    `Primary request: Create an instantly understandable visual metaphor for this tool: ${concept}.`,
+    "Audience: non-technical visitors should understand the purpose at a glance.",
+    "Style/medium: polished minimal 3D editorial illustration with crisp geometric forms and subtle depth, matching a premium engineering portfolio.",
+    mobile
+      ? "Composition/framing: one centered hero concept, large touch-friendly shapes, generous breathing room, readable at thumbnail size, square crop."
+      : "Composition/framing: wide 16:9 scene with the main object on a clear signal path and one supporting before/after or cause/effect relationship.",
+    "Color palette: near-black navy background, cool blue and cyan structure, one restrained amber highlight, high contrast.",
+    "Constraints: scientifically honest topology, only essential objects, no UI chrome, no decorative clutter.",
+    "Avoid: all text, letters, numbers, equations, labels, logos, watermarks, tiny details, photoreal people."
+  ].join("\n");
+}
+
+export const toolImageVariationPrompts = Object.freeze(Object.fromEntries(
+  Object.entries(variationConcepts).map(([id, [name, concept]]) => [id, Object.freeze({
+    desktopSource: `/media/tools/variations/${name}-desktop-v1.png`,
+    mobileSource: `/media/tools/mobile/${name}-mobile-v2.png`,
+    desktopPrompt: buildVariationPrompt(concept, false),
+    mobilePrompt: buildVariationPrompt(concept, true)
+  })])
+));
