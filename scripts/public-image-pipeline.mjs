@@ -1,7 +1,9 @@
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { createHash } from "node:crypto";
 import {
   access,
   mkdir,
+  readFile,
   stat,
   writeFile,
 } from "node:fs/promises";
@@ -23,6 +25,22 @@ export const ROLE_POLICIES = Object.freeze({
 const RASTER_EXTENSION = /\.(?:avif|gif|jpe?g|png|webp)$/i;
 const GENERATED_PREFIX = "/media/generated/responsive/";
 const PIPELINE_PATH = fileURLToPath(import.meta.url);
+const CACHE_VERSION = 1;
+
+async function readPipelineCache(rootDir) {
+  try {
+    const cache = JSON.parse(await readFile(path.join(rootDir, "data", "public-image-cache.generated.json"), "utf8"));
+    return cache.version === CACHE_VERSION && cache.sources && typeof cache.sources === "object"
+      ? cache.sources
+      : {};
+  } catch {
+    return {};
+  }
+}
+
+async function contentHash(filePath) {
+  return createHash("sha256").update(await readFile(filePath)).digest("hex");
+}
 
 async function exists(filePath) {
   try {
@@ -73,11 +91,13 @@ function serializeManifest(assets) {
     + `export const publicImageManifest: Record<string, PublicImageFamily> = ${JSON.stringify(entries, null, 2)};\n`;
 }
 
-async function prepareAsset({ rootDir, source, policy, write, oversized }) {
+async function prepareAsset({ rootDir, source, policy, write, oversized, cachedSources, sourceHashes }) {
   const sourcePath = path.join(rootDir, "public", source.replace(/^\//, ""));
   if (!(await exists(sourcePath))) return null;
   const image = sharp(sourcePath, { animated: false, failOn: "error" });
   const metadata = await image.metadata();
+  const sourceHash = await contentHash(sourcePath);
+  sourceHashes[source] = sourceHash;
   const sourceStats = await stat(sourcePath);
   const pipelineStats = await stat(PIPELINE_PATH);
   if (!metadata.width || !metadata.height) return null;
@@ -90,7 +110,8 @@ async function prepareAsset({ rootDir, source, policy, write, oversized }) {
     for (const width of widths) {
       const outputPath = path.join(directory, `${width}.${format}`);
       const outputStats = await exists(outputPath) ? await stat(outputPath) : null;
-      const encoded = outputStats && outputStats.mtimeMs >= Math.max(sourceStats.mtimeMs, pipelineStats.mtimeMs)
+      const cacheMatches = cachedSources[source] === sourceHash;
+      const encoded = outputStats && (cacheMatches || outputStats.mtimeMs >= Math.max(sourceStats.mtimeMs, pipelineStats.mtimeMs))
         ? { bytes: outputStats.size, quality: null }
         : await encodeToBudget(image, { format, width, budget: policy.budget, outputPath, write });
       asset[format].push({ src: publicVariantPath(source, width, format), width, bytes: encoded.bytes });
@@ -102,6 +123,8 @@ async function prepareAsset({ rootDir, source, policy, write, oversized }) {
 
 export async function preparePublicImages({ rootDir = process.cwd(), write = false } = {}) {
   const audit = await auditPublicImages({ rootDir });
+  const cachedSources = await readPipelineCache(rootDir);
+  const sourceHashes = {};
   const assets = [];
   const missing = [];
   const oversized = [];
@@ -109,14 +132,14 @@ export async function preparePublicImages({ rootDir = process.cwd(), write = fal
   for (const item of audit.referenced) {
     const config = getPublicImageConfig(item.source);
     const policy = ROLE_POLICIES[config.role];
-    const prepared = await prepareAsset({ rootDir, source: item.source, policy, write, oversized });
+    const prepared = await prepareAsset({ rootDir, source: item.source, policy, write, oversized, cachedSources, sourceHashes });
     if (!prepared) { missing.push(item.source); continue; }
     const family = { ...prepared, role: config.role, sizesPreset: config.sizesPreset };
     if (config.mobileSrc && await exists(path.join(rootDir, "public", config.mobileSrc.replace(/^\//, "")))) {
-      family.mobile = await prepareAsset({ rootDir, source: config.mobileSrc, policy, write, oversized });
+      family.mobile = await prepareAsset({ rootDir, source: config.mobileSrc, policy, write, oversized, cachedSources, sourceHashes });
     }
     if (config.wideSrc && await exists(path.join(rootDir, "public", config.wideSrc.replace(/^\//, "")))) {
-      family.wide = await prepareAsset({ rootDir, source: config.wideSrc, policy, write, oversized });
+      family.wide = await prepareAsset({ rootDir, source: config.wideSrc, policy, write, oversized, cachedSources, sourceHashes });
     }
     assets.push(family);
   }
@@ -129,6 +152,10 @@ export async function preparePublicImages({ rootDir = process.cwd(), write = fal
     const manifestPath = path.join(rootDir, "data", "public-image-manifest.generated.ts");
     await mkdir(path.dirname(manifestPath), { recursive: true });
     await writeFile(manifestPath, serializeManifest(assets));
+    await writeFile(path.join(rootDir, "data", "public-image-cache.generated.json"), `${JSON.stringify({
+      version: CACHE_VERSION,
+      sources: sourceHashes,
+    }, null, 2)}\n`);
     await writeFile(path.join(rootDir, "data", "public-image-audit.generated.json"), `${JSON.stringify({
       generatedAt: new Date().toISOString(),
       roleCounts: audit.roleCounts,

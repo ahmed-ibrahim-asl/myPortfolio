@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, readFile, stat, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, stat, utimes, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { preparePublicImages } from "../../scripts/public-image-pipeline.mjs";
@@ -33,9 +33,14 @@ test("public image preparation discovers references and writes bounded AVIF/WebP
 
   const generated = path.join(rootDir, "public/media/generated/responsive/media/test/1.webp");
   const firstModified = (await stat(generated)).mtimeMs;
-  await new Promise(resolve => setTimeout(resolve, 20));
+  const future = new Date(Date.now() + 60_000);
+  await utimes(path.join(rootDir, "public/media/test.png"), future, future);
   await preparePublicImages({ rootDir, write: true });
-  assert.equal((await stat(generated)).mtimeMs, firstModified, "unchanged source should reuse generated variants");
+  assert.equal(
+    (await stat(generated)).mtimeMs,
+    firstModified,
+    "content-identical sources should reuse generated variants across fresh checkout mtimes"
+  );
 });
 
 test("public image preparation reports missing referenced assets", async () => {
