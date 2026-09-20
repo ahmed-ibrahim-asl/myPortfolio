@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import puppeteer from "puppeteer-core";
+import { readFileSync } from "node:fs";
 
 const base = process.env.TEST_BASE_URL || "http://127.0.0.1:3000";
 
@@ -13,6 +14,16 @@ const HYDRATION_PATTERNS = [
   /error #421/i,
   /error #425/i
 ];
+
+test("orbit instrument exposes playback, reset, metrics and reduced-motion handling", () => {
+  const source = readFileSync("components/tools/satellite/OrbitInstrument.jsx", "utf8");
+  assert.match(source, /data-orbit-instrument/);
+  assert.match(source, /data-orbit-play/);
+  assert.match(source, /data-orbit-reset/);
+  assert.match(source, /data-orbit-metrics/);
+  assert.match(source, /prefers-reduced-motion/);
+  assert.match(source, /aria-live="polite"/);
+});
 
 async function assertFreshLoadHasNoHydrationIssues(page, url) {
   const consoleMessages = [];

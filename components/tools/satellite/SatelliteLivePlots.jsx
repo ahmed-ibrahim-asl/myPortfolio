@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import OrbitInstrument from "./OrbitInstrument";
 import {
   relativeBeamPower,
   buildAntennaPattern,
@@ -12,7 +13,6 @@ import {
 } from "../../../lib/tools/satellite/visuals.js";
 
 export function OrbitPlot({ values, results }) {
-  const [fraction, setFraction] = useState(0);
   if (values.orbitMode === "coverage") return <CoveragePlot values={values} results={results} />;
   if (values.orbitMode === "vis-viva")
     return (
@@ -23,96 +23,7 @@ export function OrbitPlot({ values, results }) {
         </figcaption>
       </figure>
     );
-  const e = results.eccentricity || 0;
-  const a =
-    results.semiMajorAxisM ||
-    results.radiusM ||
-    Number(values.earthRadiusM) + Number(values.altitudeM);
-  const scale = 100;
-  const earthX = 310 + e * scale;
-  const position = orbitPosition(e, fraction);
-  const x = earthX + position.x * scale,
-    y = 135 - position.y * scale;
-  const earthSize = Math.max(4, Math.min(95, (Number(values.earthRadiusM || 6371e3) / a) * scale));
-  const sector = svgPoints(
-    orbitSweep(e, fraction, Math.min(0.05, 1 - fraction)).map((p) => [
-      earthX + p.x * scale,
-      135 - p.y * scale
-    ])
-  );
-  return (
-    <figure data-orbit-plot tabIndex={0}>
-      <svg
-        viewBox="0 0 620 300"
-        role="img"
-        aria-label={`Orbit at ${(fraction * 100).toFixed(0)} percent of its period, eccentricity ${e.toFixed(3)}`}
-      >
-        <title>Orbit geometry and equal-time sweep</title>
-        <ellipse
-          cx="310"
-          cy="135"
-          rx={scale}
-          ry={svgCoord(scale * Math.sqrt(1 - e * e))}
-          fill="none"
-          stroke="currentColor"
-          strokeDasharray="4 4"
-        />
-        <polygon points={`${svgPoint(earthX, 135)} ${sector}`} fill="currentColor" opacity=".25" />
-        {[0, 0.5].map((start, i) => (
-          <polygon
-            key={start}
-            data-equal-area-sector={i + 1}
-            points={`${svgPoint(earthX, 135)} ${svgPoints(
-              orbitSweep(e, start, 0.05).map((p) => [earthX + p.x * scale, 135 - p.y * scale])
-            )}`}
-            fill="currentColor"
-            fillOpacity={i === 0 ? 0.35 : 0.12}
-            stroke="currentColor"
-            strokeDasharray={i === 0 ? undefined : "3 3"}
-          />
-        ))}
-        <circle cx={svgCoord(earthX)} cy="135" r={svgCoord(earthSize)} fill="currentColor" opacity=".2" />
-        <circle cx={svgCoord(earthX)} cy="135" r="3" fill="currentColor" />
-        <path d={`M${svgCoord(earthX)} 135L${svgCoord(x)} ${svgCoord(y)}`} stroke="currentColor" />
-        <circle data-orbit-satellite cx={svgCoord(x)} cy={svgCoord(y)} r="6" fill="currentColor" />
-        <text x="40" y="26">
-          e = {e.toFixed(4)} · Earth at one focus
-        </text>
-        <text x="40" y="263">
-          Radius = {((position.radius * a) / 1000).toFixed(1)} km
-        </text>
-        <text x="40" y="286">
-          Shaded sweep: next {Math.min(5, (1 - fraction) * 100).toFixed(0)}% of period
-        </text>
-        <text x="195" y="245">
-          Apogee
-        </text>
-        <text x="380" y="245">
-          Perigee
-        </text>
-      </svg>
-      <label>
-        Elapsed fraction of one orbit
-        <input
-          aria-label="Orbit time fraction"
-          type="range"
-          min="0"
-          max="1"
-          step=".01"
-          value={fraction}
-          onChange={(event) => setFraction(Number(event.target.value))}
-        />
-      </label>
-      <figcaption>
-        Solid outline near perigee and dashed outline near apogee each span 5% of the orbital period
-        and enclose equal areas. A longer angular sweep near perigee compensates for the shorter
-        radius. The moving shaded sector follows the time slider. Move time forward to compare
-        equal-duration sweeps. Kepler’s equation places the satellite faster near perigee and slower
-        near apogee. Earth and orbit share the same length scale (Earth minimum marker enlarged for
-        very distant orbits). No atmospheric drag or perturbations are modeled.
-      </figcaption>
-    </figure>
-  );
+  return <OrbitInstrument values={values} results={results} />;
 }
 
 export function CoveragePlot({ values, results }) {

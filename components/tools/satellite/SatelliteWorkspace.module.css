@@ -47,3 +47,38 @@
 .workspace :global(.antenna-pattern-probe){display:grid;grid-template-columns:auto minmax(10rem,1fr) auto;gap:.75rem;align-items:center;margin-top:1rem}
 .workspace :global(.antenna-pattern-probe output){font:650 .78rem/1.4 var(--font-mono,monospace);color:#d9a43a;white-space:nowrap}
 @media(max-width:760px){.workspace :global(.antenna-pattern-grid){grid-template-columns:minmax(15rem,1fr);overflow:visible}.workspace :global(.antenna-pattern-probe){grid-template-columns:1fr}.workspace :global(.antenna-pattern-probe output){white-space:normal}}
+
+.orbitInstrument{display:grid;gap:16px;margin:20px 0;min-width:0}
+.orbitCanvas{border:1px solid var(--rule);background:color-mix(in srgb,var(--instrument) 91%,#000);min-width:0;overflow:hidden}
+.orbitCanvas svg{min-width:0!important;max-width:100%;aspect-ratio:760/420}
+.orbitPath{fill:none;stroke:var(--signal);stroke-width:2}
+.orbitAxis{stroke:var(--rule);stroke-width:1;stroke-dasharray:3 7}
+.orbitEarth{fill:color-mix(in srgb,var(--signal) 24%,var(--instrument));stroke:var(--signal);stroke-width:2}
+.orbitFocus{fill:var(--signal)}
+.orbitEmptyFocus{fill:var(--instrument);stroke:var(--muted);stroke-width:2}
+.orbitRadius{stroke:var(--signal);stroke-width:1.5;stroke-dasharray:5 4}
+.orbitVelocity{stroke:#d9a43a;stroke-width:2.5}
+.orbitVelocityFill{fill:#d9a43a}
+.orbitSatellite{fill:#d9a43a;stroke:var(--instrument);stroke-width:3}
+.orbitSweepNear{fill:color-mix(in srgb,#d9a43a 32%,transparent);stroke:#d9a43a;stroke-width:1.5}
+.orbitSweepFar{fill:color-mix(in srgb,var(--signal) 12%,transparent);stroke:var(--signal);stroke-width:1.5;stroke-dasharray:5 4}
+.orbitSweepActive{fill:color-mix(in srgb,var(--signal) 23%,transparent);stroke:none}
+.orbitApsis circle{fill:var(--ink)}
+.orbitApsis text,.orbitSvgNote{fill:var(--muted)!important;font-size:12px!important}
+.orbitSvgTitle{fill:var(--ink)!important;font-size:13px!important;font-weight:700;letter-spacing:.06em}
+.orbitMetrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--rule)}
+.orbitMetrics>div{display:grid;gap:5px;padding:12px 14px;border-right:1px solid var(--rule);min-width:0}
+.orbitMetrics>div:nth-child(3n){border-right:0}
+.orbitMetrics span{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+.orbitMetrics strong{font:650 .88rem/1.45 var(--font-mono,monospace);overflow-wrap:anywhere}
+.orbitControls{display:grid;grid-template-columns:auto auto minmax(180px,1fr);gap:10px;align-items:end}
+.orbitScrubber{display:grid;gap:6px}
+.orbitScrubber input{width:100%;min-height:44px;padding:0}
+.orbitLegend{display:flex;flex-wrap:wrap;gap:10px 18px;color:var(--muted);font-size:.75rem}
+.orbitLegend span{display:inline-flex;align-items:center;gap:7px}
+.orbitLegend i{display:inline-block;width:20px;height:8px;border:1px solid var(--signal)}
+.legendLive{background:#d9a43a!important;border-color:#d9a43a!important}
+.legendNear{background:color-mix(in srgb,#d9a43a 32%,transparent)!important;border-color:#d9a43a!important}
+.legendFar{border-style:dashed!important}
+.orbitStatus{margin:0!important;color:var(--muted);font-size:.8rem}
+@media(max-width:700px){.orbitMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}.orbitMetrics>div:nth-child(3n){border-right:1px solid var(--rule)}.orbitMetrics>div:nth-child(2n){border-right:0}.orbitControls{grid-template-columns:1fr 1fr}.orbitScrubber{grid-column:1/-1}.orbitCanvas svg{aspect-ratio:760/470}.orbitLegend{display:grid}}
