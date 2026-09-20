@@ -92,8 +92,8 @@ test("Interactive PID Simulator uses the approved simplified tuning cover", () =
 
 test("every raster-cover workbench has a generated cover with its reproducible prompt", () => {
   const generatedCoverTools = engineeringTools.filter((tool) => tool.coverImage.endsWith(".png"));
-  assert.equal(generatedCoverTools.length, 5);
-  assert.equal(new Set(generatedCoverTools.map((tool) => tool.coverImage)).size, 5);
+  assert.equal(generatedCoverTools.length, 6);
+  assert.equal(new Set(generatedCoverTools.map((tool) => tool.coverImage)).size, 6);
 
   const promptManifestPath = "docs/assets/tool-cover-prompts.md";
   assert.ok(existsSync(promptManifestPath), "missing the workbench cover prompt manifest");
@@ -187,9 +187,9 @@ test("the approved 5-band resistor cover uses its generated raster evidence", as
   const visual = calculatorVisuals["5-band-resistor-color-code-calculator"];
   const thumbnail = read("components/tools/CalculatorThumbnail.js");
 
-  assert.equal(visual.image, "/media/calculators/five-band-resistor-4k7-v3.png");
+  assert.equal(visual.image, "/media/tools/variations/five-band-precision-resistor-desktop-v1.png");
   assert.ok(
-    existsSync("public/media/calculators/five-band-resistor-4k7-v3.png"),
+    existsSync("public/media/tools/variations/five-band-precision-resistor-desktop-v1.png"),
     "the approved 5-band resistor raster is missing"
   );
   assert.match(thumbnail, /visual\.image/);
@@ -201,9 +201,9 @@ test("the approved 4-band resistor cover uses its generated raster evidence", as
   const visual = calculatorVisuals["resistor-color-code-calculator"];
   const thumbnail = read("components/tools/CalculatorThumbnail.js");
 
-  assert.equal(visual.image, "/media/calculators/four-band-resistor-4k7-v1.png");
+  assert.equal(visual.image, "/media/tools/variations/four-band-resistor-desktop-v1.png");
   assert.ok(
-    existsSync("public/media/calculators/four-band-resistor-4k7-v1.png"),
+    existsSync("public/media/tools/variations/four-band-resistor-desktop-v1.png"),
     "the approved 4-band resistor raster is missing"
   );
   assert.match(thumbnail, /visual\.image/);
@@ -226,9 +226,9 @@ test("the approved series-resistor cover uses one physical current path", async 
   const { calculatorVisuals } = await import("../../data/calculator-visuals.js");
   const visual = calculatorVisuals["series-resistor-calculator"];
 
-  assert.equal(visual.image, "/media/calculators/series-resistors-no-scales-v2.png");
+  assert.equal(visual.image, "/media/tools/variations/series-resistors-desktop-v1.png");
   assert.ok(
-    existsSync("public/media/calculators/series-resistors-no-scales-v2.png"),
+    existsSync("public/media/tools/variations/series-resistors-desktop-v1.png"),
     "the approved series-resistor raster is missing"
   );
   assert.match(visual.ariaLabel, /1 kiloohm.*2\.2 kiloohm.*4\.7 kiloohm/i);
@@ -238,9 +238,9 @@ test("the approved parallel-resistor cover uses three branches across two shared
   const { calculatorVisuals } = await import("../../data/calculator-visuals.js");
   const visual = calculatorVisuals["parallel-resistor-calculator"];
 
-  assert.equal(visual.image, "/media/calculators/parallel-resistors-physical-network-v1.png");
+  assert.equal(visual.image, "/media/tools/variations/parallel-resistors-desktop-v1.png");
   assert.ok(
-    existsSync("public/media/calculators/parallel-resistors-physical-network-v1.png"),
+    existsSync("public/media/tools/variations/parallel-resistors-desktop-v1.png"),
     "the approved parallel-resistor raster is missing"
   );
   assert.match(visual.ariaLabel, /three parallel branches.*600 ohms/i);
@@ -250,9 +250,9 @@ test("the approved voltage-divider cover uses one closed source-to-ground series
   const { calculatorVisuals } = await import("../../data/calculator-visuals.js");
   const visual = calculatorVisuals["voltage-divider-calculator"];
 
-  assert.equal(visual.image, "/media/calculators/voltage-divider-no-scales-v2.png");
+  assert.equal(visual.image, "/media/tools/variations/voltage-divider-desktop-v1.png");
   assert.ok(
-    existsSync("public/media/calculators/voltage-divider-no-scales-v2.png"),
+    existsSync("public/media/tools/variations/voltage-divider-desktop-v1.png"),
     "the approved voltage-divider raster is missing"
   );
   assert.match(visual.ariaLabel, /9 volt.*R1.*Vout.*R2.*negative/i);

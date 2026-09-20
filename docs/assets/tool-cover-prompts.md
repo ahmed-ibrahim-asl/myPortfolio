@@ -11,6 +11,16 @@ Generated on 2026-08-30 with the built-in image generator. These prompts are int
 - No text, letters, numbers, logos, watermark, fake browser, fake dashboard, cyberpunk neon, rounded UI cards, or white background.
 - Safe internal margins for `object-fit: cover`.
 
+## Gradify GPA and Graduation Planner
+
+Output: `/media/tools/variations/gradify-desktop-v1.png`
+
+Status: generated as the responsive desktop companion to the square mobile discovery cover on 2026-09-20.
+
+```text
+Create a wide scientific-educational tool-card cover showing a university grade sheet becoming a rising path of completed steps that ends at a graduation cap. Make the visual story understandable without technical knowledge. Use a near-black navy background, crisp cyan structure, one restrained amber highlight, generous spacing, and a strong thumbnail silhouette. No title, sentence, logo, watermark, interface chrome, photoreal person, or decorative clutter.
+```
+
 ## AI Script Generator
 
 Output: `/media/tools/tool-ai-script-generator-v4.png`

@@ -4,7 +4,7 @@ import path from "node:path";
 import test from "node:test";
 import sharp from "sharp";
 import { auditPublicImages } from "../../scripts/public-image-audit.mjs";
-import { buildToolMobileImagePrompt, toolMobileImagePrompts } from "../../data/tool-mobile-image-prompts.js";
+import { buildToolMobileImagePrompt } from "../../data/tool-mobile-image-prompts.js";
 import { getToolCategoryItems, toolCategories } from "../../data/tool-categories.js";
 
 const requiredVariationIds = [
@@ -54,10 +54,27 @@ test("every tool cover has a dedicated plain-language mobile image prompt", asyn
   const audit = await auditPublicImages();
   const covers = audit.referenced.filter(item => item.role === "tool-cover");
 
-  assert.equal(covers.length, 58);
+  assert.equal(covers.length, 70);
   for (const cover of covers) {
-    assert.ok(toolMobileImagePrompts[cover.source], `missing prompt for ${cover.source}`);
     assert.match(buildToolMobileImagePrompt(cover.source), /non-technical/i);
+  }
+});
+
+test("new variation sources are bounded for their target card shape", async () => {
+  const promptModule = await import("../../data/tool-mobile-image-prompts.js");
+
+  for (const variation of Object.values(promptModule.toolImageVariationPrompts)) {
+    for (const [source, expectedWidth, expectedHeight] of [
+      [variation.desktopSource, 1440, 810],
+      [variation.mobileSource, 960, 960]
+    ]) {
+      const filePath = path.join(process.cwd(), "public", source.slice(1));
+      const metadata = await sharp(filePath).metadata();
+      const fileStat = await stat(filePath);
+      assert.equal(metadata.width, expectedWidth, `${source} has the wrong width`);
+      assert.equal(metadata.height, expectedHeight, `${source} has the wrong height`);
+      assert.ok(fileStat.size <= 500_000, `${source} exceeds the 500 KB source budget`);
+    }
   }
 });
 

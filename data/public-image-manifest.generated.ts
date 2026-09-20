@@ -2050,156 +2050,6 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       ]
     }
   },
-  "/media/calculators/five-band-resistor-4k7-v3.png": {
-    "source": "/media/calculators/five-band-resistor-4k7-v3.png",
-    "width": 1672,
-    "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/240.avif",
-        "width": 240,
-        "bytes": 2205
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/320.avif",
-        "width": 320,
-        "bytes": 3264
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/480.avif",
-        "width": 480,
-        "bytes": 7533
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/640.avif",
-        "width": 640,
-        "bytes": 12891
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/960.avif",
-        "width": 960,
-        "bytes": 32104
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/1280.avif",
-        "width": 1280,
-        "bytes": 57202
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/1600.avif",
-        "width": 1600,
-        "bytes": 85209
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/1672.avif",
-        "width": 1672,
-        "bytes": 91442
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/240.webp",
-        "width": 240,
-        "bytes": 2544
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/320.webp",
-        "width": 320,
-        "bytes": 4018
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/480.webp",
-        "width": 480,
-        "bytes": 8324
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/640.webp",
-        "width": 640,
-        "bytes": 15294
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/960.webp",
-        "width": 960,
-        "bytes": 40302
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/1280.webp",
-        "width": 1280,
-        "bytes": 69236
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/1600.webp",
-        "width": 1600,
-        "bytes": 99740
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/1672.webp",
-        "width": 1672,
-        "bytes": 106950
-      }
-    ],
-    "role": "tool-cover",
-    "sizesPreset": "tool-card",
-    "mobile": {
-      "source": "/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1.png",
-      "width": 960,
-      "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2492
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3278
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 5643
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 8536
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 22117
-        }
-      ],
-      "webp": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/240.webp",
-          "width": 240,
-          "bytes": 2658
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/320.webp",
-          "width": 320,
-          "bytes": 3820
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/480.webp",
-          "width": 480,
-          "bytes": 6840
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/640.webp",
-          "width": 640,
-          "bytes": 11180
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/960.webp",
-          "width": 960,
-          "bytes": 26038
-        }
-      ]
-    }
-  },
   "/media/calculators/force-mass-acceleration-v1.png": {
     "source": "/media/calculators/force-mass-acceleration-v1.png",
     "width": 1672,
@@ -2346,156 +2196,6 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
           "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/960.webp",
           "width": 960,
           "bytes": 20474
-        }
-      ]
-    }
-  },
-  "/media/calculators/four-band-resistor-4k7-v1.png": {
-    "source": "/media/calculators/four-band-resistor-4k7-v1.png",
-    "width": 1672,
-    "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/240.avif",
-        "width": 240,
-        "bytes": 1862
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/320.avif",
-        "width": 320,
-        "bytes": 2661
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/480.avif",
-        "width": 480,
-        "bytes": 6034
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/640.avif",
-        "width": 640,
-        "bytes": 9925
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/960.avif",
-        "width": 960,
-        "bytes": 27659
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/1280.avif",
-        "width": 1280,
-        "bytes": 54233
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/1600.avif",
-        "width": 1600,
-        "bytes": 84980
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/1672.avif",
-        "width": 1672,
-        "bytes": 91876
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/240.webp",
-        "width": 240,
-        "bytes": 2134
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/320.webp",
-        "width": 320,
-        "bytes": 3420
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/480.webp",
-        "width": 480,
-        "bytes": 6844
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/640.webp",
-        "width": 640,
-        "bytes": 11980
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/960.webp",
-        "width": 960,
-        "bytes": 34364
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/1280.webp",
-        "width": 1280,
-        "bytes": 62906
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/1600.webp",
-        "width": 1600,
-        "bytes": 97770
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/1672.webp",
-        "width": 1672,
-        "bytes": 103434
-      }
-    ],
-    "role": "tool-cover",
-    "sizesPreset": "tool-card",
-    "mobile": {
-      "source": "/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1.png",
-      "width": 960,
-      "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2399
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3159
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 5465
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 8446
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 17434
-        }
-      ],
-      "webp": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/240.webp",
-          "width": 240,
-          "bytes": 2706
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/320.webp",
-          "width": 320,
-          "bytes": 3862
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/480.webp",
-          "width": 480,
-          "bytes": 6602
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/640.webp",
-          "width": 640,
-          "bytes": 10272
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/960.webp",
-          "width": 960,
-          "bytes": 21362
         }
       ]
     }
@@ -3096,156 +2796,6 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
           "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/960.webp",
           "width": 960,
           "bytes": 36402
-        }
-      ]
-    }
-  },
-  "/media/calculators/led-series-resistor-300ohm-v1.png": {
-    "source": "/media/calculators/led-series-resistor-300ohm-v1.png",
-    "width": 1672,
-    "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/240.avif",
-        "width": 240,
-        "bytes": 4040
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/320.avif",
-        "width": 320,
-        "bytes": 5846
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/480.avif",
-        "width": 480,
-        "bytes": 10266
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/640.avif",
-        "width": 640,
-        "bytes": 15987
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/960.avif",
-        "width": 960,
-        "bytes": 27804
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/1280.avif",
-        "width": 1280,
-        "bytes": 43895
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/1600.avif",
-        "width": 1600,
-        "bytes": 62298
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/1672.avif",
-        "width": 1672,
-        "bytes": 65162
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/240.webp",
-        "width": 240,
-        "bytes": 5798
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/320.webp",
-        "width": 320,
-        "bytes": 8476
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/480.webp",
-        "width": 480,
-        "bytes": 14802
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/640.webp",
-        "width": 640,
-        "bytes": 21296
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/960.webp",
-        "width": 960,
-        "bytes": 39884
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/1280.webp",
-        "width": 1280,
-        "bytes": 60722
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/1600.webp",
-        "width": 1600,
-        "bytes": 85216
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/1672.webp",
-        "width": 1672,
-        "bytes": 91978
-      }
-    ],
-    "role": "tool-cover",
-    "sizesPreset": "tool-card",
-    "mobile": {
-      "source": "/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1.png",
-      "width": 960,
-      "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3563
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4758
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7415
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 10592
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 21437
-        }
-      ],
-      "webp": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/240.webp",
-          "width": 240,
-          "bytes": 3612
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/320.webp",
-          "width": 320,
-          "bytes": 5182
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/480.webp",
-          "width": 480,
-          "bytes": 9010
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/640.webp",
-          "width": 640,
-          "bytes": 13746
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/960.webp",
-          "width": 960,
-          "bytes": 28812
         }
       ]
     }
@@ -4150,156 +3700,6 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       ]
     }
   },
-  "/media/calculators/parallel-resistors-physical-network-v1.png": {
-    "source": "/media/calculators/parallel-resistors-physical-network-v1.png",
-    "width": 1672,
-    "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/240.avif",
-        "width": 240,
-        "bytes": 2836
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/320.avif",
-        "width": 320,
-        "bytes": 4677
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/480.avif",
-        "width": 480,
-        "bytes": 7901
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/640.avif",
-        "width": 640,
-        "bytes": 11966
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/960.avif",
-        "width": 960,
-        "bytes": 20536
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/1280.avif",
-        "width": 1280,
-        "bytes": 30988
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/1600.avif",
-        "width": 1600,
-        "bytes": 40678
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/1672.avif",
-        "width": 1672,
-        "bytes": 44768
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/240.webp",
-        "width": 240,
-        "bytes": 3700
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/320.webp",
-        "width": 320,
-        "bytes": 5748
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/480.webp",
-        "width": 480,
-        "bytes": 10018
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/640.webp",
-        "width": 640,
-        "bytes": 15086
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/960.webp",
-        "width": 960,
-        "bytes": 26720
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/1280.webp",
-        "width": 1280,
-        "bytes": 41420
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/1600.webp",
-        "width": 1600,
-        "bytes": 56964
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/1672.webp",
-        "width": 1672,
-        "bytes": 58806
-      }
-    ],
-    "role": "tool-cover",
-    "sizesPreset": "tool-card",
-    "mobile": {
-      "source": "/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1.png",
-      "width": 960,
-      "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2971
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3793
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 6063
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 8988
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 15413
-        }
-      ],
-      "webp": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/240.webp",
-          "width": 240,
-          "bytes": 3356
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/320.webp",
-          "width": 320,
-          "bytes": 4578
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/480.webp",
-          "width": 480,
-          "bytes": 7882
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/640.webp",
-          "width": 640,
-          "bytes": 11482
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/960.webp",
-          "width": 960,
-          "bytes": 21616
-        }
-      ]
-    }
-  },
   "/media/calculators/percentage-change-v1.png": {
     "source": "/media/calculators/percentage-change-v1.png",
     "width": 1672,
@@ -4746,156 +4146,6 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
           "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/960.webp",
           "width": 960,
           "bytes": 23844
-        }
-      ]
-    }
-  },
-  "/media/calculators/series-resistors-no-scales-v2.png": {
-    "source": "/media/calculators/series-resistors-no-scales-v2.png",
-    "width": 1672,
-    "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/240.avif",
-        "width": 240,
-        "bytes": 2557
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/320.avif",
-        "width": 320,
-        "bytes": 3431
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/480.avif",
-        "width": 480,
-        "bytes": 6610
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/640.avif",
-        "width": 640,
-        "bytes": 10248
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/960.avif",
-        "width": 960,
-        "bytes": 17776
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/1280.avif",
-        "width": 1280,
-        "bytes": 24665
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/1600.avif",
-        "width": 1600,
-        "bytes": 32204
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/1672.avif",
-        "width": 1672,
-        "bytes": 34894
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/240.webp",
-        "width": 240,
-        "bytes": 3140
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/320.webp",
-        "width": 320,
-        "bytes": 4426
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/480.webp",
-        "width": 480,
-        "bytes": 8052
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/640.webp",
-        "width": 640,
-        "bytes": 11714
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/960.webp",
-        "width": 960,
-        "bytes": 20786
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/1280.webp",
-        "width": 1280,
-        "bytes": 30688
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/1600.webp",
-        "width": 1600,
-        "bytes": 42274
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/1672.webp",
-        "width": 1672,
-        "bytes": 44500
-      }
-    ],
-    "role": "tool-cover",
-    "sizesPreset": "tool-card",
-    "mobile": {
-      "source": "/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1.png",
-      "width": 960,
-      "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2538
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3116
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 4791
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 7472
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 12339
-        }
-      ],
-      "webp": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/240.webp",
-          "width": 240,
-          "bytes": 2676
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/320.webp",
-          "width": 320,
-          "bytes": 3940
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/480.webp",
-          "width": 480,
-          "bytes": 6468
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/640.webp",
-          "width": 640,
-          "bytes": 9270
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/960.webp",
-          "width": 960,
-          "bytes": 17928
         }
       ]
     }
@@ -5496,156 +4746,6 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
           "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/960.webp",
           "width": 960,
           "bytes": 29164
-        }
-      ]
-    }
-  },
-  "/media/calculators/voltage-divider-no-scales-v2.png": {
-    "source": "/media/calculators/voltage-divider-no-scales-v2.png",
-    "width": 1672,
-    "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/240.avif",
-        "width": 240,
-        "bytes": 2174
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/320.avif",
-        "width": 320,
-        "bytes": 2826
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/480.avif",
-        "width": 480,
-        "bytes": 5048
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/640.avif",
-        "width": 640,
-        "bytes": 8108
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/960.avif",
-        "width": 960,
-        "bytes": 13566
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/1280.avif",
-        "width": 1280,
-        "bytes": 20298
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/1600.avif",
-        "width": 1600,
-        "bytes": 25742
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/1672.avif",
-        "width": 1672,
-        "bytes": 27830
-      }
-    ],
-    "webp": [
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/240.webp",
-        "width": 240,
-        "bytes": 2330
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/320.webp",
-        "width": 320,
-        "bytes": 3436
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/480.webp",
-        "width": 480,
-        "bytes": 6036
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/640.webp",
-        "width": 640,
-        "bytes": 9028
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/960.webp",
-        "width": 960,
-        "bytes": 16970
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/1280.webp",
-        "width": 1280,
-        "bytes": 25768
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/1600.webp",
-        "width": 1600,
-        "bytes": 33992
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/1672.webp",
-        "width": 1672,
-        "bytes": 36732
-      }
-    ],
-    "role": "tool-cover",
-    "sizesPreset": "tool-card",
-    "mobile": {
-      "source": "/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1.png",
-      "width": 960,
-      "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3159
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3922
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 6158
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 8256
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 15339
-        }
-      ],
-      "webp": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/240.webp",
-          "width": 240,
-          "bytes": 2920
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/320.webp",
-          "width": 320,
-          "bytes": 4048
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/480.webp",
-          "width": 480,
-          "bytes": 6662
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/640.webp",
-          "width": 640,
-          "bytes": 9886
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/960.webp",
-          "width": 960,
-          "bytes": 19482
         }
       ]
     }
@@ -14360,6 +13460,2526 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
           "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/960.webp",
           "width": 960,
           "bytes": 37082
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/air-core-coil-designer-desktop-v1.png": {
+    "source": "/media/tools/variations/air-core-coil-designer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 3911
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 5825
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 10838
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 16038
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 25252
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 35683
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 41619
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 5832
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 9136
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 17838
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 26894
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 46182
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 64932
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 75688
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/air-core-coil-designer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 4638
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 6514
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 11017
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 16202
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 26780
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 6536
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 9670
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 16944
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 24904
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 44068
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/band-pass-filter-designer-desktop-v1.png": {
+    "source": "/media/tools/variations/band-pass-filter-designer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2629
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 3708
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 6491
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 8432
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 14302
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 18405
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 23234
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 3130
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 4928
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 8980
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 12844
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 21596
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 31562
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 38396
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/band-pass-filter-designer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 3525
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 5027
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 8116
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 11600
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 19461
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 4462
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 6724
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 11276
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 16102
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 28496
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/bridge-rectifier-designer-desktop-v1.png": {
+    "source": "/media/tools/variations/bridge-rectifier-designer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2726
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 3265
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 4808
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 7286
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 11582
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 16392
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 19202
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2800
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 4090
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 6702
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 9536
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 16130
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 23848
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 28612
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/bridge-rectifier-designer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 4546
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 6176
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 9270
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 13121
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 34717
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 11952
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 17488
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 31764
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 50838
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 80060
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/buck-converter-designer-desktop-v1.png": {
+    "source": "/media/tools/variations/buck-converter-designer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2473
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 3013
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 5244
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 7122
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 11735
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 16995
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 20394
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2682
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 3862
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 6568
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 9518
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 16340
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 23804
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 29790
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/buck-converter-designer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 3186
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 3460
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 6196
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 8743
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 14440
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 3300
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 4738
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 8174
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 11924
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 21338
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1.png": {
+    "source": "/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2279
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 2594
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 4523
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 5789
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 9517
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 13337
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 18879
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2336
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 3404
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 5516
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 7776
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 13268
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 19528
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 24860
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 2230
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 2722
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 4499
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 6573
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 10647
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 2718
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 3932
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 6438
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 9346
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 16838
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/control-design-assistant-desktop-v1.png": {
+    "source": "/media/tools/variations/control-design-assistant-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2251
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 2645
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 4157
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 5468
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 8958
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 12217
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 15892
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2358
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 3460
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 5488
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 7846
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 13110
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 19128
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 23390
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/control-design-assistant-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 4595
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 6132
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 9417
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 13497
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 20827
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 19108
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 28696
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 53718
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 86898
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 58962
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/five-band-precision-resistor-desktop-v1.png": {
+    "source": "/media/tools/variations/five-band-precision-resistor-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2606
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 3370
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 5851
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 8337
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 13602
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 20488
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 25466
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2820
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 4328
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 7688
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 11308
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 20064
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 30596
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 36808
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/five-band-precision-resistor-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 4151
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 5785
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 9589
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 14243
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 28188
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 6120
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 9004
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 15700
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 23296
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 44064
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/four-band-resistor-desktop-v1.png": {
+    "source": "/media/tools/variations/four-band-resistor-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2358
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 3076
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 4737
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 7222
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 11030
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 15875
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 20950
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2444
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 3834
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 6566
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 9438
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 15822
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 23494
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 28752
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/four-band-resistor-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 2678
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 3527
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 6167
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 9761
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 18681
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 3354
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 4828
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 8306
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 12670
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 24946
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/gradify-desktop-v1.png": {
+    "source": "/media/tools/variations/gradify-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2722
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 3836
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 6317
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 9335
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 15492
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 22696
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 28672
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 3568
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 5290
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 8784
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 12930
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 22618
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 34192
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 42680
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/gradify-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 3922
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 5242
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 8819
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 12830
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 26502
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 5280
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 7694
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 13072
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 18822
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 36492
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/lc-resonance-designer-desktop-v1.png": {
+    "source": "/media/tools/variations/lc-resonance-designer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 3686
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 5399
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 10005
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 14229
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 22500
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 32051
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 37210
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 4716
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 7102
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 12854
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 19196
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 33346
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 47720
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 57344
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/lc-resonance-designer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 4225
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 5810
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 10242
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 14585
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 25491
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 5468
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 8272
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 14876
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 22420
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 40140
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/led-current-limiter-desktop-v1.png": {
+    "source": "/media/tools/variations/led-current-limiter-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2796
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 3468
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 5978
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 8518
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 13249
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 19142
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 23018
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 3234
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 4508
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 7804
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 10842
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 18250
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 26980
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 33368
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/led-current-limiter-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 2907
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 4330
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 6740
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 9545
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 16785
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 3496
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 5152
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 8676
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 13038
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 23510
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/linear-regulator-stability-designer-desktop-v1.png": {
+    "source": "/media/tools/variations/linear-regulator-stability-designer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2279
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 2807
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 4135
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 5958
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 9456
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 13444
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 16041
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2184
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 3168
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 5422
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 7796
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 13204
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 19570
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 23924
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/linear-regulator-stability-designer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 2207
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 2736
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 4472
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 6092
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 11162
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 2534
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 3640
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 6130
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 8870
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 16170
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/logic-gate-designer-desktop-v1.png": {
+    "source": "/media/tools/variations/logic-gate-designer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2417
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 2876
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 4686
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 6112
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 10385
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 13837
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 16909
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2310
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 3196
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 5292
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 7692
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 13428
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 19752
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 24360
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/logic-gate-designer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 2928
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 3934
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 6446
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 8860
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 15349
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 3148
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 4572
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 7878
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 11696
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 20956
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/parallel-resistors-desktop-v1.png": {
+    "source": "/media/tools/variations/parallel-resistors-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2718
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 3337
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 5043
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 7619
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 12270
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 16599
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 19965
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2548
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 3712
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 6138
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 8966
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 15500
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 23098
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 27840
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/parallel-resistors-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 2527
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 3586
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 5694
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 8045
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 13483
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 2888
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 4152
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 6924
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 10092
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 18252
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/rot-explorer-desktop-v1.png": {
+    "source": "/media/tools/variations/rot-explorer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 3341
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 4086
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 7913
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 10745
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 17910
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 25655
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 30230
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 3972
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 5758
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 10168
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 15016
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 26404
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 39274
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 47136
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/rot-explorer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 6119
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 8693
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 14432
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 20475
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 34624
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 8712
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 12820
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 22002
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 32476
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 54322
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/series-resistors-desktop-v1.png": {
+    "source": "/media/tools/variations/series-resistors-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2207
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 2735
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 4234
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 6432
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 9775
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 13923
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 15587
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 1960
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 2952
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 5044
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 7514
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 12974
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 19462
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 23674
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/series-resistors-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 2621
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 3586
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 5715
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 8892
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 13835
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 3026
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 4390
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 7770
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 11142
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 20146
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/smps-designer-desktop-v1.png": {
+    "source": "/media/tools/variations/smps-designer-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 3101
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 4028
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 6886
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 9789
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 17169
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 25213
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 30700
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 3386
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 5204
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 9204
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 13680
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 23826
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 36308
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 44926
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/smps-designer-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 3610
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 5087
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 8875
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 13667
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 23818
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 4770
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 7118
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 12842
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 19070
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 35810
+        }
+      ]
+    }
+  },
+  "/media/tools/variations/voltage-divider-desktop-v1.png": {
+    "source": "/media/tools/variations/voltage-divider-desktop-v1.png",
+    "width": 1440,
+    "height": 810,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/240.avif",
+        "width": 240,
+        "bytes": 2516
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/320.avif",
+        "width": 320,
+        "bytes": 3785
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/480.avif",
+        "width": 480,
+        "bytes": 5931
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/640.avif",
+        "width": 640,
+        "bytes": 7335
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/960.avif",
+        "width": 960,
+        "bytes": 12483
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/1280.avif",
+        "width": 1280,
+        "bytes": 16434
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/1440.avif",
+        "width": 1440,
+        "bytes": 20571
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/240.webp",
+        "width": 240,
+        "bytes": 2686
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/320.webp",
+        "width": 320,
+        "bytes": 3852
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/480.webp",
+        "width": 480,
+        "bytes": 6350
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/640.webp",
+        "width": 640,
+        "bytes": 9144
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/960.webp",
+        "width": 960,
+        "bytes": 15538
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/1280.webp",
+        "width": 1280,
+        "bytes": 23170
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/1440.webp",
+        "width": 1440,
+        "bytes": 27902
+      }
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/voltage-divider-mobile-v2.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/240.avif",
+          "width": 240,
+          "bytes": 3171
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/320.avif",
+          "width": 320,
+          "bytes": 4417
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/480.avif",
+          "width": 480,
+          "bytes": 6285
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/640.avif",
+          "width": 640,
+          "bytes": 9670
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/960.avif",
+          "width": 960,
+          "bytes": 14912
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/240.webp",
+          "width": 240,
+          "bytes": 3512
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/320.webp",
+          "width": 320,
+          "bytes": 4938
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/480.webp",
+          "width": 480,
+          "bytes": 8074
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/640.webp",
+          "width": 640,
+          "bytes": 11616
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/960.webp",
+          "width": 960,
+          "bytes": 20724
         }
       ]
     }

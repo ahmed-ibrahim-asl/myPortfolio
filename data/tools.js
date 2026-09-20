@@ -8,7 +8,7 @@ export const engineeringTools = [
     icon: "GRADIFY",
     category: "Academic planning",
     highlight: "Delta tested",
-    coverImage: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/media/tools/tool-gradify.svg`
+    coverImage: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/media/tools/variations/gradify-desktop-v1.png`
   },
   {
     id: "ai-script-generator",

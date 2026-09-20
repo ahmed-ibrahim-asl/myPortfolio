@@ -10,8 +10,8 @@ const visual = (kind, formula, accent, ariaLabel, image, concept) => Object.free
 });
 
 export const calculatorVisuals = Object.freeze({
-  "smps-designer": visual("tank", "SWITCH / STORE / DELIVER", "gold", "Two isolated windings transfer energy from AC or DC input to a DC output", {imageDark:"/media/tools/design/smps-v3-dark.svg",imageLight:"/media/tools/design/smps-v3-light.svg"}),
-  "rot-explorer": visual("rot", "ROT13 · HELLO → URYYB", "gold", "Letters H E L L O shifted thirteen places become U R Y Y B", {imageDark: "/media/tools/design/rot-explorer-v2-dark.svg", imageLight: "/media/tools/design/rot-explorer-v2-light.svg"}),
+  "smps-designer": visual("tank", "SWITCH / STORE / DELIVER", "gold", "A switching supply transfers energy through a transformer and turns it into smooth DC power", "/media/tools/variations/smps-designer-desktop-v1.png"),
+  "rot-explorer": visual("rot", "ROT13 · HELLO → URYYB", "gold", "A rotating alphabet wheel shifts each message letter by the same amount", "/media/tools/variations/rot-explorer-desktop-v1.png"),
   "vigenere-cipher": visual("vigenere", "ATTAC + LEMON → LXFOP", "gold", "Letters A T T A C, each added to a keyword letter L E M O N, become L X F O P", cryptographyToolImages["vigenere-cipher"].path, {conceptLabel:"ENCRYPT",conceptHint:"Reversible with a key"}),
   "affine-cipher": visual("affine", "C = (P × 5 + 8) mod 26", "gold", "Letters A F F I N scaled by 5 and shifted by 8 become I H H W V", cryptographyToolImages["affine-cipher"].path, {conceptLabel:"ENCRYPT",conceptHint:"Reversible with a key"}),
   "transposition-cipher": visual("transposition", "WEARE → WEERA (3 rails)", "gold", "Letters W E A R E zigzag across three rails and are read off rail by rail as W E E R A", cryptographyToolImages["transposition-cipher"].path, {conceptLabel:"REARRANGE",conceptHint:"Same characters, new order"}),
@@ -19,15 +19,15 @@ export const calculatorVisuals = Object.freeze({
   "hill-cipher": visual("hill", "C = K × P (mod 26)", "gold", "A 3 by 3 key matrix multiplies letter block P A Y into ciphertext block L N S", cryptographyToolImages["hill-cipher"].path, {conceptLabel:"ENCRYPT BLOCKS",conceptHint:"Reversible with a matrix key"}),
   "hash-generator": visual("hash", "abc → 900150983cd2...", "gold", "The text abc is hashed into a fixed length fingerprint such as 900150983cd2", cryptographyToolImages["hash-generator"].path, {conceptLabel:"HASH",conceptHint:"One-way fingerprint"}),
   "aes-hex-calculator": visual("aes", "SubBytes → ShiftRows → MixColumns → AddRoundKey", "gold", "A 16 byte hex block moves through SubBytes ShiftRows MixColumns and AddRoundKey each round", cryptographyToolImages["aes-hex-calculator"].path, {conceptLabel:"ENCRYPT DATA",conceptHint:"Reversible with a secret key"}),
-  "air-core-coil-designer": visual("coil", "Geometry → inductance", "gold", "Single-layer air-core coil winding", {imageDark: "/media/tools/design/air-core-coil-v2-dark.svg", imageLight: "/media/tools/design/air-core-coil-v2-light.svg"}),
-  "lc-resonance-designer": visual("tank", "f₀ = 1 / (2π√LC)", "gold", "Parallel inductor and capacitor tuned circuit", {imageDark: "/media/tools/design/lc-resonance-v2-dark.svg", imageLight: "/media/tools/design/lc-resonance-v2-light.svg"}),
-  "band-pass-filter-designer": visual("bandpass", "High-pass → buffer → low-pass", "signal", "Band-pass frequency response", {imageDark: "/media/tools/design/band-pass-filter-v2-dark.svg", imageLight: "/media/tools/design/band-pass-filter-v2-light.svg"}),
-  "cascaded-opamp-gain-designer": visual("opamp", "Aᵥ,total = Aᵥ₁ × Aᵥ₂", "signal", "Cascaded inverting and non-inverting op amp stages", {imageDark: "/media/tools/design/cascaded-opamp-v2-dark.svg", imageLight: "/media/tools/design/cascaded-opamp-v2-light.svg"}),
-  "control-design-assistant": visual("logic", "STATE → FLIP-FLOP → OUTPUT", "gold", "Logic state controls feeding a flip-flop and output", {imageDark: "/media/tools/design/control-memory-v2-dark.svg", imageLight: "/media/tools/design/control-memory-v2-light.svg"}),
-  "logic-gate-designer": visual("logic", "INPUTS → GATE → OUTPUT", "gold", "Configurable logic gate with input switches and output", {imageDark: "/media/tools/design/logic-gates-v2-dark.svg", imageLight: "/media/tools/design/logic-gates-v2-light.svg"}),
-  "bridge-rectifier-designer": visual("logic", "AC → DC → C", "gold", "Full-wave bridge rectifier and reservoir capacitor", {imageDark: "/media/tools/design/bridge-rectifier-v3-dark.svg", imageLight: "/media/tools/design/bridge-rectifier-v3-light.svg"}),
-  "linear-regulator-stability-designer": visual("opamp", "Vin → REG → Vout", "signal", "Linear regulator with input and output capacitors", {imageDark: "/media/tools/design/linear-regulator-v3-dark.svg", imageLight: "/media/tools/design/linear-regulator-v3-light.svg"}),
-  "buck-converter-designer": visual("bandpass", "SW → L → C", "gold", "Buck converter switch, inductor, and capacitor", {imageDark: "/media/tools/design/buck-converter-v3-dark.svg", imageLight: "/media/tools/design/buck-converter-v3-light.svg"}),
+  "air-core-coil-designer": visual("coil", "Geometry → inductance", "gold", "A copper air-core coil with visible diameter, length, turn spacing, and magnetic field", "/media/tools/variations/air-core-coil-designer-desktop-v1.png"),
+  "lc-resonance-designer": visual("tank", "f₀ = 1 / (2π√LC)", "gold", "A coil and capacitor exchange energy at one resonant frequency", "/media/tools/variations/lc-resonance-designer-desktop-v1.png"),
+  "band-pass-filter-designer": visual("bandpass", "High-pass → buffer → low-pass", "signal", "A filter blocks slow and fast waves while passing the middle frequency band", "/media/tools/variations/band-pass-filter-designer-desktop-v1.png"),
+  "cascaded-opamp-gain-designer": visual("opamp", "Aᵥ,total = Aᵥ₁ × Aᵥ₂", "signal", "A small signal grows as it passes through two amplifier stages", "/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1.png"),
+  "control-design-assistant": visual("logic", "STATE → FLIP-FLOP → OUTPUT", "gold", "A controller compares a target, drives an output, and uses feedback to correct it", "/media/tools/variations/control-design-assistant-desktop-v1.png"),
+  "logic-gate-designer": visual("logic", "INPUTS → GATE → OUTPUT", "gold", "Two switches feed a logic gate that controls one output lamp", "/media/tools/variations/logic-gate-designer-desktop-v1.png"),
+  "bridge-rectifier-designer": visual("logic", "AC → DC → C", "gold", "Four diodes turn an alternating wave into one-direction pulses that a capacitor smooths", "/media/tools/variations/bridge-rectifier-designer-desktop-v1.png"),
+  "linear-regulator-stability-designer": visual("opamp", "Vin → REG → Vout", "signal", "A regulator turns a noisy high input into a steady lower output", "/media/tools/variations/linear-regulator-stability-designer-desktop-v1.png"),
+  "buck-converter-designer": visual("bandpass", "SW → L → C", "gold", "A switch, inductor, and capacitor efficiently step high DC voltage down", "/media/tools/variations/buck-converter-designer-desktop-v1.png"),
   "ohms-law-calculator": visual(
     "ohms",
     "V = I × R",
@@ -40,35 +40,35 @@ export const calculatorVisuals = Object.freeze({
     "4 bands",
     "signal",
     "A beige 4.7 kiloohm resistor with four color bands: yellow, violet, red, and gold",
-    "/media/calculators/four-band-resistor-4k7-v1.png"
+    "/media/tools/variations/four-band-resistor-desktop-v1.png"
   ),
   "5-band-resistor-color-code-calculator": visual(
     "resistor-bands-5",
     "5 bands",
     "signal",
     "A light-blue 4.70 kiloohm precision resistor with five color bands: yellow, violet, black, brown, and brown",
-    "/media/calculators/five-band-resistor-4k7-v3.png"
+    "/media/tools/variations/five-band-precision-resistor-desktop-v1.png"
   ),
   "series-resistor-calculator": visual(
     "resistors-series",
     "Rₜ = ΣR",
     "gold",
     "One 1 kiloohm, one 2.2 kiloohm, and one 4.7 kiloohm resistor connected end to end in one current path for a 7.9 kiloohm total",
-    "/media/calculators/series-resistors-no-scales-v2.png"
+    "/media/tools/variations/series-resistors-desktop-v1.png"
   ),
   "parallel-resistor-calculator": visual(
     "resistors-parallel",
     "1/Rₜ = Σ1/R",
     "gold",
     "Three parallel branches share the same two copper nodes and combine to approximately 600 ohms",
-    "/media/calculators/parallel-resistors-physical-network-v1.png"
+    "/media/tools/variations/parallel-resistors-desktop-v1.png"
   ),
   "voltage-divider-calculator": visual(
     "voltage-divider",
     "Vout = Vin × R₂/(R₁+R₂)",
     "gold",
     "A 9 volt source drives R1, the Vout midpoint, and R2 in one closed series path returning to the negative terminal",
-    "/media/calculators/voltage-divider-no-scales-v2.png"
+    "/media/tools/variations/voltage-divider-desktop-v1.png"
   ),
   "rc-time-constant-calculator": visual(
     "rc-time",
@@ -103,7 +103,7 @@ export const calculatorVisuals = Object.freeze({
     "R = (Vs−Vf)/I",
     "gold",
     "A red LED with a 2 volt forward drop uses a 300 ohm series resistor to limit current to 10 milliamps from a 5 volt supply",
-    "/media/calculators/led-series-resistor-300ohm-v1.png"
+    "/media/tools/variations/led-current-limiter-desktop-v1.png"
   ),
   "battery-life-calculator": visual(
     "battery-runtime",

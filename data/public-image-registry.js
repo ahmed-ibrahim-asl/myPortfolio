@@ -15,7 +15,34 @@ export const publicImageRegistry = Object.freeze({
   "/images/hardware_bench_hero.jpg": Object.freeze({ role: "project-cover", sizesPreset: "feature" }),
   "/media/ambient/cc0-cityscape.gif": Object.freeze({ role: "decorative", sizesPreset: "feature", decorative: true }),
   "/opengraph-image.png": Object.freeze({ role: "social", sizesPreset: "social" }),
-  "/twitter-image.png": Object.freeze({ role: "social", sizesPreset: "social" })
+  "/twitter-image.png": Object.freeze({ role: "social", sizesPreset: "social" }),
+  ...Object.fromEntries([
+    ["gradify", "gradify"],
+    ["smps-designer", "smps-designer"],
+    ["rot-explorer", "rot-explorer"],
+    ["air-core-coil-designer", "air-core-coil-designer"],
+    ["lc-resonance-designer", "lc-resonance-designer"],
+    ["band-pass-filter-designer", "band-pass-filter-designer"],
+    ["cascaded-opamp-gain-designer", "cascaded-opamp-gain-designer"],
+    ["control-design-assistant", "control-design-assistant"],
+    ["logic-gate-designer", "logic-gate-designer"],
+    ["bridge-rectifier-designer", "bridge-rectifier-designer"],
+    ["linear-regulator-stability-designer", "linear-regulator-stability-designer"],
+    ["buck-converter-designer", "buck-converter-designer"],
+    ["four-band-resistor", "four-band-resistor"],
+    ["five-band-precision-resistor", "five-band-precision-resistor"],
+    ["series-resistors", "series-resistors"],
+    ["parallel-resistors", "parallel-resistors"],
+    ["voltage-divider", "voltage-divider"],
+    ["led-current-limiter", "led-current-limiter"]
+  ].map(([desktopName, mobileName]) => [
+    `/media/tools/variations/${desktopName}-desktop-v1.png`,
+    Object.freeze({
+      role: "tool-cover",
+      sizesPreset: "tool-card",
+      mobileSrc: `/media/tools/mobile/${mobileName}-mobile-v2.png`
+    })
+  ]))
 });
 
 function mobileToolSource(source) {

@@ -70,6 +70,8 @@ export const toolMobileImagePrompts = Object.freeze(Object.fromEntries(
 ));
 
 export function buildToolMobileImagePrompt(source) {
+  const variation = Object.values(toolImageVariationPrompts).find(item => item.desktopSource === source);
+  if (variation) return variation.mobilePrompt;
   const concept = toolMobileImagePrompts[source];
   if (!concept) throw new Error(`No mobile image prompt registered for ${source}`);
   return [
