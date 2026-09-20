@@ -15,6 +15,16 @@ const slugs = [
   "aes-hex-calculator",
 ];
 
+const expectedConcepts = {
+  "vigenere-cipher": ["ENCRYPT", "Reversible with a key"],
+  "affine-cipher": ["ENCRYPT", "Reversible with a key"],
+  "transposition-cipher": ["REARRANGE", "Same characters, new order"],
+  "playfair-cipher": ["ENCRYPT PAIRS", "Reversible with a key"],
+  "hill-cipher": ["ENCRYPT BLOCKS", "Reversible with a matrix key"],
+  "hash-generator": ["HASH", "One-way fingerprint"],
+  "aes-hex-calculator": ["ENCRYPT DATA", "Reversible with a secret key"],
+};
+
 test("new cryptography tools use generated raster covers", async () => {
   const { cryptographyToolImages, getCryptographyToolImage } = await import(
     "../../data/cryptography-tool-images.js"
@@ -27,10 +37,22 @@ test("new cryptography tools use generated raster covers", async () => {
     assert.ok(image.alt.length >= 40);
     assert.equal(getCryptographyToolImage(slug), image);
     assert.equal(calculatorVisuals[slug].image, image.path);
+    assert.equal(calculatorVisuals[slug].conceptLabel, expectedConcepts[slug][0]);
+    assert.equal(calculatorVisuals[slug].conceptHint, expectedConcepts[slug][1]);
     assert.equal(calculatorVisuals[slug].imageDark, undefined);
     assert.equal(calculatorVisuals[slug].imageLight, undefined);
   }
   assert.equal(getCryptographyToolImage("not-a-tool"), null);
+});
+
+test("cryptography thumbnails render novice concept labels as HTML", async () => {
+  const source = await readFile(
+    path.join(process.cwd(), "components", "tools", "CalculatorThumbnail.js"),
+    "utf8"
+  );
+  assert.match(source, /calculator-thumbnail-concept/);
+  assert.match(source, /visual\.conceptLabel/);
+  assert.match(source, /visual\.conceptHint/);
 });
 
 test("cryptography cover sources are normalized landscape PNG files", async () => {

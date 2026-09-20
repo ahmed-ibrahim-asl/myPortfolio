@@ -3643,6 +3643,65 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       }
     ]
   },
+  "/media/portfolio/nrsc-2026-enhanced-unet-post-conference.jpg": {
+    "source": "/media/portfolio/nrsc-2026-enhanced-unet-post-conference.jpg",
+    "width": 1600,
+    "height": 1066,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/320.avif",
+        "width": 320,
+        "bytes": 5887
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/640.avif",
+        "width": 640,
+        "bytes": 15237
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/960.avif",
+        "width": 960,
+        "bytes": 24497
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/1280.avif",
+        "width": 1280,
+        "bytes": 34429
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/1600.avif",
+        "width": 1600,
+        "bytes": 48634
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/320.webp",
+        "width": 320,
+        "bytes": 7330
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/640.webp",
+        "width": 640,
+        "bytes": 19330
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/960.webp",
+        "width": 960,
+        "bytes": 31988
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/1280.webp",
+        "width": 1280,
+        "bytes": 45132
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/1600.webp",
+        "width": 1600,
+        "bytes": 60322
+      }
+    ]
+  },
   "/media/portfolio/showcase/agribot/cover.webp": {
     "source": "/media/portfolio/showcase/agribot/cover.webp",
     "width": 1672,
@@ -6698,54 +6757,54 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/320.avif",
         "width": 320,
-        "bytes": 5392
+        "bytes": 2679
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/640.avif",
         "width": 640,
-        "bytes": 14613
+        "bytes": 6468
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/960.avif",
         "width": 960,
-        "bytes": 26484
+        "bytes": 9666
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1280.avif",
         "width": 1280,
-        "bytes": 39016
+        "bytes": 14651
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1600.avif",
         "width": 1600,
-        "bytes": 53073
+        "bytes": 23836
       }
     ],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 7484
+        "bytes": 3548
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 21058
+        "bytes": 8518
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 37910
+        "bytes": 14060
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 55678
+        "bytes": 20618
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 74504
+        "bytes": 31556
       }
     ]
   },
@@ -6757,54 +6816,54 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/320.avif",
         "width": 320,
-        "bytes": 5507
+        "bytes": 2047
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/640.avif",
         "width": 640,
-        "bytes": 15127
+        "bytes": 4117
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/960.avif",
         "width": 960,
-        "bytes": 28496
+        "bytes": 7030
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1280.avif",
         "width": 1280,
-        "bytes": 44166
+        "bytes": 9770
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1600.avif",
         "width": 1600,
-        "bytes": 60539
+        "bytes": 17076
       }
     ],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 7562
+        "bytes": 2246
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 21706
+        "bytes": 5008
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 40660
+        "bytes": 8222
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 63116
+        "bytes": 12552
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 88380
+        "bytes": 22688
       }
     ]
   },
@@ -6816,54 +6875,54 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/320.avif",
         "width": 320,
-        "bytes": 4558
+        "bytes": 2958
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/640.avif",
         "width": 640,
-        "bytes": 13245
+        "bytes": 6935
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/960.avif",
         "width": 960,
-        "bytes": 24154
+        "bytes": 10893
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1280.avif",
         "width": 1280,
-        "bytes": 36277
+        "bytes": 16032
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1600.avif",
         "width": 1600,
-        "bytes": 49210
+        "bytes": 25913
       }
     ],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 6042
+        "bytes": 4510
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 17720
+        "bytes": 10346
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 33466
+        "bytes": 16962
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 50410
+        "bytes": 24372
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 68432
+        "bytes": 37436
       }
     ]
   },
@@ -6875,54 +6934,54 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/320.avif",
         "width": 320,
-        "bytes": 5014
+        "bytes": 2155
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/640.avif",
         "width": 640,
-        "bytes": 13870
+        "bytes": 4502
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/960.avif",
         "width": 960,
-        "bytes": 24729
+        "bytes": 7497
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1280.avif",
         "width": 1280,
-        "bytes": 37434
+        "bytes": 10736
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1600.avif",
         "width": 1600,
-        "bytes": 51579
+        "bytes": 23246
       }
     ],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 6000
+        "bytes": 2374
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 16626
+        "bytes": 5092
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 31098
+        "bytes": 8558
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 46638
+        "bytes": 13012
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 64936
+        "bytes": 24966
       }
     ]
   },
@@ -6934,54 +6993,54 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/320.avif",
         "width": 320,
-        "bytes": 4817
+        "bytes": 2747
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/640.avif",
         "width": 640,
-        "bytes": 12873
+        "bytes": 5656
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/960.avif",
         "width": 960,
-        "bytes": 22894
+        "bytes": 9086
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1280.avif",
         "width": 1280,
-        "bytes": 36763
+        "bytes": 13544
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1600.avif",
         "width": 1600,
-        "bytes": 53400
+        "bytes": 20594
       }
     ],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 6222
+        "bytes": 3218
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 17062
+        "bytes": 7982
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 32368
+        "bytes": 13660
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 49370
+        "bytes": 19836
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 69956
+        "bytes": 28914
       }
     ]
   },
@@ -6993,54 +7052,54 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/320.avif",
         "width": 320,
-        "bytes": 5463
+        "bytes": 2757
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/640.avif",
         "width": 640,
-        "bytes": 15167
+        "bytes": 6016
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/960.avif",
         "width": 960,
-        "bytes": 28235
+        "bytes": 9908
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1280.avif",
         "width": 1280,
-        "bytes": 43837
+        "bytes": 13477
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1600.avif",
         "width": 1600,
-        "bytes": 60582
+        "bytes": 20406
       }
     ],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 7528
+        "bytes": 3510
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 21794
+        "bytes": 8062
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 38764
+        "bytes": 13008
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 58314
+        "bytes": 18852
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 80202
+        "bytes": 27478
       }
     ]
   },
@@ -7052,54 +7111,54 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/320.avif",
         "width": 320,
-        "bytes": 5257
+        "bytes": 2073
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/640.avif",
         "width": 640,
-        "bytes": 13994
+        "bytes": 4301
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/960.avif",
         "width": 960,
-        "bytes": 26104
+        "bytes": 7289
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1280.avif",
         "width": 1280,
-        "bytes": 40010
+        "bytes": 9903
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1600.avif",
         "width": 1600,
-        "bytes": 57802
+        "bytes": 16959
       }
     ],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 6830
+        "bytes": 2422
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 18550
+        "bytes": 5504
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 35320
+        "bytes": 8656
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 55652
+        "bytes": 12446
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 78324
+        "bytes": 20684
       }
     ]
   },

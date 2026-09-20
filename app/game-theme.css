@@ -868,6 +868,43 @@ body::before { border-width: 4px; }
 .publication-record-meta a:focus-visible {
   color: #b8f8f4;
 }
+.publication-conference-evidence {
+  grid-column: 2 / -1;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid #3b456a;
+  background: #0b0f20;
+  overflow: hidden;
+}
+.publication-conference-evidence:hover,
+.publication-conference-evidence:focus-visible {
+  border-color: var(--pixel-cyan);
+}
+.publication-conference-evidence figure { margin: 0; }
+.publication-conference-evidence img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.publication-conference-evidence figcaption {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 16px;
+  color: #adb6d5;
+  font-family: var(--font-reading);
+  font-size: .8rem;
+  line-height: 1.55;
+}
+.publication-conference-evidence figcaption strong {
+  color: #79e7e1;
+  font: 700 .68rem/1.3 var(--font-mono);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
 .publication-sync-note {
   max-width: 82ch;
   margin: 22px 0 0;
@@ -911,6 +948,7 @@ body::before { border-width: 4px; }
     align-items: center;
     text-align: left;
   }
+  .publication-conference-evidence { grid-column: 1; }
 }
 
 @media (max-width: 560px) {
@@ -929,6 +967,7 @@ body::before { border-width: 4px; }
     display: grid;
     justify-content: start;
   }
+  .publication-conference-evidence figcaption { grid-template-columns: 1fr; }
 }
 
 /* --- Mission Motion System & MissionRail --- */

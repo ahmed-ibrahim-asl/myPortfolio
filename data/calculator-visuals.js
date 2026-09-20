@@ -1,23 +1,24 @@
 import { cryptographyToolImages } from "./cryptography-tool-images.js";
 
-const visual = (kind, formula, accent, ariaLabel, image) => Object.freeze({
+const visual = (kind, formula, accent, ariaLabel, image, concept) => Object.freeze({
   kind,
   formula,
   accent,
   ariaLabel,
-  ...(typeof image === "object" ? Object.fromEntries(Object.entries(image).map(([key, value]) => [key, `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${value}`])) : image ? { image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${image}` } : {})
+  ...(typeof image === "object" ? Object.fromEntries(Object.entries(image).map(([key, value]) => [key, `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${value}`])) : image ? { image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${image}` } : {}),
+  ...(concept ?? {})
 });
 
 export const calculatorVisuals = Object.freeze({
   "smps-designer": visual("tank", "SWITCH / STORE / DELIVER", "gold", "Two isolated windings transfer energy from AC or DC input to a DC output", {imageDark:"/media/tools/design/smps-v3-dark.svg",imageLight:"/media/tools/design/smps-v3-light.svg"}),
   "rot-explorer": visual("rot", "ROT13 · HELLO → URYYB", "gold", "Letters H E L L O shifted thirteen places become U R Y Y B", {imageDark: "/media/tools/design/rot-explorer-v2-dark.svg", imageLight: "/media/tools/design/rot-explorer-v2-light.svg"}),
-  "vigenere-cipher": visual("vigenere", "ATTAC + LEMON → LXFOP", "gold", "Letters A T T A C, each added to a keyword letter L E M O N, become L X F O P", cryptographyToolImages["vigenere-cipher"].path),
-  "affine-cipher": visual("affine", "C = (P × 5 + 8) mod 26", "gold", "Letters A F F I N scaled by 5 and shifted by 8 become I H H W V", cryptographyToolImages["affine-cipher"].path),
-  "transposition-cipher": visual("transposition", "WEARE → WEERA (3 rails)", "gold", "Letters W E A R E zigzag across three rails and are read off rail by rail as W E E R A", cryptographyToolImages["transposition-cipher"].path),
-  "playfair-cipher": visual("playfair", "HI DE → BM OD", "gold", "Digraphs H I and D E look up a 5 by 5 key square to become B M and O D", cryptographyToolImages["playfair-cipher"].path),
-  "hill-cipher": visual("hill", "C = K × P (mod 26)", "gold", "A 3 by 3 key matrix multiplies letter block P A Y into ciphertext block L N S", cryptographyToolImages["hill-cipher"].path),
-  "hash-generator": visual("hash", "abc → 900150983cd2...", "gold", "The text abc is hashed into a fixed length fingerprint such as 900150983cd2", cryptographyToolImages["hash-generator"].path),
-  "aes-hex-calculator": visual("aes", "SubBytes → ShiftRows → MixColumns → AddRoundKey", "gold", "A 16 byte hex block moves through SubBytes ShiftRows MixColumns and AddRoundKey each round", cryptographyToolImages["aes-hex-calculator"].path),
+  "vigenere-cipher": visual("vigenere", "ATTAC + LEMON → LXFOP", "gold", "Letters A T T A C, each added to a keyword letter L E M O N, become L X F O P", cryptographyToolImages["vigenere-cipher"].path, {conceptLabel:"ENCRYPT",conceptHint:"Reversible with a key"}),
+  "affine-cipher": visual("affine", "C = (P × 5 + 8) mod 26", "gold", "Letters A F F I N scaled by 5 and shifted by 8 become I H H W V", cryptographyToolImages["affine-cipher"].path, {conceptLabel:"ENCRYPT",conceptHint:"Reversible with a key"}),
+  "transposition-cipher": visual("transposition", "WEARE → WEERA (3 rails)", "gold", "Letters W E A R E zigzag across three rails and are read off rail by rail as W E E R A", cryptographyToolImages["transposition-cipher"].path, {conceptLabel:"REARRANGE",conceptHint:"Same characters, new order"}),
+  "playfair-cipher": visual("playfair", "HI DE → BM OD", "gold", "Digraphs H I and D E look up a 5 by 5 key square to become B M and O D", cryptographyToolImages["playfair-cipher"].path, {conceptLabel:"ENCRYPT PAIRS",conceptHint:"Reversible with a key"}),
+  "hill-cipher": visual("hill", "C = K × P (mod 26)", "gold", "A 3 by 3 key matrix multiplies letter block P A Y into ciphertext block L N S", cryptographyToolImages["hill-cipher"].path, {conceptLabel:"ENCRYPT BLOCKS",conceptHint:"Reversible with a matrix key"}),
+  "hash-generator": visual("hash", "abc → 900150983cd2...", "gold", "The text abc is hashed into a fixed length fingerprint such as 900150983cd2", cryptographyToolImages["hash-generator"].path, {conceptLabel:"HASH",conceptHint:"One-way fingerprint"}),
+  "aes-hex-calculator": visual("aes", "SubBytes → ShiftRows → MixColumns → AddRoundKey", "gold", "A 16 byte hex block moves through SubBytes ShiftRows MixColumns and AddRoundKey each round", cryptographyToolImages["aes-hex-calculator"].path, {conceptLabel:"ENCRYPT DATA",conceptHint:"Reversible with a secret key"}),
   "air-core-coil-designer": visual("coil", "Geometry → inductance", "gold", "Single-layer air-core coil winding", {imageDark: "/media/tools/design/air-core-coil-v2-dark.svg", imageLight: "/media/tools/design/air-core-coil-v2-light.svg"}),
   "lc-resonance-designer": visual("tank", "f₀ = 1 / (2π√LC)", "gold", "Parallel inductor and capacitor tuned circuit", {imageDark: "/media/tools/design/lc-resonance-v2-dark.svg", imageLight: "/media/tools/design/lc-resonance-v2-light.svg"}),
   "band-pass-filter-designer": visual("bandpass", "High-pass → buffer → low-pass", "signal", "Band-pass frequency response", {imageDark: "/media/tools/design/band-pass-filter-v2-dark.svg", imageLight: "/media/tools/design/band-pass-filter-v2-light.svg"}),

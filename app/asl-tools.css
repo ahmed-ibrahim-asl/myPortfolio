@@ -230,11 +230,39 @@
 }
 
 .asl-tools-register .calculator-thumbnail {
+  position: relative;
   aspect-ratio: 16 / 9;
   color: var(--asl-text);
   background: var(--asl-sunken);
   border-color: var(--asl-line);
   overflow: hidden;
+}
+
+.asl-tools-register .calculator-thumbnail-concept {
+  position: absolute;
+  inset-inline: 8px;
+  bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  color: #f6f2e8;
+  background: rgba(8, 11, 15, .9);
+  border-inline-start: 3px solid var(--asl-gold);
+  font-family: var(--font-mono);
+  line-height: 1.1;
+}
+
+.asl-tools-register .calculator-thumbnail-concept strong {
+  color: var(--asl-gold);
+  font-size: .64rem;
+  letter-spacing: .08em;
+}
+
+.asl-tools-register .calculator-thumbnail-concept small {
+  font-size: .57rem;
+  text-align: end;
 }
 
 .asl-tools-register .calculator-thumbnail-image {

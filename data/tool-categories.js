@@ -2,6 +2,7 @@ import { calculators } from "./calculators.js";
 import { engineeringTools } from "./tools.js";
 import { satelliteCalculators } from "./satellite-course.js";
 import { rfCalculators } from "./rf-calculators.js";
+import { getToolSearchAliases } from "./tool-search-aliases.js";
 
 export const toolCategories = Object.freeze([
   Object.freeze({
@@ -183,6 +184,30 @@ export function getToolCategorySummaries() {
       examples: items.slice(0, 3).map(({ title }) => title)
     };
   });
+}
+
+export function getGlobalToolSearchItems() {
+  const items = toolCategories.flatMap(({ slug }) => getToolCategoryItems(slug));
+  const uniqueItems = new Map();
+
+  for (const item of items) {
+    if (uniqueItems.has(item.id)) continue;
+    uniqueItems.set(item.id, {
+      ...item,
+      searchTerms: [
+        ...getToolSearchAliases(item.id),
+        item.title,
+        item.summary,
+        item.category,
+        item.group,
+        ...(item.tags ?? []),
+        ...(item.symbols ?? []),
+        ...(item.aliases ?? [])
+      ].filter(Boolean)
+    });
+  }
+
+  return [...uniqueItems.values()];
 }
 
 export function getToolCategoryStaticParams() {

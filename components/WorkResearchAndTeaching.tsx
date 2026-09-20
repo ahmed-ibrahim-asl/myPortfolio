@@ -62,6 +62,28 @@ export function WorkResearchAndTeaching() {
                     Open publication
                   </a>
                 </div>
+                {item.conferenceEvidence ? (
+                  <a
+                    className="publication-conference-evidence"
+                    href={item.conferenceEvidence.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View the post-conference record for ${item.title}`}
+                  >
+                    <figure>
+                      <PublicImage
+                        src={item.conferenceEvidence.image}
+                        alt={item.conferenceEvidence.alt}
+                        loading="lazy"
+                        sizes="(max-width: 820px) 100vw, 70vw"
+                      />
+                      <figcaption>
+                        <span>{item.conferenceEvidence.caption}</span>
+                        <strong>View the post-conference record ↗</strong>
+                      </figcaption>
+                    </figure>
+                  </a>
+                ) : null}
               </article>
             ))}
           </div>

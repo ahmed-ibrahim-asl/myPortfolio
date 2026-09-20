@@ -20,7 +20,13 @@
                                           "Conference Paper"
                                       ],
                              "publicationType":  "Conference Paper",
-                             "ranking":  null
+                             "ranking":  null,
+                             "conferenceEvidence":  {
+                                                        "image":  "/media/portfolio/nrsc-2026-enhanced-unet-post-conference.jpg",
+                                                        "alt":  "Certificate presentation following the NRSC 2026 conference session for the enhanced U-Net aerial-image paper.",
+                                                        "caption":  "Immediately after the conference presentation of the enhanced U-Net aerial-image paper at NRSC 2026.",
+                                                        "href":  "https://web.facebook.com/share/p/1CKC3wMXTT/"
+                                                    }
                          },
                          {
                              "id":  "o72gFwkAAAAJ:smart-rouv-suez-canal",

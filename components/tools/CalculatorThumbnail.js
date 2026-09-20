@@ -358,6 +358,12 @@ export function CalculatorThumbnail({ visualKey, title, compact = false }) {
           <g className="calculator-thumbnail-diagram"><Diagram visual={visual} /></g>
         </svg>
       )}
+      {visual.conceptLabel ? (
+        <span className="calculator-thumbnail-concept" aria-hidden="true">
+          <strong>{visual.conceptLabel}</strong>
+          <small>{visual.conceptHint}</small>
+        </span>
+      ) : null}
     </div>
   );
 }

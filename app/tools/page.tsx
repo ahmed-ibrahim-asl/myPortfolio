@@ -5,6 +5,8 @@ import { getAllTools } from "@/lib/tools";
 import { satelliteCalculators } from "@/data/satellite-course";
 import { rfCalculators } from "@/data/rf-calculators";
 import { createPageMetadata } from "@/lib/seo";
+import { getGlobalToolSearchItems } from "@/data/tool-categories";
+import { ToolsQuickSearch } from "@/components/tools/ToolsQuickSearch";
 
 export const metadata = createPageMetadata({
   title: "Engineering Tools: Workbenches and Electronics Calculators",
@@ -16,6 +18,7 @@ export const metadata = createPageMetadata({
 export default function ToolsIndexPage() {
   const calculators = getAllTools();
   const totalToolCount = engineeringTools.length + calculators.length + satelliteCalculators.length + rfCalculators.length;
+  const searchItems = getGlobalToolSearchItems();
 
   return (
     <div className="asl-page asl-tools-register">
@@ -31,6 +34,7 @@ export default function ToolsIndexPage() {
       </header>
 
       <main className="section shell tools-unified-section">
+        <ToolsQuickSearch items={searchItems} />
         <ToolsCategoryHub />
       </main>
     </div>

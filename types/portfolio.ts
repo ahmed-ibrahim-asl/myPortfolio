@@ -108,6 +108,12 @@ export interface Publication {
   tags: string[];
   ranking?: string;
   publicationType?: string;
+  conferenceEvidence?: {
+    image: string;
+    alt: string;
+    caption: string;
+    href: string;
+  };
 }
 
 export interface PublicationSource {
