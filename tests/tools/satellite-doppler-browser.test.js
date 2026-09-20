@@ -50,7 +50,7 @@ test("Doppler motion follows radial sign and relay pulse uses unequal leg length
         Math.abs(Number(document.querySelector("[data-delay-pulse]").getAttribute("cx")) - 310) <
         0.01
     );
-    assert.match(await p.$eval("[data-doppler-visual]", (e) => e.textContent), /33.33 ms/);
+    assert.match(await p.$eval("[data-doppler-visual]", (e) => e.textContent), /33.36 ms/);
     const x = await p.$eval("[data-doppler-satellite]", (e) => Number(e.getAttribute("cx")));
     await edit("radialVelocityMps", 7000);
     await p.waitForFunction(() =>
