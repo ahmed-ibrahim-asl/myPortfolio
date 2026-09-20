@@ -14,7 +14,7 @@ const help = {
   ],
   altitudeM: ["h", "Height above the Earth surface, not distance from its centre."],
   earthRadiusM: ["Rₑ", "Spherical Earth radius. The course example uses 6371 km."],
-  mu: ["μ", "Earth gravitational parameter in m³/s². Convert km³/s² by multiplying by 10⁹."],
+  muKm3S2: ["μ", "Earth gravitational parameter in km³/s²."],
   apogeeRadiusM: [
     "rₐ",
     "Greatest distance from Earth centre; must be at least the perigee radius."

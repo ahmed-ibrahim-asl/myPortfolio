@@ -3,6 +3,22 @@ import assert from "node:assert/strict";
 import { satelliteInputs, initialValues, visibleFields } from "../../data/satellite-inputs.js";
 import { calculate, noiseFigure } from "../../lib/tools/satellite/engine.js";
 const value = (c, key) => c.results.find((r) => r.key === key)?.value;
+
+test("orbit exposes Earth gravitational parameter only in km³/s²", () => {
+  const field = satelliteInputs.orbit.fields.find((item) => item.key === "muKm3S2");
+  assert.equal(field?.value, 398600.4418);
+  assert.equal(field?.unit, "km³/s²");
+  assert.equal(satelliteInputs.orbit.fields.some((item) => item.key === "mu"), false);
+});
+
+test("kilometre gravitational parameter preserves the engineering orbit result", () => {
+  const result = calculate(
+    "orbit",
+    { ...initialValues("orbit"), muKm3S2: 398600.4418 },
+    "engineering"
+  );
+  assert.ok(Math.abs(value(result, "velocityMps") - 7455.538661) < 0.01);
+});
 for (const [slug, config] of Object.entries(satelliteInputs)) {
   test(`${slug}: defaults and all complete presets calculate in both constant modes`, () => {
     for (const mode of ["course", "engineering"]) {

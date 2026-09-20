@@ -43,7 +43,7 @@ export const satelliteInputs = {
       ]),
       quantity("altitudeM", "Altitude above surface", 800e3, distance, "km"),
       quantity("earthRadiusM", "Earth radius", 6371e3, distance, "km"),
-      field("mu", "Earth gravitational parameter", 3.986e14, "m³/s²"),
+      field("muKm3S2", "Earth gravitational parameter", 398600.4418, "km³/s²"),
       quantity("apogeeRadiusM", "Apogee radius from Earth centre", 7600e3, distance, "km"),
       quantity("perigeeRadiusM", "Perigee radius from Earth centre", 7200e3, distance, "km"),
       field("periodS", "Rotation period", 86164.0905, "s"),
@@ -504,11 +504,11 @@ export function visibleFields(slug, values) {
   }
   if (slug === "orbit") {
     const keys = {
-      circular: ["altitudeM", "earthRadiusM", "mu", "minimumElevationDeg"],
-      elliptical: ["apogeeRadiusM", "perigeeRadiusM", "earthRadiusM", "mu"],
-      geo: ["periodS", "earthRadiusM", "mu"],
+      circular: ["altitudeM", "earthRadiusM", "muKm3S2", "minimumElevationDeg"],
+      elliptical: ["apogeeRadiusM", "perigeeRadiusM", "earthRadiusM", "muKm3S2"],
+      geo: ["periodS", "earthRadiusM", "muKm3S2"],
       coverage: ["altitudeM", "earthRadiusM", "minimumElevationDeg"],
-      "vis-viva": ["radiusM", "semiMajorAxisM", "mu"]
+      "vis-viva": ["radiusM", "semiMajorAxisM", "muKm3S2"]
     }[values.orbitMode ?? "circular"];
     return fields.filter((f) => f.key === "orbitMode" || keys?.includes(f.key));
   }
