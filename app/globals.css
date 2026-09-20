@@ -953,6 +953,7 @@ h3 {
 
 .tutorial-card img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   margin-top: 10px;
   object-fit: cover;
