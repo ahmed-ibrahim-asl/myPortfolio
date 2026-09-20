@@ -14,7 +14,7 @@ const slugs = [
   "aes-hex-calculator"
 ];
 
-test("every new classical tool has one route, search seed and theme-paired cover", () => {
+test("every new classical tool has one route, search seed and generated cover", () => {
   const page = readFileSync("components/tools/design/DesignToolPage.tsx", "utf8");
   const seeds = readFileSync("data/tool-search-seeds.ts", "utf8");
   for (const slug of slugs) {
@@ -24,12 +24,9 @@ test("every new classical tool has one route, search seed and theme-paired cover
     assert.match(seeds, new RegExp(`["']${slug}["']\\s*:`), `${slug} search seed`);
     const visual = calculatorVisuals[slug];
     assert.ok(visual?.ariaLabel, `${slug} visual label`);
-    for (const key of ["imageDark", "imageLight"]) {
-      const path = `public${visual[key]}`;
-      assert.ok(existsSync(path), `${slug} ${key}`);
-      const svg = readFileSync(path, "utf8");
-      assert.match(svg, /<svg[^>]+viewBox=/, `${slug} ${key} viewBox`);
-      assert.doesNotMatch(svg, /<script|javascript:/i, `${slug} ${key} executable content`);
-    }
+    assert.match(visual.image, /-instrument-v2\.png$/, `${slug} generated cover`);
+    assert.ok(existsSync(`public${visual.image}`), `${slug} image`);
+    assert.equal(visual.imageDark, undefined, `${slug} no obsolete dark cover`);
+    assert.equal(visual.imageLight, undefined, `${slug} no obsolete light cover`);
   }
 });

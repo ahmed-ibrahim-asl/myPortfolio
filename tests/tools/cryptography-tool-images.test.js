@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { access } from "node:fs/promises";
+import { access, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 import { calculatorVisuals } from "../../data/calculator-visuals.js";
@@ -43,5 +43,34 @@ test("cryptography cover sources are normalized landscape PNG files", async () =
     assert.equal(metadata.width, 1600, image.path);
     assert.equal(metadata.height, 900, image.path);
     assert.equal(metadata.format, "png", image.path);
+  }
+});
+
+test("cryptography covers have responsive AVIF and WebP variants within budget", async () => {
+  const { cryptographyToolImages } = await import("../../data/cryptography-tool-images.js");
+  const manifest = await readFile(
+    path.join(process.cwd(), "data", "public-image-manifest.generated.ts"),
+    "utf8"
+  );
+
+  for (const image of Object.values(cryptographyToolImages)) {
+    assert.match(manifest, new RegExp(`"${image.path.replaceAll("/", "\\/")}"`));
+    const responsiveRoot = path.join(
+      process.cwd(),
+      "public",
+      "media",
+      "generated",
+      "responsive",
+      image.path.slice(1).replace(/\.png$/u, "")
+    );
+    for (const width of [320, 640, 960, 1280, 1600]) {
+      for (const extension of ["avif", "webp"]) {
+        const variant = path.join(responsiveRoot, `${width}.${extension}`);
+        const metadata = await sharp(variant).metadata();
+        assert.equal(metadata.width, width, variant);
+        assert.equal(metadata.height, Math.round(width * 9 / 16), variant);
+        assert.ok((await stat(variant)).size <= 180 * 1024, `${variant} exceeds 180 KB`);
+      }
+    }
   }
 });

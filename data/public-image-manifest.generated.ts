@@ -6690,6 +6690,419 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       }
     ]
   },
+  "/media/tools/design/aes-hex-calculator-instrument-v2.png": {
+    "source": "/media/tools/design/aes-hex-calculator-instrument-v2.png",
+    "width": 1600,
+    "height": 900,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/320.avif",
+        "width": 320,
+        "bytes": 5392
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/640.avif",
+        "width": 640,
+        "bytes": 14613
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/960.avif",
+        "width": 960,
+        "bytes": 26484
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1280.avif",
+        "width": 1280,
+        "bytes": 39016
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1600.avif",
+        "width": 1600,
+        "bytes": 53073
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/320.webp",
+        "width": 320,
+        "bytes": 7484
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/640.webp",
+        "width": 640,
+        "bytes": 21058
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/960.webp",
+        "width": 960,
+        "bytes": 37910
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1280.webp",
+        "width": 1280,
+        "bytes": 55678
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1600.webp",
+        "width": 1600,
+        "bytes": 74504
+      }
+    ]
+  },
+  "/media/tools/design/affine-cipher-instrument-v2.png": {
+    "source": "/media/tools/design/affine-cipher-instrument-v2.png",
+    "width": 1600,
+    "height": 900,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/320.avif",
+        "width": 320,
+        "bytes": 5507
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/640.avif",
+        "width": 640,
+        "bytes": 15127
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/960.avif",
+        "width": 960,
+        "bytes": 28496
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1280.avif",
+        "width": 1280,
+        "bytes": 44166
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1600.avif",
+        "width": 1600,
+        "bytes": 60539
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/320.webp",
+        "width": 320,
+        "bytes": 7562
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/640.webp",
+        "width": 640,
+        "bytes": 21706
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/960.webp",
+        "width": 960,
+        "bytes": 40660
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1280.webp",
+        "width": 1280,
+        "bytes": 63116
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1600.webp",
+        "width": 1600,
+        "bytes": 88380
+      }
+    ]
+  },
+  "/media/tools/design/hash-generator-instrument-v2.png": {
+    "source": "/media/tools/design/hash-generator-instrument-v2.png",
+    "width": 1600,
+    "height": 900,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/320.avif",
+        "width": 320,
+        "bytes": 4558
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/640.avif",
+        "width": 640,
+        "bytes": 13245
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/960.avif",
+        "width": 960,
+        "bytes": 24154
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1280.avif",
+        "width": 1280,
+        "bytes": 36277
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1600.avif",
+        "width": 1600,
+        "bytes": 49210
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/320.webp",
+        "width": 320,
+        "bytes": 6042
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/640.webp",
+        "width": 640,
+        "bytes": 17720
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/960.webp",
+        "width": 960,
+        "bytes": 33466
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1280.webp",
+        "width": 1280,
+        "bytes": 50410
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1600.webp",
+        "width": 1600,
+        "bytes": 68432
+      }
+    ]
+  },
+  "/media/tools/design/hill-cipher-instrument-v2.png": {
+    "source": "/media/tools/design/hill-cipher-instrument-v2.png",
+    "width": 1600,
+    "height": 900,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/320.avif",
+        "width": 320,
+        "bytes": 5014
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/640.avif",
+        "width": 640,
+        "bytes": 13870
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/960.avif",
+        "width": 960,
+        "bytes": 24729
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1280.avif",
+        "width": 1280,
+        "bytes": 37434
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1600.avif",
+        "width": 1600,
+        "bytes": 51579
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/320.webp",
+        "width": 320,
+        "bytes": 6000
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/640.webp",
+        "width": 640,
+        "bytes": 16626
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/960.webp",
+        "width": 960,
+        "bytes": 31098
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1280.webp",
+        "width": 1280,
+        "bytes": 46638
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1600.webp",
+        "width": 1600,
+        "bytes": 64936
+      }
+    ]
+  },
+  "/media/tools/design/playfair-cipher-instrument-v2.png": {
+    "source": "/media/tools/design/playfair-cipher-instrument-v2.png",
+    "width": 1600,
+    "height": 900,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/320.avif",
+        "width": 320,
+        "bytes": 4817
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/640.avif",
+        "width": 640,
+        "bytes": 12873
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/960.avif",
+        "width": 960,
+        "bytes": 22894
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1280.avif",
+        "width": 1280,
+        "bytes": 36763
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1600.avif",
+        "width": 1600,
+        "bytes": 53400
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/320.webp",
+        "width": 320,
+        "bytes": 6222
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/640.webp",
+        "width": 640,
+        "bytes": 17062
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/960.webp",
+        "width": 960,
+        "bytes": 32368
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1280.webp",
+        "width": 1280,
+        "bytes": 49370
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1600.webp",
+        "width": 1600,
+        "bytes": 69956
+      }
+    ]
+  },
+  "/media/tools/design/transposition-cipher-instrument-v2.png": {
+    "source": "/media/tools/design/transposition-cipher-instrument-v2.png",
+    "width": 1600,
+    "height": 900,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/320.avif",
+        "width": 320,
+        "bytes": 5463
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/640.avif",
+        "width": 640,
+        "bytes": 15167
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/960.avif",
+        "width": 960,
+        "bytes": 28235
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1280.avif",
+        "width": 1280,
+        "bytes": 43837
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1600.avif",
+        "width": 1600,
+        "bytes": 60582
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/320.webp",
+        "width": 320,
+        "bytes": 7528
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/640.webp",
+        "width": 640,
+        "bytes": 21794
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/960.webp",
+        "width": 960,
+        "bytes": 38764
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1280.webp",
+        "width": 1280,
+        "bytes": 58314
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1600.webp",
+        "width": 1600,
+        "bytes": 80202
+      }
+    ]
+  },
+  "/media/tools/design/vigenere-cipher-instrument-v2.png": {
+    "source": "/media/tools/design/vigenere-cipher-instrument-v2.png",
+    "width": 1600,
+    "height": 900,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/320.avif",
+        "width": 320,
+        "bytes": 5257
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/640.avif",
+        "width": 640,
+        "bytes": 13994
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/960.avif",
+        "width": 960,
+        "bytes": 26104
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1280.avif",
+        "width": 1280,
+        "bytes": 40010
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1600.avif",
+        "width": 1600,
+        "bytes": 57802
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/320.webp",
+        "width": 320,
+        "bytes": 6830
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/640.webp",
+        "width": 640,
+        "bytes": 18550
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/960.webp",
+        "width": 960,
+        "bytes": 35320
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1280.webp",
+        "width": 1280,
+        "bytes": 55652
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1600.webp",
+        "width": 1600,
+        "bytes": 78324
+      }
+    ]
+  },
   "/media/tools/tool-ai-script-generator-v4.png": {
     "source": "/media/tools/tool-ai-script-generator-v4.png",
     "width": 1672,
