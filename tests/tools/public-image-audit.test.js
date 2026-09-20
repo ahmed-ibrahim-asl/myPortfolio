@@ -27,4 +27,5 @@ test("audit reports unreferenced files without treating generated variants as so
 
   assert.ok(report.unreferenced.length > 0);
   assert.equal(report.unreferenced.some((item) => item.includes("/generated/responsive/")), false);
+  assert.equal(report.unreferenced.some((item) => item.startsWith("/media/tools/mobile/")), false);
 });

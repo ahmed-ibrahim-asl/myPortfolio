@@ -1,4 +1,4 @@
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import {
   access,
   mkdir,
@@ -22,6 +22,7 @@ export const ROLE_POLICIES = Object.freeze({
 });
 const RASTER_EXTENSION = /\.(?:avif|gif|jpe?g|png|webp)$/i;
 const GENERATED_PREFIX = "/media/generated/responsive/";
+const PIPELINE_PATH = fileURLToPath(import.meta.url);
 
 async function exists(filePath) {
   try {
@@ -51,7 +52,7 @@ async function encodeToBudget(image, { format, width, budget, outputPath, write 
     const resized = image.clone().resize({ width, withoutEnlargement: true });
     buffer = format === "avif"
       ? await resized.avif({ quality, effort: 4 }).toBuffer()
-      : await resized.webp({ quality, effort: 4 }).toBuffer();
+      : await resized.webp({ quality, alphaQuality: quality, effort: 4 }).toBuffer();
     if (buffer.byteLength <= budget || quality === minimumQuality) break;
     quality = Math.max(minimumQuality, quality - 5);
   } while (quality >= minimumQuality);
@@ -78,6 +79,7 @@ async function prepareAsset({ rootDir, source, policy, write, oversized }) {
   const image = sharp(sourcePath, { animated: false, failOn: "error" });
   const metadata = await image.metadata();
   const sourceStats = await stat(sourcePath);
+  const pipelineStats = await stat(PIPELINE_PATH);
   if (!metadata.width || !metadata.height) return null;
   const widths = [...new Set([...policy.widths.filter((width) => width < metadata.width), metadata.width])]
     .sort((first, second) => first - second);
@@ -88,7 +90,7 @@ async function prepareAsset({ rootDir, source, policy, write, oversized }) {
     for (const width of widths) {
       const outputPath = path.join(directory, `${width}.${format}`);
       const outputStats = await exists(outputPath) ? await stat(outputPath) : null;
-      const encoded = outputStats && outputStats.mtimeMs >= sourceStats.mtimeMs
+      const encoded = outputStats && outputStats.mtimeMs >= Math.max(sourceStats.mtimeMs, pipelineStats.mtimeMs)
         ? { bytes: outputStats.size, quality: null }
         : await encodeToBudget(image, { format, width, budget: policy.budget, outputPath, write });
       asset[format].push({ src: publicVariantPath(source, width, format), width, bytes: encoded.bytes });

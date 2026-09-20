@@ -93,6 +93,7 @@ export async function auditPublicImages({ rootDir = process.cwd() } = {}) {
     .map((filePath) => `/${normalizePublicPath(path.relative(publicRoot, filePath))}`)
     .filter((source) => !source.startsWith(GENERATED_PREFIX));
   const referencedSet = new Set(sources);
+  const derivedSet = new Set(referenced.flatMap((item) => [item.mobileSrc, item.wideSrc].filter(Boolean)));
   const roleCounts = referenced.reduce((counts, item) => {
     counts[item.role] = (counts[item.role] ?? 0) + 1;
     return counts;
@@ -100,7 +101,7 @@ export async function auditPublicImages({ rootDir = process.cwd() } = {}) {
 
   return {
     referenced,
-    unreferenced: allSources.filter((source) => !referencedSet.has(source)).sort(),
+    unreferenced: allSources.filter((source) => !referencedSet.has(source) && !derivedSet.has(source)).sort(),
     directImgUsages: await findDirectImgUsages(rootDir),
     oversizedSources: referenced.filter((item) => (item.bytes ?? 0) > 500 * 1024),
     roleCounts

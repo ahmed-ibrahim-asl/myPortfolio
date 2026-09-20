@@ -489,7 +489,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3636
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4800
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7385
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 11164
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 19532
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4164
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6008
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 10098
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 14530
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 27428
+        }
+      ]
+    }
   },
   "/media/calculators/555-monostable-trigger-approved-v1.png": {
     "source": "/media/calculators/555-monostable-trigger-approved-v1.png",
@@ -580,7 +639,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2750
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3680
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 6230
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 8856
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 19188
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3014
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 4498
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 7640
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 11382
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 22884
+        }
+      ]
+    }
   },
   "/media/calculators/acceleration-v1.png": {
     "source": "/media/calculators/acceleration-v1.png",
@@ -671,7 +789,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/acceleration-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3274
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4367
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7517
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 10889
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 20141
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4300
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6240
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 10192
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 15186
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 28204
+        }
+      ]
+    }
   },
   "/media/calculators/ascii-to-hex-v1.png": {
     "source": "/media/calculators/ascii-to-hex-v1.png",
@@ -762,7 +939,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/ascii-to-hex-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3587
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4953
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8254
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 11927
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 27058
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4666
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6630
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 10722
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 15542
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 32242
+        }
+      ]
+    }
   },
   "/media/calculators/battery-life-runtime-v1.png": {
     "source": "/media/calculators/battery-life-runtime-v1.png",
@@ -853,7 +1089,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/battery-life-runtime-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3806
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5000
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8702
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 12640
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 23793
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4750
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7052
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 11690
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 17338
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 32420
+        }
+      ]
+    }
   },
   "/media/calculators/binary-bit-shift-v1.png": {
     "source": "/media/calculators/binary-bit-shift-v1.png",
@@ -944,7 +1239,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/binary-bit-shift-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2300
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 2699
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 4988
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 6895
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 14728
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 2430
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 3366
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 5486
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 7862
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 16598
+        }
+      ]
+    }
   },
   "/media/calculators/binary-calculator-v1.png": {
     "source": "/media/calculators/binary-calculator-v1.png",
@@ -1035,7 +1389,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/binary-calculator-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3628
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5109
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7856
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 11374
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 21715
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4882
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6752
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 10842
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 14918
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 26322
+        }
+      ]
+    }
   },
   "/media/calculators/capacitance-units-v1.png": {
     "source": "/media/calculators/capacitance-units-v1.png",
@@ -1126,7 +1539,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/capacitance-units-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3094
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4249
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7421
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 10525
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 20619
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3366
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 5194
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 8912
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 13798
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 27714
+        }
+      ]
+    }
   },
   "/media/calculators/capacitive-reactance-frequency-v1.png": {
     "source": "/media/calculators/capacitive-reactance-frequency-v1.png",
@@ -1217,7 +1689,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4045
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4939
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8993
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 11898
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 20312
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5180
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7304
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 12254
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 17948
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 31736
+        }
+      ]
+    }
   },
   "/media/calculators/capacitor-code-104-v1.png": {
     "source": "/media/calculators/capacitor-code-104-v1.png",
@@ -1308,7 +1839,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/capacitor-code-104-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3707
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4921
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8581
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 12735
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 25477
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4724
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6690
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 11064
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 16512
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 32934
+        }
+      ]
+    }
   },
   "/media/calculators/cube-root-v1.png": {
     "source": "/media/calculators/cube-root-v1.png",
@@ -1399,7 +1989,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/cube-root-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2687
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3494
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 6108
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 8314
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 16395
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3024
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 4420
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 7412
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 10762
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 20774
+        }
+      ]
+    }
   },
   "/media/calculators/five-band-resistor-4k7-v3.png": {
     "source": "/media/calculators/five-band-resistor-4k7-v3.png",
@@ -1490,7 +2139,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2492
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3278
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 5643
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 8536
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 22117
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 2658
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 3820
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 6840
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 11180
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/five-band-resistor-4k7-v3-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 26038
+        }
+      ]
+    }
   },
   "/media/calculators/force-mass-acceleration-v1.png": {
     "source": "/media/calculators/force-mass-acceleration-v1.png",
@@ -1581,7 +2289,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/force-mass-acceleration-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2782
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3720
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 5980
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 8701
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 16148
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3164
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 4506
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 7384
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 10980
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 20474
+        }
+      ]
+    }
   },
   "/media/calculators/four-band-resistor-4k7-v1.png": {
     "source": "/media/calculators/four-band-resistor-4k7-v1.png",
@@ -1672,7 +2439,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2399
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3159
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 5465
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 8446
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 17434
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 2706
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 3862
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 6602
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 10272
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-4k7-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 21362
+        }
+      ]
+    }
   },
   "/media/calculators/frequency-period-v1.png": {
     "source": "/media/calculators/frequency-period-v1.png",
@@ -1763,7 +2589,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/frequency-period-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3474
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4326
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 6828
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 10427
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 17549
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4378
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6178
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 10074
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 14688
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 26090
+        }
+      ]
+    }
   },
   "/media/calculators/hex-calculator-v1.png": {
     "source": "/media/calculators/hex-calculator-v1.png",
@@ -1854,7 +2739,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/hex-calculator-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3870
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5316
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 9290
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 13918
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 27945
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5280
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7640
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 13004
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 19298
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 37244
+        }
+      ]
+    }
   },
   "/media/calculators/hex-to-ascii-v1.png": {
     "source": "/media/calculators/hex-to-ascii-v1.png",
@@ -1945,7 +2889,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/hex-to-ascii-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3974
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5647
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 9145
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 13484
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 24892
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5524
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7886
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 13266
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 18814
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 34756
+        }
+      ]
+    }
   },
   "/media/calculators/high-pass-filter-response-v1.png": {
     "source": "/media/calculators/high-pass-filter-response-v1.png",
@@ -2036,7 +3039,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/high-pass-filter-response-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3588
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4853
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8812
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 13324
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 23458
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5390
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 8010
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 14086
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 20280
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 36402
+        }
+      ]
+    }
   },
   "/media/calculators/led-series-resistor-300ohm-v1.png": {
     "source": "/media/calculators/led-series-resistor-300ohm-v1.png",
@@ -2127,7 +3189,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3563
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4758
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7415
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 10592
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 21437
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3612
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 5182
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 9010
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 13746
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/led-series-resistor-300ohm-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 28812
+        }
+      ]
+    }
   },
   "/media/calculators/log-base-two-v1.png": {
     "source": "/media/calculators/log-base-two-v1.png",
@@ -2218,7 +3339,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/log-base-two-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4373
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 6181
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 10496
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 14855
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 25833
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5672
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 8108
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 13946
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 20686
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 36494
+        }
+      ]
+    }
   },
   "/media/calculators/low-pass-filter-response-v1.png": {
     "source": "/media/calculators/low-pass-filter-response-v1.png",
@@ -2309,7 +3489,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/low-pass-filter-response-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4027
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5462
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 9231
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 13118
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 25850
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5620
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7984
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 13130
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 19510
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 36394
+        }
+      ]
+    }
   },
   "/media/calculators/number-bases-v1.png": {
     "source": "/media/calculators/number-bases-v1.png",
@@ -2400,7 +3639,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/number-bases-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2855
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3806
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 6111
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 8938
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 14516
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3222
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 4594
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 7326
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 10572
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 18824
+        }
+      ]
+    }
   },
   "/media/calculators/ohms-law-physical-measurement-v1.png": {
     "source": "/media/calculators/ohms-law-physical-measurement-v1.png",
@@ -2491,7 +3789,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3923
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5233
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7942
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 12005
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 20765
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4524
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6280
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 10288
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 15172
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 28090
+        }
+      ]
+    }
   },
   "/media/calculators/ones-complement-v1.png": {
     "source": "/media/calculators/ones-complement-v1.png",
@@ -2582,7 +3939,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/ones-complement-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2849
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4174
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7160
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 10163
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 18161
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3424
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 5126
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 8084
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 11872
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 22952
+        }
+      ]
+    }
   },
   "/media/calculators/op-amp-gain-modes-v1.png": {
     "source": "/media/calculators/op-amp-gain-modes-v1.png",
@@ -2673,7 +4089,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4146
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5628
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8904
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 12674
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 24135
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 18144
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 29294
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 58000
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 96702
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 68050
+        }
+      ]
+    }
   },
   "/media/calculators/parallel-resistors-physical-network-v1.png": {
     "source": "/media/calculators/parallel-resistors-physical-network-v1.png",
@@ -2764,7 +4239,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2971
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3793
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 6063
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 8988
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 15413
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3356
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 4578
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 7882
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 11482
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-physical-network-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 21616
+        }
+      ]
+    }
   },
   "/media/calculators/percentage-change-v1.png": {
     "source": "/media/calculators/percentage-change-v1.png",
@@ -2855,7 +4389,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/percentage-change-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2501
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3263
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 5193
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 8114
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 14450
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 2898
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 4194
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 6764
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 9698
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 20158
+        }
+      ]
+    }
   },
   "/media/calculators/rc-time-constant-no-scales-v3.png": {
     "source": "/media/calculators/rc-time-constant-no-scales-v3.png",
@@ -2946,7 +4539,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3345
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4717
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7168
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 9683
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 16927
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3588
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 5022
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 8246
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 11962
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 22228
+        }
+      ]
+    }
   },
   "/media/calculators/rms-voltage-sine-v1.png": {
     "source": "/media/calculators/rms-voltage-sine-v1.png",
@@ -3037,7 +4689,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/rms-voltage-sine-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2575
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3938
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 6062
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 9391
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 16469
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3356
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 4854
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 8156
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 12288
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 23844
+        }
+      ]
+    }
   },
   "/media/calculators/series-resistors-no-scales-v2.png": {
     "source": "/media/calculators/series-resistors-no-scales-v2.png",
@@ -3128,7 +4839,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2538
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3116
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 4791
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 7472
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 12339
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 2676
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 3940
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 6468
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 9270
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-no-scales-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 17928
+        }
+      ]
+    }
   },
   "/media/calculators/speed-distance-time-v1.png": {
     "source": "/media/calculators/speed-distance-time-v1.png",
@@ -3219,7 +4989,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/speed-distance-time-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4471
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 6326
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 10298
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 15152
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 26784
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 6392
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 9580
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 15982
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 23120
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 40666
+        }
+      ]
+    }
   },
   "/media/calculators/square-root-v1.png": {
     "source": "/media/calculators/square-root-v1.png",
@@ -3310,7 +5139,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/square-root-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2056
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 2690
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 4105
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 6071
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 11921
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 2128
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 3026
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 5052
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 7356
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 14856
+        }
+      ]
+    }
   },
   "/media/calculators/temperature-conversion-v1.png": {
     "source": "/media/calculators/temperature-conversion-v1.png",
@@ -3401,7 +5289,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/temperature-conversion-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3349
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4871
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8688
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 13381
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 33253
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4396
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6396
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 11594
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 18084
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 38922
+        }
+      ]
+    }
   },
   "/media/calculators/twos-complement-v1.png": {
     "source": "/media/calculators/twos-complement-v1.png",
@@ -3492,7 +5439,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/twos-complement-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3300
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4584
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7980
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 11924
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 22578
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4080
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6016
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 10290
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 15302
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 29164
+        }
+      ]
+    }
   },
   "/media/calculators/voltage-divider-no-scales-v2.png": {
     "source": "/media/calculators/voltage-divider-no-scales-v2.png",
@@ -3583,7 +5589,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3159
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3922
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 6158
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 8256
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 15339
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 2920
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 4048
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 6662
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 9886
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-no-scales-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 19482
+        }
+      ]
+    }
   },
   "/media/calculators/wavelength-v1.png": {
     "source": "/media/calculators/wavelength-v1.png",
@@ -3674,7 +5739,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/wavelength-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3157
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3807
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 6265
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 9010
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 15479
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4092
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 5782
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 9434
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 13526
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 23200
+        }
+      ]
+    }
   },
   "/media/optimized/profile-ahmed.webp": {
     "source": "/media/optimized/profile-ahmed.webp",
@@ -9289,7 +11413,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4166
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5558
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 9165
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 13054
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 29462
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4996
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7236
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 12226
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 18512
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 37296
+        }
+      ]
+    }
   },
   "/media/tools/design/affine-cipher-instrument-v2.png": {
     "source": "/media/tools/design/affine-cipher-instrument-v2.png",
@@ -9370,7 +11553,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3514
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4812
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8095
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 12092
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 22455
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4300
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6350
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 11266
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 17112
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 32188
+        }
+      ]
+    }
   },
   "/media/tools/design/hash-generator-instrument-v2.png": {
     "source": "/media/tools/design/hash-generator-instrument-v2.png",
@@ -9451,7 +11693,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/hash-generator-instrument-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4336
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 6170
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 10638
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 16022
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 35360
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5888
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 8830
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 15684
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 25234
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 54630
+        }
+      ]
+    }
   },
   "/media/tools/design/hill-cipher-instrument-v2.png": {
     "source": "/media/tools/design/hill-cipher-instrument-v2.png",
@@ -9532,7 +11833,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4197
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5584
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 9592
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 13555
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 23174
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5560
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 8134
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 13768
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 19882
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 35130
+        }
+      ]
+    }
   },
   "/media/tools/design/playfair-cipher-instrument-v2.png": {
     "source": "/media/tools/design/playfair-cipher-instrument-v2.png",
@@ -9613,7 +11973,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4539
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 6320
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 10645
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 15565
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 30000
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 6208
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 9142
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 15520
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 23106
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 44888
+        }
+      ]
+    }
   },
   "/media/tools/design/transposition-cipher-instrument-v2.png": {
     "source": "/media/tools/design/transposition-cipher-instrument-v2.png",
@@ -9694,7 +12113,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3874
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5225
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 9083
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 13513
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 24748
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4804
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7034
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 12384
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 18642
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 36230
+        }
+      ]
+    }
   },
   "/media/tools/design/vigenere-cipher-instrument-v2.png": {
     "source": "/media/tools/design/vigenere-cipher-instrument-v2.png",
@@ -9775,7 +12253,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3551
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4665
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8048
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 11323
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 21291
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4378
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 5988
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 9812
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 14038
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 26826
+        }
+      ]
+    }
   },
   "/media/tools/tool-ai-script-generator-v4.png": {
     "source": "/media/tools/tool-ai-script-generator-v4.png",
@@ -9866,7 +12403,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3170
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 4348
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 7601
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 10750
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 19894
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4572
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6486
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 10308
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 14806
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 26484
+        }
+      ]
+    }
   },
   "/media/tools/tool-battery-estimator-v2.png": {
     "source": "/media/tools/tool-battery-estimator-v2.png",
@@ -9957,7 +12553,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-battery-estimator-v2-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 5792
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 9101
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 17677
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 27269
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 54544
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 7718
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 12174
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 23540
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 38078
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 77462
+        }
+      ]
+    }
   },
   "/media/tools/tool-pid-simulator-v4.png": {
     "source": "/media/tools/tool-pid-simulator-v4.png",
@@ -10048,7 +12703,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-pid-simulator-v4-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2508
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3216
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 5017
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 7278
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 13226
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3216
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 4650
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 7532
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 11008
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 21124
+        }
+      ]
+    }
   },
   "/media/tools/tool-rf-antenna-v1.png": {
     "source": "/media/tools/tool-rf-antenna-v1.png",
@@ -10119,7 +12833,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-rf-antenna-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4251
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 6458
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 11953
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 18181
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 31466
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 6592
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 9846
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 17480
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 26388
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 47746
+        }
+      ]
+    }
   },
   "/media/tools/tool-rf-frequency-bands-v1.png": {
     "source": "/media/tools/tool-rf-frequency-bands-v1.png",
@@ -10190,7 +12963,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3485
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5026
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 8475
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 12531
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 41350
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4730
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7172
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 12112
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 17756
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 41264
+        }
+      ]
+    }
   },
   "/media/tools/tool-rf-multiple-access-v1.png": {
     "source": "/media/tools/tool-rf-multiple-access-v1.png",
@@ -10261,7 +13093,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4815
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 6918
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 11755
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 17120
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 31826
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 6240
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 9466
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 16842
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 25110
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 47564
+        }
+      ]
+    }
   },
   "/media/tools/tool-rf-noise-gt-v1.png": {
     "source": "/media/tools/tool-rf-noise-gt-v1.png",
@@ -10332,7 +13223,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4014
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 6081
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 10996
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 17900
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 31911
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5454
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 8518
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 16532
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 25910
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 49064
+        }
+      ]
+    }
   },
   "/media/tools/tool-rf-path-v1.png": {
     "source": "/media/tools/tool-rf-path-v1.png",
@@ -10403,7 +13353,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-rf-path-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 4456
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 6559
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 11958
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 17791
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 32914
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5308
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 8218
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 14368
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 22234
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 42150
+        }
+      ]
+    }
   },
   "/media/tools/tool-satellite-doppler-delay-v1.png": {
     "source": "/media/tools/tool-satellite-doppler-delay-v1.png",
@@ -10474,7 +13483,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3942
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 6448
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 12170
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 20295
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 40667
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 5196
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 8512
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 16840
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 27274
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 54908
+        }
+      ]
+    }
   },
   "/media/tools/tool-satellite-link-budget-v1.png": {
     "source": "/media/tools/tool-satellite-link-budget-v1.png",
@@ -10545,7 +13613,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3883
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5888
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 11013
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 17812
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 34492
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4492
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7170
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 14204
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 22928
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 47424
+        }
+      ]
+    }
   },
   "/media/tools/tool-satellite-look-angles-v1.png": {
     "source": "/media/tools/tool-satellite-look-angles-v1.png",
@@ -10616,7 +13743,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3387
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5173
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 9843
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 15239
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 28245
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3844
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 6358
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 12136
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 19184
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 37758
+        }
+      ]
+    }
   },
   "/media/tools/tool-satellite-orbit-v1.png": {
     "source": "/media/tools/tool-satellite-orbit-v1.png",
@@ -10687,7 +13873,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 2428
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 3335
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 6338
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 10095
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 20554
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 2466
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 3930
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 7468
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 12054
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 25084
+        }
+      ]
+    }
   },
   "/media/tools/tool-satellite-power-lifetime-v1.png": {
     "source": "/media/tools/tool-satellite-power-lifetime-v1.png",
@@ -10758,7 +14003,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3542
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5674
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 9765
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 14466
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 28080
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 4370
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 7056
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 13240
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 21108
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 41574
+        }
+      ]
+    }
   },
   "/media/tools/tool-security-mission-v4.png": {
     "source": "/media/tools/tool-security-mission-v4.png",
@@ -10849,7 +14153,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-security-mission-v4-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 6260
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 9393
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 17154
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 25677
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 47152
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 8902
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 14050
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 26038
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 39592
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 69356
+        }
+      ]
+    }
   },
   "/media/tools/tool-sensor-code-generator-v4.png": {
     "source": "/media/tools/tool-sensor-code-generator-v4.png",
@@ -10940,7 +14303,66 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       }
     ],
     "role": "tool-cover",
-    "sizesPreset": "tool-card"
+    "sizesPreset": "tool-card",
+    "mobile": {
+      "source": "/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1.png",
+      "width": 960,
+      "height": 960,
+      "avif": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/240.avif",
+          "width": 240,
+          "bytes": 3282
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/320.avif",
+          "width": 320,
+          "bytes": 5123
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/480.avif",
+          "width": 480,
+          "bytes": 9546
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/640.avif",
+          "width": 640,
+          "bytes": 15059
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/960.avif",
+          "width": 960,
+          "bytes": 28913
+        }
+      ],
+      "webp": [
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/240.webp",
+          "width": 240,
+          "bytes": 3468
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/320.webp",
+          "width": 320,
+          "bytes": 5586
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/480.webp",
+          "width": 480,
+          "bytes": 11620
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/640.webp",
+          "width": 640,
+          "bytes": 18728
+        },
+        {
+          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/960.webp",
+          "width": 960,
+          "bytes": 37082
+        }
+      ]
+    }
   },
   "/opengraph-image.png": {
     "source": "/opengraph-image.png",
