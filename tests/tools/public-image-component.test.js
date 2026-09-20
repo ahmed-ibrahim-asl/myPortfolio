@@ -12,8 +12,31 @@ test("PublicImage serves generated AVIF and WebP variants with an original fallb
   assert.match(source, /type="image\/webp"/);
   assert.match(source, /srcSet=/);
   assert.match(source, /src=\{src\}/);
-  assert.match(source, /width=\{asset\?\.width/);
-  assert.match(source, /height=\{asset\?\.height/);
+  assert.match(source, /width=\{asset\.width/);
+  assert.match(source, /height=\{asset\.height/);
+});
+
+test("PublicImage art-directs mobile and wide sources before the default family", async () => {
+  const source = await read("components/PublicImage.tsx");
+
+  assert.match(source, /media="\(max-width: 639px\)"/);
+  assert.match(source, /media="\(min-width: 1600px\)"/);
+  assert.match(source, /asset\.mobile/);
+  assert.match(source, /asset\.wide/);
+  assert.ok(source.indexOf("asset.wide") < source.indexOf("asset.mobile"));
+});
+
+test("PublicImage resolves named responsive size presets", async () => {
+  const [source, presets] = await Promise.all([
+    read("components/PublicImage.tsx"),
+    read("data/public-image-sizes.ts")
+  ]);
+
+  assert.match(source, /sizesPreset \?\? asset\.sizesPreset/);
+  assert.match(source, /publicImageSizes\[preset\]/);
+  for (const preset of ["tool-card", "project-card", "feature", "gallery-thumb", "article", "portrait"]) {
+    assert.match(presets, new RegExp(`"${preset}"`));
+  }
 });
 
 test("high-impact portfolio imagery uses PublicImage", async () => {
@@ -28,3 +51,4 @@ test("high-impact portfolio imagery uses PublicImage", async () => {
     assert.match(source, /PublicImage/, `${path} should use PublicImage`);
   }
 });
+
