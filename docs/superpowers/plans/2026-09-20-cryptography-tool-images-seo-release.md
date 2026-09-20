@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Generate, integrate, optimize, verify, and publicly release distinct instrument-style covers and page-specific SEO images for the seven new cryptography tools.
+**Goal:** Generate and release novice-friendly cryptography covers, a global tool finder, page-specific SEO images, and the supplied enhanced U-Net conference evidence.
 
 **Architecture:** A small shared registry will own each tool's source-image path and descriptive alt text. Calculator cards, route metadata, and WebApplication JSON-LD will consume that registry, while the existing `PublicImage` pipeline creates budgeted AVIF/WebP variants. The verified Next.js export will be committed separately to the static `main` Pages branch.
 
@@ -11,7 +11,7 @@
 ## Global Constraints
 
 - Cover seven routes only: Vigenère, Affine, Transposition, Playfair, Hill, Hash Generator, and AES Hex Calculator.
-- Use dark graphite, restrained brass/gold, cool steel, and precise studio lighting.
+- Use simple graphite/gold educational transformations that distinguish encryption, rearrangement, and one-way hashing for nontechnical visitors.
 - Use a landscape composition cropped to exactly 1600 × 900 pixels.
 - Do not include embedded titles, labels, logos, watermarks, random code, or illegible glyphs.
 - Preserve the existing SVG covers; do not delete them.
@@ -286,6 +286,71 @@ Expected: no new failures compared with the recorded baseline of two resistor so
 - [ ] **Step 5: Check the scoped diff**
 
 Run: `git diff --check` and `git status --short`. Confirm only known user-owned dirty files remain unstaged.
+
+---
+
+### Task 5A: Simplify the cryptography covers and add novice labels
+
+**Files:**
+- Replace: the seven `public/media/tools/design/*-instrument-v2.png` sources
+- Modify: `data/calculator-visuals.js`
+- Modify: `components/tools/CalculatorThumbnail.js`
+- Modify: `app/asl-tools.css`
+- Modify: `tests/tools/cryptography-tool-images.test.js`
+
+**Interfaces:**
+- Adds optional `conceptLabel` and `conceptHint` properties to visual contracts.
+- Renders concise HTML overlay text; generated images remain text-free.
+
+- [ ] Write failing assertions for the seven novice labels and three semantic families.
+- [ ] Generate seven simplified one-transformation covers from the amended specification.
+- [ ] Render the label and hint as accessible HTML over the lower image edge.
+- [ ] Regenerate responsive variants, run image budgets, and inspect dark/light mobile/desktop screenshots.
+- [ ] Commit with `feat: simplify cryptography tool discovery`.
+
+---
+
+### Task 5B: Add global search before tool categories
+
+**Files:**
+- Create: `components/tools/ToolsQuickSearch.tsx`
+- Create: `components/tools/ToolsQuickSearch.module.css`
+- Create: `data/tool-search-aliases.js`
+- Modify: `app/tools/page.tsx`
+- Modify: `lib/tool-search.js`
+- Test: `tests/tools/tools-quick-search.test.js`
+- Test: `tests/tools/tools-quick-search-browser.test.js`
+
+**Interfaces:**
+- Produces `ToolsQuickSearch({ items })` with six-result preview and show-all behavior.
+- Extends `filterToolItems` to consume `searchTerms` in addition to existing searchable fields.
+
+- [ ] Write failing data and source-contract tests for full-catalog uniqueness, aliases, ordering, and placement before `ToolsCategoryHub`.
+- [ ] Add the shared search index with formal and novice terms.
+- [ ] Implement the accessible search field, keyboard-safe linked results, show-all control, and helpful empty state.
+- [ ] Add browser tests at 390 and 1440 pixels.
+- [ ] Commit with `feat: add global tools quick search`.
+
+---
+
+### Task 5C: Add enhanced U-Net conference evidence
+
+**Files:**
+- Create: `public/media/portfolio/nrsc-2026-enhanced-unet-post-conference.jpg`
+- Modify: `types/portfolio.ts`
+- Modify: `data/publications.json`
+- Modify: `components/WorkResearchAndTeaching.tsx`
+- Modify: `app/game-theme.css`
+- Test: `tests/tools/publication-conference-evidence.test.js`
+
+**Interfaces:**
+- Adds optional `conferenceEvidence` with `image`, `alt`, `caption`, and `href` to `Publication`.
+
+- [ ] Write a failing contract test for the exact paper, image, neutral alt, supplied Facebook URL, and responsive rendering hook.
+- [ ] Copy the supplied photograph into the versioned public path without changing its content.
+- [ ] Add the evidence data and render a responsive figure with separate publication and conference-post actions.
+- [ ] Run the image pipeline and inspect desktop/mobile layouts.
+- [ ] Commit with `feat: document enhanced unet conference presentation`.
 
 ---
 

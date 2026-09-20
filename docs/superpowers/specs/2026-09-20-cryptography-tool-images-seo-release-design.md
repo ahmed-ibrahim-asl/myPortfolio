@@ -20,7 +20,7 @@ The abandoned navigation exploration is out of scope. ROT Explorer already preda
 
 ## Image direction
 
-Use a consistent **cryptography instruments** art direction: dark graphite workbench surfaces, restrained brass/gold mechanisms, cool steel details, precise studio lighting, and an engineered rather than fantasy aesthetic. The images should feel like physical instruments that visualize the algorithm.
+Use a consistent **plain-language cryptography** art direction: one simple visual transformation per cover, restrained graphite/gold shapes, and an educational rather than technical-instrument aesthetic. A visitor without cryptography knowledge should understand whether the tool rearranges, encrypts, or hashes before reading its full description.
 
 All images will:
 
@@ -33,13 +33,27 @@ All images will:
 
 ### Individual concepts
 
-- **Vigenère & Autokey:** paired alphabet rotors with a brass key ribbon advancing through the mechanism.
-- **Affine cipher:** a modular transformation console with separate multiply and shift dials feeding one output track.
-- **Rail Fence & Transposition:** letter-like neutral tiles moving across zigzag rails and reordered columns; no readable fake text.
-- **Playfair:** a precise 5-by-5 brass-and-graphite tile board with paired tokens and a highlighted rectangle relationship.
-- **Hill cipher:** luminous vector blocks passing through a physical matrix frame into transformed output blocks.
-- **Hash generator:** an input stream compressed through a one-way mechanical chamber into a fixed-length fingerprint pattern.
-- **AES hex calculator:** a 4-by-4 byte-grid instrument passing through four distinct transformation stages, presented as a secure laboratory mechanism rather than a padlock cliché.
+- **Vigenère & Autokey:** a readable message strip plus a repeating key strip entering a simple mixer and leaving as scrambled tiles.
+- **Affine cipher:** a message passes through two obvious steps, multiply then shift, before becoming scrambled output.
+- **Rail Fence & Transposition:** the same colored tiles move from a straight row to a zigzag and then a visibly reordered row.
+- **Playfair:** two marked tiles on a clean 5-by-5 board move to the opposite corners of one highlighted rectangle.
+- **Hill cipher:** three colored input blocks pass through a simple 3-by-3 grid and emerge as three changed blocks.
+- **Hash generator:** a document passes through a one-way funnel and becomes one fixed fingerprint, with no reverse arrow.
+- **AES hex calculator:** one 4-by-4 data block and a key enter a protected transformation box and produce one encrypted 4-by-4 block.
+
+Each card will pair the visual with a concise novice label such as `ENCRYPT / reversible with a key`, `REARRANGE / same characters`, or `HASH / one-way fingerprint`. These labels remain HTML text rather than generated image text for accuracy, accessibility, localization, and responsive rendering.
+
+## Global tool search
+
+The `/tools/` landing page will expose a prominent search field directly below its heading and before category cards. It will search the complete tool catalog across title, summary, category, group, technical tags, friendly aliases, symbols, and plain-language tasks. The first six matching tools will appear as keyboard-accessible direct links while the visitor types, with category and tool-type context and an option to show every match. Category cards remain below the search as the browsing alternative.
+
+The index will include novice vocabulary such as `encrypt text`, `decode message`, `password fingerprint`, `GPA`, `resistor`, `binary`, `satellite orbit`, and `radio link`, in addition to formal tool names. Empty results will suggest broader example terms instead of presenting a dead end.
+
+## Conference evidence
+
+The publication record for **An Enhanced U-Net Architecture for Semantic Segmentation of Aerial Images from Egypt** will include the supplied post-conference photograph as supporting evidence and link to the supplied Facebook post. The presentation is independently corroborated by the NRSC 2026 program; the Facebook link is treated only as the user-provided post-conference record because its content is not accessible to the automated verifier.
+
+The evidence block will use neutral alt text that describes the certificate presentation without guessing or naming other people in the photograph. It will link separately to the publication record and the conference post.
 
 ## Product integration
 
@@ -67,6 +81,8 @@ Before publication:
 4. Run the SEO suite, content validation, and production build.
 5. Run the repository test suite and compare any failures with the recorded baseline; do not describe the suite as green if baseline failures remain.
 6. Inspect representative desktop and mobile screenshots in dark and light themes.
+7. Verify global tool search keyboard behavior, full-catalog matching, friendly aliases, six-result preview, and empty-state suggestions.
+8. Verify the publication evidence image, caption, and external conference-post link at desktop and mobile widths.
 
 ## Release method
 
@@ -82,7 +98,10 @@ Because publishing changes external state, deployment will occur only after the 
 ## Acceptance criteria
 
 - All seven routes display distinct generated covers that share one intentional art direction.
+- A nontechnical visitor can distinguish encryption, rearrangement, and one-way hashing from the card visual and novice label.
 - The covers are responsive and use generated AVIF/WebP variants within the existing budget.
+- `/tools/` offers full-catalog search before the category cards and supports plain-language aliases.
+- The enhanced U-Net publication includes the supplied post-conference photograph and Facebook record.
 - Every route has a canonical URL, unique title and description, share image, WebApplication schema, and sitemap inclusion.
 - Scoped tests, SEO tests, content validation, and production build pass.
 - No unrelated dirty changes are committed or published.
