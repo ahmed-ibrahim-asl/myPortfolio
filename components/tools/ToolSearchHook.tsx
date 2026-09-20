@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { getToolSearchHook } from "@/data/tool-search-hooks";
+import { getCryptographyToolImage } from "@/data/cryptography-tool-images.js";
 import { absoluteUrl } from "@/lib/site";
 import { personId } from "@/lib/seo";
 import styles from "./ToolSearchHook.module.css";
@@ -100,6 +101,7 @@ export function ToolSearchSchema({ slug, pathname }: ToolSearchHookProps) {
 
   const url = absoluteUrl(pathname ?? `/tools/${slug}/`);
   const toolsUrl = absoluteUrl("/tools/");
+  const image = getCryptographyToolImage(slug);
   return <>
     <JsonLd data={{
       "@context": "https://schema.org",
@@ -113,6 +115,7 @@ export function ToolSearchSchema({ slug, pathname }: ToolSearchHookProps) {
       browserRequirements: "JavaScript enabled",
       isAccessibleForFree: true,
       inLanguage: "en",
+      ...(image ? { image: absoluteUrl(image.path) } : {}),
       dateModified: hook.reviewedOn,
       author: { "@id": personId },
       offers: {
