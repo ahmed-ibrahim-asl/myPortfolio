@@ -38,6 +38,8 @@ export async function discoverPublicRasterReferences(rootDir) {
       if (filePath.endsWith("public-image-manifest.generated.ts")) continue;
       const source = await readFile(filePath, "utf8");
       for (const match of source.matchAll(PUBLIC_RASTER_REFERENCE)) {
+        const precedingCharacter = source[(match.index ?? 0) - 1];
+        if (precedingCharacter && /[A-Za-z0-9_.-]/.test(precedingCharacter)) continue;
         const publicPath = normalizePublicPath(match[0]);
         if (!publicPath.startsWith(GENERATED_PREFIX)) references.add(publicPath);
       }

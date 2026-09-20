@@ -2,8 +2,9 @@
 
 export type PublicImageVariant = { src: string; width: number; bytes: number };
 export type PublicImageAsset = { source: string; width: number; height: number; avif: PublicImageVariant[]; webp: PublicImageVariant[] };
+export type PublicImageFamily = PublicImageAsset & { role: string; sizesPreset: string; mobile?: PublicImageAsset; wide?: PublicImageAsset };
 
-export const publicImageManifest: Record<string, PublicImageAsset> = {
+export const publicImageManifest: Record<string, PublicImageFamily> = {
   "/images/hardware_bench_hero.jpg": {
     "source": "/images/hardware_bench_hero.jpg",
     "width": 1376,
@@ -15,9 +16,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 9089
       },
       {
+        "src": "/media/generated/responsive/images/hardware_bench_hero/480.avif",
+        "width": 480,
+        "bytes": 17022
+      },
+      {
         "src": "/media/generated/responsive/images/hardware_bench_hero/640.avif",
         "width": 640,
         "bytes": 25147
+      },
+      {
+        "src": "/media/generated/responsive/images/hardware_bench_hero/768.avif",
+        "width": 768,
+        "bytes": 32693
       },
       {
         "src": "/media/generated/responsive/images/hardware_bench_hero/960.avif",
@@ -42,9 +53,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 14402
       },
       {
+        "src": "/media/generated/responsive/images/hardware_bench_hero/480.webp",
+        "width": 480,
+        "bytes": 27302
+      },
+      {
         "src": "/media/generated/responsive/images/hardware_bench_hero/640.webp",
         "width": 640,
         "bytes": 41474
+      },
+      {
+        "src": "/media/generated/responsive/images/hardware_bench_hero/768.webp",
+        "width": 768,
+        "bytes": 53788
       },
       {
         "src": "/media/generated/responsive/images/hardware_bench_hero/960.webp",
@@ -61,7 +82,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1376,
         "bytes": 123596
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "feature"
   },
   "/images/profilePicture/profile1.jpg": {
     "source": "/images/profilePicture/profile1.jpg",
@@ -69,9 +92,29 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 800,
     "avif": [
       {
+        "src": "/media/generated/responsive/images/profilePicture/profile1/96.avif",
+        "width": 96,
+        "bytes": 1407
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile1/160.avif",
+        "width": 160,
+        "bytes": 2666
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile1/240.avif",
+        "width": 240,
+        "bytes": 4432
+      },
+      {
         "src": "/media/generated/responsive/images/profilePicture/profile1/320.avif",
         "width": 320,
         "bytes": 6623
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile1/480.avif",
+        "width": 480,
+        "bytes": 12680
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile1/640.avif",
@@ -86,9 +129,29 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/images/profilePicture/profile1/96.webp",
+        "width": 96,
+        "bytes": 1742
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile1/160.webp",
+        "width": 160,
+        "bytes": 3330
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile1/240.webp",
+        "width": 240,
+        "bytes": 5746
+      },
+      {
         "src": "/media/generated/responsive/images/profilePicture/profile1/320.webp",
         "width": 320,
         "bytes": 8684
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile1/480.webp",
+        "width": 480,
+        "bytes": 16860
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile1/640.webp",
@@ -100,7 +163,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 800,
         "bytes": 39944
       }
-    ]
+    ],
+    "role": "portrait",
+    "sizesPreset": "portrait"
   },
   "/images/profilePicture/profile2.jpg": {
     "source": "/images/profilePicture/profile2.jpg",
@@ -108,9 +173,29 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 800,
     "avif": [
       {
+        "src": "/media/generated/responsive/images/profilePicture/profile2/96.avif",
+        "width": 96,
+        "bytes": 1356
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile2/160.avif",
+        "width": 160,
+        "bytes": 2392
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile2/240.avif",
+        "width": 240,
+        "bytes": 4160
+      },
+      {
         "src": "/media/generated/responsive/images/profilePicture/profile2/320.avif",
         "width": 320,
         "bytes": 5885
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile2/480.avif",
+        "width": 480,
+        "bytes": 10251
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile2/640.avif",
@@ -125,9 +210,29 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/images/profilePicture/profile2/96.webp",
+        "width": 96,
+        "bytes": 1584
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile2/160.webp",
+        "width": 160,
+        "bytes": 2970
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile2/240.webp",
+        "width": 240,
+        "bytes": 4896
+      },
+      {
         "src": "/media/generated/responsive/images/profilePicture/profile2/320.webp",
         "width": 320,
         "bytes": 7178
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile2/480.webp",
+        "width": 480,
+        "bytes": 11804
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile2/640.webp",
@@ -139,7 +244,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 800,
         "bytes": 22320
       }
-    ]
+    ],
+    "role": "portrait",
+    "sizesPreset": "portrait"
   },
   "/images/profilePicture/profile3.png": {
     "source": "/images/profilePicture/profile3.png",
@@ -147,24 +254,34 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 1350,
     "avif": [
       {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/96.avif",
+        "width": 96,
+        "bytes": 1280
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/160.avif",
+        "width": 160,
+        "bytes": 1959
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/240.avif",
+        "width": 240,
+        "bytes": 3051
+      },
+      {
         "src": "/media/generated/responsive/images/profilePicture/profile3/320.avif",
         "width": 320,
         "bytes": 4188
       },
       {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/480.avif",
+        "width": 480,
+        "bytes": 6824
+      },
+      {
         "src": "/media/generated/responsive/images/profilePicture/profile3/640.avif",
         "width": 640,
         "bytes": 10575
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/960.avif",
-        "width": 960,
-        "bytes": 19649
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/1280.avif",
-        "width": 1280,
-        "bytes": 30104
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile3/1350.avif",
@@ -174,9 +291,29 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/96.webp",
+        "width": 96,
+        "bytes": 1186
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/160.webp",
+        "width": 160,
+        "bytes": 2010
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/240.webp",
+        "width": 240,
+        "bytes": 3224
+      },
+      {
         "src": "/media/generated/responsive/images/profilePicture/profile3/320.webp",
         "width": 320,
         "bytes": 4548
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/480.webp",
+        "width": 480,
+        "bytes": 8024
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile3/640.webp",
@@ -184,21 +321,13 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 12470
       },
       {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/960.webp",
-        "width": 960,
-        "bytes": 22514
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/1280.webp",
-        "width": 1280,
-        "bytes": 33404
-      },
-      {
         "src": "/media/generated/responsive/images/profilePicture/profile3/1350.webp",
         "width": 1350,
         "bytes": 35852
       }
-    ]
+    ],
+    "role": "portrait",
+    "sizesPreset": "portrait"
   },
   "/media/ambient/cc0-cityscape.gif": {
     "source": "/media/ambient/cc0-cityscape.gif",
@@ -206,9 +335,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 512,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/240.avif",
+        "width": 240,
+        "bytes": 3147
+      },
+      {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/320.avif",
         "width": 320,
         "bytes": 5183
+      },
+      {
+        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/480.avif",
+        "width": 480,
+        "bytes": 11305
       },
       {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/640.avif",
@@ -228,9 +367,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/240.webp",
+        "width": 240,
+        "bytes": 3982
+      },
+      {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/320.webp",
         "width": 320,
         "bytes": 7558
+      },
+      {
+        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/480.webp",
+        "width": 480,
+        "bytes": 15974
       },
       {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/640.webp",
@@ -247,7 +396,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1024,
         "bytes": 28544
       }
-    ]
+    ],
+    "role": "decorative",
+    "sizesPreset": "feature"
   },
   "/media/calculators/555-astable-through-hole-approved-v1.png": {
     "source": "/media/calculators/555-astable-through-hole-approved-v1.png",
@@ -255,9 +406,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/240.avif",
+        "width": 240,
+        "bytes": 3323
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/320.avif",
         "width": 320,
         "bytes": 5621
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/480.avif",
+        "width": 480,
+        "bytes": 9910
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/640.avif",
@@ -287,9 +448,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/240.webp",
+        "width": 240,
+        "bytes": 4648
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/320.webp",
         "width": 320,
         "bytes": 7134
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/480.webp",
+        "width": 480,
+        "bytes": 12508
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/640.webp",
@@ -316,7 +487,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 85564
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/555-monostable-trigger-approved-v1.png": {
     "source": "/media/calculators/555-monostable-trigger-approved-v1.png",
@@ -324,9 +497,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/240.avif",
+        "width": 240,
+        "bytes": 3442
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/320.avif",
         "width": 320,
         "bytes": 5215
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/480.avif",
+        "width": 480,
+        "bytes": 9246
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/640.avif",
@@ -356,9 +539,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/240.webp",
+        "width": 240,
+        "bytes": 5050
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/320.webp",
         "width": 320,
         "bytes": 7148
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/480.webp",
+        "width": 480,
+        "bytes": 12426
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/640.webp",
@@ -385,7 +578,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 71632
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/acceleration-v1.png": {
     "source": "/media/calculators/acceleration-v1.png",
@@ -393,9 +588,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/acceleration-v1/240.avif",
+        "width": 240,
+        "bytes": 4242
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/320.avif",
         "width": 320,
         "bytes": 6270
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/acceleration-v1/480.avif",
+        "width": 480,
+        "bytes": 11148
       },
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/640.avif",
@@ -425,9 +630,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/acceleration-v1/240.webp",
+        "width": 240,
+        "bytes": 6322
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/320.webp",
         "width": 320,
         "bytes": 9352
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/acceleration-v1/480.webp",
+        "width": 480,
+        "bytes": 15664
       },
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/640.webp",
@@ -454,7 +669,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 86152
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/ascii-to-hex-v1.png": {
     "source": "/media/calculators/ascii-to-hex-v1.png",
@@ -462,9 +679,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/240.avif",
+        "width": 240,
+        "bytes": 4252
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/320.avif",
         "width": 320,
         "bytes": 5660
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/480.avif",
+        "width": 480,
+        "bytes": 9637
       },
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/640.avif",
@@ -494,9 +721,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/240.webp",
+        "width": 240,
+        "bytes": 6118
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/320.webp",
         "width": 320,
         "bytes": 8580
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/480.webp",
+        "width": 480,
+        "bytes": 14390
       },
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/640.webp",
@@ -523,7 +760,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 78826
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/battery-life-runtime-v1.png": {
     "source": "/media/calculators/battery-life-runtime-v1.png",
@@ -531,9 +770,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/240.avif",
+        "width": 240,
+        "bytes": 4070
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/320.avif",
         "width": 320,
         "bytes": 6010
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/480.avif",
+        "width": 480,
+        "bytes": 10264
       },
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/640.avif",
@@ -563,9 +812,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/240.webp",
+        "width": 240,
+        "bytes": 6296
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/320.webp",
         "width": 320,
         "bytes": 9644
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/480.webp",
+        "width": 480,
+        "bytes": 16200
       },
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/640.webp",
@@ -592,7 +851,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 84540
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/binary-bit-shift-v1.png": {
     "source": "/media/calculators/binary-bit-shift-v1.png",
@@ -600,9 +861,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/240.avif",
+        "width": 240,
+        "bytes": 3978
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/320.avif",
         "width": 320,
         "bytes": 6067
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/480.avif",
+        "width": 480,
+        "bytes": 9817
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/640.avif",
@@ -632,9 +903,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/240.webp",
+        "width": 240,
+        "bytes": 6412
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/320.webp",
         "width": 320,
         "bytes": 9680
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/480.webp",
+        "width": 480,
+        "bytes": 15444
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/640.webp",
@@ -661,7 +942,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 90072
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/binary-calculator-v1.png": {
     "source": "/media/calculators/binary-calculator-v1.png",
@@ -669,9 +952,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/240.avif",
+        "width": 240,
+        "bytes": 3927
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/320.avif",
         "width": 320,
         "bytes": 5406
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/480.avif",
+        "width": 480,
+        "bytes": 8924
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/640.avif",
@@ -701,9 +994,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/240.webp",
+        "width": 240,
+        "bytes": 6064
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/320.webp",
         "width": 320,
         "bytes": 8690
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/480.webp",
+        "width": 480,
+        "bytes": 14326
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/640.webp",
@@ -730,7 +1033,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 68764
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/capacitance-units-v1.png": {
     "source": "/media/calculators/capacitance-units-v1.png",
@@ -738,9 +1043,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/240.avif",
+        "width": 240,
+        "bytes": 4728
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/320.avif",
         "width": 320,
         "bytes": 6677
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/480.avif",
+        "width": 480,
+        "bytes": 11520
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/640.avif",
@@ -770,9 +1085,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/240.webp",
+        "width": 240,
+        "bytes": 7304
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/320.webp",
         "width": 320,
         "bytes": 10520
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/480.webp",
+        "width": 480,
+        "bytes": 17630
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/640.webp",
@@ -799,7 +1124,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 88936
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/capacitive-reactance-frequency-v1.png": {
     "source": "/media/calculators/capacitive-reactance-frequency-v1.png",
@@ -807,9 +1134,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/240.avif",
+        "width": 240,
+        "bytes": 4145
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/320.avif",
         "width": 320,
         "bytes": 6326
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/480.avif",
+        "width": 480,
+        "bytes": 10110
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/640.avif",
@@ -839,9 +1176,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/240.webp",
+        "width": 240,
+        "bytes": 6026
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/320.webp",
         "width": 320,
         "bytes": 9172
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/480.webp",
+        "width": 480,
+        "bytes": 14930
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/640.webp",
@@ -868,7 +1215,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 74256
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/capacitor-code-104-v1.png": {
     "source": "/media/calculators/capacitor-code-104-v1.png",
@@ -876,9 +1225,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/240.avif",
+        "width": 240,
+        "bytes": 4782
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/320.avif",
         "width": 320,
         "bytes": 6716
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/480.avif",
+        "width": 480,
+        "bytes": 11449
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/640.avif",
@@ -908,9 +1267,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/240.webp",
+        "width": 240,
+        "bytes": 7274
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/320.webp",
         "width": 320,
         "bytes": 10354
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/480.webp",
+        "width": 480,
+        "bytes": 17064
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/640.webp",
@@ -937,7 +1306,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 94980
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/cube-root-v1.png": {
     "source": "/media/calculators/cube-root-v1.png",
@@ -945,9 +1316,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/cube-root-v1/240.avif",
+        "width": 240,
+        "bytes": 3917
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/320.avif",
         "width": 320,
         "bytes": 5639
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/cube-root-v1/480.avif",
+        "width": 480,
+        "bytes": 8909
       },
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/640.avif",
@@ -977,9 +1358,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/cube-root-v1/240.webp",
+        "width": 240,
+        "bytes": 5638
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/320.webp",
         "width": 320,
         "bytes": 8228
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/cube-root-v1/480.webp",
+        "width": 480,
+        "bytes": 13386
       },
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/640.webp",
@@ -1006,7 +1397,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 63040
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/five-band-resistor-4k7-v3.png": {
     "source": "/media/calculators/five-band-resistor-4k7-v3.png",
@@ -1014,9 +1407,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/240.avif",
+        "width": 240,
+        "bytes": 2205
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/320.avif",
         "width": 320,
         "bytes": 3264
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/480.avif",
+        "width": 480,
+        "bytes": 7533
       },
       {
         "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/640.avif",
@@ -1046,9 +1449,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/240.webp",
+        "width": 240,
+        "bytes": 2544
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/320.webp",
         "width": 320,
         "bytes": 4018
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/480.webp",
+        "width": 480,
+        "bytes": 8324
       },
       {
         "src": "/media/generated/responsive/media/calculators/five-band-resistor-4k7-v3/640.webp",
@@ -1075,7 +1488,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 106950
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/force-mass-acceleration-v1.png": {
     "source": "/media/calculators/force-mass-acceleration-v1.png",
@@ -1083,9 +1498,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/240.avif",
+        "width": 240,
+        "bytes": 4255
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/320.avif",
         "width": 320,
         "bytes": 5721
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/480.avif",
+        "width": 480,
+        "bytes": 10104
       },
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/640.avif",
@@ -1115,9 +1540,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/240.webp",
+        "width": 240,
+        "bytes": 6550
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/320.webp",
         "width": 320,
         "bytes": 9304
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/480.webp",
+        "width": 480,
+        "bytes": 16318
       },
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/640.webp",
@@ -1144,7 +1579,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 101284
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/four-band-resistor-4k7-v1.png": {
     "source": "/media/calculators/four-band-resistor-4k7-v1.png",
@@ -1152,9 +1589,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/240.avif",
+        "width": 240,
+        "bytes": 1862
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/320.avif",
         "width": 320,
         "bytes": 2661
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/480.avif",
+        "width": 480,
+        "bytes": 6034
       },
       {
         "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/640.avif",
@@ -1184,9 +1631,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/240.webp",
+        "width": 240,
+        "bytes": 2134
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/320.webp",
         "width": 320,
         "bytes": 3420
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/480.webp",
+        "width": 480,
+        "bytes": 6844
       },
       {
         "src": "/media/generated/responsive/media/calculators/four-band-resistor-4k7-v1/640.webp",
@@ -1213,7 +1670,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 103434
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/frequency-period-v1.png": {
     "source": "/media/calculators/frequency-period-v1.png",
@@ -1221,9 +1680,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/240.avif",
+        "width": 240,
+        "bytes": 3505
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/320.avif",
         "width": 320,
         "bytes": 4692
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/480.avif",
+        "width": 480,
+        "bytes": 8465
       },
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/640.avif",
@@ -1253,9 +1722,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/240.webp",
+        "width": 240,
+        "bytes": 5030
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/320.webp",
         "width": 320,
         "bytes": 6890
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/480.webp",
+        "width": 480,
+        "bytes": 11874
       },
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/640.webp",
@@ -1282,7 +1761,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 65156
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/hex-calculator-v1.png": {
     "source": "/media/calculators/hex-calculator-v1.png",
@@ -1290,9 +1771,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/240.avif",
+        "width": 240,
+        "bytes": 5094
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/320.avif",
         "width": 320,
         "bytes": 7025
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/480.avif",
+        "width": 480,
+        "bytes": 12135
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/640.avif",
@@ -1322,9 +1813,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/240.webp",
+        "width": 240,
+        "bytes": 8486
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/320.webp",
         "width": 320,
         "bytes": 11706
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/480.webp",
+        "width": 480,
+        "bytes": 18922
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/640.webp",
@@ -1349,9 +1850,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/1672.webp",
         "width": 1672,
-        "bytes": 126192
+        "bytes": 107166
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/hex-to-ascii-v1.png": {
     "source": "/media/calculators/hex-to-ascii-v1.png",
@@ -1359,9 +1862,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/240.avif",
+        "width": 240,
+        "bytes": 3879
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/320.avif",
         "width": 320,
         "bytes": 5521
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/480.avif",
+        "width": 480,
+        "bytes": 9684
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/640.avif",
@@ -1391,9 +1904,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/240.webp",
+        "width": 240,
+        "bytes": 6036
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/320.webp",
         "width": 320,
         "bytes": 8358
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/480.webp",
+        "width": 480,
+        "bytes": 14800
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/640.webp",
@@ -1420,7 +1943,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 104970
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/high-pass-filter-response-v1.png": {
     "source": "/media/calculators/high-pass-filter-response-v1.png",
@@ -1428,9 +1953,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/240.avif",
+        "width": 240,
+        "bytes": 3572
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/320.avif",
         "width": 320,
         "bytes": 5246
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/480.avif",
+        "width": 480,
+        "bytes": 9848
       },
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/640.avif",
@@ -1460,9 +1995,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/240.webp",
+        "width": 240,
+        "bytes": 4956
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/320.webp",
         "width": 320,
         "bytes": 7426
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/480.webp",
+        "width": 480,
+        "bytes": 12718
       },
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/640.webp",
@@ -1489,7 +2034,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 73688
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/led-series-resistor-300ohm-v1.png": {
     "source": "/media/calculators/led-series-resistor-300ohm-v1.png",
@@ -1497,9 +2044,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/240.avif",
+        "width": 240,
+        "bytes": 4040
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/320.avif",
         "width": 320,
         "bytes": 5846
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/480.avif",
+        "width": 480,
+        "bytes": 10266
       },
       {
         "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/640.avif",
@@ -1529,9 +2086,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/240.webp",
+        "width": 240,
+        "bytes": 5798
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/320.webp",
         "width": 320,
         "bytes": 8476
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/480.webp",
+        "width": 480,
+        "bytes": 14802
       },
       {
         "src": "/media/generated/responsive/media/calculators/led-series-resistor-300ohm-v1/640.webp",
@@ -1558,7 +2125,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 91978
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/log-base-two-v1.png": {
     "source": "/media/calculators/log-base-two-v1.png",
@@ -1566,9 +2135,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/240.avif",
+        "width": 240,
+        "bytes": 4736
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/320.avif",
         "width": 320,
         "bytes": 6887
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/480.avif",
+        "width": 480,
+        "bytes": 11554
       },
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/640.avif",
@@ -1598,9 +2177,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/240.webp",
+        "width": 240,
+        "bytes": 6928
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/320.webp",
         "width": 320,
         "bytes": 10016
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/480.webp",
+        "width": 480,
+        "bytes": 16720
       },
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/640.webp",
@@ -1627,7 +2216,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 94186
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/low-pass-filter-response-v1.png": {
     "source": "/media/calculators/low-pass-filter-response-v1.png",
@@ -1635,9 +2226,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/240.avif",
+        "width": 240,
+        "bytes": 3495
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/320.avif",
         "width": 320,
         "bytes": 5329
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/480.avif",
+        "width": 480,
+        "bytes": 9570
       },
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/640.avif",
@@ -1667,9 +2268,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/240.webp",
+        "width": 240,
+        "bytes": 4740
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/320.webp",
         "width": 320,
         "bytes": 7200
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/480.webp",
+        "width": 480,
+        "bytes": 12646
       },
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/640.webp",
@@ -1696,7 +2307,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 70296
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/number-bases-v1.png": {
     "source": "/media/calculators/number-bases-v1.png",
@@ -1704,9 +2317,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/number-bases-v1/240.avif",
+        "width": 240,
+        "bytes": 5123
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/320.avif",
         "width": 320,
         "bytes": 7285
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/number-bases-v1/480.avif",
+        "width": 480,
+        "bytes": 12667
       },
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/640.avif",
@@ -1736,9 +2359,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/number-bases-v1/240.webp",
+        "width": 240,
+        "bytes": 7100
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/320.webp",
         "width": 320,
         "bytes": 10878
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/number-bases-v1/480.webp",
+        "width": 480,
+        "bytes": 18382
       },
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/640.webp",
@@ -1765,7 +2398,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 80626
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/ohms-law-physical-measurement-v1.png": {
     "source": "/media/calculators/ohms-law-physical-measurement-v1.png",
@@ -1773,9 +2408,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/240.avif",
+        "width": 240,
+        "bytes": 2694
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/320.avif",
         "width": 320,
         "bytes": 4162
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/480.avif",
+        "width": 480,
+        "bytes": 7337
       },
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/640.avif",
@@ -1805,9 +2450,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/240.webp",
+        "width": 240,
+        "bytes": 3464
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/320.webp",
         "width": 320,
         "bytes": 5134
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/480.webp",
+        "width": 480,
+        "bytes": 9156
       },
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/640.webp",
@@ -1834,7 +2489,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 65926
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/ones-complement-v1.png": {
     "source": "/media/calculators/ones-complement-v1.png",
@@ -1842,9 +2499,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/240.avif",
+        "width": 240,
+        "bytes": 4485
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/320.avif",
         "width": 320,
         "bytes": 5997
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/480.avif",
+        "width": 480,
+        "bytes": 10610
       },
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/640.avif",
@@ -1874,9 +2541,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/240.webp",
+        "width": 240,
+        "bytes": 6742
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/320.webp",
         "width": 320,
         "bytes": 9630
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/480.webp",
+        "width": 480,
+        "bytes": 15288
       },
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/640.webp",
@@ -1903,7 +2580,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 58728
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/op-amp-gain-modes-v1.png": {
     "source": "/media/calculators/op-amp-gain-modes-v1.png",
@@ -1911,9 +2590,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/240.avif",
+        "width": 240,
+        "bytes": 3813
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/320.avif",
         "width": 320,
         "bytes": 5566
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/480.avif",
+        "width": 480,
+        "bytes": 10371
       },
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/640.avif",
@@ -1943,9 +2632,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/240.webp",
+        "width": 240,
+        "bytes": 5324
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/320.webp",
         "width": 320,
         "bytes": 7702
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/480.webp",
+        "width": 480,
+        "bytes": 13804
       },
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/640.webp",
@@ -1972,7 +2671,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 89584
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/parallel-resistors-physical-network-v1.png": {
     "source": "/media/calculators/parallel-resistors-physical-network-v1.png",
@@ -1980,9 +2681,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/240.avif",
+        "width": 240,
+        "bytes": 2836
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/320.avif",
         "width": 320,
         "bytes": 4677
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/480.avif",
+        "width": 480,
+        "bytes": 7901
       },
       {
         "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/640.avif",
@@ -2012,9 +2723,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/240.webp",
+        "width": 240,
+        "bytes": 3700
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/320.webp",
         "width": 320,
         "bytes": 5748
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/480.webp",
+        "width": 480,
+        "bytes": 10018
       },
       {
         "src": "/media/generated/responsive/media/calculators/parallel-resistors-physical-network-v1/640.webp",
@@ -2041,7 +2762,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 58806
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/percentage-change-v1.png": {
     "source": "/media/calculators/percentage-change-v1.png",
@@ -2049,9 +2772,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/240.avif",
+        "width": 240,
+        "bytes": 4747
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/320.avif",
         "width": 320,
         "bytes": 6374
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/480.avif",
+        "width": 480,
+        "bytes": 10827
       },
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/640.avif",
@@ -2081,9 +2814,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/240.webp",
+        "width": 240,
+        "bytes": 7206
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/320.webp",
         "width": 320,
         "bytes": 9964
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/480.webp",
+        "width": 480,
+        "bytes": 16612
       },
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/640.webp",
@@ -2110,7 +2853,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 78354
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/rc-time-constant-no-scales-v3.png": {
     "source": "/media/calculators/rc-time-constant-no-scales-v3.png",
@@ -2118,9 +2863,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/240.avif",
+        "width": 240,
+        "bytes": 3297
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/320.avif",
         "width": 320,
         "bytes": 5142
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/480.avif",
+        "width": 480,
+        "bytes": 9127
       },
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/640.avif",
@@ -2150,9 +2905,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/240.webp",
+        "width": 240,
+        "bytes": 4410
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/320.webp",
         "width": 320,
         "bytes": 6474
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/480.webp",
+        "width": 480,
+        "bytes": 10944
       },
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/640.webp",
@@ -2179,7 +2944,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 59252
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/rms-voltage-sine-v1.png": {
     "source": "/media/calculators/rms-voltage-sine-v1.png",
@@ -2187,9 +2954,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/240.avif",
+        "width": 240,
+        "bytes": 3714
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/320.avif",
         "width": 320,
         "bytes": 5598
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/480.avif",
+        "width": 480,
+        "bytes": 10251
       },
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/640.avif",
@@ -2219,9 +2996,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/240.webp",
+        "width": 240,
+        "bytes": 5062
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/320.webp",
         "width": 320,
         "bytes": 8142
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/480.webp",
+        "width": 480,
+        "bytes": 13786
       },
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/640.webp",
@@ -2248,7 +3035,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 80082
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/series-resistors-no-scales-v2.png": {
     "source": "/media/calculators/series-resistors-no-scales-v2.png",
@@ -2256,9 +3045,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/240.avif",
+        "width": 240,
+        "bytes": 2557
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/320.avif",
         "width": 320,
         "bytes": 3431
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/480.avif",
+        "width": 480,
+        "bytes": 6610
       },
       {
         "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/640.avif",
@@ -2288,9 +3087,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/240.webp",
+        "width": 240,
+        "bytes": 3140
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/320.webp",
         "width": 320,
         "bytes": 4426
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/480.webp",
+        "width": 480,
+        "bytes": 8052
       },
       {
         "src": "/media/generated/responsive/media/calculators/series-resistors-no-scales-v2/640.webp",
@@ -2317,7 +3126,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 44500
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/speed-distance-time-v1.png": {
     "source": "/media/calculators/speed-distance-time-v1.png",
@@ -2325,9 +3136,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/240.avif",
+        "width": 240,
+        "bytes": 5267
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/320.avif",
         "width": 320,
         "bytes": 7480
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/480.avif",
+        "width": 480,
+        "bytes": 13188
       },
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/640.avif",
@@ -2357,9 +3178,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/240.webp",
+        "width": 240,
+        "bytes": 8286
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/320.webp",
         "width": 320,
         "bytes": 11978
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/480.webp",
+        "width": 480,
+        "bytes": 19782
       },
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/640.webp",
@@ -2386,7 +3217,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 90978
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/square-root-v1.png": {
     "source": "/media/calculators/square-root-v1.png",
@@ -2394,9 +3227,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/square-root-v1/240.avif",
+        "width": 240,
+        "bytes": 3864
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/320.avif",
         "width": 320,
         "bytes": 5315
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/square-root-v1/480.avif",
+        "width": 480,
+        "bytes": 8801
       },
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/640.avif",
@@ -2426,9 +3269,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/square-root-v1/240.webp",
+        "width": 240,
+        "bytes": 5566
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/320.webp",
         "width": 320,
         "bytes": 8048
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/square-root-v1/480.webp",
+        "width": 480,
+        "bytes": 13148
       },
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/640.webp",
@@ -2455,7 +3308,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 53620
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/temperature-conversion-v1.png": {
     "source": "/media/calculators/temperature-conversion-v1.png",
@@ -2463,9 +3318,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/240.avif",
+        "width": 240,
+        "bytes": 5265
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/320.avif",
         "width": 320,
         "bytes": 6999
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/480.avif",
+        "width": 480,
+        "bytes": 12200
       },
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/640.avif",
@@ -2495,9 +3360,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/240.webp",
+        "width": 240,
+        "bytes": 8202
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/320.webp",
         "width": 320,
         "bytes": 11370
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/480.webp",
+        "width": 480,
+        "bytes": 18948
       },
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/640.webp",
@@ -2524,7 +3399,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 83120
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/twos-complement-v1.png": {
     "source": "/media/calculators/twos-complement-v1.png",
@@ -2532,9 +3409,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/240.avif",
+        "width": 240,
+        "bytes": 4398
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/320.avif",
         "width": 320,
         "bytes": 6163
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/480.avif",
+        "width": 480,
+        "bytes": 10219
       },
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/640.avif",
@@ -2564,9 +3451,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/240.webp",
+        "width": 240,
+        "bytes": 7194
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/320.webp",
         "width": 320,
         "bytes": 9858
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/480.webp",
+        "width": 480,
+        "bytes": 16146
       },
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/640.webp",
@@ -2593,7 +3490,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 84814
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/voltage-divider-no-scales-v2.png": {
     "source": "/media/calculators/voltage-divider-no-scales-v2.png",
@@ -2601,9 +3500,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/240.avif",
+        "width": 240,
+        "bytes": 2174
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/320.avif",
         "width": 320,
         "bytes": 2826
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/480.avif",
+        "width": 480,
+        "bytes": 5048
       },
       {
         "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/640.avif",
@@ -2633,9 +3542,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/240.webp",
+        "width": 240,
+        "bytes": 2330
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/320.webp",
         "width": 320,
         "bytes": 3436
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/480.webp",
+        "width": 480,
+        "bytes": 6036
       },
       {
         "src": "/media/generated/responsive/media/calculators/voltage-divider-no-scales-v2/640.webp",
@@ -2662,7 +3581,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 36732
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/calculators/wavelength-v1.png": {
     "source": "/media/calculators/wavelength-v1.png",
@@ -2670,9 +3591,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/calculators/wavelength-v1/240.avif",
+        "width": 240,
+        "bytes": 3973
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/320.avif",
         "width": 320,
         "bytes": 5937
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/wavelength-v1/480.avif",
+        "width": 480,
+        "bytes": 10042
       },
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/640.avif",
@@ -2702,9 +3633,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/calculators/wavelength-v1/240.webp",
+        "width": 240,
+        "bytes": 6416
+      },
+      {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/320.webp",
         "width": 320,
         "bytes": 9412
+      },
+      {
+        "src": "/media/generated/responsive/media/calculators/wavelength-v1/480.webp",
+        "width": 480,
+        "bytes": 15306
       },
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/640.webp",
@@ -2731,7 +3672,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 87120
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/optimized/profile-ahmed.webp": {
     "source": "/media/optimized/profile-ahmed.webp",
@@ -2739,9 +3682,29 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 960,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/optimized/profile-ahmed/96.avif",
+        "width": 96,
+        "bytes": 1072
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/profile-ahmed/160.avif",
+        "width": 160,
+        "bytes": 1753
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/profile-ahmed/240.avif",
+        "width": 240,
+        "bytes": 2781
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/320.avif",
         "width": 320,
         "bytes": 3985
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/profile-ahmed/480.avif",
+        "width": 480,
+        "bytes": 6616
       },
       {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/640.avif",
@@ -2756,9 +3719,29 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/optimized/profile-ahmed/96.webp",
+        "width": 96,
+        "bytes": 1158
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/profile-ahmed/160.webp",
+        "width": 160,
+        "bytes": 1974
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/profile-ahmed/240.webp",
+        "width": 240,
+        "bytes": 3172
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/320.webp",
         "width": 320,
         "bytes": 4492
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/profile-ahmed/480.webp",
+        "width": 480,
+        "bytes": 7962
       },
       {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/640.webp",
@@ -2770,7 +3753,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 960,
         "bytes": 21920
       }
-    ]
+    ],
+    "role": "portrait",
+    "sizesPreset": "portrait"
   },
   "/media/optimized/project-human-follower.webp": {
     "source": "/media/optimized/project-human-follower.webp",
@@ -2781,6 +3766,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "src": "/media/generated/responsive/media/optimized/project-human-follower/320.avif",
         "width": 320,
         "bytes": 5183
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/project-human-follower/480.avif",
+        "width": 480,
+        "bytes": 8377
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-human-follower/493.avif",
@@ -2795,11 +3785,18 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5880
       },
       {
+        "src": "/media/generated/responsive/media/optimized/project-human-follower/480.webp",
+        "width": 480,
+        "bytes": 9230
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/project-human-follower/493.webp",
         "width": 493,
         "bytes": 10662
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/optimized/project-megasumo.webp": {
     "source": "/media/optimized/project-megasumo.webp",
@@ -2812,9 +3809,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6959
       },
       {
+        "src": "/media/generated/responsive/media/optimized/project-megasumo/480.avif",
+        "width": 480,
+        "bytes": 12826
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/640.avif",
         "width": 640,
         "bytes": 19626
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/project-megasumo/768.avif",
+        "width": 768,
+        "bytes": 26244
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/960.avif",
@@ -2834,9 +3841,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 10396
       },
       {
+        "src": "/media/generated/responsive/media/optimized/project-megasumo/480.webp",
+        "width": 480,
+        "bytes": 19250
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/640.webp",
         "width": 640,
         "bytes": 28874
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/project-megasumo/768.webp",
+        "width": 768,
+        "bytes": 37382
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/960.webp",
@@ -2848,7 +3865,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1200,
         "bytes": 88318
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/optimized/tutorial-embedded-workshop.webp": {
     "source": "/media/optimized/tutorial-embedded-workshop.webp",
@@ -2856,9 +3875,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 788,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/240.avif",
+        "width": 240,
+        "bytes": 2731
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/320.avif",
         "width": 320,
         "bytes": 3869
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/480.avif",
+        "width": 480,
+        "bytes": 7584
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/640.avif",
@@ -2883,9 +3912,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/240.webp",
+        "width": 240,
+        "bytes": 3744
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/320.webp",
         "width": 320,
         "bytes": 5704
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/480.webp",
+        "width": 480,
+        "bytes": 10632
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/640.webp",
@@ -2907,7 +3946,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1400,
         "bytes": 57236
       }
-    ]
+    ],
+    "role": "tutorial-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/optimized/tutorial-intro-embedded.webp": {
     "source": "/media/optimized/tutorial-intro-embedded.webp",
@@ -2915,9 +3956,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 788,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/240.avif",
+        "width": 240,
+        "bytes": 2562
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/320.avif",
         "width": 320,
         "bytes": 4317
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/480.avif",
+        "width": 480,
+        "bytes": 7056
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/640.avif",
@@ -2942,9 +3993,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/240.webp",
+        "width": 240,
+        "bytes": 4658
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/320.webp",
         "width": 320,
         "bytes": 7046
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/480.webp",
+        "width": 480,
+        "bytes": 13690
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/640.webp",
@@ -2966,7 +4027,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1400,
         "bytes": 67358
       }
-    ]
+    ],
+    "role": "tutorial-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/optimized/tutorial-ros.webp": {
     "source": "/media/optimized/tutorial-ros.webp",
@@ -2974,9 +4037,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 788,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/optimized/tutorial-ros/240.avif",
+        "width": 240,
+        "bytes": 3030
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/320.avif",
         "width": 320,
         "bytes": 4342
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/tutorial-ros/480.avif",
+        "width": 480,
+        "bytes": 6790
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/640.avif",
@@ -3001,9 +4074,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/optimized/tutorial-ros/240.webp",
+        "width": 240,
+        "bytes": 4022
+      },
+      {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/320.webp",
         "width": 320,
         "bytes": 5678
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/tutorial-ros/480.webp",
+        "width": 480,
+        "bytes": 8670
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/640.webp",
@@ -3025,7 +4108,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1400,
         "bytes": 29504
       }
-    ]
+    ],
+    "role": "tutorial-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/portfolio/agribot-award-stage.jpg": {
     "source": "/media/portfolio/agribot-award-stage.jpg",
@@ -3038,9 +4123,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 9385
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/480.avif",
+        "width": 480,
+        "bytes": 17870
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/640.avif",
         "width": 640,
         "bytes": 27934
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/768.avif",
+        "width": 768,
+        "bytes": 34503
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/960.avif",
@@ -3060,9 +4155,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 12902
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/480.webp",
+        "width": 480,
+        "bytes": 24636
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/640.webp",
         "width": 640,
         "bytes": 36978
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/768.webp",
+        "width": 768,
+        "bytes": 46456
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/960.webp",
@@ -3074,7 +4179,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 84710
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/agribot-first-place.jpg": {
     "source": "/media/portfolio/agribot-first-place.jpg",
@@ -3087,9 +4194,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 10541
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/480.avif",
+        "width": 480,
+        "bytes": 20222
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/640.avif",
         "width": 640,
         "bytes": 31897
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/768.avif",
+        "width": 768,
+        "bytes": 39913
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/960.avif",
@@ -3109,9 +4226,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 15302
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/480.webp",
+        "width": 480,
+        "bytes": 29010
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/640.webp",
         "width": 640,
         "bytes": 44828
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/768.webp",
+        "width": 768,
+        "bytes": 57932
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/960.webp",
@@ -3123,7 +4250,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 108340
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/agribot-participation.png": {
     "source": "/media/portfolio/agribot-participation.png",
@@ -3136,9 +4265,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5971
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-participation/480.avif",
+        "width": 480,
+        "bytes": 11795
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/640.avif",
         "width": 640,
         "bytes": 17539
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-participation/768.avif",
+        "width": 768,
+        "bytes": 23335
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/960.avif",
@@ -3163,9 +4302,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 7354
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-participation/480.webp",
+        "width": 480,
+        "bytes": 14330
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/640.webp",
         "width": 640,
         "bytes": 22166
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-participation/768.webp",
+        "width": 768,
+        "bytes": 29532
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/960.webp",
@@ -3182,7 +4331,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1500,
         "bytes": 70970
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/agribot-prize.png": {
     "source": "/media/portfolio/agribot-prize.png",
@@ -3195,9 +4346,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4650
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-prize/480.avif",
+        "width": 480,
+        "bytes": 8268
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/640.avif",
         "width": 640,
         "bytes": 12971
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-prize/768.avif",
+        "width": 768,
+        "bytes": 16850
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/960.avif",
@@ -3217,9 +4378,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6550
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-prize/480.webp",
+        "width": 480,
+        "bytes": 11770
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/640.webp",
         "width": 640,
         "bytes": 18294
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-prize/768.webp",
+        "width": 768,
+        "bytes": 23330
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/960.webp",
@@ -3231,7 +4402,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 45126
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/agribot-tanta-appreciation.jpg": {
     "source": "/media/portfolio/agribot-tanta-appreciation.jpg",
@@ -3244,9 +4417,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 8751
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/480.avif",
+        "width": 480,
+        "bytes": 15369
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/640.avif",
         "width": 640,
         "bytes": 21954
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/768.avif",
+        "width": 768,
+        "bytes": 26921
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/874.avif",
@@ -3261,16 +4444,28 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 12262
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/480.webp",
+        "width": 480,
+        "bytes": 21312
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/640.webp",
         "width": 640,
         "bytes": 31534
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/768.webp",
+        "width": 768,
+        "bytes": 38600
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/874.webp",
         "width": 874,
         "bytes": 47820
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/agribot-university-post.png": {
     "source": "/media/portfolio/agribot-university-post.png",
@@ -3299,7 +4494,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 427,
         "bytes": 66600
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/dead-code-confirmation.png": {
     "source": "/media/portfolio/dead-code-confirmation.png",
@@ -3312,9 +4509,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 12593
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/480.avif",
+        "width": 480,
+        "bytes": 24588
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/640.avif",
         "width": 640,
         "bytes": 36069
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/768.avif",
+        "width": 768,
+        "bytes": 45719
       },
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/909.avif",
@@ -3329,16 +4536,28 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 15984
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/480.webp",
+        "width": 480,
+        "bytes": 32248
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/640.webp",
         "width": 640,
         "bytes": 47804
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/768.webp",
+        "width": 768,
+        "bytes": 62062
       },
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/909.webp",
         "width": 909,
         "bytes": 76524
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/dead-code-team.png": {
     "source": "/media/portfolio/dead-code-team.png",
@@ -3367,7 +4586,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 446,
         "bytes": 34696
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/dead-code-trophy.png": {
     "source": "/media/portfolio/dead-code-trophy.png",
@@ -3396,7 +4617,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 480,
         "bytes": 30660
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/ic-esi-2026-celebration.png": {
     "source": "/media/portfolio/ic-esi-2026-celebration.png",
@@ -3409,9 +4632,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 11599
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/480.avif",
+        "width": 480,
+        "bytes": 21984
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/640.avif",
         "width": 640,
         "bytes": 34412
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/768.avif",
+        "width": 768,
+        "bytes": 46043
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/960.avif",
@@ -3431,9 +4664,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 18470
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/480.webp",
+        "width": 480,
+        "bytes": 34596
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/640.webp",
         "width": 640,
         "bytes": 53202
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/768.webp",
+        "width": 768,
+        "bytes": 67694
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/960.webp",
@@ -3445,7 +4688,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1125,
         "bytes": 115296
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/ic-esi-2026-certificate.jpg": {
     "source": "/media/portfolio/ic-esi-2026-certificate.jpg",
@@ -3458,9 +4703,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 9451
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/480.avif",
+        "width": 480,
+        "bytes": 17679
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/640.avif",
         "width": 640,
         "bytes": 26261
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/768.avif",
+        "width": 768,
+        "bytes": 32061
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/960.avif",
@@ -3480,9 +4735,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 13604
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/480.webp",
+        "width": 480,
+        "bytes": 25660
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/640.webp",
         "width": 640,
         "bytes": 37930
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/768.webp",
+        "width": 768,
+        "bytes": 46952
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/960.webp",
@@ -3494,7 +4759,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1238,
         "bytes": 82214
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/ic-esi-2026-team.png": {
     "source": "/media/portfolio/ic-esi-2026-team.png",
@@ -3507,9 +4774,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 11901
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/480.avif",
+        "width": 480,
+        "bytes": 21323
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/640.avif",
         "width": 640,
         "bytes": 31461
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/768.avif",
+        "width": 768,
+        "bytes": 40784
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/960.avif",
@@ -3529,9 +4806,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 16988
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/480.webp",
+        "width": 480,
+        "bytes": 29954
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/640.webp",
         "width": 640,
         "bytes": 42888
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/768.webp",
+        "width": 768,
+        "bytes": 53644
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/960.webp",
@@ -3543,7 +4830,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1080,
         "bytes": 87876
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/lock-password.png": {
     "source": "/media/portfolio/lock-password.png",
@@ -3556,9 +4845,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4095
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/lock-password/480.avif",
+        "width": 480,
+        "bytes": 8513
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/lock-password/640.avif",
         "width": 640,
         "bytes": 14009
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/lock-password/768.avif",
+        "width": 768,
+        "bytes": 19053
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-password/960.avif",
@@ -3578,9 +4877,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4876
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/lock-password/480.webp",
+        "width": 480,
+        "bytes": 11042
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/lock-password/640.webp",
         "width": 640,
         "bytes": 17998
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/lock-password/768.webp",
+        "width": 768,
+        "bytes": 24304
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-password/960.webp",
@@ -3592,7 +4901,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 60582
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/lock-running.png": {
     "source": "/media/portfolio/lock-running.png",
@@ -3605,9 +4916,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4075
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/lock-running/480.avif",
+        "width": 480,
+        "bytes": 8608
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/lock-running/640.avif",
         "width": 640,
         "bytes": 14343
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/lock-running/768.avif",
+        "width": 768,
+        "bytes": 19461
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-running/960.avif",
@@ -3627,9 +4948,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4806
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/lock-running/480.webp",
+        "width": 480,
+        "bytes": 11100
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/lock-running/640.webp",
         "width": 640,
         "bytes": 18582
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/lock-running/768.webp",
+        "width": 768,
+        "bytes": 24802
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-running/960.webp",
@@ -3641,7 +4972,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 62932
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/nrsc-2026-enhanced-unet-post-conference.jpg": {
     "source": "/media/portfolio/nrsc-2026-enhanced-unet-post-conference.jpg",
@@ -3654,9 +4987,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5887
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/480.avif",
+        "width": 480,
+        "bytes": 9762
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/640.avif",
         "width": 640,
         "bytes": 15237
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/768.avif",
+        "width": 768,
+        "bytes": 18351
       },
       {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/960.avif",
@@ -3681,9 +5024,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 7330
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/480.webp",
+        "width": 480,
+        "bytes": 13070
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/640.webp",
         "width": 640,
         "bytes": 19330
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/768.webp",
+        "width": 768,
+        "bytes": 24520
       },
       {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/960.webp",
@@ -3700,7 +5053,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 60322
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/agribot/cover.webp": {
     "source": "/media/portfolio/showcase/agribot/cover.webp",
@@ -3713,9 +5068,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4599
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/480.avif",
+        "width": 480,
+        "bytes": 7938
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/640.avif",
         "width": 640,
         "bytes": 11861
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/768.avif",
+        "width": 768,
+        "bytes": 15532
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/960.avif",
@@ -3745,9 +5110,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5112
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/480.webp",
+        "width": 480,
+        "bytes": 9424
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/640.webp",
         "width": 640,
         "bytes": 14724
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/768.webp",
+        "width": 768,
+        "bytes": 18996
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/960.webp",
@@ -3769,7 +5144,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 61610
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/agribot/ui-1.webp": {
     "source": "/media/portfolio/showcase/agribot/ui-1.webp",
@@ -3782,9 +5159,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2932
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/480.avif",
+        "width": 480,
+        "bytes": 5075
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/640.avif",
         "width": 640,
         "bytes": 7806
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/768.avif",
+        "width": 768,
+        "bytes": 10567
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/960.avif",
@@ -3814,9 +5201,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3576
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/480.webp",
+        "width": 480,
+        "bytes": 6314
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/640.webp",
         "width": 640,
         "bytes": 9470
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/768.webp",
+        "width": 768,
+        "bytes": 13080
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/960.webp",
@@ -3838,7 +5235,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 2048,
         "bytes": 47522
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/agribot/ui-2.webp": {
     "source": "/media/portfolio/showcase/agribot/ui-2.webp",
@@ -3851,9 +5250,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3017
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/480.avif",
+        "width": 480,
+        "bytes": 4890
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/640.avif",
         "width": 640,
         "bytes": 7087
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/768.avif",
+        "width": 768,
+        "bytes": 9602
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/960.avif",
@@ -3883,9 +5292,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3302
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/480.webp",
+        "width": 480,
+        "bytes": 5888
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/640.webp",
         "width": 640,
         "bytes": 8748
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/768.webp",
+        "width": 768,
+        "bytes": 11466
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/960.webp",
@@ -3907,7 +5326,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 2048,
         "bytes": 41332
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/agribot/ui-3.webp": {
     "source": "/media/portfolio/showcase/agribot/ui-3.webp",
@@ -3920,9 +5341,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2114
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/480.avif",
+        "width": 480,
+        "bytes": 3653
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/640.avif",
         "width": 640,
         "bytes": 5067
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/768.avif",
+        "width": 768,
+        "bytes": 6861
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/960.avif",
@@ -3952,9 +5383,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2360
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/480.webp",
+        "width": 480,
+        "bytes": 4000
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/640.webp",
         "width": 640,
         "bytes": 5996
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/768.webp",
+        "width": 768,
+        "bytes": 7824
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/960.webp",
@@ -3976,7 +5417,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 2048,
         "bytes": 34518
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/agribot/ui-4.webp": {
     "source": "/media/portfolio/showcase/agribot/ui-4.webp",
@@ -3989,9 +5432,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5125
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/480.avif",
+        "width": 480,
+        "bytes": 9016
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/640.avif",
         "width": 640,
         "bytes": 13125
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/768.avif",
+        "width": 768,
+        "bytes": 17318
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/960.avif",
@@ -4021,9 +5474,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 7166
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/480.webp",
+        "width": 480,
+        "bytes": 12634
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/640.webp",
         "width": 640,
         "bytes": 18140
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/768.webp",
+        "width": 768,
+        "bytes": 23780
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/960.webp",
@@ -4045,7 +5508,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 2048,
         "bytes": 90852
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/aqua-sync/cover-asl-v1.webp": {
     "source": "/media/portfolio/showcase/aqua-sync/cover-asl-v1.webp",
@@ -4058,9 +5523,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6614
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/480.avif",
+        "width": 480,
+        "bytes": 12133
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/640.avif",
         "width": 640,
         "bytes": 18897
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/768.avif",
+        "width": 768,
+        "bytes": 24381
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/960.avif",
@@ -4090,9 +5565,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 9994
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/480.webp",
+        "width": 480,
+        "bytes": 18798
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/640.webp",
         "width": 640,
         "bytes": 29204
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/768.webp",
+        "width": 768,
+        "bytes": 38190
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/960.webp",
@@ -4114,7 +5599,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 139496
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/aqua-sync/photos-1.webp": {
     "source": "/media/portfolio/showcase/aqua-sync/photos-1.webp",
@@ -4127,9 +5614,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 8592
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/480.avif",
+        "width": 480,
+        "bytes": 16012
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/640.avif",
         "width": 640,
         "bytes": 23705
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/768.avif",
+        "width": 768,
+        "bytes": 30771
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/960.avif",
@@ -4154,9 +5651,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 13804
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/480.webp",
+        "width": 480,
+        "bytes": 24796
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/640.webp",
         "width": 640,
         "bytes": 37836
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/768.webp",
+        "width": 768,
+        "bytes": 47884
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/960.webp",
@@ -4173,7 +5680,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1599,
         "bytes": 129282
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/autonomous-car/cover.webp": {
     "source": "/media/portfolio/showcase/autonomous-car/cover.webp",
@@ -4186,9 +5695,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5171
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/480.avif",
+        "width": 480,
+        "bytes": 9435
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/640.avif",
         "width": 640,
         "bytes": 14561
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/768.avif",
+        "width": 768,
+        "bytes": 19089
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/960.avif",
@@ -4218,9 +5737,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 7178
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/480.webp",
+        "width": 480,
+        "bytes": 13480
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/640.webp",
         "width": 640,
         "bytes": 20746
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/768.webp",
+        "width": 768,
+        "bytes": 27200
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/960.webp",
@@ -4242,7 +5771,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 88716
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/autonomous-car/photos-1.webp": {
     "source": "/media/portfolio/showcase/autonomous-car/photos-1.webp",
@@ -4255,9 +5786,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 9108
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/480.avif",
+        "width": 480,
+        "bytes": 15701
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/640.avif",
         "width": 640,
         "bytes": 24100
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/768.avif",
+        "width": 768,
+        "bytes": 29667
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/960.avif",
@@ -4277,9 +5818,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 13618
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/480.webp",
+        "width": 480,
+        "bytes": 23806
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/640.webp",
         "width": 640,
         "bytes": 37014
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/768.webp",
+        "width": 768,
+        "bytes": 43526
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/960.webp",
@@ -4291,7 +5842,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 90190
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/fall-detection/cover-asl-v1.webp": {
     "source": "/media/portfolio/showcase/fall-detection/cover-asl-v1.webp",
@@ -4304,9 +5857,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6226
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/480.avif",
+        "width": 480,
+        "bytes": 10701
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/640.avif",
         "width": 640,
         "bytes": 16025
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/768.avif",
+        "width": 768,
+        "bytes": 20463
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/960.avif",
@@ -4336,9 +5899,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 7858
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/480.webp",
+        "width": 480,
+        "bytes": 14864
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/640.webp",
         "width": 640,
         "bytes": 23702
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/768.webp",
+        "width": 768,
+        "bytes": 31060
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/960.webp",
@@ -4360,7 +5933,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 114248
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/fall-detection/photos-1.webp": {
     "source": "/media/portfolio/showcase/fall-detection/photos-1.webp",
@@ -4373,9 +5948,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 11755
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/480.avif",
+        "width": 480,
+        "bytes": 19990
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/640.avif",
         "width": 640,
         "bytes": 27116
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/768.avif",
+        "width": 768,
+        "bytes": 32633
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/960.avif",
@@ -4400,9 +5985,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 16416
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/480.webp",
+        "width": 480,
+        "bytes": 25624
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/640.webp",
         "width": 640,
         "bytes": 35204
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/768.webp",
+        "width": 768,
+        "bytes": 42648
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/960.webp",
@@ -4419,7 +6014,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1440,
         "bytes": 82170
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/fall-detection/photos-2.webp": {
     "source": "/media/portfolio/showcase/fall-detection/photos-2.webp",
@@ -4432,9 +6029,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6219
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/480.avif",
+        "width": 480,
+        "bytes": 11749
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/640.avif",
         "width": 640,
         "bytes": 19398
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/768.avif",
+        "width": 768,
+        "bytes": 24081
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/960.avif",
@@ -4454,9 +6061,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 8918
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/480.webp",
+        "width": 480,
+        "bytes": 16276
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/640.webp",
         "width": 640,
         "bytes": 27290
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/768.webp",
+        "width": 768,
+        "bytes": 32774
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/960.webp",
@@ -4468,7 +6085,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 66674
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/fall-detection/ui-1.webp": {
     "source": "/media/portfolio/showcase/fall-detection/ui-1.webp",
@@ -4481,9 +6100,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2806
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/480.avif",
+        "width": 480,
+        "bytes": 5140
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/640.avif",
         "width": 640,
         "bytes": 7799
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/768.avif",
+        "width": 768,
+        "bytes": 10527
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/960.avif",
@@ -4513,9 +6142,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3042
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/480.webp",
+        "width": 480,
+        "bytes": 5492
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/640.webp",
         "width": 640,
         "bytes": 8048
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/768.webp",
+        "width": 768,
+        "bytes": 10690
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/960.webp",
@@ -4537,7 +6176,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 2048,
         "bytes": 44794
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/firewire/cover-asl-v1.webp": {
     "source": "/media/portfolio/showcase/firewire/cover-asl-v1.webp",
@@ -4550,9 +6191,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2668
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/480.avif",
+        "width": 480,
+        "bytes": 4686
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/640.avif",
         "width": 640,
         "bytes": 6990
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/768.avif",
+        "width": 768,
+        "bytes": 9378
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/960.avif",
@@ -4582,9 +6233,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3392
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/480.webp",
+        "width": 480,
+        "bytes": 5788
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/640.webp",
         "width": 640,
         "bytes": 8526
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/768.webp",
+        "width": 768,
+        "bytes": 11036
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/960.webp",
@@ -4606,7 +6267,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 35486
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/firewire/original-dashboard.png": {
     "source": "/media/portfolio/showcase/firewire/original-dashboard.png",
@@ -4619,9 +6282,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2961
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/480.avif",
+        "width": 480,
+        "bytes": 5031
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/640.avif",
         "width": 640,
         "bytes": 7263
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/768.avif",
+        "width": 768,
+        "bytes": 9551
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/960.avif",
@@ -4641,9 +6314,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3598
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/480.webp",
+        "width": 480,
+        "bytes": 5610
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/640.webp",
         "width": 640,
         "bytes": 8464
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/768.webp",
+        "width": 768,
+        "bytes": 10532
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/960.webp",
@@ -4655,7 +6338,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1171,
         "bytes": 19392
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/mediamate/cover.webp": {
     "source": "/media/portfolio/showcase/mediamate/cover.webp",
@@ -4668,9 +6353,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3086
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/480.avif",
+        "width": 480,
+        "bytes": 4618
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/640.avif",
         "width": 640,
         "bytes": 6850
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/768.avif",
+        "width": 768,
+        "bytes": 8571
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/960.avif",
@@ -4700,9 +6395,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3456
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/480.webp",
+        "width": 480,
+        "bytes": 5414
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/640.webp",
         "width": 640,
         "bytes": 7834
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/768.webp",
+        "width": 768,
+        "bytes": 9760
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/960.webp",
@@ -4724,7 +6429,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 28378
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/mediamate/photos-1.webp": {
     "source": "/media/portfolio/showcase/mediamate/photos-1.webp",
@@ -4737,9 +6444,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2535
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/480.avif",
+        "width": 480,
+        "bytes": 4135
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/640.avif",
         "width": 640,
         "bytes": 5792
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/768.avif",
+        "width": 768,
+        "bytes": 7599
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/960.avif",
@@ -4764,9 +6481,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2732
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/480.webp",
+        "width": 480,
+        "bytes": 4598
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/640.webp",
         "width": 640,
         "bytes": 6492
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/768.webp",
+        "width": 768,
+        "bytes": 8860
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/960.webp",
@@ -4783,7 +6510,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1536,
         "bytes": 22598
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/mediamate/ui-1.webp": {
     "source": "/media/portfolio/showcase/mediamate/ui-1.webp",
@@ -4796,9 +6525,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4356
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/480.avif",
+        "width": 480,
+        "bytes": 7453
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/640.avif",
         "width": 640,
         "bytes": 10956
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/768.avif",
+        "width": 768,
+        "bytes": 13972
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/960.avif",
@@ -4823,9 +6562,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5686
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/480.webp",
+        "width": 480,
+        "bytes": 9580
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/640.webp",
         "width": 640,
         "bytes": 14018
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/768.webp",
+        "width": 768,
+        "bytes": 17662
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/960.webp",
@@ -4842,7 +6591,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 53970
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/mediamate/ui-2.webp": {
     "source": "/media/portfolio/showcase/mediamate/ui-2.webp",
@@ -4855,9 +6606,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3690
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/480.avif",
+        "width": 480,
+        "bytes": 5878
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/640.avif",
         "width": 640,
         "bytes": 8764
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/768.avif",
+        "width": 768,
+        "bytes": 10865
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/960.avif",
@@ -4882,9 +6643,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4422
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/480.webp",
+        "width": 480,
+        "bytes": 7174
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/640.webp",
         "width": 640,
         "bytes": 10608
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/768.webp",
+        "width": 768,
+        "bytes": 13068
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/960.webp",
@@ -4901,7 +6672,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 36640
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/mediamate/ui-3.webp": {
     "source": "/media/portfolio/showcase/mediamate/ui-3.webp",
@@ -4914,9 +6687,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4010
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/480.avif",
+        "width": 480,
+        "bytes": 6915
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/640.avif",
         "width": 640,
         "bytes": 10132
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/768.avif",
+        "width": 768,
+        "bytes": 13014
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/960.avif",
@@ -4941,9 +6724,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5630
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/480.webp",
+        "width": 480,
+        "bytes": 9516
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/640.webp",
         "width": 640,
         "bytes": 13812
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/768.webp",
+        "width": 768,
+        "bytes": 17420
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/960.webp",
@@ -4960,7 +6753,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 50162
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/muscle-monitoring/cover-asl-v1.webp": {
     "source": "/media/portfolio/showcase/muscle-monitoring/cover-asl-v1.webp",
@@ -4973,9 +6768,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2968
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/480.avif",
+        "width": 480,
+        "bytes": 6078
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/640.avif",
         "width": 640,
         "bytes": 10386
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/768.avif",
+        "width": 768,
+        "bytes": 14838
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/960.avif",
@@ -5005,9 +6810,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3994
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/480.webp",
+        "width": 480,
+        "bytes": 8512
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/640.webp",
         "width": 640,
         "bytes": 14988
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/768.webp",
+        "width": 768,
+        "bytes": 21294
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/960.webp",
@@ -5029,7 +6844,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 97148
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/muscle-monitoring/photos-1.webp": {
     "source": "/media/portfolio/showcase/muscle-monitoring/photos-1.webp",
@@ -5042,9 +6859,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6723
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/480.avif",
+        "width": 480,
+        "bytes": 15416
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/640.avif",
         "width": 640,
         "bytes": 27784
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/768.avif",
+        "width": 768,
+        "bytes": 39681
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/960.avif",
@@ -5069,9 +6896,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 10160
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/480.webp",
+        "width": 480,
+        "bytes": 22344
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/640.webp",
         "width": 640,
         "bytes": 41106
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/768.webp",
+        "width": 768,
+        "bytes": 59196
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/960.webp",
@@ -5088,7 +6925,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 245292
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/muscle-monitoring/photos-2.webp": {
     "source": "/media/portfolio/showcase/muscle-monitoring/photos-2.webp",
@@ -5101,9 +6940,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5470
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/480.avif",
+        "width": 480,
+        "bytes": 9963
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/640.avif",
         "width": 640,
         "bytes": 15723
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/768.avif",
+        "width": 768,
+        "bytes": 20541
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/960.avif",
@@ -5128,9 +6977,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6976
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/480.webp",
+        "width": 480,
+        "bytes": 12402
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/640.webp",
         "width": 640,
         "bytes": 18380
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/768.webp",
+        "width": 768,
+        "bytes": 23694
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/960.webp",
@@ -5147,7 +7006,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 64706
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/muscle-monitoring/ui-1.webp": {
     "source": "/media/portfolio/showcase/muscle-monitoring/ui-1.webp",
@@ -5160,9 +7021,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2723
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/480.avif",
+        "width": 480,
+        "bytes": 4683
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/640.avif",
         "width": 640,
         "bytes": 6844
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/768.avif",
+        "width": 768,
+        "bytes": 8977
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/960.avif",
@@ -5192,9 +7063,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2960
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/480.webp",
+        "width": 480,
+        "bytes": 5358
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/640.webp",
         "width": 640,
         "bytes": 8048
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/768.webp",
+        "width": 768,
+        "bytes": 10606
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/960.webp",
@@ -5216,7 +7097,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 2048,
         "bytes": 46120
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/plant-care/cover.webp": {
     "source": "/media/portfolio/showcase/plant-care/cover.webp",
@@ -5229,9 +7112,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3715
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/480.avif",
+        "width": 480,
+        "bytes": 6487
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/640.avif",
         "width": 640,
         "bytes": 9978
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/768.avif",
+        "width": 768,
+        "bytes": 13249
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/960.avif",
@@ -5261,9 +7154,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4612
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/480.webp",
+        "width": 480,
+        "bytes": 8152
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/640.webp",
         "width": 640,
         "bytes": 12522
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/768.webp",
+        "width": 768,
+        "bytes": 16690
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/960.webp",
@@ -5285,7 +7188,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 59898
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/plant-care/photos-1.webp": {
     "source": "/media/portfolio/showcase/plant-care/photos-1.webp",
@@ -5298,9 +7203,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6921
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/480.avif",
+        "width": 480,
+        "bytes": 13753
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/640.avif",
         "width": 640,
         "bytes": 22641
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/768.avif",
+        "width": 768,
+        "bytes": 29926
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/960.avif",
@@ -5320,9 +7235,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 8564
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/480.webp",
+        "width": 480,
+        "bytes": 17192
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/640.webp",
         "width": 640,
         "bytes": 28106
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/768.webp",
+        "width": 768,
+        "bytes": 37682
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/960.webp",
@@ -5334,7 +7259,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1200,
         "bytes": 83314
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/plant-care/photos-2.webp": {
     "source": "/media/portfolio/showcase/plant-care/photos-2.webp",
@@ -5347,9 +7274,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 8025
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/480.avif",
+        "width": 480,
+        "bytes": 17146
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/640.avif",
         "width": 640,
         "bytes": 29792
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/768.avif",
+        "width": 768,
+        "bytes": 40066
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/960.avif",
@@ -5369,9 +7306,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 10820
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/480.webp",
+        "width": 480,
+        "bytes": 23844
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/640.webp",
         "width": 640,
         "bytes": 40940
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/768.webp",
+        "width": 768,
+        "bytes": 57188
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/960.webp",
@@ -5383,7 +7330,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1200,
         "bytes": 134422
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/plant-care/photos-3.webp": {
     "source": "/media/portfolio/showcase/plant-care/photos-3.webp",
@@ -5396,9 +7345,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 9750
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/480.avif",
+        "width": 480,
+        "bytes": 21009
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/640.avif",
         "width": 640,
         "bytes": 35421
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/768.avif",
+        "width": 768,
+        "bytes": 49002
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/960.avif",
@@ -5418,9 +7377,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 12936
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/480.webp",
+        "width": 480,
+        "bytes": 29362
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/640.webp",
         "width": 640,
         "bytes": 50274
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/768.webp",
+        "width": 768,
+        "bytes": 70836
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/960.webp",
@@ -5432,7 +7401,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1200,
         "bytes": 177668
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/plant-care/photos-4.webp": {
     "source": "/media/portfolio/showcase/plant-care/photos-4.webp",
@@ -5445,9 +7416,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 11512
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/480.avif",
+        "width": 480,
+        "bytes": 20881
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/640.avif",
         "width": 640,
         "bytes": 32122
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/768.avif",
+        "width": 768,
+        "bytes": 41139
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/960.avif",
@@ -5467,9 +7448,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 16490
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/480.webp",
+        "width": 480,
+        "bytes": 28872
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/640.webp",
         "width": 640,
         "bytes": 42756
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/768.webp",
+        "width": 768,
+        "bytes": 54566
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/960.webp",
@@ -5481,7 +7472,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1200,
         "bytes": 108230
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/plant-care/photos-5.webp": {
     "source": "/media/portfolio/showcase/plant-care/photos-5.webp",
@@ -5494,9 +7487,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 8086
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/480.avif",
+        "width": 480,
+        "bytes": 17589
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/640.avif",
         "width": 640,
         "bytes": 30462
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/768.avif",
+        "width": 768,
+        "bytes": 41743
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/960.avif",
@@ -5516,9 +7519,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 11754
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/480.webp",
+        "width": 480,
+        "bytes": 24982
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/640.webp",
         "width": 640,
         "bytes": 41940
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/768.webp",
+        "width": 768,
+        "bytes": 57628
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/960.webp",
@@ -5530,7 +7543,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1200,
         "bytes": 134866
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/plant-care/ui-1.webp": {
     "source": "/media/portfolio/showcase/plant-care/ui-1.webp",
@@ -5543,9 +7558,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 2918
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/480.avif",
+        "width": 480,
+        "bytes": 5160
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/640.avif",
         "width": 640,
         "bytes": 7519
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/768.avif",
+        "width": 768,
+        "bytes": 10134
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/960.avif",
@@ -5565,9 +7590,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3532
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/480.webp",
+        "width": 480,
+        "bytes": 5956
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/640.webp",
         "width": 640,
         "bytes": 8472
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/768.webp",
+        "width": 768,
+        "bytes": 10678
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/960.webp",
@@ -5579,7 +7614,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1035,
         "bytes": 17802
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/plant-care/ui-2.webp": {
     "source": "/media/portfolio/showcase/plant-care/ui-2.webp",
@@ -5592,9 +7629,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3232
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/480.avif",
+        "width": 480,
+        "bytes": 5977
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/640.avif",
         "width": 640,
         "bytes": 9625
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/768.avif",
+        "width": 768,
+        "bytes": 12981
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/960.avif",
@@ -5619,9 +7666,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4390
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/480.webp",
+        "width": 480,
+        "bytes": 7646
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/640.webp",
         "width": 640,
         "bytes": 11356
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/768.webp",
+        "width": 768,
+        "bytes": 14968
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/960.webp",
@@ -5638,7 +7695,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 43222
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/robotics-covers/human-follower-asl-v5.png": {
     "source": "/media/portfolio/showcase/robotics-covers/human-follower-asl-v5.png",
@@ -5651,9 +7710,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4258
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/480.avif",
+        "width": 480,
+        "bytes": 7528
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/640.avif",
         "width": 640,
         "bytes": 11738
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/768.avif",
+        "width": 768,
+        "bytes": 15147
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/960.avif",
@@ -5683,9 +7752,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5140
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/480.webp",
+        "width": 480,
+        "bytes": 9378
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/640.webp",
         "width": 640,
         "bytes": 14768
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/768.webp",
+        "width": 768,
+        "bytes": 19624
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/960.webp",
@@ -5707,7 +7786,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 59088
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/robotics-covers/megasumo-asl-v1.png": {
     "source": "/media/portfolio/showcase/robotics-covers/megasumo-asl-v1.png",
@@ -5720,9 +7801,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4326
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/480.avif",
+        "width": 480,
+        "bytes": 7899
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/640.avif",
         "width": 640,
         "bytes": 12805
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/768.avif",
+        "width": 768,
+        "bytes": 17108
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/960.avif",
@@ -5752,9 +7843,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5826
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/480.webp",
+        "width": 480,
+        "bytes": 11318
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/640.webp",
         "width": 640,
         "bytes": 18576
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/768.webp",
+        "width": 768,
+        "bytes": 25556
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/960.webp",
@@ -5776,7 +7877,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 96972
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1.png": {
     "source": "/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1.png",
@@ -5789,9 +7892,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3790
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/480.avif",
+        "width": 480,
+        "bytes": 7265
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/640.avif",
         "width": 640,
         "bytes": 12068
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/768.avif",
+        "width": 768,
+        "bytes": 16861
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/960.avif",
@@ -5821,9 +7934,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4476
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/480.webp",
+        "width": 480,
+        "bytes": 9336
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/640.webp",
         "width": 640,
         "bytes": 15924
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/768.webp",
+        "width": 768,
+        "bytes": 22284
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/960.webp",
@@ -5845,7 +7968,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 84474
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/robotics-covers/rocket-league-original-left.png": {
     "source": "/media/portfolio/showcase/robotics-covers/rocket-league-original-left.png",
@@ -5864,7 +7989,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 291,
         "bytes": 12474
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/smart-mosque/cover.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/cover.webp",
@@ -5877,9 +8004,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3110
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/480.avif",
+        "width": 480,
+        "bytes": 5272
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/640.avif",
         "width": 640,
         "bytes": 8275
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/768.avif",
+        "width": 768,
+        "bytes": 10831
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/960.avif",
@@ -5909,9 +8046,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3886
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/480.webp",
+        "width": 480,
+        "bytes": 6706
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/640.webp",
         "width": 640,
         "bytes": 10006
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/768.webp",
+        "width": 768,
+        "bytes": 12950
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/960.webp",
@@ -5933,7 +8080,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 44328
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/smart-mosque/photos-1.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/photos-1.webp",
@@ -5946,9 +8095,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 10723
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/480.avif",
+        "width": 480,
+        "bytes": 19257
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/640.avif",
         "width": 640,
         "bytes": 30053
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/768.avif",
+        "width": 768,
+        "bytes": 36674
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/960.avif",
@@ -5968,9 +8127,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 17022
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/480.webp",
+        "width": 480,
+        "bytes": 31528
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/640.webp",
         "width": 640,
         "bytes": 48304
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/768.webp",
+        "width": 768,
+        "bytes": 56998
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/960.webp",
@@ -5982,7 +8151,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 113912
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/smart-mosque/photos-2.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/photos-2.webp",
@@ -5995,9 +8166,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 13709
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/480.avif",
+        "width": 480,
+        "bytes": 25645
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/640.avif",
         "width": 640,
         "bytes": 42139
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/768.avif",
+        "width": 768,
+        "bytes": 51508
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/960.avif",
@@ -6017,9 +8198,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 23530
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/480.webp",
+        "width": 480,
+        "bytes": 46132
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/640.webp",
         "width": 640,
         "bytes": 75706
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/768.webp",
+        "width": 768,
+        "bytes": 92778
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/960.webp",
@@ -6031,7 +8222,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 191344
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/smart-mosque/photos-3.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/photos-3.webp",
@@ -6044,9 +8237,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5231
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/480.avif",
+        "width": 480,
+        "bytes": 8805
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/640.avif",
         "width": 640,
         "bytes": 13783
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/768.avif",
+        "width": 768,
+        "bytes": 16719
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/960.avif",
@@ -6066,9 +8269,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6442
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/480.webp",
+        "width": 480,
+        "bytes": 10734
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/640.webp",
         "width": 640,
         "bytes": 15922
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/768.webp",
+        "width": 768,
+        "bytes": 18814
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/960.webp",
@@ -6080,7 +8293,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 37952
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/smart-mosque/photos-4.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/photos-4.webp",
@@ -6093,9 +8308,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5260
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/480.avif",
+        "width": 480,
+        "bytes": 8431
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/640.avif",
         "width": 640,
         "bytes": 13180
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/768.avif",
+        "width": 768,
+        "bytes": 15968
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/960.avif",
@@ -6115,9 +8340,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6334
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/480.webp",
+        "width": 480,
+        "bytes": 10390
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/640.webp",
         "width": 640,
         "bytes": 15534
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/768.webp",
+        "width": 768,
+        "bytes": 18332
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/960.webp",
@@ -6129,7 +8364,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 36852
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/smart-mosque/photos-5.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/photos-5.webp",
@@ -6142,9 +8379,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4541
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/480.avif",
+        "width": 480,
+        "bytes": 7571
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/640.avif",
         "width": 640,
         "bytes": 11533
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/768.avif",
+        "width": 768,
+        "bytes": 13490
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/960.avif",
@@ -6164,9 +8411,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5466
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/480.webp",
+        "width": 480,
+        "bytes": 8672
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/640.webp",
         "width": 640,
         "bytes": 12480
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/768.webp",
+        "width": 768,
+        "bytes": 14784
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/960.webp",
@@ -6178,7 +8435,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 26776
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/smart-mosque/ui-1.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/ui-1.webp",
@@ -6189,6 +8448,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/320.avif",
         "width": 320,
         "bytes": 9660
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/480.avif",
+        "width": 480,
+        "bytes": 16499
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/640.avif",
@@ -6208,6 +8472,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 11084
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/480.webp",
+        "width": 480,
+        "bytes": 17280
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/640.webp",
         "width": 640,
         "bytes": 23252
@@ -6217,7 +8486,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 720,
         "bytes": 28346
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/smart-mosque/ui-2.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/ui-2.webp",
@@ -6228,6 +8499,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/320.avif",
         "width": 320,
         "bytes": 11082
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/480.avif",
+        "width": 480,
+        "bytes": 18683
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/640.avif",
@@ -6247,6 +8523,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 11812
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/480.webp",
+        "width": 480,
+        "bytes": 20270
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/640.webp",
         "width": 640,
         "bytes": 28874
@@ -6256,7 +8537,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 720,
         "bytes": 36170
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/smart-mosque/ui-3.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/ui-3.webp",
@@ -6267,6 +8550,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/320.avif",
         "width": 320,
         "bytes": 13471
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/480.avif",
+        "width": 480,
+        "bytes": 22851
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/640.avif",
@@ -6286,6 +8574,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 16234
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/480.webp",
+        "width": 480,
+        "bytes": 27822
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/640.webp",
         "width": 640,
         "bytes": 39024
@@ -6295,7 +8588,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 720,
         "bytes": 49004
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/smart-mosque/ui-4.webp": {
     "source": "/media/portfolio/showcase/smart-mosque/ui-4.webp",
@@ -6306,6 +8601,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/320.avif",
         "width": 320,
         "bytes": 9854
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/480.avif",
+        "width": 480,
+        "bytes": 17225
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/640.avif",
@@ -6325,6 +8625,11 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 10686
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/480.webp",
+        "width": 480,
+        "bytes": 18702
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/640.webp",
         "width": 640,
         "bytes": 25462
@@ -6334,7 +8639,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 720,
         "bytes": 31880
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/toolguard/cover-asl-v1.webp": {
     "source": "/media/portfolio/showcase/toolguard/cover-asl-v1.webp",
@@ -6347,9 +8654,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 3809
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/480.avif",
+        "width": 480,
+        "bytes": 7644
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/640.avif",
         "width": 640,
         "bytes": 13533
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/768.avif",
+        "width": 768,
+        "bytes": 19465
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/960.avif",
@@ -6379,9 +8696,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4742
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/480.webp",
+        "width": 480,
+        "bytes": 10216
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/640.webp",
         "width": 640,
         "bytes": 17730
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/768.webp",
+        "width": 768,
+        "bytes": 25604
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/960.webp",
@@ -6403,7 +8730,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 133576
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/toolguard/photos-1.webp": {
     "source": "/media/portfolio/showcase/toolguard/photos-1.webp",
@@ -6416,9 +8745,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6767
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/480.avif",
+        "width": 480,
+        "bytes": 14382
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/640.avif",
         "width": 640,
         "bytes": 24841
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/768.avif",
+        "width": 768,
+        "bytes": 35029
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/960.avif",
@@ -6443,9 +8782,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 10478
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/480.webp",
+        "width": 480,
+        "bytes": 20982
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/640.webp",
         "width": 640,
         "bytes": 36392
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/768.webp",
+        "width": 768,
+        "bytes": 48368
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/960.webp",
@@ -6462,7 +8811,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 165590
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/toolguard/photos-2.webp": {
     "source": "/media/portfolio/showcase/toolguard/photos-2.webp",
@@ -6475,9 +8826,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 7890
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/480.avif",
+        "width": 480,
+        "bytes": 16036
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/640.avif",
         "width": 640,
         "bytes": 27163
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/768.avif",
+        "width": 768,
+        "bytes": 36095
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/960.avif",
@@ -6502,9 +8863,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 13062
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/480.webp",
+        "width": 480,
+        "bytes": 25466
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/640.webp",
         "width": 640,
         "bytes": 40670
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/768.webp",
+        "width": 768,
+        "bytes": 54348
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/960.webp",
@@ -6521,7 +8892,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 165524
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/toolguard/ui-1.webp": {
     "source": "/media/portfolio/showcase/toolguard/ui-1.webp",
@@ -6534,9 +8907,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4014
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/480.avif",
+        "width": 480,
+        "bytes": 7931
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/640.avif",
         "width": 640,
         "bytes": 11095
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/768.avif",
+        "width": 768,
+        "bytes": 15405
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/960.avif",
@@ -6566,9 +8949,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5520
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/480.webp",
+        "width": 480,
+        "bytes": 9848
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/640.webp",
         "width": 640,
         "bytes": 14246
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/768.webp",
+        "width": 768,
+        "bytes": 18622
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/960.webp",
@@ -6590,7 +8983,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 2048,
         "bytes": 71340
       }
-    ]
+    ],
+    "role": "interface-screenshot",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/wireless-rov/cover-asl-v1.png": {
     "source": "/media/portfolio/showcase/wireless-rov/cover-asl-v1.png",
@@ -6603,9 +8998,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 5532
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/480.avif",
+        "width": 480,
+        "bytes": 9931
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/640.avif",
         "width": 640,
         "bytes": 15105
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/768.avif",
+        "width": 768,
+        "bytes": 19579
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/960.avif",
@@ -6625,9 +9030,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 7240
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/480.webp",
+        "width": 480,
+        "bytes": 13420
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/640.webp",
         "width": 640,
         "bytes": 20746
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/768.webp",
+        "width": 768,
+        "bytes": 27032
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/960.webp",
@@ -6639,7 +9054,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 63824
       }
-    ]
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
   },
   "/media/portfolio/showcase/wireless-rov/prototype.webp": {
     "source": "/media/portfolio/showcase/wireless-rov/prototype.webp",
@@ -6652,9 +9069,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 7021
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/480.avif",
+        "width": 480,
+        "bytes": 12763
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/640.avif",
         "width": 640,
         "bytes": 20009
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/768.avif",
+        "width": 768,
+        "bytes": 27018
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/960.avif",
@@ -6674,9 +9101,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 10040
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/480.webp",
+        "width": 480,
+        "bytes": 19454
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/640.webp",
         "width": 640,
         "bytes": 31976
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/768.webp",
+        "width": 768,
+        "bytes": 45816
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/960.webp",
@@ -6688,7 +9125,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1024,
         "bytes": 110212
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/portfolio/showcase/wireless-rov/solidworks-design.webp": {
     "source": "/media/portfolio/showcase/wireless-rov/solidworks-design.webp",
@@ -6701,9 +9140,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 4738
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/480.avif",
+        "width": 480,
+        "bytes": 7359
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/640.avif",
         "width": 640,
         "bytes": 10536
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/768.avif",
+        "width": 768,
+        "bytes": 13506
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/960.avif",
@@ -6728,9 +9177,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "bytes": 6466
       },
       {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/480.webp",
+        "width": 480,
+        "bytes": 11338
+      },
+      {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/640.webp",
         "width": 640,
         "bytes": 16340
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/768.webp",
+        "width": 768,
+        "bytes": 20694
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/960.webp",
@@ -6747,7 +9206,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 55792
       }
-    ]
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
   },
   "/media/tools/design/aes-hex-calculator-instrument-v2.png": {
     "source": "/media/tools/design/aes-hex-calculator-instrument-v2.png",
@@ -6755,9 +9216,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 900,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/240.avif",
+        "width": 240,
+        "bytes": 2660
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/320.avif",
         "width": 320,
         "bytes": 2679
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/480.avif",
+        "width": 480,
+        "bytes": 4941
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/640.avif",
@@ -6782,9 +9253,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/240.webp",
+        "width": 240,
+        "bytes": 2494
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/320.webp",
         "width": 320,
         "bytes": 3548
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/480.webp",
+        "width": 480,
+        "bytes": 5918
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/640.webp",
@@ -6806,7 +9287,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 31556
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/design/affine-cipher-instrument-v2.png": {
     "source": "/media/tools/design/affine-cipher-instrument-v2.png",
@@ -6814,9 +9297,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 900,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/240.avif",
+        "width": 240,
+        "bytes": 1888
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/320.avif",
         "width": 320,
         "bytes": 2047
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/480.avif",
+        "width": 480,
+        "bytes": 3610
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/640.avif",
@@ -6841,9 +9334,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/240.webp",
+        "width": 240,
+        "bytes": 1612
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/320.webp",
         "width": 320,
         "bytes": 2246
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/480.webp",
+        "width": 480,
+        "bytes": 3578
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/640.webp",
@@ -6865,7 +9368,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 22688
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/design/hash-generator-instrument-v2.png": {
     "source": "/media/tools/design/hash-generator-instrument-v2.png",
@@ -6873,9 +9378,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 900,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/240.avif",
+        "width": 240,
+        "bytes": 2548
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/320.avif",
         "width": 320,
         "bytes": 2958
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/480.avif",
+        "width": 480,
+        "bytes": 4842
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/640.avif",
@@ -6900,9 +9415,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/240.webp",
+        "width": 240,
+        "bytes": 3160
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/320.webp",
         "width": 320,
         "bytes": 4510
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/480.webp",
+        "width": 480,
+        "bytes": 7412
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/640.webp",
@@ -6924,7 +9449,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 37436
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/design/hill-cipher-instrument-v2.png": {
     "source": "/media/tools/design/hill-cipher-instrument-v2.png",
@@ -6932,9 +9459,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 900,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/240.avif",
+        "width": 240,
+        "bytes": 1902
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/320.avif",
         "width": 320,
         "bytes": 2155
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/480.avif",
+        "width": 480,
+        "bytes": 3686
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/640.avif",
@@ -6959,9 +9496,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/240.webp",
+        "width": 240,
+        "bytes": 1728
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/320.webp",
         "width": 320,
         "bytes": 2374
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/480.webp",
+        "width": 480,
+        "bytes": 3736
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/640.webp",
@@ -6983,7 +9530,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 24966
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/design/playfair-cipher-instrument-v2.png": {
     "source": "/media/tools/design/playfair-cipher-instrument-v2.png",
@@ -6991,9 +9540,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 900,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/240.avif",
+        "width": 240,
+        "bytes": 2081
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/320.avif",
         "width": 320,
         "bytes": 2747
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/480.avif",
+        "width": 480,
+        "bytes": 4085
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/640.avif",
@@ -7018,9 +9577,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/240.webp",
+        "width": 240,
+        "bytes": 2148
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/320.webp",
         "width": 320,
         "bytes": 3218
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/480.webp",
+        "width": 480,
+        "bytes": 5486
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/640.webp",
@@ -7042,7 +9611,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 28914
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/design/transposition-cipher-instrument-v2.png": {
     "source": "/media/tools/design/transposition-cipher-instrument-v2.png",
@@ -7050,9 +9621,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 900,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/240.avif",
+        "width": 240,
+        "bytes": 2645
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/320.avif",
         "width": 320,
         "bytes": 2757
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/480.avif",
+        "width": 480,
+        "bytes": 4795
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/640.avif",
@@ -7077,9 +9658,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/240.webp",
+        "width": 240,
+        "bytes": 2584
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/320.webp",
         "width": 320,
         "bytes": 3510
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/480.webp",
+        "width": 480,
+        "bytes": 5672
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/640.webp",
@@ -7101,7 +9692,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 27478
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/design/vigenere-cipher-instrument-v2.png": {
     "source": "/media/tools/design/vigenere-cipher-instrument-v2.png",
@@ -7109,9 +9702,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 900,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/240.avif",
+        "width": 240,
+        "bytes": 2130
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/320.avif",
         "width": 320,
         "bytes": 2073
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/480.avif",
+        "width": 480,
+        "bytes": 3613
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/640.avif",
@@ -7136,9 +9739,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/240.webp",
+        "width": 240,
+        "bytes": 1804
+      },
+      {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/320.webp",
         "width": 320,
         "bytes": 2422
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/480.webp",
+        "width": 480,
+        "bytes": 3884
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/640.webp",
@@ -7160,7 +9773,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1600,
         "bytes": 20684
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-ai-script-generator-v4.png": {
     "source": "/media/tools/tool-ai-script-generator-v4.png",
@@ -7168,9 +9783,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/240.avif",
+        "width": 240,
+        "bytes": 3907
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/320.avif",
         "width": 320,
         "bytes": 6189
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/480.avif",
+        "width": 480,
+        "bytes": 11540
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/640.avif",
@@ -7200,9 +9825,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/240.webp",
+        "width": 240,
+        "bytes": 5592
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/320.webp",
         "width": 320,
         "bytes": 8682
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/480.webp",
+        "width": 480,
+        "bytes": 16314
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/640.webp",
@@ -7229,7 +9864,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 103258
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-battery-estimator-v2.png": {
     "source": "/media/tools/tool-battery-estimator-v2.png",
@@ -7237,9 +9874,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/240.avif",
+        "width": 240,
+        "bytes": 2750
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/320.avif",
         "width": 320,
         "bytes": 4055
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/480.avif",
+        "width": 480,
+        "bytes": 7305
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/640.avif",
@@ -7269,9 +9916,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/240.webp",
+        "width": 240,
+        "bytes": 3168
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/320.webp",
         "width": 320,
         "bytes": 5062
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/480.webp",
+        "width": 480,
+        "bytes": 9934
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/640.webp",
@@ -7298,7 +9955,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 86808
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-pid-simulator-v4.png": {
     "source": "/media/tools/tool-pid-simulator-v4.png",
@@ -7306,9 +9965,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/240.avif",
+        "width": 240,
+        "bytes": 3136
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/320.avif",
         "width": 320,
         "bytes": 4913
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/480.avif",
+        "width": 480,
+        "bytes": 8234
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/640.avif",
@@ -7338,9 +10007,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/240.webp",
+        "width": 240,
+        "bytes": 3978
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/320.webp",
         "width": 320,
         "bytes": 5970
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/480.webp",
+        "width": 480,
+        "bytes": 11128
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/640.webp",
@@ -7367,7 +10046,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 59784
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-rf-antenna-v1.png": {
     "source": "/media/tools/tool-rf-antenna-v1.png",
@@ -7375,9 +10056,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/240.avif",
+        "width": 240,
+        "bytes": 3213
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/320.avif",
         "width": 320,
         "bytes": 4645
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/480.avif",
+        "width": 480,
+        "bytes": 8353
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/640.avif",
@@ -7397,9 +10088,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/240.webp",
+        "width": 240,
+        "bytes": 3884
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/320.webp",
         "width": 320,
         "bytes": 5922
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/480.webp",
+        "width": 480,
+        "bytes": 10992
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/640.webp",
@@ -7416,7 +10117,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 50688
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-rf-frequency-bands-v1.png": {
     "source": "/media/tools/tool-rf-frequency-bands-v1.png",
@@ -7424,9 +10127,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/240.avif",
+        "width": 240,
+        "bytes": 3276
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/320.avif",
         "width": 320,
         "bytes": 5104
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/480.avif",
+        "width": 480,
+        "bytes": 9414
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/640.avif",
@@ -7446,9 +10159,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/240.webp",
+        "width": 240,
+        "bytes": 4456
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/320.webp",
         "width": 320,
         "bytes": 6772
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/480.webp",
+        "width": 480,
+        "bytes": 12168
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/640.webp",
@@ -7465,7 +10188,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 57884
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-rf-multiple-access-v1.png": {
     "source": "/media/tools/tool-rf-multiple-access-v1.png",
@@ -7473,9 +10198,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/240.avif",
+        "width": 240,
+        "bytes": 4053
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/320.avif",
         "width": 320,
         "bytes": 6254
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/480.avif",
+        "width": 480,
+        "bytes": 11648
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/640.avif",
@@ -7495,9 +10230,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/240.webp",
+        "width": 240,
+        "bytes": 5422
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/320.webp",
         "width": 320,
         "bytes": 8342
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/480.webp",
+        "width": 480,
+        "bytes": 15752
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/640.webp",
@@ -7514,7 +10259,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 60386
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-rf-noise-gt-v1.png": {
     "source": "/media/tools/tool-rf-noise-gt-v1.png",
@@ -7522,9 +10269,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/240.avif",
+        "width": 240,
+        "bytes": 3278
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/320.avif",
         "width": 320,
         "bytes": 4696
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/480.avif",
+        "width": 480,
+        "bytes": 9666
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/640.avif",
@@ -7544,9 +10301,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/240.webp",
+        "width": 240,
+        "bytes": 3768
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/320.webp",
         "width": 320,
         "bytes": 6044
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/480.webp",
+        "width": 480,
+        "bytes": 12698
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/640.webp",
@@ -7563,7 +10330,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 68058
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-rf-path-v1.png": {
     "source": "/media/tools/tool-rf-path-v1.png",
@@ -7571,9 +10340,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/240.avif",
+        "width": 240,
+        "bytes": 2968
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/320.avif",
         "width": 320,
         "bytes": 4370
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/480.avif",
+        "width": 480,
+        "bytes": 7861
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/640.avif",
@@ -7593,9 +10372,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/240.webp",
+        "width": 240,
+        "bytes": 3050
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/320.webp",
         "width": 320,
         "bytes": 4702
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/480.webp",
+        "width": 480,
+        "bytes": 9316
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/640.webp",
@@ -7612,7 +10401,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 49854
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-satellite-doppler-delay-v1.png": {
     "source": "/media/tools/tool-satellite-doppler-delay-v1.png",
@@ -7620,9 +10411,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/240.avif",
+        "width": 240,
+        "bytes": 4100
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/320.avif",
         "width": 320,
         "bytes": 6438
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/480.avif",
+        "width": 480,
+        "bytes": 13117
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/640.avif",
@@ -7642,9 +10443,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/240.webp",
+        "width": 240,
+        "bytes": 5448
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/320.webp",
         "width": 320,
         "bytes": 8646
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/480.webp",
+        "width": 480,
+        "bytes": 16970
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/640.webp",
@@ -7661,7 +10472,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 87218
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-satellite-link-budget-v1.png": {
     "source": "/media/tools/tool-satellite-link-budget-v1.png",
@@ -7669,9 +10482,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/240.avif",
+        "width": 240,
+        "bytes": 3694
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/320.avif",
         "width": 320,
         "bytes": 5832
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/480.avif",
+        "width": 480,
+        "bytes": 11079
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/640.avif",
@@ -7691,9 +10514,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/240.webp",
+        "width": 240,
+        "bytes": 4554
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/320.webp",
         "width": 320,
         "bytes": 7190
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/480.webp",
+        "width": 480,
+        "bytes": 14272
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/640.webp",
@@ -7710,7 +10543,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 77262
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-satellite-look-angles-v1.png": {
     "source": "/media/tools/tool-satellite-look-angles-v1.png",
@@ -7718,9 +10553,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/240.avif",
+        "width": 240,
+        "bytes": 3397
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/320.avif",
         "width": 320,
         "bytes": 5208
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/480.avif",
+        "width": 480,
+        "bytes": 9564
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/640.avif",
@@ -7740,9 +10585,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/240.webp",
+        "width": 240,
+        "bytes": 3936
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/320.webp",
         "width": 320,
         "bytes": 6192
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/480.webp",
+        "width": 480,
+        "bytes": 12108
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/640.webp",
@@ -7759,7 +10614,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 58652
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-satellite-orbit-v1.png": {
     "source": "/media/tools/tool-satellite-orbit-v1.png",
@@ -7767,9 +10624,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/240.avif",
+        "width": 240,
+        "bytes": 2307
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/320.avif",
         "width": 320,
         "bytes": 3329
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/480.avif",
+        "width": 480,
+        "bytes": 6321
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/640.avif",
@@ -7789,9 +10656,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/240.webp",
+        "width": 240,
+        "bytes": 2384
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/320.webp",
         "width": 320,
         "bytes": 3770
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/480.webp",
+        "width": 480,
+        "bytes": 7282
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/640.webp",
@@ -7808,7 +10685,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 41360
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-satellite-power-lifetime-v1.png": {
     "source": "/media/tools/tool-satellite-power-lifetime-v1.png",
@@ -7816,9 +10695,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 720,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/240.avif",
+        "width": 240,
+        "bytes": 3350
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/320.avif",
         "width": 320,
         "bytes": 5587
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/480.avif",
+        "width": 480,
+        "bytes": 9732
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/640.avif",
@@ -7838,9 +10727,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/240.webp",
+        "width": 240,
+        "bytes": 4440
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/320.webp",
         "width": 320,
         "bytes": 6724
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/480.webp",
+        "width": 480,
+        "bytes": 13158
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/640.webp",
@@ -7857,7 +10756,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1280,
         "bytes": 64998
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-security-mission-v4.png": {
     "source": "/media/tools/tool-security-mission-v4.png",
@@ -7865,9 +10766,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/240.avif",
+        "width": 240,
+        "bytes": 3630
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/320.avif",
         "width": 320,
         "bytes": 5487
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/480.avif",
+        "width": 480,
+        "bytes": 10394
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/640.avif",
@@ -7897,9 +10808,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/240.webp",
+        "width": 240,
+        "bytes": 5016
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/320.webp",
         "width": 320,
         "bytes": 7864
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/480.webp",
+        "width": 480,
+        "bytes": 14944
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/640.webp",
@@ -7926,7 +10847,9 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 102282
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
   },
   "/media/tools/tool-sensor-code-generator-v4.png": {
     "source": "/media/tools/tool-sensor-code-generator-v4.png",
@@ -7934,9 +10857,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     "height": 941,
     "avif": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/240.avif",
+        "width": 240,
+        "bytes": 3225
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/320.avif",
         "width": 320,
         "bytes": 5023
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/480.avif",
+        "width": 480,
+        "bytes": 9461
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/640.avif",
@@ -7966,9 +10899,19 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
     ],
     "webp": [
       {
+        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/240.webp",
+        "width": 240,
+        "bytes": 3548
+      },
+      {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/320.webp",
         "width": 320,
         "bytes": 5588
+      },
+      {
+        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/480.webp",
+        "width": 480,
+        "bytes": 11364
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/640.webp",
@@ -7995,6 +10938,50 @@ export const publicImageManifest: Record<string, PublicImageAsset> = {
         "width": 1672,
         "bytes": 84282
       }
-    ]
+    ],
+    "role": "tool-cover",
+    "sizesPreset": "tool-card"
+  },
+  "/opengraph-image.png": {
+    "source": "/opengraph-image.png",
+    "width": 1200,
+    "height": 630,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/opengraph-image/1200.avif",
+        "width": 1200,
+        "bytes": 16330
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/opengraph-image/1200.webp",
+        "width": 1200,
+        "bytes": 18946
+      }
+    ],
+    "role": "social",
+    "sizesPreset": "social"
+  },
+  "/twitter-image.png": {
+    "source": "/twitter-image.png",
+    "width": 1200,
+    "height": 630,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/twitter-image/1200.avif",
+        "width": 1200,
+        "bytes": 16330
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/twitter-image/1200.webp",
+        "width": 1200,
+        "bytes": 18946
+      }
+    ],
+    "role": "social",
+    "sizesPreset": "social"
   }
 };

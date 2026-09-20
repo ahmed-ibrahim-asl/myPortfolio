@@ -48,6 +48,39 @@ test("public image preparation reports missing referenced assets", async () => {
   assert.deepEqual(report.missing, ["/media/missing.jpg"]);
 });
 
+test("tool covers use role widths, budgets, and an available mobile composition", async () => {
+  const rootDir = await mkdtemp(path.join(tmpdir(), "asl-tool-images-"));
+  await mkdir(path.join(rootDir, "public/media/tools/mobile"), { recursive: true });
+  await mkdir(path.join(rootDir, "data"), { recursive: true });
+  await writeFile(path.join(rootDir, "public/media/tools/tool.png"), pixelPng);
+  await writeFile(path.join(rootDir, "public/media/tools/mobile/tool-mobile-v1.png"), pixelPng);
+  await writeFile(path.join(rootDir, "data/images.js"), 'export const image = "/media/tools/tool.png";');
+
+  const report = await preparePublicImages({ rootDir, write: true });
+  const toolAsset = report.assets.find((asset) => asset.source === "/media/tools/tool.png");
+
+  assert.equal(toolAsset.role, "tool-cover");
+  assert.equal(toolAsset.sizesPreset, "tool-card");
+  assert.equal(toolAsset.mobile.source, "/media/tools/mobile/tool-mobile-v1.png");
+  assert.ok(toolAsset.mobile.avif.every((item) => item.bytes <= 120 * 1024));
+  assert.ok(toolAsset.avif.every((item) => item.width <= toolAsset.width));
+  assert.deepEqual(report.unregistered, []);
+});
+
+test("role policies include compact phone through wide-display widths", async () => {
+  const { ROLE_POLICIES } = await import("../../scripts/public-image-pipeline.mjs");
+
+  assert.deepEqual(ROLE_POLICIES["tool-cover"].widths, [240, 320, 480, 640, 960, 1280, 1600]);
+  assert.ok(ROLE_POLICIES["gallery-evidence"].widths.includes(2560));
+  assert.equal(ROLE_POLICIES.portrait.budget, 100 * 1024);
+  assert.equal(ROLE_POLICIES.social.budget, 300 * 1024);
+});
+
+test("the repository has no responsive variant above its role budget", async () => {
+  const report = await preparePublicImages({ rootDir: process.cwd(), write: false });
+  assert.deepEqual(report.oversized, []);
+});
+
 test("new public raster sources stay below the hard 500 KB source limit", async () => {
   const source = "public/media/portfolio/showcase/wireless-rov/cover-asl-v1.png";
   assert.ok((await stat(source)).size <= 500 * 1024, `${source} exceeds 500 KB`);
