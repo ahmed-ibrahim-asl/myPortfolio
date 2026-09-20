@@ -46,11 +46,9 @@ test("audit accounts for every referenced raster and direct img usage", async ()
   assert.deepEqual(report.directImgUsages.filter(item => item.file !== "components/PublicImage.tsx"), []);
 });
 
-test("all raster-backed tool covers declare a mobile source", async () => {
+test("audit assigns an explicit role and sizes preset to every referenced raster", async () => {
   const report = await auditPublicImages({ rootDir: process.cwd() });
-  const tools = report.referenced.filter(item => item.role === "tool-cover");
-  assert.ok(tools.length >= 20);
-  assert.deepEqual(tools.filter(item => !item.mobileSrc), []);
+  assert.deepEqual(report.referenced.filter(item => !item.role || !item.sizesPreset), []);
 });
 ```
 
