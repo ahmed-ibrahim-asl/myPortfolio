@@ -27,17 +27,30 @@ test("browser storage access survives environments that deny the property itself
   }
 });
 
-test("shared problems restore units and convention without accepting unknown or nonfinite fields", () => {
-  const query = encodeProblem("orbit", { altitudeM: 800000, orbitMode: "circular" }, "course");
+test("new shared problems omit convention without accepting unknown or nonfinite fields", () => {
+  const query = encodeProblem("orbit", { altitudeM: 800000, orbitMode: "circular" });
+  assert.match(query, /^\?v=2&/);
+  assert.doesNotMatch(decodeURIComponent(query), /"mode"/);
   assert.deepEqual(decodeProblem(query, ["altitudeM", "orbitMode"]), {
     slug: "orbit",
-    values: { altitudeM: 800000, orbitMode: "circular" },
-    mode: "course"
+    values: { altitudeM: 800000, orbitMode: "circular" }
   });
   assert.equal(decodeProblem("?v=8&p=garbage", ["altitudeM"]), null);
   assert.equal(decodeProblem("?v=1&p=%7B", ["altitudeM"]), null);
   const evil = encodeProblem("orbit", { altitudeM: null, unknown: 2 }, "course");
   assert.deepEqual(decodeProblem(evil, ["altitudeM"]).values, {});
+});
+
+test("legacy orbit links migrate metre-based gravitational parameter to km³/s²", () => {
+  const legacy = `?v=1&p=${encodeURIComponent(JSON.stringify({
+    slug: "orbit",
+    values: { orbitMode: "circular", mu: 398600.4418e9 },
+    mode: "course"
+  }))}`;
+  assert.deepEqual(decodeProblem(legacy, ["orbitMode", "muKm3S2"]), {
+    slug: "orbit",
+    values: { orbitMode: "circular", muKm3S2: 398600.4418 }
+  });
 });
 
 test("history is bounded, newest first, recoverable after corrupt or unavailable storage", () => {

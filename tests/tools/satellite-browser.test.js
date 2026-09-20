@@ -44,12 +44,10 @@ test("calculator category, functional routes, no course controls, and equal resp
       });
       assert.equal(response.status(), 200, tool.slug);
       assert.ok(await page.$('[data-action="calculate"]'), tool.slug);
+      assert.equal(await page.$('select[aria-label="Open satellite module"]'), null);
       assert.equal(
-        await page.$$eval(
-          'select[aria-label="Open satellite module"] option',
-          (nodes) => nodes.length
-        ),
-        10
+        await page.$eval("main", (element) => element.textContent.includes("Calculation convention")),
+        false
       );
       assert.doesNotMatch(
         await page.$eval("main", (e) => e.textContent),

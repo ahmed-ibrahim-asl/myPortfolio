@@ -225,11 +225,11 @@ function FormulaReference({ toolSlug }) {
   );
 }
 const routeForTool = (toolSlug, locale = "en") => `/${locale === "ar" ? "ar/" : ""}tools/${rfCalculatorSlugs.includes(toolSlug) ? "rf" : "satellite"}/${toolSlug}/`;
+const CALCULATION_MODE = "engineering";
 
 export default function SatelliteWorkspace({ slug, routeRoot = "satellite", locale = "en" }) {
   const tool = satelliteTools.find((t) => t.slug === slug);
   const [values, setValues] = useState(() => initialValues(slug)),
-    [mode, setMode] = useState("course"),
     [history, setHistory] = useState([]),
     [notice, setNotice] = useState(""),
     [revealed, setRevealed] = useState(false),
@@ -249,7 +249,6 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
     const shared = decodeProblem(window.location.search, allowed);
     if (shared && shared.slug === slug) {
       setValues((v) => ({ ...v, ...shared.values }));
-      setMode(shared.mode);
       if (["nf", "factor", "te"].includes(shared.values.nfInput)) setNfInput(shared.values.nfInput);
       setNotice("Shared calculation restored. Review the units and calculate.");
     }
@@ -313,7 +312,7 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
                 key: "wavelengthM",
                 label: "Wavelength",
                 symbol: "λ",
-                value: constants(mode).c / f,
+                value: constants(CALCULATION_MODE).c / f,
                 unit: "m",
                 interpretation:
                   "Frequency and wavelength are inversely related; free-space propagation speed is the same."
@@ -323,8 +322,8 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
               {
                 title: "Wavelength",
                 formula: "\\lambda=\\frac{c}{f}",
-                substitution: `${constants(mode).c} m/s ÷ ${f} Hz`,
-                result: `${constants(mode).c / f} m`
+                substitution: `${constants(CALCULATION_MODE).c} m/s ÷ ${f} Hz`,
+                result: `${constants(CALCULATION_MODE).c / f} m`
               }
             ],
             warnings: [],
@@ -333,11 +332,11 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
           error: null
         };
       }
-      return { data: calculate(slug, normalized, mode), error: null };
+      return { data: calculate(slug, normalized, CALCULATION_MODE), error: null };
     } catch (e) {
       return { data: null, error: e.message };
     }
-  }, [slug, normalized, mode, values]);
+  }, [slug, normalized, values]);
   const data = computation.data;
   const raw = data?.diagram ?? {};
   function save() {
@@ -346,7 +345,7 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
     const saved = saveHistory(storage, {
       slug,
       values: normalized,
-      mode,
+      mode: CALCULATION_MODE,
       title: tool.title,
       summary: `${data.results[0]?.label}: ${fmt(data.results[0]?.value ?? 0)} ${data.results[0]?.unit ?? ""}`
     });
@@ -359,7 +358,7 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
   }
   async function share() {
     const url =
-      window.location.origin + `/${locale === "ar" ? "ar/" : ""}tools/${routeRoot}/${slug}/` + encodeProblem(slug, normalized, mode);
+      window.location.origin + `/${locale === "ar" ? "ar/" : ""}tools/${routeRoot}/${slug}/` + encodeProblem(slug, normalized);
     try {
       await navigator.clipboard.writeText(url);
       setNotice("Calculation link copied.");
@@ -381,7 +380,7 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
           slug={slug}
           values={normalized}
           data={data}
-          mode={mode}
+          mode={CALCULATION_MODE}
         />
       )}
       <nav className={styles.breadcrumb} aria-label="Breadcrumb">
@@ -397,28 +396,6 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
         <p>{tool.summary}</p>
         {locale === "ar" ? <p className={styles.muted}>المحتوى التفصيلي متاح بالإنجليزية، بينما الحسابات والوحدات والنتائج تعمل بنفس المحرك الهندسي.</p> : null}
       </header>
-      <nav className={styles.toolNav} aria-label="Satellite modules">
-        <select
-          aria-label="Open satellite module"
-          value={slug}
-          onChange={(e) => window.location.assign(routeForTool(e.target.value, locale))}
-        >
-          {satelliteTools.map((t) => (
-            <option key={t.slug} value={t.slug}>
-              {locale === "ar" ? arabicToolNames[t.slug] : t.title}
-            </option>
-          ))}
-        </select>
-        <div className={styles.controls}>
-          <label>
-            Calculation convention
-            <select value={mode} onChange={(e) => setMode(e.target.value)}>
-              <option value="course">Rounded reference constants</option>
-              <option value="engineering">Engineering constants</option>
-            </select>
-          </label>
-        </div>
-      </nav>
       {
         <>
           {satelliteInputs[slug] && (
@@ -720,9 +697,9 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
                       Swipe the diagram sideways to see the full view. With a keyboard, focus the
                       diagram and use the arrow keys.
                     </p>
-                    <SatelliteDiagrams slug={slug} values={normalized} results={raw} mode={mode} />
+                    <SatelliteDiagrams slug={slug} values={normalized} results={raw} mode={CALCULATION_MODE} />
                     {slug === "link-budget" && (
-                      <SatelliteLinkPlot values={normalized} mode={mode} />
+                      <SatelliteLinkPlot values={normalized} mode={CALCULATION_MODE} />
                     )}
                   </>
                 )}
@@ -761,7 +738,7 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
             return (
               <Link
                 key={target}
-                href={`${routeForTool(target, locale)}${Object.keys(transferred).length ? encodeProblem(target, transferred, mode) : ""}`}
+                href={`${routeForTool(target, locale)}${Object.keys(transferred).length ? encodeProblem(target, transferred) : ""}`}
               >
                 {next.title}
                 {Object.keys(transferred).length ? " · use this result" : ""} →
@@ -778,7 +755,7 @@ export default function SatelliteWorkspace({ slug, routeRoot = "satellite", loca
               <Link
                 data-history-item
                 key={`${entry.savedAt}-${i}`}
-                href={`${routeForTool(entry.slug, locale)}${encodeProblem(entry.slug, entry.values, entry.mode)}`}
+                href={`${routeForTool(entry.slug, locale)}${encodeProblem(entry.slug, entry.values)}`}
               >
                 {entry.title}
                 <small>{entry.summary}</small>
