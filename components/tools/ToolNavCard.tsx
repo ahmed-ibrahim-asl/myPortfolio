@@ -23,7 +23,6 @@ export function ToolNavCard({ tool, index }: ToolNavCardProps) {
           <PublicImage
             src={tool.coverImage}
             alt={`${tool.title} tool cover`}
-            sizes="(max-width: 768px) 100vw, 50vw"
             className="tool-card-cover-img"
           />
           <div className="tool-card-cover-overlay" aria-hidden="true" />

@@ -137,7 +137,7 @@ export function HomePageView({ locale }: { locale: Locale }) {
               href={`${prefix}/work/${workCategories.find((group) => group.categories.includes(project.category))?.id}/${project.slug}/`}
               key={project.slug}
             >
-              <PublicImage src={project.image} alt="" sizes="(max-width: 760px) 100vw, 33vw" />
+              <PublicImage src={project.image} alt="" />
               <span className="project-index">0{index + 1}</span>
               <div className="project-copy" dir={isAr ? TECH_DIR : undefined}>
                 <p>{project.category} / {project.year}</p>
@@ -162,7 +162,7 @@ export function HomePageView({ locale }: { locale: Locale }) {
           {featuredTools.map((tool, index) => (
             <Link className="tool-entry" href={tool.href} key={tool.id}>
               <div className="tool-cover" aria-hidden="true">
-                {tool.coverImage ? <PublicImage src={tool.coverImage} alt="" sizes="(max-width: 760px) 100vw, 33vw" /> : <i />}
+                {tool.coverImage ? <PublicImage src={tool.coverImage} alt="" /> : <i />}
                 <span>0{index + 1}</span>
                 <strong>{tool.icon}</strong>
               </div>

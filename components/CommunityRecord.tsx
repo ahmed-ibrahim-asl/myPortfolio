@@ -15,11 +15,11 @@ export function RecognitionRecord() {
       </div>
       <div>
         <a href={item.images[0].src} target="_blank" rel="noreferrer" className={styles.heroLink}>
-          <PublicImage className={styles.hero} src={item.images[0].src} alt={item.images[0].alt} loading="lazy" sizes="(max-width: 760px) 100vw, 60vw" />
+          <PublicImage className={styles.hero} src={item.images[0].src} alt={item.images[0].alt} loading="lazy" />
         </a>
         <details className={styles.evidence}>
           <summary>View certificates and event photos ({item.images.length - 1})</summary>
-          <div className={styles.gallery}>{item.images.slice(1).map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} loading="lazy" sizes="240px" /><span>{image.alt}</span></a>)}</div>
+          <div className={styles.gallery}>{item.images.slice(1).map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} loading="lazy" /><span>{image.alt}</span></a>)}</div>
         </details>
       </div>
     </article>)}

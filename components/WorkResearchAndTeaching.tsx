@@ -75,7 +75,6 @@ export function WorkResearchAndTeaching() {
                         src={item.conferenceEvidence.image}
                         alt={item.conferenceEvidence.alt}
                         loading="lazy"
-                        sizes="(max-width: 820px) 100vw, 70vw"
                       />
                       <figcaption>
                         <span>{item.conferenceEvidence.caption}</span>
@@ -106,7 +105,7 @@ export function WorkResearchAndTeaching() {
         <div className="tutorial-grid">
           {tutorials.map((tutorial) => (
             <a className="tutorial-card" href={tutorial.href} target="_blank" rel="noreferrer" key={tutorial.title}>
-              <PublicImage src={tutorial.image} alt={`${tutorial.title} cover`} loading="lazy" sizes="(max-width: 760px) 100vw, 33vw" />
+              <PublicImage src={tutorial.image} alt={`${tutorial.title} cover`} loading="lazy" />
               <div>
                 <div className="tag-row">
                   {tutorial.tags.map((tag) => (

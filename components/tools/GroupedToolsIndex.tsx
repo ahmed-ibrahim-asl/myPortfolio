@@ -81,7 +81,7 @@ export function GroupedToolsIndex({
                 {item.visualKey ? (
                   <CalculatorThumbnail visualKey={item.visualKey} title={item.title} />
                 ) : item.coverImage ? (
-                  <div className={styles.cover}><PublicImage src={item.coverImage} alt="" sizes="(max-width: 720px) 100vw, 18rem" /></div>
+                  <div className={styles.cover}><PublicImage src={item.coverImage} alt="" /></div>
                 ) : null}
                 <div>
                   <p className={styles.meta}>{item.kind} / {item.category}</p>

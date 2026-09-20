@@ -27,7 +27,6 @@ export function ProjectCard({ project, index, compact = false }: ProjectCardProp
             src={project.image}
             alt={`${project.title} hardware or interface`}
             loading="lazy"
-            sizes="(max-width: 760px) 100vw, 50vw"
           />
         </div>
       ) : (
@@ -42,7 +41,7 @@ export function ProjectCard({ project, index, compact = false }: ProjectCardProp
           aria-label={`${project.title} additional images`}
         >
           {project.gallery.map((image) => (
-            <a href={image.src} target="_blank" rel="noreferrer" key={image.src}><PublicImage src={image.src} alt={image.alt} loading="lazy" sizes="160px" /></a>
+            <a href={image.src} target="_blank" rel="noreferrer" key={image.src}><PublicImage src={image.src} alt={image.alt} loading="lazy" /></a>
           ))}
         </div>
       ) : null}

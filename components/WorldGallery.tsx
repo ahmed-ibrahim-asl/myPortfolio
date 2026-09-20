@@ -47,7 +47,6 @@ export function WorldGallery() {
                     src={world.image}
                     alt={`Pixel-art scene representing ${world.label}`}
                     loading={world.featured ? "eager" : "lazy"}
-                    sizes="(max-width: 760px) 100vw, 33vw"
                     referrerPolicy="no-referrer"
                   />
                 ) : (

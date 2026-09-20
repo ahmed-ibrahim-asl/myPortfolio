@@ -8,7 +8,7 @@ import { PublicImage } from "./PublicImage";
 function ScreenImage({ screen }: { screen: MobileScreen }) {
   const { crop } = screen;
   return <span className={styles.screen} style={{ aspectRatio: `${crop.width} / ${crop.height}` }}>
-    <PublicImage src={screen.src} alt={screen.title} loading="lazy" draggable={false} sizes="(max-width: 760px) 70vw, 320px" style={{
+    <PublicImage src={screen.src} alt={screen.title} loading="lazy" draggable={false} style={{
       width: `${screen.sourceWidth / crop.width * 100}%`,
       height: `${screen.sourceHeight / crop.height * 100}%`,
       left: `${-crop.x / crop.width * 100}%`,

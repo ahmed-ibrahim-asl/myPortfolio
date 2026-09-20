@@ -137,7 +137,6 @@ export function UnifiedToolsIndex({
                 <PublicImage
                   src={tool.coverImage}
                   alt=""
-                  sizes="(max-width: 700px) 100vw, (max-width: 1300px) 50vw, 33vw"
                 />
                 <span>{tool.icon}</span>
               </div>
