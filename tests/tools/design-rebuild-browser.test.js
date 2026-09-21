@@ -11,6 +11,16 @@ test('rebuilt tools simulate state, generate gates, render math and fit both the
     page.on('pageerror',e=>errors.push(page.url()+' '+e.message));
     page.on('console',m=>{if(m.type()==='error')errors.push(page.url()+' '+m.text()+' '+JSON.stringify(m.location()));});
     const clickText=async text=>{const buttons=await page.$$('button');for(const b of buttons){if((await b.evaluate(e=>e.textContent)).trim()===text){await b.click();return;}}throw Error(`Missing button ${text}`);};
+    const waitForImages=async()=>{
+      await page.evaluate(async()=>{
+        await Promise.all([...document.images].map(async image=>{
+          image.loading='eager';
+          if(image.complete&&image.naturalWidth) return;
+          try{await image.decode();}catch{}
+        }));
+      });
+      await page.waitForFunction(()=>[...document.images].every(image=>image.complete&&image.naturalWidth>0),{timeout:10000});
+    };
     await page.goto(`${base}/tools/control-design-assistant/`,{waitUntil:'networkidle0'});
     await clickText('Send rising clock pulse ↑');
     assert.match(await page.$eval('[aria-label="Recent captured states"]',e=>e.textContent),/01/);
@@ -34,7 +44,7 @@ test('rebuilt tools simulate state, generate gates, render math and fit both the
     await page.$eval('#full-cascade',e=>e.scrollIntoView());
     await page.screenshot({path:'test-results/design-rebuild/full-cascade.png'});
     await page.goto(`${base}/tools/category/control-design/`,{waitUntil:'networkidle0'});
-    await page.evaluate(async()=>{await Promise.all([...document.images].map(image=>{image.loading='eager';return image.decode();}));});
+    await waitForImages();
     assert.deepEqual(await page.$$eval('.asl-tool-category-catalog img',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[]);
     await page.goto(`${base}/tools/buck-converter-designer/`,{waitUntil:'networkidle0'});
     await clickText('Switch OFF');
@@ -49,7 +59,7 @@ test('rebuilt tools simulate state, generate gates, render math and fit both the
         await page.setViewport({width,height:1000});
         await page.evaluate(t=>{document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t;},theme);
         assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${slug} ${width} ${theme}: overflow`);
-        await page.evaluate(async()=>{await Promise.all([...document.images].map(image=>{image.loading='eager';return image.decode();}));});
+        await waitForImages();
         assert.deepEqual(await page.$$eval('img:not([width="64"][height="64"])',els=>els.filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src)),[],slug+' image load');
         await page.screenshot({path:`test-results/design-rebuild/${slug.replaceAll('/','-')}-${width}-${theme}.png`,fullPage:true});
       }
