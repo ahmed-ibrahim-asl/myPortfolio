@@ -4,7 +4,7 @@
 
 **Goal:** Build a removable, local-only Apple-inspired portfolio homepage at `/apple-preview` and verify it at phone and desktop widths without changing the production homepage.
 
-**Architecture:** Add one static App Router page backed by existing portfolio and tools data, with all visual behavior isolated in a colocated CSS Module. A focused Node test enforces route isolation and accessibility/responsive contracts; browser screenshots provide final visual verification.
+**Architecture:** Add one static App Router page backed by existing portfolio and tools data, with all visual behavior isolated in a colocated CSS Module. A focused browser integration test enforces the rendered accessibility and responsive contracts; browser screenshots provide final visual verification.
 
 **Tech Stack:** Next.js 16 App Router, React 19 Server Components, TypeScript, CSS Modules, Node test runner, Puppeteer/Chrome.
 
@@ -31,15 +31,15 @@
 - Consumes: `profile` and `projects` from `@/data/portfolio`, `workCategories` from `@/data/work-categories`, and `engineeringTools` from `@/data/tools`.
 - Produces: static route `/apple-preview`; global marker class `apple-preview-root`; anchors `#work`, `#tools`, and `#contact`.
 
-- [ ] **Step 1: Write the failing source-contract test**
+- [ ] **Step 1: Write the failing browser-contract test**
 
-Create a Node test that reads the proposed page and CSS files and asserts: the route exists, imports a CSS Module, has one `h1`, uses semantic `nav`/`section`/`footer` landmarks, contains `apple-preview-root`, leaves `app/page.tsx` untouched by design, includes `prefers-reduced-motion`, `prefers-reduced-transparency`, `prefers-color-scheme: dark`, a `320px` compact breakpoint, and a minimum `44px` control size.
+Create a Node/Puppeteer test that loads `/apple-preview` from the local test server and asserts: the route returns a rendered page rather than the not-found screen; it has one `h1`; it exposes navigation, selected-work, tools, and contact landmarks; primary controls are at least 44px high at 390px width; and neither 390px nor 320px viewports have horizontal overflow.
 
 - [ ] **Step 2: Run the test and verify it fails**
 
 Run: `node --test tests/tools/apple-preview.test.js`
 
-Expected: FAIL because `app/apple-preview/page.tsx` and its CSS Module do not exist.
+Expected: FAIL because `/apple-preview` returns the not-found page.
 
 - [ ] **Step 3: Implement the server-rendered preview page**
 
@@ -120,4 +120,3 @@ For any failure, first add or tighten the relevant assertion in `tests/tools/app
 git add app/apple-preview/page.tsx app/apple-preview/apple-preview.module.css tests/tools/apple-preview.test.js
 git commit -m "fix: polish apple preview responsiveness"
 ```
-
