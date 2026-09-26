@@ -15,18 +15,20 @@ after(async () => {
   await browser?.close();
 });
 
-test("the local preview renders its complete page structure", async () => {
+test("the main homepage renders its complete page structure without preview copy", async () => {
   const page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 1000, deviceScaleFactor: 1 });
-  await page.goto(`${baseUrl}/apple-preview`, { waitUntil: "networkidle0" });
+  await page.goto(`${baseUrl}/`, { waitUntil: "networkidle0" });
 
   const structure = await page.evaluate(() => ({
     title: document.querySelector("h1")?.textContent?.trim(),
     headingCount: document.querySelectorAll("h1").length,
-    navigation: Boolean(document.querySelector('nav[aria-label="Preview navigation"]')),
+    navigation: Boolean(document.querySelector('nav[aria-label="Primary navigation"]')),
+    wordmarkPath: document.querySelector("nav a")?.getAttribute("href"),
     work: Boolean(document.querySelector("section#work")),
     tools: Boolean(document.querySelector("section#tools")),
     contact: Boolean(document.querySelector("footer#contact")),
+    hasPreviewCopy: /Local (concept )?preview/u.test(document.body.textContent ?? ""),
     sharedHeaderVisible: document.querySelector(".site-header")?.getBoundingClientRect().height ?? 0,
     sharedFooterVisible: document.querySelector(".site-footer")?.getBoundingClientRect().height ?? 0
   }));
@@ -34,19 +36,21 @@ test("the local preview renders its complete page structure", async () => {
   assert.equal(structure.title, "From rough idea to working system.");
   assert.equal(structure.headingCount, 1);
   assert.equal(structure.navigation, true);
+  assert.equal(structure.wordmarkPath, "/");
   assert.equal(structure.work, true);
   assert.equal(structure.tools, true);
   assert.equal(structure.contact, true);
+  assert.equal(structure.hasPreviewCopy, false);
   assert.equal(structure.sharedHeaderVisible, 0);
   assert.equal(structure.sharedFooterVisible, 0);
 
   await page.close();
 });
 
-test("the closing headline remains legible on its dark surface", async () => {
+test("the homepage closing headline remains legible on its dark surface", async () => {
   const page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 1000, deviceScaleFactor: 1 });
-  await page.goto(`${baseUrl}/apple-preview`, { waitUntil: "networkidle0" });
+  await page.goto(`${baseUrl}/`, { waitUntil: "networkidle0" });
   await page.evaluate(() => {
     document.documentElement.dataset.theme = "light";
     document.documentElement.style.colorScheme = "light";
@@ -83,10 +87,10 @@ for (const viewport of [
   { width: 390, height: 844 },
   { width: 320, height: 700 }
 ]) {
-  test(`the preview remains touchable without horizontal overflow at ${viewport.width}px`, async () => {
+  test(`the homepage remains touchable without horizontal overflow at ${viewport.width}px`, async () => {
     const page = await browser.newPage();
     await page.setViewport({ ...viewport, deviceScaleFactor: 1 });
-    await page.goto(`${baseUrl}/apple-preview`, { waitUntil: "networkidle0" });
+    await page.goto(`${baseUrl}/`, { waitUntil: "networkidle0" });
 
     const result = await page.evaluate(() => ({
       overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
@@ -102,3 +106,13 @@ for (const viewport of [
     await page.close();
   });
 }
+
+test("the obsolete apple preview route is not available", async () => {
+  const page = await browser.newPage();
+  const response = await page.goto(`${baseUrl}/apple-preview/`, { waitUntil: "networkidle0" });
+
+  assert.equal(response?.status(), 404);
+  assert.equal(await page.locator(".apple-home-root").count(), 0);
+
+  await page.close();
+});
