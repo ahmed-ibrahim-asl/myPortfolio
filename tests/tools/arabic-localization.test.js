@@ -64,14 +64,15 @@ test("the header brand keeps Arabic visitors inside the Arabic site", () => {
   assert.match(header, /className="brand" href=\{homeHref\}/);
 });
 
-test("English and Arabic home pages share one component instead of duplicated markup", () => {
+test("the English homepage is independent while Arabic keeps the localized shared view", () => {
   const enHome = readFileSync("app/page.tsx", "utf8");
   const arHome = readFileSync("app/ar/page.tsx", "utf8");
-  assert.match(enHome, /HomePageView locale="en"/);
+  assert.match(enHome, /apple-home-root/);
+  assert.match(enHome, /From rough idea to working system\./);
+  assert.doesNotMatch(enHome, /HomePageView/);
   assert.match(arHome, /HomePageView locale="ar"/);
   const shared = readFileSync("components/HomePageView.tsx", "utf8");
-  // Every section and the profile media present on the English home page must
-  // also exist in the shared component the Arabic page renders.
+  // The Arabic homepage continues to receive the complete localized shared view.
   for (const marker of [
     "ProfilePortrait",
     "home-hero",
