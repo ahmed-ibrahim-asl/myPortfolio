@@ -1,7 +1,8 @@
 import type { Locale } from "./types";
 
 const localizedRoots = ["/", "/about/", "/contact/", "/work/", "/tools/", "/notes/"];
-const localizedNested = [/^\/tools\/category\/[^/]+\/$/, /^\/tools\/(satellite|rf)\/[^/]+\/$/, /^\/work\/[^/]+\/$/];
+// Only routes with a real page under app/ar; anything else would link to a 404.
+const localizedNested = [/^\/tools\/category\/[^/]+\/$/, /^\/tools\/(satellite|rf)\/[^/]+\/$/];
 
 function normalize(pathname: string) {
   const clean = `/${pathname}`.replace(/\/{2,}/g, "/");

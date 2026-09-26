@@ -134,7 +134,7 @@ export function HomePageView({ locale }: { locale: Locale }) {
           {featuredProjects.map((project, index) => (
             <Link
               className={`project-entry project-entry-${index + 1}`}
-              href={`${prefix}/work/${workCategories.find((group) => group.categories.includes(project.category))?.id}/${project.slug}/`}
+              href={`/work/${workCategories.find((group) => group.categories.includes(project.category))?.id}/${project.slug}/`}
               key={project.slug}
             >
               <PublicImage src={project.image} alt="" />
@@ -189,7 +189,7 @@ export function HomePageView({ locale }: { locale: Locale }) {
         <div className="brain-grid">
           <div className="notes-list">
             {notes.map((note, index) => (
-              <Link href={`${prefix}/notes/${note.slug}`} key={note.slug}>
+              <Link href={`/notes/${note.slug}/`} key={note.slug}>
                 <span>0{index + 1}</span>
                 <div dir={isAr ? TECH_DIR : undefined}>
                   <p>{note.category} / {formatDate(note.publishedAt)}</p>
@@ -203,7 +203,7 @@ export function HomePageView({ locale }: { locale: Locale }) {
             <p className="eyebrow">{dictionary.home.promptEyebrow}</p>
             <code>/blueprint</code><code>/handwritten</code><code>/machineview</code><code>/sequence</code>
             <p>{dictionary.home.promptSub}</p>
-            <Link className="btn-secondary" href={`${prefix}/prompts/`}>{dictionary.home.browsePrompts}</Link>
+            <Link className="btn-secondary" href="/prompts/">{dictionary.home.browsePrompts}</Link>
           </aside>
         </div>
       </section>
