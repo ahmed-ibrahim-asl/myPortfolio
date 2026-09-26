@@ -5,7 +5,7 @@ import puppeteer from "puppeteer-core";
 const executablePath = "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const baseUrl = process.env.TEST_BASE_URL || "http://localhost:3000";
 
-test("the desktop portrait mat has equal left and right insets", async () => {
+test("the promoted homepage keeps the desktop portrait centered in its stage", async () => {
   const browser = await puppeteer.launch({ executablePath, headless: true, args: ["--no-sandbox"] });
   try {
     const page = await browser.newPage();
@@ -15,12 +15,16 @@ test("the desktop portrait mat has equal left and right insets", async () => {
     for (const theme of ["dark", "light"]) {
       await page.evaluate(value => document.documentElement.dataset.theme = value, theme);
       const insets = await page.evaluate(() => {
-        const instrument = document.querySelector(".portrait-instrument")?.getBoundingClientRect();
-        const portrait = document.querySelector(".portrait-instrument .profile-portrait")?.getBoundingClientRect();
-        if (!instrument || !portrait) return null;
+        const stage = document
+          .querySelector('.apple-home-root [class*="portraitStage"]')
+          ?.getBoundingClientRect();
+        const portrait = document
+          .querySelector('.apple-home-root [class*="portraitFrame"]')
+          ?.getBoundingClientRect();
+        if (!stage || !portrait) return null;
         return {
-          left: portrait.left - instrument.left,
-          right: instrument.right - portrait.right
+          left: portrait.left - stage.left,
+          right: stage.right - portrait.right
         };
       });
 

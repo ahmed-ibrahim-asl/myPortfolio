@@ -352,11 +352,14 @@ test(
                 const style = getComputedStyle(link);
                 return style.whiteSpace !== "nowrap" || link.scrollWidth > link.clientWidth + 1;
               });
-              const portraitCount = document.querySelectorAll(".profile-portrait img").length;
+              const appleHome = document.querySelector(".apple-home-root");
+              const portraitCount = document.querySelectorAll(
+                ".profile-portrait img, .apple-home-root [class*='portraitFrame'] img"
+              ).length;
               const removedSceneCount = document.querySelectorAll(
                 ".pixel-world, .engineering-image-frame--bench, .engineering-image-signal"
               ).length;
-              const freeToolsHook = document.querySelector(".tool-ledger");
+              const freeToolsHook = document.querySelector(".tool-ledger, .apple-home-root #tools");
               const toolCategoryCards = [...document.querySelectorAll("a[href*='/tools/category/']")];
               const unifiedCatalog = document.querySelector("[data-unified-tools-catalog]");
               const unifiedSearch = unifiedCatalog?.querySelector("input[type='search']");
@@ -604,6 +607,7 @@ test(
                 visibleContactText,
                 contactLinkWraps,
                 portraitCount,
+                hasAppleHome: Boolean(appleHome),
                 removedSceneCount,
                 hasFreeToolsHook: Boolean(freeToolsHook),
                 toolCategoryCardCount: toolCategoryCards.length,
@@ -755,6 +759,7 @@ test(
             visibleContactText,
             contactLinkWraps,
             portraitCount,
+            hasAppleHome,
             removedSceneCount,
             hasFreeToolsHook,
             toolCategoryCardCount,
@@ -1078,7 +1083,7 @@ test(
                 `${route} @ ${viewport.label}: home must show one static portrait, no engineering scene, and the workbench hook`
               );
             }
-            if (viewport.width >= 1366) {
+            if (viewport.width >= 1366 && !hasAppleHome) {
               if (portraitIdEdgeInset < 8) {
                 failures.push(
                   `${route} @ ${viewport.label}: portrait identity labels touch or clip their strip ` +
@@ -1319,7 +1324,7 @@ test(
             const active = document.activeElement;
             const style = active ? getComputedStyle(active) : null;
             return {
-              isNav: Boolean(active?.matches(".site-nav a")),
+              isNav: Boolean(active?.matches(".site-nav a, .apple-home-root nav a")),
               width: style ? parseFloat(style.outlineWidth) : 0,
               style: style?.outlineStyle ?? "none",
               color: style?.outlineColor ?? ""
@@ -1374,7 +1379,7 @@ test(
         !focus.isNav ||
         focus.width < 3 ||
         focus.style === "none" ||
-        !/rgb\(232, 188, 102\)|rgb\(217, 164, 65\)/.test(focus.color)
+        !/rgb\(232, 188, 102\)|rgb\(217, 164, 65\)|rgb\(230, 167, 42\)/.test(focus.color)
       ) {
         failures.push(
           `keyboard focus: first navigation link lacks the required 3px ASL gold outline ` +
