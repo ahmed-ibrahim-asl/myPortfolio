@@ -112,7 +112,7 @@ test("the obsolete apple preview route is not available", async () => {
   const response = await page.goto(`${baseUrl}/apple-preview/`, { waitUntil: "networkidle0" });
 
   assert.equal(response?.status(), 404);
-  assert.equal(await page.locator(".apple-home-root").count(), 0);
+  assert.equal(Boolean(await page.$(".apple-home-root")), false);
 
   await page.close();
 });
