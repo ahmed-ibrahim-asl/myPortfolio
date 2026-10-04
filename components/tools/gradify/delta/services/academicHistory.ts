@@ -26,6 +26,7 @@ export interface CourseHistorySummary {
   best: ParsedCourse;
   attemptCount: number;
   passed: boolean;
+  withdrawn: boolean;
 }
 
 export interface ElectiveReplacement {
@@ -48,6 +49,8 @@ export interface DetectedCourseRegistration {
   label: string;
   oldGrade: string;
   attemptNumber: number;
+  /** Failed credits already in the GPA, even when registration is withdrawn. */
+  withdrawnGpaHours?: string;
   replacement?: ElectiveReplacement;
 }
 
@@ -73,7 +76,10 @@ export function summarizeAcademicHistory(
     const maxRemark = Math.max(
       ...courseAttempts.map(a => parseInt(a.remark || '0', 10) || 0)
     );
-    const attemptCount = Math.max(courseAttempts.length, maxRemark);
+    // The transcript's Remark includes registrations that ended in W.
+    // Withdrawals must not advance the graded-attempt / retake counter.
+    const withdrawalCount = courseAttempts.filter(attempt => attempt.grade === 'W').length;
+    const attemptCount = Math.max(courseAttempts.length, maxRemark) - withdrawalCount;
     
     summaries.set(code, {
       code,
@@ -82,6 +88,7 @@ export function summarizeAcademicHistory(
       best,
       attemptCount,
       passed: isPassingGrade(best.grade),
+      withdrawn: !isPassingGrade(best.grade) && courseAttempts.some(attempt => attempt.grade === 'W'),
     });
   }
   return summaries;
@@ -90,7 +97,7 @@ export function summarizeAcademicHistory(
 export function unresolvedFailedCourses(attempts: ParsedCourse[]): Course[] {
   const summaries = summarizeAcademicHistory(attempts);
   return Array.from(summaries.values())
-    .filter(summary => !summary.passed && ['F', 'FAIL'].includes(summary.latest.grade))
+    .filter(summary => !summary.passed && !summary.withdrawn && ['F', 'FAIL'].includes(summary.latest.grade))
     .map(summary => getCourseByCode(summary.code))
     .filter((course): course is Course => Boolean(course));
 }
@@ -206,22 +213,24 @@ export function detectCourseRegistration(
     };
   }
 
+  if (summary?.withdrawn) {
+    const lastFailure = summary.attempts.filter(attempt => ['F', 'FAIL'].includes(attempt.grade)).pop();
+    return {
+      status: 'withdrawn',
+      selectable: true,
+      label: 'Withdrawn - Register again',
+      oldGrade: 'W',
+      attemptNumber: summary.attemptCount + 1,
+      withdrawnGpaHours: lastFailure ? String(lastFailure.hours) : '',
+    };
+  }
+
   if (summary && !summary.passed && ['F', 'FAIL'].includes(summary.latest.grade)) {
     return {
       status: 'retaken',
       selectable: true,
       label: `Failed course - Attempt ${summary.attemptCount + 1}`,
       oldGrade: summary.latest.grade,
-      attemptNumber: summary.attemptCount + 1,
-    };
-  }
-
-  if (summary && !summary.passed && summary.latest.grade === 'W') {
-    return {
-      status: 'withdrawn',
-      selectable: true,
-      label: 'Withdrawn - Register again',
-      oldGrade: 'W',
       attemptNumber: summary.attemptCount + 1,
     };
   }

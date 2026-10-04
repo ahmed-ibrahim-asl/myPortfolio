@@ -137,7 +137,7 @@ describe('academic history inference', () => {
       status: 'withdrawn',
       selectable: true,
       oldGrade: 'W',
-      attemptNumber: 2,
+      attemptNumber: 1,
     });
   });
 
@@ -148,7 +148,7 @@ describe('academic history inference', () => {
         { term: '2024 Fall', code: 'ECE222', name: 'DSP', grade: 'W', hours: 3 },
         { term: '2025 Fall', code: 'ECE222', name: 'DSP', grade: 'F', hours: 3 },
       ],
-      expected: { status: 'retaken', oldGrade: 'F', attemptNumber: 3 },
+      expected: { status: 'withdrawn', oldGrade: 'W', attemptNumber: 2 },
     },
     {
       name: 'F followed by W',
@@ -156,7 +156,7 @@ describe('academic history inference', () => {
         { term: '2024 Fall', code: 'ECE222', name: 'DSP', grade: 'F', hours: 3 },
         { term: '2025 Fall', code: 'ECE222', name: 'DSP', grade: 'W', hours: 3 },
       ],
-      expected: { status: 'withdrawn', oldGrade: 'W', attemptNumber: 3 },
+      expected: { status: 'withdrawn', oldGrade: 'W', attemptNumber: 2 },
     },
   ] satisfies Array<{
     name: string;
@@ -165,7 +165,7 @@ describe('academic history inference', () => {
   }>;
 
   it.each(unresolvedEce222Cases)(
-    'uses the latest unresolved result for $name',
+    'preserves withdrawal registration status for $name',
     ({ attempts, expected }) => {
       const course = getCourseByCode('ECE222')!;
       expect(detectCourseRegistration(course, attempts, attempts)).toMatchObject(expected);

@@ -346,6 +346,7 @@ export default function CalculatorTab() {
       grade: '',
       status: detection.status,
       oldGrade: detection.oldGrade,
+      withdrawnGpaHours: detection.withdrawnGpaHours,
       retakeCount: detection.attemptNumber,
       semesterLabel: activeSemester,
       semesterType: activePolicy.semesterType,

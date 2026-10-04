@@ -240,6 +240,7 @@ export const passedCodes = (bestAttempts: ParsedCourse[]): Set<string> => {
 
 export const failedRetakeCourses = (attempts: ParsedCourse[], bestAttempts: ParsedCourse[]): ParsedCourse[] => {
   const passed = passedCodes(bestAttempts);
+  const withdrawn = new Set(withdrawnCourseAttempts(attempts).map(c => normCode(c.code)));
   const bestMap = new Map(bestAttempts.map(c => [normCode(c.code), c]));
   
   // A course is a failed retake if the BEST attempt is not passed
@@ -249,7 +250,7 @@ export const failedRetakeCourses = (attempts: ParsedCourse[], bestAttempts: Pars
     if (!best) return false;
     
     // Ignore if passed
-    if (passed.has(ncode)) return false;
+    if (passed.has(ncode) || withdrawn.has(ncode)) return false;
     
     // Only return the latest attempt to show as failed
     const latestAttempt = attempts.filter(x => normCode(x.code) === ncode).pop();
@@ -272,8 +273,9 @@ export const withdrawnCourseAttempts = (attempts: ParsedCourse[]): ParsedCourse[
 
   return Array.from(histories.values())
     .filter(history => !history.some(attempt => isPassingGrade(attempt.grade)))
-    .map(history => history[history.length - 1])
-    .filter(attempt => attempt.grade === 'W');
+    // Keep the actual withdrawal row, even if a later attempt failed.
+    .map(history => history.filter(attempt => attempt.grade === 'W').pop())
+    .filter((attempt): attempt is ParsedCourse => Boolean(attempt));
 };
 
 export const transferredCourseAttempts = (attempts: ParsedCourse[]): ParsedCourse[] => {

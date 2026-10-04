@@ -86,6 +86,7 @@ export function projectPlannedTerms(
         grade: capExpectedGrade(detection, expectedGrade),
         status: detection.status === 'completed' ? 'new' : detection.status,
         oldGrade: detection.oldGrade,
+        withdrawnGpaHours: detection.withdrawnGpaHours,
         retakeCount: detection.attemptNumber,
         semesterLabel: term.title,
         semesterType: term.semesterType,
@@ -113,7 +114,10 @@ export function projectPlannedTerms(
       term: term.title,
       grade: course.grade,
       hours: Number(course.hours),
-      remark: String(course.retakeCount),
+      // Transcript remarks count all registrations, including withdrawals.
+      remark: String(course.retakeCount + attempts.filter(attempt =>
+        normCode(attempt.code) === normCode(course.code) && attempt.grade === 'W'
+      ).length),
     }))];
   }
   return { record, attempts, bestAttempts: getBestAttempts(attempts), courses, errors };

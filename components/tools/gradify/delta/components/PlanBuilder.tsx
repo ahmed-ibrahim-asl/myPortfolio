@@ -344,6 +344,7 @@ export default function PlanBuilder({
           ? 'new'
           : detection.status,
         oldGrade: detection.oldGrade,
+        withdrawnGpaHours: detection.withdrawnGpaHours,
         retakeCount: detection.attemptNumber,
         semesterLabel,
         semesterType,

@@ -42,6 +42,12 @@ export function calculateGPA(
       earnedHoursAdjustments -= replacedHours;
     }
 
+    // Withdrawal status does not erase an F already included in the GPA.
+    // Replacing it with PASS also removes those old GPA hours.
+    if (course.status === 'withdrawn') {
+      cumulativeHoursAdjustments += parseFloat(course.withdrawnGpaHours || '') || 0;
+    }
+
     if (course.grade !== 'PASS') {
       currentTotalHoursForGPA += hours;
       currentTotalPoints += hours * gradeInfo.points;

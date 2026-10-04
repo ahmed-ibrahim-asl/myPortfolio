@@ -16,6 +16,7 @@ export interface CourseEntry {
   grade: string;
   status: 'new' | 'retaken' | 'improvement' | 'withdrawn' | 'transferred';
   oldGrade: string;
+  withdrawnGpaHours?: string;
   retakeCount: number;
   semesterLabel: string;
   semesterType: SemesterType;

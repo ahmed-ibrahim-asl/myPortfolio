@@ -240,7 +240,9 @@ describe('failedRetakeCourses', () => {
 
   it.each([
     { grades: ['W', 'C'], withdrawn: [], failed: [] },
-    { grades: ['W', 'F'], withdrawn: [], failed: ['ECE222'] },
+    { grades: ['W', 'F'], withdrawn: ['ECE222'], failed: [] },
+    { grades: ['W', 'FAIL'], withdrawn: ['ECE222'], failed: [] },
+    { grades: ['W', 'F', 'C'], withdrawn: [], failed: [] },
     { grades: ['F', 'W'], withdrawn: ['ECE222'], failed: [] },
     { grades: ['C', 'W'], withdrawn: [], failed: [] },
   ])('resolves ECE222 history $grades', ({ grades, withdrawn, failed }) => {

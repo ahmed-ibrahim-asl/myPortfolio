@@ -169,6 +169,7 @@ export default function CourseRow({
     updateCourse(course.id, 'hours', '');
     updateCourse(course.id, 'grade', '');
     updateCourse(course.id, 'oldGrade', '');
+    updateCourse(course.id, 'withdrawnGpaHours', '');
     updateCourse(course.id, 'retakeCount', nextStatus === 'new' ? '1' : '2');
     updateCourse(course.id, 'replacementOfCode', '');
     updateCourse(course.id, 'replacementOldHours', '');
@@ -176,6 +177,7 @@ export default function CourseRow({
   };
 
   const applyCourseSelection = (code: string, name: string, hours: number) => {
+    updateCourse(course.id, 'withdrawnGpaHours', '');
     updateCourse(course.id, 'code', code);
     updateCourse(course.id, 'name', name);
     updateCourse(course.id, 'hours', String(hours));
