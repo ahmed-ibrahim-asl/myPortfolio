@@ -45,16 +45,19 @@ describe('registration after a historical withdrawal', () => {
   });
 
   it.each([
-    { grades: ['W'], gpaHours: 0 },
-    { grades: ['W', 'F'], gpaHours: 3 },
-    { grades: ['F', 'W'], gpaHours: 3 },
-  ])('counts GPA hours once when registering after $grades', ({ grades, gpaHours }) => {
+    { grades: ['W'], gpaHours: 0, expectedGrade: 'A', points: 12 },
+    { grades: ['W', 'F'], gpaHours: 3, expectedGrade: 'B+', points: 9.9 },
+    { grades: ['F', 'W'], gpaHours: 3, expectedGrade: 'B+', points: 9.9 },
+    { grades: ['W', 'F', 'F'], gpaHours: 3, expectedGrade: 'C', points: 6 },
+  ])('caps the counted attempt and counts GPA hours once after $grades', ({ grades, gpaHours, expectedGrade, points }) => {
     const attempts = grades.map(grade => ({ code: 'MEC022', name: 'Mechanics 2', grade, hours: 3, term: '2025-2026 Spring' }));
     const result = projectPlannedTerms(attempts,
       { passedHours: 0, gpaHours, totalPoints: 0, cgpa: 0 },
       [{ id: 'next', title: 'Next term', semesterType: 'Spring', courses: { MEC022: 'A' } }]);
-    expect(result.courses[0]).toMatchObject({ status: 'withdrawn', oldGrade: 'W', grade: 'A' });
-    expect(result.record).toMatchObject({ gpaHours: 3, passedHours: 3, totalPoints: 12, cgpa: 4 });
+    expect(result.courses[0]).toMatchObject({ status: 'withdrawn', oldGrade: 'W', grade: expectedGrade });
+    expect(result.record).toMatchObject({ gpaHours: 3, passedHours: 3 });
+    expect(result.record.totalPoints).toBeCloseTo(points);
+    expect(result.record.cgpa).toBeCloseTo(points / 3);
   });
 
   it('keeps total-registration remarks consistent across projected terms with partial history', () => {

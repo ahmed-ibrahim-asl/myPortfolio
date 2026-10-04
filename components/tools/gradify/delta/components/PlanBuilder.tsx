@@ -318,7 +318,8 @@ export default function PlanBuilder({
 
   const gradeOptionsFor = (course: Course) => {
     const detection = detectCourseRegistration(course, attempts, bestAttempts, new Set(), studentProgram);
-    const isRepeat = ['retaken', 'improvement'].includes(detection.status) && !detection.replacement;
+    const isRepeat = (['retaken', 'improvement'].includes(detection.status)
+      || (detection.status === 'withdrawn' && detection.attemptNumber > 1)) && !detection.replacement;
     return gradeScale.filter(option => (!isRepeat || !['PASS', 'FAIL'].includes(option.grade)) && capExpectedGrade(detection, option.grade) === option.grade);
   };
 

@@ -23,7 +23,9 @@ export interface PlanProjectionError {
 }
 
 export function capExpectedGrade(detection: DetectedCourseRegistration, grade: string): string {
-  if (detection.replacement || !['retaken', 'improvement'].includes(detection.status)) return grade;
+  const isRepeat = ['retaken', 'improvement'].includes(detection.status)
+    || (detection.status === 'withdrawn' && detection.attemptNumber > 1);
+  if (detection.replacement || !isRepeat) return grade;
   const maxGrade = detection.attemptNumber <= 2 ? 'B+' : 'C';
   return pointsForGrade(grade) > pointsForGrade(maxGrade) ? maxGrade : grade;
 }

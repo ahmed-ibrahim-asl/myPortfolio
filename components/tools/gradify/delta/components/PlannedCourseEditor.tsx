@@ -69,7 +69,8 @@ export default function PlannedCourseEditor({
 }: Props) {
   const details = statusDetails(course);
   const StatusIcon = details.icon;
-  const isRepeat = course.status === 'retaken' || course.status === 'improvement';
+  const isRepeat = course.status === 'retaken' || course.status === 'improvement'
+    || (course.status === 'withdrawn' && Number(course.retakeCount) > 1);
   const isElectiveReplacement = Boolean(course.replacementOfCode);
   const attemptNumber = Number(course.retakeCount) || 1;
   const maxGrade = isRepeat && !isElectiveReplacement
