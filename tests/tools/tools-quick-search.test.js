@@ -22,15 +22,14 @@ test("global tool search index is unique and route-ready", () => {
   assert.ok(items.every(({ href, searchTerms }) => href.endsWith("/") && searchTerms.length > 0));
 });
 
-test("quick search renders before category navigation", async () => {
+test("tools opens directly into the searchable browser", async () => {
   const page = await readFile(new URL("../../app/tools/page.tsx", import.meta.url), "utf8");
   const component = await readFile(
-    new URL("../../components/tools/ToolsQuickSearch.tsx", import.meta.url),
+    new URL("../../components/tools/ToolsBrowser.tsx", import.meta.url),
     "utf8"
   );
 
-  assert.ok(page.indexOf("<ToolsQuickSearch") < page.indexOf("<ToolsCategoryHub"));
+  assert.match(page, /<ToolsBrowser items=\{searchItems\}/);
   assert.match(component, /type="search"/);
-  assert.match(component, /slice\(0, 6\)/);
   assert.match(component, /Search by tool name or describe what you need/i);
 });

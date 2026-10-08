@@ -20,6 +20,7 @@ import "./asl-theme.css";
 import "./asl-tools.css";
 import "./home-grid.css";
 import "./light-theme.css";
+import "./public-cleanup.css";
 import { JsonLd } from "@/components/JsonLd";
 import { MotionSystem } from "@/components/MotionSystem";
 import { SiteFooter } from "@/components/SiteFooter";

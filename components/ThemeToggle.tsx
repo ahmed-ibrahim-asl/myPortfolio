@@ -36,11 +36,11 @@ export function ThemeToggle() {
       type="button"
       aria-label={`Switch to ${nextTheme} theme`}
       aria-pressed={theme === "light"}
+      title={`Switch to ${nextTheme} theme`}
       onClick={toggleTheme}
     >
       <span className="theme-toggle-action">
         <span aria-hidden="true">{nextTheme === "light" ? "☀" : "☾"}</span>
-        <span>{nextTheme === "light" ? "Light" : "Dark"}</span>
       </span>
     </button>
   );

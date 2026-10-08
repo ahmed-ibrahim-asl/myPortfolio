@@ -2,8 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { CalculatorThumbnail } from "./CalculatorThumbnail";
 import { PublicImage } from "@/components/PublicImage";
+import { CalculatorThumbnail } from "./CalculatorThumbnail";
 import { groupToolItems } from "@/lib/tool-search";
 import styles from "./GroupedToolsIndex.module.css";
 
@@ -81,7 +81,7 @@ export function GroupedToolsIndex({
                 {item.visualKey ? (
                   <CalculatorThumbnail visualKey={item.visualKey} title={item.title} />
                 ) : item.coverImage ? (
-                  <div className={styles.cover}><PublicImage src={item.coverImage} alt="" /></div>
+                  <div className={styles.cover}><PublicImage src={item.coverImage} alt="" original /></div>
                 ) : null}
                 <div>
                   <p className={styles.meta}>{item.kind} / {item.category}</p>

@@ -159,12 +159,10 @@ export function HomePageView({ locale }: { locale: Locale }) {
           <p>{dictionary.home.workbenchSub}</p>
         </header>
         <div className="tool-ledger">
-          {featuredTools.map((tool, index) => (
+          {featuredTools.map((tool) => (
             <Link className="tool-entry" href={tool.href} key={tool.id}>
               <div className="tool-cover" aria-hidden="true">
-                {tool.coverImage ? <PublicImage src={tool.coverImage} alt="" /> : <i />}
-                <span>0{index + 1}</span>
-                <strong>{tool.icon}</strong>
+                {tool.coverImage ? <PublicImage src={tool.coverImage} alt="" original /> : <i />}
               </div>
               <div className="tool-copy" dir={isAr ? TECH_DIR : undefined}>
                 <p>UTILITY / {tool.highlight || "LIVE"}</p>

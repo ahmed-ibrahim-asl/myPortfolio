@@ -8,6 +8,7 @@ type PublicImageProps = Omit<ImgHTMLAttributes<HTMLImageElement>, "src" | "width
   wideSrc?: string;
   sizes?: string;
   sizesPreset?: PublicImageSizesPreset;
+  original?: boolean;
 };
 
 function srcSet(variants: Array<{ src: string; width: number }> | undefined) {
@@ -21,11 +22,16 @@ export function PublicImage({
   alt = "",
   sizes,
   sizesPreset,
+  original = false,
   loading = "lazy",
   decoding = "async",
   ...props
 }: PublicImageProps) {
   const asset = publicImageManifest[src];
+
+  if (original) {
+    return <img src={src} alt={alt} width={asset?.width} height={asset?.height} loading={loading} decoding={decoding} {...props} />;
+  }
 
   if (!asset) {
     return <img src={src} alt={alt} loading={loading} decoding={decoding} {...props} />;

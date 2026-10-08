@@ -137,8 +137,9 @@ export function UnifiedToolsIndex({
                 <PublicImage
                   src={tool.coverImage}
                   alt=""
+                  loading="lazy"
+                  original
                 />
-                <span>{tool.icon}</span>
               </div>
             ) : (
               <CalculatorThumbnail visualKey={tool.visualKey} title={tool.title} />

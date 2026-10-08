@@ -14,7 +14,6 @@ export function SiteHeader() {
   const prefix = locale === "ar" ? "/ar" : "";
   const homeHref = `${prefix}/`;
   const links = [
-    { href: homeHref, label: dictionary.nav.home },
     { href: `${prefix}/work`, label: dictionary.nav.work },
     { href: `${prefix}/tools`, label: dictionary.nav.tools }
   ];
@@ -91,14 +90,13 @@ export function SiteHeader() {
             <summary className={moreActive ? "active" : ""} aria-label={dictionary.nav.more}>
               {dictionary.nav.more}
             </summary>
-            <div className="nav-more-menu" role="menu" aria-label={dictionary.nav.more}>
+            <div className="nav-more-menu" aria-label={dictionary.nav.more}>
               {moreLinks.map((link) => {
                 const active = isActive(link.href);
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    role="menuitem"
                     className={active ? "active" : ""}
                     aria-current={active ? "page" : undefined}
                     onClick={() => {

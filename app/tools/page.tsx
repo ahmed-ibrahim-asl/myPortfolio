@@ -1,12 +1,11 @@
 import React from "react";
 import { engineeringTools } from "@/data/tools";
-import { ToolsCategoryHub } from "@/components/tools/ToolsCategoryHub";
 import { getAllTools } from "@/lib/tools";
 import { satelliteCalculators } from "@/data/satellite-course";
 import { rfCalculators } from "@/data/rf-calculators";
 import { createPageMetadata } from "@/lib/seo";
 import { getGlobalToolSearchItems } from "@/data/tool-categories";
-import { ToolsQuickSearch } from "@/components/tools/ToolsQuickSearch";
+import { ToolsBrowser } from "@/components/tools/ToolsBrowser";
 
 export const metadata = createPageMetadata({
   title: "Engineering Tools: Workbenches and Electronics Calculators",
@@ -27,15 +26,13 @@ export default function ToolsIndexPage() {
         <div className="asl-tools-heading-grid">
           <h1 id="tools-title">Find the right instrument for the job.</h1>
           <p className="section-intro">
-            Start with the kind of problem you are solving. Each category opens a focused shelf of
-            calculators or guided workbenches, so you only see the instruments that matter.
+            Free calculators, generators, and guided workbenches for engineers. Search a tool or choose a category to get started.
           </p>
         </div>
       </header>
 
       <main className="section shell tools-unified-section">
-        <ToolsQuickSearch items={searchItems} />
-        <ToolsCategoryHub />
+        <ToolsBrowser items={searchItems} />
       </main>
     </div>
   );

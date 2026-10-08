@@ -1,0 +1,18 @@
+/* Preserve evidence images at their native colors and full framing. */
+.unified-tool-cover::after { content: none; }
+.unified-tool-cover img, .tool-cover img { object-fit: contain; background: #101318; filter: none; }
+.unified-tool-card:hover .unified-tool-cover img,
+.unified-tool-card:focus-visible .unified-tool-cover img,
+.unified-tool-card:focus-within .unified-tool-cover img,
+.tool-entry:hover .tool-cover img { transform: none; }
+.theme-toggle { min-width: 44px; font-size: 1.1rem; }
+.asl-tools-header { padding-block: 30px 24px; }
+.asl-tools-heading-grid { grid-template-columns: minmax(0, 1.2fr) minmax(240px, .8fr); gap: 30px; margin-top: 12px; }
+.asl-tools-heading-grid h1 { max-width: 650px; font-size: clamp(2rem, 3.8vw, 3.8rem); line-height: 1.05; }
+.asl-tools-heading-grid .section-intro { font-size: .95rem; line-height: 1.6; }
+@media (max-width: 767px) {
+  .asl-tools-header { padding-block: 22px 16px; }
+  .asl-tools-heading-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .asl-tools-heading-grid h1 { font-size: 2rem; }
+  .asl-tools-heading-grid .section-intro { font-size: .85rem; }
+}
