@@ -21,6 +21,9 @@
 .body .outcome { color: var(--accent); font-size: .88rem; padding-top: 16px; border-top: 1px solid var(--asl-line); }
 .action { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 48px; margin-top: 16px; color: var(--accent); text-decoration: none; font-weight: 600; }
 .action:hover { text-decoration: underline; }
+.video { margin: 24px 0; }
+.video video { display: block; width: auto; max-width: 100%; height: auto; max-height: 75vh; margin-inline: auto; object-fit: contain; background: #000; border: 1px solid var(--asl-line); }
+.video figcaption { margin-top: 10px; color: var(--asl-text-secondary); font-size: .88rem; line-height: 1.5; }
 :global([data-theme="light"]) .collection { --accent: var(--text-primary); }
 :global([data-theme="light"]) :is(.entryMeta, .body .outcome, .action, .evidence summary) { color: var(--text-primary); }
 .evidence summary { padding: 16px 0; cursor: pointer; color: var(--accent); }

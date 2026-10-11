@@ -233,6 +233,7 @@ export const coursesTaught: Course[] = [
 export const projects: Project[] = [
   {
     slug: "aqua-sync", title: "Aqua Sync 2.0.0", category: "Engineering & IoT", year: "",
+    video: { src: asset("/media/portfolio/showcase/aqua-sync/demo.mp4"), poster: asset("/media/portfolio/showcase/aqua-sync/demo-poster.webp"), caption: "Aqua Sync 2.0.0 — prototype demonstration" },
     role: "Embedded Systems Engineer | ESP32 Firmware Developer | CrowPanel HMI & OTA Integration",
     description: "Upgraded an existing ESP32-based Aqua Sync system by programming a 7-inch CrowPanel HMI to interface with 10 one-wire temperature sensors and a DHT sensor, connecting two embedded boards, and implementing OTA updates. Designed the interface in Figma before building the final UI in SquareLine Studio.",
     outcome: "Sensor monitoring, board-to-board integration, and OTA firmware updates",

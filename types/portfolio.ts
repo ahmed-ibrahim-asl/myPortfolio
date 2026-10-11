@@ -64,6 +64,7 @@ export interface Project {
   image: string;
   gallery?: GalleryItem[];
   galleryLabel?: string;
+  video?: { src: string; poster: string; caption: string };
   uiGallery?: GalleryItem[];
   imageNote?: string;
   links?: SocialLink[];
