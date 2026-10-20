@@ -1,32 +1,21 @@
-# اللوش
+# اللوش · Biovety layout
 
-Independent preview based on stable audit source commit `2c8c50ff`.
+Second independent experiment, based on the first اللوش commit c6ead573.
 
-- Published stable site: https://eng-asl.com/
-- Local experimental export: http://localhost:3112/
+- Current branch: `codex/lush-biovety-layout`
+- New local export: http://localhost:3112/
+- Preserved first اللوش: http://localhost:3114/
 - Side-by-side comparison: http://localhost:3113/
-- Branch: `codex/lush-preview`
-
-The source and static deployment of the stable site remain on their own branches. This experiment is not deployed to the public domain.
+- Production remains: https://eng-asl.com/
 
 ## Run again
 
-From this folder, run `npm ci`, `npm run build`, then:
+Run `npm ci`, `npm run build`, then `node scripts/serve-preview.mjs out 3112`.
 
-```powershell
-node scripts/serve-preview.mjs out 3112
-```
+The comparison is saved at `D:/work/portflioWebsite/outputs/rankswat-comparison/index.html`. Serve its directory with `node scripts/serve-preview.mjs D:/work/portflioWebsite/outputs/rankswat-comparison 3113`.
 
-The current comparison page is saved at `D:/work/portflioWebsite/outputs/rankswat-comparison/index.html`. Serve it in a second terminal:
+The preserved first export is `D:/work/portflioWebsite/outputs/lush-v1-export`; serve that directory on port 3114. The first source remains on `codex/lush-preview`.
 
-```powershell
-node scripts/serve-preview.mjs D:/work/portflioWebsite/outputs/rankswat-comparison 3113
-```
+All previews bind to 127.0.0.1 and require the local servers to remain running. No public deployment of this experiment is included.
 
-Both servers bind only to 127.0.0.1. Preview links work while the local servers are running.
-
-## Validation
-
-Production build and TypeScript passed; static export prepared 161 segment aliases. English/Arabic, light/dark, 320/390/768/1366 widths passed the recorded homepage geometry audit. 200% text, menu Escape, browser runtime checks and all checked homepage destinations passed. Final screenshots and JSON are under `D:/work/portflioWebsite/outputs/rankswat-evidence/lush-final`.
-
-The independent final reviewer could not run because of its usage limit. The fallback review and its scope are recorded in `docs/reports/2026-10-20-lush-review.md`.
+See DESIGN.md for the implemented visual system and docs/reports/2026-10-20-lush-biovety-review.md for verification scope.

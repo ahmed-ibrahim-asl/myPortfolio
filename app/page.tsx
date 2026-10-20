@@ -1,5 +1,5 @@
-import { LushHomePageView } from "@/components/LushHomePageView";
+import { BiovetyLayoutHome } from "@/components/BiovetyLayoutHome";
 
 export default function HomePage() {
-  return <LushHomePageView locale="en" />;
+  return <BiovetyLayoutHome locale="en" />;
 }

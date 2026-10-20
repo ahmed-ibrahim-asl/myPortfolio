@@ -21,10 +21,10 @@ import "./asl-tools.css";
 import "./home-grid.css";
 import "./light-theme.css";
 import "./public-cleanup.css";
-import "./lush.css";
+import "./biovety-layout.css";
 import { JsonLd } from "@/components/JsonLd";
 import { MotionSystem } from "@/components/MotionSystem";
-import { SiteFooter } from "@/components/SiteFooter";
+import { BiovetyLayoutFooter } from "@/components/BiovetyLayoutFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { CommandPalette } from "@/components/CommandPalette";
 import { themeInitializerScript } from "@/lib/theme";
@@ -142,7 +142,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeInitializerScript }} />
       </head>
       <body className="lush-version">
-        <div hidden dangerouslySetInnerHTML={{ __html: "<!-- THESIS: Real hardware leads a service-manual foldout. OWN-WORLD: Cool grey, cobalt captions, Archivo type, open photographic panels. STORY: Inspect actual projects, try tools, contact the maker. FIRST VIEWPORT: 40 percent introduction and attribution; 60 percent real ROV photograph with attached caption. FORM: service-manual foldout, candidate 4, seed aff079b6; composition A selected under user-delegated exploration. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->" }} />
+        <div hidden dangerouslySetInnerHTML={{ __html: "<!-- THESIS: Biovety's page rhythm translated into original engineering evidence. OWN-WORLD: White, navy, actual prototypes and factual descriptions. STORY: Explore projects, inspect one build, use a tool, contact the engineer. FIRST VIEWPORT: Compact introduction beside three original project images. FORM: User-selected Biovety layout reference. FINISH: See DESIGN.md and the visual verification report. -->" }} />
         <JsonLd data={createSiteJsonLd()} />
         <MotionSystem />
         <a className="skip-link" href="#main-content">
@@ -151,7 +151,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="main-content">{children}</main>
         <CommandPalette />
-        <SiteFooter />
+        <BiovetyLayoutFooter />
       </body>
     </html>
   );

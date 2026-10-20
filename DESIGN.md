@@ -1,68 +1,113 @@
 ---
-name: "اللوش / Ahmed Ibrahim Asl"
-description: "An independent engineering portfolio experiment built around original hardware evidence."
+name: "اللوش / Biovety layout"
+description: "An engineering portfolio using Biovety's page rhythm and original project evidence."
 colors:
-  primary: "#1748e8"
-  primary-deep: "#1039b8"
-  paper: "#eef1f5"
-  ink: "#17202e"
-  muted: "#526070"
-  line: "#c7cfd9"
-  window: "#e0e5eb"
-  tool-surface: "#153dbb"
-  dark-paper: "#101c30"
-  dark-ink: "#edf2fc"
-  dark-muted: "#b2bfd4"
-  dark-accent: "#a9c5ff"
+  primary: "#1859a0"
+  primary-hover: "#12477f"
+  paper: "#fbfcfd"
+  ink: "#182c3c"
+  muted: "#526574"
+  line: "#ced8df"
+  soft: "#edf2f5"
+  navy-band: "#163449"
+  navy-rule: "#456071"
+  band-copy: "#c6d5df"
+  footer: "#112b3e"
+  footer-copy: "#c7d6df"
+  footer-rule: "#3c5566"
+  footer-link: "#e2ecf2"
+  footer-meta: "#bdced9"
+  footer-button-hover: "#d8e7f2"
+  white: "#ffffff"
+  image-mat: "#dfe6ec"
+  case-mat: "#d9dfe3"
+  diagram: "#0b1526"
+  dark-paper: "#101d29"
+  dark-ink: "#edf3f8"
+  dark-muted: "#b1c1cf"
+  dark-line: "#364959"
+  dark-soft: "#172936"
+  dark-accent: "#a9ceff"
 typography:
   display:
     fontFamily: "Archivo, IBM Plex Sans Arabic, sans-serif"
-    fontSize: "clamp(2.8rem, 5.1vw, 5.4rem)"
-    fontWeight: 800
-    lineHeight: 1.03
+    fontSize: "clamp(2.35rem, 3.7vw, 3.55rem)"
+    fontWeight: 600
+    lineHeight: 1.12
     letterSpacing: "-0.035em"
-  body:
-    fontFamily: "Archivo, IBM Plex Sans Arabic, sans-serif"
+  arabic-display:
+    fontSize: "clamp(2.2rem, 3.4vw, 3.3rem)"
+    lineHeight: 1.35
+  mobile-display:
+    fontSize: "clamp(2.35rem, 7.5vw, 3.4rem)"
+  heading:
+    fontSize: "clamp(1.9rem, 2.8vw, 2.65rem)"
+    fontWeight: 600
+    lineHeight: 1.2
+  contact:
+    fontSize: "clamp(1.8rem, 3vw, 2.5rem)"
+  notebook-heading:
+    fontSize: "1.75rem"
+  title:
+    fontSize: "1.25rem"
+  lead:
+    fontSize: "1.05rem"
+  image-title:
     fontSize: "1rem"
-    fontWeight: 400
-    lineHeight: 1.65
+  body:
+    fontSize: ".95rem"
+    lineHeight: 1.7
+  maker:
+    fontSize: ".92rem"
+  supporting:
+    fontSize: ".9rem"
+  utility:
+    fontSize: ".88rem"
+  metadata:
+    fontSize: ".8rem"
+  role:
+    fontSize: ".78rem"
+  caption:
+    fontSize: ".76rem"
+  image-caption:
+    fontSize: ".75rem"
+  mobile-image-caption:
+    fontSize: ".7rem"
 rounded:
-  control: "4px"
-  image-label: "3px"
+  control: "3px"
 spacing:
-  compact: "14px"
+  image-gap: "8px"
   normal: "24px"
-  section: "70px"
+  desktop-section: "82px"
+  mobile-section: "48px"
 components:
   primary-action:
     backgroundColor: "{colors.primary}"
-    textColor: "#ffffff"
+    textColor: "{colors.white}"
     rounded: "{rounded.control}"
-    padding: "17px 22px"
+    padding: "15px 21px"
 ---
 
 ## Overview
-This system belongs to the independent `codex/lush-preview` experiment. The production audit release remains separate. The homepage uses a service-manual foldout: original hardware photography, attached technical captions, a clear action and restrained maker attribution. Engineering tools retain their working interfaces.
+The user selected Biovety's layout as the reference for this second independent اللوش experiment. Translate its section rhythm into the engineer's actual projects. The first experiment is preserved at commit c6ead573 on codex/lush-preview and in a separate local export. This branch is codex/lush-biovety-layout. The public site remains separate.
 
 ## Colors
-Cool paper supports daytime inspection; navy supports the existing dark theme. Cobalt owns the ROV caption, primary actions and tools section. Text on cobalt is white. The caption's hardware terms must not inherit the site's ordinary paragraph color.
+White and pale blue-grey support real project photography. A navy navigation band and contact footer bracket the content. Medium blue marks actions. The existing gold ASL brand stays in the shared header. Dark mode uses the documented navy surfaces and light text; original project photographs and diagrams retain their colors.
 
 ## Typography
-Use the existing self-hosted Archivo for Latin display and body. Arabic uses the existing Plex Arabic stack; the brand retains its Aref Ruqaa signature. The experiment adds no font download. Headings use weight and scale rather than labels above them. Utility metadata uses small sans text; mono is reserved for actual code and data in existing tools.
+Keep the existing Archivo and Plex Arabic font files. Headlines use moderate weight and complete factual sentences. No added fonts, decorative eyebrow labels or colored slogan fragments. Metadata is subordinate to project titles. Headings may break long words when the visitor enlarges text; Arabic has a taller line height and no tightened tracking.
 
 ## Layout
-The opening splits approximately 40/60, with introduction and action on the left and real ROV image on the right. Arabic reverses reading direction. Below 760px these regions stack in reading order. The project gallery uses two unequal columns; the tools surface pairs an introduction with open rows. Notes use dated rows; the actual working method uses an ordered sequence. Content width caps at 1420px with responsive gutters. At 430px the method becomes one column. Text can wrap at 200% scale.
+The opening has a compact introduction and a three-image project window. One tall ROV image sits beside Aqua Sync hardware and a real architecture diagram. Biovety's full-width values strip becomes four useful discipline links. Next, a large Aqua Sync image sits beside concrete implementation details. Tools and notes share an unequal two-column surface. Contact ends the page directly. Content caps at 1300px; the opening caps at 1600px. Below 760px sections stack; below 380px image regions and discipline links stack to remain readable. Arabic mirrors reading direction.
 
 ## Elevation & Depth
-Photography supplies depth. Interface surfaces are flat, separated by space and occasional light rules; no simulated texture, glass or decorative glow. Existing tool visualizations remain unchanged.
+Original photographs provide depth. Surfaces are flat, without glass, glow, invented textures or floating decoration. Rules distinguish related information.
 
 ## Shapes
-The image and its caption form a single rectangular region. Primary controls have 4px corners. Do not turn every section into cards or add decorative section numbers.
+Rectangular photographs and open text rows. Buttons have a 3px corner radius. Do not introduce repetitive rounded card grids or animal imagery from the reference.
 
 ## Components
-`LushHomePageView` owns the homepage and its bilingual copy. `lush.css` scopes this surface and the aligned shared header/footer with `.lush-version`. Existing SiteHeader behavior controls theme, language, menus and search. The maker attribution links to About. Project images and names link to real project details; tools use their actual catalog URLs.
-
-Primary actions have an explicit hover color and visible keyboard focus. Reduced-motion removes transitions. The skip link stays hidden until focused. Images use PublicImage responsive sources where available and eager loading only in the opening.
+Project windows navigate to actual project pages. The discipline strip replaces generic value claims. The engineering-method disclosure keeps existing detailed process content available. Tools retain their existing working routes. The shared header keeps search, theme, language, menu and navigation. Footer keeps email, CV, GitHub and About links. Existing internal-page interfaces are retained.
 
 ## Do's and Don'ts
-Use original project gallery photos as evidence. Label diagrams as architecture. Preserve facts, functional routes and bilingual access. Do not use generated covers as original photographs, invent outcomes, or publish this branch over the stable site without a new user decision.
+Use original evidence and supported implementation details. Preserve bilingual navigation, keyboard access, dark mode and text resizing. Do not invent metrics, testimonials, availability promises or claims about which AI produced an earlier design. Biovety supplies layout relationships, not veterinary branding. This is a local preview, not a production rollout.
