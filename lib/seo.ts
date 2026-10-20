@@ -19,6 +19,22 @@ export const websiteId: string = `${absoluteUrl("/")}#website`;
 export const socialImage: string = absoluteUrl("/opengraph-image.png");
 export const twitterImage: string = absoluteUrl("/twitter-image.png");
 
+export function createHomePageJsonLd(locale: "en" | "ar" = "en"): JsonLdData {
+  const arabic = locale === "ar";
+  const url = absoluteUrl(arabic ? "/ar/" : "/");
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: arabic ? "أحمد إبراهيم عسل | مهندس أنظمة مدمجة وإنترنت الأشياء" : siteConfig.title,
+    description: arabic ? "الموقع الشخصي لأحمد إبراهيم عسل: مشروعات أنظمة مدمجة وروبوتات وأدوات هندسية عملية." : siteConfig.description,
+    inLanguage: locale,
+    isPartOf: { "@id": websiteId },
+    about: { "@id": personId }
+  };
+}
+
 export function createPageMetadata({ title, description, pathname = "", locale = "en", translated = false }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(pathname);
   const englishPath = pathname.startsWith("/ar/") ? pathname.slice(3) || "/" : pathname;

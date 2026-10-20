@@ -39,6 +39,7 @@ const archivo = Archivo({
 
 const plexArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
+  preload: false,
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   variable: "--font-loaded-plex-arabic"
@@ -46,6 +47,7 @@ const plexArabic = IBM_Plex_Sans_Arabic({
 
 const arefRuqaa = Aref_Ruqaa({
   subsets: ["arabic"],
+  preload: false,
   weight: ["400", "700"],
   display: "swap",
   variable: "--font-loaded-aref-ruqaa"
@@ -53,6 +55,7 @@ const arefRuqaa = Aref_Ruqaa({
 
 const spaceMono = Space_Mono({
   subsets: ["latin"],
+  preload: false,
   weight: ["400", "700"],
   display: "swap",
   variable: "--font-loaded-space-mono"
@@ -60,6 +63,7 @@ const spaceMono = Space_Mono({
 
 const sora = Sora({
   subsets: ["latin"],
+  preload: false,
   display: "swap",
   variable: "--font-loaded-sora"
 });

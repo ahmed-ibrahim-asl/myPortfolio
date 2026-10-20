@@ -6827,6 +6827,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "role": "project-cover",
     "sizesPreset": "project-card"
   },
+  "/media/portfolio/showcase/aqua-sync/demo-poster.webp": {
+    "source": "/media/portfolio/showcase/aqua-sync/demo-poster.webp",
+    "width": 478,
+    "height": 850,
+    "avif": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/demo-poster/320.avif",
+        "width": 320,
+        "bytes": 8308
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/demo-poster/478.avif",
+        "width": 478,
+        "bytes": 15487
+      }
+    ],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/demo-poster/320.webp",
+        "width": 320,
+        "bytes": 10948
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/demo-poster/478.webp",
+        "width": 478,
+        "bytes": 21622
+      }
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
+  },
   "/media/portfolio/showcase/aqua-sync/photos-1.webp": {
     "source": "/media/portfolio/showcase/aqua-sync/photos-1.webp",
     "width": 1599,

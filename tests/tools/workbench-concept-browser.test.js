@@ -3,12 +3,14 @@ import assert from 'node:assert/strict';
 import puppeteer from 'puppeteer-core';
 import { mkdir } from 'node:fs/promises';
 
+const testBaseUrl = (process.env.TEST_BASE_URL || "http://localhost:3000").replace(/\/$/, "");
+
 test('concept demo responds to inputs and remains usable across themes and screen sizes', async () => {
   const browser = await puppeteer.launch({executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', headless:true});
   try {
     const page = await browser.newPage();
     const errors=[]; page.on('pageerror', e=>errors.push(e.message));
-    const response=await page.goto('http://localhost:3000/concepts/workbench-vision/index.html', {waitUntil:'networkidle0'});
+    const response=await page.goto(`${testBaseUrl}/concepts/workbench-vision/index.html`, {waitUntil:'networkidle0'});
     assert.equal(response.status(),200,'Preview should be available');
     await page.$eval('#sensor', e=>{e.value='20';e.dispatchEvent(new Event('input',{bubbles:true}));});
     assert.equal(await page.$eval('#output-state',e=>e.textContent),'OFF');

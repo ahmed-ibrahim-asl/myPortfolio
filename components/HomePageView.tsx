@@ -11,6 +11,8 @@ import { calculators } from "@/data/calculators";
 import { formatDate, getAllPosts } from "@/lib/content";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/types";
+import { JsonLd } from "@/components/JsonLd";
+import { createHomePageJsonLd } from "@/lib/seo";
 
 // English project/tool/note copy is technical prose (component names, protocols,
 // measured outcomes) that stays in English per the site's translation policy even
@@ -30,6 +32,7 @@ export function HomePageView({ locale }: { locale: Locale }) {
 
   return (
     <div className={`home-page${isAr ? " asl-arabic-page" : ""}`}>
+      <JsonLd data={createHomePageJsonLd(locale)} />
       <section className="home-hero shell">
         <div className="home-hero-copy">
           <p className="eyebrow">

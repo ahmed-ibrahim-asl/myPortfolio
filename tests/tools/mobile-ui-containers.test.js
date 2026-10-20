@@ -1,9 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
+const testBaseUrl = (process.env.TEST_BASE_URL || "http://localhost:3000").replace(/\/$/, "");
+
 test('all supplied unique mobile screens have individual named containers', async () => {
   const html = (await Promise.all(['apps-ui/plant-care-ai', 'embedded-iot/mediamate', 'embedded-iot/smart-mosque-model'].map(async page => {
-    const response = await fetch(`http://localhost:3000/work/${page}/`); assert.equal(response.status, 200); return response.text();
+    const response = await fetch(`${testBaseUrl}/work/${page}/`); assert.equal(response.status, 200); return response.text();
   }))).join('');
   assert.equal((html.match(/<figure[^>]*data-ui-screen=/g) || []).length, 20);
   for (const label of ['Patient sign in', 'Medication tracker', 'Create account', 'After-prayer adhkar']) {

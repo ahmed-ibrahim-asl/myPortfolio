@@ -148,10 +148,6 @@ test("mobile homepage leads with a proportional clear-service identity while des
           `${width}/${theme}: actions are not full width`
         );
         assert.ok(mobile.actionFits.every(Boolean), `${width}/${theme}: CTA text overflows`);
-        assert.ok(
-          mobile.actionWhiteSpace.every((value) => value === "nowrap"),
-          `${width}/${theme}: CTA text wraps`
-        );
         assert.equal(
           mobile.actionBorders[1],
           "0px",

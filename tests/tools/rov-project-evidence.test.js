@@ -1,8 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
+const testBaseUrl = (process.env.TEST_BASE_URL || "http://localhost:3000").replace(/\/$/, "");
+
 async function loadProject(path) {
-  const response = await fetch(`http://localhost:3000${path}`);
+  const response = await fetch(`${testBaseUrl}${path}`);
   assert.equal(response.status, 200, `${path} did not render`);
   return response.text();
 }

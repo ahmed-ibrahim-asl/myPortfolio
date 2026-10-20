@@ -7,6 +7,8 @@ import ts from "typescript";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
+const testBaseUrl = (process.env.TEST_BASE_URL || "http://localhost:3000").replace(/\/$/, "");
+
 const require = createRequire(import.meta.url);
 function load(file) {
   const source = readFileSync(file, "utf8");
@@ -60,7 +62,7 @@ test("math diagram labels stay inside their SVG viewport", () => {
 
 test("math calculators use the themed compact visual workspace", async () => {
   for (const slug of ["wavelength", "frequency-to-period", "square-root", "cube-root"]) {
-    const html = await (await fetch(`http://localhost:3000/tools/${slug}-calculator/`)).text();
+    const html = await (await fetch(`${testBaseUrl}/tools/${slug}-calculator/`)).text();
     assert.match(html, /calculator-workspace-visual/, `${slug} still uses the legacy pale diagram layout`);
   }
 });
