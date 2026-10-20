@@ -21,6 +21,7 @@ import "./asl-tools.css";
 import "./home-grid.css";
 import "./light-theme.css";
 import "./public-cleanup.css";
+import "./lush.css";
 import { JsonLd } from "@/components/JsonLd";
 import { MotionSystem } from "@/components/MotionSystem";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -121,11 +122,11 @@ export const metadata: Metadata = {
     images: [twitterImage]
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1
@@ -140,7 +141,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: localeInitializerScript }} />
         <script dangerouslySetInnerHTML={{ __html: themeInitializerScript }} />
       </head>
-      <body>
+      <body className="lush-version">
+        <div hidden dangerouslySetInnerHTML={{ __html: "<!-- THESIS: Real hardware leads a service-manual foldout. OWN-WORLD: Cool grey, cobalt captions, Archivo type, open photographic panels. STORY: Inspect actual projects, try tools, contact the maker. FIRST VIEWPORT: 40 percent introduction and attribution; 60 percent real ROV photograph with attached caption. FORM: service-manual foldout, candidate 4, seed aff079b6; composition A selected under user-delegated exploration. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->" }} />
         <JsonLd data={createSiteJsonLd()} />
         <MotionSystem />
         <a className="skip-link" href="#main-content">

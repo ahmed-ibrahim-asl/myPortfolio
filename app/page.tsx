@@ -1,5 +1,5 @@
-import { HomePageView } from "@/components/HomePageView";
+import { LushHomePageView } from "@/components/LushHomePageView";
 
 export default function HomePage() {
-  return <HomePageView locale="en" />;
+  return <LushHomePageView locale="en" />;
 }
