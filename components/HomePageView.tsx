@@ -4,10 +4,7 @@ import { ProfilePortrait } from "@/components/ProfilePortrait";
 import { PublicImage } from "@/components/PublicImage";
 import { profile, projects, workingMethod } from "@/data/portfolio";
 import { workCategories } from "@/data/work-categories";
-import { satelliteCalculators } from "@/data/satellite-course";
-import { rfCalculators } from "@/data/rf-calculators";
 import { engineeringTools } from "@/data/tools";
-import { calculators } from "@/data/calculators";
 import { formatDate, getAllPosts } from "@/lib/content";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/types";
@@ -27,8 +24,6 @@ export function HomePageView({ locale }: { locale: Locale }) {
   const featuredProjects = projects.filter((project) => project.featured).slice(0, 3);
   const featuredTools = engineeringTools.slice(0, 3);
   const notes = getAllPosts().slice(0, 3);
-  const totalToolCount =
-    engineeringTools.length + calculators.length + satelliteCalculators.length + rfCalculators.length;
 
   return (
     <div className={`home-page${isAr ? " asl-arabic-page" : ""}`}>
@@ -116,13 +111,6 @@ export function HomePageView({ locale }: { locale: Locale }) {
             <span>AGENT 101</span>
           </div>
         </aside>
-      </section>
-
-      <section className="home-hook shell" aria-label="Tool catalog size">
-        <p dir={isAr ? "rtl" : undefined}>
-          <strong>{totalToolCount} {dictionary.home.hookPrefix}</strong> {dictionary.home.hookSuffix}
-        </p>
-        <Link className="text-link" href={`${prefix}/tools/`}>{dictionary.home.openToolsIndex}</Link>
       </section>
 
       <section className="home-section shell">

@@ -43,7 +43,6 @@ test("the global shell uses the bilingual ASL identity without HUD navigation", 
 
   assert.match(header, /brand-latin/);
   assert.match(header, /brand-arabic/);
-  assert.match(header, /AGENT \/ 101/);
   assert.doesNotMatch(header, /SystemHud/);
   assert.doesNotMatch(header, /GridToggle|grid-toggle-button/);
   assert.match(header, /header-contact/);

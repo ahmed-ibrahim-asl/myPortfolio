@@ -75,7 +75,6 @@ test("English and Arabic home pages share one component instead of duplicated ma
   for (const marker of [
     "ProfilePortrait",
     "home-hero",
-    "home-hook",
     "home-workbench",
     "home-brain",
     "home-method",

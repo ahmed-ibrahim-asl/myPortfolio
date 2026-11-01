@@ -71,7 +71,6 @@ export function SiteHeader() {
           <span className="brand-latin">ASL</span>
           <span className="brand-divider" aria-hidden="true" />
           <span className="brand-arabic" lang="ar" dir="rtl">بشمهندس عسل</span>
-          <span className="brand-agent">AGENT / 101</span>
         </Link>
         <button className="menu-toggle" type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} aria-controls="site-navigation" onClick={() => setOpen((value) => !value)}>
           <span className="menu-icon" aria-hidden="true"><span /><span /><span /></span>

@@ -11,7 +11,6 @@
 .asl-tools-header {
   min-height: 0;
   padding-block: clamp(64px, 8vw, 116px) clamp(42px, 5vw, 72px);
-  border-bottom: 1px solid var(--asl-line);
 }
 
 .asl-tools-heading-grid {

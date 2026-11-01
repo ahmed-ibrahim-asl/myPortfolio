@@ -485,7 +485,7 @@ button,
 /* Instrumented fault-line homepage */
 .asl-hero {
   position: relative;
-  min-height: calc(100svh - var(--asl-header));
+  min-height: calc(100svh / var(--site-zoom, 1) - var(--asl-header));
   overflow: hidden;
   border-bottom: 1px solid var(--asl-line);
 }
@@ -510,7 +510,7 @@ button,
   grid-template-columns: minmax(44px, 0.35fr) repeat(2, minmax(0, 1fr)) 28px repeat(2, minmax(0, 1fr)) minmax(44px, 0.35fr);
   gap: 0;
   align-items: center;
-  min-height: calc(100svh - var(--asl-header));
+  min-height: calc(100svh / var(--site-zoom, 1) - var(--asl-header));
   padding-block: clamp(64px, 8vw, 112px);
 }
 
