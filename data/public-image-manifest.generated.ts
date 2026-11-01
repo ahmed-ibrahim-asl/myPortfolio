@@ -9,78 +9,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/images/hardware_bench_hero.jpg",
     "width": 1376,
     "height": 768,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/images/hardware_bench_hero/320.avif",
-        "width": 320,
-        "bytes": 9089
-      },
-      {
-        "src": "/media/generated/responsive/images/hardware_bench_hero/480.avif",
-        "width": 480,
-        "bytes": 17022
-      },
-      {
-        "src": "/media/generated/responsive/images/hardware_bench_hero/640.avif",
-        "width": 640,
-        "bytes": 25147
-      },
-      {
-        "src": "/media/generated/responsive/images/hardware_bench_hero/768.avif",
-        "width": 768,
-        "bytes": 32693
-      },
-      {
-        "src": "/media/generated/responsive/images/hardware_bench_hero/960.avif",
-        "width": 960,
-        "bytes": 43932
-      },
-      {
-        "src": "/media/generated/responsive/images/hardware_bench_hero/1280.avif",
-        "width": 1280,
-        "bytes": 65743
-      },
-      {
-        "src": "/media/generated/responsive/images/hardware_bench_hero/1376.avif",
-        "width": 1376,
-        "bytes": 73240
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/images/hardware_bench_hero/320.webp",
         "width": 320,
-        "bytes": 14402
+        "bytes": 84972
       },
       {
         "src": "/media/generated/responsive/images/hardware_bench_hero/480.webp",
         "width": 480,
-        "bytes": 27302
+        "bytes": 174280
       },
       {
         "src": "/media/generated/responsive/images/hardware_bench_hero/640.webp",
         "width": 640,
-        "bytes": 41474
+        "bytes": 302420
       },
       {
         "src": "/media/generated/responsive/images/hardware_bench_hero/768.webp",
         "width": 768,
-        "bytes": 53788
+        "bytes": 420642
       },
       {
         "src": "/media/generated/responsive/images/hardware_bench_hero/960.webp",
         "width": 960,
-        "bytes": 73914
+        "bytes": 631392
       },
       {
         "src": "/media/generated/responsive/images/hardware_bench_hero/1280.webp",
         "width": 1280,
-        "bytes": 110668
+        "bytes": 1090088
       },
       {
         "src": "/media/generated/responsive/images/hardware_bench_hero/1376.webp",
         "width": 1376,
-        "bytes": 123596
+        "bytes": 1182316
       }
     ],
     "role": "project-cover",
@@ -90,78 +54,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/images/profilePicture/profile1.jpg",
     "width": 800,
     "height": 800,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile1/96.avif",
-        "width": 96,
-        "bytes": 1407
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile1/160.avif",
-        "width": 160,
-        "bytes": 2666
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile1/240.avif",
-        "width": 240,
-        "bytes": 4432
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile1/320.avif",
-        "width": 320,
-        "bytes": 6623
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile1/480.avif",
-        "width": 480,
-        "bytes": 12680
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile1/640.avif",
-        "width": 640,
-        "bytes": 20164
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile1/800.avif",
-        "width": 800,
-        "bytes": 29345
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/images/profilePicture/profile1/96.webp",
         "width": 96,
-        "bytes": 1742
+        "bytes": 13610
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile1/160.webp",
         "width": 160,
-        "bytes": 3330
+        "bytes": 33360
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile1/240.webp",
         "width": 240,
-        "bytes": 5746
+        "bytes": 65900
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile1/320.webp",
         "width": 320,
-        "bytes": 8684
+        "bytes": 104714
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile1/480.webp",
         "width": 480,
-        "bytes": 16860
+        "bytes": 212628
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile1/640.webp",
         "width": 640,
-        "bytes": 27150
+        "bytes": 349402
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile1/800.webp",
         "width": 800,
-        "bytes": 39944
+        "bytes": 421986
       }
     ],
     "role": "portrait",
@@ -171,78 +99,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/images/profilePicture/profile2.jpg",
     "width": 800,
     "height": 800,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile2/96.avif",
-        "width": 96,
-        "bytes": 1356
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile2/160.avif",
-        "width": 160,
-        "bytes": 2392
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile2/240.avif",
-        "width": 240,
-        "bytes": 4160
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile2/320.avif",
-        "width": 320,
-        "bytes": 5885
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile2/480.avif",
-        "width": 480,
-        "bytes": 10251
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile2/640.avif",
-        "width": 640,
-        "bytes": 15028
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile2/800.avif",
-        "width": 800,
-        "bytes": 20384
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/images/profilePicture/profile2/96.webp",
         "width": 96,
-        "bytes": 1584
+        "bytes": 12754
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile2/160.webp",
         "width": 160,
-        "bytes": 2970
+        "bytes": 29988
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile2/240.webp",
         "width": 240,
-        "bytes": 4896
+        "bytes": 58064
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile2/320.webp",
         "width": 320,
-        "bytes": 7178
+        "bytes": 89854
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile2/480.webp",
         "width": 480,
-        "bytes": 11804
+        "bytes": 174954
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile2/640.webp",
         "width": 640,
-        "bytes": 16762
+        "bytes": 281946
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile2/800.webp",
         "width": 800,
-        "bytes": 22320
+        "bytes": 317678
       }
     ],
     "role": "portrait",
@@ -252,78 +144,52 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/images/profilePicture/profile3.png",
     "width": 1350,
     "height": 1350,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/96.avif",
-        "width": 96,
-        "bytes": 1280
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/160.avif",
-        "width": 160,
-        "bytes": 1959
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/240.avif",
-        "width": 240,
-        "bytes": 3051
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/320.avif",
-        "width": 320,
-        "bytes": 4188
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/480.avif",
-        "width": 480,
-        "bytes": 6824
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/640.avif",
-        "width": 640,
-        "bytes": 10575
-      },
-      {
-        "src": "/media/generated/responsive/images/profilePicture/profile3/1350.avif",
-        "width": 1350,
-        "bytes": 32305
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/images/profilePicture/profile3/96.webp",
         "width": 96,
-        "bytes": 1186
+        "bytes": 6026
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile3/160.webp",
         "width": 160,
-        "bytes": 2010
+        "bytes": 13640
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile3/240.webp",
         "width": 240,
-        "bytes": 3224
+        "bytes": 26696
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile3/320.webp",
         "width": 320,
-        "bytes": 4548
+        "bytes": 43552
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile3/480.webp",
         "width": 480,
-        "bytes": 8024
+        "bytes": 90820
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile3/640.webp",
         "width": 640,
-        "bytes": 12470
+        "bytes": 150656
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/800.webp",
+        "width": 800,
+        "bytes": 220704
+      },
+      {
+        "src": "/media/generated/responsive/images/profilePicture/profile3/960.webp",
+        "width": 960,
+        "bytes": 305522
       },
       {
         "src": "/media/generated/responsive/images/profilePicture/profile3/1350.webp",
         "width": 1350,
-        "bytes": 35852
+        "bytes": 498266
       }
     ],
     "role": "portrait",
@@ -333,68 +199,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/ambient/cc0-cityscape.gif",
     "width": 1024,
     "height": 512,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/240.avif",
-        "width": 240,
-        "bytes": 3147
-      },
-      {
-        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/320.avif",
-        "width": 320,
-        "bytes": 5183
-      },
-      {
-        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/480.avif",
-        "width": 480,
-        "bytes": 11305
-      },
-      {
-        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/640.avif",
-        "width": 640,
-        "bytes": 20206
-      },
-      {
-        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/960.avif",
-        "width": 960,
-        "bytes": 34622
-      },
-      {
-        "src": "/media/generated/responsive/media/ambient/cc0-cityscape/1024.avif",
-        "width": 1024,
-        "bytes": 18449
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/240.webp",
         "width": 240,
-        "bytes": 3982
+        "bytes": 28930
       },
       {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/320.webp",
         "width": 320,
-        "bytes": 7558
+        "bytes": 34726
       },
       {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/480.webp",
         "width": 480,
-        "bytes": 15974
+        "bytes": 66544
       },
       {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/640.webp",
         "width": 640,
-        "bytes": 26092
+        "bytes": 58020
       },
       {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/960.webp",
         "width": 960,
-        "bytes": 50592
+        "bytes": 83984
       },
       {
         "src": "/media/generated/responsive/media/ambient/cc0-cityscape/1024.webp",
         "width": 1024,
-        "bytes": 28544
+        "bytes": 4480
       }
     ],
     "role": "decorative",
@@ -404,88 +239,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/555-astable-through-hole-approved-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/240.avif",
-        "width": 240,
-        "bytes": 3323
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/320.avif",
-        "width": 320,
-        "bytes": 5621
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/480.avif",
-        "width": 480,
-        "bytes": 9910
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/640.avif",
-        "width": 640,
-        "bytes": 15665
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/960.avif",
-        "width": 960,
-        "bytes": 29458
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/1280.avif",
-        "width": 1280,
-        "bytes": 48297
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/1600.avif",
-        "width": 1600,
-        "bytes": 66510
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/1672.avif",
-        "width": 1672,
-        "bytes": 72260
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/240.webp",
         "width": 240,
-        "bytes": 4648
+        "bytes": 38338
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/320.webp",
         "width": 320,
-        "bytes": 7134
+        "bytes": 67860
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/480.webp",
         "width": 480,
-        "bytes": 12508
+        "bytes": 139490
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/640.webp",
         "width": 640,
-        "bytes": 19110
+        "bytes": 243222
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/960.webp",
         "width": 960,
-        "bytes": 36186
+        "bytes": 516012
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/1280.webp",
         "width": 1280,
-        "bytes": 57658
+        "bytes": 901078
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/1600.webp",
         "width": 1600,
-        "bytes": 79354
+        "bytes": 1337734
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-astable-through-hole-approved-v1/1672.webp",
         "width": 1672,
-        "bytes": 85564
+        "bytes": 1414540
       }
     ],
     "role": "tool-cover",
@@ -494,58 +288,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3636
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4800
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7385
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 11164
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 19532
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4164
+          "bytes": 43514
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6008
+          "bytes": 73352
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 10098
+          "bytes": 167886
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 14530
+          "bytes": 304024
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-astable-through-hole-approved-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 27428
+          "bytes": 242708
         }
       ]
     }
@@ -554,88 +322,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/555-monostable-trigger-approved-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/240.avif",
-        "width": 240,
-        "bytes": 3442
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/320.avif",
-        "width": 320,
-        "bytes": 5215
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/480.avif",
-        "width": 480,
-        "bytes": 9246
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/640.avif",
-        "width": 640,
-        "bytes": 13687
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/960.avif",
-        "width": 960,
-        "bytes": 23564
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/1280.avif",
-        "width": 1280,
-        "bytes": 37027
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/1600.avif",
-        "width": 1600,
-        "bytes": 49859
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/1672.avif",
-        "width": 1672,
-        "bytes": 53001
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/240.webp",
         "width": 240,
-        "bytes": 5050
+        "bytes": 34716
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/320.webp",
         "width": 320,
-        "bytes": 7148
+        "bytes": 57338
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/480.webp",
         "width": 480,
-        "bytes": 12426
+        "bytes": 119266
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/640.webp",
         "width": 640,
-        "bytes": 18204
+        "bytes": 210876
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/960.webp",
         "width": 960,
-        "bytes": 32884
+        "bytes": 470234
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/1280.webp",
         "width": 1280,
-        "bytes": 49144
+        "bytes": 842414
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/1600.webp",
         "width": 1600,
-        "bytes": 66762
+        "bytes": 1277298
       },
       {
         "src": "/media/generated/responsive/media/calculators/555-monostable-trigger-approved-v1/1672.webp",
         "width": 1672,
-        "bytes": 71632
+        "bytes": 1347306
       }
     ],
     "role": "tool-cover",
@@ -644,58 +371,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2750
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3680
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 6230
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 8856
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 19188
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3014
+          "bytes": 40232
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 4498
+          "bytes": 69918
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 7640
+          "bytes": 164618
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 11382
+          "bytes": 299378
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/555-monostable-trigger-approved-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 22884
+          "bytes": 264156
         }
       ]
     }
@@ -704,88 +405,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/acceleration-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/acceleration-v1/240.avif",
-        "width": 240,
-        "bytes": 4242
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/acceleration-v1/320.avif",
-        "width": 320,
-        "bytes": 6270
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/acceleration-v1/480.avif",
-        "width": 480,
-        "bytes": 11148
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/acceleration-v1/640.avif",
-        "width": 640,
-        "bytes": 16099
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/acceleration-v1/960.avif",
-        "width": 960,
-        "bytes": 27282
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/acceleration-v1/1280.avif",
-        "width": 1280,
-        "bytes": 41784
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/acceleration-v1/1600.avif",
-        "width": 1600,
-        "bytes": 54217
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/acceleration-v1/1672.avif",
-        "width": 1672,
-        "bytes": 60874
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/240.webp",
         "width": 240,
-        "bytes": 6322
+        "bytes": 36960
       },
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/320.webp",
         "width": 320,
-        "bytes": 9352
+        "bytes": 63060
       },
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/480.webp",
         "width": 480,
-        "bytes": 15664
+        "bytes": 125958
       },
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/640.webp",
         "width": 640,
-        "bytes": 22280
+        "bytes": 215842
       },
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/960.webp",
         "width": 960,
-        "bytes": 39906
+        "bytes": 465944
       },
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/1280.webp",
         "width": 1280,
-        "bytes": 58622
+        "bytes": 814052
       },
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/1600.webp",
         "width": 1600,
-        "bytes": 80984
+        "bytes": 1200490
       },
       {
         "src": "/media/generated/responsive/media/calculators/acceleration-v1/1672.webp",
         "width": 1672,
-        "bytes": 86152
+        "bytes": 1250606
       }
     ],
     "role": "tool-cover",
@@ -794,58 +454,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/acceleration-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3274
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4367
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7517
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 10889
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 20141
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4300
+          "bytes": 42196
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6240
+          "bytes": 69696
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 10192
+          "bytes": 159244
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 15186
+          "bytes": 288884
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/acceleration-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 28204
+          "bytes": 245696
         }
       ]
     }
@@ -854,88 +488,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/ascii-to-hex-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/240.avif",
-        "width": 240,
-        "bytes": 4252
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/320.avif",
-        "width": 320,
-        "bytes": 5660
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/480.avif",
-        "width": 480,
-        "bytes": 9637
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/640.avif",
-        "width": 640,
-        "bytes": 13618
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/960.avif",
-        "width": 960,
-        "bytes": 25479
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/1280.avif",
-        "width": 1280,
-        "bytes": 39823
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/1600.avif",
-        "width": 1600,
-        "bytes": 54918
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/1672.avif",
-        "width": 1672,
-        "bytes": 60794
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/240.webp",
         "width": 240,
-        "bytes": 6118
+        "bytes": 35160
       },
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/320.webp",
         "width": 320,
-        "bytes": 8580
+        "bytes": 59276
       },
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/480.webp",
         "width": 480,
-        "bytes": 14390
+        "bytes": 118216
       },
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/640.webp",
         "width": 640,
-        "bytes": 20414
+        "bytes": 208514
       },
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/960.webp",
         "width": 960,
-        "bytes": 34808
+        "bytes": 455302
       },
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/1280.webp",
         "width": 1280,
-        "bytes": 54044
+        "bytes": 814550
       },
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/1600.webp",
         "width": 1600,
-        "bytes": 74202
+        "bytes": 1179124
       },
       {
         "src": "/media/generated/responsive/media/calculators/ascii-to-hex-v1/1672.webp",
         "width": 1672,
-        "bytes": 78826
+        "bytes": 1233260
       }
     ],
     "role": "tool-cover",
@@ -944,58 +537,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/ascii-to-hex-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3587
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4953
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8254
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 11927
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 27058
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4666
+          "bytes": 46754
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6630
+          "bytes": 78088
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 10722
+          "bytes": 178652
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 15542
+          "bytes": 329120
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ascii-to-hex-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 32242
+          "bytes": 208152
         }
       ]
     }
@@ -1004,88 +571,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/battery-life-runtime-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/240.avif",
-        "width": 240,
-        "bytes": 4070
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/320.avif",
-        "width": 320,
-        "bytes": 6010
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/480.avif",
-        "width": 480,
-        "bytes": 10264
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/640.avif",
-        "width": 640,
-        "bytes": 16015
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/960.avif",
-        "width": 960,
-        "bytes": 27863
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/1280.avif",
-        "width": 1280,
-        "bytes": 42939
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/1600.avif",
-        "width": 1600,
-        "bytes": 56965
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/1672.avif",
-        "width": 1672,
-        "bytes": 61282
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/240.webp",
         "width": 240,
-        "bytes": 6296
+        "bytes": 37788
       },
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/320.webp",
         "width": 320,
-        "bytes": 9644
+        "bytes": 62720
       },
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/480.webp",
         "width": 480,
-        "bytes": 16200
+        "bytes": 127842
       },
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/640.webp",
         "width": 640,
-        "bytes": 23942
+        "bytes": 221842
       },
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/960.webp",
         "width": 960,
-        "bytes": 40816
+        "bytes": 484010
       },
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/1280.webp",
         "width": 1280,
-        "bytes": 60122
+        "bytes": 850376
       },
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/1600.webp",
         "width": 1600,
-        "bytes": 79150
+        "bytes": 1263994
       },
       {
         "src": "/media/generated/responsive/media/calculators/battery-life-runtime-v1/1672.webp",
         "width": 1672,
-        "bytes": 84540
+        "bytes": 1309818
       }
     ],
     "role": "tool-cover",
@@ -1094,58 +620,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/battery-life-runtime-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3806
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5000
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8702
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 12640
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 23793
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4750
+          "bytes": 46288
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7052
+          "bytes": 78794
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 11690
+          "bytes": 178218
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 17338
+          "bytes": 321404
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/battery-life-runtime-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 32420
+          "bytes": 235918
         }
       ]
     }
@@ -1154,88 +654,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/binary-bit-shift-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/240.avif",
-        "width": 240,
-        "bytes": 3978
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/320.avif",
-        "width": 320,
-        "bytes": 6067
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/480.avif",
-        "width": 480,
-        "bytes": 9817
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/640.avif",
-        "width": 640,
-        "bytes": 14685
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/960.avif",
-        "width": 960,
-        "bytes": 26527
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/1280.avif",
-        "width": 1280,
-        "bytes": 42845
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/1600.avif",
-        "width": 1600,
-        "bytes": 63863
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/1672.avif",
-        "width": 1672,
-        "bytes": 67617
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/240.webp",
         "width": 240,
-        "bytes": 6412
+        "bytes": 43758
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/320.webp",
         "width": 320,
-        "bytes": 9680
+        "bytes": 63668
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/480.webp",
         "width": 480,
-        "bytes": 15444
+        "bytes": 132488
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/640.webp",
         "width": 640,
-        "bytes": 22922
+        "bytes": 239840
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/960.webp",
         "width": 960,
-        "bytes": 39908
+        "bytes": 542286
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/1280.webp",
         "width": 1280,
-        "bytes": 58670
+        "bytes": 1011504
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/1600.webp",
         "width": 1600,
-        "bytes": 84076
+        "bytes": 1561152
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-bit-shift-v1/1672.webp",
         "width": 1672,
-        "bytes": 90072
+        "bytes": 1687744
       }
     ],
     "role": "tool-cover",
@@ -1244,58 +703,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/binary-bit-shift-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2300
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 2699
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 4988
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 6895
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 14728
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 2430
+          "bytes": 35120
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 3366
+          "bytes": 60118
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 5486
+          "bytes": 140148
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 7862
+          "bytes": 268256
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-bit-shift-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 16598
+          "bytes": 205200
         }
       ]
     }
@@ -1304,88 +737,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/binary-calculator-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/240.avif",
-        "width": 240,
-        "bytes": 3927
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/320.avif",
-        "width": 320,
-        "bytes": 5406
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/480.avif",
-        "width": 480,
-        "bytes": 8924
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/640.avif",
-        "width": 640,
-        "bytes": 12222
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/960.avif",
-        "width": 960,
-        "bytes": 21196
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/1280.avif",
-        "width": 1280,
-        "bytes": 32762
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/1600.avif",
-        "width": 1600,
-        "bytes": 48544
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/1672.avif",
-        "width": 1672,
-        "bytes": 51329
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/240.webp",
         "width": 240,
-        "bytes": 6064
+        "bytes": 35262
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/320.webp",
         "width": 320,
-        "bytes": 8690
+        "bytes": 60844
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/480.webp",
         "width": 480,
-        "bytes": 14326
+        "bytes": 124962
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/640.webp",
         "width": 640,
-        "bytes": 19544
+        "bytes": 224022
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/960.webp",
         "width": 960,
-        "bytes": 31552
+        "bytes": 497998
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/1280.webp",
         "width": 1280,
-        "bytes": 47346
+        "bytes": 908698
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/1600.webp",
         "width": 1600,
-        "bytes": 63358
+        "bytes": 1398522
       },
       {
         "src": "/media/generated/responsive/media/calculators/binary-calculator-v1/1672.webp",
         "width": 1672,
-        "bytes": 68764
+        "bytes": 1498870
       }
     ],
     "role": "tool-cover",
@@ -1394,58 +786,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/binary-calculator-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3628
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5109
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7856
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 11374
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 21715
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4882
+          "bytes": 43844
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6752
+          "bytes": 73706
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 10842
+          "bytes": 165868
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 14918
+          "bytes": 295450
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/binary-calculator-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 26322
+          "bytes": 266526
         }
       ]
     }
@@ -1454,88 +820,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/capacitance-units-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/240.avif",
-        "width": 240,
-        "bytes": 4728
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/320.avif",
-        "width": 320,
-        "bytes": 6677
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/480.avif",
-        "width": 480,
-        "bytes": 11520
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/640.avif",
-        "width": 640,
-        "bytes": 15644
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/960.avif",
-        "width": 960,
-        "bytes": 27274
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/1280.avif",
-        "width": 1280,
-        "bytes": 40975
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/1600.avif",
-        "width": 1600,
-        "bytes": 58032
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/1672.avif",
-        "width": 1672,
-        "bytes": 63955
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/240.webp",
         "width": 240,
-        "bytes": 7304
+        "bytes": 40874
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/320.webp",
         "width": 320,
-        "bytes": 10520
+        "bytes": 68136
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/480.webp",
         "width": 480,
-        "bytes": 17630
+        "bytes": 133798
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/640.webp",
         "width": 640,
-        "bytes": 24772
+        "bytes": 230242
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/960.webp",
         "width": 960,
-        "bytes": 41708
+        "bytes": 495774
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/1280.webp",
         "width": 1280,
-        "bytes": 60316
+        "bytes": 876408
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/1600.webp",
         "width": 1600,
-        "bytes": 82794
+        "bytes": 1304910
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitance-units-v1/1672.webp",
         "width": 1672,
-        "bytes": 88936
+        "bytes": 1375684
       }
     ],
     "role": "tool-cover",
@@ -1544,58 +869,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/capacitance-units-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3094
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4249
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7421
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 10525
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 20619
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3366
+          "bytes": 40060
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 5194
+          "bytes": 69438
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 8912
+          "bytes": 159662
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 13798
+          "bytes": 289722
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitance-units-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 27714
+          "bytes": 265226
         }
       ]
     }
@@ -1604,88 +903,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/capacitive-reactance-frequency-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/240.avif",
-        "width": 240,
-        "bytes": 4145
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/320.avif",
-        "width": 320,
-        "bytes": 6326
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/480.avif",
-        "width": 480,
-        "bytes": 10110
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/640.avif",
-        "width": 640,
-        "bytes": 14685
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/960.avif",
-        "width": 960,
-        "bytes": 24149
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/1280.avif",
-        "width": 1280,
-        "bytes": 37652
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/1600.avif",
-        "width": 1600,
-        "bytes": 50524
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/1672.avif",
-        "width": 1672,
-        "bytes": 52056
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/240.webp",
         "width": 240,
-        "bytes": 6026
+        "bytes": 35046
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/320.webp",
         "width": 320,
-        "bytes": 9172
+        "bytes": 59578
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/480.webp",
         "width": 480,
-        "bytes": 14930
+        "bytes": 121810
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/640.webp",
         "width": 640,
-        "bytes": 21154
+        "bytes": 217092
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/960.webp",
         "width": 960,
-        "bytes": 34490
+        "bytes": 478488
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/1280.webp",
         "width": 1280,
-        "bytes": 51638
+        "bytes": 864642
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/1600.webp",
         "width": 1600,
-        "bytes": 68828
+        "bytes": 1294392
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitive-reactance-frequency-v1/1672.webp",
         "width": 1672,
-        "bytes": 74256
+        "bytes": 1373438
       }
     ],
     "role": "tool-cover",
@@ -1694,58 +952,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4045
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4939
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8993
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 11898
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 20312
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5180
+          "bytes": 48522
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7304
+          "bytes": 82278
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 12254
+          "bytes": 185962
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 17948
+          "bytes": 333570
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitive-reactance-frequency-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 31736
+          "bytes": 285664
         }
       ]
     }
@@ -1754,88 +986,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/capacitor-code-104-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/240.avif",
-        "width": 240,
-        "bytes": 4782
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/320.avif",
-        "width": 320,
-        "bytes": 6716
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/480.avif",
-        "width": 480,
-        "bytes": 11449
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/640.avif",
-        "width": 640,
-        "bytes": 15947
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/960.avif",
-        "width": 960,
-        "bytes": 28873
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/1280.avif",
-        "width": 1280,
-        "bytes": 45692
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/1600.avif",
-        "width": 1600,
-        "bytes": 63282
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/1672.avif",
-        "width": 1672,
-        "bytes": 69383
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/240.webp",
         "width": 240,
-        "bytes": 7274
+        "bytes": 39372
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/320.webp",
         "width": 320,
-        "bytes": 10354
+        "bytes": 65592
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/480.webp",
         "width": 480,
-        "bytes": 17064
+        "bytes": 132702
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/640.webp",
         "width": 640,
-        "bytes": 24472
+        "bytes": 235476
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/960.webp",
         "width": 960,
-        "bytes": 42634
+        "bytes": 517198
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/1280.webp",
         "width": 1280,
-        "bytes": 66002
+        "bytes": 932308
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/1600.webp",
         "width": 1600,
-        "bytes": 89280
+        "bytes": 1419804
       },
       {
         "src": "/media/generated/responsive/media/calculators/capacitor-code-104-v1/1672.webp",
         "width": 1672,
-        "bytes": 94980
+        "bytes": 1529830
       }
     ],
     "role": "tool-cover",
@@ -1844,58 +1035,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/capacitor-code-104-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3707
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4921
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8581
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 12735
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 25477
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4724
+          "bytes": 48072
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6690
+          "bytes": 80068
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 11064
+          "bytes": 184426
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 16512
+          "bytes": 333624
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/capacitor-code-104-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 32934
+          "bytes": 257334
         }
       ]
     }
@@ -1904,88 +1069,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/cube-root-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/cube-root-v1/240.avif",
-        "width": 240,
-        "bytes": 3917
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/cube-root-v1/320.avif",
-        "width": 320,
-        "bytes": 5639
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/cube-root-v1/480.avif",
-        "width": 480,
-        "bytes": 8909
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/cube-root-v1/640.avif",
-        "width": 640,
-        "bytes": 14066
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/cube-root-v1/960.avif",
-        "width": 960,
-        "bytes": 23078
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/cube-root-v1/1280.avif",
-        "width": 1280,
-        "bytes": 33913
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/cube-root-v1/1600.avif",
-        "width": 1600,
-        "bytes": 44539
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/cube-root-v1/1672.avif",
-        "width": 1672,
-        "bytes": 49026
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/240.webp",
         "width": 240,
-        "bytes": 5638
+        "bytes": 32824
       },
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/320.webp",
         "width": 320,
-        "bytes": 8228
+        "bytes": 58394
       },
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/480.webp",
         "width": 480,
-        "bytes": 13386
+        "bytes": 114232
       },
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/640.webp",
         "width": 640,
-        "bytes": 19118
+        "bytes": 198864
       },
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/960.webp",
         "width": 960,
-        "bytes": 31738
+        "bytes": 426874
       },
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/1280.webp",
         "width": 1280,
-        "bytes": 44756
+        "bytes": 743982
       },
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/1600.webp",
         "width": 1600,
-        "bytes": 59494
+        "bytes": 1082032
       },
       {
         "src": "/media/generated/responsive/media/calculators/cube-root-v1/1672.webp",
         "width": 1672,
-        "bytes": 63040
+        "bytes": 1123156
       }
     ],
     "role": "tool-cover",
@@ -1994,58 +1118,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/cube-root-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2687
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3494
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 6108
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 8314
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 16395
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3024
+          "bytes": 37410
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 4420
+          "bytes": 63116
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 7412
+          "bytes": 141444
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 10762
+          "bytes": 256184
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/cube-root-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 20774
+          "bytes": 215176
         }
       ]
     }
@@ -2054,88 +1152,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/force-mass-acceleration-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/240.avif",
-        "width": 240,
-        "bytes": 4255
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/320.avif",
-        "width": 320,
-        "bytes": 5721
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/480.avif",
-        "width": 480,
-        "bytes": 10104
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/640.avif",
-        "width": 640,
-        "bytes": 15249
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/960.avif",
-        "width": 960,
-        "bytes": 27900
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/1280.avif",
-        "width": 1280,
-        "bytes": 45173
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/1600.avif",
-        "width": 1600,
-        "bytes": 63585
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/1672.avif",
-        "width": 1672,
-        "bytes": 68766
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/240.webp",
         "width": 240,
-        "bytes": 6550
+        "bytes": 37674
       },
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/320.webp",
         "width": 320,
-        "bytes": 9304
+        "bytes": 64142
       },
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/480.webp",
         "width": 480,
-        "bytes": 16318
+        "bytes": 128596
       },
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/640.webp",
         "width": 640,
-        "bytes": 23378
+        "bytes": 229146
       },
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/960.webp",
         "width": 960,
-        "bytes": 43484
+        "bytes": 509306
       },
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/1280.webp",
         "width": 1280,
-        "bytes": 67980
+        "bytes": 923922
       },
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/1600.webp",
         "width": 1600,
-        "bytes": 93650
+        "bytes": 1393542
       },
       {
         "src": "/media/generated/responsive/media/calculators/force-mass-acceleration-v1/1672.webp",
         "width": 1672,
-        "bytes": 101284
+        "bytes": 1475726
       }
     ],
     "role": "tool-cover",
@@ -2144,58 +1201,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/force-mass-acceleration-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2782
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3720
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 5980
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 8701
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 16148
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3164
+          "bytes": 40170
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 4506
+          "bytes": 68284
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 7384
+          "bytes": 159190
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 10980
+          "bytes": 299586
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/force-mass-acceleration-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 20474
+          "bytes": 251406
         }
       ]
     }
@@ -2204,88 +1235,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/frequency-period-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/240.avif",
-        "width": 240,
-        "bytes": 3505
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/320.avif",
-        "width": 320,
-        "bytes": 4692
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/480.avif",
-        "width": 480,
-        "bytes": 8465
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/640.avif",
-        "width": 640,
-        "bytes": 12387
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/960.avif",
-        "width": 960,
-        "bytes": 21129
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/1280.avif",
-        "width": 1280,
-        "bytes": 33878
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/1600.avif",
-        "width": 1600,
-        "bytes": 45446
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/frequency-period-v1/1672.avif",
-        "width": 1672,
-        "bytes": 49692
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/240.webp",
         "width": 240,
-        "bytes": 5030
+        "bytes": 33100
       },
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/320.webp",
         "width": 320,
-        "bytes": 6890
+        "bytes": 57874
       },
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/480.webp",
         "width": 480,
-        "bytes": 11874
+        "bytes": 117666
       },
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/640.webp",
         "width": 640,
-        "bytes": 16256
+        "bytes": 207464
       },
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/960.webp",
         "width": 960,
-        "bytes": 28272
+        "bytes": 463890
       },
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/1280.webp",
         "width": 1280,
-        "bytes": 44210
+        "bytes": 833992
       },
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/1600.webp",
         "width": 1600,
-        "bytes": 60088
+        "bytes": 1270526
       },
       {
         "src": "/media/generated/responsive/media/calculators/frequency-period-v1/1672.webp",
         "width": 1672,
-        "bytes": 65156
+        "bytes": 1355826
       }
     ],
     "role": "tool-cover",
@@ -2294,58 +1284,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/frequency-period-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3474
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4326
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 6828
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 10427
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 17549
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4378
+          "bytes": 41964
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6178
+          "bytes": 70836
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 10074
+          "bytes": 160786
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 14688
+          "bytes": 296754
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/frequency-period-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 26090
+          "bytes": 217898
         }
       ]
     }
@@ -2354,88 +1318,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/hex-calculator-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/240.avif",
-        "width": 240,
-        "bytes": 5094
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/320.avif",
-        "width": 320,
-        "bytes": 7025
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/480.avif",
-        "width": 480,
-        "bytes": 12135
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/640.avif",
-        "width": 640,
-        "bytes": 17430
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/960.avif",
-        "width": 960,
-        "bytes": 34695
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/1280.avif",
-        "width": 1280,
-        "bytes": 58079
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/1600.avif",
-        "width": 1600,
-        "bytes": 83577
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/1672.avif",
-        "width": 1672,
-        "bytes": 93434
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/240.webp",
         "width": 240,
-        "bytes": 8486
+        "bytes": 41842
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/320.webp",
         "width": 320,
-        "bytes": 11706
+        "bytes": 69972
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/480.webp",
         "width": 480,
-        "bytes": 18922
+        "bytes": 138916
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/640.webp",
         "width": 640,
-        "bytes": 26326
+        "bytes": 243336
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/960.webp",
         "width": 960,
-        "bytes": 48688
+        "bytes": 544700
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/1280.webp",
         "width": 1280,
-        "bytes": 80890
+        "bytes": 989842
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/1600.webp",
         "width": 1600,
-        "bytes": 115864
+        "bytes": 1488406
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-calculator-v1/1672.webp",
         "width": 1672,
-        "bytes": 107166
+        "bytes": 1600112
       }
     ],
     "role": "tool-cover",
@@ -2444,58 +1367,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/hex-calculator-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3870
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5316
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 9290
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 13918
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 27945
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5280
+          "bytes": 47716
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7640
+          "bytes": 81946
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 13004
+          "bytes": 187442
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 19298
+          "bytes": 336696
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-calculator-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 37244
+          "bytes": 260822
         }
       ]
     }
@@ -2504,88 +1401,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/hex-to-ascii-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/240.avif",
-        "width": 240,
-        "bytes": 3879
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/320.avif",
-        "width": 320,
-        "bytes": 5521
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/480.avif",
-        "width": 480,
-        "bytes": 9684
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/640.avif",
-        "width": 640,
-        "bytes": 14872
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/960.avif",
-        "width": 960,
-        "bytes": 27507
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/1280.avif",
-        "width": 1280,
-        "bytes": 49815
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/1600.avif",
-        "width": 1600,
-        "bytes": 72071
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/1672.avif",
-        "width": 1672,
-        "bytes": 77412
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/240.webp",
         "width": 240,
-        "bytes": 6036
+        "bytes": 35702
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/320.webp",
         "width": 320,
-        "bytes": 8358
+        "bytes": 62482
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/480.webp",
         "width": 480,
-        "bytes": 14800
+        "bytes": 124508
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/640.webp",
         "width": 640,
-        "bytes": 21632
+        "bytes": 222844
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/960.webp",
         "width": 960,
-        "bytes": 40634
+        "bytes": 503234
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/1280.webp",
         "width": 1280,
-        "bytes": 69156
+        "bytes": 910068
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/1600.webp",
         "width": 1600,
-        "bytes": 97362
+        "bytes": 1363578
       },
       {
         "src": "/media/generated/responsive/media/calculators/hex-to-ascii-v1/1672.webp",
         "width": 1672,
-        "bytes": 104970
+        "bytes": 1449946
       }
     ],
     "role": "tool-cover",
@@ -2594,58 +1450,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/hex-to-ascii-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3974
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5647
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 9145
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 13484
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 24892
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5524
+          "bytes": 49926
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7886
+          "bytes": 83434
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 13266
+          "bytes": 187482
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 18814
+          "bytes": 337072
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hex-to-ascii-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 34756
+          "bytes": 227936
         }
       ]
     }
@@ -2654,88 +1484,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/high-pass-filter-response-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/240.avif",
-        "width": 240,
-        "bytes": 3572
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/320.avif",
-        "width": 320,
-        "bytes": 5246
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/480.avif",
-        "width": 480,
-        "bytes": 9848
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/640.avif",
-        "width": 640,
-        "bytes": 14631
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/960.avif",
-        "width": 960,
-        "bytes": 24476
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/1280.avif",
-        "width": 1280,
-        "bytes": 36860
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/1600.avif",
-        "width": 1600,
-        "bytes": 49709
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/1672.avif",
-        "width": 1672,
-        "bytes": 53977
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/240.webp",
         "width": 240,
-        "bytes": 4956
+        "bytes": 33480
       },
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/320.webp",
         "width": 320,
-        "bytes": 7426
+        "bytes": 60932
       },
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/480.webp",
         "width": 480,
-        "bytes": 12718
+        "bytes": 121090
       },
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/640.webp",
         "width": 640,
-        "bytes": 19178
+        "bytes": 208244
       },
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/960.webp",
         "width": 960,
-        "bytes": 33240
+        "bytes": 431752
       },
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/1280.webp",
         "width": 1280,
-        "bytes": 51168
+        "bytes": 735980
       },
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/1600.webp",
         "width": 1600,
-        "bytes": 68182
+        "bytes": 1074056
       },
       {
         "src": "/media/generated/responsive/media/calculators/high-pass-filter-response-v1/1672.webp",
         "width": 1672,
-        "bytes": 73688
+        "bytes": 1126062
       }
     ],
     "role": "tool-cover",
@@ -2744,58 +1533,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/high-pass-filter-response-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3588
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4853
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8812
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 13324
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 23458
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5390
+          "bytes": 47348
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 8010
+          "bytes": 79808
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 14086
+          "bytes": 177910
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 20280
+          "bytes": 319440
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/high-pass-filter-response-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 36402
+          "bytes": 249630
         }
       ]
     }
@@ -2804,88 +1567,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/log-base-two-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/240.avif",
-        "width": 240,
-        "bytes": 4736
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/320.avif",
-        "width": 320,
-        "bytes": 6887
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/480.avif",
-        "width": 480,
-        "bytes": 11554
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/640.avif",
-        "width": 640,
-        "bytes": 17072
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/960.avif",
-        "width": 960,
-        "bytes": 31651
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/1280.avif",
-        "width": 1280,
-        "bytes": 47309
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/1600.avif",
-        "width": 1600,
-        "bytes": 68499
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/log-base-two-v1/1672.avif",
-        "width": 1672,
-        "bytes": 73692
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/240.webp",
         "width": 240,
-        "bytes": 6928
+        "bytes": 39938
       },
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/320.webp",
         "width": 320,
-        "bytes": 10016
+        "bytes": 67532
       },
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/480.webp",
         "width": 480,
-        "bytes": 16720
+        "bytes": 134850
       },
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/640.webp",
         "width": 640,
-        "bytes": 24200
+        "bytes": 236074
       },
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/960.webp",
         "width": 960,
-        "bytes": 41830
+        "bytes": 505750
       },
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/1280.webp",
         "width": 1280,
-        "bytes": 63454
+        "bytes": 883476
       },
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/1600.webp",
         "width": 1600,
-        "bytes": 87284
+        "bytes": 1312094
       },
       {
         "src": "/media/generated/responsive/media/calculators/log-base-two-v1/1672.webp",
         "width": 1672,
-        "bytes": 94186
+        "bytes": 1371512
       }
     ],
     "role": "tool-cover",
@@ -2894,58 +1616,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/log-base-two-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4373
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 6181
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 10496
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 14855
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 25833
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5672
+          "bytes": 49516
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 8108
+          "bytes": 83140
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 13946
+          "bytes": 187064
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 20686
+          "bytes": 334228
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/log-base-two-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 36494
+          "bytes": 280948
         }
       ]
     }
@@ -2954,88 +1650,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/low-pass-filter-response-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/240.avif",
-        "width": 240,
-        "bytes": 3495
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/320.avif",
-        "width": 320,
-        "bytes": 5329
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/480.avif",
-        "width": 480,
-        "bytes": 9570
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/640.avif",
-        "width": 640,
-        "bytes": 14152
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/960.avif",
-        "width": 960,
-        "bytes": 25628
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/1280.avif",
-        "width": 1280,
-        "bytes": 35875
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/1600.avif",
-        "width": 1600,
-        "bytes": 48809
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/1672.avif",
-        "width": 1672,
-        "bytes": 52356
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/240.webp",
         "width": 240,
-        "bytes": 4740
+        "bytes": 34036
       },
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/320.webp",
         "width": 320,
-        "bytes": 7200
+        "bytes": 61788
       },
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/480.webp",
         "width": 480,
-        "bytes": 12646
+        "bytes": 121448
       },
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/640.webp",
         "width": 640,
-        "bytes": 18986
+        "bytes": 208512
       },
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/960.webp",
         "width": 960,
-        "bytes": 34374
+        "bytes": 441510
       },
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/1280.webp",
         "width": 1280,
-        "bytes": 49494
+        "bytes": 761990
       },
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/1600.webp",
         "width": 1600,
-        "bytes": 66180
+        "bytes": 1108716
       },
       {
         "src": "/media/generated/responsive/media/calculators/low-pass-filter-response-v1/1672.webp",
         "width": 1672,
-        "bytes": 70296
+        "bytes": 1143170
       }
     ],
     "role": "tool-cover",
@@ -3044,58 +1699,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/low-pass-filter-response-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4027
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5462
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 9231
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 13118
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 25850
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5620
+          "bytes": 50406
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7984
+          "bytes": 84786
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 13130
+          "bytes": 188482
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 19510
+          "bytes": 335420
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/low-pass-filter-response-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 36394
+          "bytes": 260604
         }
       ]
     }
@@ -3104,88 +1733,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/number-bases-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/number-bases-v1/240.avif",
-        "width": 240,
-        "bytes": 5123
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/number-bases-v1/320.avif",
-        "width": 320,
-        "bytes": 7285
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/number-bases-v1/480.avif",
-        "width": 480,
-        "bytes": 12667
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/number-bases-v1/640.avif",
-        "width": 640,
-        "bytes": 18643
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/number-bases-v1/960.avif",
-        "width": 960,
-        "bytes": 30759
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/number-bases-v1/1280.avif",
-        "width": 1280,
-        "bytes": 43873
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/number-bases-v1/1600.avif",
-        "width": 1600,
-        "bytes": 58620
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/number-bases-v1/1672.avif",
-        "width": 1672,
-        "bytes": 60772
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/240.webp",
         "width": 240,
-        "bytes": 7100
+        "bytes": 41388
       },
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/320.webp",
         "width": 320,
-        "bytes": 10878
+        "bytes": 69494
       },
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/480.webp",
         "width": 480,
-        "bytes": 18382
+        "bytes": 138456
       },
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/640.webp",
         "width": 640,
-        "bytes": 25994
+        "bytes": 231318
       },
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/960.webp",
         "width": 960,
-        "bytes": 42954
+        "bytes": 473918
       },
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/1280.webp",
         "width": 1280,
-        "bytes": 59066
+        "bytes": 807046
       },
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/1600.webp",
         "width": 1600,
-        "bytes": 77256
+        "bytes": 1169152
       },
       {
         "src": "/media/generated/responsive/media/calculators/number-bases-v1/1672.webp",
         "width": 1672,
-        "bytes": 80626
+        "bytes": 1208430
       }
     ],
     "role": "tool-cover",
@@ -3194,58 +1782,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/number-bases-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2855
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3806
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 6111
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 8938
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 14516
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3222
+          "bytes": 35316
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 4594
+          "bytes": 62032
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 7326
+          "bytes": 141708
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 10572
+          "bytes": 274622
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/number-bases-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 18824
+          "bytes": 200046
         }
       ]
     }
@@ -3254,88 +1816,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/ohms-law-physical-measurement-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/240.avif",
-        "width": 240,
-        "bytes": 2694
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/320.avif",
-        "width": 320,
-        "bytes": 4162
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/480.avif",
-        "width": 480,
-        "bytes": 7337
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/640.avif",
-        "width": 640,
-        "bytes": 11482
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/960.avif",
-        "width": 960,
-        "bytes": 22244
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/1280.avif",
-        "width": 1280,
-        "bytes": 34003
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/1600.avif",
-        "width": 1600,
-        "bytes": 46164
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/1672.avif",
-        "width": 1672,
-        "bytes": 50083
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/240.webp",
         "width": 240,
-        "bytes": 3464
+        "bytes": 30870
       },
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/320.webp",
         "width": 320,
-        "bytes": 5134
+        "bytes": 52470
       },
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/480.webp",
         "width": 480,
-        "bytes": 9156
+        "bytes": 110282
       },
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/640.webp",
         "width": 640,
-        "bytes": 14168
+        "bytes": 200522
       },
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/960.webp",
         "width": 960,
-        "bytes": 27222
+        "bytes": 459020
       },
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/1280.webp",
         "width": 1280,
-        "bytes": 43186
+        "bytes": 849768
       },
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/1600.webp",
         "width": 1600,
-        "bytes": 61556
+        "bytes": 1293800
       },
       {
         "src": "/media/generated/responsive/media/calculators/ohms-law-physical-measurement-v1/1672.webp",
         "width": 1672,
-        "bytes": 65926
+        "bytes": 1370488
       }
     ],
     "role": "tool-cover",
@@ -3344,58 +1865,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3923
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5233
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7942
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 12005
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 20765
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4524
+          "bytes": 44874
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6280
+          "bytes": 76044
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 10288
+          "bytes": 174912
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 15172
+          "bytes": 316402
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ohms-law-physical-measurement-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 28090
+          "bytes": 247014
         }
       ]
     }
@@ -3404,88 +1899,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/ones-complement-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/240.avif",
-        "width": 240,
-        "bytes": 4485
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/320.avif",
-        "width": 320,
-        "bytes": 5997
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/480.avif",
-        "width": 480,
-        "bytes": 10610
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/640.avif",
-        "width": 640,
-        "bytes": 14378
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/960.avif",
-        "width": 960,
-        "bytes": 22836
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/1280.avif",
-        "width": 1280,
-        "bytes": 33576
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/1600.avif",
-        "width": 1600,
-        "bytes": 44058
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/ones-complement-v1/1672.avif",
-        "width": 1672,
-        "bytes": 47093
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/240.webp",
         "width": 240,
-        "bytes": 6742
+        "bytes": 35298
       },
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/320.webp",
         "width": 320,
-        "bytes": 9630
+        "bytes": 61540
       },
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/480.webp",
         "width": 480,
-        "bytes": 15288
+        "bytes": 117974
       },
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/640.webp",
         "width": 640,
-        "bytes": 21222
+        "bytes": 204228
       },
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/960.webp",
         "width": 960,
-        "bytes": 32058
+        "bytes": 423908
       },
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/1280.webp",
         "width": 1280,
-        "bytes": 43948
+        "bytes": 737142
       },
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/1600.webp",
         "width": 1600,
-        "bytes": 56814
+        "bytes": 1063342
       },
       {
         "src": "/media/generated/responsive/media/calculators/ones-complement-v1/1672.webp",
         "width": 1672,
-        "bytes": 58728
+        "bytes": 1102714
       }
     ],
     "role": "tool-cover",
@@ -3494,58 +1948,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/ones-complement-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2849
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4174
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7160
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 10163
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 18161
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3424
+          "bytes": 40462
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 5126
+          "bytes": 67670
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 8084
+          "bytes": 157432
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 11872
+          "bytes": 294636
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/ones-complement-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 22952
+          "bytes": 238992
         }
       ]
     }
@@ -3554,88 +1982,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/op-amp-gain-modes-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/240.avif",
-        "width": 240,
-        "bytes": 3813
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/320.avif",
-        "width": 320,
-        "bytes": 5566
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/480.avif",
-        "width": 480,
-        "bytes": 10371
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/640.avif",
-        "width": 640,
-        "bytes": 14828
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/960.avif",
-        "width": 960,
-        "bytes": 27638
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/1280.avif",
-        "width": 1280,
-        "bytes": 43133
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/1600.avif",
-        "width": 1600,
-        "bytes": 58817
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/1672.avif",
-        "width": 1672,
-        "bytes": 66067
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/240.webp",
         "width": 240,
-        "bytes": 5324
+        "bytes": 34804
       },
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/320.webp",
         "width": 320,
-        "bytes": 7702
+        "bytes": 62378
       },
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/480.webp",
         "width": 480,
-        "bytes": 13804
+        "bytes": 124056
       },
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/640.webp",
         "width": 640,
-        "bytes": 21218
+        "bytes": 216260
       },
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/960.webp",
         "width": 960,
-        "bytes": 38716
+        "bytes": 474040
       },
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/1280.webp",
         "width": 1280,
-        "bytes": 61066
+        "bytes": 834840
       },
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/1600.webp",
         "width": 1600,
-        "bytes": 82164
+        "bytes": 1252500
       },
       {
         "src": "/media/generated/responsive/media/calculators/op-amp-gain-modes-v1/1672.webp",
         "width": 1672,
-        "bytes": 89584
+        "bytes": 1317278
       }
     ],
     "role": "tool-cover",
@@ -3644,58 +2031,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4146
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5628
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8904
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 12674
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 24135
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 18144
+          "bytes": 62306
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 29294
+          "bytes": 103040
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 58000
+          "bytes": 227634
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 96702
+          "bytes": 413276
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/op-amp-gain-modes-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 68050
+          "bytes": 220520
         }
       ]
     }
@@ -3704,88 +2065,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/percentage-change-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/240.avif",
-        "width": 240,
-        "bytes": 4747
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/320.avif",
-        "width": 320,
-        "bytes": 6374
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/480.avif",
-        "width": 480,
-        "bytes": 10827
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/640.avif",
-        "width": 640,
-        "bytes": 15967
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/960.avif",
-        "width": 960,
-        "bytes": 26491
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/1280.avif",
-        "width": 1280,
-        "bytes": 39101
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/1600.avif",
-        "width": 1600,
-        "bytes": 54455
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/percentage-change-v1/1672.avif",
-        "width": 1672,
-        "bytes": 59675
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/240.webp",
         "width": 240,
-        "bytes": 7206
+        "bytes": 39518
       },
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/320.webp",
         "width": 320,
-        "bytes": 9964
+        "bytes": 65524
       },
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/480.webp",
         "width": 480,
-        "bytes": 16612
+        "bytes": 130416
       },
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/640.webp",
         "width": 640,
-        "bytes": 22862
+        "bytes": 221390
       },
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/960.webp",
         "width": 960,
-        "bytes": 38412
+        "bytes": 467386
       },
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/1280.webp",
         "width": 1280,
-        "bytes": 55498
+        "bytes": 803090
       },
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/1600.webp",
         "width": 1600,
-        "bytes": 72976
+        "bytes": 1182950
       },
       {
         "src": "/media/generated/responsive/media/calculators/percentage-change-v1/1672.webp",
         "width": 1672,
-        "bytes": 78354
+        "bytes": 1244094
       }
     ],
     "role": "tool-cover",
@@ -3794,58 +2114,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/percentage-change-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2501
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3263
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 5193
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 8114
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 14450
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 2898
+          "bytes": 39064
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 4194
+          "bytes": 67666
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 6764
+          "bytes": 155614
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 9698
+          "bytes": 290004
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/percentage-change-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 20158
+          "bytes": 214212
         }
       ]
     }
@@ -3854,88 +2148,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/rc-time-constant-no-scales-v3.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/240.avif",
-        "width": 240,
-        "bytes": 3297
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/320.avif",
-        "width": 320,
-        "bytes": 5142
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/480.avif",
-        "width": 480,
-        "bytes": 9127
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/640.avif",
-        "width": 640,
-        "bytes": 14018
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/960.avif",
-        "width": 960,
-        "bytes": 23202
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/1280.avif",
-        "width": 1280,
-        "bytes": 32043
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/1600.avif",
-        "width": 1600,
-        "bytes": 42566
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/1672.avif",
-        "width": 1672,
-        "bytes": 43796
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/240.webp",
         "width": 240,
-        "bytes": 4410
+        "bytes": 30402
       },
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/320.webp",
         "width": 320,
-        "bytes": 6474
+        "bytes": 55198
       },
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/480.webp",
         "width": 480,
-        "bytes": 10944
+        "bytes": 117178
       },
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/640.webp",
         "width": 640,
-        "bytes": 17042
+        "bytes": 186354
       },
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/960.webp",
         "width": 960,
-        "bytes": 28894
+        "bytes": 371324
       },
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/1280.webp",
         "width": 1280,
-        "bytes": 41556
+        "bytes": 624692
       },
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/1600.webp",
         "width": 1600,
-        "bytes": 55364
+        "bytes": 886796
       },
       {
         "src": "/media/generated/responsive/media/calculators/rc-time-constant-no-scales-v3/1672.webp",
         "width": 1672,
-        "bytes": 59252
+        "bytes": 913998
       }
     ],
     "role": "tool-cover",
@@ -3944,58 +2197,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3345
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4717
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7168
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 9683
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 16927
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3588
+          "bytes": 41404
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 5022
+          "bytes": 71126
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 8246
+          "bytes": 162392
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 11962
+          "bytes": 294862
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rc-time-constant-no-scales-v3-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 22228
+          "bytes": 262476
         }
       ]
     }
@@ -4004,88 +2231,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/rms-voltage-sine-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/240.avif",
-        "width": 240,
-        "bytes": 3714
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/320.avif",
-        "width": 320,
-        "bytes": 5598
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/480.avif",
-        "width": 480,
-        "bytes": 10251
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/640.avif",
-        "width": 640,
-        "bytes": 15346
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/960.avif",
-        "width": 960,
-        "bytes": 27751
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/1280.avif",
-        "width": 1280,
-        "bytes": 40311
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/1600.avif",
-        "width": 1600,
-        "bytes": 55050
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/1672.avif",
-        "width": 1672,
-        "bytes": 59432
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/240.webp",
         "width": 240,
-        "bytes": 5062
+        "bytes": 34104
       },
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/320.webp",
         "width": 320,
-        "bytes": 8142
+        "bytes": 62214
       },
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/480.webp",
         "width": 480,
-        "bytes": 13786
+        "bytes": 121644
       },
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/640.webp",
         "width": 640,
-        "bytes": 21056
+        "bytes": 208592
       },
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/960.webp",
         "width": 960,
-        "bytes": 37084
+        "bytes": 438850
       },
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/1280.webp",
         "width": 1280,
-        "bytes": 56096
+        "bytes": 760656
       },
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/1600.webp",
         "width": 1600,
-        "bytes": 75172
+        "bytes": 1111466
       },
       {
         "src": "/media/generated/responsive/media/calculators/rms-voltage-sine-v1/1672.webp",
         "width": 1672,
-        "bytes": 80082
+        "bytes": 1155626
       }
     ],
     "role": "tool-cover",
@@ -4094,58 +2280,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/rms-voltage-sine-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2575
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3938
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 6062
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 9391
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 16469
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3356
+          "bytes": 41184
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 4854
+          "bytes": 70394
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 8156
+          "bytes": 164312
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 12288
+          "bytes": 302532
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rms-voltage-sine-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 23844
+          "bytes": 245690
         }
       ]
     }
@@ -4154,88 +2314,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/speed-distance-time-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/240.avif",
-        "width": 240,
-        "bytes": 5267
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/320.avif",
-        "width": 320,
-        "bytes": 7480
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/480.avif",
-        "width": 480,
-        "bytes": 13188
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/640.avif",
-        "width": 640,
-        "bytes": 17700
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/960.avif",
-        "width": 960,
-        "bytes": 31504
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/1280.avif",
-        "width": 1280,
-        "bytes": 45159
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/1600.avif",
-        "width": 1600,
-        "bytes": 60047
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/1672.avif",
-        "width": 1672,
-        "bytes": 66190
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/240.webp",
         "width": 240,
-        "bytes": 8286
+        "bytes": 43292
       },
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/320.webp",
         "width": 320,
-        "bytes": 11978
+        "bytes": 70388
       },
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/480.webp",
         "width": 480,
-        "bytes": 19782
+        "bytes": 138144
       },
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/640.webp",
         "width": 640,
-        "bytes": 28210
+        "bytes": 237190
       },
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/960.webp",
         "width": 960,
-        "bytes": 46152
+        "bytes": 479622
       },
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/1280.webp",
         "width": 1280,
-        "bytes": 65628
+        "bytes": 808460
       },
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/1600.webp",
         "width": 1600,
-        "bytes": 85628
+        "bytes": 1178190
       },
       {
         "src": "/media/generated/responsive/media/calculators/speed-distance-time-v1/1672.webp",
         "width": 1672,
-        "bytes": 90978
+        "bytes": 1225524
       }
     ],
     "role": "tool-cover",
@@ -4244,58 +2363,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/speed-distance-time-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4471
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 6326
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 10298
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 15152
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 26784
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 6392
+          "bytes": 51586
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 9580
+          "bytes": 86792
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 15982
+          "bytes": 194346
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 23120
+          "bytes": 346162
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/speed-distance-time-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 40666
+          "bytes": 301020
         }
       ]
     }
@@ -4304,88 +2397,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/square-root-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/square-root-v1/240.avif",
-        "width": 240,
-        "bytes": 3864
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/square-root-v1/320.avif",
-        "width": 320,
-        "bytes": 5315
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/square-root-v1/480.avif",
-        "width": 480,
-        "bytes": 8801
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/square-root-v1/640.avif",
-        "width": 640,
-        "bytes": 13079
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/square-root-v1/960.avif",
-        "width": 960,
-        "bytes": 19850
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/square-root-v1/1280.avif",
-        "width": 1280,
-        "bytes": 27748
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/square-root-v1/1600.avif",
-        "width": 1600,
-        "bytes": 36424
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/square-root-v1/1672.avif",
-        "width": 1672,
-        "bytes": 40495
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/240.webp",
         "width": 240,
-        "bytes": 5566
+        "bytes": 33074
       },
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/320.webp",
         "width": 320,
-        "bytes": 8048
+        "bytes": 56660
       },
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/480.webp",
         "width": 480,
-        "bytes": 13148
+        "bytes": 112242
       },
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/640.webp",
         "width": 640,
-        "bytes": 18680
+        "bytes": 186938
       },
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/960.webp",
         "width": 960,
-        "bytes": 28576
+        "bytes": 375190
       },
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/1280.webp",
         "width": 1280,
-        "bytes": 39558
+        "bytes": 628694
       },
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/1600.webp",
         "width": 1600,
-        "bytes": 51170
+        "bytes": 896594
       },
       {
         "src": "/media/generated/responsive/media/calculators/square-root-v1/1672.webp",
         "width": 1672,
-        "bytes": 53620
+        "bytes": 926934
       }
     ],
     "role": "tool-cover",
@@ -4394,58 +2446,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/square-root-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2056
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 2690
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 4105
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 6071
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 11921
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 2128
+          "bytes": 33734
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 3026
+          "bytes": 59220
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 5052
+          "bytes": 139680
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 7356
+          "bytes": 260402
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/square-root-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 14856
+          "bytes": 167184
         }
       ]
     }
@@ -4454,88 +2480,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/temperature-conversion-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/240.avif",
-        "width": 240,
-        "bytes": 5265
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/320.avif",
-        "width": 320,
-        "bytes": 6999
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/480.avif",
-        "width": 480,
-        "bytes": 12200
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/640.avif",
-        "width": 640,
-        "bytes": 17174
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/960.avif",
-        "width": 960,
-        "bytes": 29467
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/1280.avif",
-        "width": 1280,
-        "bytes": 42168
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/1600.avif",
-        "width": 1600,
-        "bytes": 57496
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/1672.avif",
-        "width": 1672,
-        "bytes": 62215
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/240.webp",
         "width": 240,
-        "bytes": 8202
+        "bytes": 41882
       },
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/320.webp",
         "width": 320,
-        "bytes": 11370
+        "bytes": 68712
       },
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/480.webp",
         "width": 480,
-        "bytes": 18948
+        "bytes": 133874
       },
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/640.webp",
         "width": 640,
-        "bytes": 26462
+        "bytes": 227694
       },
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/960.webp",
         "width": 960,
-        "bytes": 43594
+        "bytes": 471398
       },
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/1280.webp",
         "width": 1280,
-        "bytes": 60690
+        "bytes": 801106
       },
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/1600.webp",
         "width": 1600,
-        "bytes": 78000
+        "bytes": 1170668
       },
       {
         "src": "/media/generated/responsive/media/calculators/temperature-conversion-v1/1672.webp",
         "width": 1672,
-        "bytes": 83120
+        "bytes": 1212212
       }
     ],
     "role": "tool-cover",
@@ -4544,58 +2529,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/temperature-conversion-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3349
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4871
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8688
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 13381
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 33253
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4396
+          "bytes": 46642
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6396
+          "bytes": 80076
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 11594
+          "bytes": 184622
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 18084
+          "bytes": 331974
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/temperature-conversion-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 38922
+          "bytes": 235206
         }
       ]
     }
@@ -4604,88 +2563,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/twos-complement-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/240.avif",
-        "width": 240,
-        "bytes": 4398
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/320.avif",
-        "width": 320,
-        "bytes": 6163
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/480.avif",
-        "width": 480,
-        "bytes": 10219
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/640.avif",
-        "width": 640,
-        "bytes": 14532
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/960.avif",
-        "width": 960,
-        "bytes": 24967
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/1280.avif",
-        "width": 1280,
-        "bytes": 41902
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/1600.avif",
-        "width": 1600,
-        "bytes": 61443
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/twos-complement-v1/1672.avif",
-        "width": 1672,
-        "bytes": 65147
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/240.webp",
         "width": 240,
-        "bytes": 7194
+        "bytes": 36960
       },
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/320.webp",
         "width": 320,
-        "bytes": 9858
+        "bytes": 64564
       },
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/480.webp",
         "width": 480,
-        "bytes": 16146
+        "bytes": 128220
       },
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/640.webp",
         "width": 640,
-        "bytes": 22404
+        "bytes": 219964
       },
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/960.webp",
         "width": 960,
-        "bytes": 39284
+        "bytes": 476104
       },
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/1280.webp",
         "width": 1280,
-        "bytes": 58534
+        "bytes": 827194
       },
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/1600.webp",
         "width": 1600,
-        "bytes": 80068
+        "bytes": 1223566
       },
       {
         "src": "/media/generated/responsive/media/calculators/twos-complement-v1/1672.webp",
         "width": 1672,
-        "bytes": 84814
+        "bytes": 1278090
       }
     ],
     "role": "tool-cover",
@@ -4694,58 +2612,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/twos-complement-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3300
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4584
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7980
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 11924
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 22578
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4080
+          "bytes": 44272
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6016
+          "bytes": 75362
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 10290
+          "bytes": 175116
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 15302
+          "bytes": 320048
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/twos-complement-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 29164
+          "bytes": 266342
         }
       ]
     }
@@ -4754,88 +2646,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/calculators/wavelength-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/calculators/wavelength-v1/240.avif",
-        "width": 240,
-        "bytes": 3973
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/wavelength-v1/320.avif",
-        "width": 320,
-        "bytes": 5937
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/wavelength-v1/480.avif",
-        "width": 480,
-        "bytes": 10042
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/wavelength-v1/640.avif",
-        "width": 640,
-        "bytes": 14481
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/wavelength-v1/960.avif",
-        "width": 960,
-        "bytes": 26174
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/wavelength-v1/1280.avif",
-        "width": 1280,
-        "bytes": 43816
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/wavelength-v1/1600.avif",
-        "width": 1600,
-        "bytes": 58980
-      },
-      {
-        "src": "/media/generated/responsive/media/calculators/wavelength-v1/1672.avif",
-        "width": 1672,
-        "bytes": 67038
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/240.webp",
         "width": 240,
-        "bytes": 6416
+        "bytes": 36898
       },
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/320.webp",
         "width": 320,
-        "bytes": 9412
+        "bytes": 65044
       },
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/480.webp",
         "width": 480,
-        "bytes": 15306
+        "bytes": 129228
       },
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/640.webp",
         "width": 640,
-        "bytes": 22154
+        "bytes": 224042
       },
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/960.webp",
         "width": 960,
-        "bytes": 39332
+        "bytes": 475202
       },
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/1280.webp",
         "width": 1280,
-        "bytes": 59688
+        "bytes": 839472
       },
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/1600.webp",
         "width": 1600,
-        "bytes": 80526
+        "bytes": 1225110
       },
       {
         "src": "/media/generated/responsive/media/calculators/wavelength-v1/1672.webp",
         "width": 1672,
-        "bytes": 87120
+        "bytes": 1286596
       }
     ],
     "role": "tool-cover",
@@ -4844,58 +2695,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/wavelength-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3157
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3807
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 6265
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 9010
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 15479
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4092
+          "bytes": 39204
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 5782
+          "bytes": 66242
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 9434
+          "bytes": 147158
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 13526
+          "bytes": 260350
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/wavelength-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 23200
+          "bytes": 221188
         }
       ]
     }
@@ -4904,78 +2729,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/optimized/profile-ahmed.webp",
     "width": 960,
     "height": 960,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/optimized/profile-ahmed/96.avif",
-        "width": 96,
-        "bytes": 1072
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/profile-ahmed/160.avif",
-        "width": 160,
-        "bytes": 1753
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/profile-ahmed/240.avif",
-        "width": 240,
-        "bytes": 2781
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/profile-ahmed/320.avif",
-        "width": 320,
-        "bytes": 3985
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/profile-ahmed/480.avif",
-        "width": 480,
-        "bytes": 6616
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/profile-ahmed/640.avif",
-        "width": 640,
-        "bytes": 9816
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/profile-ahmed/960.avif",
-        "width": 960,
-        "bytes": 18177
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/96.webp",
         "width": 96,
-        "bytes": 1158
+        "bytes": 5768
       },
       {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/160.webp",
         "width": 160,
-        "bytes": 1974
+        "bytes": 13398
       },
       {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/240.webp",
         "width": 240,
-        "bytes": 3172
+        "bytes": 25612
       },
       {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/320.webp",
         "width": 320,
-        "bytes": 4492
+        "bytes": 42028
       },
       {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/480.webp",
         "width": 480,
-        "bytes": 7962
+        "bytes": 68260
       },
       {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/640.webp",
         "width": 640,
-        "bytes": 11204
+        "bytes": 115254
+      },
+      {
+        "src": "/media/generated/responsive/media/optimized/profile-ahmed/800.webp",
+        "width": 800,
+        "bytes": 170820
       },
       {
         "src": "/media/generated/responsive/media/optimized/profile-ahmed/960.webp",
         "width": 960,
-        "bytes": 21920
+        "bytes": 223860
       }
     ],
     "role": "portrait",
@@ -4985,38 +2779,22 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/optimized/project-human-follower.webp",
     "width": 493,
     "height": 410,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/optimized/project-human-follower/320.avif",
-        "width": 320,
-        "bytes": 5183
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/project-human-follower/480.avif",
-        "width": 480,
-        "bytes": 8377
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/project-human-follower/493.avif",
-        "width": 493,
-        "bytes": 9457
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/optimized/project-human-follower/320.webp",
         "width": 320,
-        "bytes": 5880
+        "bytes": 59864
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-human-follower/480.webp",
         "width": 480,
-        "bytes": 9230
+        "bytes": 111590
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-human-follower/493.webp",
         "width": 493,
-        "bytes": 10662
+        "bytes": 108702
       }
     ],
     "role": "project-cover",
@@ -5026,68 +2804,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/optimized/project-megasumo.webp",
     "width": 1200,
     "height": 675,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/optimized/project-megasumo/320.avif",
-        "width": 320,
-        "bytes": 6959
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/project-megasumo/480.avif",
-        "width": 480,
-        "bytes": 12826
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/project-megasumo/640.avif",
-        "width": 640,
-        "bytes": 19626
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/project-megasumo/768.avif",
-        "width": 768,
-        "bytes": 26244
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/project-megasumo/960.avif",
-        "width": 960,
-        "bytes": 36889
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/project-megasumo/1200.avif",
-        "width": 1200,
-        "bytes": 60748
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/320.webp",
         "width": 320,
-        "bytes": 10396
+        "bytes": 79688
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/480.webp",
         "width": 480,
-        "bytes": 19250
+        "bytes": 161134
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/640.webp",
         "width": 640,
-        "bytes": 28874
+        "bytes": 258216
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/768.webp",
         "width": 768,
-        "bytes": 37382
+        "bytes": 346884
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/960.webp",
         "width": 960,
-        "bytes": 49658
+        "bytes": 502676
       },
       {
         "src": "/media/generated/responsive/media/optimized/project-megasumo/1200.webp",
         "width": 1200,
-        "bytes": 88318
+        "bytes": 731320
       }
     ],
     "role": "project-cover",
@@ -5097,78 +2844,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/optimized/tutorial-embedded-workshop.webp",
     "width": 1400,
     "height": 788,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/240.avif",
-        "width": 240,
-        "bytes": 2731
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/320.avif",
-        "width": 320,
-        "bytes": 3869
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/480.avif",
-        "width": 480,
-        "bytes": 7584
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/640.avif",
-        "width": 640,
-        "bytes": 11347
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/960.avif",
-        "width": 960,
-        "bytes": 19770
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/1280.avif",
-        "width": 1280,
-        "bytes": 28750
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/1400.avif",
-        "width": 1400,
-        "bytes": 36578
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/240.webp",
         "width": 240,
-        "bytes": 3744
+        "bytes": 14844
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/320.webp",
         "width": 320,
-        "bytes": 5704
+        "bytes": 24802
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/480.webp",
         "width": 480,
-        "bytes": 10632
+        "bytes": 49762
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/640.webp",
         "width": 640,
-        "bytes": 15924
+        "bytes": 81142
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/960.webp",
         "width": 960,
-        "bytes": 28898
+        "bytes": 154118
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/1280.webp",
         "width": 1280,
-        "bytes": 41260
+        "bytes": 254938
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-embedded-workshop/1400.webp",
         "width": 1400,
-        "bytes": 57236
+        "bytes": 297716
       }
     ],
     "role": "tutorial-cover",
@@ -5178,78 +2889,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/optimized/tutorial-intro-embedded.webp",
     "width": 1400,
     "height": 788,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/240.avif",
-        "width": 240,
-        "bytes": 2562
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/320.avif",
-        "width": 320,
-        "bytes": 4317
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/480.avif",
-        "width": 480,
-        "bytes": 7056
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/640.avif",
-        "width": 640,
-        "bytes": 12123
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/960.avif",
-        "width": 960,
-        "bytes": 23596
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/1280.avif",
-        "width": 1280,
-        "bytes": 36159
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/1400.avif",
-        "width": 1400,
-        "bytes": 43225
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/240.webp",
         "width": 240,
-        "bytes": 4658
+        "bytes": 21434
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/320.webp",
         "width": 320,
-        "bytes": 7046
+        "bytes": 36434
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/480.webp",
         "width": 480,
-        "bytes": 13690
+        "bytes": 71836
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/640.webp",
         "width": 640,
-        "bytes": 21700
+        "bytes": 113826
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/960.webp",
         "width": 960,
-        "bytes": 37532
+        "bytes": 213774
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/1280.webp",
         "width": 1280,
-        "bytes": 52638
+        "bytes": 353946
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-intro-embedded/1400.webp",
         "width": 1400,
-        "bytes": 67358
+        "bytes": 398210
       }
     ],
     "role": "tutorial-cover",
@@ -5259,78 +2934,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/optimized/tutorial-ros.webp",
     "width": 1400,
     "height": 788,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-ros/240.avif",
-        "width": 240,
-        "bytes": 3030
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-ros/320.avif",
-        "width": 320,
-        "bytes": 4342
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-ros/480.avif",
-        "width": 480,
-        "bytes": 6790
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-ros/640.avif",
-        "width": 640,
-        "bytes": 9976
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-ros/960.avif",
-        "width": 960,
-        "bytes": 14678
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-ros/1280.avif",
-        "width": 1280,
-        "bytes": 19410
-      },
-      {
-        "src": "/media/generated/responsive/media/optimized/tutorial-ros/1400.avif",
-        "width": 1400,
-        "bytes": 22362
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/240.webp",
         "width": 240,
-        "bytes": 4022
+        "bytes": 12160
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/320.webp",
         "width": 320,
-        "bytes": 5678
+        "bytes": 18958
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/480.webp",
         "width": 480,
-        "bytes": 8670
+        "bytes": 35726
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/640.webp",
         "width": 640,
-        "bytes": 11988
+        "bytes": 57088
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/960.webp",
         "width": 960,
-        "bytes": 17882
+        "bytes": 103036
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/1280.webp",
         "width": 1280,
-        "bytes": 23768
+        "bytes": 167714
       },
       {
         "src": "/media/generated/responsive/media/optimized/tutorial-ros/1400.webp",
         "width": 1400,
-        "bytes": 29504
+        "bytes": 188058
       }
     ],
     "role": "tutorial-cover",
@@ -5340,68 +2979,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/agribot-award-stage.jpg",
     "width": 1280,
     "height": 960,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/320.avif",
-        "width": 320,
-        "bytes": 9385
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/480.avif",
-        "width": 480,
-        "bytes": 17870
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/640.avif",
-        "width": 640,
-        "bytes": 27934
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/768.avif",
-        "width": 768,
-        "bytes": 34503
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/960.avif",
-        "width": 960,
-        "bytes": 46425
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/1280.avif",
-        "width": 1280,
-        "bytes": 69965
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/320.webp",
         "width": 320,
-        "bytes": 12902
+        "bytes": 94122
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/480.webp",
         "width": 480,
-        "bytes": 24636
+        "bytes": 188828
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/640.webp",
         "width": 640,
-        "bytes": 36978
+        "bytes": 299460
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/768.webp",
         "width": 768,
-        "bytes": 46456
+        "bytes": 402390
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/960.webp",
         "width": 960,
-        "bytes": 60926
+        "bytes": 580412
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-award-stage/1280.webp",
         "width": 1280,
-        "bytes": 84710
+        "bytes": 776398
       }
     ],
     "role": "gallery-evidence",
@@ -5411,68 +3019,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/agribot-first-place.jpg",
     "width": 1280,
     "height": 854,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/320.avif",
-        "width": 320,
-        "bytes": 10541
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/480.avif",
-        "width": 480,
-        "bytes": 20222
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/640.avif",
-        "width": 640,
-        "bytes": 31897
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/768.avif",
-        "width": 768,
-        "bytes": 39913
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/960.avif",
-        "width": 960,
-        "bytes": 53063
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-first-place/1280.avif",
-        "width": 1280,
-        "bytes": 76823
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/320.webp",
         "width": 320,
-        "bytes": 15302
+        "bytes": 80084
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/480.webp",
         "width": 480,
-        "bytes": 29010
+        "bytes": 155756
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/640.webp",
         "width": 640,
-        "bytes": 44828
+        "bytes": 253902
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/768.webp",
         "width": 768,
-        "bytes": 57932
+        "bytes": 345680
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/960.webp",
         "width": 960,
-        "bytes": 77488
+        "bytes": 492428
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-first-place/1280.webp",
         "width": 1280,
-        "bytes": 108340
+        "bytes": 706456
       }
     ],
     "role": "gallery-evidence",
@@ -5482,78 +3059,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/agribot-participation.png",
     "width": 1500,
     "height": 1078,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-participation/320.avif",
-        "width": 320,
-        "bytes": 5971
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-participation/480.avif",
-        "width": 480,
-        "bytes": 11795
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-participation/640.avif",
-        "width": 640,
-        "bytes": 17539
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-participation/768.avif",
-        "width": 768,
-        "bytes": 23335
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-participation/960.avif",
-        "width": 960,
-        "bytes": 31504
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-participation/1280.avif",
-        "width": 1280,
-        "bytes": 47236
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-participation/1500.avif",
-        "width": 1500,
-        "bytes": 62953
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/320.webp",
         "width": 320,
-        "bytes": 7354
+        "bytes": 63080
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/480.webp",
         "width": 480,
-        "bytes": 14330
+        "bytes": 126542
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/640.webp",
         "width": 640,
-        "bytes": 22166
+        "bytes": 200802
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/768.webp",
         "width": 768,
-        "bytes": 29532
+        "bytes": 267232
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/960.webp",
         "width": 960,
-        "bytes": 40120
+        "bytes": 387948
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/1280.webp",
         "width": 1280,
-        "bytes": 57740
+        "bytes": 601752
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-participation/1500.webp",
         "width": 1500,
-        "bytes": 70970
+        "bytes": 631334
       }
     ],
     "role": "gallery-evidence",
@@ -5563,68 +3104,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/agribot-prize.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-prize/320.avif",
-        "width": 320,
-        "bytes": 4650
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-prize/480.avif",
-        "width": 480,
-        "bytes": 8268
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-prize/640.avif",
-        "width": 640,
-        "bytes": 12971
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-prize/768.avif",
-        "width": 768,
-        "bytes": 16850
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-prize/960.avif",
-        "width": 960,
-        "bytes": 23198
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-prize/1280.avif",
-        "width": 1280,
-        "bytes": 36340
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/320.webp",
         "width": 320,
-        "bytes": 6550
+        "bytes": 51630
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/480.webp",
         "width": 480,
-        "bytes": 11770
+        "bytes": 95838
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/640.webp",
         "width": 640,
-        "bytes": 18294
+        "bytes": 151426
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/768.webp",
         "width": 768,
-        "bytes": 23330
+        "bytes": 203034
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/960.webp",
         "width": 960,
-        "bytes": 31520
+        "bytes": 276048
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-prize/1280.webp",
         "width": 1280,
-        "bytes": 45126
+        "bytes": 379792
       }
     ],
     "role": "gallery-evidence",
@@ -5634,58 +3144,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/agribot-tanta-appreciation.jpg",
     "width": 874,
     "height": 617,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/320.avif",
-        "width": 320,
-        "bytes": 8751
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/480.avif",
-        "width": 480,
-        "bytes": 15369
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/640.avif",
-        "width": 640,
-        "bytes": 21954
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/768.avif",
-        "width": 768,
-        "bytes": 26921
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/874.avif",
-        "width": 874,
-        "bytes": 33314
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/320.webp",
         "width": 320,
-        "bytes": 12262
+        "bytes": 65324
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/480.webp",
         "width": 480,
-        "bytes": 21312
+        "bytes": 126220
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/640.webp",
         "width": 640,
-        "bytes": 31534
+        "bytes": 214396
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/768.webp",
         "width": 768,
-        "bytes": 38600
+        "bytes": 292646
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-tanta-appreciation/874.webp",
         "width": 874,
-        "bytes": 47820
+        "bytes": 303494
       }
     ],
     "role": "gallery-evidence",
@@ -5695,28 +3179,17 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/agribot-university-post.png",
     "width": 427,
     "height": 741,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-university-post/320.avif",
-        "width": 320,
-        "bytes": 27313
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/agribot-university-post/427.avif",
-        "width": 427,
-        "bytes": 44299
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-university-post/320.webp",
         "width": 320,
-        "bytes": 41042
+        "bytes": 195606
       },
       {
         "src": "/media/generated/responsive/media/portfolio/agribot-university-post/427.webp",
         "width": 427,
-        "bytes": 66600
+        "bytes": 283108
       }
     ],
     "role": "gallery-evidence",
@@ -5726,58 +3199,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/dead-code-confirmation.png",
     "width": 909,
     "height": 1286,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/320.avif",
-        "width": 320,
-        "bytes": 12593
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/480.avif",
-        "width": 480,
-        "bytes": 24588
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/640.avif",
-        "width": 640,
-        "bytes": 36069
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/768.avif",
-        "width": 768,
-        "bytes": 45719
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/909.avif",
-        "width": 909,
-        "bytes": 58486
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/320.webp",
         "width": 320,
-        "bytes": 15984
+        "bytes": 121386
       },
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/480.webp",
         "width": 480,
-        "bytes": 32248
+        "bytes": 248170
       },
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/640.webp",
         "width": 640,
-        "bytes": 47804
+        "bytes": 401532
       },
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/768.webp",
         "width": 768,
-        "bytes": 62062
+        "bytes": 551428
       },
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-confirmation/909.webp",
         "width": 909,
-        "bytes": 76524
+        "bytes": 585482
       }
     ],
     "role": "gallery-evidence",
@@ -5787,28 +3234,17 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/dead-code-team.png",
     "width": 446,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/dead-code-team/320.avif",
-        "width": 320,
-        "bytes": 16994
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/dead-code-team/446.avif",
-        "width": 446,
-        "bytes": 27743
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-team/320.webp",
         "width": 320,
-        "bytes": 23232
+        "bytes": 159402
       },
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-team/446.webp",
         "width": 446,
-        "bytes": 34696
+        "bytes": 244114
       }
     ],
     "role": "gallery-evidence",
@@ -5818,28 +3254,17 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/dead-code-trophy.png",
     "width": 480,
     "height": 729,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/dead-code-trophy/320.avif",
-        "width": 320,
-        "bytes": 11687
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/dead-code-trophy/480.avif",
-        "width": 480,
-        "bytes": 20791
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-trophy/320.webp",
         "width": 320,
-        "bytes": 17552
+        "bytes": 128808
       },
       {
         "src": "/media/generated/responsive/media/portfolio/dead-code-trophy/480.webp",
         "width": 480,
-        "bytes": 30660
+        "bytes": 233494
       }
     ],
     "role": "gallery-evidence",
@@ -5849,68 +3274,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/ic-esi-2026-celebration.png",
     "width": 1125,
     "height": 1500,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/320.avif",
-        "width": 320,
-        "bytes": 11599
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/480.avif",
-        "width": 480,
-        "bytes": 21984
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/640.avif",
-        "width": 640,
-        "bytes": 34412
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/768.avif",
-        "width": 768,
-        "bytes": 46043
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/960.avif",
-        "width": 960,
-        "bytes": 59664
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/1125.avif",
-        "width": 1125,
-        "bytes": 80137
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/320.webp",
         "width": 320,
-        "bytes": 18470
+        "bytes": 143256
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/480.webp",
         "width": 480,
-        "bytes": 34596
+        "bytes": 282344
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/640.webp",
         "width": 640,
-        "bytes": 53202
+        "bytes": 446984
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/768.webp",
         "width": 768,
-        "bytes": 67694
+        "bytes": 605972
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/960.webp",
         "width": 960,
-        "bytes": 92238
+        "bytes": 865766
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-celebration/1125.webp",
         "width": 1125,
-        "bytes": 115296
+        "bytes": 919926
       }
     ],
     "role": "gallery-evidence",
@@ -5920,68 +3314,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/ic-esi-2026-certificate.jpg",
     "width": 1238,
     "height": 904,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/320.avif",
-        "width": 320,
-        "bytes": 9451
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/480.avif",
-        "width": 480,
-        "bytes": 17679
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/640.avif",
-        "width": 640,
-        "bytes": 26261
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/768.avif",
-        "width": 768,
-        "bytes": 32061
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/960.avif",
-        "width": 960,
-        "bytes": 42485
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/1238.avif",
-        "width": 1238,
-        "bytes": 59242
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/320.webp",
         "width": 320,
-        "bytes": 13604
+        "bytes": 79924
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/480.webp",
         "width": 480,
-        "bytes": 25660
+        "bytes": 162886
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/640.webp",
         "width": 640,
-        "bytes": 37930
+        "bytes": 260156
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/768.webp",
         "width": 768,
-        "bytes": 46952
+        "bytes": 352894
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/960.webp",
         "width": 960,
-        "bytes": 60466
+        "bytes": 526800
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-certificate/1238.webp",
         "width": 1238,
-        "bytes": 82214
+        "bytes": 641776
       }
     ],
     "role": "gallery-evidence",
@@ -5991,68 +3354,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/ic-esi-2026-team.png",
     "width": 1080,
     "height": 1080,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/320.avif",
-        "width": 320,
-        "bytes": 11901
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/480.avif",
-        "width": 480,
-        "bytes": 21323
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/640.avif",
-        "width": 640,
-        "bytes": 31461
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/768.avif",
-        "width": 768,
-        "bytes": 40784
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/960.avif",
-        "width": 960,
-        "bytes": 54590
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/1080.avif",
-        "width": 1080,
-        "bytes": 69063
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/320.webp",
         "width": 320,
-        "bytes": 16988
+        "bytes": 131476
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/480.webp",
         "width": 480,
-        "bytes": 29954
+        "bytes": 258468
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/640.webp",
         "width": 640,
-        "bytes": 42888
+        "bytes": 411996
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/768.webp",
         "width": 768,
-        "bytes": 53644
+        "bytes": 556082
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/960.webp",
         "width": 960,
-        "bytes": 71752
+        "bytes": 818996
       },
       {
         "src": "/media/generated/responsive/media/portfolio/ic-esi-2026-team/1080.webp",
         "width": 1080,
-        "bytes": 87876
+        "bytes": 842644
       }
     ],
     "role": "gallery-evidence",
@@ -6062,68 +3394,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/lock-password.png",
     "width": 1280,
     "height": 602,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-password/320.avif",
-        "width": 320,
-        "bytes": 4095
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-password/480.avif",
-        "width": 480,
-        "bytes": 8513
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-password/640.avif",
-        "width": 640,
-        "bytes": 14009
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-password/768.avif",
-        "width": 768,
-        "bytes": 19053
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-password/960.avif",
-        "width": 960,
-        "bytes": 28503
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-password/1280.avif",
-        "width": 1280,
-        "bytes": 48324
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/lock-password/320.webp",
         "width": 320,
-        "bytes": 4876
+        "bytes": 38336
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-password/480.webp",
         "width": 480,
-        "bytes": 11042
+        "bytes": 76378
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-password/640.webp",
         "width": 640,
-        "bytes": 17998
+        "bytes": 118126
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-password/768.webp",
         "width": 768,
-        "bytes": 24304
+        "bytes": 170938
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-password/960.webp",
         "width": 960,
-        "bytes": 35494
+        "bytes": 245178
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-password/1280.webp",
         "width": 1280,
-        "bytes": 60582
+        "bytes": 337546
       }
     ],
     "role": "gallery-evidence",
@@ -6133,68 +3434,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/lock-running.png",
     "width": 1280,
     "height": 601,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-running/320.avif",
-        "width": 320,
-        "bytes": 4075
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-running/480.avif",
-        "width": 480,
-        "bytes": 8608
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-running/640.avif",
-        "width": 640,
-        "bytes": 14343
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-running/768.avif",
-        "width": 768,
-        "bytes": 19461
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-running/960.avif",
-        "width": 960,
-        "bytes": 28697
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/lock-running/1280.avif",
-        "width": 1280,
-        "bytes": 49669
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/lock-running/320.webp",
         "width": 320,
-        "bytes": 4806
+        "bytes": 36896
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-running/480.webp",
         "width": 480,
-        "bytes": 11100
+        "bytes": 75110
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-running/640.webp",
         "width": 640,
-        "bytes": 18582
+        "bytes": 122520
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-running/768.webp",
         "width": 768,
-        "bytes": 24802
+        "bytes": 168050
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-running/960.webp",
         "width": 960,
-        "bytes": 36552
+        "bytes": 243250
       },
       {
         "src": "/media/generated/responsive/media/portfolio/lock-running/1280.webp",
         "width": 1280,
-        "bytes": 62932
+        "bytes": 343498
       }
     ],
     "role": "gallery-evidence",
@@ -6204,78 +3474,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/nrsc-2026-enhanced-unet-post-conference.jpg",
     "width": 1600,
     "height": 1066,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/320.avif",
-        "width": 320,
-        "bytes": 5887
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/480.avif",
-        "width": 480,
-        "bytes": 9762
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/640.avif",
-        "width": 640,
-        "bytes": 15237
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/768.avif",
-        "width": 768,
-        "bytes": 18351
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/960.avif",
-        "width": 960,
-        "bytes": 24497
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/1280.avif",
-        "width": 1280,
-        "bytes": 34429
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/1600.avif",
-        "width": 1600,
-        "bytes": 48634
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/320.webp",
         "width": 320,
-        "bytes": 7330
+        "bytes": 58372
       },
       {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/480.webp",
         "width": 480,
-        "bytes": 13070
+        "bytes": 109900
       },
       {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/640.webp",
         "width": 640,
-        "bytes": 19330
+        "bytes": 171408
       },
       {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/768.webp",
         "width": 768,
-        "bytes": 24520
+        "bytes": 224806
       },
       {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/960.webp",
         "width": 960,
-        "bytes": 31988
+        "bytes": 306500
       },
       {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/1280.webp",
         "width": 1280,
-        "bytes": 45132
+        "bytes": 485516
       },
       {
         "src": "/media/generated/responsive/media/portfolio/nrsc-2026-enhanced-unet-post-conference/1600.webp",
         "width": 1600,
-        "bytes": 60322
+        "bytes": 582248
       }
     ],
     "role": "gallery-evidence",
@@ -6285,88 +3519,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/agribot/cover.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/320.avif",
-        "width": 320,
-        "bytes": 4599
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/480.avif",
-        "width": 480,
-        "bytes": 7938
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/640.avif",
-        "width": 640,
-        "bytes": 11861
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/768.avif",
-        "width": 768,
-        "bytes": 15532
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/960.avif",
-        "width": 960,
-        "bytes": 21718
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/1280.avif",
-        "width": 1280,
-        "bytes": 31506
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/1600.avif",
-        "width": 1600,
-        "bytes": 43043
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/1672.avif",
-        "width": 1672,
-        "bytes": 51083
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/320.webp",
         "width": 320,
-        "bytes": 5112
+        "bytes": 55228
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/480.webp",
         "width": 480,
-        "bytes": 9424
+        "bytes": 106732
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/640.webp",
         "width": 640,
-        "bytes": 14724
+        "bytes": 168214
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/768.webp",
         "width": 768,
-        "bytes": 18996
+        "bytes": 223852
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/960.webp",
         "width": 960,
-        "bytes": 26482
+        "bytes": 291192
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/1280.webp",
         "width": 1280,
-        "bytes": 38680
+        "bytes": 454178
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/1600.webp",
         "width": 1600,
-        "bytes": 51728
+        "bytes": 634184
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/cover/1672.webp",
         "width": 1672,
-        "bytes": 61610
+        "bytes": 631582
       }
     ],
     "role": "project-cover",
@@ -6376,88 +3569,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/agribot/ui-1.webp",
     "width": 2048,
     "height": 1152,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/320.avif",
-        "width": 320,
-        "bytes": 2932
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/480.avif",
-        "width": 480,
-        "bytes": 5075
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/640.avif",
-        "width": 640,
-        "bytes": 7806
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/768.avif",
-        "width": 768,
-        "bytes": 10567
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/960.avif",
-        "width": 960,
-        "bytes": 13544
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/1280.avif",
-        "width": 1280,
-        "bytes": 19633
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/1600.avif",
-        "width": 1600,
-        "bytes": 26612
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/2048.avif",
-        "width": 2048,
-        "bytes": 35036
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/320.webp",
         "width": 320,
-        "bytes": 3576
+        "bytes": 25694
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/480.webp",
         "width": 480,
-        "bytes": 6314
+        "bytes": 47988
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/640.webp",
         "width": 640,
-        "bytes": 9470
+        "bytes": 74938
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/768.webp",
         "width": 768,
-        "bytes": 13080
+        "bytes": 96286
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/960.webp",
         "width": 960,
-        "bytes": 17330
+        "bytes": 136040
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/1280.webp",
         "width": 1280,
-        "bytes": 25622
+        "bytes": 197218
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/1600.webp",
         "width": 1600,
-        "bytes": 32558
+        "bytes": 284922
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-1/2048.webp",
         "width": 2048,
-        "bytes": 47522
+        "bytes": 393938
       }
     ],
     "role": "interface-screenshot",
@@ -6467,88 +3619,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/agribot/ui-2.webp",
     "width": 2048,
     "height": 1152,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/320.avif",
-        "width": 320,
-        "bytes": 3017
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/480.avif",
-        "width": 480,
-        "bytes": 4890
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/640.avif",
-        "width": 640,
-        "bytes": 7087
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/768.avif",
-        "width": 768,
-        "bytes": 9602
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/960.avif",
-        "width": 960,
-        "bytes": 12745
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/1280.avif",
-        "width": 1280,
-        "bytes": 17022
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/1600.avif",
-        "width": 1600,
-        "bytes": 21268
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/2048.avif",
-        "width": 2048,
-        "bytes": 31500
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/320.webp",
         "width": 320,
-        "bytes": 3302
+        "bytes": 23812
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/480.webp",
         "width": 480,
-        "bytes": 5888
+        "bytes": 42992
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/640.webp",
         "width": 640,
-        "bytes": 8748
+        "bytes": 67176
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/768.webp",
         "width": 768,
-        "bytes": 11466
+        "bytes": 86874
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/960.webp",
         "width": 960,
-        "bytes": 14726
+        "bytes": 119222
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/1280.webp",
         "width": 1280,
-        "bytes": 21348
+        "bytes": 174122
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/1600.webp",
         "width": 1600,
-        "bytes": 28810
+        "bytes": 252566
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-2/2048.webp",
         "width": 2048,
-        "bytes": 41332
+        "bytes": 355946
       }
     ],
     "role": "interface-screenshot",
@@ -6558,88 +3669,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/agribot/ui-3.webp",
     "width": 2048,
     "height": 1152,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/320.avif",
-        "width": 320,
-        "bytes": 2114
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/480.avif",
-        "width": 480,
-        "bytes": 3653
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/640.avif",
-        "width": 640,
-        "bytes": 5067
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/768.avif",
-        "width": 768,
-        "bytes": 6861
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/960.avif",
-        "width": 960,
-        "bytes": 9754
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/1280.avif",
-        "width": 1280,
-        "bytes": 14090
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/1600.avif",
-        "width": 1600,
-        "bytes": 18967
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/2048.avif",
-        "width": 2048,
-        "bytes": 28220
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/320.webp",
         "width": 320,
-        "bytes": 2360
+        "bytes": 23942
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/480.webp",
         "width": 480,
-        "bytes": 4000
+        "bytes": 43602
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/640.webp",
         "width": 640,
-        "bytes": 5996
+        "bytes": 66574
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/768.webp",
         "width": 768,
-        "bytes": 7824
+        "bytes": 82868
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/960.webp",
         "width": 960,
-        "bytes": 10852
+        "bytes": 114282
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/1280.webp",
         "width": 1280,
-        "bytes": 16266
+        "bytes": 163084
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/1600.webp",
         "width": 1600,
-        "bytes": 22878
+        "bytes": 250222
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-3/2048.webp",
         "width": 2048,
-        "bytes": 34518
+        "bytes": 335606
       }
     ],
     "role": "interface-screenshot",
@@ -6649,88 +3719,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/agribot/ui-4.webp",
     "width": 2048,
     "height": 1152,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/320.avif",
-        "width": 320,
-        "bytes": 5125
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/480.avif",
-        "width": 480,
-        "bytes": 9016
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/640.avif",
-        "width": 640,
-        "bytes": 13125
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/768.avif",
-        "width": 768,
-        "bytes": 17318
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/960.avif",
-        "width": 960,
-        "bytes": 23416
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/1280.avif",
-        "width": 1280,
-        "bytes": 34787
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/1600.avif",
-        "width": 1600,
-        "bytes": 43749
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/2048.avif",
-        "width": 2048,
-        "bytes": 65290
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/320.webp",
         "width": 320,
-        "bytes": 7166
+        "bytes": 40698
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/480.webp",
         "width": 480,
-        "bytes": 12634
+        "bytes": 76046
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/640.webp",
         "width": 640,
-        "bytes": 18140
+        "bytes": 120568
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/768.webp",
         "width": 768,
-        "bytes": 23780
+        "bytes": 158624
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/960.webp",
         "width": 960,
-        "bytes": 31666
+        "bytes": 224592
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/1280.webp",
         "width": 1280,
-        "bytes": 46756
+        "bytes": 339992
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/1600.webp",
         "width": 1600,
-        "bytes": 61912
+        "bytes": 499616
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/agribot/ui-4/2048.webp",
         "width": 2048,
-        "bytes": 90852
+        "bytes": 723978
       }
     ],
     "role": "interface-screenshot",
@@ -6740,88 +3769,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/aqua-sync/cover-asl-v1.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/320.avif",
-        "width": 320,
-        "bytes": 6614
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/480.avif",
-        "width": 480,
-        "bytes": 12133
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/640.avif",
-        "width": 640,
-        "bytes": 18897
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/768.avif",
-        "width": 768,
-        "bytes": 24381
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/960.avif",
-        "width": 960,
-        "bytes": 33851
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/1280.avif",
-        "width": 1280,
-        "bytes": 51189
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/1600.avif",
-        "width": 1600,
-        "bytes": 71435
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/1672.avif",
-        "width": 1672,
-        "bytes": 86458
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/320.webp",
         "width": 320,
-        "bytes": 9994
+        "bytes": 72228
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/480.webp",
         "width": 480,
-        "bytes": 18798
+        "bytes": 147420
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/640.webp",
         "width": 640,
-        "bytes": 29204
+        "bytes": 248998
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/768.webp",
         "width": 768,
-        "bytes": 38190
+        "bytes": 342070
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/960.webp",
         "width": 960,
-        "bytes": 54002
+        "bytes": 475414
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/1280.webp",
         "width": 1280,
-        "bytes": 81480
+        "bytes": 778336
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/1600.webp",
         "width": 1600,
-        "bytes": 107788
+        "bytes": 1109398
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/cover-asl-v1/1672.webp",
         "width": 1672,
-        "bytes": 139496
+        "bytes": 1191676
       }
     ],
     "role": "project-cover",
@@ -6831,28 +3819,17 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/aqua-sync/demo-poster.webp",
     "width": 478,
     "height": 850,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/demo-poster/320.avif",
-        "width": 320,
-        "bytes": 8308
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/demo-poster/478.avif",
-        "width": 478,
-        "bytes": 15487
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/demo-poster/320.webp",
         "width": 320,
-        "bytes": 10948
+        "bytes": 87980
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/demo-poster/478.webp",
         "width": 478,
-        "bytes": 21622
+        "bytes": 162164
       }
     ],
     "role": "gallery-evidence",
@@ -6862,78 +3839,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/aqua-sync/photos-1.webp",
     "width": 1599,
     "height": 899,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/320.avif",
-        "width": 320,
-        "bytes": 8592
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/480.avif",
-        "width": 480,
-        "bytes": 16012
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/640.avif",
-        "width": 640,
-        "bytes": 23705
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/768.avif",
-        "width": 768,
-        "bytes": 30771
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/960.avif",
-        "width": 960,
-        "bytes": 41264
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/1280.avif",
-        "width": 1280,
-        "bytes": 60706
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/1599.avif",
-        "width": 1599,
-        "bytes": 94956
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/320.webp",
         "width": 320,
-        "bytes": 13804
+        "bytes": 85044
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/480.webp",
         "width": 480,
-        "bytes": 24796
+        "bytes": 171540
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/640.webp",
         "width": 640,
-        "bytes": 37836
+        "bytes": 286188
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/768.webp",
         "width": 768,
-        "bytes": 47884
+        "bytes": 387126
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/960.webp",
         "width": 960,
-        "bytes": 64186
+        "bytes": 541216
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/1280.webp",
         "width": 1280,
-        "bytes": 89820
+        "bytes": 859276
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/aqua-sync/photos-1/1599.webp",
         "width": 1599,
-        "bytes": 129282
+        "bytes": 1207008
       }
     ],
     "role": "gallery-evidence",
@@ -6943,88 +3884,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/autonomous-car/cover.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/320.avif",
-        "width": 320,
-        "bytes": 5171
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/480.avif",
-        "width": 480,
-        "bytes": 9435
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/640.avif",
-        "width": 640,
-        "bytes": 14561
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/768.avif",
-        "width": 768,
-        "bytes": 19089
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/960.avif",
-        "width": 960,
-        "bytes": 26312
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/1280.avif",
-        "width": 1280,
-        "bytes": 38628
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/1600.avif",
-        "width": 1600,
-        "bytes": 52918
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/1672.avif",
-        "width": 1672,
-        "bytes": 63018
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/320.webp",
         "width": 320,
-        "bytes": 7178
+        "bytes": 60382
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/480.webp",
         "width": 480,
-        "bytes": 13480
+        "bytes": 115740
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/640.webp",
         "width": 640,
-        "bytes": 20746
+        "bytes": 185132
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/768.webp",
         "width": 768,
-        "bytes": 27200
+        "bytes": 245648
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/960.webp",
         "width": 960,
-        "bytes": 37860
+        "bytes": 331632
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/1280.webp",
         "width": 1280,
-        "bytes": 55238
+        "bytes": 533582
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/1600.webp",
         "width": 1600,
-        "bytes": 74140
+        "bytes": 756790
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/cover/1672.webp",
         "width": 1672,
-        "bytes": 88716
+        "bytes": 786882
       }
     ],
     "role": "project-cover",
@@ -7034,68 +3934,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/autonomous-car/photos-1.webp",
     "width": 1280,
     "height": 960,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/320.avif",
-        "width": 320,
-        "bytes": 9108
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/480.avif",
-        "width": 480,
-        "bytes": 15701
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/640.avif",
-        "width": 640,
-        "bytes": 24100
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/768.avif",
-        "width": 768,
-        "bytes": 29667
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/960.avif",
-        "width": 960,
-        "bytes": 39585
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/1280.avif",
-        "width": 1280,
-        "bytes": 65473
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/320.webp",
         "width": 320,
-        "bytes": 13618
+        "bytes": 87846
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/480.webp",
         "width": 480,
-        "bytes": 23806
+        "bytes": 177234
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/640.webp",
         "width": 640,
-        "bytes": 37014
+        "bytes": 272412
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/768.webp",
         "width": 768,
-        "bytes": 43526
+        "bytes": 368876
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/960.webp",
         "width": 960,
-        "bytes": 58606
+        "bytes": 542084
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/autonomous-car/photos-1/1280.webp",
         "width": 1280,
-        "bytes": 90190
+        "bytes": 841054
       }
     ],
     "role": "gallery-evidence",
@@ -7105,88 +3974,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/fall-detection/cover-asl-v1.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/320.avif",
-        "width": 320,
-        "bytes": 6226
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/480.avif",
-        "width": 480,
-        "bytes": 10701
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/640.avif",
-        "width": 640,
-        "bytes": 16025
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/768.avif",
-        "width": 768,
-        "bytes": 20463
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/960.avif",
-        "width": 960,
-        "bytes": 28851
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/1280.avif",
-        "width": 1280,
-        "bytes": 42816
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/1600.avif",
-        "width": 1600,
-        "bytes": 57840
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/1672.avif",
-        "width": 1672,
-        "bytes": 71115
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/320.webp",
         "width": 320,
-        "bytes": 7858
+        "bytes": 61852
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/480.webp",
         "width": 480,
-        "bytes": 14864
+        "bytes": 122894
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/640.webp",
         "width": 640,
-        "bytes": 23702
+        "bytes": 201254
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/768.webp",
         "width": 768,
-        "bytes": 31060
+        "bytes": 273086
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/960.webp",
         "width": 960,
-        "bytes": 43584
+        "bytes": 376366
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/1280.webp",
         "width": 1280,
-        "bytes": 64688
+        "bytes": 610992
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/1600.webp",
         "width": 1600,
-        "bytes": 87796
+        "bytes": 865536
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/cover-asl-v1/1672.webp",
         "width": 1672,
-        "bytes": 114248
+        "bytes": 916402
       }
     ],
     "role": "project-cover",
@@ -7196,78 +4024,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/fall-detection/photos-1.webp",
     "width": 1440,
     "height": 2536,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/320.avif",
-        "width": 320,
-        "bytes": 11755
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/480.avif",
-        "width": 480,
-        "bytes": 19990
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/640.avif",
-        "width": 640,
-        "bytes": 27116
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/768.avif",
-        "width": 768,
-        "bytes": 32633
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/960.avif",
-        "width": 960,
-        "bytes": 43118
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/1280.avif",
-        "width": 1280,
-        "bytes": 58677
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/1440.avif",
-        "width": 1440,
-        "bytes": 71091
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/320.webp",
         "width": 320,
-        "bytes": 16416
+        "bytes": 162256
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/480.webp",
         "width": 480,
-        "bytes": 25624
+        "bytes": 291362
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/640.webp",
         "width": 640,
-        "bytes": 35204
+        "bytes": 436894
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/768.webp",
         "width": 768,
-        "bytes": 42648
+        "bytes": 525832
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/960.webp",
         "width": 960,
-        "bytes": 54618
+        "bytes": 704242
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/1280.webp",
         "width": 1280,
-        "bytes": 73550
+        "bytes": 1122418
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-1/1440.webp",
         "width": 1440,
-        "bytes": 82170
+        "bytes": 1187730
       }
     ],
     "role": "gallery-evidence",
@@ -7277,68 +4069,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/fall-detection/photos-2.webp",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/320.avif",
-        "width": 320,
-        "bytes": 6219
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/480.avif",
-        "width": 480,
-        "bytes": 11749
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/640.avif",
-        "width": 640,
-        "bytes": 19398
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/768.avif",
-        "width": 768,
-        "bytes": 24081
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/960.avif",
-        "width": 960,
-        "bytes": 33240
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/1280.avif",
-        "width": 1280,
-        "bytes": 54695
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/320.webp",
         "width": 320,
-        "bytes": 8918
+        "bytes": 57732
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/480.webp",
         "width": 480,
-        "bytes": 16276
+        "bytes": 109718
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/640.webp",
         "width": 640,
-        "bytes": 27290
+        "bytes": 160434
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/768.webp",
         "width": 768,
-        "bytes": 32774
+        "bytes": 222560
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/960.webp",
         "width": 960,
-        "bytes": 45124
+        "bytes": 306262
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/photos-2/1280.webp",
         "width": 1280,
-        "bytes": 66674
+        "bytes": 480984
       }
     ],
     "role": "gallery-evidence",
@@ -7348,88 +4109,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/fall-detection/ui-1.webp",
     "width": 2048,
     "height": 1152,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/320.avif",
-        "width": 320,
-        "bytes": 2806
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/480.avif",
-        "width": 480,
-        "bytes": 5140
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/640.avif",
-        "width": 640,
-        "bytes": 7799
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/768.avif",
-        "width": 768,
-        "bytes": 10527
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/960.avif",
-        "width": 960,
-        "bytes": 13308
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/1280.avif",
-        "width": 1280,
-        "bytes": 20321
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/1600.avif",
-        "width": 1600,
-        "bytes": 26222
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/2048.avif",
-        "width": 2048,
-        "bytes": 39399
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/320.webp",
         "width": 320,
-        "bytes": 3042
+        "bytes": 41626
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/480.webp",
         "width": 480,
-        "bytes": 5492
+        "bytes": 78174
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/640.webp",
         "width": 640,
-        "bytes": 8048
+        "bytes": 124626
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/768.webp",
         "width": 768,
-        "bytes": 10690
+        "bytes": 155094
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/960.webp",
         "width": 960,
-        "bytes": 14476
+        "bytes": 223564
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/1280.webp",
         "width": 1280,
-        "bytes": 21688
+        "bytes": 300148
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/1600.webp",
         "width": 1600,
-        "bytes": 29338
+        "bytes": 446538
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/fall-detection/ui-1/2048.webp",
         "width": 2048,
-        "bytes": 44794
+        "bytes": 599990
       }
     ],
     "role": "interface-screenshot",
@@ -7439,88 +4159,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/firewire/cover-asl-v1.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/320.avif",
-        "width": 320,
-        "bytes": 2668
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/480.avif",
-        "width": 480,
-        "bytes": 4686
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/640.avif",
-        "width": 640,
-        "bytes": 6990
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/768.avif",
-        "width": 768,
-        "bytes": 9378
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/960.avif",
-        "width": 960,
-        "bytes": 12565
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/1280.avif",
-        "width": 1280,
-        "bytes": 17546
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/1600.avif",
-        "width": 1600,
-        "bytes": 24444
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/1672.avif",
-        "width": 1672,
-        "bytes": 27991
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/320.webp",
         "width": 320,
-        "bytes": 3392
+        "bytes": 29822
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/480.webp",
         "width": 480,
-        "bytes": 5788
+        "bytes": 53116
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/640.webp",
         "width": 640,
-        "bytes": 8526
+        "bytes": 80864
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/768.webp",
         "width": 768,
-        "bytes": 11036
+        "bytes": 106808
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/960.webp",
         "width": 960,
-        "bytes": 15334
+        "bytes": 129148
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/1280.webp",
         "width": 1280,
-        "bytes": 21756
+        "bytes": 200694
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/1600.webp",
         "width": 1600,
-        "bytes": 29244
+        "bytes": 286530
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/cover-asl-v1/1672.webp",
         "width": 1672,
-        "bytes": 35486
+        "bytes": 255360
       }
     ],
     "role": "project-cover",
@@ -7530,68 +4209,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/firewire/original-dashboard.png",
     "width": 1171,
     "height": 658,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/320.avif",
-        "width": 320,
-        "bytes": 2961
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/480.avif",
-        "width": 480,
-        "bytes": 5031
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/640.avif",
-        "width": 640,
-        "bytes": 7263
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/768.avif",
-        "width": 768,
-        "bytes": 9551
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/960.avif",
-        "width": 960,
-        "bytes": 12852
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/1171.avif",
-        "width": 1171,
-        "bytes": 17001
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/320.webp",
         "width": 320,
-        "bytes": 3598
+        "bytes": 16666
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/480.webp",
         "width": 480,
-        "bytes": 5610
+        "bytes": 28134
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/640.webp",
         "width": 640,
-        "bytes": 8464
+        "bytes": 45444
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/768.webp",
         "width": 768,
-        "bytes": 10532
+        "bytes": 60122
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/960.webp",
         "width": 960,
-        "bytes": 13988
+        "bytes": 85518
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/firewire/original-dashboard/1171.webp",
         "width": 1171,
-        "bytes": 19392
+        "bytes": 109054
       }
     ],
     "role": "interface-screenshot",
@@ -7601,88 +4249,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/mediamate/cover.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/320.avif",
-        "width": 320,
-        "bytes": 3086
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/480.avif",
-        "width": 480,
-        "bytes": 4618
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/640.avif",
-        "width": 640,
-        "bytes": 6850
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/768.avif",
-        "width": 768,
-        "bytes": 8571
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/960.avif",
-        "width": 960,
-        "bytes": 10858
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/1280.avif",
-        "width": 1280,
-        "bytes": 15594
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/1600.avif",
-        "width": 1600,
-        "bytes": 20018
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/1672.avif",
-        "width": 1672,
-        "bytes": 23802
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/320.webp",
         "width": 320,
-        "bytes": 3456
+        "bytes": 38032
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/480.webp",
         "width": 480,
-        "bytes": 5414
+        "bytes": 69272
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/640.webp",
         "width": 640,
-        "bytes": 7834
+        "bytes": 105520
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/768.webp",
         "width": 768,
-        "bytes": 9760
+        "bytes": 138436
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/960.webp",
         "width": 960,
-        "bytes": 13138
+        "bytes": 168420
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/1280.webp",
         "width": 1280,
-        "bytes": 18468
+        "bytes": 255868
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/1600.webp",
         "width": 1600,
-        "bytes": 24742
+        "bytes": 350188
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/cover/1672.webp",
         "width": 1672,
-        "bytes": 28378
+        "bytes": 327324
       }
     ],
     "role": "project-cover",
@@ -7692,78 +4299,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/mediamate/photos-1.webp",
     "width": 1536,
     "height": 1024,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/320.avif",
-        "width": 320,
-        "bytes": 2535
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/480.avif",
-        "width": 480,
-        "bytes": 4135
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/640.avif",
-        "width": 640,
-        "bytes": 5792
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/768.avif",
-        "width": 768,
-        "bytes": 7599
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/960.avif",
-        "width": 960,
-        "bytes": 9188
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/1280.avif",
-        "width": 1280,
-        "bytes": 13270
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/1536.avif",
-        "width": 1536,
-        "bytes": 19456
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/320.webp",
         "width": 320,
-        "bytes": 2732
+        "bytes": 26932
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/480.webp",
         "width": 480,
-        "bytes": 4598
+        "bytes": 49068
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/640.webp",
         "width": 640,
-        "bytes": 6492
+        "bytes": 75034
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/768.webp",
         "width": 768,
-        "bytes": 8860
+        "bytes": 80464
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/960.webp",
         "width": 960,
-        "bytes": 11092
+        "bytes": 116606
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/1280.webp",
         "width": 1280,
-        "bytes": 15932
+        "bytes": 190170
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/photos-1/1536.webp",
         "width": 1536,
-        "bytes": 22598
+        "bytes": 218034
       }
     ],
     "role": "gallery-evidence",
@@ -7773,78 +4344,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/mediamate/ui-1.webp",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/320.avif",
-        "width": 320,
-        "bytes": 4356
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/480.avif",
-        "width": 480,
-        "bytes": 7453
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/640.avif",
-        "width": 640,
-        "bytes": 10956
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/768.avif",
-        "width": 768,
-        "bytes": 13972
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/960.avif",
-        "width": 960,
-        "bytes": 19139
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/1280.avif",
-        "width": 1280,
-        "bytes": 27712
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/1600.avif",
-        "width": 1600,
-        "bytes": 44537
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/320.webp",
         "width": 320,
-        "bytes": 5686
+        "bytes": 42538
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/480.webp",
         "width": 480,
-        "bytes": 9580
+        "bytes": 84288
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/640.webp",
         "width": 640,
-        "bytes": 14018
+        "bytes": 143780
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/768.webp",
         "width": 768,
-        "bytes": 17662
+        "bytes": 196010
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/960.webp",
         "width": 960,
-        "bytes": 23548
+        "bytes": 260348
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/1280.webp",
         "width": 1280,
-        "bytes": 34656
+        "bytes": 423662
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-1/1600.webp",
         "width": 1600,
-        "bytes": 53970
+        "bytes": 606938
       }
     ],
     "role": "interface-screenshot",
@@ -7854,78 +4389,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/mediamate/ui-2.webp",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/320.avif",
-        "width": 320,
-        "bytes": 3690
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/480.avif",
-        "width": 480,
-        "bytes": 5878
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/640.avif",
-        "width": 640,
-        "bytes": 8764
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/768.avif",
-        "width": 768,
-        "bytes": 10865
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/960.avif",
-        "width": 960,
-        "bytes": 15144
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/1280.avif",
-        "width": 1280,
-        "bytes": 21328
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/1600.avif",
-        "width": 1600,
-        "bytes": 32907
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/320.webp",
         "width": 320,
-        "bytes": 4422
+        "bytes": 39598
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/480.webp",
         "width": 480,
-        "bytes": 7174
+        "bytes": 77224
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/640.webp",
         "width": 640,
-        "bytes": 10608
+        "bytes": 128210
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/768.webp",
         "width": 768,
-        "bytes": 13068
+        "bytes": 171752
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/960.webp",
         "width": 960,
-        "bytes": 17368
+        "bytes": 219498
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/1280.webp",
         "width": 1280,
-        "bytes": 24008
+        "bytes": 349546
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-2/1600.webp",
         "width": 1600,
-        "bytes": 36640
+        "bytes": 450368
       }
     ],
     "role": "interface-screenshot",
@@ -7935,78 +4434,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/mediamate/ui-3.webp",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/320.avif",
-        "width": 320,
-        "bytes": 4010
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/480.avif",
-        "width": 480,
-        "bytes": 6915
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/640.avif",
-        "width": 640,
-        "bytes": 10132
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/768.avif",
-        "width": 768,
-        "bytes": 13014
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/960.avif",
-        "width": 960,
-        "bytes": 17696
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/1280.avif",
-        "width": 1280,
-        "bytes": 26045
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/1600.avif",
-        "width": 1600,
-        "bytes": 42519
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/320.webp",
         "width": 320,
-        "bytes": 5630
+        "bytes": 38274
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/480.webp",
         "width": 480,
-        "bytes": 9516
+        "bytes": 76432
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/640.webp",
         "width": 640,
-        "bytes": 13812
+        "bytes": 125950
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/768.webp",
         "width": 768,
-        "bytes": 17420
+        "bytes": 171292
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/960.webp",
         "width": 960,
-        "bytes": 23398
+        "bytes": 227332
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/1280.webp",
         "width": 1280,
-        "bytes": 31912
+        "bytes": 365412
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/mediamate/ui-3/1600.webp",
         "width": 1600,
-        "bytes": 50162
+        "bytes": 484758
       }
     ],
     "role": "interface-screenshot",
@@ -8016,88 +4479,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/muscle-monitoring/cover-asl-v1.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/320.avif",
-        "width": 320,
-        "bytes": 2968
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/480.avif",
-        "width": 480,
-        "bytes": 6078
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/640.avif",
-        "width": 640,
-        "bytes": 10386
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/768.avif",
-        "width": 768,
-        "bytes": 14838
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/960.avif",
-        "width": 960,
-        "bytes": 22971
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/1280.avif",
-        "width": 1280,
-        "bytes": 37677
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/1600.avif",
-        "width": 1600,
-        "bytes": 53423
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/1672.avif",
-        "width": 1672,
-        "bytes": 68680
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/320.webp",
         "width": 320,
-        "bytes": 3994
+        "bytes": 47274
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/480.webp",
         "width": 480,
-        "bytes": 8512
+        "bytes": 97216
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/640.webp",
         "width": 640,
-        "bytes": 14988
+        "bytes": 163032
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/768.webp",
         "width": 768,
-        "bytes": 21294
+        "bytes": 223444
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/960.webp",
         "width": 960,
-        "bytes": 31862
+        "bytes": 310576
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/1280.webp",
         "width": 1280,
-        "bytes": 51754
+        "bytes": 502252
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/1600.webp",
         "width": 1600,
-        "bytes": 71520
+        "bytes": 720088
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/cover-asl-v1/1672.webp",
         "width": 1672,
-        "bytes": 97148
+        "bytes": 781598
       }
     ],
     "role": "project-cover",
@@ -8107,78 +4529,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/muscle-monitoring/photos-1.webp",
     "width": 1600,
     "height": 1200,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/320.avif",
-        "width": 320,
-        "bytes": 6723
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/480.avif",
-        "width": 480,
-        "bytes": 15416
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/640.avif",
-        "width": 640,
-        "bytes": 27784
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/768.avif",
-        "width": 768,
-        "bytes": 39681
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/960.avif",
-        "width": 960,
-        "bytes": 64298
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/1280.avif",
-        "width": 1280,
-        "bytes": 107164
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/1600.avif",
-        "width": 1600,
-        "bytes": 189137
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/320.webp",
         "width": 320,
-        "bytes": 10160
+        "bytes": 88942
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/480.webp",
         "width": 480,
-        "bytes": 22344
+        "bytes": 187052
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/640.webp",
         "width": 640,
-        "bytes": 41106
+        "bytes": 317314
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/768.webp",
         "width": 768,
-        "bytes": 59196
+        "bytes": 440038
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/960.webp",
         "width": 960,
-        "bytes": 94326
+        "bytes": 613224
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/1280.webp",
         "width": 1280,
-        "bytes": 151714
+        "bytes": 1003870
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-1/1600.webp",
         "width": 1600,
-        "bytes": 245292
+        "bytes": 1485118
       }
     ],
     "role": "gallery-evidence",
@@ -8188,78 +4574,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/muscle-monitoring/photos-2.webp",
     "width": 1600,
     "height": 1200,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/320.avif",
-        "width": 320,
-        "bytes": 5470
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/480.avif",
-        "width": 480,
-        "bytes": 9963
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/640.avif",
-        "width": 640,
-        "bytes": 15723
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/768.avif",
-        "width": 768,
-        "bytes": 20541
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/960.avif",
-        "width": 960,
-        "bytes": 28181
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/1280.avif",
-        "width": 1280,
-        "bytes": 42152
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/1600.avif",
-        "width": 1600,
-        "bytes": 63054
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/320.webp",
         "width": 320,
-        "bytes": 6976
+        "bytes": 82688
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/480.webp",
         "width": 480,
-        "bytes": 12402
+        "bytes": 161030
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/640.webp",
         "width": 640,
-        "bytes": 18380
+        "bytes": 259378
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/768.webp",
         "width": 768,
-        "bytes": 23694
+        "bytes": 348100
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/960.webp",
         "width": 960,
-        "bytes": 31812
+        "bytes": 438090
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/1280.webp",
         "width": 1280,
-        "bytes": 45280
+        "bytes": 675876
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/photos-2/1600.webp",
         "width": 1600,
-        "bytes": 64706
+        "bytes": 845768
       }
     ],
     "role": "gallery-evidence",
@@ -8269,88 +4619,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/muscle-monitoring/ui-1.webp",
     "width": 2048,
     "height": 1152,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/320.avif",
-        "width": 320,
-        "bytes": 2723
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/480.avif",
-        "width": 480,
-        "bytes": 4683
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/640.avif",
-        "width": 640,
-        "bytes": 6844
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/768.avif",
-        "width": 768,
-        "bytes": 8977
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/960.avif",
-        "width": 960,
-        "bytes": 11931
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/1280.avif",
-        "width": 1280,
-        "bytes": 17871
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/1600.avif",
-        "width": 1600,
-        "bytes": 23747
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/2048.avif",
-        "width": 2048,
-        "bytes": 36514
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/320.webp",
         "width": 320,
-        "bytes": 2960
+        "bytes": 20372
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/480.webp",
         "width": 480,
-        "bytes": 5358
+        "bytes": 37294
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/640.webp",
         "width": 640,
-        "bytes": 8048
+        "bytes": 59228
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/768.webp",
         "width": 768,
-        "bytes": 10606
+        "bytes": 74028
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/960.webp",
         "width": 960,
-        "bytes": 14658
+        "bytes": 106260
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/1280.webp",
         "width": 1280,
-        "bytes": 22254
+        "bytes": 159950
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/1600.webp",
         "width": 1600,
-        "bytes": 29894
+        "bytes": 233510
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/muscle-monitoring/ui-1/2048.webp",
         "width": 2048,
-        "bytes": 46120
+        "bytes": 335750
       }
     ],
     "role": "interface-screenshot",
@@ -8360,88 +4669,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/plant-care/cover.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/320.avif",
-        "width": 320,
-        "bytes": 3715
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/480.avif",
-        "width": 480,
-        "bytes": 6487
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/640.avif",
-        "width": 640,
-        "bytes": 9978
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/768.avif",
-        "width": 768,
-        "bytes": 13249
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/960.avif",
-        "width": 960,
-        "bytes": 18510
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/1280.avif",
-        "width": 1280,
-        "bytes": 28721
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/1600.avif",
-        "width": 1600,
-        "bytes": 40665
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/1672.avif",
-        "width": 1672,
-        "bytes": 48827
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/320.webp",
         "width": 320,
-        "bytes": 4612
+        "bytes": 54072
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/480.webp",
         "width": 480,
-        "bytes": 8152
+        "bytes": 107470
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/640.webp",
         "width": 640,
-        "bytes": 12522
+        "bytes": 175444
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/768.webp",
         "width": 768,
-        "bytes": 16690
+        "bytes": 235772
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/960.webp",
         "width": 960,
-        "bytes": 23524
+        "bytes": 314592
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/1280.webp",
         "width": 1280,
-        "bytes": 35516
+        "bytes": 491250
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/1600.webp",
         "width": 1600,
-        "bytes": 48852
+        "bytes": 690280
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/cover/1672.webp",
         "width": 1672,
-        "bytes": 59898
+        "bytes": 716000
       }
     ],
     "role": "project-cover",
@@ -8451,68 +4719,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/plant-care/photos-1.webp",
     "width": 1200,
     "height": 1600,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/320.avif",
-        "width": 320,
-        "bytes": 6921
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/480.avif",
-        "width": 480,
-        "bytes": 13753
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/640.avif",
-        "width": 640,
-        "bytes": 22641
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/768.avif",
-        "width": 768,
-        "bytes": 29926
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/960.avif",
-        "width": 960,
-        "bytes": 42573
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/1200.avif",
-        "width": 1200,
-        "bytes": 70766
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/320.webp",
         "width": 320,
-        "bytes": 8564
+        "bytes": 121218
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/480.webp",
         "width": 480,
-        "bytes": 17192
+        "bytes": 245722
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/640.webp",
         "width": 640,
-        "bytes": 28106
+        "bytes": 366540
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/768.webp",
         "width": 768,
-        "bytes": 37682
+        "bytes": 490458
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/960.webp",
         "width": 960,
-        "bytes": 51666
+        "bytes": 690294
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-1/1200.webp",
         "width": 1200,
-        "bytes": 83314
+        "bytes": 930474
       }
     ],
     "role": "gallery-evidence",
@@ -8522,68 +4759,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/plant-care/photos-2.webp",
     "width": 1200,
     "height": 1600,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/320.avif",
-        "width": 320,
-        "bytes": 8025
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/480.avif",
-        "width": 480,
-        "bytes": 17146
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/640.avif",
-        "width": 640,
-        "bytes": 29792
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/768.avif",
-        "width": 768,
-        "bytes": 40066
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/960.avif",
-        "width": 960,
-        "bytes": 61337
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/1200.avif",
-        "width": 1200,
-        "bytes": 108831
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/320.webp",
         "width": 320,
-        "bytes": 10820
+        "bytes": 131400
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/480.webp",
         "width": 480,
-        "bytes": 23844
+        "bytes": 274136
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/640.webp",
         "width": 640,
-        "bytes": 40940
+        "bytes": 414370
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/768.webp",
         "width": 768,
-        "bytes": 57188
+        "bytes": 559344
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/960.webp",
         "width": 960,
-        "bytes": 81886
+        "bytes": 808590
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-2/1200.webp",
         "width": 1200,
-        "bytes": 134422
+        "bytes": 1160516
       }
     ],
     "role": "gallery-evidence",
@@ -8593,68 +4799,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/plant-care/photos-3.webp",
     "width": 1200,
     "height": 1600,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/320.avif",
-        "width": 320,
-        "bytes": 9750
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/480.avif",
-        "width": 480,
-        "bytes": 21009
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/640.avif",
-        "width": 640,
-        "bytes": 35421
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/768.avif",
-        "width": 768,
-        "bytes": 49002
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/960.avif",
-        "width": 960,
-        "bytes": 74849
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/1200.avif",
-        "width": 1200,
-        "bytes": 133815
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/320.webp",
         "width": 320,
-        "bytes": 12936
+        "bytes": 144996
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/480.webp",
         "width": 480,
-        "bytes": 29362
+        "bytes": 301538
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/640.webp",
         "width": 640,
-        "bytes": 50274
+        "bytes": 470740
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/768.webp",
         "width": 768,
-        "bytes": 70836
+        "bytes": 640794
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/960.webp",
         "width": 960,
-        "bytes": 104986
+        "bytes": 925282
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-3/1200.webp",
         "width": 1200,
-        "bytes": 177668
+        "bytes": 1354006
       }
     ],
     "role": "gallery-evidence",
@@ -8664,68 +4839,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/plant-care/photos-4.webp",
     "width": 1200,
     "height": 1600,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/320.avif",
-        "width": 320,
-        "bytes": 11512
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/480.avif",
-        "width": 480,
-        "bytes": 20881
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/640.avif",
-        "width": 640,
-        "bytes": 32122
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/768.avif",
-        "width": 768,
-        "bytes": 41139
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/960.avif",
-        "width": 960,
-        "bytes": 57045
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/1200.avif",
-        "width": 1200,
-        "bytes": 89759
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/320.webp",
         "width": 320,
-        "bytes": 16490
+        "bytes": 154296
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/480.webp",
         "width": 480,
-        "bytes": 28872
+        "bytes": 310192
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/640.webp",
         "width": 640,
-        "bytes": 42756
+        "bytes": 470686
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/768.webp",
         "width": 768,
-        "bytes": 54566
+        "bytes": 633668
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/960.webp",
         "width": 960,
-        "bytes": 73282
+        "bytes": 918292
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-4/1200.webp",
         "width": 1200,
-        "bytes": 108230
+        "bytes": 1265576
       }
     ],
     "role": "gallery-evidence",
@@ -8735,68 +4879,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/plant-care/photos-5.webp",
     "width": 1200,
     "height": 1600,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/320.avif",
-        "width": 320,
-        "bytes": 8086
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/480.avif",
-        "width": 480,
-        "bytes": 17589
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/640.avif",
-        "width": 640,
-        "bytes": 30462
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/768.avif",
-        "width": 768,
-        "bytes": 41743
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/960.avif",
-        "width": 960,
-        "bytes": 63141
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/1200.avif",
-        "width": 1200,
-        "bytes": 114357
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/320.webp",
         "width": 320,
-        "bytes": 11754
+        "bytes": 138232
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/480.webp",
         "width": 480,
-        "bytes": 24982
+        "bytes": 287514
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/640.webp",
         "width": 640,
-        "bytes": 41940
+        "bytes": 437960
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/768.webp",
         "width": 768,
-        "bytes": 57628
+        "bytes": 593018
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/960.webp",
         "width": 960,
-        "bytes": 81042
+        "bytes": 856184
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/photos-5/1200.webp",
         "width": 1200,
-        "bytes": 134866
+        "bytes": 1220746
       }
     ],
     "role": "gallery-evidence",
@@ -8806,68 +4919,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/plant-care/ui-1.webp",
     "width": 1035,
     "height": 583,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/320.avif",
-        "width": 320,
-        "bytes": 2918
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/480.avif",
-        "width": 480,
-        "bytes": 5160
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/640.avif",
-        "width": 640,
-        "bytes": 7519
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/768.avif",
-        "width": 768,
-        "bytes": 10134
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/960.avif",
-        "width": 960,
-        "bytes": 12527
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/1035.avif",
-        "width": 1035,
-        "bytes": 15273
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/320.webp",
         "width": 320,
-        "bytes": 3532
+        "bytes": 16220
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/480.webp",
         "width": 480,
-        "bytes": 5956
+        "bytes": 31294
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/640.webp",
         "width": 640,
-        "bytes": 8472
+        "bytes": 45932
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/768.webp",
         "width": 768,
-        "bytes": 10678
+        "bytes": 62414
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/960.webp",
         "width": 960,
-        "bytes": 13996
+        "bytes": 90520
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-1/1035.webp",
         "width": 1035,
-        "bytes": 17802
+        "bytes": 94174
       }
     ],
     "role": "interface-screenshot",
@@ -8877,78 +4959,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/plant-care/ui-2.webp",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/320.avif",
-        "width": 320,
-        "bytes": 3232
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/480.avif",
-        "width": 480,
-        "bytes": 5977
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/640.avif",
-        "width": 640,
-        "bytes": 9625
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/768.avif",
-        "width": 768,
-        "bytes": 12981
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/960.avif",
-        "width": 960,
-        "bytes": 17459
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/1280.avif",
-        "width": 1280,
-        "bytes": 24266
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/1600.avif",
-        "width": 1600,
-        "bytes": 34243
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/320.webp",
         "width": 320,
-        "bytes": 4390
+        "bytes": 33332
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/480.webp",
         "width": 480,
-        "bytes": 7646
+        "bytes": 63882
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/640.webp",
         "width": 640,
-        "bytes": 11356
+        "bytes": 102542
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/768.webp",
         "width": 768,
-        "bytes": 14968
+        "bytes": 137532
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/960.webp",
         "width": 960,
-        "bytes": 20348
+        "bytes": 179004
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/1280.webp",
         "width": 1280,
-        "bytes": 28190
+        "bytes": 291218
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/plant-care/ui-2/1600.webp",
         "width": 1600,
-        "bytes": 43222
+        "bytes": 395564
       }
     ],
     "role": "interface-screenshot",
@@ -8958,88 +5004,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/robotics-covers/human-follower-asl-v5.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/320.avif",
-        "width": 320,
-        "bytes": 4258
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/480.avif",
-        "width": 480,
-        "bytes": 7528
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/640.avif",
-        "width": 640,
-        "bytes": 11738
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/768.avif",
-        "width": 768,
-        "bytes": 15147
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/960.avif",
-        "width": 960,
-        "bytes": 21006
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/1280.avif",
-        "width": 1280,
-        "bytes": 31537
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/1600.avif",
-        "width": 1600,
-        "bytes": 43530
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/1672.avif",
-        "width": 1672,
-        "bytes": 46301
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/320.webp",
         "width": 320,
-        "bytes": 5140
+        "bytes": 55050
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/480.webp",
         "width": 480,
-        "bytes": 9378
+        "bytes": 116584
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/640.webp",
         "width": 640,
-        "bytes": 14768
+        "bytes": 205506
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/768.webp",
         "width": 768,
-        "bytes": 19624
+        "bytes": 291146
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/960.webp",
         "width": 960,
-        "bytes": 27456
+        "bytes": 451470
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/1280.webp",
         "width": 1280,
-        "bytes": 40834
+        "bytes": 784576
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/1600.webp",
         "width": 1600,
-        "bytes": 55560
+        "bytes": 1154834
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/human-follower-asl-v5/1672.webp",
         "width": 1672,
-        "bytes": 59088
+        "bytes": 1196072
       }
     ],
     "role": "project-cover",
@@ -9049,88 +5054,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/robotics-covers/megasumo-asl-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/320.avif",
-        "width": 320,
-        "bytes": 4326
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/480.avif",
-        "width": 480,
-        "bytes": 7899
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/640.avif",
-        "width": 640,
-        "bytes": 12805
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/768.avif",
-        "width": 768,
-        "bytes": 17108
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/960.avif",
-        "width": 960,
-        "bytes": 25948
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/1280.avif",
-        "width": 1280,
-        "bytes": 44282
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/1600.avif",
-        "width": 1600,
-        "bytes": 63565
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/1672.avif",
-        "width": 1672,
-        "bytes": 69982
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/320.webp",
         "width": 320,
-        "bytes": 5826
+        "bytes": 56148
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/480.webp",
         "width": 480,
-        "bytes": 11318
+        "bytes": 123746
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/640.webp",
         "width": 640,
-        "bytes": 18576
+        "bytes": 223170
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/768.webp",
         "width": 768,
-        "bytes": 25556
+        "bytes": 321418
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/960.webp",
         "width": 960,
-        "bytes": 38090
+        "bytes": 510622
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/1280.webp",
         "width": 1280,
-        "bytes": 63208
+        "bytes": 939756
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/1600.webp",
         "width": 1600,
-        "bytes": 89552
+        "bytes": 1391150
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/megasumo-asl-v1/1672.webp",
         "width": 1672,
-        "bytes": 96972
+        "bytes": 1478588
       }
     ],
     "role": "project-cover",
@@ -9140,88 +5104,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/320.avif",
-        "width": 320,
-        "bytes": 3790
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/480.avif",
-        "width": 480,
-        "bytes": 7265
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/640.avif",
-        "width": 640,
-        "bytes": 12068
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/768.avif",
-        "width": 768,
-        "bytes": 16861
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/960.avif",
-        "width": 960,
-        "bytes": 25174
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/1280.avif",
-        "width": 1280,
-        "bytes": 41028
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/1600.avif",
-        "width": 1600,
-        "bytes": 58293
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/1672.avif",
-        "width": 1672,
-        "bytes": 62977
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/320.webp",
         "width": 320,
-        "bytes": 4476
+        "bytes": 52236
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/480.webp",
         "width": 480,
-        "bytes": 9336
+        "bytes": 117202
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/640.webp",
         "width": 640,
-        "bytes": 15924
+        "bytes": 212780
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/768.webp",
         "width": 768,
-        "bytes": 22284
+        "bytes": 309320
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/960.webp",
         "width": 960,
-        "bytes": 33964
+        "bytes": 495072
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/1280.webp",
         "width": 1280,
-        "bytes": 55980
+        "bytes": 896828
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/1600.webp",
         "width": 1600,
-        "bytes": 79392
+        "bytes": 1357622
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-asl-v1/1672.webp",
         "width": 1672,
-        "bytes": 84474
+        "bytes": 1447554
       }
     ],
     "role": "project-cover",
@@ -9231,18 +5154,12 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/robotics-covers/rocket-league-original-left.png",
     "width": 291,
     "height": 434,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-original-left/291.avif",
-        "width": 291,
-        "bytes": 9564
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/robotics-covers/rocket-league-original-left/291.webp",
         "width": 291,
-        "bytes": 12474
+        "bytes": 102728
       }
     ],
     "role": "project-cover",
@@ -9252,88 +5169,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/cover.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/320.avif",
-        "width": 320,
-        "bytes": 3110
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/480.avif",
-        "width": 480,
-        "bytes": 5272
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/640.avif",
-        "width": 640,
-        "bytes": 8275
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/768.avif",
-        "width": 768,
-        "bytes": 10831
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/960.avif",
-        "width": 960,
-        "bytes": 14688
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/1280.avif",
-        "width": 1280,
-        "bytes": 22593
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/1600.avif",
-        "width": 1600,
-        "bytes": 30815
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/1672.avif",
-        "width": 1672,
-        "bytes": 37664
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/320.webp",
         "width": 320,
-        "bytes": 3886
+        "bytes": 51340
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/480.webp",
         "width": 480,
-        "bytes": 6706
+        "bytes": 100278
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/640.webp",
         "width": 640,
-        "bytes": 10006
+        "bytes": 159078
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/768.webp",
         "width": 768,
-        "bytes": 12950
+        "bytes": 211098
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/960.webp",
         "width": 960,
-        "bytes": 18000
+        "bytes": 271998
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/1280.webp",
         "width": 1280,
-        "bytes": 27174
+        "bytes": 425572
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/1600.webp",
         "width": 1600,
-        "bytes": 37158
+        "bytes": 589738
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/cover/1672.webp",
         "width": 1672,
-        "bytes": 44328
+        "bytes": 592256
       }
     ],
     "role": "project-cover",
@@ -9343,68 +5219,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/photos-1.webp",
     "width": 1280,
     "height": 960,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/320.avif",
-        "width": 320,
-        "bytes": 10723
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/480.avif",
-        "width": 480,
-        "bytes": 19257
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/640.avif",
-        "width": 640,
-        "bytes": 30053
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/768.avif",
-        "width": 768,
-        "bytes": 36674
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/960.avif",
-        "width": 960,
-        "bytes": 50412
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/1280.avif",
-        "width": 1280,
-        "bytes": 82321
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/320.webp",
         "width": 320,
-        "bytes": 17022
+        "bytes": 99122
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/480.webp",
         "width": 480,
-        "bytes": 31528
+        "bytes": 208906
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/640.webp",
         "width": 640,
-        "bytes": 48304
+        "bytes": 335368
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/768.webp",
         "width": 768,
-        "bytes": 56998
+        "bytes": 449882
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/960.webp",
         "width": 960,
-        "bytes": 76922
+        "bytes": 666802
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-1/1280.webp",
         "width": 1280,
-        "bytes": 113912
+        "bytes": 1071798
       }
     ],
     "role": "gallery-evidence",
@@ -9414,68 +5259,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/photos-2.webp",
     "width": 1280,
     "height": 960,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/320.avif",
-        "width": 320,
-        "bytes": 13709
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/480.avif",
-        "width": 480,
-        "bytes": 25645
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/640.avif",
-        "width": 640,
-        "bytes": 42139
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/768.avif",
-        "width": 768,
-        "bytes": 51508
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/960.avif",
-        "width": 960,
-        "bytes": 72603
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/1280.avif",
-        "width": 1280,
-        "bytes": 123435
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/320.webp",
         "width": 320,
-        "bytes": 23530
+        "bytes": 117998
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/480.webp",
         "width": 480,
-        "bytes": 46132
+        "bytes": 248236
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/640.webp",
         "width": 640,
-        "bytes": 75706
+        "bytes": 411186
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/768.webp",
         "width": 768,
-        "bytes": 92778
+        "bytes": 546794
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/960.webp",
         "width": 960,
-        "bytes": 127982
+        "bytes": 813552
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-2/1280.webp",
         "width": 1280,
-        "bytes": 191344
+        "bytes": 1339578
       }
     ],
     "role": "gallery-evidence",
@@ -9485,68 +5299,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/photos-3.webp",
     "width": 1280,
     "height": 960,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/320.avif",
-        "width": 320,
-        "bytes": 5231
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/480.avif",
-        "width": 480,
-        "bytes": 8805
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/640.avif",
-        "width": 640,
-        "bytes": 13783
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/768.avif",
-        "width": 768,
-        "bytes": 16719
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/960.avif",
-        "width": 960,
-        "bytes": 22246
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/1280.avif",
-        "width": 1280,
-        "bytes": 35044
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/320.webp",
         "width": 320,
-        "bytes": 6442
+        "bytes": 74298
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/480.webp",
         "width": 480,
-        "bytes": 10734
+        "bytes": 138954
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/640.webp",
         "width": 640,
-        "bytes": 15922
+        "bytes": 194902
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/768.webp",
         "width": 768,
-        "bytes": 18814
+        "bytes": 263750
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/960.webp",
         "width": 960,
-        "bytes": 25376
+        "bytes": 359570
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-3/1280.webp",
         "width": 1280,
-        "bytes": 37952
+        "bytes": 513674
       }
     ],
     "role": "gallery-evidence",
@@ -9556,68 +5339,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/photos-4.webp",
     "width": 1280,
     "height": 960,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/320.avif",
-        "width": 320,
-        "bytes": 5260
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/480.avif",
-        "width": 480,
-        "bytes": 8431
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/640.avif",
-        "width": 640,
-        "bytes": 13180
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/768.avif",
-        "width": 768,
-        "bytes": 15968
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/960.avif",
-        "width": 960,
-        "bytes": 21291
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/1280.avif",
-        "width": 1280,
-        "bytes": 33186
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/320.webp",
         "width": 320,
-        "bytes": 6334
+        "bytes": 68828
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/480.webp",
         "width": 480,
-        "bytes": 10390
+        "bytes": 129420
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/640.webp",
         "width": 640,
-        "bytes": 15534
+        "bytes": 181202
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/768.webp",
         "width": 768,
-        "bytes": 18332
+        "bytes": 244754
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/960.webp",
         "width": 960,
-        "bytes": 24546
+        "bytes": 334788
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-4/1280.webp",
         "width": 1280,
-        "bytes": 36852
+        "bytes": 481466
       }
     ],
     "role": "gallery-evidence",
@@ -9627,68 +5379,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/photos-5.webp",
     "width": 1280,
     "height": 960,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/320.avif",
-        "width": 320,
-        "bytes": 4541
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/480.avif",
-        "width": 480,
-        "bytes": 7571
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/640.avif",
-        "width": 640,
-        "bytes": 11533
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/768.avif",
-        "width": 768,
-        "bytes": 13490
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/960.avif",
-        "width": 960,
-        "bytes": 18117
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/1280.avif",
-        "width": 1280,
-        "bytes": 26759
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/320.webp",
         "width": 320,
-        "bytes": 5466
+        "bytes": 60438
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/480.webp",
         "width": 480,
-        "bytes": 8672
+        "bytes": 105754
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/640.webp",
         "width": 640,
-        "bytes": 12480
+        "bytes": 137628
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/768.webp",
         "width": 768,
-        "bytes": 14784
+        "bytes": 191242
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/960.webp",
         "width": 960,
-        "bytes": 19534
+        "bytes": 252522
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/photos-5/1280.webp",
         "width": 1280,
-        "bytes": 26776
+        "bytes": 346934
       }
     ],
     "role": "gallery-evidence",
@@ -9698,48 +5419,27 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/ui-1.webp",
     "width": 720,
     "height": 1600,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/320.avif",
-        "width": 320,
-        "bytes": 9660
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/480.avif",
-        "width": 480,
-        "bytes": 16499
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/640.avif",
-        "width": 640,
-        "bytes": 21808
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/720.avif",
-        "width": 720,
-        "bytes": 26834
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/320.webp",
         "width": 320,
-        "bytes": 11084
+        "bytes": 72400
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/480.webp",
         "width": 480,
-        "bytes": 17280
+        "bytes": 120220
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/640.webp",
         "width": 640,
-        "bytes": 23252
+        "bytes": 195684
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-1/720.webp",
         "width": 720,
-        "bytes": 28346
+        "bytes": 223920
       }
     ],
     "role": "interface-screenshot",
@@ -9749,48 +5449,27 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/ui-2.webp",
     "width": 720,
     "height": 1600,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/320.avif",
-        "width": 320,
-        "bytes": 11082
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/480.avif",
-        "width": 480,
-        "bytes": 18683
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/640.avif",
-        "width": 640,
-        "bytes": 26655
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/720.avif",
-        "width": 720,
-        "bytes": 32429
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/320.webp",
         "width": 320,
-        "bytes": 11812
+        "bytes": 33052
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/480.webp",
         "width": 480,
-        "bytes": 20270
+        "bytes": 69306
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/640.webp",
         "width": 640,
-        "bytes": 28874
+        "bytes": 139712
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-2/720.webp",
         "width": 720,
-        "bytes": 36170
+        "bytes": 141232
       }
     ],
     "role": "interface-screenshot",
@@ -9800,48 +5479,27 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/ui-3.webp",
     "width": 720,
     "height": 1600,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/320.avif",
-        "width": 320,
-        "bytes": 13471
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/480.avif",
-        "width": 480,
-        "bytes": 22851
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/640.avif",
-        "width": 640,
-        "bytes": 31678
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/720.avif",
-        "width": 720,
-        "bytes": 39638
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/320.webp",
         "width": 320,
-        "bytes": 16234
+        "bytes": 39598
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/480.webp",
         "width": 480,
-        "bytes": 27822
+        "bytes": 84612
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/640.webp",
         "width": 640,
-        "bytes": 39024
+        "bytes": 142854
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-3/720.webp",
         "width": 720,
-        "bytes": 49004
+        "bytes": 176328
       }
     ],
     "role": "interface-screenshot",
@@ -9851,48 +5509,27 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/smart-mosque/ui-4.webp",
     "width": 720,
     "height": 1600,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/320.avif",
-        "width": 320,
-        "bytes": 9854
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/480.avif",
-        "width": 480,
-        "bytes": 17225
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/640.avif",
-        "width": 640,
-        "bytes": 23726
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/720.avif",
-        "width": 720,
-        "bytes": 27997
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/320.webp",
         "width": 320,
-        "bytes": 10686
+        "bytes": 28878
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/480.webp",
         "width": 480,
-        "bytes": 18702
+        "bytes": 59064
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/640.webp",
         "width": 640,
-        "bytes": 25462
+        "bytes": 123144
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/smart-mosque/ui-4/720.webp",
         "width": 720,
-        "bytes": 31880
+        "bytes": 123978
       }
     ],
     "role": "interface-screenshot",
@@ -9902,88 +5539,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/toolguard/cover-asl-v1.webp",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/320.avif",
-        "width": 320,
-        "bytes": 3809
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/480.avif",
-        "width": 480,
-        "bytes": 7644
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/640.avif",
-        "width": 640,
-        "bytes": 13533
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/768.avif",
-        "width": 768,
-        "bytes": 19465
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/960.avif",
-        "width": 960,
-        "bytes": 29210
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/1280.avif",
-        "width": 1280,
-        "bytes": 49688
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/1600.avif",
-        "width": 1600,
-        "bytes": 72301
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/1672.avif",
-        "width": 1672,
-        "bytes": 92072
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/320.webp",
         "width": 320,
-        "bytes": 4742
+        "bytes": 54770
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/480.webp",
         "width": 480,
-        "bytes": 10216
+        "bytes": 112276
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/640.webp",
         "width": 640,
-        "bytes": 17730
+        "bytes": 187068
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/768.webp",
         "width": 768,
-        "bytes": 25604
+        "bytes": 256876
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/960.webp",
         "width": 960,
-        "bytes": 39314
+        "bytes": 358664
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/1280.webp",
         "width": 1280,
-        "bytes": 63922
+        "bytes": 592624
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/1600.webp",
         "width": 1600,
-        "bytes": 91596
+        "bytes": 862678
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/cover-asl-v1/1672.webp",
         "width": 1672,
-        "bytes": 133576
+        "bytes": 951968
       }
     ],
     "role": "project-cover",
@@ -9993,78 +5589,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/toolguard/photos-1.webp",
     "width": 1600,
     "height": 1200,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/320.avif",
-        "width": 320,
-        "bytes": 6767
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/480.avif",
-        "width": 480,
-        "bytes": 14382
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/640.avif",
-        "width": 640,
-        "bytes": 24841
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/768.avif",
-        "width": 768,
-        "bytes": 35029
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/960.avif",
-        "width": 960,
-        "bytes": 51925
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/1280.avif",
-        "width": 1280,
-        "bytes": 84192
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/1600.avif",
-        "width": 1600,
-        "bytes": 140647
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/320.webp",
         "width": 320,
-        "bytes": 10478
+        "bytes": 91596
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/480.webp",
         "width": 480,
-        "bytes": 20982
+        "bytes": 191974
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/640.webp",
         "width": 640,
-        "bytes": 36392
+        "bytes": 322252
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/768.webp",
         "width": 768,
-        "bytes": 48368
+        "bytes": 443344
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/960.webp",
         "width": 960,
-        "bytes": 72082
+        "bytes": 609774
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/1280.webp",
         "width": 1280,
-        "bytes": 109636
+        "bytes": 979068
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-1/1600.webp",
         "width": 1600,
-        "bytes": 165590
+        "bytes": 1385966
       }
     ],
     "role": "gallery-evidence",
@@ -10074,78 +5634,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/toolguard/photos-2.webp",
     "width": 1600,
     "height": 1200,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/320.avif",
-        "width": 320,
-        "bytes": 7890
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/480.avif",
-        "width": 480,
-        "bytes": 16036
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/640.avif",
-        "width": 640,
-        "bytes": 27163
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/768.avif",
-        "width": 768,
-        "bytes": 36095
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/960.avif",
-        "width": 960,
-        "bytes": 53527
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/1280.avif",
-        "width": 1280,
-        "bytes": 83438
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/1600.avif",
-        "width": 1600,
-        "bytes": 137429
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/320.webp",
         "width": 320,
-        "bytes": 13062
+        "bytes": 99576
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/480.webp",
         "width": 480,
-        "bytes": 25466
+        "bytes": 204126
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/640.webp",
         "width": 640,
-        "bytes": 40670
+        "bytes": 337666
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/768.webp",
         "width": 768,
-        "bytes": 54348
+        "bytes": 459258
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/960.webp",
         "width": 960,
-        "bytes": 76472
+        "bytes": 635932
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/1280.webp",
         "width": 1280,
-        "bytes": 112878
+        "bytes": 1007348
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/photos-2/1600.webp",
         "width": 1600,
-        "bytes": 165524
+        "bytes": 1420736
       }
     ],
     "role": "gallery-evidence",
@@ -10155,88 +5679,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/toolguard/ui-1.webp",
     "width": 2048,
     "height": 1152,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/320.avif",
-        "width": 320,
-        "bytes": 4014
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/480.avif",
-        "width": 480,
-        "bytes": 7931
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/640.avif",
-        "width": 640,
-        "bytes": 11095
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/768.avif",
-        "width": 768,
-        "bytes": 15405
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/960.avif",
-        "width": 960,
-        "bytes": 21561
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/1280.avif",
-        "width": 1280,
-        "bytes": 30438
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/1600.avif",
-        "width": 1600,
-        "bytes": 40169
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/2048.avif",
-        "width": 2048,
-        "bytes": 60566
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/320.webp",
         "width": 320,
-        "bytes": 5520
+        "bytes": 40790
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/480.webp",
         "width": 480,
-        "bytes": 9848
+        "bytes": 75634
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/640.webp",
         "width": 640,
-        "bytes": 14246
+        "bytes": 120324
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/768.webp",
         "width": 768,
-        "bytes": 18622
+        "bytes": 152350
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/960.webp",
         "width": 960,
-        "bytes": 25448
+        "bytes": 218914
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/1280.webp",
         "width": 1280,
-        "bytes": 36692
+        "bytes": 307198
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/1600.webp",
         "width": 1600,
-        "bytes": 48384
+        "bytes": 449624
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/toolguard/ui-1/2048.webp",
         "width": 2048,
-        "bytes": 71340
+        "bytes": 618244
       }
     ],
     "role": "interface-screenshot",
@@ -10246,68 +5729,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/wireless-rov/cover-asl-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/320.avif",
-        "width": 320,
-        "bytes": 5532
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/480.avif",
-        "width": 480,
-        "bytes": 9931
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/640.avif",
-        "width": 640,
-        "bytes": 15105
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/768.avif",
-        "width": 768,
-        "bytes": 19579
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/960.avif",
-        "width": 960,
-        "bytes": 27102
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/1280.avif",
-        "width": 1280,
-        "bytes": 44789
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/320.webp",
         "width": 320,
-        "bytes": 7240
+        "bytes": 60182
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/480.webp",
         "width": 480,
-        "bytes": 13420
+        "bytes": 126146
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/640.webp",
         "width": 640,
-        "bytes": 20746
+        "bytes": 222386
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/768.webp",
         "width": 768,
-        "bytes": 27032
+        "bytes": 318708
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/960.webp",
         "width": 960,
-        "bytes": 38760
+        "bytes": 495528
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/cover-asl-v1/1280.webp",
         "width": 1280,
-        "bytes": 63824
+        "bytes": 294440
       }
     ],
     "role": "project-cover",
@@ -10317,68 +5769,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/wireless-rov/prototype.webp",
     "width": 1024,
     "height": 1024,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/320.avif",
-        "width": 320,
-        "bytes": 7021
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/480.avif",
-        "width": 480,
-        "bytes": 12763
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/640.avif",
-        "width": 640,
-        "bytes": 20009
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/768.avif",
-        "width": 768,
-        "bytes": 27018
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/960.avif",
-        "width": 960,
-        "bytes": 40150
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/1024.avif",
-        "width": 1024,
-        "bytes": 60473
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/320.webp",
         "width": 320,
-        "bytes": 10040
+        "bytes": 80908
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/480.webp",
         "width": 480,
-        "bytes": 19454
+        "bytes": 171396
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/640.webp",
         "width": 640,
-        "bytes": 31976
+        "bytes": 272348
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/768.webp",
         "width": 768,
-        "bytes": 45816
+        "bytes": 386722
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/960.webp",
         "width": 960,
-        "bytes": 62684
+        "bytes": 573988
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/prototype/1024.webp",
         "width": 1024,
-        "bytes": 110212
+        "bytes": 667598
       }
     ],
     "role": "gallery-evidence",
@@ -10388,78 +5809,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/portfolio/showcase/wireless-rov/solidworks-design.webp",
     "width": 1600,
     "height": 915,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/320.avif",
-        "width": 320,
-        "bytes": 4738
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/480.avif",
-        "width": 480,
-        "bytes": 7359
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/640.avif",
-        "width": 640,
-        "bytes": 10536
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/768.avif",
-        "width": 768,
-        "bytes": 13506
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/960.avif",
-        "width": 960,
-        "bytes": 16985
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/1280.avif",
-        "width": 1280,
-        "bytes": 23316
-      },
-      {
-        "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/1600.avif",
-        "width": 1600,
-        "bytes": 34154
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/320.webp",
         "width": 320,
-        "bytes": 6466
+        "bytes": 39726
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/480.webp",
         "width": 480,
-        "bytes": 11338
+        "bytes": 70874
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/640.webp",
         "width": 640,
-        "bytes": 16340
+        "bytes": 106314
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/768.webp",
         "width": 768,
-        "bytes": 20694
+        "bytes": 138826
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/960.webp",
         "width": 960,
-        "bytes": 27418
+        "bytes": 173042
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/1280.webp",
         "width": 1280,
-        "bytes": 37154
+        "bytes": 282386
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/wireless-rov/solidworks-design/1600.webp",
         "width": 1600,
-        "bytes": 55792
+        "bytes": 348994
       }
     ],
     "role": "gallery-evidence",
@@ -10469,78 +5854,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/design/aes-hex-calculator-instrument-v2.png",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/240.avif",
-        "width": 240,
-        "bytes": 2660
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/320.avif",
-        "width": 320,
-        "bytes": 2679
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/480.avif",
-        "width": 480,
-        "bytes": 4941
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/640.avif",
-        "width": 640,
-        "bytes": 6468
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/960.avif",
-        "width": 960,
-        "bytes": 9666
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1280.avif",
-        "width": 1280,
-        "bytes": 14651
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1600.avif",
-        "width": 1600,
-        "bytes": 23836
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/240.webp",
         "width": 240,
-        "bytes": 2494
+        "bytes": 23404
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 3548
+        "bytes": 39944
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/480.webp",
         "width": 480,
-        "bytes": 5918
+        "bytes": 84216
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 8518
+        "bytes": 153614
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 14060
+        "bytes": 367058
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 20618
+        "bytes": 685872
       },
       {
         "src": "/media/generated/responsive/media/tools/design/aes-hex-calculator-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 31556
+        "bytes": 426306
       }
     ],
     "role": "tool-cover",
@@ -10549,58 +5898,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4166
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5558
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 9165
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 13054
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 29462
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4996
+          "bytes": 47346
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7236
+          "bytes": 79976
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 12226
+          "bytes": 180658
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 18512
+          "bytes": 324222
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/aes-hex-calculator-instrument-v2-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 37296
+          "bytes": 276472
         }
       ]
     }
@@ -10609,78 +5932,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/design/affine-cipher-instrument-v2.png",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/240.avif",
-        "width": 240,
-        "bytes": 1888
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/320.avif",
-        "width": 320,
-        "bytes": 2047
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/480.avif",
-        "width": 480,
-        "bytes": 3610
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/640.avif",
-        "width": 640,
-        "bytes": 4117
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/960.avif",
-        "width": 960,
-        "bytes": 7030
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1280.avif",
-        "width": 1280,
-        "bytes": 9770
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1600.avif",
-        "width": 1600,
-        "bytes": 17076
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/240.webp",
         "width": 240,
-        "bytes": 1612
+        "bytes": 17348
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 2246
+        "bytes": 29538
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/480.webp",
         "width": 480,
-        "bytes": 3578
+        "bytes": 66342
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 5008
+        "bytes": 117694
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 8222
+        "bytes": 278848
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 12552
+        "bytes": 513518
       },
       {
         "src": "/media/generated/responsive/media/tools/design/affine-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 22688
+        "bytes": 300226
       }
     ],
     "role": "tool-cover",
@@ -10689,58 +5976,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3514
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4812
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8095
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 12092
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 22455
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4300
+          "bytes": 44482
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6350
+          "bytes": 77390
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 11266
+          "bytes": 176838
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 17112
+          "bytes": 319712
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/affine-cipher-instrument-v2-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 32188
+          "bytes": 306516
         }
       ]
     }
@@ -10749,78 +6010,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/design/hash-generator-instrument-v2.png",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/240.avif",
-        "width": 240,
-        "bytes": 2548
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/320.avif",
-        "width": 320,
-        "bytes": 2958
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/480.avif",
-        "width": 480,
-        "bytes": 4842
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/640.avif",
-        "width": 640,
-        "bytes": 6935
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/960.avif",
-        "width": 960,
-        "bytes": 10893
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1280.avif",
-        "width": 1280,
-        "bytes": 16032
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1600.avif",
-        "width": 1600,
-        "bytes": 25913
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/240.webp",
         "width": 240,
-        "bytes": 3160
+        "bytes": 23774
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 4510
+        "bytes": 39380
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/480.webp",
         "width": 480,
-        "bytes": 7412
+        "bytes": 84532
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 10346
+        "bytes": 151250
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 16962
+        "bytes": 360472
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 24372
+        "bytes": 648862
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hash-generator-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 37436
+        "bytes": 302272
       }
     ],
     "role": "tool-cover",
@@ -10829,58 +6054,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/hash-generator-instrument-v2-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4336
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 6170
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 10638
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 16022
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 35360
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5888
+          "bytes": 52838
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 8830
+          "bytes": 89154
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 15684
+          "bytes": 202628
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 25234
+          "bytes": 366346
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hash-generator-instrument-v2-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 54630
+          "bytes": 268164
         }
       ]
     }
@@ -10889,78 +6088,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/design/hill-cipher-instrument-v2.png",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/240.avif",
-        "width": 240,
-        "bytes": 1902
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/320.avif",
-        "width": 320,
-        "bytes": 2155
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/480.avif",
-        "width": 480,
-        "bytes": 3686
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/640.avif",
-        "width": 640,
-        "bytes": 4502
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/960.avif",
-        "width": 960,
-        "bytes": 7497
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1280.avif",
-        "width": 1280,
-        "bytes": 10736
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1600.avif",
-        "width": 1600,
-        "bytes": 23246
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/240.webp",
         "width": 240,
-        "bytes": 1728
+        "bytes": 19640
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 2374
+        "bytes": 32334
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/480.webp",
         "width": 480,
-        "bytes": 3736
+        "bytes": 70748
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 5092
+        "bytes": 125490
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 8558
+        "bytes": 306078
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 13012
+        "bytes": 568420
       },
       {
         "src": "/media/generated/responsive/media/tools/design/hill-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 24966
+        "bytes": 382226
       }
     ],
     "role": "tool-cover",
@@ -10969,58 +6132,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4197
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5584
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 9592
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 13555
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 23174
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5560
+          "bytes": 50770
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 8134
+          "bytes": 84886
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 13768
+          "bytes": 191818
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 19882
+          "bytes": 340762
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/hill-cipher-instrument-v2-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 35130
+          "bytes": 275290
         }
       ]
     }
@@ -11029,78 +6166,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/design/playfair-cipher-instrument-v2.png",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/240.avif",
-        "width": 240,
-        "bytes": 2081
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/320.avif",
-        "width": 320,
-        "bytes": 2747
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/480.avif",
-        "width": 480,
-        "bytes": 4085
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/640.avif",
-        "width": 640,
-        "bytes": 5656
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/960.avif",
-        "width": 960,
-        "bytes": 9086
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1280.avif",
-        "width": 1280,
-        "bytes": 13544
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1600.avif",
-        "width": 1600,
-        "bytes": 20594
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/240.webp",
         "width": 240,
-        "bytes": 2148
+        "bytes": 20708
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 3218
+        "bytes": 33772
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/480.webp",
         "width": 480,
-        "bytes": 5486
+        "bytes": 77994
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 7982
+        "bytes": 138862
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 13660
+        "bytes": 301244
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 19836
+        "bytes": 517406
       },
       {
         "src": "/media/generated/responsive/media/tools/design/playfair-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 28914
+        "bytes": 301124
       }
     ],
     "role": "tool-cover",
@@ -11109,58 +6210,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4539
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 6320
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 10645
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 15565
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 30000
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 6208
+          "bytes": 55824
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 9142
+          "bytes": 94340
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 15520
+          "bytes": 211294
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 23106
+          "bytes": 380236
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/playfair-cipher-instrument-v2-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 44888
+          "bytes": 249134
         }
       ]
     }
@@ -11169,78 +6244,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/design/transposition-cipher-instrument-v2.png",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/240.avif",
-        "width": 240,
-        "bytes": 2645
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/320.avif",
-        "width": 320,
-        "bytes": 2757
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/480.avif",
-        "width": 480,
-        "bytes": 4795
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/640.avif",
-        "width": 640,
-        "bytes": 6016
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/960.avif",
-        "width": 960,
-        "bytes": 9908
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1280.avif",
-        "width": 1280,
-        "bytes": 13477
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1600.avif",
-        "width": 1600,
-        "bytes": 20406
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/240.webp",
         "width": 240,
-        "bytes": 2584
+        "bytes": 20190
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 3510
+        "bytes": 33014
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/480.webp",
         "width": 480,
-        "bytes": 5672
+        "bytes": 71874
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 8062
+        "bytes": 124558
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 13008
+        "bytes": 291348
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 18852
+        "bytes": 502990
       },
       {
         "src": "/media/generated/responsive/media/tools/design/transposition-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 27478
+        "bytes": 340562
       }
     ],
     "role": "tool-cover",
@@ -11249,58 +6288,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3874
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5225
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 9083
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 13513
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 24748
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4804
+          "bytes": 47890
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7034
+          "bytes": 80644
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 12384
+          "bytes": 184232
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 18642
+          "bytes": 339870
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/transposition-cipher-instrument-v2-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 36230
+          "bytes": 233698
         }
       ]
     }
@@ -11309,78 +6322,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/design/vigenere-cipher-instrument-v2.png",
     "width": 1600,
     "height": 900,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/240.avif",
-        "width": 240,
-        "bytes": 2130
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/320.avif",
-        "width": 320,
-        "bytes": 2073
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/480.avif",
-        "width": 480,
-        "bytes": 3613
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/640.avif",
-        "width": 640,
-        "bytes": 4301
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/960.avif",
-        "width": 960,
-        "bytes": 7289
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1280.avif",
-        "width": 1280,
-        "bytes": 9903
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1600.avif",
-        "width": 1600,
-        "bytes": 16959
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/240.webp",
         "width": 240,
-        "bytes": 1804
+        "bytes": 16626
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/320.webp",
         "width": 320,
-        "bytes": 2422
+        "bytes": 23400
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/480.webp",
         "width": 480,
-        "bytes": 3884
+        "bytes": 62592
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/640.webp",
         "width": 640,
-        "bytes": 5504
+        "bytes": 106540
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/960.webp",
         "width": 960,
-        "bytes": 8656
+        "bytes": 239440
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1280.webp",
         "width": 1280,
-        "bytes": 12446
+        "bytes": 401816
       },
       {
         "src": "/media/generated/responsive/media/tools/design/vigenere-cipher-instrument-v2/1600.webp",
         "width": 1600,
-        "bytes": 20684
+        "bytes": 324928
       }
     ],
     "role": "tool-cover",
@@ -11389,58 +6366,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3551
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4665
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8048
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 11323
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 21291
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4378
+          "bytes": 43290
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 5988
+          "bytes": 72562
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 9812
+          "bytes": 166558
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 14038
+          "bytes": 307278
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/vigenere-cipher-instrument-v2-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 26826
+          "bytes": 213874
         }
       ]
     }
@@ -11449,88 +6400,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-ai-script-generator-v4.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/240.avif",
-        "width": 240,
-        "bytes": 3907
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/320.avif",
-        "width": 320,
-        "bytes": 6189
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/480.avif",
-        "width": 480,
-        "bytes": 11540
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/640.avif",
-        "width": 640,
-        "bytes": 17202
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/960.avif",
-        "width": 960,
-        "bytes": 30587
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/1280.avif",
-        "width": 1280,
-        "bytes": 48442
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/1600.avif",
-        "width": 1600,
-        "bytes": 67437
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/1672.avif",
-        "width": 1672,
-        "bytes": 72263
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/240.webp",
         "width": 240,
-        "bytes": 5592
+        "bytes": 35440
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/320.webp",
         "width": 320,
-        "bytes": 8682
+        "bytes": 60924
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/480.webp",
         "width": 480,
-        "bytes": 16314
+        "bytes": 130026
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/640.webp",
         "width": 640,
-        "bytes": 25010
+        "bytes": 235720
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/960.webp",
         "width": 960,
-        "bytes": 45174
+        "bytes": 520146
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/1280.webp",
         "width": 1280,
-        "bytes": 68444
+        "bytes": 944458
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/1600.webp",
         "width": 1600,
-        "bytes": 96126
+        "bytes": 1434990
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-ai-script-generator-v4/1672.webp",
         "width": 1672,
-        "bytes": 103258
+        "bytes": 1517934
       }
     ],
     "role": "tool-cover",
@@ -11539,58 +6449,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3170
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 4348
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 7601
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 10750
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 19894
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4572
+          "bytes": 42062
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6486
+          "bytes": 70754
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 10308
+          "bytes": 163050
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 14806
+          "bytes": 296034
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-ai-script-generator-v4-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 26484
+          "bytes": 214280
         }
       ]
     }
@@ -11599,88 +6483,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-battery-estimator-v2.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/240.avif",
-        "width": 240,
-        "bytes": 2750
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/320.avif",
-        "width": 320,
-        "bytes": 4055
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/480.avif",
-        "width": 480,
-        "bytes": 7305
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/640.avif",
-        "width": 640,
-        "bytes": 11320
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/960.avif",
-        "width": 960,
-        "bytes": 22415
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/1280.avif",
-        "width": 1280,
-        "bytes": 37857
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/1600.avif",
-        "width": 1600,
-        "bytes": 56360
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/1672.avif",
-        "width": 1672,
-        "bytes": 61606
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/240.webp",
         "width": 240,
-        "bytes": 3168
+        "bytes": 30680
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/320.webp",
         "width": 320,
-        "bytes": 5062
+        "bytes": 53296
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/480.webp",
         "width": 480,
-        "bytes": 9934
+        "bytes": 119170
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/640.webp",
         "width": 640,
-        "bytes": 15398
+        "bytes": 220382
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/960.webp",
         "width": 960,
-        "bytes": 32548
+        "bytes": 512480
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/1280.webp",
         "width": 1280,
-        "bytes": 55034
+        "bytes": 935690
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/1600.webp",
         "width": 1600,
-        "bytes": 79408
+        "bytes": 1425288
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-battery-estimator-v2/1672.webp",
         "width": 1672,
-        "bytes": 86808
+        "bytes": 1517658
       }
     ],
     "role": "tool-cover",
@@ -11689,58 +6532,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-battery-estimator-v2-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 5792
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 9101
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 17677
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 27269
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 54544
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 7718
+          "bytes": 62724
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 12174
+          "bytes": 106190
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 23540
+          "bytes": 237974
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 38078
+          "bytes": 424048
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-battery-estimator-v2-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 77462
+          "bytes": 296510
         }
       ]
     }
@@ -11749,88 +6566,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-pid-simulator-v4.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/240.avif",
-        "width": 240,
-        "bytes": 3136
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/320.avif",
-        "width": 320,
-        "bytes": 4913
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/480.avif",
-        "width": 480,
-        "bytes": 8234
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/640.avif",
-        "width": 640,
-        "bytes": 12417
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/960.avif",
-        "width": 960,
-        "bytes": 21071
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/1280.avif",
-        "width": 1280,
-        "bytes": 32402
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/1600.avif",
-        "width": 1600,
-        "bytes": 42776
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/1672.avif",
-        "width": 1672,
-        "bytes": 43143
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/240.webp",
         "width": 240,
-        "bytes": 3978
+        "bytes": 28878
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/320.webp",
         "width": 320,
-        "bytes": 5970
+        "bytes": 49426
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/480.webp",
         "width": 480,
-        "bytes": 11128
+        "bytes": 108640
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/640.webp",
         "width": 640,
-        "bytes": 16026
+        "bytes": 199308
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/960.webp",
         "width": 960,
-        "bytes": 28832
+        "bytes": 453402
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/1280.webp",
         "width": 1280,
-        "bytes": 42304
+        "bytes": 827742
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/1600.webp",
         "width": 1600,
-        "bytes": 56732
+        "bytes": 1252590
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-pid-simulator-v4/1672.webp",
         "width": 1672,
-        "bytes": 59784
+        "bytes": 1300650
       }
     ],
     "role": "tool-cover",
@@ -11839,58 +6615,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-pid-simulator-v4-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2508
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3216
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 5017
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 7278
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 13226
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3216
+          "bytes": 35752
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 4650
+          "bytes": 62018
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 7532
+          "bytes": 138954
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 11008
+          "bytes": 252636
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-pid-simulator-v4-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 21124
+          "bytes": 204084
         }
       ]
     }
@@ -11899,68 +6649,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-rf-antenna-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/240.avif",
-        "width": 240,
-        "bytes": 3213
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/320.avif",
-        "width": 320,
-        "bytes": 4645
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/480.avif",
-        "width": 480,
-        "bytes": 8353
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/640.avif",
-        "width": 640,
-        "bytes": 12511
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/960.avif",
-        "width": 960,
-        "bytes": 22925
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/1280.avif",
-        "width": 1280,
-        "bytes": 38677
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/240.webp",
         "width": 240,
-        "bytes": 3884
+        "bytes": 27940
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/320.webp",
         "width": 320,
-        "bytes": 5922
+        "bytes": 46544
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/480.webp",
         "width": 480,
-        "bytes": 10992
+        "bytes": 100520
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/640.webp",
         "width": 640,
-        "bytes": 16616
+        "bytes": 179270
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/960.webp",
         "width": 960,
-        "bytes": 30910
+        "bytes": 403244
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-antenna-v1/1280.webp",
         "width": 1280,
-        "bytes": 50688
+        "bytes": 250306
       }
     ],
     "role": "tool-cover",
@@ -11969,58 +6688,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-rf-antenna-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4251
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 6458
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 11953
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 18181
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 31466
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 6592
+          "bytes": 49410
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 9846
+          "bytes": 80716
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 17480
+          "bytes": 178852
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 26388
+          "bytes": 313852
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-antenna-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 47746
+          "bytes": 323450
         }
       ]
     }
@@ -12029,68 +6722,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-rf-frequency-bands-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/240.avif",
-        "width": 240,
-        "bytes": 3276
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/320.avif",
-        "width": 320,
-        "bytes": 5104
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/480.avif",
-        "width": 480,
-        "bytes": 9414
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/640.avif",
-        "width": 640,
-        "bytes": 14320
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/960.avif",
-        "width": 960,
-        "bytes": 24855
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/1280.avif",
-        "width": 1280,
-        "bytes": 43811
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/240.webp",
         "width": 240,
-        "bytes": 4456
+        "bytes": 33318
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/320.webp",
         "width": 320,
-        "bytes": 6772
+        "bytes": 55956
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/480.webp",
         "width": 480,
-        "bytes": 12168
+        "bytes": 118386
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/640.webp",
         "width": 640,
-        "bytes": 18424
+        "bytes": 213832
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/960.webp",
         "width": 960,
-        "bytes": 34668
+        "bytes": 477930
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-frequency-bands-v1/1280.webp",
         "width": 1280,
-        "bytes": 57884
+        "bytes": 278656
       }
     ],
     "role": "tool-cover",
@@ -12099,58 +6761,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3485
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5026
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 8475
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 12531
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 41350
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4730
+          "bytes": 46796
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7172
+          "bytes": 78340
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 12112
+          "bytes": 181022
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 17756
+          "bytes": 336420
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-frequency-bands-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 41264
+          "bytes": 202582
         }
       ]
     }
@@ -12159,68 +6795,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-rf-multiple-access-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/240.avif",
-        "width": 240,
-        "bytes": 4053
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/320.avif",
-        "width": 320,
-        "bytes": 6254
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/480.avif",
-        "width": 480,
-        "bytes": 11648
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/640.avif",
-        "width": 640,
-        "bytes": 16305
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/960.avif",
-        "width": 960,
-        "bytes": 27749
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/1280.avif",
-        "width": 1280,
-        "bytes": 42823
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/240.webp",
         "width": 240,
-        "bytes": 5422
+        "bytes": 33424
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/320.webp",
         "width": 320,
-        "bytes": 8342
+        "bytes": 54992
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/480.webp",
         "width": 480,
-        "bytes": 15752
+        "bytes": 115730
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/640.webp",
         "width": 640,
-        "bytes": 23166
+        "bytes": 205060
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/960.webp",
         "width": 960,
-        "bytes": 39978
+        "bytes": 443106
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-multiple-access-v1/1280.webp",
         "width": 1280,
-        "bytes": 60386
+        "bytes": 255702
       }
     ],
     "role": "tool-cover",
@@ -12229,58 +6834,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4815
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 6918
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 11755
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 17120
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 31826
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 6240
+          "bytes": 51392
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 9466
+          "bytes": 86468
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 16842
+          "bytes": 194286
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 25110
+          "bytes": 347406
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-multiple-access-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 47564
+          "bytes": 237122
         }
       ]
     }
@@ -12289,68 +6868,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-rf-noise-gt-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/240.avif",
-        "width": 240,
-        "bytes": 3278
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/320.avif",
-        "width": 320,
-        "bytes": 4696
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/480.avif",
-        "width": 480,
-        "bytes": 9666
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/640.avif",
-        "width": 640,
-        "bytes": 14783
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/960.avif",
-        "width": 960,
-        "bytes": 28421
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/1280.avif",
-        "width": 1280,
-        "bytes": 45941
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/240.webp",
         "width": 240,
-        "bytes": 3768
+        "bytes": 30522
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/320.webp",
         "width": 320,
-        "bytes": 6044
+        "bytes": 52278
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/480.webp",
         "width": 480,
-        "bytes": 12698
+        "bytes": 114612
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/640.webp",
         "width": 640,
-        "bytes": 20556
+        "bytes": 202520
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/960.webp",
         "width": 960,
-        "bytes": 41566
+        "bytes": 450028
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-noise-gt-v1/1280.webp",
         "width": 1280,
-        "bytes": 68058
+        "bytes": 258656
       }
     ],
     "role": "tool-cover",
@@ -12359,58 +6907,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4014
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 6081
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 10996
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 17900
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 31911
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5454
+          "bytes": 48284
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 8518
+          "bytes": 83696
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 16532
+          "bytes": 187120
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 25910
+          "bytes": 333326
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-noise-gt-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 49064
+          "bytes": 296780
         }
       ]
     }
@@ -12419,68 +6941,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-rf-path-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/240.avif",
-        "width": 240,
-        "bytes": 2968
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/320.avif",
-        "width": 320,
-        "bytes": 4370
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/480.avif",
-        "width": 480,
-        "bytes": 7861
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/640.avif",
-        "width": 640,
-        "bytes": 11995
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/960.avif",
-        "width": 960,
-        "bytes": 22817
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/1280.avif",
-        "width": 1280,
-        "bytes": 39497
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/240.webp",
         "width": 240,
-        "bytes": 3050
+        "bytes": 25376
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/320.webp",
         "width": 320,
-        "bytes": 4702
+        "bytes": 42164
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/480.webp",
         "width": 480,
-        "bytes": 9316
+        "bytes": 90412
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/640.webp",
         "width": 640,
-        "bytes": 15252
+        "bytes": 160470
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/960.webp",
         "width": 960,
-        "bytes": 29584
+        "bytes": 359442
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-rf-path-v1/1280.webp",
         "width": 1280,
-        "bytes": 49854
+        "bytes": 190334
       }
     ],
     "role": "tool-cover",
@@ -12489,58 +6980,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-rf-path-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 4456
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 6559
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 11958
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 17791
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 32914
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5308
+          "bytes": 53004
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 8218
+          "bytes": 92268
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 14368
+          "bytes": 204920
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 22234
+          "bytes": 362320
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-rf-path-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 42150
+          "bytes": 308358
         }
       ]
     }
@@ -12549,68 +7014,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-satellite-doppler-delay-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/240.avif",
-        "width": 240,
-        "bytes": 4100
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/320.avif",
-        "width": 320,
-        "bytes": 6438
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/480.avif",
-        "width": 480,
-        "bytes": 13117
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/640.avif",
-        "width": 640,
-        "bytes": 20583
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/960.avif",
-        "width": 960,
-        "bytes": 41074
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/1280.avif",
-        "width": 1280,
-        "bytes": 64828
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/240.webp",
         "width": 240,
-        "bytes": 5448
+        "bytes": 38590
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/320.webp",
         "width": 320,
-        "bytes": 8646
+        "bytes": 65964
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/480.webp",
         "width": 480,
-        "bytes": 16970
+        "bytes": 150336
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/640.webp",
         "width": 640,
-        "bytes": 27900
+        "bytes": 258808
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/960.webp",
         "width": 960,
-        "bytes": 54564
+        "bytes": 567498
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-doppler-delay-v1/1280.webp",
         "width": 1280,
-        "bytes": 87218
+        "bytes": 338880
       }
     ],
     "role": "tool-cover",
@@ -12619,58 +7053,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3942
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 6448
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 12170
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 20295
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 40667
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 5196
+          "bytes": 39534
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 8512
+          "bytes": 67280
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 16840
+          "bytes": 153362
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 27274
+          "bytes": 262624
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-doppler-delay-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 54908
+          "bytes": 241882
         }
       ]
     }
@@ -12679,68 +7087,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-satellite-link-budget-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/240.avif",
-        "width": 240,
-        "bytes": 3694
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/320.avif",
-        "width": 320,
-        "bytes": 5832
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/480.avif",
-        "width": 480,
-        "bytes": 11079
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/640.avif",
-        "width": 640,
-        "bytes": 18004
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/960.avif",
-        "width": 960,
-        "bytes": 34662
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/1280.avif",
-        "width": 1280,
-        "bytes": 55470
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/240.webp",
         "width": 240,
-        "bytes": 4554
+        "bytes": 33702
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/320.webp",
         "width": 320,
-        "bytes": 7190
+        "bytes": 57048
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/480.webp",
         "width": 480,
-        "bytes": 14272
+        "bytes": 124768
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/640.webp",
         "width": 640,
-        "bytes": 23276
+        "bytes": 221948
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/960.webp",
         "width": 960,
-        "bytes": 46624
+        "bytes": 501360
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-link-budget-v1/1280.webp",
         "width": 1280,
-        "bytes": 77262
+        "bytes": 312392
       }
     ],
     "role": "tool-cover",
@@ -12749,58 +7126,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3883
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5888
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 11013
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 17812
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 34492
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4492
+          "bytes": 33850
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7170
+          "bytes": 57266
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 14204
+          "bytes": 127984
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 22928
+          "bytes": 224288
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-link-budget-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 47424
+          "bytes": 198604
         }
       ]
     }
@@ -12809,68 +7160,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-satellite-look-angles-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/240.avif",
-        "width": 240,
-        "bytes": 3397
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/320.avif",
-        "width": 320,
-        "bytes": 5208
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/480.avif",
-        "width": 480,
-        "bytes": 9564
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/640.avif",
-        "width": 640,
-        "bytes": 14931
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/960.avif",
-        "width": 960,
-        "bytes": 27802
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/1280.avif",
-        "width": 1280,
-        "bytes": 42872
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/240.webp",
         "width": 240,
-        "bytes": 3936
+        "bytes": 31692
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/320.webp",
         "width": 320,
-        "bytes": 6192
+        "bytes": 53854
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/480.webp",
         "width": 480,
-        "bytes": 12108
+        "bytes": 116512
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/640.webp",
         "width": 640,
-        "bytes": 19766
+        "bytes": 208324
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/960.webp",
         "width": 960,
-        "bytes": 36578
+        "bytes": 470326
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-look-angles-v1/1280.webp",
         "width": 1280,
-        "bytes": 58652
+        "bytes": 269902
       }
     ],
     "role": "tool-cover",
@@ -12879,58 +7199,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3387
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5173
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 9843
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 15239
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 28245
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3844
+          "bytes": 32770
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 6358
+          "bytes": 55372
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 12136
+          "bytes": 123872
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 19184
+          "bytes": 218018
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-look-angles-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 37758
+          "bytes": 175886
         }
       ]
     }
@@ -12939,68 +7233,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-satellite-orbit-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/240.avif",
-        "width": 240,
-        "bytes": 2307
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/320.avif",
-        "width": 320,
-        "bytes": 3329
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/480.avif",
-        "width": 480,
-        "bytes": 6321
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/640.avif",
-        "width": 640,
-        "bytes": 10058
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/960.avif",
-        "width": 960,
-        "bytes": 19483
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/1280.avif",
-        "width": 1280,
-        "bytes": 35535
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/240.webp",
         "width": 240,
-        "bytes": 2384
+        "bytes": 26224
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/320.webp",
         "width": 320,
-        "bytes": 3770
+        "bytes": 45218
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/480.webp",
         "width": 480,
-        "bytes": 7282
+        "bytes": 100746
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/640.webp",
         "width": 640,
-        "bytes": 11860
+        "bytes": 184534
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/960.webp",
         "width": 960,
-        "bytes": 23732
+        "bytes": 425420
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-orbit-v1/1280.webp",
         "width": 1280,
-        "bytes": 41360
+        "bytes": 259974
       }
     ],
     "role": "tool-cover",
@@ -13009,58 +7272,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 2428
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 3335
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 6338
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 10095
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 20554
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 2466
+          "bytes": 27164
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 3930
+          "bytes": 46970
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 7468
+          "bytes": 108924
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 12054
+          "bytes": 195738
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-orbit-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 25084
+          "bytes": 166986
         }
       ]
     }
@@ -13069,68 +7306,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-satellite-power-lifetime-v1.png",
     "width": 1280,
     "height": 720,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/240.avif",
-        "width": 240,
-        "bytes": 3350
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/320.avif",
-        "width": 320,
-        "bytes": 5587
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/480.avif",
-        "width": 480,
-        "bytes": 9732
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/640.avif",
-        "width": 640,
-        "bytes": 14894
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/960.avif",
-        "width": 960,
-        "bytes": 27487
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/1280.avif",
-        "width": 1280,
-        "bytes": 44065
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/240.webp",
         "width": 240,
-        "bytes": 4440
+        "bytes": 31974
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/320.webp",
         "width": 320,
-        "bytes": 6724
+        "bytes": 53646
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/480.webp",
         "width": 480,
-        "bytes": 13158
+        "bytes": 117760
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/640.webp",
         "width": 640,
-        "bytes": 21028
+        "bytes": 209814
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/960.webp",
         "width": 960,
-        "bytes": 40292
+        "bytes": 476076
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-satellite-power-lifetime-v1/1280.webp",
         "width": 1280,
-        "bytes": 64998
+        "bytes": 294842
       }
     ],
     "role": "tool-cover",
@@ -13139,58 +7345,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3542
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5674
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 9765
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 14466
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 28080
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 4370
+          "bytes": 32776
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 7056
+          "bytes": 56098
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 13240
+          "bytes": 124982
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 21108
+          "bytes": 220106
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-satellite-power-lifetime-v1-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 41574
+          "bytes": 191236
         }
       ]
     }
@@ -13199,88 +7379,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-security-mission-v4.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/240.avif",
-        "width": 240,
-        "bytes": 3630
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/320.avif",
-        "width": 320,
-        "bytes": 5487
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/480.avif",
-        "width": 480,
-        "bytes": 10394
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/640.avif",
-        "width": 640,
-        "bytes": 15822
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/960.avif",
-        "width": 960,
-        "bytes": 29389
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/1280.avif",
-        "width": 1280,
-        "bytes": 45388
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/1600.avif",
-        "width": 1600,
-        "bytes": 63615
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/1672.avif",
-        "width": 1672,
-        "bytes": 69425
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/240.webp",
         "width": 240,
-        "bytes": 5016
+        "bytes": 33712
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/320.webp",
         "width": 320,
-        "bytes": 7864
+        "bytes": 58254
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/480.webp",
         "width": 480,
-        "bytes": 14944
+        "bytes": 126608
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/640.webp",
         "width": 640,
-        "bytes": 23132
+        "bytes": 231128
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/960.webp",
         "width": 960,
-        "bytes": 43846
+        "bytes": 515810
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/1280.webp",
         "width": 1280,
-        "bytes": 68518
+        "bytes": 930604
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/1600.webp",
         "width": 1600,
-        "bytes": 94712
+        "bytes": 1415618
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-security-mission-v4/1672.webp",
         "width": 1672,
-        "bytes": 102282
+        "bytes": 1493456
       }
     ],
     "role": "tool-cover",
@@ -13289,58 +7428,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-security-mission-v4-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 6260
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 9393
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 17154
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 25677
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 47152
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 8902
+          "bytes": 61328
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 14050
+          "bytes": 103864
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 26038
+          "bytes": 233686
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 39592
+          "bytes": 401894
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-security-mission-v4-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 69356
+          "bytes": 392792
         }
       ]
     }
@@ -13349,88 +7462,47 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/tool-sensor-code-generator-v4.png",
     "width": 1672,
     "height": 941,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/240.avif",
-        "width": 240,
-        "bytes": 3225
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/320.avif",
-        "width": 320,
-        "bytes": 5023
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/480.avif",
-        "width": 480,
-        "bytes": 9461
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/640.avif",
-        "width": 640,
-        "bytes": 15111
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/960.avif",
-        "width": 960,
-        "bytes": 28450
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/1280.avif",
-        "width": 1280,
-        "bytes": 44782
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/1600.avif",
-        "width": 1600,
-        "bytes": 60090
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/1672.avif",
-        "width": 1672,
-        "bytes": 64753
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/240.webp",
         "width": 240,
-        "bytes": 3548
+        "bytes": 30626
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/320.webp",
         "width": 320,
-        "bytes": 5588
+        "bytes": 52166
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/480.webp",
         "width": 480,
-        "bytes": 11364
+        "bytes": 114682
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/640.webp",
         "width": 640,
-        "bytes": 18556
+        "bytes": 213672
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/960.webp",
         "width": 960,
-        "bytes": 36502
+        "bytes": 496072
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/1280.webp",
         "width": 1280,
-        "bytes": 57890
+        "bytes": 945674
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/1600.webp",
         "width": 1600,
-        "bytes": 79204
+        "bytes": 1462512
       },
       {
         "src": "/media/generated/responsive/media/tools/tool-sensor-code-generator-v4/1672.webp",
         "width": 1672,
-        "bytes": 84282
+        "bytes": 1551270
       }
     ],
     "role": "tool-cover",
@@ -13439,58 +7511,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/240.avif",
-          "width": 240,
-          "bytes": 3282
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/320.avif",
-          "width": 320,
-          "bytes": 5123
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/480.avif",
-          "width": 480,
-          "bytes": 9546
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/640.avif",
-          "width": 640,
-          "bytes": 15059
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/960.avif",
-          "width": 960,
-          "bytes": 28913
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/240.webp",
           "width": 240,
-          "bytes": 3468
+          "bytes": 27858
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/320.webp",
           "width": 320,
-          "bytes": 5586
+          "bytes": 46050
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/480.webp",
           "width": 480,
-          "bytes": 11620
+          "bytes": 105180
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/640.webp",
           "width": 640,
-          "bytes": 18728
+          "bytes": 182808
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/tool-sensor-code-generator-v4-mobile-v1/960.webp",
           "width": 960,
-          "bytes": 37082
+          "bytes": 206762
         }
       ]
     }
@@ -13499,78 +7545,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/air-core-coil-designer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 3911
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 5825
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 10838
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 16038
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 25252
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 35683
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 41619
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 5832
+        "bytes": 34414
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 9136
+        "bytes": 60908
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 17838
+        "bytes": 129390
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 26894
+        "bytes": 220316
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 46182
+        "bytes": 458652
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 64932
+        "bytes": 787954
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/air-core-coil-designer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 75688
+        "bytes": 445230
       }
     ],
     "role": "tool-cover",
@@ -13579,58 +7589,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/air-core-coil-designer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 4638
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 6514
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 11017
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 16202
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 26780
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 6536
+          "bytes": 52110
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 9670
+          "bytes": 86918
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 16944
+          "bytes": 192470
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 24904
+          "bytes": 337732
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/air-core-coil-designer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 44068
+          "bytes": 269182
         }
       ]
     }
@@ -13639,78 +7623,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/band-pass-filter-designer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2629
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 3708
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 6491
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 8432
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 14302
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 18405
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 23234
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 3130
+        "bytes": 23422
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 4928
+        "bytes": 40092
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 8980
+        "bytes": 75784
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 12844
+        "bytes": 131690
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 21596
+        "bytes": 287812
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 31562
+        "bytes": 534244
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/band-pass-filter-designer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 38396
+        "bytes": 285058
       }
     ],
     "role": "tool-cover",
@@ -13719,58 +7667,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/band-pass-filter-designer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 3525
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 5027
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 8116
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 11600
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 19461
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 4462
+          "bytes": 39398
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 6724
+          "bytes": 66132
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 11276
+          "bytes": 130372
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 16102
+          "bytes": 226468
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/band-pass-filter-designer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 28496
+          "bytes": 242504
         }
       ]
     }
@@ -13779,78 +7701,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/bridge-rectifier-designer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2726
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 3265
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 4808
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 7286
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 11582
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 16392
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 19202
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2800
+        "bytes": 20600
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 4090
+        "bytes": 34366
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 6702
+        "bytes": 70568
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 9536
+        "bytes": 125266
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 16130
+        "bytes": 273996
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 23848
+        "bytes": 493840
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/bridge-rectifier-designer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 28612
+        "bytes": 278016
       }
     ],
     "role": "tool-cover",
@@ -13859,58 +7745,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/bridge-rectifier-designer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 4546
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 6176
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 9270
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 13121
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 34717
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 11952
+          "bytes": 40734
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 17488
+          "bytes": 62356
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 31764
+          "bytes": 134008
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 50838
+          "bytes": 224630
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/bridge-rectifier-designer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 80060
+          "bytes": 138208
         }
       ]
     }
@@ -13919,78 +7779,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/buck-converter-designer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2473
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 3013
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 5244
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 7122
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 11735
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 16995
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 20394
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2682
+        "bytes": 24056
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 3862
+        "bytes": 41960
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 6568
+        "bytes": 83322
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 9518
+        "bytes": 147520
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 16340
+        "bytes": 333398
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 23804
+        "bytes": 603456
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/buck-converter-designer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 29790
+        "bytes": 326670
       }
     ],
     "role": "tool-cover",
@@ -13999,58 +7823,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/buck-converter-designer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 3186
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 3460
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 6196
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 8743
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 14440
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 3300
+          "bytes": 38242
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 4738
+          "bytes": 70118
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 8174
+          "bytes": 159698
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 11924
+          "bytes": 273450
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/buck-converter-designer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 21338
+          "bytes": 348270
         }
       ]
     }
@@ -14059,78 +7857,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2279
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 2594
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 4523
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 5789
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 9517
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 13337
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 18879
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2336
+        "bytes": 17340
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 3404
+        "bytes": 30086
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 5516
+        "bytes": 61216
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 7776
+        "bytes": 107136
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 13268
+        "bytes": 227810
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 19528
+        "bytes": 400846
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/cascaded-opamp-gain-designer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 24860
+        "bytes": 253408
       }
     ],
     "role": "tool-cover",
@@ -14139,58 +7901,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 2230
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 2722
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 4499
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 6573
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 10647
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 2718
+          "bytes": 21610
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 3932
+          "bytes": 46334
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 6438
+          "bytes": 100252
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 9346
+          "bytes": 172408
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/cascaded-opamp-gain-designer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 16838
+          "bytes": 230260
         }
       ]
     }
@@ -14199,78 +7935,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/control-design-assistant-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2251
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 2645
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 4157
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 5468
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 8958
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 12217
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 15892
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2358
+        "bytes": 21352
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 3460
+        "bytes": 36298
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 5488
+        "bytes": 82036
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 7846
+        "bytes": 135402
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 13110
+        "bytes": 301926
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 19128
+        "bytes": 539416
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/control-design-assistant-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 23390
+        "bytes": 273440
       }
     ],
     "role": "tool-cover",
@@ -14279,58 +7979,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/control-design-assistant-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 4595
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 6132
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 9417
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 13497
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 20827
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 19108
+          "bytes": 59208
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 28696
+          "bytes": 90780
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 53718
+          "bytes": 184976
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 86898
+          "bytes": 313930
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/control-design-assistant-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 58962
+          "bytes": 227572
         }
       ]
     }
@@ -14339,78 +8013,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/five-band-precision-resistor-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2606
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 3370
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 5851
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 8337
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 13602
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 20488
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 25466
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2820
+        "bytes": 20910
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 4328
+        "bytes": 37404
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 7688
+        "bytes": 75864
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 11308
+        "bytes": 138786
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 20064
+        "bytes": 313746
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 30596
+        "bytes": 578410
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/five-band-precision-resistor-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 36808
+        "bytes": 389886
       }
     ],
     "role": "tool-cover",
@@ -14419,58 +8057,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/five-band-precision-resistor-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 4151
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 5785
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 9589
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 14243
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 28188
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 6120
+          "bytes": 50108
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 9004
+          "bytes": 82050
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 15700
+          "bytes": 170236
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 23296
+          "bytes": 305544
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/five-band-precision-resistor-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 44064
+          "bytes": 319458
         }
       ]
     }
@@ -14479,78 +8091,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/four-band-resistor-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2358
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 3076
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 4737
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 7222
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 11030
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 15875
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 20950
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2444
+        "bytes": 18316
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 3834
+        "bytes": 37224
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 6566
+        "bytes": 90186
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 9438
+        "bytes": 152022
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 15822
+        "bytes": 324846
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 23494
+        "bytes": 563668
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/four-band-resistor-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 28752
+        "bytes": 405444
       }
     ],
     "role": "tool-cover",
@@ -14559,58 +8135,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/four-band-resistor-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 2678
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 3527
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 6167
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 9761
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 18681
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 3354
+          "bytes": 40772
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 4828
+          "bytes": 69690
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 8306
+          "bytes": 160554
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 12670
+          "bytes": 292712
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/four-band-resistor-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 24946
+          "bytes": 371086
         }
       ]
     }
@@ -14619,78 +8169,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/gradify-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2722
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 3836
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 6317
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 9335
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 15492
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 22696
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 28672
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 3568
+        "bytes": 30530
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 5290
+        "bytes": 49804
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 8784
+        "bytes": 103648
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 12930
+        "bytes": 183924
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 22618
+        "bytes": 411924
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 34192
+        "bytes": 770464
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/gradify-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 42680
+        "bytes": 300946
       }
     ],
     "role": "tool-cover",
@@ -14699,58 +8213,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/gradify-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 3922
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 5242
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 8819
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 12830
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 26502
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 5280
+          "bytes": 48812
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 7694
+          "bytes": 81180
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 13072
+          "bytes": 185120
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 18822
+          "bytes": 336234
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/gradify-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 36492
+          "bytes": 219302
         }
       ]
     }
@@ -14759,78 +8247,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/lc-resonance-designer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 3686
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 5399
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 10005
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 14229
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 22500
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 32051
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 37210
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 4716
+        "bytes": 31064
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 7102
+        "bytes": 51376
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 12854
+        "bytes": 109940
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 19196
+        "bytes": 173426
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 33346
+        "bytes": 365664
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 47720
+        "bytes": 643376
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/lc-resonance-designer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 57344
+        "bytes": 420066
       }
     ],
     "role": "tool-cover",
@@ -14839,58 +8291,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/lc-resonance-designer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 4225
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 5810
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 10242
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 14585
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 25491
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 5468
+          "bytes": 46776
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 8272
+          "bytes": 72454
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 14876
+          "bytes": 164210
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 22420
+          "bytes": 290016
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/lc-resonance-designer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 40140
+          "bytes": 355574
         }
       ]
     }
@@ -14899,78 +8325,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/led-current-limiter-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2796
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 3468
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 5978
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 8518
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 13249
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 19142
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 23018
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 3234
+        "bytes": 25868
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 4508
+        "bytes": 45088
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 7804
+        "bytes": 93986
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 10842
+        "bytes": 167002
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 18250
+        "bytes": 349770
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 26980
+        "bytes": 639378
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/led-current-limiter-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 33368
+        "bytes": 344828
       }
     ],
     "role": "tool-cover",
@@ -14979,58 +8369,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/led-current-limiter-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 2907
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 4330
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 6740
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 9545
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 16785
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 3496
+          "bytes": 39560
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 5152
+          "bytes": 64968
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 8676
+          "bytes": 149068
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 13038
+          "bytes": 254444
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/led-current-limiter-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 23510
+          "bytes": 304290
         }
       ]
     }
@@ -15039,78 +8403,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/linear-regulator-stability-designer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2279
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 2807
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 4135
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 5958
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 9456
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 13444
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 16041
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2184
+        "bytes": 18194
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 3168
+        "bytes": 33750
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 5422
+        "bytes": 70376
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 7796
+        "bytes": 123762
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 13204
+        "bytes": 274250
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 19570
+        "bytes": 475982
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/linear-regulator-stability-designer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 23924
+        "bytes": 331928
       }
     ],
     "role": "tool-cover",
@@ -15119,58 +8447,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/linear-regulator-stability-designer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 2207
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 2736
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 4472
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 6092
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 11162
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 2534
+          "bytes": 32516
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 3640
+          "bytes": 60458
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 6130
+          "bytes": 138650
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 8870
+          "bytes": 237008
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/linear-regulator-stability-designer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 16170
+          "bytes": 333438
         }
       ]
     }
@@ -15179,78 +8481,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/logic-gate-designer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2417
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 2876
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 4686
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 6112
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 10385
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 13837
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 16909
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2310
+        "bytes": 20354
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 3196
+        "bytes": 37472
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 5292
+        "bytes": 77256
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 7692
+        "bytes": 137616
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 13428
+        "bytes": 318800
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 19752
+        "bytes": 569572
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/logic-gate-designer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 24360
+        "bytes": 273744
       }
     ],
     "role": "tool-cover",
@@ -15259,58 +8525,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/logic-gate-designer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 2928
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 3934
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 6446
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 8860
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 15349
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 3148
+          "bytes": 35462
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 4572
+          "bytes": 56616
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 7878
+          "bytes": 130916
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 11696
+          "bytes": 237920
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/logic-gate-designer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 20956
+          "bytes": 314336
         }
       ]
     }
@@ -15319,78 +8559,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/parallel-resistors-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2718
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 3337
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 5043
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 7619
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 12270
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 16599
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 19965
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2548
+        "bytes": 22306
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 3712
+        "bytes": 38826
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 6138
+        "bytes": 87166
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 8966
+        "bytes": 152632
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 15500
+        "bytes": 315818
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 23098
+        "bytes": 549852
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/parallel-resistors-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 27840
+        "bytes": 413338
       }
     ],
     "role": "tool-cover",
@@ -15399,58 +8603,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/parallel-resistors-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 2527
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 3586
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 5694
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 8045
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 13483
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 2888
+          "bytes": 32546
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 4152
+          "bytes": 60108
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 6924
+          "bytes": 135262
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 10092
+          "bytes": 223986
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/parallel-resistors-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 18252
+          "bytes": 295666
         }
       ]
     }
@@ -15459,78 +8637,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/rot-explorer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 3341
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 4086
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 7913
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 10745
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 17910
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 25655
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 30230
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 3972
+        "bytes": 29504
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 5758
+        "bytes": 49398
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 10168
+        "bytes": 104986
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 15016
+        "bytes": 185550
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 26404
+        "bytes": 415440
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 39274
+        "bytes": 714340
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/rot-explorer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 47136
+        "bytes": 409510
       }
     ],
     "role": "tool-cover",
@@ -15539,58 +8681,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/rot-explorer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 6119
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 8693
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 14432
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 20475
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 34624
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 8712
+          "bytes": 56234
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 12820
+          "bytes": 94028
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 22002
+          "bytes": 200690
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 32476
+          "bytes": 345216
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/rot-explorer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 54322
+          "bytes": 292094
         }
       ]
     }
@@ -15599,78 +8715,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/series-resistors-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2207
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 2735
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 4234
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 6432
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 9775
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 13923
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 15587
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 1960
+        "bytes": 19790
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 2952
+        "bytes": 37160
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 5044
+        "bytes": 86272
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 7514
+        "bytes": 139930
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 12974
+        "bytes": 312830
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 19462
+        "bytes": 550906
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/series-resistors-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 23674
+        "bytes": 451382
       }
     ],
     "role": "tool-cover",
@@ -15679,58 +8759,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/series-resistors-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 2621
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 3586
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 5715
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 8892
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 13835
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 3026
+          "bytes": 35666
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 4390
+          "bytes": 57714
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 7770
+          "bytes": 136424
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 11142
+          "bytes": 248820
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/series-resistors-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 20146
+          "bytes": 375152
         }
       ]
     }
@@ -15739,78 +8793,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/smps-designer-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 3101
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 4028
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 6886
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 9789
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 17169
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 25213
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 30700
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 3386
+        "bytes": 29228
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 5204
+        "bytes": 48186
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 9204
+        "bytes": 100990
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 13680
+        "bytes": 180012
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 23826
+        "bytes": 410298
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 36308
+        "bytes": 760754
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/smps-designer-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 44926
+        "bytes": 311704
       }
     ],
     "role": "tool-cover",
@@ -15819,58 +8837,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/smps-designer-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 3610
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 5087
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 8875
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 13667
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 23818
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 4770
+          "bytes": 46364
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 7118
+          "bytes": 79400
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 12842
+          "bytes": 180452
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 19070
+          "bytes": 324238
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/smps-designer-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 35810
+          "bytes": 255186
         }
       ]
     }
@@ -15879,78 +8871,42 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/media/tools/variations/voltage-divider-desktop-v1.png",
     "width": 1440,
     "height": 810,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/240.avif",
-        "width": 240,
-        "bytes": 2516
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/320.avif",
-        "width": 320,
-        "bytes": 3785
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/480.avif",
-        "width": 480,
-        "bytes": 5931
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/640.avif",
-        "width": 640,
-        "bytes": 7335
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/960.avif",
-        "width": 960,
-        "bytes": 12483
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/1280.avif",
-        "width": 1280,
-        "bytes": 16434
-      },
-      {
-        "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/1440.avif",
-        "width": 1440,
-        "bytes": 20571
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/240.webp",
         "width": 240,
-        "bytes": 2686
+        "bytes": 22082
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/320.webp",
         "width": 320,
-        "bytes": 3852
+        "bytes": 41056
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/480.webp",
         "width": 480,
-        "bytes": 6350
+        "bytes": 80496
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/640.webp",
         "width": 640,
-        "bytes": 9144
+        "bytes": 142518
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/960.webp",
         "width": 960,
-        "bytes": 15538
+        "bytes": 322894
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/1280.webp",
         "width": 1280,
-        "bytes": 23170
+        "bytes": 571614
       },
       {
         "src": "/media/generated/responsive/media/tools/variations/voltage-divider-desktop-v1/1440.webp",
         "width": 1440,
-        "bytes": 27902
+        "bytes": 381718
       }
     ],
     "role": "tool-cover",
@@ -15959,58 +8915,32 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       "source": "/media/tools/mobile/voltage-divider-mobile-v2.png",
       "width": 960,
       "height": 960,
-      "avif": [
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/240.avif",
-          "width": 240,
-          "bytes": 3171
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/320.avif",
-          "width": 320,
-          "bytes": 4417
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/480.avif",
-          "width": 480,
-          "bytes": 6285
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/640.avif",
-          "width": 640,
-          "bytes": 9670
-        },
-        {
-          "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/960.avif",
-          "width": 960,
-          "bytes": 14912
-        }
-      ],
+      "avif": [],
       "webp": [
         {
           "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/240.webp",
           "width": 240,
-          "bytes": 3512
+          "bytes": 40020
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/320.webp",
           "width": 320,
-          "bytes": 4938
+          "bytes": 70284
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/480.webp",
           "width": 480,
-          "bytes": 8074
+          "bytes": 158812
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/640.webp",
           "width": 640,
-          "bytes": 11616
+          "bytes": 276214
         },
         {
           "src": "/media/generated/responsive/media/tools/mobile/voltage-divider-mobile-v2/960.webp",
           "width": 960,
-          "bytes": 20724
+          "bytes": 331434
         }
       ]
     }
@@ -16019,18 +8949,12 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/opengraph-image.png",
     "width": 1200,
     "height": 630,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/opengraph-image/1200.avif",
-        "width": 1200,
-        "bytes": 16330
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/opengraph-image/1200.webp",
         "width": 1200,
-        "bytes": 18946
+        "bytes": 146878
       }
     ],
     "role": "social",
@@ -16040,18 +8964,12 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "source": "/twitter-image.png",
     "width": 1200,
     "height": 630,
-    "avif": [
-      {
-        "src": "/media/generated/responsive/twitter-image/1200.avif",
-        "width": 1200,
-        "bytes": 16330
-      }
-    ],
+    "avif": [],
     "webp": [
       {
         "src": "/media/generated/responsive/twitter-image/1200.webp",
         "width": 1200,
-        "bytes": 18946
+        "bytes": 146878
       }
     ],
     "role": "social",

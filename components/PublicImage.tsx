@@ -12,7 +12,7 @@ type PublicImageProps = Omit<ImgHTMLAttributes<HTMLImageElement>, "src" | "width
 };
 
 function srcSet(variants: Array<{ src: string; width: number }> | undefined) {
-  return variants?.map(variant => `${variant.src} ${variant.width}w`).join(", ");
+  return variants?.length ? variants.map(variant => `${variant.src} ${variant.width}w`).join(", ") : undefined;
 }
 
 export function PublicImage({
@@ -45,14 +45,11 @@ export function PublicImage({
   return (
     <picture style={{ display: "contents" }}>
       {resolvedWideAsset ? <>
-        <source media="(min-width: 1600px)" type="image/avif" srcSet={srcSet(resolvedWideAsset.avif)} sizes={resolvedSizes} />
         <source media="(min-width: 1600px)" type="image/webp" srcSet={srcSet(resolvedWideAsset.webp)} sizes={resolvedSizes} />
       </> : null}
       {resolvedMobileAsset ? <>
-        <source media="(max-width: 639px)" type="image/avif" srcSet={srcSet(resolvedMobileAsset.avif)} sizes={resolvedSizes} />
         <source media="(max-width: 639px)" type="image/webp" srcSet={srcSet(resolvedMobileAsset.webp)} sizes={resolvedSizes} />
       </> : null}
-      <source type="image/avif" srcSet={srcSet(asset.avif)} sizes={resolvedSizes} />
       <source type="image/webp" srcSet={srcSet(asset.webp)} sizes={resolvedSizes} />
       <img
         src={src}

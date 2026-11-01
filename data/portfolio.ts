@@ -26,7 +26,7 @@ export const profile: Profile = {
     "I work from problem to proof, using electronics, connectivity, software, robotics, and interface design wherever the system needs them.",
   location: "Egypt, based between Al Mahala Al Kobra and Alexandria; available for remote collaboration.",
   availability: "Open to selected embedded systems, IoT, and robotics collaborations",
-  portrait: asset("/media/optimized/profile-ahmed.webp"),
+  portrait: asset("/images/profilePicture/profile3.png"),
   portraits: [
     { src: asset("/images/profilePicture/profile1.jpg"), alt: "Portrait of Ahmed Ibrahim Asl in a dark jacket" },
     { src: asset("/images/profilePicture/profile2.jpg"), alt: "Portrait of Ahmed Ibrahim Asl outdoors" },

@@ -15,7 +15,7 @@ import { auditPublicImages, walkFiles } from "./public-image-audit.mjs";
 export const ROLE_POLICIES = Object.freeze({
   "tool-cover": Object.freeze({ widths: [240, 320, 480, 640, 960, 1280, 1600], budget: 120 * 1024 }),
   "tutorial-cover": Object.freeze({ widths: [240, 320, 480, 640, 960, 1280], budget: 120 * 1024 }),
-  portrait: Object.freeze({ widths: [96, 160, 240, 320, 480, 640], budget: 100 * 1024 }),
+  portrait: Object.freeze({ widths: [96, 160, 240, 320, 480, 640, 800, 960], budget: 100 * 1024 }),
   "project-cover": Object.freeze({ widths: [320, 480, 640, 768, 960, 1280, 1600, 1920], budget: 180 * 1024 }),
   "interface-screenshot": Object.freeze({ widths: [320, 480, 640, 768, 960, 1280, 1600], budget: 180 * 1024 }),
   "gallery-evidence": Object.freeze({ widths: [320, 480, 640, 768, 960, 1280, 1600, 1920, 2560], budget: 260 * 1024 }),
@@ -25,7 +25,7 @@ export const ROLE_POLICIES = Object.freeze({
 const RASTER_EXTENSION = /\.(?:avif|gif|jpe?g|png|webp)$/i;
 const GENERATED_PREFIX = "/media/generated/responsive/";
 const PIPELINE_PATH = fileURLToPath(import.meta.url);
-const CACHE_VERSION = 1;
+const CACHE_VERSION = 2;
 
 async function readPipelineCache(rootDir) {
   try {
@@ -61,25 +61,18 @@ function publicVariantPath(source, width, extension) {
   return `${GENERATED_PREFIX}${withoutExtension}/${width}.${extension}`;
 }
 
-async function encodeToBudget(image, { format, width, budget, outputPath, write }) {
-  const initialQuality = format === "avif" ? 55 : 78;
-  const minimumQuality = format === "avif" ? 36 : 45;
-  let quality = initialQuality;
-  let buffer;
-  do {
-    const resized = image.clone().resize({ width, withoutEnlargement: true });
-    buffer = format === "avif"
-      ? await resized.avif({ quality, effort: 4 }).toBuffer()
-      : await resized.webp({ quality, alphaQuality: quality, effort: 4 }).toBuffer();
-    if (buffer.byteLength <= budget || quality === minimumQuality) break;
-    quality = Math.max(minimumQuality, quality - 5);
-  } while (quality >= minimumQuality);
+// Lossless WebP only: resizing for responsive widths is the sole change made to a picture.
+async function encodeLossless(image, { width, outputPath, write }) {
+  const buffer = await image.clone()
+    .resize({ width, withoutEnlargement: true })
+    .webp({ lossless: true, effort: 4 })
+    .toBuffer();
 
   if (write) {
     await mkdir(path.dirname(outputPath), { recursive: true });
     await writeFile(outputPath, buffer);
   }
-  return { bytes: buffer.byteLength, quality };
+  return { bytes: buffer.byteLength };
 }
 
 function serializeManifest(assets) {
@@ -106,16 +99,15 @@ async function prepareAsset({ rootDir, source, policy, write, oversized, cachedS
   const asset = { source, width: metadata.width, height: metadata.height, avif: [], webp: [] };
   const directory = outputDirectory(rootDir, source);
 
-  for (const format of ["avif", "webp"]) {
+  for (const format of ["webp"]) {
     for (const width of widths) {
       const outputPath = path.join(directory, `${width}.${format}`);
       const outputStats = await exists(outputPath) ? await stat(outputPath) : null;
       const cacheMatches = cachedSources[source] === sourceHash;
       const encoded = outputStats && (cacheMatches || outputStats.mtimeMs >= Math.max(sourceStats.mtimeMs, pipelineStats.mtimeMs))
-        ? { bytes: outputStats.size, quality: null }
-        : await encodeToBudget(image, { format, width, budget: policy.budget, outputPath, write });
+        ? { bytes: outputStats.size }
+        : await encodeLossless(image, { width, outputPath, write });
       asset[format].push({ src: publicVariantPath(source, width, format), width, bytes: encoded.bytes });
-      if (encoded.bytes > policy.budget) oversized.push({ source, format, width, bytes: encoded.bytes, budget: policy.budget });
     }
   }
   return asset;
