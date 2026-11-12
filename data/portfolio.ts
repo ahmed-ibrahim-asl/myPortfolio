@@ -244,6 +244,7 @@ export const projects: Project[] = [
       {src: asset("/media/portfolio/showcase/topwood-rfid/pcb.webp"), alt: "Top Wood carrier PCB render with the NodeMCU, RC522 and LM2596 buck module"}
     ],
     links: [
+      {label: "Watch the full demo on YouTube", href: "https://youtu.be/JlM_-ofcRd0"},
       {label: "View interface design in Figma", href: "https://www.figma.com/design/jAvINNnQaUC2qPMKJCTXDA/Top-Wood-RFID-Portal?node-id=4-34&p=f"}
     ],
     featured: false
