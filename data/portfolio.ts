@@ -232,6 +232,23 @@ export const coursesTaught: Course[] = [
 
 export const projects: Project[] = [
   {
+    slug: "topwood-rfid-catalog", title: "Top Wood RFID Catalog", category: "Engineering & IoT", year: "2026",
+    video: { src: asset("/media/portfolio/showcase/topwood-rfid/highlight.mp4"), poster: asset("/media/portfolio/showcase/topwood-rfid/cover.webp"), caption: "Top Wood RFID Catalog: one-minute highlight" },
+    role: "Embedded Systems Engineer | ESP8266 Firmware | PCB Design | Web Portal",
+    description: "Built the RFID system behind Top Wood's LTOP Interactive Catalog. A custom ESP8266 + RC522 board reads product cards and talks to the catalog over the local Wi-Fi network, so tapping a card opens that product straight away. The board serves its own setup portal for reading, writing and verifying cards and for Wi-Fi setup, and ships with a one-click Windows installer.",
+    outcome: "Tap a card, the product opens in the catalog; cards written and verified in two taps",
+    tags: ["ESP8266", "RC522 RFID", "C++", "KiCad", "Node.js", "Web portal", "Figma"],
+    image: asset("/media/portfolio/showcase/topwood-rfid/cover.webp"),
+    gallery: [
+      {src: asset("/media/portfolio/showcase/topwood-rfid/portal.webp"), alt: "Top Wood setup portal on a tablet: card reader and card writer tabs"},
+      {src: asset("/media/portfolio/showcase/topwood-rfid/pcb.webp"), alt: "Top Wood carrier PCB render with the NodeMCU, RC522 and LM2596 buck module"}
+    ],
+    links: [
+      {label: "View interface design in Figma", href: "https://www.figma.com/design/jAvINNnQaUC2qPMKJCTXDA/Top-Wood-RFID-Portal?node-id=4-34&p=f"}
+    ],
+    featured: false
+  },
+  {
     slug: "aqua-sync", title: "Aqua Sync 2.0.0", category: "Engineering & IoT", year: "",
     video: { src: asset("/media/portfolio/showcase/aqua-sync/demo.mp4"), poster: asset("/media/portfolio/showcase/aqua-sync/demo-poster.webp"), caption: "Aqua Sync 2.0.0 — prototype demonstration" },
     role: "Embedded Systems Engineer | ESP32 Firmware Developer | CrowPanel HMI & OTA Integration",
