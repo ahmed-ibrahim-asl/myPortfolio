@@ -800,6 +800,10 @@ body::before { border-width: 4px; }
 }
 
 .research-feed-heading  { display: grid; grid-template-columns: minmax(0, 1fr) auto; }
+.research-feed-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px 22px; align-self: end; }
+.research-feed-actions .text-link { margin-top: 0; }
+.research-tool-link { white-space: nowrap; }
+@media (max-width: 820px) { .research-feed-actions { justify-content: flex-start; } }
 .publication-list {
   display: grid;
   gap: 14px;

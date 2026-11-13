@@ -13,14 +13,23 @@ export function WorkResearchAndTeaching() {
                 with publication type, ranking, year, and citation count.
               </p>
             </div>
-            <a
-              className="text-link"
-              href={publicationSource.profileUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open Google Scholar
-            </a>
+            <div className="research-feed-actions">
+              <a
+                className="text-link"
+                href={publicationSource.profileUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open Google Scholar
+              </a>
+              <a
+                className="btn-secondary research-tool-link"
+                href="/hybrid-guard/"
+                aria-label="hybrid-guard, open-source research software from my wind-power papers"
+              >
+                Research tool: hybrid-guard
+              </a>
+            </div>
           </div>
           <div className="publication-list">
             {publications.map((item, index) => (
