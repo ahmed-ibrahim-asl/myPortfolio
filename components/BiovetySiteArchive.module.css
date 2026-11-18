@@ -1,0 +1,266 @@
+.archive {
+  margin-top: 32px;
+  padding: clamp(24px, 5vw, 56px);
+  border: 1px solid var(--asl-line);
+  background: var(--asl-surface);
+}
+
+.archiveIntro {
+  max-width: 760px;
+}
+
+.archiveIntro h2 {
+  max-width: 17ch;
+  margin: 10px 0 18px;
+  font-size: clamp(2rem, 4.2vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.archiveIntro > p:last-child,
+.groupHeading > p {
+  color: var(--asl-text-secondary);
+  line-height: 1.7;
+}
+
+.eyebrow,
+.groupCount,
+.pageNumber {
+  margin: 0;
+  color: var(--asl-gold);
+  font-family: var(--asl-mono);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.group {
+  margin-top: clamp(44px, 7vw, 76px);
+}
+
+.groupHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--asl-line);
+}
+
+.groupHeading h3 {
+  margin: 8px 0 0;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.08;
+}
+
+.groupHeading > p {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--asl-line);
+  color: var(--asl-text);
+  background: var(--asl-sunken);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.card:hover {
+  border-color: var(--asl-gold);
+}
+
+.card:focus-visible,
+.viewer button:focus-visible {
+  outline: 3px solid var(--asl-gold);
+  outline-offset: 4px;
+}
+
+.thumbnail {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid var(--asl-line);
+  background: #fff;
+}
+
+.thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardBody {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  padding: 18px;
+  flex-direction: column;
+}
+
+.cardBody strong {
+  font-size: clamp(1.08rem, 1.7vw, 1.35rem);
+  line-height: 1.2;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  color: var(--asl-text-secondary);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.captureDate {
+  color: var(--asl-text-secondary);
+  font-family: var(--asl-mono);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 3000;
+  inset: 0;
+  display: grid;
+  padding: clamp(12px, 3vw, 34px);
+  background: rgba(2, 6, 10, 0.9);
+  place-items: center;
+}
+
+.viewer {
+  display: flex;
+  width: min(1180px, 100%);
+  height: min(92vh, 980px);
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid var(--asl-line);
+  background: var(--asl-surface);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  flex-direction: column;
+}
+
+.viewerHeader,
+.viewerControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 20px;
+  background: var(--asl-surface);
+}
+
+.viewerHeader {
+  border-bottom: 1px solid var(--asl-line);
+}
+
+.viewerHeader h3 {
+  margin: 4px 0;
+  font-size: clamp(1.2rem, 2.4vw, 2rem);
+}
+
+.viewerHeader > div > p:last-child,
+.viewerControls span {
+  margin: 0;
+  color: var(--asl-text-secondary);
+  font-family: var(--asl-mono);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.viewer button {
+  min-height: 46px;
+  padding: 10px 16px;
+  border: 1px solid var(--asl-line);
+  color: var(--asl-text);
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.viewer button:hover {
+  border-color: var(--asl-gold);
+  color: var(--asl-gold);
+}
+
+.canvas {
+  min-height: 0;
+  overflow: auto;
+  background: #dfe3e5;
+}
+
+.canvas img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.viewerControls {
+  border-top: 1px solid var(--asl-line);
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .archive {
+    padding-inline: 22px;
+  }
+
+  .groupHeading,
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .groupHeading {
+    gap: 10px;
+  }
+
+  .viewer {
+    width: 100%;
+    height: 96vh;
+  }
+
+  .viewerHeader {
+    align-items: flex-start;
+  }
+
+  .viewerHeader > div {
+    min-width: 0;
+  }
+
+  .viewerControls {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .viewerControls button {
+    flex: 1;
+    padding-inline: 8px;
+  }
+
+  .viewerControls span {
+    display: none;
+  }
+}

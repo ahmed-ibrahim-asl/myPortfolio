@@ -1,6 +1,12 @@
+import type { Project } from "@/types/portfolio";
+import { archivePagesFor } from "@/data/biovety-site-archive";
+import { PublicImage } from "./PublicImage";
 import styles from "./BiovetyCaseStudy.module.css";
 
-export function BiovetyCaseStudy() {
+export function BiovetyCaseStudy({ project }: { project: Project }) {
+  const eurokemHome = archivePagesFor("Eurokem")[0];
+  const biovetyHome = archivePagesFor("BioVety")[0];
+
   return (
     <section
       className={styles.caseStudy}
@@ -8,49 +14,39 @@ export function BiovetyCaseStudy() {
       aria-labelledby="biovety-case-study-title"
     >
       <header className={styles.intro}>
-        <p className={styles.eyebrow}>Website redesign and migration</p>
-        <h2 id="biovety-case-study-title">
-          From the Eurokem site to a clearer BioVety catalogue
-        </h2>
-        <p>
-          I rebuilt the client&apos;s web presence around the BioVety identity and
-          made its veterinary products easier to browse. The new website is
-          complete, while the wider move away from Eurokem is still ongoing.
-        </p>
-        <span className={styles.status}>Ongoing migration</span>
+        <div>
+          <p className={styles.eyebrow}>Website redesign and migration</p>
+          <h2 id="biovety-case-study-title">
+            From Eurokem to a clearer BioVety catalogue
+          </h2>
+        </div>
+        <div className={styles.summary}>
+          <p>{project.description}</p>
+          <p>
+            I rebuilt the client&apos;s web presence around the BioVety identity
+            and made its veterinary products easier to browse. The new website
+            is complete, while the wider transition is still ongoing.
+          </p>
+          <strong>{project.outcome}</strong>
+          <span className={styles.status}>Ongoing migration</span>
+        </div>
       </header>
 
       <div className={styles.comparison}>
         <article className={styles.panel}>
-          <div
-            className={styles.legacyDemo}
-            data-legacy-demo="eurokem"
-            aria-label="Local visual demo of the legacy Eurokem Wix website"
-          >
-            <div className={styles.browserBar} aria-hidden="true">
-              <span className={styles.browserDots}>● ● ●</span>
-              <span>eurokemsite.wixsite.com</span>
-            </div>
-            <div className={styles.legacyNav} aria-hidden="true">
-              <strong>EUROKEM</strong>
-              <span>HOME &nbsp; ABOUT &nbsp; PRODUCTS &nbsp; CONTACT</span>
-            </div>
-            <div className={styles.legacyHero} aria-hidden="true">
-              <small>EXPERIENCE CHANGE WITH US</small>
-              <strong>DISCOVER OUR EXPERTISE</strong>
-              <span>Veterinary solutions and company information</span>
-            </div>
-            <div className={styles.legacyCards} aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </div>
+          <div className={styles.realCapture} data-legacy-demo="eurokem">
+            <PublicImage
+              original
+              src={eurokemHome.thumbnail}
+              alt="Locally preserved capture of the legacy Eurokem home page"
+            />
           </div>
-          <p className={styles.panelLabel}>Before</p>
-          <h3>Eurokem on Wix</h3>
+          <p className={styles.panelLabel}>Before · Page 01 of 09</p>
+          <h3>Legacy Eurokem on Wix</h3>
           <p>
-            This small local reconstruction preserves the recognizable legacy
-            direction without relying on the Wix page staying online.
+            The original site spread the company story and products across a
+            visually dense Wix experience. This capture is stored locally, so
+            the comparison does not depend on Wix staying online.
           </p>
           <a
             href="https://eurokemsite.wixsite.com/website-1"
@@ -62,34 +58,18 @@ export function BiovetyCaseStudy() {
         </article>
 
         <article className={styles.panel}>
-          <div
-            className={styles.currentDemo}
-            aria-label="Local visual demo of the current BioVety website"
-          >
-            <div className={styles.browserBar} aria-hidden="true">
-              <span className={styles.browserDots}>● ● ●</span>
-              <span>biovety.com</span>
-            </div>
-            <div className={styles.currentNav} aria-hidden="true">
-              <strong>BIOVETY</strong>
-              <span>ABOUT &nbsp; PRODUCTS &nbsp; PARTNERS &nbsp; CONTACT</span>
-            </div>
-            <div className={styles.currentHero} aria-hidden="true">
-              <small>VETERINARY HEALTH</small>
-              <strong>Products made easier to explore</strong>
-              <span>Clear categories, company details, and contact paths</span>
-            </div>
-            <div className={styles.productRail} aria-hidden="true">
-              <span>Products</span>
-              <span>Partners</span>
-              <span>Contact</span>
-            </div>
+          <div className={styles.realCapture}>
+            <PublicImage
+              original
+              src={biovetyHome.thumbnail}
+              alt="Locally preserved capture of the current BioVety home page"
+            />
           </div>
-          <p className={styles.panelLabel}>After</p>
-          <h3>BioVety International</h3>
+          <p className={styles.panelLabel}>After · Page 01 of 03</p>
+          <h3>Current BioVety website</h3>
           <p>
-            The finished site gives the company, catalogue, partners, and
-            contact paths a clearer structure.
+            The finished site gives the company, catalogue, and contact paths
+            a clearer hierarchy with a focused three-page structure.
           </p>
           <a href="https://biovety.com/" target="_blank" rel="noreferrer">
             Open the current BioVety website
@@ -101,25 +81,26 @@ export function BiovetyCaseStudy() {
         className={styles.operations}
         aria-labelledby="biovety-operations-title"
       >
-        <p className={styles.eyebrow}>Beyond the redesign</p>
-        <h3 id="biovety-operations-title">
-          The work also covered the move behind the website
-        </h3>
-        <ul>
+        <div>
+          <p className={styles.eyebrow}>Beyond the redesign</p>
+          <h3 id="biovety-operations-title">
+            The work also covered the move behind the website
+          </h3>
+        </div>
+        <ol>
           <li>Restructured the company presentation and product catalogue.</li>
           <li>
             Reviewed provider options and recommended Hostinger for cost and
             feature value.
           </li>
           <li>
+            Moved the Eurokem domain and business email to Hostinger.
+          </li>
+          <li>
             Implemented the BioVety domain and hosting on GoDaddy because that
             was the client&apos;s chosen provider.
           </li>
-          <li>
-            Set up the domain and business email arrangement required for the
-            new identity.
-          </li>
-        </ul>
+        </ol>
       </section>
     </section>
   );

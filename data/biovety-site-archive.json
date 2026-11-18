@@ -1,0 +1,140 @@
+[
+  {
+    "id": "eurokem-home",
+    "site": "Eurokem",
+    "title": "Eurokem home",
+    "url": "https://eurokemsite.wixsite.com/website-1",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/eurokem/home/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/home/page-01.webp",
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/home/page-02.webp",
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/home/page-03.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "eurokem-about-company",
+    "site": "Eurokem",
+    "title": "About us",
+    "url": "https://eurokemsite.wixsite.com/website-1/about-3-1",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/eurokem/about-company/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/about-company/page-01.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "eurokem-feed-additives",
+    "site": "Eurokem",
+    "title": "Our products",
+    "url": "https://eurokemsite.wixsite.com/website-1/about-3",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/eurokem/feed-additives/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/feed-additives/page-01.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "eurokem-cosmetics",
+    "site": "Eurokem",
+    "title": "Cosmetics",
+    "url": "https://eurokemsite.wixsite.com/website-1/cosmetics",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/eurokem/cosmetics/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/cosmetics/page-01.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "eurokem-cleaner-disinfectant",
+    "site": "Eurokem",
+    "title": "Cleaner and disinfectant",
+    "url": "https://eurokemsite.wixsite.com/website-1/cleaner-disinfectan",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/eurokem/cleaner-disinfectant/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/cleaner-disinfectant/page-01.webp",
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/cleaner-disinfectant/page-02.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "eurokem-veterinary-products",
+    "site": "Eurokem",
+    "title": "Feed additives",
+    "url": "https://eurokemsite.wixsite.com/website-1/copy-of-feed-addtivess",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/eurokem/veterinary-products/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/veterinary-products/page-01.webp",
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/veterinary-products/page-02.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "eurokem-product-catalogue",
+    "site": "Eurokem",
+    "title": "Antimicrobials",
+    "url": "https://eurokemsite.wixsite.com/website-1/copy-of-feed-addtivess-2",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/eurokem/product-catalogue/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/product-catalogue/page-01.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "eurokem-happy-products",
+    "site": "Eurokem",
+    "title": "Happy clients",
+    "url": "https://eurokemsite.wixsite.com/website-1/happy",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/eurokem/happy-products/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/happy-products/page-01.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "eurokem-contact",
+    "site": "Eurokem",
+    "title": "Contact us",
+    "url": "https://eurokemsite.wixsite.com/website-1/contact",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/eurokem/contact/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/eurokem/contact/page-01.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "biovety-home",
+    "site": "BioVety",
+    "title": "BioVety International",
+    "url": "https://biovety.com/",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/biovety/home/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/biovety/home/page-01.webp",
+      "/media/portfolio/showcase/biovety/site-archive/biovety/home/page-02.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "biovety-products",
+    "site": "BioVety",
+    "title": "Products for animal health operations",
+    "url": "https://biovety.com/products.html",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/biovety/products/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/biovety/products/page-01.webp",
+      "/media/portfolio/showcase/biovety/site-archive/biovety/products/page-02.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  },
+  {
+    "id": "biovety-contact",
+    "site": "BioVety",
+    "title": "Talk to our team",
+    "url": "https://biovety.com/contact.html",
+    "thumbnail": "/media/portfolio/showcase/biovety/site-archive/biovety/contact/thumbnail.webp",
+    "tiles": [
+      "/media/portfolio/showcase/biovety/site-archive/biovety/contact/page-01.webp"
+    ],
+    "capturedAt": "2026-11-18"
+  }
+]

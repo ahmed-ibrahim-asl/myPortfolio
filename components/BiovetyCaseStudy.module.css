@@ -1,45 +1,62 @@
 .caseStudy {
-  margin-top: 32px;
   padding: clamp(24px, 5vw, 56px);
   border: 1px solid var(--asl-line);
   background: var(--asl-surface);
 }
 
 .intro {
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: clamp(28px, 6vw, 76px);
+  align-items: start;
 }
 
 .intro h2 {
-  max-width: 18ch;
-  margin: 10px 0 18px;
-  font-size: clamp(2rem, 4.2vw, 4rem);
-  line-height: 1.02;
-  letter-spacing: -0.04em;
+  max-width: 15ch;
+  margin: 10px 0 0;
+  font-size: clamp(2.2rem, 5vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
 }
 
-.intro > p:not(.eyebrow) {
-  max-width: 65ch;
+.summary {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.summary p {
+  margin: 0;
   color: var(--asl-text-secondary);
   line-height: 1.75;
+}
+
+.summary strong {
+  padding-top: 16px;
+  border-top: 1px solid var(--asl-line);
+  color: var(--asl-gold);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 .eyebrow,
 .panelLabel {
   margin: 0;
   color: var(--asl-gold);
-  font-size: 0.75rem;
+  font-family: var(--asl-mono);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .status {
-  display: inline-flex;
-  margin-top: 16px;
+  align-self: flex-start;
   padding: 8px 12px;
   border: 1px solid var(--asl-gold);
   color: var(--asl-gold);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
@@ -47,20 +64,38 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
-  margin-top: 40px;
+  margin-top: clamp(48px, 8vw, 88px);
+  padding-top: 30px;
+  border-top: 1px solid var(--asl-line);
 }
 
 .panel {
   min-width: 0;
 }
 
+.realCapture {
+  aspect-ratio: 16 / 10;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 1px solid var(--asl-line);
+  background: #fff;
+}
+
+.realCapture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .panel h3 {
-  margin: 10px 0 8px;
-  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  margin: 10px 0 10px;
+  font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+  line-height: 1.08;
 }
 
 .panel > p:not(.panelLabel) {
-  min-height: 5.2em;
+  min-height: 6.4em;
   margin: 0;
   color: var(--asl-text-secondary);
   line-height: 1.7;
@@ -79,145 +114,24 @@
   outline-offset: 4px;
 }
 
-.legacyDemo,
-.currentDemo {
-  display: flex;
-  min-height: 310px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  border: 1px solid var(--asl-line);
-  background: #f5f4ef;
-  color: #17222a;
-  flex-direction: column;
-}
-
-.browserBar {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-height: 34px;
-  padding: 0 12px;
-  border-bottom: 1px solid #d5d9d7;
-  background: #eef0ef;
-  color: #66716e;
-  font-size: 0.66rem;
-}
-
-.browserDots {
-  color: #9ca6a2;
-  font-size: 0.5rem;
-  letter-spacing: 0.12em;
-}
-
-.legacyNav,
-.currentNav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 14px 18px;
-  font-size: 0.48rem;
-  letter-spacing: 0.08em;
-}
-
-.legacyNav strong,
-.currentNav strong {
-  font-size: 0.92rem;
-  letter-spacing: 0.05em;
-}
-
-.legacyHero,
-.currentHero {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  padding: clamp(30px, 5vw, 52px) 22px;
-  text-align: center;
-  flex-direction: column;
-}
-
-.legacyHero {
-  color: #fff;
-  background:
-    linear-gradient(120deg, rgba(16, 48, 67, 0.94), rgba(55, 115, 132, 0.72)),
-    linear-gradient(35deg, #5a8e98, #142b37);
-}
-
-.legacyHero small,
-.currentHero small {
-  margin-bottom: 10px;
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-}
-
-.legacyHero strong,
-.currentHero strong {
-  font-size: clamp(1.3rem, 3vw, 2.25rem);
-  line-height: 1;
-  letter-spacing: -0.035em;
-}
-
-.legacyHero span,
-.currentHero span {
-  margin-top: 13px;
-  font-size: 0.68rem;
-}
-
-.legacyCards,
-.productRail {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  padding: 12px 16px;
-}
-
-.legacyCards span {
-  height: 16px;
-  background: #d6ddd9;
-}
-
-.currentDemo {
-  background: #f5f7f4;
-}
-
-.currentNav {
-  color: #153f32;
-  background: #fff;
-}
-
-.currentHero {
-  align-items: flex-start;
-  color: #f8fff8;
-  text-align: left;
-  background:
-    radial-gradient(circle at 85% 35%, rgba(174, 218, 139, 0.45) 0 11%, transparent 12%),
-    linear-gradient(125deg, #0d4a3b 0%, #217c65 100%);
-}
-
-.productRail span {
-  padding: 8px 4px;
-  border: 1px solid #cddbd4;
-  color: #1a5947;
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-align: center;
-}
-
 .operations {
-  margin-top: 44px;
-  padding-top: 34px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(28px, 6vw, 70px);
+  margin-top: clamp(52px, 8vw, 90px);
+  padding-top: 36px;
   border-top: 1px solid var(--asl-line);
 }
 
 .operations h3 {
-  max-width: 22ch;
-  margin: 10px 0 24px;
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
-  line-height: 1.1;
+  max-width: 18ch;
+  margin: 10px 0 0;
+  font-size: clamp(1.7rem, 3.3vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
 }
 
-.operations ul {
+.operations ol {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
@@ -229,7 +143,7 @@
 
 .operations li {
   position: relative;
-  min-height: 112px;
+  min-height: 122px;
   padding: 22px 22px 22px 54px;
   border: 1px solid var(--asl-line);
   color: var(--asl-text-secondary);
@@ -245,17 +159,20 @@
   content: counter(biovety-scope, decimal-leading-zero);
   font-family: var(--asl-mono);
   font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
 }
 
-@media (max-width: 760px) {
-  .comparison,
-  .operations ul {
+@media (max-width: 860px) {
+  .intro,
+  .operations {
     grid-template-columns: minmax(0, 1fr);
   }
+}
 
-  .legacyDemo,
-  .currentDemo {
-    min-height: 260px;
+@media (max-width: 680px) {
+  .comparison,
+  .operations ol {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .panel > p:not(.panelLabel) {
@@ -263,11 +180,6 @@
   }
 
   .panel + .panel {
-    margin-top: 16px;
-  }
-
-  .legacyNav span,
-  .currentNav span {
-    display: none;
+    margin-top: 18px;
   }
 }
