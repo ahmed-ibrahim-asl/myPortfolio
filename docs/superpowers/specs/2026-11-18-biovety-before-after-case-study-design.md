@@ -27,13 +27,13 @@ The introduction must state that this was more than a visual redesign. It includ
 
 Add a two-panel comparison inside the BioVety project detail page.
 
-The Before panel represents the legacy Eurokem Wix website. It uses a curated visual placed inside the portfolio’s browser-frame treatment. It includes a link to the public legacy website as evidence.
+The Before panel represents the legacy Eurokem Wix website. It uses a small local HTML and CSS demo placed inside the portfolio’s browser-frame treatment. The demo preserves the recognizable structure and visual direction without loading the Wix website at runtime. It includes a link to the public legacy website as optional evidence while that link remains available.
 
 The After panel represents the completed BioVety website. It uses the same browser-frame treatment and links to the live BioVety website.
 
 The layout is side by side on wide screens and stacked on mobile. Both panels must remain readable in light and dark themes.
 
-Do not embed the legacy website in an iframe. The page must not depend on Wix allowing third-party embedding, and it must not copy the entire legacy site into the portfolio.
+Do not embed the legacy website in an iframe. The page must not depend on Wix allowing third-party embedding, and it must not copy the entire legacy site into the portfolio. The local demo must continue to render if the Wix website becomes unavailable.
 
 ### 3. Beyond the redesign
 
@@ -90,7 +90,7 @@ Update the BioVety project record with the stronger description, outcome, tags, 
 
 ### Visual assets
 
-Create curated visual assets from the available public websites or existing project materials. The assets must be stored locally, optimized for the portfolio, and given accurate alt text.
+Build the legacy Eurokem preview as local semantic markup and CSS. It must not fetch images, styles, scripts, or page content from Wix at runtime. Any supporting visual assets must be stored locally, optimized for the portfolio, and given accurate alt text.
 
 ## Responsive and accessibility requirements
 
@@ -107,6 +107,7 @@ Create curated visual assets from the available public websites or existing proj
 - Confirm the BioVety project page renders the dedicated case study.
 - Confirm other project pages remain unchanged.
 - Confirm the legacy and current links open the intended websites.
+- Confirm the legacy preview renders with network access disabled and contains no iframe or Wix runtime dependency.
 - Check desktop and mobile layouts.
 - Check light and dark themes.
 - Run the project’s lint, type, and build checks available in the repository.
@@ -115,6 +116,7 @@ Create curated visual assets from the available public websites or existing proj
 ## Out of scope
 
 - Mirroring the full Wix website.
+- Depending on the live Wix website to render the legacy preview.
 - Changing the client’s live hosting or DNS.
 - Publishing unverified prices.
 - Rebuilding unrelated portfolio project pages.
