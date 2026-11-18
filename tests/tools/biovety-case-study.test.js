@@ -14,6 +14,8 @@ test("BioVety includes a local legacy demo and the migration case study", async 
   assert.ok(html.includes("Hostinger"));
   assert.ok(html.includes("GoDaddy"));
   assert.ok(html.includes("Open the current BioVety website"));
+  assert.ok(html.includes("Website redesign, catalogue structure, domain, hosting, and business email setup"));
+  assert.ok(html.includes("Client website completed, wider brand migration ongoing"));
   assert.ok(!html.includes("<iframe"));
   assert.ok(!html.includes("static.wixstatic.com"));
 });
