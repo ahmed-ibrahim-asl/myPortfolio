@@ -3970,6 +3970,51 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "role": "gallery-evidence",
     "sizesPreset": "gallery-thumb"
   },
+  "/media/portfolio/showcase/biovety/cover.webp": {
+    "source": "/media/portfolio/showcase/biovety/cover.webp",
+    "width": 1600,
+    "height": 900,
+    "avif": [],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/biovety/cover/320.webp",
+        "width": 320,
+        "bytes": 30698
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/biovety/cover/480.webp",
+        "width": 480,
+        "bytes": 61888
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/biovety/cover/640.webp",
+        "width": 640,
+        "bytes": 102070
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/biovety/cover/768.webp",
+        "width": 768,
+        "bytes": 139986
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/biovety/cover/960.webp",
+        "width": 960,
+        "bytes": 196206
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/biovety/cover/1280.webp",
+        "width": 1280,
+        "bytes": 321918
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/biovety/cover/1600.webp",
+        "width": 1600,
+        "bytes": 449956
+      }
+    ],
+    "role": "project-cover",
+    "sizesPreset": "project-card"
+  },
   "/media/portfolio/showcase/fall-detection/cover-asl-v1.webp": {
     "source": "/media/portfolio/showcase/fall-detection/cover-asl-v1.webp",
     "width": 1672,
