@@ -35,8 +35,9 @@ export function createHomePageJsonLd(locale: "en" | "ar" = "en"): JsonLdData {
   };
 }
 
-export function createPageMetadata({ title, description, pathname = "", locale = "en", translated = false }: PageMetadataOptions): Metadata {
+export function createPageMetadata({ title, description, pathname = "", image, locale = "en", translated = false }: PageMetadataOptions): Metadata {
   const url = absoluteUrl(pathname);
+  const shareImage = image ? absoluteUrl(image) : undefined;
   const englishPath = pathname.startsWith("/ar/") ? pathname.slice(3) || "/" : pathname;
   const arabicPath = englishPath === "/" ? "/ar/" : `/ar${englishPath.startsWith("/") ? englishPath : `/${englishPath}`}`;
   const socialTitle = `${title} | ${siteConfig.name}`;
@@ -65,10 +66,10 @@ export function createPageMetadata({ title, description, pathname = "", locale =
       description,
       images: [
         {
-          url: socialImage,
+          url: shareImage ?? socialImage,
           width: 1200,
           height: 630,
-          alt: `${profile.name}, ${profile.role}`
+          alt: shareImage ? title : `${profile.name}, ${profile.role}`
         }
       ]
     },
@@ -76,7 +77,7 @@ export function createPageMetadata({ title, description, pathname = "", locale =
       card: "summary_large_image",
       title: socialTitle,
       description,
-      images: [twitterImage]
+      images: [shareImage ?? twitterImage]
     }
   };
 }

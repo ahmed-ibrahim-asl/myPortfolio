@@ -20,7 +20,7 @@ async function resolve(params: Promise<{ category: string; project: string }>) {
 }
 export async function generateMetadata({ params }: { params: Promise<{ category: string; project: string }> }) {
  const { group, project } = await resolve(params);
- return createPageMetadata({ title: project.title, description: project.description, pathname: `/work/${group.id}/${project.slug}/` });
+ return createPageMetadata({ title: project.title, description: project.description, pathname: `/work/${group.id}/${project.slug}/`, image: `/work/${group.id}/${project.slug}/og.jpg` });
 }
 export default async function ProjectPage({ params }: { params: Promise<{ category: string; project: string }> }) {
  const { group, project } = await resolve(params);
