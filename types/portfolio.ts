@@ -1,6 +1,8 @@
 export interface SocialLink {
   label: string;
   href: string;
+  /** Brand name from SocialIcon (e.g. "YouTube", "Figma"); renders the link as an icon button. */
+  icon?: string;
 }
 
 export interface Profile {
@@ -73,6 +75,8 @@ export interface Project {
   image: string;
   gallery?: GalleryItem[];
   galleryLabel?: string;
+  /** Show the gallery images directly instead of inside a collapsed disclosure. */
+  galleryOpen?: boolean;
   video?: { src: string; poster: string; caption: string };
   uiGallery?: GalleryItem[];
   imageNote?: string;

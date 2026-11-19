@@ -2,6 +2,7 @@ import React from "react";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
   siBehance,
+  siFigma,
   siGithub,
   siGooglescholar,
   siTryhackme,
@@ -24,20 +25,26 @@ const icons: Record<string, IconData> = {
   "Google Scholar": { path: siGooglescholar.path, viewBox: "0 0 24 24" },
   TryHackMe: { path: siTryhackme.path, viewBox: "0 0 24 24" },
   Behance: { path: siBehance.path, viewBox: "0 0 24 24" },
-  YouTube: { path: siYoutube.path, viewBox: "0 0 24 24" }
+  YouTube: { path: siYoutube.path, viewBox: "0 0 24 24" },
+  Figma: { path: siFigma.path, viewBox: "0 0 24 24" }
 };
 
 interface SocialIconProps {
   label: string;
+  className?: string;
 }
 
-export function SocialIcon({ label }: SocialIconProps) {
+export function hasSocialIcon(label: string) {
+  return label in icons;
+}
+
+export function SocialIcon({ label, className = "social-icon" }: SocialIconProps) {
   const icon = icons[label];
   if (!icon) return null;
 
   return (
     <svg
-      className="social-icon"
+      className={className}
       viewBox={icon.viewBox}
       aria-hidden="true"
       focusable="false"

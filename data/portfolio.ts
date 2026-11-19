@@ -239,6 +239,7 @@ export const projects: Project[] = [
     outcome: "Tap a card, the product opens in the catalog; cards written and verified in two taps",
     tags: ["ESP8266", "RC522 RFID", "C++", "KiCad", "Node.js", "Web portal", "Figma"],
     image: asset("/media/portfolio/showcase/topwood-rfid/board-render.webp"),
+    galleryOpen: true,
     gallery: [
       {src: asset("/media/portfolio/showcase/topwood-rfid/schematic.webp"), alt: "KiCad schematic of the Top Wood main board: 12 V input, LM2596 buck, AMS1117 3.3 V regulator, NodeMCU and RC522 header"},
       {src: asset("/media/portfolio/showcase/topwood-rfid/pcb-layout.webp"), alt: "KiCad PCB layout of the Top Wood main board, fully routed with power traces sized for the buck module"},
@@ -246,8 +247,8 @@ export const projects: Project[] = [
       {src: asset("/media/portfolio/showcase/topwood-rfid/portal.webp"), alt: "Top Wood setup portal on a tablet: card reader and card writer tabs"}
     ],
     links: [
-      {label: "Watch the full demo on YouTube", href: "https://youtu.be/JlM_-ofcRd0"},
-      {label: "View interface design in Figma", href: "https://www.figma.com/design/jAvINNnQaUC2qPMKJCTXDA/Top-Wood-RFID-Portal?node-id=4-34&p=f"}
+      {label: "Watch the full demo on YouTube", href: "https://youtu.be/JlM_-ofcRd0", icon: "YouTube"},
+      {label: "View interface design in Figma", icon: "Figma", href: "https://www.figma.com/design/jAvINNnQaUC2qPMKJCTXDA/Top-Wood-RFID-Portal?node-id=4-34&p=f"}
     ],
     testimonial: {
       quote: "تسلم اديك يا بشمهندس. البوردة وصلت وجربتها، والشغل ما شاء الله ممتاز وقراءة الكروت سريعة وثابتة جداً. تسلم إيدك على الشغل النظيف والمجهود الكبير، وهنتواصل سوا لو في اي فكرة جديدة قريب إن شاء الله. بالتوفيق.",

@@ -6,6 +6,7 @@ import { mobileScreens } from "@/data/mobile-screens";
 import { MobileScreenGallery } from "./MobileScreenGallery";
 import { PublicImage } from "./PublicImage";
 import { ClientTestimonial } from "./ClientTestimonial";
+import { SocialIcon } from "./SocialIcon";
 import styles from "./WorkCollection.module.css";
 
 export function WorkCollection({ category }: { category: string }) {
@@ -47,8 +48,14 @@ export function WorkEntry({ project, compact = false, category }: { project: Pro
       </figure>}
       {project.testimonial && <ClientTestimonial testimonial={project.testimonial} />}
       {project.imageNote && <p className={styles.imageNote}>{project.imageNote}</p>}
-      {project.links?.map(link => link.href.startsWith("#") ? <Link className={styles.action} key={link.href} href={`/work/recognition/${link.href}`}>{link.label}<span aria-hidden="true">↗</span></Link> : <a className={styles.action} key={link.href} href={link.href} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true">↗</span></a>)}
-      {project.gallery?.length ? <details className={styles.evidence}><summary>{project.galleryLabel ?? `View original project images (${project.gallery.length})`}</summary><div>{project.gallery.map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} sizesPreset="project-gallery" loading="lazy" /></a>)}</div></details> : null}
+      {project.links?.some(link => link.icon) && <ul className={styles.iconLinks} aria-label="Project links">{project.links.filter(link => link.icon).map(link => <li key={link.href}><a href={link.href} target="_blank" rel="noreferrer" aria-label={link.label} title={link.label}><SocialIcon label={link.icon!} className={styles.brandIcon} /><span>{link.icon}</span></a></li>)}</ul>}
+      {project.links?.filter(link => !link.icon).map(link => link.href.startsWith("#") ? <Link className={styles.action} key={link.href} href={`/work/recognition/${link.href}`}>{link.label}<span aria-hidden="true">↗</span></Link> : <a className={styles.action} key={link.href} href={link.href} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true">↗</span></a>)}
+      {project.gallery?.length ? (() => {
+        const images = <div>{project.gallery.map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} sizesPreset="project-gallery" loading="lazy" /></a>)}</div>;
+        return project.galleryOpen
+          ? <section className={`${styles.evidence} ${styles.evidenceOpen}`} aria-label={`${project.title} project images`}>{images}</section>
+          : <details className={styles.evidence}><summary>{project.galleryLabel ?? `View original project images (${project.gallery.length})`}</summary>{images}</details>;
+      })() : null}
       {project.uiGallery?.length ? <details className={styles.mobileEvidence}><summary>Mobile app screens ({mobileScreens[project.slug]?.length ?? project.uiGallery.length})</summary>
         {mobileScreens[project.slug] && <MobileScreenGallery screens={mobileScreens[project.slug]} project={project.title} />}
         <details className={`${styles.evidence} ${styles.interfaces}`}><summary>View original UI images</summary><div>{project.uiGallery.map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} sizesPreset="project-detail" loading="lazy" /></a>)}</div></details>
