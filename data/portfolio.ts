@@ -369,7 +369,7 @@ export const projects: Project[] = [
     description: "Website redesign, catalogue structure, domain, hosting, and business email setup for a veterinary health business moving from its legacy Eurokem presence to the new BioVety identity.",
     outcome: "Client website completed, wider brand migration ongoing",
     tags: ["Web design", "Product catalogue", "Domain migration", "Hosting setup", "Business email"],
-    image: "",
+    image: "/media/portfolio/showcase/biovety/cover.webp",
     website: "biovety.com",
     links: [{ label: "Visit Biovety", href: "https://biovety.com/" }],
     featured: false

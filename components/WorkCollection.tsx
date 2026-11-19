@@ -25,7 +25,7 @@ export function WorkEntry({ project, compact = false, category }: { project: Pro
   const isPlaceholder = previewImage?.includes("/placeholders/");
   const destination = `/work/${category}/${project.slug}/`;
   return <article className={styles.card} id={project.slug}>
-    {project.website ? <div className={`${styles.visual} ${styles.browser}`}>
+    {project.website && !project.image ? <div className={`${styles.visual} ${styles.browser}`}>
       <div className={styles.browserBar}><span aria-hidden="true">● ● ●</span><span>{project.website}</span></div>
       <div className={styles.webIdentity}><span className={styles.kicker}>{project.slug === "biovety-website" ? "Veterinary health" : "Engineering & education"}</span><strong>{project.title}</strong><span className={styles.domain}>{project.website}</span></div>
     </div> : compact ? <Link className={styles.visual} href={destination} aria-label={`Explore ${project.title}`}><PublicImage src={previewImage} alt={previewAlt} sizesPreset="work-card" loading="lazy" /></Link> : <a className={styles.visual} href={project.image} target="_blank" rel="noreferrer" aria-label={`View ${project.title} image`}><PublicImage src={project.image} alt={`${project.title} project preview`} sizesPreset="project-detail" loading="lazy" /></a>}

@@ -19,7 +19,7 @@ export function generateStaticParams() {
 const isRaster = (src?: string) => !!src && /\.(png|jpe?g|webp|gif)$/i.test(src) && !src.startsWith("http");
 
 function pictureFor(project: Project): string | undefined {
-  if (project.slug === "biovety-website") return archivePagesFor("BioVety")[0]?.thumbnail;
+  if (project.slug === "biovety-website" && !isRaster(project.image)) return archivePagesFor("BioVety")[0]?.thumbnail;
   return [project.image, project.video?.poster, ...(project.gallery ?? []).map(item => item.src), ...(project.uiGallery ?? []).map(item => item.src)]
     .find(isRaster) ?? (project.image && !project.image.startsWith("http") ? project.image : undefined);
 }
@@ -39,7 +39,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ cat
   const picture = pictureFor(project);
   const input = picture ? await readFile(path.join(process.cwd(), "public", decodeURI(picture.replace(/^\/+/, "")))) : titleCard(project);
   const jpeg = await sharp(input, { density: 300 })
-    .resize(size.width, size.height, { fit: "cover", position: sharp.strategy.attention })
+    .resize(size.width, size.height, { fit: "cover", position: picture === project.image ? "centre" : sharp.strategy.attention })
     .flatten({ background: "#0d1014" })
     .jpeg({ quality: 90, mozjpeg: true })
     .toBuffer();
