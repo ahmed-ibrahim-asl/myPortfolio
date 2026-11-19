@@ -128,7 +128,7 @@ export function HomePageView({ locale }: { locale: Locale }) {
               href={`/work/${workCategories.find((group) => group.categories.includes(project.category))?.id}/${project.slug}/`}
               key={project.slug}
             >
-              <PublicImage src={project.image} alt="" />
+              <PublicImage src={project.image} alt="" sizesPreset="home-project" />
               <span className="project-index">0{index + 1}</span>
               <div className="project-copy" dir={isAr ? TECH_DIR : undefined}>
                 <p>{project.category} / {project.year}</p>

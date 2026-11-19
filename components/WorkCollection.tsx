@@ -27,7 +27,7 @@ export function WorkEntry({ project, compact = false, category }: { project: Pro
     {project.website ? <div className={`${styles.visual} ${styles.browser}`}>
       <div className={styles.browserBar}><span aria-hidden="true">● ● ●</span><span>{project.website}</span></div>
       <div className={styles.webIdentity}><span className={styles.kicker}>{project.slug === "biovety-website" ? "Veterinary health" : "Engineering & education"}</span><strong>{project.title}</strong><span className={styles.domain}>{project.website}</span></div>
-    </div> : compact ? <Link className={styles.visual} href={destination} aria-label={`Explore ${project.title}`}><PublicImage src={previewImage} alt={previewAlt} loading="lazy" /></Link> : <a className={styles.visual} href={project.image} target="_blank" rel="noreferrer" aria-label={`View ${project.title} image`}><PublicImage src={project.image} alt={`${project.title} project preview`} loading="lazy" /></a>}
+    </div> : compact ? <Link className={styles.visual} href={destination} aria-label={`Explore ${project.title}`}><PublicImage src={previewImage} alt={previewAlt} sizesPreset="work-card" loading="lazy" /></Link> : <a className={styles.visual} href={project.image} target="_blank" rel="noreferrer" aria-label={`View ${project.title} image`}><PublicImage src={project.image} alt={`${project.title} project preview`} sizesPreset="project-detail" loading="lazy" /></a>}
     <div className={styles.body}>
       {compact && category === "apps-ui" && isPlaceholder && <p className={styles.imageNote}>Preview placeholder · app screenshots not yet added</p>}
       {compact && project.imageNote && <p className={styles.imageNote}>{project.imageNote}</p>}
@@ -48,10 +48,10 @@ export function WorkEntry({ project, compact = false, category }: { project: Pro
       {project.testimonial && <ClientTestimonial testimonial={project.testimonial} />}
       {project.imageNote && <p className={styles.imageNote}>{project.imageNote}</p>}
       {project.links?.map(link => link.href.startsWith("#") ? <Link className={styles.action} key={link.href} href={`/work/recognition/${link.href}`}>{link.label}<span aria-hidden="true">↗</span></Link> : <a className={styles.action} key={link.href} href={link.href} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true">↗</span></a>)}
-      {project.gallery?.length ? <details className={styles.evidence}><summary>{project.galleryLabel ?? `View original project images (${project.gallery.length})`}</summary><div>{project.gallery.map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} loading="lazy" /></a>)}</div></details> : null}
+      {project.gallery?.length ? <details className={styles.evidence}><summary>{project.galleryLabel ?? `View original project images (${project.gallery.length})`}</summary><div>{project.gallery.map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} sizesPreset="project-gallery" loading="lazy" /></a>)}</div></details> : null}
       {project.uiGallery?.length ? <details className={styles.mobileEvidence}><summary>Mobile app screens ({mobileScreens[project.slug]?.length ?? project.uiGallery.length})</summary>
         {mobileScreens[project.slug] && <MobileScreenGallery screens={mobileScreens[project.slug]} project={project.title} />}
-        <details className={`${styles.evidence} ${styles.interfaces}`}><summary>View original UI images</summary><div>{project.uiGallery.map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} loading="lazy" /></a>)}</div></details>
+        <details className={`${styles.evidence} ${styles.interfaces}`}><summary>View original UI images</summary><div>{project.uiGallery.map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} sizesPreset="project-detail" loading="lazy" /></a>)}</div></details>
       </details> : null}
       </>}
     </div>

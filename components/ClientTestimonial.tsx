@@ -12,7 +12,7 @@ export function ClientTestimonial({ testimonial }: { testimonial: Testimonial })
     {testimonial.translation && <p className={styles.translation} lang="en">{testimonial.translation}</p>}
     <figcaption><strong>{testimonial.author}</strong>{testimonial.context && <span>{testimonial.context}</span>}</figcaption>
     {testimonial.proof && <details className={styles.proof}><summary>View original message</summary>
-      <a href={testimonial.proof.src} target="_blank" rel="noreferrer"><PublicImage src={testimonial.proof.src} alt={testimonial.proof.alt} loading="lazy" /></a>
+      <a href={testimonial.proof.src} target="_blank" rel="noreferrer"><PublicImage src={testimonial.proof.src} alt={testimonial.proof.alt} sizesPreset="testimonial-proof" loading="lazy" /></a>
     </details>}
   </figure>;
 }
