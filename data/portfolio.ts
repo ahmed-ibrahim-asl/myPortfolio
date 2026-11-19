@@ -241,8 +241,10 @@ export const projects: Project[] = [
     image: asset("/media/portfolio/showcase/topwood-rfid/cover.webp"),
     gallery: [
       {src: asset("/media/portfolio/showcase/topwood-rfid/board-render.webp"), alt: "Assembled Top Wood RFID board: NodeMCU ESP8266, RC522 reader and LM2596 buck module on the carrier PCB"},
-      {src: asset("/media/portfolio/showcase/topwood-rfid/portal.webp"), alt: "Top Wood setup portal on a tablet: card reader and card writer tabs"},
-      {src: asset("/media/portfolio/showcase/topwood-rfid/pcb.webp"), alt: "Top Wood carrier PCB render with the NodeMCU, RC522 and LM2596 buck module"}
+      {src: asset("/media/portfolio/showcase/topwood-rfid/schematic.webp"), alt: "KiCad schematic of the Top Wood main board: 12 V input, LM2596 buck, AMS1117 3.3 V regulator, NodeMCU and RC522 header"},
+      {src: asset("/media/portfolio/showcase/topwood-rfid/pcb-layout.webp"), alt: "KiCad PCB layout of the Top Wood main board, fully routed with power traces sized for the buck module"},
+      {src: asset("/media/portfolio/showcase/topwood-rfid/pcb-3d.webp"), alt: "KiCad 3D view of the Top Wood main board with the NodeMCU, RC522 reader and LM2596 module fitted"},
+      {src: asset("/media/portfolio/showcase/topwood-rfid/portal.webp"), alt: "Top Wood setup portal on a tablet: card reader and card writer tabs"}
     ],
     links: [
       {label: "Watch the full demo on YouTube", href: "https://youtu.be/JlM_-ofcRd0"},

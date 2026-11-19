@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-19T14:20:58.621Z",
+  "generatedAt": "2026-11-19T14:28:39.975Z",
   "roleCounts": {
     "project-cover": 19,
     "portrait": 4,
     "decorative": 1,
     "tool-cover": 70,
     "tutorial-cover": 3,
-    "gallery-evidence": 41,
+    "gallery-evidence": 43,
     "interface-screenshot": 17,
     "social": 2
   },
-  "referenced": 157,
+  "referenced": 159,
   "unreferenced": [
     "/brand/portrait-asl.png",
     "/images/Human Follower.jpg",
