@@ -3,6 +3,8 @@ import type { Project } from "@/types/portfolio";
 import { projects } from "@/data/portfolio";
 import { groupWork } from "@/data/work-categories";
 import { WorkEntry } from "@/components/WorkCollection";
+import { BiovetyCaseStudy } from "@/components/BiovetyCaseStudy";
+import { BiovetySiteArchive } from "@/components/BiovetySiteArchive";
 import { WorkBreadcrumb } from "@/components/WorkHub";
 import { createPageMetadata } from "@/lib/seo";
 import styles from "@/components/WorkPages.module.css";
@@ -22,5 +24,6 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
 }
 export default async function ProjectPage({ params }: { params: Promise<{ category: string; project: string }> }) {
  const { group, project } = await resolve(params);
- return <div className={`asl-page ${styles.page}`}><WorkBreadcrumb category={group} project={project.title} /><header className={styles.heading}><h1>{project.title}</h1></header><div className={styles.detail}><WorkEntry project={project} category={group.id} /></div></div>;
+ const isBiovety = project.slug === "biovety-website";
+ return <div className={`asl-page ${styles.page}`}><WorkBreadcrumb category={group} project={project.title} /><header className={styles.heading}><h1>{project.title}</h1></header><div className={styles.detail}>{isBiovety ? <><BiovetyCaseStudy project={project} /><BiovetySiteArchive /></> : <WorkEntry project={project} category={group.id} />}</div></div>;
 }
