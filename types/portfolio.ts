@@ -52,6 +52,15 @@ export interface GalleryItem {
   alt: string;
 }
 
+export interface Testimonial {
+  quote: string;
+  quoteLang?: string;
+  translation?: string;
+  author: string;
+  context?: string;
+  proof?: GalleryItem;
+}
+
 export interface Project {
   role?: string;
   slug: string;
@@ -68,6 +77,7 @@ export interface Project {
   uiGallery?: GalleryItem[];
   imageNote?: string;
   links?: SocialLink[];
+  testimonial?: Testimonial;
   website?: string;
   featured: boolean;
 }

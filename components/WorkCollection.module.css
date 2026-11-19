@@ -28,7 +28,7 @@
 :global([data-theme="light"]) :is(.entryMeta, .body .outcome, .action, .evidence summary) { color: var(--text-primary); }
 .evidence summary { padding: 16px 0; cursor: pointer; color: var(--accent); }
 .evidence > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.evidence img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: contain; }
+.evidence img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; }
 .body .imageNote { font-size: .72rem; line-height: 1.5; color: var(--asl-text-secondary); }
 .interfaces { border-top: 1px solid var(--asl-line); }
 .mobileEvidence { border-top: 1px solid var(--asl-line); margin-top: 8px; }

@@ -5725,6 +5725,91 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "role": "interface-screenshot",
     "sizesPreset": "gallery-thumb"
   },
+  "/media/portfolio/showcase/topwood-rfid/board-render.webp": {
+    "source": "/media/portfolio/showcase/topwood-rfid/board-render.webp",
+    "width": 1600,
+    "height": 900,
+    "avif": [],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/board-render/320.webp",
+        "width": 320,
+        "bytes": 71096
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/board-render/480.webp",
+        "width": 480,
+        "bytes": 144276
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/board-render/640.webp",
+        "width": 640,
+        "bytes": 243232
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/board-render/768.webp",
+        "width": 768,
+        "bytes": 329732
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/board-render/960.webp",
+        "width": 960,
+        "bytes": 454284
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/board-render/1280.webp",
+        "width": 1280,
+        "bytes": 738704
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/board-render/1600.webp",
+        "width": 1600,
+        "bytes": 1036808
+      }
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
+  },
+  "/media/portfolio/showcase/topwood-rfid/client-review.webp": {
+    "source": "/media/portfolio/showcase/topwood-rfid/client-review.webp",
+    "width": 1280,
+    "height": 1168,
+    "avif": [],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/client-review/320.webp",
+        "width": 320,
+        "bytes": 35116
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/client-review/480.webp",
+        "width": 480,
+        "bytes": 80022
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/client-review/640.webp",
+        "width": 640,
+        "bytes": 119610
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/client-review/768.webp",
+        "width": 768,
+        "bytes": 170140
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/client-review/960.webp",
+        "width": 960,
+        "bytes": 236624
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/client-review/1280.webp",
+        "width": 1280,
+        "bytes": 375910
+      }
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
+  },
   "/media/portfolio/showcase/topwood-rfid/cover.webp": {
     "source": "/media/portfolio/showcase/topwood-rfid/cover.webp",
     "width": 1600,

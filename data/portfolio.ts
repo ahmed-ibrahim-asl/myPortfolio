@@ -240,6 +240,7 @@ export const projects: Project[] = [
     tags: ["ESP8266", "RC522 RFID", "C++", "KiCad", "Node.js", "Web portal", "Figma"],
     image: asset("/media/portfolio/showcase/topwood-rfid/cover.webp"),
     gallery: [
+      {src: asset("/media/portfolio/showcase/topwood-rfid/board-render.webp"), alt: "Assembled Top Wood RFID board: NodeMCU ESP8266, RC522 reader and LM2596 buck module on the carrier PCB"},
       {src: asset("/media/portfolio/showcase/topwood-rfid/portal.webp"), alt: "Top Wood setup portal on a tablet: card reader and card writer tabs"},
       {src: asset("/media/portfolio/showcase/topwood-rfid/pcb.webp"), alt: "Top Wood carrier PCB render with the NodeMCU, RC522 and LM2596 buck module"}
     ],
@@ -247,6 +248,14 @@ export const projects: Project[] = [
       {label: "Watch the full demo on YouTube", href: "https://youtu.be/JlM_-ofcRd0"},
       {label: "View interface design in Figma", href: "https://www.figma.com/design/jAvINNnQaUC2qPMKJCTXDA/Top-Wood-RFID-Portal?node-id=4-34&p=f"}
     ],
+    testimonial: {
+      quote: "تسلم اديك يا بشمهندس. البوردة وصلت وجربتها، والشغل ما شاء الله ممتاز وقراءة الكروت سريعة وثابتة جداً. تسلم إيدك على الشغل النظيف والمجهود الكبير، وهنتواصل سوا لو في اي فكرة جديدة قريب إن شاء الله. بالتوفيق.",
+      quoteLang: "ar",
+      translation: "Thank you, engineer. The board arrived and I tested it. The work is excellent, and card reading is fast and very stable. Thanks for the clean work and the great effort; we will be in touch soon for any new idea. All the best.",
+      author: "Top Wood",
+      context: "Client feedback on WhatsApp after testing the delivered board",
+      proof: {src: asset("/media/portfolio/showcase/topwood-rfid/client-review.webp"), alt: "WhatsApp message from the Top Wood client praising the delivered RFID board"}
+    },
     featured: false
   },
   {

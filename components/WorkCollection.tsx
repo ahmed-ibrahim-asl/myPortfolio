@@ -5,6 +5,7 @@ import { groupWork } from "@/data/work-categories";
 import { mobileScreens } from "@/data/mobile-screens";
 import { MobileScreenGallery } from "./MobileScreenGallery";
 import { PublicImage } from "./PublicImage";
+import { ClientTestimonial } from "./ClientTestimonial";
 import styles from "./WorkCollection.module.css";
 
 export function WorkCollection({ category }: { category: string }) {
@@ -44,6 +45,7 @@ export function WorkEntry({ project, compact = false, category }: { project: Pro
         <figcaption>{project.video.caption}</figcaption>
         <a className={styles.action} href={project.video.src} target="_blank" rel="noreferrer">Open video <span aria-hidden="true">↗</span></a>
       </figure>}
+      {project.testimonial && <ClientTestimonial testimonial={project.testimonial} />}
       {project.imageNote && <p className={styles.imageNote}>{project.imageNote}</p>}
       {project.links?.map(link => link.href.startsWith("#") ? <Link className={styles.action} key={link.href} href={`/work/recognition/${link.href}`}>{link.label}<span aria-hidden="true">↗</span></Link> : <a className={styles.action} key={link.href} href={link.href} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true">↗</span></a>)}
       {project.gallery?.length ? <details className={styles.evidence}><summary>{project.galleryLabel ?? `View original project images (${project.gallery.length})`}</summary><div>{project.gallery.map(image => <a key={image.src} href={image.src} target="_blank" rel="noreferrer"><PublicImage src={image.src} alt={image.alt} loading="lazy" /></a>)}</div></details> : null}
