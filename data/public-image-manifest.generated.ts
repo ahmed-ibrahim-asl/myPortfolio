@@ -5909,37 +5909,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/320.webp",
         "width": 320,
-        "bytes": 17268
+        "bytes": 18422
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/480.webp",
         "width": 480,
-        "bytes": 31380
+        "bytes": 34680
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/640.webp",
         "width": 640,
-        "bytes": 48584
+        "bytes": 54852
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/768.webp",
         "width": 768,
-        "bytes": 66290
+        "bytes": 75162
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/960.webp",
         "width": 960,
-        "bytes": 81392
+        "bytes": 94940
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/1280.webp",
         "width": 1280,
-        "bytes": 125074
+        "bytes": 148058
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/1600.webp",
         "width": 1600,
-        "bytes": 158786
+        "bytes": 192852
       }
     ],
     "role": "gallery-evidence",
@@ -5954,37 +5954,82 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/320.webp",
         "width": 320,
-        "bytes": 21758
+        "bytes": 22506
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/480.webp",
         "width": 480,
-        "bytes": 41470
+        "bytes": 43404
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/640.webp",
         "width": 640,
-        "bytes": 67068
+        "bytes": 70836
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/768.webp",
         "width": 768,
-        "bytes": 92406
+        "bytes": 97254
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/960.webp",
         "width": 960,
-        "bytes": 120444
+        "bytes": 127650
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/1280.webp",
         "width": 1280,
-        "bytes": 192246
+        "bytes": 203614
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/1600.webp",
         "width": 1600,
-        "bytes": 258000
+        "bytes": 275842
+      }
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
+  },
+  "/media/portfolio/showcase/topwood-rfid/enclosure-mounting.webp": {
+    "source": "/media/portfolio/showcase/topwood-rfid/enclosure-mounting.webp",
+    "width": 1600,
+    "height": 1000,
+    "avif": [],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-mounting/320.webp",
+        "width": 320,
+        "bytes": 12940
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-mounting/480.webp",
+        "width": 480,
+        "bytes": 22660
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-mounting/640.webp",
+        "width": 640,
+        "bytes": 33632
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-mounting/768.webp",
+        "width": 768,
+        "bytes": 46102
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-mounting/960.webp",
+        "width": 960,
+        "bytes": 50714
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-mounting/1280.webp",
+        "width": 1280,
+        "bytes": 74732
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-mounting/1600.webp",
+        "width": 1600,
+        "bytes": 86046
       }
     ],
     "role": "gallery-evidence",
@@ -5999,37 +6044,37 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/320.webp",
         "width": 320,
-        "bytes": 26778
+        "bytes": 26688
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/480.webp",
         "width": 480,
-        "bytes": 50962
+        "bytes": 50802
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/640.webp",
         "width": 640,
-        "bytes": 82896
+        "bytes": 82438
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/768.webp",
         "width": 768,
-        "bytes": 112958
+        "bytes": 111596
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/960.webp",
         "width": 960,
-        "bytes": 148834
+        "bytes": 147552
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/1280.webp",
         "width": 1280,
-        "bytes": 236864
+        "bytes": 234812
       },
       {
         "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/1600.webp",
         "width": 1600,
-        "bytes": 321468
+        "bytes": 318932
       }
     ],
     "role": "gallery-evidence",

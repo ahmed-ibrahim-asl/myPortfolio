@@ -235,7 +235,7 @@ export const projects: Project[] = [
     slug: "topwood-rfid-catalog", title: "Top Wood RFID Catalog", category: "Engineering & IoT", year: "2026",
     video: { src: asset("/media/portfolio/showcase/topwood-rfid/highlight.mp4"), poster: asset("/media/portfolio/showcase/topwood-rfid/cover.webp"), caption: "Top Wood RFID Catalog: one-minute highlight" },
     role: "Embedded Systems Engineer | ESP8266 Firmware | PCB Design | Web Portal",
-    description: "Built the RFID system behind Top Wood's LTOP Interactive Catalog. A custom ESP8266 + RC522 board reads product cards and talks to the catalog over the local Wi-Fi network, so tapping a card opens that product straight away. The board serves its own setup portal for reading, writing and verifying cards and for Wi-Fi setup, and ships with a one-click Windows installer. I also designed a 3D-printable two-part enclosure for the board in SolidWorks, with a card target over the RC522 antenna, vents over the buck converter and wire exits beside the screw terminals.",
+    description: "Built the RFID system behind Top Wood's LTOP Interactive Catalog. A custom ESP8266 + RC522 board reads product cards and talks to the catalog over the local Wi-Fi network, so tapping a card opens that product straight away. The board serves its own setup portal for reading, writing and verifying cards and for Wi-Fi setup, and ships with a one-click Windows installer. I also designed a 3D-printable two-part enclosure for the board in SolidWorks: the board screws onto four standoffs at its real mounting holes, the lid carries the Top Wood name and a tap-card target over the RC522 antenna, and every KiCad 3D model was checked for clearance.",
     outcome: "Tap a card, the product opens in the catalog; cards written and verified in two taps",
     tags: ["ESP8266", "RC522 RFID", "C++", "KiCad", "SolidWorks", "Node.js", "Web portal", "Figma"],
     image: asset("/media/portfolio/showcase/topwood-rfid/board-render.webp"),
@@ -244,9 +244,10 @@ export const projects: Project[] = [
       {src: asset("/media/portfolio/showcase/topwood-rfid/schematic.webp"), alt: "KiCad schematic of the Top Wood main board: 12 V input, LM2596 buck, AMS1117 3.3 V regulator, NodeMCU and RC522 header"},
       {src: asset("/media/portfolio/showcase/topwood-rfid/pcb-layout.webp"), alt: "KiCad PCB layout of the Top Wood main board, fully routed with power traces sized for the buck module"},
       {src: asset("/media/portfolio/showcase/topwood-rfid/pcb-3d.webp"), alt: "KiCad 3D view of the Top Wood main board with the NodeMCU, RC522 reader and LM2596 module fitted"},
-      {src: asset("/media/portfolio/showcase/topwood-rfid/enclosure-exploded.webp"), alt: "Exploded view of the SolidWorks enclosure: wood-tone lid with RFID card target and vents above the charcoal base holding the board"},
-      {src: asset("/media/portfolio/showcase/topwood-rfid/enclosure-closed.webp"), alt: "Closed SolidWorks enclosure for the Top Wood board, 118 x 94 x 28 mm, with a card target over the RC522 antenna"},
-      {src: asset("/media/portfolio/showcase/topwood-rfid/enclosure-open.webp"), alt: "Open enclosure base with the board clamped on corner pedestals, screw bosses and wire exits beside the screw terminals"},
+      {src: asset("/media/portfolio/showcase/topwood-rfid/enclosure-closed.webp"), alt: "SolidWorks enclosure for the Top Wood reader, 118 x 94 x 29 mm: wood-tone lid engraved TOP WOOD with a tap-card target, setup button access and vents"},
+      {src: asset("/media/portfolio/showcase/topwood-rfid/enclosure-exploded.webp"), alt: "Exploded view: lid lifted above the charcoal base holding the board, with every KiCad 3D model fitted"},
+      {src: asset("/media/portfolio/showcase/topwood-rfid/enclosure-mounting.webp"), alt: "Empty base: four M3 standoffs on the board's real mounting holes for heat-set inserts, four corner bosses for the lid screws, and wire exits"},
+      {src: asset("/media/portfolio/showcase/topwood-rfid/enclosure-open.webp"), alt: "Board screwed onto the standoffs inside the base, 2.2 mm below the lid, wires leaving beside the screw terminals"},
       {src: asset("/media/portfolio/showcase/topwood-rfid/portal.webp"), alt: "Top Wood setup portal on a tablet: card reader and card writer tabs"}
     ],
     links: [
