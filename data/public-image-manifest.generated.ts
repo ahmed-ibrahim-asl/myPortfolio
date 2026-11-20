@@ -5900,6 +5900,141 @@ export const publicImageManifest: Record<string, PublicImageFamily> = {
     "role": "project-cover",
     "sizesPreset": "project-card"
   },
+  "/media/portfolio/showcase/topwood-rfid/enclosure-closed.webp": {
+    "source": "/media/portfolio/showcase/topwood-rfid/enclosure-closed.webp",
+    "width": 1600,
+    "height": 1000,
+    "avif": [],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/320.webp",
+        "width": 320,
+        "bytes": 17268
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/480.webp",
+        "width": 480,
+        "bytes": 31380
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/640.webp",
+        "width": 640,
+        "bytes": 48584
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/768.webp",
+        "width": 768,
+        "bytes": 66290
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/960.webp",
+        "width": 960,
+        "bytes": 81392
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/1280.webp",
+        "width": 1280,
+        "bytes": 125074
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-closed/1600.webp",
+        "width": 1600,
+        "bytes": 158786
+      }
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
+  },
+  "/media/portfolio/showcase/topwood-rfid/enclosure-exploded.webp": {
+    "source": "/media/portfolio/showcase/topwood-rfid/enclosure-exploded.webp",
+    "width": 1600,
+    "height": 1000,
+    "avif": [],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/320.webp",
+        "width": 320,
+        "bytes": 21758
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/480.webp",
+        "width": 480,
+        "bytes": 41470
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/640.webp",
+        "width": 640,
+        "bytes": 67068
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/768.webp",
+        "width": 768,
+        "bytes": 92406
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/960.webp",
+        "width": 960,
+        "bytes": 120444
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/1280.webp",
+        "width": 1280,
+        "bytes": 192246
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-exploded/1600.webp",
+        "width": 1600,
+        "bytes": 258000
+      }
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
+  },
+  "/media/portfolio/showcase/topwood-rfid/enclosure-open.webp": {
+    "source": "/media/portfolio/showcase/topwood-rfid/enclosure-open.webp",
+    "width": 1600,
+    "height": 1000,
+    "avif": [],
+    "webp": [
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/320.webp",
+        "width": 320,
+        "bytes": 26778
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/480.webp",
+        "width": 480,
+        "bytes": 50962
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/640.webp",
+        "width": 640,
+        "bytes": 82896
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/768.webp",
+        "width": 768,
+        "bytes": 112958
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/960.webp",
+        "width": 960,
+        "bytes": 148834
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/1280.webp",
+        "width": 1280,
+        "bytes": 236864
+      },
+      {
+        "src": "/media/generated/responsive/media/portfolio/showcase/topwood-rfid/enclosure-open/1600.webp",
+        "width": 1600,
+        "bytes": 321468
+      }
+    ],
+    "role": "gallery-evidence",
+    "sizesPreset": "gallery-thumb"
+  },
   "/media/portfolio/showcase/topwood-rfid/pcb-3d.webp": {
     "source": "/media/portfolio/showcase/topwood-rfid/pcb-3d.webp",
     "width": 910,
